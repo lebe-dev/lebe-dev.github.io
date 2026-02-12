@@ -31,10 +31,13 @@ export function renderResults(
   spreadValueEl.className = spreadClass;
 
   if (spread > 2) {
-    warningIconEl.classList.remove("hidden");
+    warningIconEl.classList.add("cc-warning-icon");
+    warningIconEl.classList.remove("cc-icon-muted");
   } else {
-    warningIconEl.classList.add("hidden");
+    warningIconEl.classList.remove("cc-warning-icon");
+    warningIconEl.classList.add("cc-icon-muted");
   }
+  warningIconEl.classList.remove("hidden");
 
   marketRateEl.textContent = `Market: ${marketRate.toLocaleString("en-US")} GEL`;
 

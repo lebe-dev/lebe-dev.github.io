@@ -426,6 +426,12 @@
     animation: cc-pulse 1.5s ease-in-out infinite;
 }
 
+.cc-icon-muted {
+    color: var(--cc-text-muted);
+    animation: none;
+    opacity: 0.5;
+}
+
 @keyframes cc-pulse {
     0%,
     100% {
