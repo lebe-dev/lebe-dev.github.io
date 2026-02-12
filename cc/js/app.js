@@ -267,27 +267,13 @@ function handleSave() {
 let registration = null;
 let newWorker = null;
 
-function showUpdateBanner() {
-  const banner = document.getElementById("update-banner");
-  banner.classList.remove("hidden");
-}
-
-function hideUpdateBanner() {
-  const banner = document.getElementById("update-banner");
-  banner.classList.add("hidden");
+function showUpdateLink() {
+  const link = document.getElementById("update-link");
+  if (link) link.classList.remove("hidden");
 }
 
 function handleUpdate() {
-  hideUpdateBanner();
-  const worker = newWorker || (registration && registration.waiting);
-  if (!worker) {
-    window.location.reload();
-    return;
-  }
-  worker.postMessage({ type: "SKIP_WAITING" });
-  setTimeout(() => {
-    window.location.reload();
-  }, 2000);
+  window.location.reload();
 }
 
 function registerSW() {
@@ -299,7 +285,7 @@ function registerSW() {
 
         if (reg.waiting && navigator.serviceWorker.controller) {
           newWorker = reg.waiting;
-          showUpdateBanner();
+          showUpdateLink();
         }
 
         reg.addEventListener("updatefound", () => {
@@ -312,7 +298,7 @@ function registerSW() {
               navigator.serviceWorker.controller
             ) {
               newWorker = installingWorker;
-              showUpdateBanner();
+              showUpdateLink();
             }
           });
         });
@@ -389,7 +375,8 @@ function init() {
   document
     .getElementById("clear-all-btn")
     .addEventListener("click", clearHistory);
-  document.getElementById("update-btn").addEventListener("click", handleUpdate);
+  const updateLink = document.getElementById("update-link");
+  if (updateLink) updateLink.addEventListener("click", handleUpdate);
 
   document.addEventListener("delete-history", (e) => {
     deleteEntry(e.detail.id);
