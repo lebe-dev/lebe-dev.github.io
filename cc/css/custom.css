@@ -44,6 +44,11 @@
     --cc-noise-opacity: 0.015;
 }
 
+/* Utility: Hidden */
+.hidden {
+    display: none !important;
+}
+
 /* Base */
 .cc-body {
     font-family: var(--cc-sans);
