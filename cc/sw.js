@@ -1,6 +1,5 @@
-const CACHE_VERSION = "cc-v3";
+const CACHE_VERSION = "cc-v4";
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
-const API_CACHE = `${CACHE_VERSION}-api`;
 
 const STATIC_ASSETS = [
   "/cc/",
@@ -36,12 +35,7 @@ self.addEventListener("activate", (event) => {
       .then((cacheNames) => {
         return Promise.all(
           cacheNames
-            .filter(
-              (name) =>
-                name.startsWith("cc-") &&
-                name !== STATIC_CACHE &&
-                name !== API_CACHE,
-            )
+            .filter((name) => name.startsWith("cc-") && name !== STATIC_CACHE)
             .map((name) => caches.delete(name)),
         );
       })
@@ -55,27 +49,8 @@ self.addEventListener("fetch", (event) => {
   const { request } = event;
   const url = new URL(request.url);
 
-  if (url.origin === "https://api.coingecko.com") {
-    event.respondWith(
-      Promise.race([
-        fetch(request).then((response) => {
-          if (response.ok) {
-            const responseClone = response.clone();
-            caches.open(API_CACHE).then((cache) => {
-              cache.put(request, responseClone);
-            });
-          }
-          return response;
-        }),
-        new Promise((_, reject) =>
-          setTimeout(() => reject(new Error("Timeout")), 5000),
-        ),
-      ]).catch(() => {
-        return caches.match(request);
-      }),
-    );
-    return;
-  }
+  // Don't intercept cross-origin API calls — let app.js handle errors/caching
+  if (url.origin !== self.location.origin) return;
 
   event.respondWith(
     caches.match(request).then((cachedResponse) => {
