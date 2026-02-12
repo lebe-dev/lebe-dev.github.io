@@ -38,7 +38,7 @@ async function fetchRate() {
 
     if (!response.ok) {
       if (response.status === 429) {
-        throw new Error("Rate limit reached");
+        throw new Error("API rate limit exceeded");
       }
       throw new Error(`HTTP ${response.status}`);
     }
@@ -93,6 +93,20 @@ function isRateStale(timestamp) {
   return Date.now() - timestamp > RATE_CACHE_DURATION;
 }
 
+function getFriendlyErrorMessage(errorMessage, ageMs) {
+  const minutes = Math.floor(ageMs / 60000);
+
+  if (errorMessage.includes("rate limit") || errorMessage.includes("429")) {
+    return `Кэш (${minutes} мин) — API лимит, данные актуальны`;
+  }
+
+  if (errorMessage.includes("timeout") || errorMessage.includes("AbortError")) {
+    return `Кэш (${minutes} мин) — медленное соединение`;
+  }
+
+  return `Кэш (${minutes} мин) — нет связи`;
+}
+
 async function getMarketRate(forceRefresh = false) {
   const cached = getCachedRate();
 
@@ -109,10 +123,8 @@ async function getMarketRate(forceRefresh = false) {
   } catch (error) {
     if (cached) {
       const age = Date.now() - cached.timestamp;
-      renderStatus(
-        "cached",
-        `Cached (${Math.floor(age / 60000)} min ago) - ${error.message}`,
-      );
+      const friendlyMessage = getFriendlyErrorMessage(error.message, age);
+      renderStatus("cached", friendlyMessage);
       return cached;
     }
     renderStatus("offline", "Offline");
