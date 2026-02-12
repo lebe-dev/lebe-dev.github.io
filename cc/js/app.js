@@ -279,8 +279,15 @@ function hideUpdateBanner() {
 
 function handleUpdate() {
   hideUpdateBanner();
-  if (!newWorker) return;
-  newWorker.postMessage({ type: "SKIP_WAITING" });
+  const worker = newWorker || (registration && registration.waiting);
+  if (!worker) {
+    window.location.reload();
+    return;
+  }
+  worker.postMessage({ type: "SKIP_WAITING" });
+  setTimeout(() => {
+    window.location.reload();
+  }, 2000);
 }
 
 function registerSW() {
