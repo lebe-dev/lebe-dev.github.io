@@ -34,12 +34,12 @@
     --cc-text: #1a1a1f;
     --cc-text-dim: #5c5c66;
     --cc-text-muted: #9c9ca6;
-    --cc-accent: #4d7c0f;
-    --cc-accent-glow: rgba(77, 124, 15, 0.15);
-    --cc-accent-dim: rgba(77, 124, 15, 0.1);
+    --cc-accent: #2563eb;
+    --cc-accent-glow: rgba(37, 99, 235, 0.15);
+    --cc-accent-dim: rgba(37, 99, 235, 0.1);
     --cc-accent-text: #fff;
     --cc-green: #16a34a;
-    --cc-red: #2563eb;
+    --cc-red: #dc2626;
     --cc-yellow: #d97706;
     --cc-noise-opacity: 0.015;
 }
