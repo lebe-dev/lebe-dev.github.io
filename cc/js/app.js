@@ -278,15 +278,9 @@ function hideUpdateBanner() {
 }
 
 function handleUpdate() {
-  if (!newWorker) {
-    console.log("No new worker available");
-    return;
-  }
+  if (!newWorker) return;
 
-  console.log("Sending SKIP_WAITING message");
   newWorker.postMessage({ type: "SKIP_WAITING" });
-
-  // Hide banner immediately after clicking update
   hideUpdateBanner();
 }
 
@@ -296,46 +290,32 @@ function registerSW() {
       .register("/cc/sw.js")
       .then((reg) => {
         registration = reg;
-        console.log("Service Worker registered");
 
-        // Check if there's an update waiting already (only if we have a controller)
         if (reg.waiting && navigator.serviceWorker.controller) {
-          console.log("Found waiting service worker on page load");
           newWorker = reg.waiting;
           showUpdateBanner();
         }
 
         reg.addEventListener("updatefound", () => {
           const installingWorker = reg.installing;
-          console.log("Update found, installing...");
+          if (!installingWorker) return;
 
-          if (installingWorker) {
-            installingWorker.addEventListener("statechange", () => {
-              console.log("SW state:", installingWorker.state);
-
-              if (installingWorker.state === "installed") {
-                if (navigator.serviceWorker.controller) {
-                  // New update available
-                  newWorker = installingWorker;
-                  showUpdateBanner();
-                  console.log("New version available");
-                } else {
-                  // First install
-                  console.log("Service Worker installed for the first time");
-                }
-              }
-            });
-          }
+          installingWorker.addEventListener("statechange", () => {
+            if (
+              installingWorker.state === "installed" &&
+              navigator.serviceWorker.controller
+            ) {
+              newWorker = installingWorker;
+              showUpdateBanner();
+            }
+          });
         });
       })
-      .catch((err) => {
-        console.error("SW registration failed:", err);
-      });
+      .catch(() => {});
 
     let refreshing = false;
     navigator.serviceWorker.addEventListener("controllerchange", () => {
       if (!refreshing) {
-        console.log("Controller changed, reloading...");
         refreshing = true;
         window.location.reload();
       }
@@ -386,9 +366,6 @@ function init() {
     .getElementById("clear-all-btn")
     .addEventListener("click", clearHistory);
   document.getElementById("update-btn").addEventListener("click", handleUpdate);
-  document
-    .getElementById("dismiss-update-btn")
-    .addEventListener("click", hideUpdateBanner);
 
   document.addEventListener("delete-history", (e) => {
     deleteEntry(e.detail.id);

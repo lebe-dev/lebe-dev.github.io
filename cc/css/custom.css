@@ -1,109 +1,9 @@
-/* Status indicator colors */
-.status-online {
-    color: #22c55e;
-}
-
-.status-cached {
-    color: #eab308;
-}
-
-.status-offline {
-    color: #ef4444;
-}
-
-/* Warning pulse animation */
-@keyframes pulse-warning {
-    0%,
-    100% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0.6;
-    }
-}
-
-.warning-pulse {
-    animation: pulse-warning 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-}
-
-/* Spread warning color */
-.spread-warning {
-    color: #f59e0b;
-}
-
-/* Spread positive (green) */
-.spread-negative {
-    color: #22c55e;
-}
-
-/* Number formatting */
-.btc-amount {
-    font-size: 2rem;
-    font-weight: 700;
-    font-family: "Courier New", monospace;
-    letter-spacing: -0.02em;
-}
-
-.sats-amount {
-    font-size: 0.95rem;
-    font-family: "Courier New", monospace;
-    margin-top: 0.25rem;
-}
-
-/* Tab panels */
-.tab-panel {
-    animation: fadeIn 0.2s ease-in;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-4px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* History item */
-.history-item {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 0.75rem;
-    padding: 1.25rem;
-    transition: all 0.2s ease;
-}
-
-.history-item:hover {
-    background: rgba(255, 255, 255, 0.06);
-    border-color: rgba(255, 255, 255, 0.15);
-    transform: translateY(-1px);
-}
-
-/* Update banner */
-#update-banner {
-    animation: slideDown 0.3s ease-out;
-}
-
-@keyframes slideDown {
-    from {
-        transform: translateY(-100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-/* Connection status dot */
+/* Status indicator */
 .status-dot {
     display: inline-block;
-    width: 0.5rem;
-    height: 0.5rem;
+    width: 6px;
+    height: 6px;
     border-radius: 50%;
-    margin-right: 0.5rem;
 }
 
 .status-dot.online {
@@ -116,4 +16,88 @@
 
 .status-dot.offline {
     background-color: #ef4444;
+}
+
+/* Warning pulse */
+@keyframes pulse-warning {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.warning-pulse {
+    animation: pulse-warning 1.5s ease-in-out infinite;
+    color: #f59e0b;
+}
+
+/* Spread colors */
+.spread-warning {
+    color: #ef4444;
+}
+
+.spread-negative {
+    color: #22c55e;
+}
+
+/* BTC amount display */
+.btc-amount {
+    font-size: 1.75rem;
+    font-weight: 800;
+    font-family: "SF Mono", "Fira Code", "Courier New", monospace;
+    letter-spacing: -0.03em;
+    color: oklch(var(--bc));
+}
+
+.sats-amount {
+    font-size: 0.8rem;
+    font-family: "SF Mono", "Fira Code", "Courier New", monospace;
+}
+
+/* Tab panel transition */
+.tab-panel {
+    animation: fadeIn 0.15s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-2px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* History items */
+.history-item {
+    background: oklch(var(--b1));
+    border: 1px solid oklch(var(--bc) / 0.08);
+    border-radius: 0.75rem;
+    padding: 1rem;
+    transition: border-color 0.15s ease;
+}
+
+.history-item:hover {
+    border-color: oklch(var(--bc) / 0.2);
+}
+
+/* Update banner slide-in */
+#update-banner {
+    animation: slideDown 0.25s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }

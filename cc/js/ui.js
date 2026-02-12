@@ -34,13 +34,8 @@ export function renderResults(
 
   marketRateEl.textContent = `Market: ${marketRate.toLocaleString("en-US")} GEL`;
 
-  let sourceText = `(${source}`;
-  if (rateAge > 0) {
-    const minutes = Math.floor(rateAge / 60000);
-    sourceText += `, ${minutes} min ago`;
-  }
-  sourceText += ")";
-  rateSourceEl.textContent = sourceText;
+  const minutes = Math.floor(rateAge / 60000);
+  rateSourceEl.textContent = `(${source}, ${minutes}m ago)`;
 }
 
 export function renderHistory(entries) {
@@ -48,7 +43,7 @@ export function renderHistory(entries) {
 
   if (!entries || entries.length === 0) {
     historyListEl.innerHTML =
-      '<div class="text-center opacity-60 py-12">No saved calculations</div>';
+      '<div class="text-center opacity-40 py-12 text-sm">No saved calculations</div>';
     return;
   }
 
