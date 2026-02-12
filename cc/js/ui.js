@@ -18,11 +18,15 @@ export function renderResults(
   errorEl.classList.add("hidden");
   resultsEl.classList.remove("hidden");
 
-  btcAmountEl.textContent = `${btcAmount.toFixed(8)} BTC`;
-  satsAmountEl.textContent = `(${sats.toLocaleString("en-US")} sats)`;
+  btcAmountEl.textContent = btcAmount.toFixed(8);
+  satsAmountEl.textContent = `${sats.toLocaleString("en-US")} sats`;
 
   const spreadClass =
-    spread < 0 ? "spread-negative" : spread > 2 ? "spread-warning" : "";
+    spread < 0
+      ? "cc-spread-value spread-negative"
+      : spread > 2
+        ? "cc-spread-value spread-warning"
+        : "cc-spread-value";
   spreadValueEl.textContent = `${spread >= 0 ? "+" : ""}${spread.toFixed(2)}%`;
   spreadValueEl.className = spreadClass;
 
@@ -43,7 +47,7 @@ export function renderHistory(entries) {
 
   if (!entries || entries.length === 0) {
     historyListEl.innerHTML =
-      '<div class="text-center opacity-40 py-12 text-sm">No saved calculations</div>';
+      '<div class="cc-history-empty">No calculations yet</div>';
     return;
   }
 
@@ -52,7 +56,6 @@ export function renderHistory(entries) {
       const date = new Date(entry.date);
       const dateStr = date.toLocaleString("ru-RU", {
         timeZone: "Europe/Moscow",
-        year: "numeric",
         month: "2-digit",
         day: "2-digit",
         hour: "2-digit",
@@ -61,53 +64,40 @@ export function renderHistory(entries) {
 
       const spreadClass =
         entry.spread < 0
-          ? "spread-negative"
+          ? "cc-history-spread spread-negative"
           : entry.spread > 2
-            ? "spread-warning"
-            : "";
+            ? "cc-history-spread spread-warning"
+            : "cc-history-spread";
       const spreadSign = entry.spread >= 0 ? "+" : "";
 
       return `
-      <div class="history-item" data-id="${entry.id}">
-        <div class="flex justify-between items-start gap-4">
-          <div class="flex-1 min-w-0">
-            <div class="text-xs opacity-60 mb-2">${dateStr} MSK</div>
-            <div class="font-bold text-lg mb-1">${entry.btcAmount.toFixed(8)} BTC</div>
-            <div class="text-sm opacity-70 mb-3">(${Math.floor(entry.btcAmount * 100000000).toLocaleString("en-US")} sats)</div>
-            <div class="text-sm space-y-1 opacity-80">
-              <div class="flex justify-between">
-                <span>GEL:</span>
-                <span class="font-semibold">${entry.gel.toLocaleString("en-US")}</span>
-              </div>
-              <div class="flex justify-between">
-                <span>Office:</span>
-                <span>${entry.officeRate.toLocaleString("en-US")} GEL</span>
-              </div>
-              <div class="flex justify-between">
-                <span>Market:</span>
-                <span>${entry.marketRate.toLocaleString("en-US")} GEL</span>
-              </div>
-              <div class="flex justify-between font-semibold pt-1">
-                <span>Spread:</span>
-                <span class="${spreadClass}">${spreadSign}${entry.spread.toFixed(2)}%</span>
-              </div>
-            </div>
-          </div>
-          <button class="btn btn-sm btn-ghost btn-square delete-btn" data-id="${entry.id}" title="Delete">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M3 6h18"/>
-              <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/>
-              <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/>
+      <div class="cc-history-item" data-id="${entry.id}">
+        <div class="cc-history-top">
+          <span class="cc-history-btc">${entry.btcAmount.toFixed(8)} BTC</span>
+          <span class="${spreadClass}">${spreadSign}${entry.spread.toFixed(2)}%</span>
+        </div>
+        <div class="cc-history-details">
+          <span>Amount</span>
+          <span class="cc-history-detail-val">${entry.gel.toLocaleString("en-US")} GEL</span>
+          <span>Office</span>
+          <span class="cc-history-detail-val">${entry.officeRate.toLocaleString("en-US")}</span>
+          <span>Market</span>
+          <span class="cc-history-detail-val">${entry.marketRate.toLocaleString("en-US")}</span>
+        </div>
+        <div class="cc-history-footer">
+          <span class="cc-history-date">${dateStr} MSK</span>
+          <button class="cc-history-delete delete-btn" data-id="${entry.id}" title="Delete">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 6 6 18"/><path d="m6 6 12 12"/>
             </svg>
           </button>
         </div>
-      </div>
-    `;
+      </div>`;
     })
     .join("");
 
   document.querySelectorAll(".delete-btn").forEach((btn) => {
-    btn.addEventListener("click", (e) => {
+    btn.addEventListener("click", () => {
       const id = parseInt(btn.dataset.id);
       const event = new CustomEvent("delete-history", { detail: { id } });
       document.dispatchEvent(event);
@@ -117,14 +107,14 @@ export function renderHistory(entries) {
 
 export function renderStatus(state, message = "") {
   const statusEl = document.getElementById("status");
-  const dotEl = statusEl.querySelector(".status-dot");
-  const textEl = statusEl.querySelector("span:last-child");
+  const dotEl = statusEl.querySelector(".cc-status-dot");
+  const textEl = statusEl.querySelector(".cc-status-text");
 
-  dotEl.className = "status-dot";
+  dotEl.className = "cc-status-dot";
 
   if (state === "online") {
     dotEl.classList.add("online");
-    textEl.textContent = message || "Online (CoinGecko)";
+    textEl.textContent = message || "Online";
   } else if (state === "cached") {
     dotEl.classList.add("cached");
     textEl.textContent = message || "Cached";
