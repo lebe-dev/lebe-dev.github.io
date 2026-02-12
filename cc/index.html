@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="luxury">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crypto Exchange Calculator</title>
+  <meta name="description" content="Calculate spreads between crypto exchange offices and market rates">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/svg+xml" href="icons/icon-192.svg">
+  <meta name="theme-color" content="#1a1a1a">
+  <link rel="stylesheet" href="css/tailwind.min.css">
+  <link rel="stylesheet" href="css/daisyui.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="min-h-screen">
+  <div class="container mx-auto px-4 py-6 max-w-2xl">
+    <header class="mb-6">
+      <h1 class="text-3xl font-bold mb-2">Crypto Exchange Calculator</h1>
+      <div id="status" class="text-sm">
+        <span class="status-dot offline"></span>
+        <span>Connecting...</span>
+      </div>
+    </header>
+
+    <div role="tablist" class="tabs tabs-bordered mb-6">
+      <input type="radio" name="main-tabs" role="tab" class="tab" aria-label="Calculator" checked />
+      <div role="tabpanel" class="tab-content pt-6">
+        <form id="calc-form" class="space-y-4">
+          <div class="form-control">
+            <label class="label">
+              <span class="label-text">GEL amount</span>
+            </label>
+            <input
+              type="number"
+              id="gel-input"
+              class="input input-bordered w-full"
+              placeholder="1000"
+              step="0.01"
+              required
+            />
+          </div>
+
+          <div class="form-control">
+            <label class="label">
+              <span class="label-text">Exchange office rate</span>
+              <span class="label-text-alt">GEL per 1 BTC</span>
+            </label>
+            <input
+              type="number"
+              id="rate-input"
+              class="input input-bordered w-full"
+              placeholder="272000"
+              step="0.01"
+              required
+            />
+          </div>
+
+          <div class="flex gap-2">
+            <button type="submit" class="btn btn-primary flex-1">Calculate</button>
+            <button type="button" id="refresh-btn" class="btn btn-outline" title="Refresh market rate">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"/>
+              </svg>
+            </button>
+          </div>
+        </form>
+
+        <div id="results" class="hidden results-card mt-6">
+          <div class="space-y-4">
+            <div>
+              <div class="btc-amount" id="btc-amount">0.00000000 BTC</div>
+              <div class="sats-amount" id="sats-amount">(0 sats)</div>
+            </div>
+
+            <div id="spread-container" class="text-lg font-semibold">
+              Spread: <span id="spread-value">0.00%</span>
+              <span id="warning-icon" class="hidden warning-pulse ml-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline">
+                  <path d="m21.73 18-8-14a2 2 0 0 0-3.46 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/>
+                  <path d="M12 9v4"/>
+                  <path d="M12 17h.01"/>
+                </svg>
+              </span>
+            </div>
+
+            <div class="text-sm text-gray-400">
+              <div id="market-rate">Market: 0 GEL</div>
+              <div id="rate-source" class="text-xs mt-1">(CoinGecko)</div>
+            </div>
+          </div>
+
+          <button id="save-btn" class="btn btn-success w-full mt-4">Save to History</button>
+        </div>
+
+        <div id="error" class="hidden alert alert-error mt-6">
+          <span id="error-message"></span>
+        </div>
+      </div>
+
+      <input type="radio" name="main-tabs" role="tab" class="tab" aria-label="History" />
+      <div role="tabpanel" class="tab-content pt-6">
+        <div class="flex justify-between items-center mb-4">
+          <h2 class="text-xl font-bold">Calculation History</h2>
+          <button id="clear-all-btn" class="btn btn-sm btn-error">Clear All</button>
+        </div>
+        <div id="history-list" class="space-y-2">
+          <div class="text-center text-gray-400 py-8">No saved calculations</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

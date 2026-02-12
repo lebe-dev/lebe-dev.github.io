@@ -1,0 +1,92 @@
+/* Status indicator colors */
+.status-online {
+  color: #22c55e;
+}
+
+.status-cached {
+  color: #eab308;
+}
+
+.status-offline {
+  color: #ef4444;
+}
+
+/* Warning pulse animation */
+@keyframes pulse-warning {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.warning-pulse {
+  animation: pulse-warning 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Spread warning color */
+.spread-warning {
+  color: #f59e0b;
+}
+
+/* Spread positive (green) */
+.spread-negative {
+  color: #22c55e;
+}
+
+/* Number formatting */
+.btc-amount {
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: 'Courier New', monospace;
+}
+
+.sats-amount {
+  font-size: 1rem;
+  color: #9ca3af;
+  font-family: 'Courier New', monospace;
+}
+
+/* Results card */
+.results-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin-top: 1rem;
+}
+
+/* History item */
+.history-item {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.history-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Connection status dot */
+.status-dot {
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+.status-dot.online {
+  background-color: #22c55e;
+}
+
+.status-dot.cached {
+  background-color: #eab308;
+}
+
+.status-dot.offline {
+  background-color: #ef4444;
+}
