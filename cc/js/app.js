@@ -1,8 +1,15 @@
-import { renderResults, renderHistory, renderStatus, renderError, hideError } from './ui.js';
+import {
+  renderResults,
+  renderHistory,
+  renderStatus,
+  renderError,
+  hideError,
+} from "./ui.js";
 
-const COINGECKO_API = 'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=gel';
-const CACHE_KEY_RATE = 'cc-lastRate';
-const CACHE_KEY_HISTORY = 'cc-history';
+const COINGECKO_API =
+  "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=gel";
+const CACHE_KEY_RATE = "cc-lastRate";
+const CACHE_KEY_HISTORY = "cc-history";
 const RATE_CACHE_DURATION = 120000;
 const MAX_HISTORY_ENTRIES = 50;
 
@@ -24,14 +31,14 @@ async function fetchRate() {
     const timeoutId = setTimeout(() => controller.abort(), 5000);
 
     const response = await fetch(COINGECKO_API, {
-      signal: controller.signal
+      signal: controller.signal,
     });
 
     clearTimeout(timeoutId);
 
     if (!response.ok) {
       if (response.status === 429) {
-        throw new Error('Rate limit reached');
+        throw new Error("Rate limit reached");
       }
       throw new Error(`HTTP ${response.status}`);
     }
@@ -40,19 +47,19 @@ async function fetchRate() {
     const rate = data?.bitcoin?.gel;
 
     if (!rate || rate <= 0) {
-      throw new Error('Invalid rate data');
+      throw new Error("Invalid rate data");
     }
 
     const rateData = {
       rate,
       timestamp: Date.now(),
-      source: 'CoinGecko'
+      source: "CoinGecko",
     };
 
     try {
       localStorage.setItem(CACHE_KEY_RATE, JSON.stringify(rateData));
     } catch (e) {
-      if (e.name === 'QuotaExceededError') {
+      if (e.name === "QuotaExceededError") {
         cleanupStorage();
         localStorage.setItem(CACHE_KEY_RATE, JSON.stringify(rateData));
       }
@@ -83,7 +90,7 @@ function getCachedRate() {
 }
 
 function isRateStale(timestamp) {
-  return (Date.now() - timestamp) > RATE_CACHE_DURATION;
+  return Date.now() - timestamp > RATE_CACHE_DURATION;
 }
 
 async function getMarketRate(forceRefresh = false) {
@@ -91,22 +98,25 @@ async function getMarketRate(forceRefresh = false) {
 
   if (!forceRefresh && cached && !isRateStale(cached.timestamp)) {
     const age = Date.now() - cached.timestamp;
-    renderStatus('cached', `Cached (${Math.floor(age / 60000)} min ago)`);
+    renderStatus("cached", `Cached (${Math.floor(age / 60000)} min ago)`);
     return cached;
   }
 
   try {
     const rateData = await fetchRate();
-    renderStatus('online', 'Online (CoinGecko)');
+    renderStatus("online", "Online (CoinGecko)");
     return rateData;
   } catch (error) {
     if (cached) {
       const age = Date.now() - cached.timestamp;
-      renderStatus('cached', `Cached (${Math.floor(age / 60000)} min ago) - ${error.message}`);
+      renderStatus(
+        "cached",
+        `Cached (${Math.floor(age / 60000)} min ago) - ${error.message}`,
+      );
       return cached;
     }
-    renderStatus('offline', 'Offline');
-    throw new Error('Cannot fetch market rate. Check internet connection.');
+    renderStatus("offline", "Offline");
+    throw new Error("Cannot fetch market rate. Check internet connection.");
   }
 }
 
@@ -122,7 +132,7 @@ function saveToHistory(entry) {
     try {
       localStorage.setItem(CACHE_KEY_HISTORY, JSON.stringify(history));
     } catch (e) {
-      if (e.name === 'QuotaExceededError') {
+      if (e.name === "QuotaExceededError") {
         cleanupStorage();
         localStorage.setItem(CACHE_KEY_HISTORY, JSON.stringify(history));
       }
@@ -130,7 +140,7 @@ function saveToHistory(entry) {
 
     renderHistory(history);
   } catch (e) {
-    renderError('Failed to save to history: ' + e.message);
+    renderError("Failed to save to history: " + e.message);
   }
 }
 
@@ -149,16 +159,16 @@ function getHistory() {
 function deleteEntry(id) {
   try {
     const history = getHistory();
-    const filtered = history.filter(entry => entry.id !== id);
+    const filtered = history.filter((entry) => entry.id !== id);
     localStorage.setItem(CACHE_KEY_HISTORY, JSON.stringify(filtered));
     renderHistory(filtered);
   } catch (e) {
-    renderError('Failed to delete entry: ' + e.message);
+    renderError("Failed to delete entry: " + e.message);
   }
 }
 
 function clearHistory() {
-  if (!confirm('Clear all calculation history?')) {
+  if (!confirm("Clear all calculation history?")) {
     return;
   }
 
@@ -166,7 +176,7 @@ function clearHistory() {
     localStorage.removeItem(CACHE_KEY_HISTORY);
     renderHistory([]);
   } catch (e) {
-    renderError('Failed to clear history: ' + e.message);
+    renderError("Failed to clear history: " + e.message);
   }
 }
 
@@ -180,10 +190,10 @@ function cleanupStorage() {
 
 function validateInputs(gel, officeRate) {
   if (!gel || gel <= 0) {
-    throw new Error('GEL amount must be greater than zero');
+    throw new Error("GEL amount must be greater than zero");
   }
   if (!officeRate || officeRate <= 0) {
-    throw new Error('Office rate must be greater than zero');
+    throw new Error("Office rate must be greater than zero");
   }
 }
 
@@ -191,8 +201,8 @@ async function handleCalculate(e) {
   e.preventDefault();
   hideError();
 
-  const gelInput = document.getElementById('gel-input');
-  const rateInput = document.getElementById('rate-input');
+  const gelInput = document.getElementById("gel-input");
+  const rateInput = document.getElementById("rate-input");
 
   const gel = parseFloat(gelInput.value);
   const officeRate = parseFloat(rateInput.value);
@@ -208,7 +218,14 @@ async function handleCalculate(e) {
     const spread = calcSpread(officeRate, marketRate);
     const rateAge = Date.now() - rateData.timestamp;
 
-    renderResults(btcAmount, sats, spread, marketRate, rateAge, rateData.source);
+    renderResults(
+      btcAmount,
+      sats,
+      spread,
+      marketRate,
+      rateAge,
+      rateData.source,
+    );
 
     currentCalculation = {
       id: Date.now(),
@@ -218,7 +235,7 @@ async function handleCalculate(e) {
       marketRate,
       btcAmount,
       spread,
-      source: rateData.source
+      source: rateData.source,
     };
   } catch (error) {
     renderError(error.message);
@@ -230,7 +247,7 @@ async function handleRefresh() {
   hideError();
 
   try {
-    renderStatus('online', 'Fetching...');
+    renderStatus("online", "Fetching...");
     await getMarketRate(true);
   } catch (error) {
     renderError(error.message);
@@ -239,7 +256,7 @@ async function handleRefresh() {
 
 function handleSave() {
   if (!currentCalculation) {
-    renderError('No calculation to save');
+    renderError("No calculation to save");
     return;
   }
 
@@ -248,38 +265,63 @@ function handleSave() {
 }
 
 function registerSW() {
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/cc/sw.js').catch(() => {});
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("/cc/sw.js").catch(() => {});
   }
+}
+
+function setupTabs() {
+  const tabs = document.querySelectorAll('input[name="main-tabs"]');
+  const calculatorTab = document.getElementById("calculator-tab");
+  const historyTab = document.getElementById("history-tab");
+
+  tabs.forEach((tab, index) => {
+    tab.addEventListener("change", () => {
+      if (index === 0) {
+        calculatorTab.classList.remove("hidden");
+        historyTab.classList.add("hidden");
+      } else {
+        calculatorTab.classList.add("hidden");
+        historyTab.classList.remove("hidden");
+      }
+    });
+  });
 }
 
 function init() {
   registerSW();
+  setupTabs();
 
   renderHistory(getHistory());
 
   const cached = getCachedRate();
   if (cached) {
     const age = Date.now() - cached.timestamp;
-    renderStatus('cached', `Cached (${Math.floor(age / 60000)} min ago)`);
+    renderStatus("cached", `Cached (${Math.floor(age / 60000)} min ago)`);
   } else {
-    renderStatus('offline', 'No cached data');
+    renderStatus("offline", "No cached data");
   }
 
-  document.getElementById('calc-form').addEventListener('submit', handleCalculate);
-  document.getElementById('refresh-btn').addEventListener('click', handleRefresh);
-  document.getElementById('save-btn').addEventListener('click', handleSave);
-  document.getElementById('clear-all-btn').addEventListener('click', clearHistory);
+  document
+    .getElementById("calc-form")
+    .addEventListener("submit", handleCalculate);
+  document
+    .getElementById("refresh-btn")
+    .addEventListener("click", handleRefresh);
+  document.getElementById("save-btn").addEventListener("click", handleSave);
+  document
+    .getElementById("clear-all-btn")
+    .addEventListener("click", clearHistory);
 
-  document.addEventListener('delete-history', (e) => {
+  document.addEventListener("delete-history", (e) => {
     deleteEntry(e.detail.id);
   });
 
   getMarketRate(false).catch(() => {});
 }
 
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', init);
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", init);
 } else {
   init();
 }
