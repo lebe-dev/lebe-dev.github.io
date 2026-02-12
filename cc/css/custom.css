@@ -12,9 +12,9 @@
     --cc-text: #e8e8ec;
     --cc-text-dim: #6e6e7a;
     --cc-text-muted: #44444f;
-    --cc-accent: #4d7c0f;
-    --cc-accent-glow: rgba(77, 124, 15, 0.2);
-    --cc-accent-dim: rgba(77, 124, 15, 0.15);
+    --cc-accent: #84cc16;
+    --cc-accent-glow: rgba(132, 204, 22, 0.25);
+    --cc-accent-dim: rgba(132, 204, 22, 0.15);
     --cc-accent-text: #fff;
     --cc-green: #34d399;
     --cc-red: #f87171;
