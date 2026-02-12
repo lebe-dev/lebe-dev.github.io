@@ -278,10 +278,9 @@ function hideUpdateBanner() {
 }
 
 function handleUpdate() {
-  if (!newWorker) return;
-
-  newWorker.postMessage({ type: "SKIP_WAITING" });
   hideUpdateBanner();
+  if (!newWorker) return;
+  newWorker.postMessage({ type: "SKIP_WAITING" });
 }
 
 function registerSW() {
@@ -323,6 +322,23 @@ function registerSW() {
   }
 }
 
+const THEME_KEY = "cc-theme";
+
+function setupTheme() {
+  const saved = localStorage.getItem(THEME_KEY);
+  const theme = saved || "dark";
+  document.documentElement.setAttribute("data-theme", theme);
+
+  document.getElementById("theme-btn").addEventListener("click", () => {
+    const current = document.documentElement.getAttribute("data-theme");
+    const next = current === "dark" ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", next);
+    localStorage.setItem(THEME_KEY, next);
+    const meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.content = next === "light" ? "#f5f5f0" : "#0a0a0b";
+  });
+}
+
 function setupTabs() {
   const tabs = document.querySelectorAll('input[name="main-tabs"]');
   const calculatorTab = document.getElementById("calculator-tab");
@@ -343,6 +359,7 @@ function setupTabs() {
 
 function init() {
   registerSW();
+  setupTheme();
   setupTabs();
 
   renderHistory(getHistory());

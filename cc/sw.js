@@ -1,4 +1,4 @@
-const CACHE_VERSION = "cc-v4";
+const CACHE_VERSION = "cc-v5";
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 
 const STATIC_ASSETS = [
