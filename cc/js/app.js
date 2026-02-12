@@ -264,9 +264,52 @@ function handleSave() {
   currentCalculation = null;
 }
 
+let newWorker = null;
+
+function showUpdateBanner() {
+  const banner = document.getElementById("update-banner");
+  banner.classList.remove("hidden");
+}
+
+function hideUpdateBanner() {
+  const banner = document.getElementById("update-banner");
+  banner.classList.add("hidden");
+}
+
+function handleUpdate() {
+  if (newWorker) {
+    newWorker.postMessage({ type: "SKIP_WAITING" });
+  }
+}
+
 function registerSW() {
   if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("/cc/sw.js").catch(() => {});
+    navigator.serviceWorker
+      .register("/cc/sw.js")
+      .then((reg) => {
+        reg.addEventListener("updatefound", () => {
+          const installingWorker = reg.installing;
+
+          installingWorker.addEventListener("statechange", () => {
+            if (
+              installingWorker.state === "installed" &&
+              navigator.serviceWorker.controller
+            ) {
+              newWorker = installingWorker;
+              showUpdateBanner();
+            }
+          });
+        });
+      })
+      .catch(() => {});
+
+    let refreshing = false;
+    navigator.serviceWorker.addEventListener("controllerchange", () => {
+      if (!refreshing) {
+        refreshing = true;
+        window.location.reload();
+      }
+    });
   }
 }
 
@@ -312,6 +355,10 @@ function init() {
   document
     .getElementById("clear-all-btn")
     .addEventListener("click", clearHistory);
+  document.getElementById("update-btn").addEventListener("click", handleUpdate);
+  document
+    .getElementById("dismiss-update-btn")
+    .addEventListener("click", hideUpdateBanner);
 
   document.addEventListener("delete-history", (e) => {
     deleteEntry(e.detail.id);
