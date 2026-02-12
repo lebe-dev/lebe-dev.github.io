@@ -334,6 +334,18 @@
     filter: brightness(0.95);
 }
 
+.cc-submit-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    filter: none;
+}
+
+.cc-submit-btn:disabled:hover {
+    filter: none;
+    transform: none;
+    box-shadow: none;
+}
+
 /* Results */
 .cc-results {
     margin-top: 20px;

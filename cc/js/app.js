@@ -197,6 +197,19 @@ function validateInputs(gel, officeRate) {
   }
 }
 
+function validateFormState() {
+  const gelInput = document.getElementById("gel-input");
+  const rateInput = document.getElementById("rate-input");
+  const submitBtn = document.querySelector(".cc-submit-btn");
+
+  const gel = parseFloat(gelInput.value);
+  const officeRate = parseFloat(rateInput.value);
+
+  const isValid =
+    !isNaN(gel) && gel > 0 && !isNaN(officeRate) && officeRate > 0;
+  submitBtn.disabled = !isValid;
+}
+
 async function handleCalculate(e) {
   e.preventDefault();
   hideError();
@@ -381,6 +394,15 @@ function init() {
   document.addEventListener("delete-history", (e) => {
     deleteEntry(e.detail.id);
   });
+
+  document
+    .getElementById("gel-input")
+    .addEventListener("input", validateFormState);
+  document
+    .getElementById("rate-input")
+    .addEventListener("input", validateFormState);
+
+  validateFormState();
 
   getMarketRate(false).catch(() => {});
 }
