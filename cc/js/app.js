@@ -298,8 +298,9 @@ function registerSW() {
         registration = reg;
         console.log("Service Worker registered");
 
-        // Check if there's an update waiting already
-        if (reg.waiting) {
+        // Check if there's an update waiting already (only if we have a controller)
+        if (reg.waiting && navigator.serviceWorker.controller) {
+          console.log("Found waiting service worker on page load");
           newWorker = reg.waiting;
           showUpdateBanner();
         }
