@@ -4,6 +4,7 @@ import {
   renderStatus,
   renderError,
   hideError,
+  renderLiveRate,
 } from "./ui.js";
 
 const COINGECKO_API =
@@ -113,12 +114,14 @@ async function getMarketRate(forceRefresh = false) {
   if (!forceRefresh && cached && !isRateStale(cached.timestamp)) {
     const age = Date.now() - cached.timestamp;
     renderStatus("cached", `Cached (${Math.floor(age / 60000)} min ago)`);
+    renderLiveRate(cached.rate);
     return cached;
   }
 
   try {
     const rateData = await fetchRate();
     renderStatus("online", "Online (CoinGecko)");
+    renderLiveRate(rateData.rate);
     return rateData;
   } catch (error) {
     if (cached) {

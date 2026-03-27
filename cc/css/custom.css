@@ -346,6 +346,48 @@
     box-shadow: none;
 }
 
+/* Live rate display */
+.cc-live-rate {
+    display: flex;
+    align-items: baseline;
+    gap: 0.35rem;
+    padding: 0.6rem 0.75rem;
+    margin-top: 0.75rem;
+    border-radius: var(--cc-radius);
+    background: var(--cc-surface);
+    border: 1px solid var(--cc-border);
+    font-family: var(--cc-mono);
+}
+
+.cc-live-rate-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--cc-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.cc-live-rate-sep {
+    font-size: 0.75rem;
+    color: var(--cc-text-muted);
+    opacity: 0.5;
+}
+
+.cc-live-rate-value {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--cc-text);
+    letter-spacing: -0.02em;
+}
+
+.cc-live-rate-unit {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--cc-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
 /* Results */
 .cc-results {
     margin-top: 20px;

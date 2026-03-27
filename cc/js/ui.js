@@ -141,3 +141,11 @@ export function hideError() {
   const errorEl = document.getElementById("error");
   errorEl.classList.add("hidden");
 }
+
+export function renderLiveRate(rate) {
+  const el = document.getElementById("live-rate");
+  const valueEl = document.getElementById("live-rate-value");
+  if (!el || !valueEl) return;
+  valueEl.textContent = rate.toLocaleString("en-US");
+  el.classList.remove("hidden");
+}
