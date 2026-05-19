@@ -36,7 +36,7 @@ body {
   padding: 0;
   background: var(--bg);
   color: var(--fg);
-  font-family: var(--sans);
+  font-family: var(--serif);
   font-size: 18px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -53,8 +53,8 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: var(--serif);
-  font-weight: 700;
+  font-family: var(--sans);
+  font-weight: 600;
   letter-spacing: -0.01em;
   line-height: 1.15;
 }
@@ -142,8 +142,8 @@ video {
 }
 
 .site-name {
-  font-family: var(--serif);
-  font-weight: 800;
+  font-family: var(--sans);
+  font-weight: 600;
   font-size: 2rem;
   margin: 0;
   letter-spacing: -0.01em;
@@ -231,8 +231,8 @@ header.site-header .actions a:hover {
 }
 
 .section-title {
-  font-family: var(--serif);
-  font-weight: 800;
+  font-family: var(--sans);
+  font-weight: 600;
   font-size: 1.4rem;
   margin: 2.5rem 0 1rem;
   display: flex;
@@ -266,8 +266,8 @@ header.site-header .actions a:hover {
 }
 
 .projects-list .proj-title {
-  font-family: var(--serif);
-  font-weight: 700;
+  font-family: var(--sans);
+  font-weight: 600;
   font-size: 1.05rem;
 }
 
