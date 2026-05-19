@@ -42,6 +42,7 @@ new-post LANG SLUG TITLE:
 # Deploy: build, push dist/ to gh-pages branch via git worktree
 deploy: build
     @echo "→ Preparing gh-pages worktree..."
+    @git worktree remove --force .gh-pages-worktree 2>/dev/null || true
     @rm -rf .gh-pages-worktree
     @git worktree add -B gh-pages .gh-pages-worktree 2>/dev/null \
       || (git fetch origin gh-pages && git worktree add -B gh-pages .gh-pages-worktree origin/gh-pages)
@@ -54,6 +55,6 @@ deploy: build
     @cd .gh-pages-worktree && git add -A \
       && (git diff --cached --quiet && echo "(no changes)" \
           || git commit -m "deploy: $(git -C .. rev-parse --short HEAD)") \
-      && git push -u origin gh-pages
+      && git push --force -u origin gh-pages
     @git worktree remove --force .gh-pages-worktree
     @echo "✓ Deployed. Make sure GitHub Pages source = 'gh-pages' branch in repo settings."
