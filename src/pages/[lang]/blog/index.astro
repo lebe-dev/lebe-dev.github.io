@@ -1,0 +1,28 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PostsList from '../../../components/PostsList.astro';
+import { useTranslations } from '../../../i18n/utils';
+import type { Lang } from '../../../i18n/ui';
+
+export const getStaticPaths = () => [
+  { params: { lang: 'en' } },
+  { params: { lang: 'ru' } },
+];
+
+const lang = Astro.params.lang as Lang;
+const t = useTranslations(lang);
+
+const all = await getCollection('blog', (e) => e.data.lang === lang && !e.data.draft);
+const posts = all
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .map((e) => ({
+    slug: e.id.replace(/^[a-z]{2}\//, ''),
+    title: e.data.title,
+    pubDate: e.data.pubDate,
+  }));
+---
+<BaseLayout lang={lang} title={t('section.allPosts')}>
+  <h1>{t('section.allPosts')}</h1>
+  <PostsList lang={lang} posts={posts} />
+</BaseLayout>

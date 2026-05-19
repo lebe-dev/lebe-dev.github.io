@@ -1,0 +1,44 @@
+---
+import { useTranslations } from '../i18n/utils';
+import type { Lang } from '../i18n/ui';
+
+type Props = { lang: Lang };
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+<button
+  id="theme-toggle"
+  type="button"
+  aria-label={t('theme.dark')}
+  data-label-light={t('theme.light')}
+  data-label-dark={t('theme.dark')}
+>
+  <span class="sun" aria-hidden="true">☀</span>
+  <span class="moon" aria-hidden="true">🌙</span>
+</button>
+
+<style>
+  #theme-toggle {
+    line-height: 1;
+  }
+  #theme-toggle .moon { display: none; }
+  :global(html.dark) #theme-toggle .sun { display: none; }
+  :global(html.dark) #theme-toggle .moon { display: inline; }
+</style>
+
+<script is:inline>
+  (() => {
+    const btn = document.getElementById('theme-toggle');
+    if (!btn) return;
+    const sync = () => {
+      const dark = document.documentElement.classList.contains('dark');
+      btn.setAttribute('aria-label', dark ? btn.dataset.labelLight : btn.dataset.labelDark);
+    };
+    sync();
+    btn.addEventListener('click', () => {
+      const dark = document.documentElement.classList.toggle('dark');
+      try { localStorage.setItem('theme', dark ? 'dark' : 'light'); } catch {}
+      sync();
+    });
+  })();
+</script>

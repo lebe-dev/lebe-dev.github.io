@@ -1,0 +1,12 @@
+---
+import { useTranslations } from '../i18n/utils';
+import type { Lang } from '../i18n/ui';
+
+type Props = { lang: Lang };
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+<section aria-labelledby="bio-heading">
+  <h2 id="bio-heading" class="section-title">{t('section.about')}</h2>
+  <p>{t('bio.body')}</p>
+</section>

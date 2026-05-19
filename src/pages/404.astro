@@ -1,0 +1,16 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { ui } from '../i18n/ui';
+---
+<BaseLayout lang="en" title={ui.en['404.title']}>
+  <article>
+    <h1>{ui.en['404.title']} · {ui.ru['404.title']}</h1>
+    <p>{ui.en['404.body']}</p>
+    <p>{ui.ru['404.body']}</p>
+    <p>
+      <a href="/en/">{ui.en['404.home']}</a>
+      {' · '}
+      <a href="/ru/">{ui.ru['404.home']}</a>
+    </p>
+  </article>
+</BaseLayout>

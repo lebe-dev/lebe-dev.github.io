@@ -1,0 +1,29 @@
+---
+import { otherLang } from '../i18n/utils';
+import { useTranslations } from '../i18n/utils';
+import type { Lang } from '../i18n/ui';
+
+type Props = { lang: Lang };
+const { lang } = Astro.props;
+const other = otherLang(lang);
+const t = useTranslations(lang);
+---
+<a
+  id="lang-switch"
+  href={`/${other}/`}
+  data-lang={other}
+  aria-label={t('lang.switch')}
+  title={t('lang.switch')}
+>
+  {t('lang.switch.short')}
+</a>
+
+<script is:inline>
+  (() => {
+    const a = document.getElementById('lang-switch');
+    if (!a) return;
+    a.addEventListener('click', () => {
+      try { localStorage.setItem('lang', a.dataset.lang); } catch {}
+    });
+  })();
+</script>

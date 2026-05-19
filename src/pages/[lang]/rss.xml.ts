@@ -1,0 +1,29 @@
+import rss from '@astrojs/rss';
+import { getCollection } from 'astro:content';
+import { ui, type Lang } from '../../i18n/ui';
+import type { APIContext } from 'astro';
+
+export const getStaticPaths = () => [
+  { params: { lang: 'en' } },
+  { params: { lang: 'ru' } },
+];
+
+export async function GET(ctx: APIContext) {
+  const lang = ctx.params.lang as Lang;
+  const posts = await getCollection('blog', (e) => e.data.lang === lang && !e.data.draft);
+
+  return rss({
+    title: ui[lang]['site.name'],
+    description: ui[lang]['site.description'],
+    site: ctx.site!,
+    items: posts
+      .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+      .map((e) => ({
+        title: e.data.title,
+        pubDate: e.data.pubDate,
+        description: e.data.description,
+        link: `/${lang}/blog/${e.id.replace(/^[a-z]{2}\//, '')}/`,
+      })),
+    customData: `<language>${lang === 'ru' ? 'ru-RU' : 'en-US'}</language>`,
+  });
+}

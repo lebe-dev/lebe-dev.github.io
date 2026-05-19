@@ -1,0 +1,28 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import { formatDate, useTranslations } from '../i18n/utils';
+import type { Lang } from '../i18n/ui';
+
+interface Props {
+  lang: Lang;
+  title: string;
+  description?: string;
+  pubDate: Date;
+  updated?: Date;
+}
+
+const { lang, title, description, pubDate, updated } = Astro.props;
+const t = useTranslations(lang);
+---
+<BaseLayout lang={lang} title={title} description={description}>
+  <article>
+    <h1>{title}</h1>
+    <p class="post-meta">
+      {formatDate(pubDate)}
+      {updated && <> · upd. {formatDate(updated)}</>}
+    </p>
+    <slot />
+    <hr />
+    <p><a href={`/${lang}/blog/`}>{t('post.backToBlog')}</a></p>
+  </article>
+</BaseLayout>

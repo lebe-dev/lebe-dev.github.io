@@ -1,0 +1,18 @@
+---
+import { useTranslations } from '../i18n/utils';
+import type { Lang } from '../i18n/ui';
+
+type Props = { lang: Lang };
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+<section aria-labelledby="projects-heading">
+  <h2 id="projects-heading" class="section-title">{t('section.projects')}</h2>
+  <ul class="projects-list">
+    <li>
+      <span class="proj-title"><a href="/cc/">{t('projects.cc.title')}</a></span>
+      <span class="proj-desc">{t('projects.cc.description')}</span>
+    </li>
+    {/* TODO: add more projects here */}
+  </ul>
+</section>
