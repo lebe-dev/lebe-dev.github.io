@@ -1,0 +1,34 @@
+<!DOCTYPE html><html lang="ru"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Eugene Lebedev</title><meta name="description" content="Личный сайт и блог Евгения Лебедева."><link rel="canonical" href="https://lebe-dev.github.io/ru/"><link rel="alternate" hreflang="ru" href="https://lebe-dev.github.io/ru/"><link rel="alternate" hreflang="en" href="https://lebe-dev.github.io/en/"><link rel="alternate" hreflang="x-default" href="https://lebe-dev.github.io/"><link rel="alternate" type="application/rss+xml" title="RSS-лента (ru)" href="/ru/rss.xml"><meta name="generator" content="Astro v6.3.5"><meta property="og:title" content="Eugene Lebedev"><meta property="og:description" content="Личный сайт и блог Евгения Лебедева."><meta property="og:type" content="website"><meta property="og:url" content="https://lebe-dev.github.io/ru/"><meta property="og:locale" content="ru_RU"><script>
+      (() => {
+        try {
+          const t = localStorage.getItem('theme');
+          const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (t === 'dark' || (!t && prefersDark)) {
+            document.documentElement.classList.add('dark');
+          }
+        } catch {}
+      })();
+    </script><link rel="stylesheet" href="/_astro/BaseLayout.CVbbBcWY.css"></head> <body> <header class="site-header"> <div> <a href="/ru/" style="text-decoration:none;color:inherit;"> <h1 class="site-name">Eugene Lebedev</h1> </a> <p class="site-tagline">разработчик</p> </div> <div class="actions"> <a id="lang-switch" href="/en/" data-lang="en" aria-label="Switch to English" title="Switch to English"> EN </a> <script>
+  (() => {
+    const a = document.getElementById('lang-switch');
+    if (!a) return;
+    a.addEventListener('click', () => {
+      try { localStorage.setItem('lang', a.dataset.lang); } catch {}
+    });
+  })();
+</script> <button id="theme-toggle" type="button" aria-label="Переключить на тёмную тему" data-label-light="Переключить на светлую тему" data-label-dark="Переключить на тёмную тему" data-astro-cid-x3pjskd3> <span class="sun" aria-hidden="true" data-astro-cid-x3pjskd3>☀</span> <span class="moon" aria-hidden="true" data-astro-cid-x3pjskd3>🌙</span> </button>  <script>
+  (() => {
+    const btn = document.getElementById('theme-toggle');
+    if (!btn) return;
+    const sync = () => {
+      const dark = document.documentElement.classList.contains('dark');
+      btn.setAttribute('aria-label', dark ? btn.dataset.labelLight : btn.dataset.labelDark);
+    };
+    sync();
+    btn.addEventListener('click', () => {
+      const dark = document.documentElement.classList.toggle('dark');
+      try { localStorage.setItem('theme', dark ? 'dark' : 'light'); } catch {}
+      sync();
+    });
+  })();
+</script> </div> </header> <main>  <svg class="deco" viewBox="0 0 900 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="" aria-hidden="true" preserveAspectRatio="xMidYMid meet"> <defs> <linearGradient id="lines-grad" x1="0%" y1="0%" x2="100%" y2="0%"> <stop offset="0%" stop-color="#6d28d9"></stop> <stop offset="35%" stop-color="#be185d"></stop> <stop offset="70%" stop-color="#ef4444"></stop> <stop offset="100%" stop-color="#f59e0b"></stop> </linearGradient> </defs> <line x1="80" y1="210" x2="480" y2="210" stroke="url(#lines-grad)" stroke-width="3" stroke-linecap="round"></line><line x1="102" y1="196" x2="510" y2="196" stroke="url(#lines-grad)" stroke-width="3" stroke-linecap="round"></line><line x1="124" y1="182" x2="540" y2="182" stroke="url(#lines-grad)" stroke-width="3" stroke-linecap="round"></line><line x1="146" y1="168" x2="570" y2="168" stroke="url(#lines-grad)" stroke-width="3" stroke-linecap="round"></line><line x1="168" y1="154" x2="600" y2="154" stroke="url(#lines-grad)" stroke-width="3" stroke-linecap="round"></line><line x1="190" y1="140" x2="630" y2="140" stroke="url(#lines-grad)" stroke-width="3" stroke-linecap="round"></line><line x1="212" y1="126" x2="660" y2="126" stroke="url(#lines-grad)" stroke-width="3" stroke-linecap="round"></line><line x1="234" y1="112" x2="690" y2="112" stroke="url(#lines-grad)" stroke-width="3" stroke-linecap="round"></line><line x1="256" y1="98" x2="720" y2="98" stroke="url(#lines-grad)" stroke-width="3" stroke-linecap="round"></line><line x1="278" y1="84" x2="750" y2="84" stroke="url(#lines-grad)" stroke-width="3" stroke-linecap="round"></line><line x1="300" y1="70" x2="780" y2="70" stroke="url(#lines-grad)" stroke-width="3" stroke-linecap="round"></line><line x1="322" y1="56" x2="810" y2="56" stroke="url(#lines-grad)" stroke-width="3" stroke-linecap="round"></line> </svg> <section aria-labelledby="bio-heading"> <h2 id="bio-heading" class="section-title">Обо мне</h2> <p>Привет. Я Евгений, разработчик. Это мой угол интернета — пишу про софт, инструменты, которые мастерю, и то, что узнаю по пути.</p> </section> <section aria-labelledby="projects-heading"> <h2 id="projects-heading" class="section-title">Проекты</h2> <ul class="projects-list"> <li> <span class="proj-title"><a href="/cc/">Калькулятор крипто-спреда</a></span> <span class="proj-desc">Небольшое PWA, которое помогает понять, не разводят ли вас в грузинском обменнике на курсе BTC/GEL.</span> </li>  </ul> </section> <section aria-labelledby="musings-heading"> <h2 id="musings-heading" class="section-title"> Заметки <a class="rss" href="/ru/rss.xml" aria-label="RSS-лента" title="RSS-лента"> <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"> <path d="M6.18 15.64a2.18 2.18 0 1 1 0 4.36 2.18 2.18 0 0 1 0-4.36zM4 4.44A15.56 15.56 0 0 1 19.56 20h-2.84A12.72 12.72 0 0 0 4 7.28V4.44zm0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93V10.1z"></path> </svg> </a> </h2> <ul class="posts-list">  <li class="date">2026-05-19</li> <li class="title"><a href="/ru/blog/privet-mir/">Привет, мир</a></li>  </ul> </section>  </main> <footer class="site-footer"> <nav class="links" aria-label="external"> <a href="https://github.com/lebe-dev" rel="me noopener" target="_blank">GitHub</a> <a href="/ru/rss.xml">RSS</a>  </nav> <p>Эта страница уважает вашу приватность: не использует cookies или аналогичные технологии и не собирает персональные данные.</p> </footer> </body></html>

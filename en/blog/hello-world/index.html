@@ -1,0 +1,43 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hello, world — Eugene Lebedev</title><meta name="description" content="A first post — what this place is and why it exists."><link rel="canonical" href="https://lebe-dev.github.io/en/blog/hello-world/"><link rel="alternate" hreflang="en" href="https://lebe-dev.github.io/en/blog/hello-world/"><link rel="alternate" hreflang="ru" href="https://lebe-dev.github.io/ru/blog/hello-world/"><link rel="alternate" hreflang="x-default" href="https://lebe-dev.github.io/"><link rel="alternate" type="application/rss+xml" title="RSS feed (en)" href="/en/rss.xml"><meta name="generator" content="Astro v6.3.5"><meta property="og:title" content="Hello, world — Eugene Lebedev"><meta property="og:description" content="A first post — what this place is and why it exists."><meta property="og:type" content="website"><meta property="og:url" content="https://lebe-dev.github.io/en/blog/hello-world/"><meta property="og:locale" content="en_US"><script>
+      (() => {
+        try {
+          const t = localStorage.getItem('theme');
+          const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (t === 'dark' || (!t && prefersDark)) {
+            document.documentElement.classList.add('dark');
+          }
+        } catch {}
+      })();
+    </script><link rel="stylesheet" href="/_astro/BaseLayout.CVbbBcWY.css"></head> <body> <header class="site-header"> <div> <a href="/en/" style="text-decoration:none;color:inherit;"> <h1 class="site-name">Eugene Lebedev</h1> </a> <p class="site-tagline">developer</p> </div> <div class="actions"> <a id="lang-switch" href="/ru/" data-lang="ru" aria-label="Сменить на русский" title="Сменить на русский"> RU </a> <script>
+  (() => {
+    const a = document.getElementById('lang-switch');
+    if (!a) return;
+    a.addEventListener('click', () => {
+      try { localStorage.setItem('lang', a.dataset.lang); } catch {}
+    });
+  })();
+</script> <button id="theme-toggle" type="button" aria-label="Switch to dark theme" data-label-light="Switch to light theme" data-label-dark="Switch to dark theme" data-astro-cid-x3pjskd3> <span class="sun" aria-hidden="true" data-astro-cid-x3pjskd3>☀</span> <span class="moon" aria-hidden="true" data-astro-cid-x3pjskd3>🌙</span> </button>  <script>
+  (() => {
+    const btn = document.getElementById('theme-toggle');
+    if (!btn) return;
+    const sync = () => {
+      const dark = document.documentElement.classList.contains('dark');
+      btn.setAttribute('aria-label', dark ? btn.dataset.labelLight : btn.dataset.labelDark);
+    };
+    sync();
+    btn.addEventListener('click', () => {
+      const dark = document.documentElement.classList.toggle('dark');
+      try { localStorage.setItem('theme', dark ? 'dark' : 'light'); } catch {}
+      sync();
+    });
+  })();
+</script> </div> </header> <main>  <article> <h1>Hello, world</h1> <p class="post-meta"> 2026-05-19  </p>  <p>This is the first entry of this blog. I’m Eugene, a developer working on backends, tools, and the occasional small web app. I plan to use this space for short notes about software I build and ideas I want to think through in writing.</p>
+<h2 id="why-a-blog-in-2026">Why a blog in 2026</h2>
+<p>Writing forces clarity. The act of putting a thought down — for a reader who is not me — drags the fuzzy edges into focus. That is the whole point.</p>
+<h2 id="what-youll-find-here">What you’ll find here</h2>
+<ul>
+<li>Build logs of small projects (the <code>/cc/</code> calculator is one of them)</li>
+<li>Notes on tools I rely on day-to-day</li>
+<li>Occasional opinion pieces</li>
+</ul>
+<p>See you in the next one.</p>  <hr> <p><a href="/en/blog/">← Back to all posts</a></p> </article>  </main> <footer class="site-footer"> <nav class="links" aria-label="external"> <a href="https://github.com/lebe-dev" rel="me noopener" target="_blank">GitHub</a> <a href="/en/rss.xml">RSS</a>  </nav> <p>This page respects your privacy by not using cookies or similar technologies and by not collecting any personally identifiable information.</p> </footer> </body></html>
