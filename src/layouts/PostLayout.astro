@@ -1,6 +1,7 @@
 ---
 import BaseLayout from './BaseLayout.astro';
 import PostLangSwitch from '../components/PostLangSwitch.svelte';
+import AiUsageDisclaimer from '../components/AiUsageDisclaimer.svelte';
 import { formatDate, useTranslations } from '../i18n/utils';
 import type { Lang } from '../i18n/ui';
 
@@ -59,36 +60,15 @@ const localeUrls = Object.fromEntries(translations.map((tr) => [tr.code, tr.url]
       </div>
     )}
     {aiUsageDisclaimer && (
-      <details class="ai-usage-disclaimer" data-ai-usage-disclaimer>
-        <summary>
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <circle cx="12" cy="12" r="10" />
-            <path d="M12 16v-4" />
-            <path d="M12 8h.01" />
-          </svg>
-          <span>{t('post.aiUsageDisclaimer')}</span>
-          <svg class="icon chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="m6 9 6 6 6-6" />
-          </svg>
-        </summary>
-        <div class="ai-usage-disclaimer-content">
-          <p class="ai-usage-disclaimer-text">{aiUsageDisclaimer}</p>
-          {(aiUsageDisclaimerShowAcceptButton || aiUsageDisclaimerShowLeaveButton) && (
-            <div class="ai-usage-disclaimer-actions">
-              {aiUsageDisclaimerShowAcceptButton && (
-                <button type="button" class="ai-usage-disclaimer-accept" data-ai-usage-disclaimer-accept>
-                  {aiUsageDisclaimerAcceptButtonText}
-                </button>
-              )}
-              {aiUsageDisclaimerShowLeaveButton && (
-                <button type="button" class="ai-usage-disclaimer-leave" data-ai-usage-disclaimer-leave>
-                  {aiUsageDisclaimerLeaveButtonText}
-                </button>
-              )}
-            </div>
-          )}
-        </div>
-      </details>
+      <AiUsageDisclaimer
+        label={t('post.aiUsageDisclaimer')}
+        text={aiUsageDisclaimer}
+        showAcceptButton={aiUsageDisclaimerShowAcceptButton}
+        acceptButtonText={aiUsageDisclaimerAcceptButtonText}
+        showLeaveButton={aiUsageDisclaimerShowLeaveButton}
+        leaveButtonText={aiUsageDisclaimerLeaveButtonText}
+        client:load
+      />
     )}
     <slot />
     <hr />
@@ -159,115 +139,6 @@ const localeUrls = Object.fromEntries(translations.map((tr) => [tr.code, tr.url]
     object-fit: contain;
   }
 
-  .ai-usage-disclaimer {
-    margin: 1.25rem 0;
-    border-left: 3px solid var(--accent-1);
-    background: color-mix(in srgb, var(--accent-1) 12%, transparent);
-    border-radius: 0 4px 4px 0;
-    font-family: var(--sans);
-    font-size: 0.9rem;
-  }
-
-  .ai-usage-disclaimer summary {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.6rem 1rem;
-    cursor: pointer;
-    color: var(--text-muted);
-    list-style: none;
-    user-select: none;
-  }
-
-  .ai-usage-disclaimer summary::-webkit-details-marker {
-    display: none;
-  }
-
-  .ai-usage-disclaimer .icon {
-    width: 1rem;
-    height: 1rem;
-    flex-shrink: 0;
-  }
-
-  .ai-usage-disclaimer .chevron {
-    margin-left: auto;
-    transition: transform 0.2s ease;
-  }
-
-  .ai-usage-disclaimer[open] .chevron {
-    transform: rotate(180deg);
-  }
-
-  .ai-usage-disclaimer-content {
-    padding: 0 1rem 0.85rem;
-    color: var(--text-muted);
-  }
-
-  .ai-usage-disclaimer-text {
-    margin: 0;
-    white-space: pre-line;
-  }
-
-  .ai-usage-disclaimer-actions {
-    display: flex;
-    gap: 0.5rem;
-    margin-top: 0.6rem;
-  }
-
-  .ai-usage-disclaimer-accept,
-  .ai-usage-disclaimer-leave {
-    display: inline-flex;
-    padding: 0.3rem 0.7rem;
-    border: 1px solid var(--fg);
-    border-radius: 4px;
-    background: var(--bg);
-    color: var(--fg);
-    font-family: var(--sans);
-    font-size: 0.85rem;
-    cursor: pointer;
-    transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
-  }
-
-  .ai-usage-disclaimer-accept:hover {
-    background: #16a34a;
-    border-color: #16a34a;
-    color: #fff;
-  }
-
-  .ai-usage-disclaimer-leave:hover {
-    background: var(--accent-2);
-    border-color: var(--accent-2);
-    color: #fff;
-  }
-
-  :root.dark .ai-usage-disclaimer {
-    border-left-color: #c4b5fd;
-    background: #291f43;
-  }
-
-  :root.dark .ai-usage-disclaimer summary,
-  :root.dark .ai-usage-disclaimer-content {
-    color: #c3bcd9;
-  }
-
-  :root.dark .ai-usage-disclaimer-accept,
-  :root.dark .ai-usage-disclaimer-leave {
-    border-color: #202248;
-    background: #3a2d5e;
-    color: #c4b5fd;
-  }
-
-  :root.dark .ai-usage-disclaimer-accept:hover {
-    background: #22c55e;
-    border-color: #22c55e;
-    color: #1a1a1a;
-  }
-
-  :root.dark .ai-usage-disclaimer-leave:hover {
-    background: #f87171;
-    border-color: #f87171;
-    color: #1a1a1a;
-  }
 </style>
 
 <script is:inline>
@@ -292,29 +163,6 @@ const localeUrls = Object.fromEntries(translations.map((tr) => [tr.code, tr.url]
     lightbox.addEventListener('click', close);
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && !lightbox.hidden) close();
-    });
-  })();
-
-  (() => {
-    const STORAGE_KEY = 'ai-usage-disclaimer-accepted';
-    const disclaimer = document.querySelector('[data-ai-usage-disclaimer]');
-    if (!disclaimer) return;
-
-    let accepted = false;
-    try { accepted = localStorage.getItem(STORAGE_KEY) === '1'; } catch {}
-    if (accepted) {
-      disclaimer.hidden = true;
-      return;
-    }
-
-    disclaimer.querySelector('[data-ai-usage-disclaimer-accept]')?.addEventListener('click', () => {
-      try { localStorage.setItem(STORAGE_KEY, '1'); } catch {}
-      disclaimer.hidden = true;
-    });
-
-    disclaimer.querySelector('[data-ai-usage-disclaimer-leave]')?.addEventListener('click', () => {
-      window.close();
-      window.location.href = 'about:blank';
     });
   })();
 </script>
