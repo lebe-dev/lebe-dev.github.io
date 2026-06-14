@@ -1,11 +1,21 @@
+import { fileURLToPath } from 'node:url';
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
+import tailwindcss from '@tailwindcss/vite';
 
 import svelte from '@astrojs/svelte';
 
 export default defineConfig({
   server: { port: 4200, host: true },
-  vite: { server: { allowedHosts: ['test.home'] } },
+  vite: {
+    plugins: [tailwindcss()],
+    resolve: {
+      alias: {
+        $lib: fileURLToPath(new URL('./src/lib', import.meta.url)),
+      },
+    },
+    server: { allowedHosts: ['test.home'] },
+  },
   site: 'https://lebe-dev.github.io',
   base: '/',
   trailingSlash: 'ignore',

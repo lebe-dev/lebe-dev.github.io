@@ -3,6 +3,7 @@ title: Hello, world
 description: A first post — what this place is and why it exists.
 pubDate: 2026-05-19
 lang: en
+translationKey: hello-world
 tags: [meta]
 ---
 

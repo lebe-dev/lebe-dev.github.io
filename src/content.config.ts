@@ -10,10 +10,13 @@ const blog = defineCollection({
     updated: z.coerce.date().optional(),
     draft: z.boolean().default(false),
     lang: z.enum(['en', 'ru', 'es', 'zh', 'ja', 'fr', 'de']),
+    translationKey: z.string().optional(),
     tags: z.array(z.string()).default([]),
-    disclaimer: z.string().optional(),
-    disclaimerShowLeaveButton: z.boolean().default(false),
-    disclaimerLeaveButtonText: z.string().optional(),
+    aiUsageDisclaimer: z.string().optional(),
+    aiUsageDisclaimerShowLeaveButton: z.boolean().optional(),
+    aiUsageDisclaimerLeaveButtonText: z.string().optional(),
+    aiUsageDisclaimerShowAcceptButton: z.boolean().optional(),
+    aiUsageDisclaimerAcceptButtonText: z.string().optional(),
   }),
 });
 

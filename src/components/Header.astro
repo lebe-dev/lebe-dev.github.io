@@ -1,22 +1,61 @@
 ---
 import { useTranslations } from '../i18n/utils';
 import type { Lang } from '../i18n/ui';
-import ThemeToggle from './ThemeToggle.astro';
-import LanguageSwitch from './LanguageSwitch.astro';
+import ThemeToggle from './ThemeToggle.svelte';
+import LanguageSwitch from './LanguageSwitch.svelte';
 
-type Props = { lang: Lang };
-const { lang } = Astro.props;
+type Props = { lang: Lang; showTitle?: boolean; minimal?: boolean; backHref?: string };
+const { lang, showTitle = true, minimal = false } = Astro.props;
+const backHref = Astro.props.backHref ?? `/${lang}/blog/`;
 const t = useTranslations(lang);
 ---
-<header class="site-header">
+<header class:list={['site-header', { minimal }]}>
   <div>
-    <a href={`/${lang}/`} style="text-decoration:none;color:inherit;">
-      <h1 class="site-name">{t('site.name')}</h1>
-    </a>
-    <p class="site-tagline">{t('site.tagline')}</p>
+    {minimal ? (
+      <a href={backHref} class="back-link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="m12 19-7-7 7-7" />
+          <path d="M19 12H5" />
+        </svg>
+        <span>{t('post.back')}</span>
+      </a>
+    ) : (
+      <>
+        {showTitle && (
+          <a href={`/${lang}/`} style="text-decoration:none;color:inherit;">
+            <h1 class="site-name">{t('site.name')}</h1>
+          </a>
+        )}
+        <p class="site-tagline">{t('site.tagline')}</p>
+      </>
+    )}
   </div>
   <div class="actions">
-    <LanguageSwitch lang={lang} />
-    <ThemeToggle lang={lang} />
+    {!minimal && <LanguageSwitch lang={lang} label={t('lang.switch')} client:load />}
+    <ThemeToggle labelLight={t('theme.light')} labelDark={t('theme.dark')} client:load />
   </div>
 </header>
+
+<style>
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-family: var(--sans);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    transition: color 0.15s ease;
+  }
+
+  .back-link:hover {
+    color: var(--fg);
+  }
+
+  .back-link :global(svg) {
+    width: 14px;
+    height: 14px;
+  }
+</style>

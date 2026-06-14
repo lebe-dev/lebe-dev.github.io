@@ -2,21 +2,37 @@
 import { getCollection, render } from 'astro:content';
 import PostLayout from '../../../layouts/PostLayout.astro';
 import type { Lang } from '../../../i18n/ui';
+import { getReadingStats } from '../../../i18n/utils';
+import { resolveAiUsageDisclaimer } from '../../../i18n/aiUsageDisclaimer';
 
 export async function getStaticPaths() {
   const all = await getCollection('blog', (e) => !e.data.draft);
-  return all.map((entry) => ({
-    params: {
-      lang: entry.data.lang,
-      slug: entry.id.replace(/^[a-z]{2}\//, ''),
-    },
-    props: { entry },
-  }));
+  const slug = (id: string) => id.replace(/^[a-z]{2}\//, '');
+  return all.map((entry) => {
+    const key = entry.data.translationKey;
+    const translations = key
+      ? all
+          .filter((e) => e.data.translationKey === key)
+          .map((e) => ({
+            code: e.data.lang as Lang,
+            url: `/${e.data.lang}/blog/${slug(e.id)}/`,
+          }))
+      : [];
+    return {
+      params: {
+        lang: entry.data.lang,
+        slug: slug(entry.id),
+      },
+      props: { entry, translations },
+    };
+  });
 }
 
-const { entry } = Astro.props;
+const { entry, translations } = Astro.props;
 const lang = entry.data.lang as Lang;
 const { Content } = await render(entry);
+const disclaimer = resolveAiUsageDisclaimer(lang, entry.data);
+const readingStats = getReadingStats(entry.body ?? '');
 ---
 <PostLayout
   lang={lang}
@@ -24,9 +40,14 @@ const { Content } = await render(entry);
   description={entry.data.description}
   pubDate={entry.data.pubDate}
   updated={entry.data.updated}
-  disclaimer={entry.data.disclaimer}
-  disclaimerShowLeaveButton={entry.data.disclaimerShowLeaveButton}
-  disclaimerLeaveButtonText={entry.data.disclaimerLeaveButtonText}
+  chars={readingStats.chars}
+  minutes={readingStats.minutes}
+  translations={translations}
+  aiUsageDisclaimer={disclaimer.aiUsageDisclaimer}
+  aiUsageDisclaimerShowLeaveButton={disclaimer.aiUsageDisclaimerShowLeaveButton}
+  aiUsageDisclaimerLeaveButtonText={disclaimer.aiUsageDisclaimerLeaveButtonText}
+  aiUsageDisclaimerShowAcceptButton={disclaimer.aiUsageDisclaimerShowAcceptButton}
+  aiUsageDisclaimerAcceptButtonText={disclaimer.aiUsageDisclaimerAcceptButtonText}
 >
   <Content />
 </PostLayout>
