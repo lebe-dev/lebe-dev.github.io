@@ -274,8 +274,8 @@ video {
 }
 
 .site-name {
-  font-family: var(--sans);
-  font-weight: 600;
+  font-family: var(--heading-serif);
+  font-weight: 700;
   font-size: 2rem;
   margin: 0;
   letter-spacing: -0.01em;
@@ -352,9 +352,32 @@ header.site-header.minimal .actions {
   }
 }
 
+main:has(> .home-banner) {
+  padding-top: 1.25rem;
+}
+
+.home-banner {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 0 1rem;
+}
+
+.home-banner--dark {
+  display: none;
+}
+
+:root.dark .home-banner--light {
+  display: none;
+}
+
+:root.dark .home-banner--dark {
+  display: block;
+}
+
 .section-title {
-  font-family: var(--sans);
-  font-weight: 600;
+  font-family: var(--heading-serif);
+  font-weight: 700;
   font-size: 1.4rem;
   margin: 2.5rem 0 1rem;
   display: flex;
@@ -400,7 +423,7 @@ header.site-header.minimal .actions {
 
 .deco {
   margin: 1.5rem 0 1rem;
-  display: block;
+  display: none;
   width: 100%;
   max-width: var(--content);
 }
@@ -433,6 +456,12 @@ article .post-meta {
   font-style: normal;
   font-size: 0.75rem;
   margin: 0.25rem 0 1.25rem;
+}
+
+[data-slot="select-content"] [data-slot="select-item"] {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
 }
 
 /* Restore list markers in article content (Tailwind preflight resets them) */

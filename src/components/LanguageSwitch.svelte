@@ -4,6 +4,16 @@
 
   let { lang, label }: { lang: Lang; label: string } = $props();
 
+  const orderedLanguages = $derived.by(() => {
+    const entries = Object.entries(languages) as [Lang, string][];
+    const secondary: Lang = lang === 'en' ? 'ru' : 'en';
+    const priority = (code: Lang) => (code === lang ? 0 : code === secondary ? 1 : 2);
+    return entries.sort(([a, nameA], [b, nameB]) => {
+      const diff = priority(a) - priority(b);
+      return diff !== 0 ? diff : nameA.localeCompare(nameB);
+    });
+  });
+
   function onValueChange(value: string) {
     try {
       localStorage.setItem('lang', value);
@@ -17,7 +27,7 @@
     {languages[lang]}
   </Select.Trigger>
   <Select.Content>
-    {#each Object.entries(languages) as [code, name]}
+    {#each orderedLanguages as [code, name]}
       <Select.Item value={code} label={name}>{name}</Select.Item>
     {/each}
   </Select.Content>

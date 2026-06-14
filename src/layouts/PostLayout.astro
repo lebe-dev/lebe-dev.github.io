@@ -60,31 +60,35 @@ const localeUrls = Object.fromEntries(translations.map((tr) => [tr.code, tr.url]
           </span>
         </>
       )}
-      {markdown && (
-        <button
-          type="button"
-          id="copy-md"
-          class="copy-md"
-          title={t('post.copyMd')}
-          aria-label={t('post.copyMd')}
-        >
-          <svg class="copy-md__icon copy-md__icon--copy" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-          </svg>
-          <svg class="copy-md__icon copy-md__icon--check" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M20 6 9 17l-5-5"></path>
-          </svg>
-          <span class="copy-md__text">{t('post.copyMdShort')}</span>
-        </button>
+      {(translations.length > 1 || markdown) && (
+        <span class="post-actions">
+          {translations.length > 1 && (
+            <span class="post-lang-inline">
+              <PostLangSwitch lang={lang} label={t('lang.switch')} translations={translations} client:load />
+            </span>
+          )}
+          {markdown && (
+            <button
+              type="button"
+              id="copy-md"
+              class="copy-md"
+              title={t('post.copyMd')}
+              aria-label={t('post.copyMd')}
+            >
+              <svg class="copy-md__icon copy-md__icon--copy" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              <svg class="copy-md__icon copy-md__icon--check" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M20 6 9 17l-5-5"></path>
+              </svg>
+              <span class="copy-md__text">{t('post.copyMdShort')}</span>
+            </button>
+          )}
+        </span>
       )}
     </p>
     {markdown && <textarea id="post-markdown" hidden readonly>{markdown}</textarea>}
-    {translations.length > 1 && (
-      <div class="post-lang-switch">
-        <PostLangSwitch lang={lang} label={t('lang.switch')} translations={translations} client:load />
-      </div>
-    )}
     {aiUsageDisclaimer && (
       <AiUsageDisclaimer
         label={t('post.aiUsageDisclaimer')}
@@ -120,7 +124,7 @@ const localeUrls = Object.fromEntries(translations.map((tr) => [tr.code, tr.url]
   article :global(.post-meta) {
     display: flex;
     flex-wrap: wrap;
-    align-items: baseline;
+    align-items: center;
     gap: 0.4rem 0.75rem;
   }
 
@@ -136,7 +140,6 @@ const localeUrls = Object.fromEntries(translations.map((tr) => [tr.code, tr.url]
   }
 
   .copy-md {
-    margin-left: auto;
     display: inline-flex;
     align-items: center;
     gap: 0.3rem;
@@ -193,8 +196,26 @@ const localeUrls = Object.fromEntries(translations.map((tr) => [tr.code, tr.url]
     display: inline;
   }
 
-  .post-lang-switch {
-    margin: 0.75rem 0 1.5rem;
+  .post-actions {
+    margin-left: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .post-lang-inline {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .post-lang-inline :global([data-slot="select-trigger"]) {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    height: auto;
+    min-height: 0;
+    padding: 0.2rem 0.45rem;
+    gap: 0.25rem;
   }
 
   article :global(h2),
