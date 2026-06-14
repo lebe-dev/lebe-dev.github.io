@@ -66,6 +66,8 @@ export const ui = {
     'post.copyMd': 'Copy as Markdown',
     'post.copiedMd': 'Copied!',
     'post.copyMdShort': 'COPY',
+    'post.backToTop': 'Back to top',
+    'post.copyHeadingLink': 'Copy link to this section',
     'footer.privacy':
       'This page respects your privacy by not using cookies or similar technologies and by not collecting any personally identifiable information.',
     '404.title': 'Page not found',
@@ -115,6 +117,8 @@ export const ui = {
     'post.copyMd': 'Скопировать как Markdown',
     'post.copiedMd': 'Скопировано!',
     'post.copyMdShort': 'СКОПИРОВАТЬ',
+    'post.backToTop': 'Наверх',
+    'post.copyHeadingLink': 'Скопировать ссылку на раздел',
     'footer.privacy':
       'Эта страница уважает вашу приватность: не использует cookies или аналогичные технологии и не собирает персональные данные.',
     '404.title': 'Страница не найдена',
@@ -164,6 +168,8 @@ export const ui = {
     'post.copyMd': 'Copiar como Markdown',
     'post.copiedMd': '¡Copiado!',
     'post.copyMdShort': 'COPIAR',
+    'post.backToTop': 'Volver arriba',
+    'post.copyHeadingLink': 'Copiar enlace a esta sección',
     'footer.privacy':
       'Esta página respeta tu privacidad: no usa cookies ni tecnologías similares y no recopila información personal identificable.',
     '404.title': 'Página no encontrada',
@@ -212,6 +218,8 @@ export const ui = {
     'post.copyMd': '复制为 Markdown',
     'post.copiedMd': '已复制！',
     'post.copyMdShort': '复制',
+    'post.backToTop': '返回顶部',
+    'post.copyHeadingLink': '复制本节链接',
     'footer.privacy':
       '本页面尊重您的隐私：不使用 Cookie 或类似技术，也不收集任何可识别个人身份的信息。',
     '404.title': '页面未找到',
@@ -260,6 +268,8 @@ export const ui = {
     'post.copyMd': 'Markdown としてコピー',
     'post.copiedMd': 'コピーしました！',
     'post.copyMdShort': 'コピー',
+    'post.backToTop': 'トップへ戻る',
+    'post.copyHeadingLink': 'このセクションへのリンクをコピー',
     'footer.privacy':
       'このページはプライバシーを尊重し、Cookieなどの技術を使用せず、個人を識別できる情報も収集しません。',
     '404.title': 'ページが見つかりません',
@@ -309,6 +319,8 @@ export const ui = {
     'post.copyMd': 'Copier en Markdown',
     'post.copiedMd': 'Copié !',
     'post.copyMdShort': 'COPIER',
+    'post.backToTop': 'Haut de page',
+    'post.copyHeadingLink': 'Copier le lien vers cette section',
     'footer.privacy':
       "Cette page respecte votre vie privée : elle n'utilise pas de cookies ni de technologies similaires et ne collecte aucune information personnelle identifiable.",
     '404.title': 'Page introuvable',
@@ -358,6 +370,8 @@ export const ui = {
     'post.copyMd': 'Als Markdown kopieren',
     'post.copiedMd': 'Kopiert!',
     'post.copyMdShort': 'KOPIEREN',
+    'post.backToTop': 'Nach oben',
+    'post.copyHeadingLink': 'Link zu diesem Abschnitt kopieren',
     'footer.privacy':
       'Diese Seite respektiert deine Privatsphäre: Sie verwendet keine Cookies oder ähnliche Technologien und sammelt keine personenbezogenen Daten.',
     '404.title': 'Seite nicht gefunden',

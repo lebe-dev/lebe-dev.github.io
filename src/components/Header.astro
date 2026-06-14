@@ -6,8 +6,9 @@ import LanguageSwitch from './LanguageSwitch.svelte';
 
 type Props = { lang: Lang; showTitle?: boolean; minimal?: boolean; backHref?: string };
 const { lang, showTitle = true, minimal = false } = Astro.props;
-const backHref = Astro.props.backHref ?? `/${lang}/blog/`;
+const backHref = Astro.props.backHref ?? `/${lang}/`;
 const t = useTranslations(lang);
+const siteName = lang === 'ru' ? 'Евгений Лебедев' : t('site.name');
 ---
 <header class:list={['site-header', { minimal }]}>
   <div>
@@ -23,7 +24,7 @@ const t = useTranslations(lang);
       <>
         {showTitle && (
           <a href={`/${lang}/`} style="text-decoration:none;color:inherit;">
-            <h1 class="site-name">{t('site.name')}</h1>
+            <h1 class="site-name">{siteName}</h1>
           </a>
         )}
         <p class="site-tagline">{t('site.tagline')}</p>

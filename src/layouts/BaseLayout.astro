@@ -14,10 +14,10 @@ interface Props {
   description?: string;
   showHeaderTitle?: boolean;
   minimalHeader?: boolean;
-  localeUrls?: Partial<Record<Lang, string>>;
+  resetVisited?: boolean;
 }
 
-const { lang, title, description, showHeaderTitle = true, minimalHeader = false, localeUrls } = Astro.props;
+const { lang, title, description, showHeaderTitle = true, minimalHeader = false, resetVisited = false } = Astro.props;
 const t = useTranslations(lang);
 const pageTitle = title ? `${title} — ${t('site.name')}` : t('site.name');
 const pageDescription = description ?? t('site.description');
@@ -29,37 +29,6 @@ const otherLangs = (Object.keys(languages) as Lang[]).filter((l) => l !== lang);
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <script is:inline define:vars={{ currentLang: lang, langCodes: Object.keys(languages), localeUrls: localeUrls ?? null }}>
-      (() => {
-        try {
-          const saved = localStorage.getItem('lang');
-          let target = null;
-          if (saved && langCodes.includes(saved)) {
-            target = saved;
-          } else if (!saved) {
-            const browserLangs = navigator.languages || [navigator.language || ''];
-            for (const bl of browserLangs) {
-              const prefix = bl.toLowerCase().split('-')[0];
-              if (langCodes.includes(prefix)) { target = prefix; break; }
-            }
-          }
-          if (!target || target === currentLang) return;
-
-          let url;
-          if (localeUrls) {
-            // Page with language-specific URLs (e.g. blog posts): only redirect
-            // if a translation actually exists for the target language.
-            url = localeUrls[target];
-            if (!url) return;
-          } else {
-            url = location.pathname.replace('/' + currentLang + '/', '/' + target + '/');
-          }
-
-          const dest = url + location.search + location.hash;
-          if (url && url !== location.pathname) location.replace(dest);
-        } catch {}
-      })();
-    </script>
     <title>{pageTitle}</title>
     <meta name="description" content={pageDescription} />
     <link rel="canonical" href={canonical.toString()} />
@@ -93,7 +62,7 @@ const otherLangs = (Object.keys(languages) as Lang[]).filter((l) => l !== lang);
   </head>
   <body>
     <Header lang={lang} showTitle={showHeaderTitle} minimal={minimalHeader} />
-    <main>
+    <main class:list={[{ 'reset-visited': resetVisited }]}>
       <slot />
     </main>
     <Footer lang={lang} />

@@ -40,9 +40,8 @@ const {
 } = Astro.props;
 const t = useTranslations(lang);
 const formattedChars = typeof chars === 'number' ? chars.toLocaleString(lang) : null;
-const localeUrls = Object.fromEntries(translations.map((tr) => [tr.code, tr.url]));
 ---
-<BaseLayout lang={lang} title={title} description={description} showHeaderTitle={false} minimalHeader localeUrls={localeUrls}>
+<BaseLayout lang={lang} title={title} description={description} showHeaderTitle={false} minimalHeader resetVisited>
   <article>
     <h1>{title}</h1>
     <p class="post-meta">
@@ -102,12 +101,35 @@ const localeUrls = Object.fromEntries(translations.map((tr) => [tr.code, tr.url]
     )}
     <slot />
     <hr />
-    <p><a href={`/${lang}/blog/`}>{t('post.backToBlog')}</a></p>
+    <p>
+      <a href={`/${lang}/`} class="back-link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="m12 19-7-7 7-7" />
+          <path d="M19 12H5" />
+        </svg>
+        <span>{t('nav.home')}</span>
+      </a>
+    </p>
   </article>
 
   <div class="lightbox" id="lightbox" hidden>
     <img src="" alt="" />
   </div>
+
+  <button
+    type="button"
+    id="back-to-top"
+    class="back-to-top"
+    title={t('post.backToTop')}
+    aria-label={t('post.backToTop')}
+  >
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="m18 15-6-6-6 6"></path>
+    </svg>
+  </button>
+
+  <textarea id="heading-link-copy-src" hidden readonly></textarea>
+  <span id="heading-link-i18n" hidden data-title={t('post.copyHeadingLink')} data-copied={t('post.copiedMd')}></span>
 </BaseLayout>
 
 <style>
@@ -229,6 +251,29 @@ const localeUrls = Object.fromEntries(translations.map((tr) => [tr.code, tr.url]
     cursor: zoom-in;
   }
 
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-family: var(--sans);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    transition: color 0.15s ease;
+  }
+
+  .back-link:hover {
+    color: var(--fg);
+  }
+
+  .back-link svg {
+    width: 14px;
+    height: 14px;
+  }
+
   .lightbox {
     position: fixed;
     inset: 0;
@@ -248,6 +293,100 @@ const localeUrls = Object.fromEntries(translations.map((tr) => [tr.code, tr.url]
     max-width: 90vw;
     max-height: 90vh;
     object-fit: contain;
+  }
+
+  .back-to-top {
+    position: fixed;
+    right: 1.75rem;
+    bottom: 1.75rem;
+    z-index: 900;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    padding: 0;
+    border: 1px solid var(--rule);
+    border-radius: 50%;
+    background: var(--bg);
+    color: var(--fg);
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(0.5rem);
+    transition: opacity 0.2s ease, transform 0.2s ease, color 0.15s ease, border-color 0.15s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+  }
+
+  .back-to-top.is-visible {
+    opacity: 0.85;
+    transform: translateY(0);
+  }
+
+  .back-to-top:hover {
+    opacity: 1;
+    color: var(--link);
+    border-color: var(--link);
+  }
+
+  /* Desktop only */
+  @media (hover: hover) and (min-width: 768px) {
+    .back-to-top {
+      display: inline-flex;
+    }
+  }
+
+  /* Heading anchor links */
+  article :global(h2),
+  article :global(h3),
+  article :global(h4) {
+    position: relative;
+    width: fit-content;
+    max-width: 100%;
+  }
+
+  article :global(.heading-anchor) {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 0.4rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    opacity: 0;
+    transition: opacity 0.15s ease, color 0.15s ease;
+    vertical-align: middle;
+  }
+
+  article :global(h2:hover) .heading-anchor,
+  article :global(h3:hover) .heading-anchor,
+  article :global(h4:hover) .heading-anchor,
+  article :global(.heading-anchor:focus-visible),
+  article :global(.heading-anchor.is-copied) {
+    opacity: 0.7;
+  }
+
+  article :global(.heading-anchor:hover) {
+    opacity: 1;
+    color: var(--link);
+  }
+
+  article :global(.heading-anchor.is-copied) {
+    color: #2e7d32;
+    opacity: 1;
+  }
+
+  :global(.dark) article :global(.heading-anchor.is-copied) {
+    color: #66bb6a;
+  }
+
+  article :global(.heading-anchor svg) {
+    width: 0.7em;
+    height: 0.7em;
+  }
+
+  /* On touch devices show anchors faintly (no hover) */
+  @media (hover: none) {
+    article :global(.heading-anchor) {
+      opacity: 0.4;
+    }
   }
 
 </style>
@@ -307,6 +446,76 @@ const localeUrls = Object.fromEntries(translations.map((tr) => [tr.code, tr.url]
           source.hidden = true;
         }
       }
+    });
+  })();
+
+  (() => {
+    const btn = document.getElementById('back-to-top');
+    if (!btn) return;
+
+    const onScroll = () => {
+      btn.classList.toggle('is-visible', window.scrollY > 400);
+    };
+
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    btn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  })();
+
+  (() => {
+    const i18n = document.getElementById('heading-link-i18n');
+    const fallback = document.getElementById('heading-link-copy-src');
+    if (!i18n || !fallback) return;
+
+    const title = i18n.dataset.title || 'Copy link to this section';
+    const copiedTitle = i18n.dataset.copied || 'Copied!';
+
+    const copyText = async (text) => {
+      try {
+        await navigator.clipboard.writeText(text);
+        return true;
+      } catch {
+        fallback.value = text;
+        fallback.hidden = false;
+        fallback.select();
+        try {
+          return document.execCommand('copy');
+        } finally {
+          fallback.hidden = true;
+        }
+      }
+    };
+
+    const headings = document.querySelectorAll('article h2[id], article h3[id], article h4[id]');
+    headings.forEach((heading) => {
+      const id = heading.id;
+      const anchor = document.createElement('a');
+      anchor.className = 'heading-anchor';
+      anchor.href = `#${id}`;
+      anchor.title = title;
+      anchor.setAttribute('aria-label', title);
+      anchor.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>';
+
+      let resetTimer;
+      anchor.addEventListener('click', async (e) => {
+        e.preventDefault();
+        const url = `${location.origin}${location.pathname}#${id}`;
+        history.replaceState(null, '', `#${id}`);
+        const ok = await copyText(url);
+        if (ok) {
+          anchor.classList.add('is-copied');
+          anchor.title = copiedTitle;
+          clearTimeout(resetTimer);
+          resetTimer = setTimeout(() => {
+            anchor.classList.remove('is-copied');
+            anchor.title = title;
+          }, 2000);
+        }
+      });
+
+      heading.appendChild(anchor);
     });
   })();
 </script>

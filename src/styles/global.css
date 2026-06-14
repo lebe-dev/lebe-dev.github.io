@@ -51,8 +51,10 @@
   --fg: #1a1a1a;
   --text-muted: #8a8a8a;
   --rule: #ececec;
-  --link: #2563eb;
-  --link-visited: #6f42c1;
+  --link: #1B7FE0;
+  --link-hover: #5FA5E9;
+  --link-visited: #4275AB;
+  --link-visited-hover: #7B9EC4;
   --accent-1: #f59e0b;
   --accent-2: #ef4444;
   --accent-3: #be185d;
@@ -103,8 +105,10 @@
   --fg: #e8e8e8;
   --text-muted: #7a7a7a;
   --rule: #2a2a2a;
-  --link: #7aa7ff;
-  --link-visited: #b794ff;
+  --link: #9282cf;
+  --link-hover: #bcacef;
+  --link-visited: #6E6E6E;
+  --link-visited-hover: #aaaaaa;
   color-scheme: dark;
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
@@ -199,8 +203,25 @@ a {
   text-underline-offset: 2px;
 }
 
+a:hover {
+  color: var(--link-hover);
+}
+
 a:visited {
   color: var(--link-visited);
+}
+
+a:visited:hover {
+  color: var(--link-visited-hover);
+}
+
+/* Treat all links as new (no visited styling) on selected pages */
+main.reset-visited a:visited {
+  color: var(--link);
+}
+
+main.reset-visited a:visited:hover {
+  color: var(--link-hover);
 }
 
 hr {
@@ -324,11 +345,10 @@ header.site-header.minimal .actions {
 
 .posts-list .date {
   font-family: var(--mono);
-  font-style: italic;
   color: var(--text-muted);
-  font-size: 0.95rem;
+  font-size: 0.8rem;
   white-space: nowrap;
-  padding-top: 0.05rem;
+  padding-top: 0.2rem;
 }
 
 .posts-list .title a {
@@ -450,6 +470,10 @@ footer.site-footer a {
   color: var(--text-muted);
 }
 
+footer.site-footer a:hover {
+  color: var(--link-hover);
+}
+
 article .post-meta {
   color: var(--text-muted);
   font-family: var(--sans);
@@ -489,7 +513,8 @@ article li > ol {
 }
 
 /* External link icon (lucide: square-arrow-out-up-right) */
-a[href^="http"]:not([href*="lebe-dev.github.io"])::after {
+a[href^="http"]:not([href*="lebe-dev.github.io"])::after,
+a.proj-external::after {
   content: "";
   display: inline-block;
   width: calc(0.6em + 1px);
