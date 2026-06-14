@@ -16,6 +16,13 @@ The calculator helps users in Georgia's crypto exchange offices determine if the
 
 This site supports multiple languages but author's primary language is Russian. So when you will translate articles don't pretend to be a native.
 
+## Blog drafts
+
+Blog posts live in `src/content/blog/<lang>/*.md` (Astro content collection, schema in `src/content.config.ts`). The `draft` frontmatter flag defaults to `false`.
+
+- `draft: true` → post is **visible in `astro dev`** but **excluded from `astro build`** (the production artifact).
+- The behaviour lives in `src/lib/blog.ts`: `getBlogPosts()` hides drafts only when `import.meta.env.PROD` is true. Always fetch blog entries through this helper, not `getCollection('blog')` directly, so drafts are filtered consistently across the listing pages, `[slug]` route (including translation links), and RSS feed.
+
 ## Development Commands
 
 All commands use `just` (Justfile-based):
