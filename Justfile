@@ -22,8 +22,7 @@ lint: check
 build: lint
     npm run build
     @test -f dist/index.html || (echo "❌ Missing dist/index.html" && exit 1)
-    @test -d dist/en || (echo "❌ Missing dist/en/" && exit 1)
-    @test -d dist/ru || (echo "❌ Missing dist/ru/" && exit 1)
+    @for l in en ru es zh ja fr de; do test -d dist/$l || (echo "❌ Missing dist/$l/" && exit 1); done
     @test -f dist/cc/index.html || (echo "❌ Missing dist/cc/index.html (calculator)" && exit 1)
     @echo "✓ Build validation passed"
 
@@ -33,7 +32,7 @@ preview: build
 
 # Create a new blog post: just new-post en my-slug "My title"
 new-post LANG SLUG TITLE:
-    @test "{{LANG}}" = "en" -o "{{LANG}}" = "ru" || (echo "LANG must be 'en' or 'ru'" && exit 1)
+    @case "{{LANG}}" in en|ru|es|zh|ja|fr|de) ;; *) echo "LANG must be one of: en ru es zh ja fr de" && exit 1 ;; esac
     @mkdir -p src/content/blog/{{LANG}}
     @test ! -f src/content/blog/{{LANG}}/{{SLUG}}.md || (echo "❌ Post already exists" && exit 1)
     @printf -- "---\ntitle: %s\ndescription: \npubDate: %s\nlang: %s\ndraft: true\ntags: []\n---\n\n" "{{TITLE}}" "$(date -u +%Y-%m-%d)" "{{LANG}}" > src/content/blog/{{LANG}}/{{SLUG}}.md

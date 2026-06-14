@@ -1,7 +1,6 @@
-import { ui, defaultLang, type Lang, type UIKey } from './ui';
+import { ui, languages, defaultLang, type Lang, type UIKey } from './ui';
 
-export const isLang = (value: string): value is Lang =>
-  value === 'en' || value === 'ru';
+export const isLang = (value: string): value is Lang => value in languages;
 
 export const getLangFromUrl = (url: URL): Lang => {
   const [, segment] = url.pathname.split('/');
@@ -16,8 +15,6 @@ export const localePath = (lang: Lang, path = ''): string => {
   const trimmed = path.replace(/^\/+/, '');
   return `/${lang}/${trimmed}`.replace(/\/+$/, trimmed === '' ? '/' : '');
 };
-
-export const otherLang = (lang: Lang): Lang => (lang === 'en' ? 'ru' : 'en');
 
 export const formatDate = (date: Date): string => {
   const y = date.getUTCFullYear();

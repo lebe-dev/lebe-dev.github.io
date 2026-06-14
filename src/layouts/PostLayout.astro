@@ -9,9 +9,10 @@ interface Props {
   description?: string;
   pubDate: Date;
   updated?: Date;
+  disclaimer?: string;
 }
 
-const { lang, title, description, pubDate, updated } = Astro.props;
+const { lang, title, description, pubDate, updated, disclaimer } = Astro.props;
 const t = useTranslations(lang);
 ---
 <BaseLayout lang={lang} title={title} description={description}>
@@ -21,8 +22,126 @@ const t = useTranslations(lang);
       {formatDate(pubDate)}
       {updated && <> · upd. {formatDate(updated)}</>}
     </p>
+    {disclaimer && (
+      <details class="disclaimer">
+        <summary>
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M12 16v-4" />
+            <path d="M12 8h.01" />
+          </svg>
+          <span>{t('post.disclaimer')}</span>
+          <svg class="icon chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="m6 9 6 6 6-6" />
+          </svg>
+        </summary>
+        <div class="disclaimer-content">{disclaimer}</div>
+      </details>
+    )}
     <slot />
     <hr />
     <p><a href={`/${lang}/blog/`}>{t('post.backToBlog')}</a></p>
   </article>
+
+  <div class="lightbox" id="lightbox" hidden>
+    <img src="" alt="" />
+  </div>
 </BaseLayout>
+
+<style>
+  article :global(img) {
+    cursor: zoom-in;
+  }
+
+  .lightbox {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.9);
+    cursor: zoom-out;
+    z-index: 1000;
+  }
+
+  .lightbox[hidden] {
+    display: none;
+  }
+
+  .lightbox img {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+  }
+
+  .disclaimer {
+    margin: 1.25rem 0;
+    border-left: 3px solid var(--accent-1);
+    background: color-mix(in srgb, var(--accent-1) 12%, transparent);
+    border-radius: 0 4px 4px 0;
+    font-family: var(--sans);
+    font-size: 0.9rem;
+  }
+
+  .disclaimer summary {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1rem;
+    cursor: pointer;
+    color: var(--muted);
+    list-style: none;
+    user-select: none;
+  }
+
+  .disclaimer summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .disclaimer .icon {
+    width: 1rem;
+    height: 1rem;
+    flex-shrink: 0;
+  }
+
+  .disclaimer .chevron {
+    margin-left: auto;
+    transition: transform 0.2s ease;
+  }
+
+  .disclaimer[open] .chevron {
+    transform: rotate(180deg);
+  }
+
+  .disclaimer-content {
+    padding: 0 1rem 0.85rem;
+    color: var(--muted);
+    white-space: pre-line;
+  }
+</style>
+
+<script is:inline>
+  (() => {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = lightbox?.querySelector('img');
+    if (!lightbox || !lightboxImg) return;
+
+    document.querySelectorAll('article img').forEach((img) => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightbox.hidden = false;
+      });
+    });
+
+    const close = () => {
+      lightbox.hidden = true;
+      lightboxImg.src = '';
+    };
+
+    lightbox.addEventListener('click', close);
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !lightbox.hidden) close();
+    });
+  })();
+</script>

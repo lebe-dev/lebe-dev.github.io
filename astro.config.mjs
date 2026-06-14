@@ -13,18 +13,18 @@ export default defineConfig({
     '/cc': '/cc/index.html',
   },
   i18n: {
-    locales: ['en', 'ru'],
+    locales: ['en', 'ru', 'es', 'zh', 'ja', 'fr', 'de'],
     defaultLocale: 'en',
     routing: {
       prefixDefaultLocale: true,
       redirectToDefaultLocale: false,
     },
-    fallback: { ru: 'en' },
+    fallback: { ru: 'en', es: 'en', zh: 'en', ja: 'en', fr: 'en', de: 'en' },
   },
   integrations: [sitemap({
     i18n: {
       defaultLocale: 'en',
-      locales: { en: 'en', ru: 'ru' },
+      locales: { en: 'en', ru: 'ru', es: 'es', zh: 'zh', ja: 'ja', fr: 'fr', de: 'de' },
     },
   }), svelte()],
 });

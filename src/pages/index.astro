@@ -1,7 +1,8 @@
 ---
-// Language landing shim: static page that JS-redirects to /en/ or /ru/ based on
+// Language landing shim: static page that JS-redirects to the matching locale based on
 // localStorage.lang or navigator.language. Falls back to /en/ for crawlers and
 // no-JS clients via <meta refresh> and visible links.
+import { languages } from '../i18n/ui';
 ---
 <!doctype html>
 <html lang="en">
@@ -10,16 +11,25 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Eugene Lebedev</title>
     <link rel="canonical" href="https://lebe-dev.github.io/en/" />
-    <link rel="alternate" hreflang="en" href="https://lebe-dev.github.io/en/" />
-    <link rel="alternate" hreflang="ru" href="https://lebe-dev.github.io/ru/" />
+    {Object.keys(languages).map((code) => (
+      <link rel="alternate" hreflang={code} href={`https://lebe-dev.github.io/${code}/`} />
+    ))}
     <link rel="alternate" hreflang="x-default" href="https://lebe-dev.github.io/en/" />
     <meta http-equiv="refresh" content="0;url=/en/" />
-    <script is:inline>
+    <script is:inline define:vars={{ langCodes: Object.keys(languages) }}>
       (() => {
         try {
           const saved = localStorage.getItem('lang');
-          const detected = (navigator.language || 'en').toLowerCase().startsWith('ru') ? 'ru' : 'en';
-          const lang = saved === 'en' || saved === 'ru' ? saved : detected;
+          const browserLangs = navigator.languages || [navigator.language || 'en'];
+          let detected = 'en';
+          for (const bl of browserLangs) {
+            const prefix = bl.toLowerCase().split('-')[0];
+            if (langCodes.includes(prefix)) {
+              detected = prefix;
+              break;
+            }
+          }
+          const lang = langCodes.includes(saved) ? saved : detected;
           window.location.replace(`/${lang}/`);
         } catch {
           window.location.replace('/en/');
@@ -35,7 +45,14 @@
     <noscript>
       <h1>Eugene Lebedev</h1>
       <p>Choose your language · Выберите язык:</p>
-      <p><a href="/en/">English</a> · <a href="/ru/">Русский</a></p>
+      <p>
+        {Object.entries(languages).map(([code, name], i) => (
+          <>
+            {i > 0 && ' · '}
+            <a href={`/${code}/`}>{name}</a>
+          </>
+        ))}
+      </p>
     </noscript>
   </body>
 </html>

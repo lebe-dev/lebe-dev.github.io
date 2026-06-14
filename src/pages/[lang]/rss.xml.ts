@@ -1,11 +1,16 @@
 import rss from '@astrojs/rss';
 import { getCollection } from 'astro:content';
-import { ui, type Lang } from '../../i18n/ui';
+import { ui, ogLocale, type Lang } from '../../i18n/ui';
 import type { APIContext } from 'astro';
 
 export const getStaticPaths = () => [
   { params: { lang: 'en' } },
   { params: { lang: 'ru' } },
+  { params: { lang: 'es' } },
+  { params: { lang: 'zh' } },
+  { params: { lang: 'ja' } },
+  { params: { lang: 'fr' } },
+  { params: { lang: 'de' } },
 ];
 
 export async function GET(ctx: APIContext) {
@@ -24,6 +29,6 @@ export async function GET(ctx: APIContext) {
         description: e.data.description,
         link: `/${lang}/blog/${e.id.replace(/^[a-z]{2}\//, '')}/`,
       })),
-    customData: `<language>${lang === 'ru' ? 'ru-RU' : 'en-US'}</language>`,
+    customData: `<language>${ogLocale[lang].replace('_', '-')}</language>`,
   });
 }

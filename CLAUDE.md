@@ -12,6 +12,10 @@ The calculator helps users in Georgia's crypto exchange offices determine if the
 - How much BTC they'll receive for their GEL amount
 - Calculation history saved to localStorage
 
+## Translation rules
+
+This site supports multiple languages but author's primary language is Russian. So when you will translate articles don't pretend to be a native.
+
 ## Development Commands
 
 All commands use `just` (Justfile-based):

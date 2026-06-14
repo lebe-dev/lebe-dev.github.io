@@ -2,7 +2,7 @@
 import '../styles/global.css';
 import { useTranslations } from '../i18n/utils';
 import type { Lang } from '../i18n/ui';
-import { ui } from '../i18n/ui';
+import { ui, languages, ogLocale } from '../i18n/ui';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
@@ -17,8 +17,7 @@ const t = useTranslations(lang);
 const pageTitle = title ? `${title} — ${t('site.name')}` : t('site.name');
 const pageDescription = description ?? t('site.description');
 const canonical = new URL(Astro.url.pathname, Astro.site);
-const alt = lang === 'en' ? 'ru' : 'en';
-const altHref = new URL(Astro.url.pathname.replace(`/${lang}/`, `/${alt}/`), Astro.site);
+const otherLangs = (Object.keys(languages) as Lang[]).filter((l) => l !== lang);
 ---
 <!doctype html>
 <html lang={lang}>
@@ -29,7 +28,13 @@ const altHref = new URL(Astro.url.pathname.replace(`/${lang}/`, `/${alt}/`), Ast
     <meta name="description" content={pageDescription} />
     <link rel="canonical" href={canonical.toString()} />
     <link rel="alternate" hreflang={lang} href={canonical.toString()} />
-    <link rel="alternate" hreflang={alt} href={altHref.toString()} />
+    {otherLangs.map((l) => (
+      <link
+        rel="alternate"
+        hreflang={l}
+        href={new URL(Astro.url.pathname.replace(`/${lang}/`, `/${l}/`), Astro.site).toString()}
+      />
+    ))}
     <link rel="alternate" hreflang="x-default" href={new URL('/', Astro.site).toString()} />
     <link rel="alternate" type="application/rss+xml" title={`${ui[lang]['rss.title']} (${lang})`} href={`/${lang}/rss.xml`} />
     <meta name="generator" content={Astro.generator} />
@@ -37,7 +42,7 @@ const altHref = new URL(Astro.url.pathname.replace(`/${lang}/`, `/${alt}/`), Ast
     <meta property="og:description" content={pageDescription} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonical.toString()} />
-    <meta property="og:locale" content={lang === 'ru' ? 'ru_RU' : 'en_US'} />
+    <meta property="og:locale" content={ogLocale[lang]} />
     <script is:inline>
       (() => {
         try {

@@ -173,7 +173,8 @@ header.site-header .actions {
 }
 
 header.site-header .actions button,
-header.site-header .actions a {
+header.site-header .actions a,
+header.site-header .actions select {
   background: transparent;
   border: 1px solid var(--rule);
   color: var(--fg);
@@ -186,7 +187,8 @@ header.site-header .actions a {
 }
 
 header.site-header .actions button:hover,
-header.site-header .actions a:hover {
+header.site-header .actions a:hover,
+header.site-header .actions select:hover {
   background: var(--rule);
 }
 

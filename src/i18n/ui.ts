@@ -1,11 +1,26 @@
 export const languages = {
   en: 'English',
   ru: 'Русский',
+  es: 'Español',
+  zh: '中文',
+  ja: '日本語',
+  fr: 'Français',
+  de: 'Deutsch',
 } as const;
 
 export type Lang = keyof typeof languages;
 
 export const defaultLang: Lang = 'en';
+
+export const ogLocale: Record<Lang, string> = {
+  en: 'en_US',
+  ru: 'ru_RU',
+  es: 'es_ES',
+  zh: 'zh_CN',
+  ja: 'ja_JP',
+  fr: 'fr_FR',
+  de: 'de_DE',
+};
 
 export const ui = {
   en: {
@@ -26,10 +41,10 @@ export const ui = {
     'projects.cc.cta': 'Open app',
     'theme.light': 'Switch to light theme',
     'theme.dark': 'Switch to dark theme',
-    'lang.switch': 'Сменить на русский',
-    'lang.switch.short': 'RU',
+    'lang.switch': 'Choose language',
     'rss.title': 'RSS feed',
     'post.backToBlog': '← Back to all posts',
+    'post.disclaimer': 'Disclaimer',
     'footer.privacy':
       'This page respects your privacy by not using cookies or similar technologies and by not collecting any personally identifiable information.',
     '404.title': 'Page not found',
@@ -54,15 +69,155 @@ export const ui = {
     'projects.cc.cta': 'Открыть приложение',
     'theme.light': 'Переключить на светлую тему',
     'theme.dark': 'Переключить на тёмную тему',
-    'lang.switch': 'Switch to English',
-    'lang.switch.short': 'EN',
+    'lang.switch': 'Выбрать язык',
     'rss.title': 'RSS-лента',
     'post.backToBlog': '← Ко всем записям',
+    'post.disclaimer': 'Дисклеймер',
     'footer.privacy':
       'Эта страница уважает вашу приватность: не использует cookies или аналогичные технологии и не собирает персональные данные.',
     '404.title': 'Страница не найдена',
     '404.body': 'Такой страницы не существует.',
     '404.home': 'На главную',
+  },
+  es: {
+    'site.name': 'Eugene Lebedev',
+    'site.tagline': 'desarrollador',
+    'site.description': 'Sitio personal y blog de Eugene Lebedev.',
+    'nav.blog': 'Blog',
+    'nav.home': 'Inicio',
+    'section.about': 'Sobre mí',
+    'section.projects': 'Proyectos',
+    'section.musings': 'Reflexiones',
+    'section.allPosts': 'Todas las entradas',
+    'bio.body':
+      'Hola. Soy Eugene, desarrollador. Este es mi rincón de la web — escribo sobre software, herramientas que construyo y cosas que aprendo por el camino.',
+    'projects.cc.title': 'Calculadora de spread cripto',
+    'projects.cc.description':
+      'Una pequeña PWA que ayuda a detectar si una casa de cambio de criptomonedas en Georgia te está cobrando de más en el tipo de cambio BTC/GEL.',
+    'projects.cc.cta': 'Abrir app',
+    'theme.light': 'Cambiar a tema claro',
+    'theme.dark': 'Cambiar a tema oscuro',
+    'lang.switch': 'Elegir idioma',
+    'rss.title': 'Feed RSS',
+    'post.backToBlog': '← Volver a todas las entradas',
+    'post.disclaimer': 'Aviso legal',
+    'footer.privacy':
+      'Esta página respeta tu privacidad: no usa cookies ni tecnologías similares y no recopila información personal identificable.',
+    '404.title': 'Página no encontrada',
+    '404.body': 'La página que buscas no existe.',
+    '404.home': 'Ir al inicio',
+  },
+  zh: {
+    'site.name': 'Eugene Lebedev',
+    'site.tagline': '开发者',
+    'site.description': 'Eugene Lebedev 的个人网站与博客。',
+    'nav.blog': '博客',
+    'nav.home': '首页',
+    'section.about': '关于',
+    'section.projects': '项目',
+    'section.musings': '随笔',
+    'section.allPosts': '所有文章',
+    'bio.body':
+      '你好，我是 Eugene，一名开发者。这里是我在网络上的小角落——我会写一些关于软件、我开发的工具，以及在过程中学到的东西。',
+    'projects.cc.title': '加密货币价差计算器',
+    'projects.cc.description':
+      '一个小型 PWA，帮助你发现格鲁吉亚的加密货币兑换点是否在 BTC/GEL 汇率上多收了你的钱。',
+    'projects.cc.cta': '打开应用',
+    'theme.light': '切换到浅色主题',
+    'theme.dark': '切换到深色主题',
+    'lang.switch': '选择语言',
+    'rss.title': 'RSS 订阅',
+    'post.backToBlog': '← 返回所有文章',
+    'post.disclaimer': '免责声明',
+    'footer.privacy':
+      '本页面尊重您的隐私：不使用 Cookie 或类似技术，也不收集任何可识别个人身份的信息。',
+    '404.title': '页面未找到',
+    '404.body': '您要访问的页面不存在。',
+    '404.home': '返回首页',
+  },
+  ja: {
+    'site.name': 'Eugene Lebedev',
+    'site.tagline': '開発者',
+    'site.description': 'Eugene Lebedev の個人サイト・ブログ。',
+    'nav.blog': 'ブログ',
+    'nav.home': 'ホーム',
+    'section.about': 'プロフィール',
+    'section.projects': 'プロジェクト',
+    'section.musings': '雑記',
+    'section.allPosts': 'すべての記事',
+    'bio.body':
+      'こんにちは。私は開発者の Eugene です。ここは私のウェブ上の小さな場所で、作っているソフトウェアやツール、その過程で学んだことについて書いています。',
+    'projects.cc.title': '暗号資産スプレッド計算機',
+    'projects.cc.description':
+      'ジョージアの暗号資産両替所が BTC/GEL のレートで過剰請求していないかを確認できる小さな PWA です。',
+    'projects.cc.cta': 'アプリを開く',
+    'theme.light': 'ライトテーマに切り替え',
+    'theme.dark': 'ダークテーマに切り替え',
+    'lang.switch': '言語を選択',
+    'rss.title': 'RSSフィード',
+    'post.backToBlog': '← すべての記事に戻る',
+    'post.disclaimer': '免責事項',
+    'footer.privacy':
+      'このページはプライバシーを尊重し、Cookieなどの技術を使用せず、個人を識別できる情報も収集しません。',
+    '404.title': 'ページが見つかりません',
+    '404.body': 'お探しのページは存在しません。',
+    '404.home': 'ホームに戻る',
+  },
+  fr: {
+    'site.name': 'Eugene Lebedev',
+    'site.tagline': 'développeur',
+    'site.description': "Site personnel et blog d'Eugene Lebedev.",
+    'nav.blog': 'Blog',
+    'nav.home': 'Accueil',
+    'section.about': 'À propos',
+    'section.projects': 'Projets',
+    'section.musings': 'Réflexions',
+    'section.allPosts': 'Tous les articles',
+    'bio.body':
+      "Bonjour. Je suis Eugene, développeur. Voici mon coin du web — j'écris sur les logiciels, les outils que je crée et ce que j'apprends en chemin.",
+    'projects.cc.title': 'Calculateur de spread crypto',
+    'projects.cc.description':
+      'Une petite PWA qui aide à repérer si un bureau de change crypto géorgien vous surfacture sur le taux BTC/GEL.',
+    'projects.cc.cta': "Ouvrir l'app",
+    'theme.light': 'Passer au thème clair',
+    'theme.dark': 'Passer au thème sombre',
+    'lang.switch': 'Choisir la langue',
+    'rss.title': 'Flux RSS',
+    'post.backToBlog': '← Retour à tous les articles',
+    'post.disclaimer': 'Avertissement',
+    'footer.privacy':
+      "Cette page respecte votre vie privée : elle n'utilise pas de cookies ni de technologies similaires et ne collecte aucune information personnelle identifiable.",
+    '404.title': 'Page introuvable',
+    '404.body': "La page que vous recherchez n'existe pas.",
+    '404.home': "Retour à l'accueil",
+  },
+  de: {
+    'site.name': 'Eugene Lebedev',
+    'site.tagline': 'Entwickler',
+    'site.description': 'Persönliche Website und Blog von Eugene Lebedev.',
+    'nav.blog': 'Blog',
+    'nav.home': 'Startseite',
+    'section.about': 'Über mich',
+    'section.projects': 'Projekte',
+    'section.musings': 'Gedanken',
+    'section.allPosts': 'Alle Beiträge',
+    'bio.body':
+      'Hallo, ich bin Eugene, Entwickler. Das ist meine Ecke im Web — ich schreibe über Software, Tools, die ich baue, und Dinge, die ich dabei lerne.',
+    'projects.cc.title': 'Krypto-Spread-Rechner',
+    'projects.cc.description':
+      'Eine kleine PWA, die hilft zu erkennen, ob dich eine georgische Krypto-Wechselstube beim BTC/GEL-Kurs übervorteilt.',
+    'projects.cc.cta': 'App öffnen',
+    'theme.light': 'Zu hellem Design wechseln',
+    'theme.dark': 'Zu dunklem Design wechseln',
+    'lang.switch': 'Sprache wählen',
+    'rss.title': 'RSS-Feed',
+    'post.backToBlog': '← Zurück zu allen Beiträgen',
+    'post.disclaimer': 'Haftungsausschluss',
+    'footer.privacy':
+      'Diese Seite respektiert deine Privatsphäre: Sie verwendet keine Cookies oder ähnliche Technologien und sammelt keine personenbezogenen Daten.',
+    '404.title': 'Seite nicht gefunden',
+    '404.body': 'Die gesuchte Seite existiert nicht.',
+    '404.home': 'Zur Startseite',
   },
 } as const satisfies Record<Lang, Record<string, string>>;
 

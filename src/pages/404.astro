@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { ui } from '../i18n/ui';
+import { ui, languages } from '../i18n/ui';
 ---
 <BaseLayout lang="en" title={ui.en['404.title']}>
   <article>
@@ -8,9 +8,12 @@ import { ui } from '../i18n/ui';
     <p>{ui.en['404.body']}</p>
     <p>{ui.ru['404.body']}</p>
     <p>
-      <a href="/en/">{ui.en['404.home']}</a>
-      {' · '}
-      <a href="/ru/">{ui.ru['404.home']}</a>
+      {Object.entries(languages).map(([code, name], i) => (
+        <>
+          {i > 0 && ' · '}
+          <a href={`/${code}/`}>{name}</a>
+        </>
+      ))}
     </p>
   </article>
 </BaseLayout>
