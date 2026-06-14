@@ -211,7 +211,7 @@ hr {
 
 code {
   font-family: var(--mono);
-  font-size: 0.9em;
+  font-size: 0.8em;
   background: var(--rule);
   padding: 0.1em 0.35em;
   border-radius: 3px;
