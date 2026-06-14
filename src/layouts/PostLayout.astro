@@ -13,6 +13,7 @@ interface Props {
   updated?: Date;
   chars?: number;
   minutes?: number;
+  markdown?: string;
   translations?: { code: Lang; url: string }[];
   aiUsageDisclaimer?: string;
   aiUsageDisclaimerShowLeaveButton?: boolean;
@@ -29,6 +30,7 @@ const {
   updated,
   chars,
   minutes,
+  markdown = '',
   translations = [],
   aiUsageDisclaimer,
   aiUsageDisclaimerShowLeaveButton,
@@ -49,11 +51,35 @@ const localeUrls = Object.fromEntries(translations.map((tr) => [tr.code, tr.url]
         {updated && <> · upd. {formatDate(updated)}</>}
       </span>
       {formattedChars && typeof minutes === 'number' && (
-        <span class="post-stats">
-          {formattedChars} {t('post.chars')} · ~{minutes} {t('post.minRead')}
-        </span>
+        <>
+          <span class="post-sep" aria-hidden="true">·</span>
+          <span class="post-stats">
+            {formattedChars} {t('post.chars')}
+            <span class="post-sep post-sep--inline" aria-hidden="true">·</span>
+            ~{minutes} {t('post.minRead')}
+          </span>
+        </>
+      )}
+      {markdown && (
+        <button
+          type="button"
+          id="copy-md"
+          class="copy-md"
+          title={t('post.copyMd')}
+          aria-label={t('post.copyMd')}
+        >
+          <svg class="copy-md__icon copy-md__icon--copy" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+          </svg>
+          <svg class="copy-md__icon copy-md__icon--check" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M20 6 9 17l-5-5"></path>
+          </svg>
+          <span class="copy-md__text">{t('post.copyMdShort')}</span>
+        </button>
       )}
     </p>
+    {markdown && <textarea id="post-markdown" hidden readonly>{markdown}</textarea>}
     {translations.length > 1 && (
       <div class="post-lang-switch">
         <PostLangSwitch lang={lang} label={t('lang.switch')} translations={translations} client:load />
@@ -82,12 +108,13 @@ const localeUrls = Object.fromEntries(translations.map((tr) => [tr.code, tr.url]
 
 <style>
   :global(main) {
-    padding-top: 1.25rem;
+    padding-top: 0.5rem;
   }
 
   article h1 {
     font-family: var(--heading-serif);
     font-weight: 700;
+    margin-bottom: 1rem;
   }
 
   article :global(.post-meta) {
@@ -98,9 +125,72 @@ const localeUrls = Object.fromEntries(translations.map((tr) => [tr.code, tr.url]
   }
 
   .post-date,
-  .post-stats {
-    font-size: 0.8rem;
+  .post-stats,
+  .post-sep {
+    font-size: 0.75rem;
     opacity: 0.85;
+  }
+
+  .post-sep--inline {
+    margin: 0 0.5rem;
+  }
+
+  .copy-md {
+    margin-left: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.7rem;
+    line-height: 1;
+    letter-spacing: 0.03em;
+    font-family: inherit;
+    font-style: normal;
+    color: inherit;
+    opacity: 0.9;
+    padding: 0.2rem 0.45rem;
+    border: none;
+    border-radius: 4px;
+    background: transparent;
+    cursor: pointer;
+    transition: opacity 0.15s ease, color 0.15s ease;
+  }
+
+  .copy-md:hover {
+    opacity: 1;
+  }
+
+  :global(.dark) .copy-md {
+    opacity: 0.95;
+  }
+
+  :global(.dark) .copy-md:hover {
+    opacity: 1;
+    color: #fff;
+  }
+
+  :global(.dark) .copy-md.is-copied {
+    color: #66bb6a;
+  }
+
+  .copy-md.is-copied {
+    opacity: 1;
+    color: #2e7d32;
+  }
+
+  .copy-md__icon {
+    flex-shrink: 0;
+  }
+
+  .copy-md__icon--check {
+    display: none;
+  }
+
+  .copy-md.is-copied .copy-md__icon--copy {
+    display: none;
+  }
+
+  .copy-md.is-copied .copy-md__icon--check {
+    display: inline;
   }
 
   .post-lang-switch {
@@ -163,6 +253,39 @@ const localeUrls = Object.fromEntries(translations.map((tr) => [tr.code, tr.url]
     lightbox.addEventListener('click', close);
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && !lightbox.hidden) close();
+    });
+  })();
+
+  (() => {
+    const btn = document.getElementById('copy-md');
+    const source = document.getElementById('post-markdown');
+    if (!btn || !source) return;
+
+    let resetTimer;
+
+    const showCopied = () => {
+      btn.classList.add('is-copied');
+      clearTimeout(resetTimer);
+      resetTimer = setTimeout(() => {
+        btn.classList.remove('is-copied');
+      }, 2000);
+    };
+
+    btn.addEventListener('click', async () => {
+      const md = source.value;
+      try {
+        await navigator.clipboard.writeText(md);
+        showCopied();
+      } catch {
+        source.hidden = false;
+        source.select();
+        try {
+          document.execCommand('copy');
+          showCopied();
+        } finally {
+          source.hidden = true;
+        }
+      }
     });
   })();
 </script>

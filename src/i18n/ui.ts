@@ -48,6 +48,9 @@ export const ui = {
     'post.aiUsageDisclaimer': 'Disclaimer',
     'post.chars': 'characters',
     'post.minRead': 'min read',
+    'post.copyMd': 'Copy as Markdown',
+    'post.copiedMd': 'Copied!',
+    'post.copyMdShort': 'COPY',
     'footer.privacy':
       'This page respects your privacy by not using cookies or similar technologies and by not collecting any personally identifiable information.',
     '404.title': 'Page not found',
@@ -79,6 +82,9 @@ export const ui = {
     'post.aiUsageDisclaimer': 'Дисклеймер',
     'post.chars': 'знаков',
     'post.minRead': 'мин чтения',
+    'post.copyMd': 'Скопировать как Markdown',
+    'post.copiedMd': 'Скопировано!',
+    'post.copyMdShort': 'СКОПИРОВАТЬ',
     'footer.privacy':
       'Эта страница уважает вашу приватность: не использует cookies или аналогичные технологии и не собирает персональные данные.',
     '404.title': 'Страница не найдена',
@@ -110,6 +116,9 @@ export const ui = {
     'post.aiUsageDisclaimer': 'Aviso legal',
     'post.chars': 'caracteres',
     'post.minRead': 'min de lectura',
+    'post.copyMd': 'Copiar como Markdown',
+    'post.copiedMd': '¡Copiado!',
+    'post.copyMdShort': 'COPIAR',
     'footer.privacy':
       'Esta página respeta tu privacidad: no usa cookies ni tecnologías similares y no recopila información personal identificable.',
     '404.title': 'Página no encontrada',
@@ -141,6 +150,9 @@ export const ui = {
     'post.aiUsageDisclaimer': '免责声明',
     'post.chars': '字',
     'post.minRead': '分钟阅读',
+    'post.copyMd': '复制为 Markdown',
+    'post.copiedMd': '已复制！',
+    'post.copyMdShort': '复制',
     'footer.privacy':
       '本页面尊重您的隐私：不使用 Cookie 或类似技术，也不收集任何可识别个人身份的信息。',
     '404.title': '页面未找到',
@@ -172,6 +184,9 @@ export const ui = {
     'post.aiUsageDisclaimer': '免責事項',
     'post.chars': '文字',
     'post.minRead': '分で読めます',
+    'post.copyMd': 'Markdown としてコピー',
+    'post.copiedMd': 'コピーしました！',
+    'post.copyMdShort': 'コピー',
     'footer.privacy':
       'このページはプライバシーを尊重し、Cookieなどの技術を使用せず、個人を識別できる情報も収集しません。',
     '404.title': 'ページが見つかりません',
@@ -203,6 +218,9 @@ export const ui = {
     'post.aiUsageDisclaimer': 'Avertissement',
     'post.chars': 'caractères',
     'post.minRead': 'min de lecture',
+    'post.copyMd': 'Copier en Markdown',
+    'post.copiedMd': 'Copié !',
+    'post.copyMdShort': 'COPIER',
     'footer.privacy':
       "Cette page respecte votre vie privée : elle n'utilise pas de cookies ni de technologies similaires et ne collecte aucune information personnelle identifiable.",
     '404.title': 'Page introuvable',
@@ -234,6 +252,9 @@ export const ui = {
     'post.aiUsageDisclaimer': 'Haftungsausschluss',
     'post.chars': 'Zeichen',
     'post.minRead': 'Min. Lesezeit',
+    'post.copyMd': 'Als Markdown kopieren',
+    'post.copiedMd': 'Kopiert!',
+    'post.copyMdShort': 'KOPIEREN',
     'footer.privacy':
       'Diese Seite respektiert deine Privatsphäre: Sie verwendet keine Cookies oder ähnliche Technologien und sammelt keine personenbezogenen Daten.',
     '404.title': 'Seite nicht gefunden',

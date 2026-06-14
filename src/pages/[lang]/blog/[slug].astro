@@ -42,6 +42,7 @@ const readingStats = getReadingStats(entry.body ?? '');
   updated={entry.data.updated}
   chars={readingStats.chars}
   minutes={readingStats.minutes}
+  markdown={entry.body ?? ''}
   translations={translations}
   aiUsageDisclaimer={disclaimer.aiUsageDisclaimer}
   aiUsageDisclaimerShowLeaveButton={disclaimer.aiUsageDisclaimerShowLeaveButton}
