@@ -2,6 +2,7 @@
 title: Привет, мир
 description: Первая запись — зачем всё это и о чём будет.
 pubDate: 2026-05-19
+draft: true
 lang: ru
 translationKey: hello-world
 tags: [мета]
