@@ -10,9 +10,20 @@ interface Props {
   pubDate: Date;
   updated?: Date;
   disclaimer?: string;
+  disclaimerShowLeaveButton?: boolean;
+  disclaimerLeaveButtonText?: string;
 }
 
-const { lang, title, description, pubDate, updated, disclaimer } = Astro.props;
+const {
+  lang,
+  title,
+  description,
+  pubDate,
+  updated,
+  disclaimer,
+  disclaimerShowLeaveButton,
+  disclaimerLeaveButtonText,
+} = Astro.props;
 const t = useTranslations(lang);
 ---
 <BaseLayout lang={lang} title={title} description={description}>
@@ -35,7 +46,14 @@ const t = useTranslations(lang);
             <path d="m6 9 6 6 6-6" />
           </svg>
         </summary>
-        <div class="disclaimer-content">{disclaimer}</div>
+        <div class="disclaimer-content">
+          <p class="disclaimer-text">{disclaimer}</p>
+          {disclaimerShowLeaveButton && (
+            <button type="button" class="disclaimer-leave" data-disclaimer-leave>
+              {disclaimerLeaveButtonText}
+            </button>
+          )}
+        </div>
       </details>
     )}
     <slot />
@@ -116,7 +134,28 @@ const t = useTranslations(lang);
   .disclaimer-content {
     padding: 0 1rem 0.85rem;
     color: var(--muted);
+  }
+
+  .disclaimer-text {
+    margin: 0;
     white-space: pre-line;
+  }
+
+  .disclaimer-leave {
+    display: inline-flex;
+    margin-top: 0.6rem;
+    padding: 0.3rem 0.7rem;
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    background: transparent;
+    color: var(--fg);
+    font-family: var(--sans);
+    font-size: 0.85rem;
+    cursor: pointer;
+  }
+
+  .disclaimer-leave:hover {
+    background: var(--rule);
   }
 </style>
 
@@ -144,4 +183,11 @@ const t = useTranslations(lang);
       if (e.key === 'Escape' && !lightbox.hidden) close();
     });
   })();
+
+  document.querySelectorAll('[data-disclaimer-leave]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      window.close();
+      window.location.href = 'about:blank';
+    });
+  });
 </script>
