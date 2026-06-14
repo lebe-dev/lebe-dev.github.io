@@ -1,5 +1,5 @@
 import rss from '@astrojs/rss';
-import { getCollection } from 'astro:content';
+import { getBlogPosts } from '../../lib/blog';
 import { ui, ogLocale, type Lang } from '../../i18n/ui';
 import type { APIContext } from 'astro';
 
@@ -15,7 +15,7 @@ export const getStaticPaths = () => [
 
 export async function GET(ctx: APIContext) {
   const lang = ctx.params.lang as Lang;
-  const posts = await getCollection('blog', (e) => e.data.lang === lang && !e.data.draft);
+  const posts = await getBlogPosts((e) => e.data.lang === lang);
 
   return rss({
     title: ui[lang]['site.name'],

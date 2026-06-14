@@ -1,5 +1,5 @@
 ---
-import { getCollection } from 'astro:content';
+import { getBlogPosts } from '../../lib/blog';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Bio from '../../components/Bio.astro';
 import ProjectsList from '../../components/ProjectsList.astro';
@@ -20,7 +20,7 @@ export const getStaticPaths = () => [
 const lang = Astro.params.lang as Lang;
 const t = useTranslations(lang);
 
-const all = await getCollection('blog', (e) => e.data.lang === lang && !e.data.draft);
+const all = await getBlogPosts((e) => e.data.lang === lang);
 const posts = all
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
   .map((e) => ({

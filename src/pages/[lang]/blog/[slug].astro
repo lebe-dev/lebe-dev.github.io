@@ -1,12 +1,13 @@
 ---
-import { getCollection, render } from 'astro:content';
+import { render } from 'astro:content';
+import { getBlogPosts } from '../../../lib/blog';
 import PostLayout from '../../../layouts/PostLayout.astro';
 import type { Lang } from '../../../i18n/ui';
 import { getReadingStats } from '../../../i18n/utils';
 import { resolveAiUsageDisclaimer } from '../../../i18n/aiUsageDisclaimer';
 
 export async function getStaticPaths() {
-  const all = await getCollection('blog', (e) => !e.data.draft);
+  const all = await getBlogPosts();
   const slug = (id: string) => id.replace(/^[a-z]{2}\//, '');
   return all.map((entry) => {
     const key = entry.data.translationKey;
