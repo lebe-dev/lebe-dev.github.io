@@ -11,7 +11,7 @@ const t = useTranslations(lang);
 const siteName = lang === 'ru' ? 'Евгений Лебедев' : t('site.name');
 ---
 <header class:list={['site-header', { minimal }]}>
-  <div>
+  <div class="header-row">
     {minimal ? (
       <a href={backHref} class="back-link">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -21,20 +21,18 @@ const siteName = lang === 'ru' ? 'Евгений Лебедев' : t('site.name'
         <span>{t('post.back')}</span>
       </a>
     ) : (
-      <>
-        {showTitle && (
-          <a href={`/${lang}/`} style="text-decoration:none;color:inherit;">
-            <h1 class="site-name">{siteName}</h1>
-          </a>
-        )}
-        <p class="site-tagline">{t('site.tagline')}</p>
-      </>
+      showTitle && (
+        <a href={`/${lang}/`} style="text-decoration:none;color:inherit;">
+          <h1 class="site-name">{siteName}</h1>
+        </a>
+      )
     )}
+    <div class="actions">
+      {!minimal && <LanguageSwitch lang={lang} label={t('lang.switch')} client:load />}
+      <ThemeToggle labelLight={t('theme.light')} labelDark={t('theme.dark')} client:load />
+    </div>
   </div>
-  <div class="actions">
-    {!minimal && <LanguageSwitch lang={lang} label={t('lang.switch')} client:load />}
-    <ThemeToggle labelLight={t('theme.light')} labelDark={t('theme.dark')} client:load />
-  </div>
+  {!minimal && <p class="site-tagline">{t('site.tagline')}</p>}
 </header>
 
 <style>

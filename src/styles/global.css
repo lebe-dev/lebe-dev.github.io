@@ -48,7 +48,7 @@
 
 :root {
   --bg: #ffffff;
-  --fg: #1a1a1a;
+  --fg: #333333;
   --text-muted: #8a8a8a;
   --rule: #ececec;
   --link: #0E7DF0;
@@ -297,7 +297,7 @@ video {
 .site-name {
   font-family: var(--heading-serif);
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 1.6rem;
   margin: 0;
   letter-spacing: -0.01em;
 }
@@ -312,8 +312,11 @@ header.site-header {
   max-width: var(--content);
   margin: 0 auto;
   padding: 1.5rem 1.25rem 0;
+}
+
+header.site-header .header-row {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   gap: 1rem;
 }
@@ -322,15 +325,6 @@ header.site-header .actions {
   display: flex;
   gap: 0.6rem;
   align-items: center;
-  padding-top: 0.5rem;
-}
-
-header.site-header.minimal {
-  align-items: center;
-}
-
-header.site-header.minimal .actions {
-  padding-top: 0;
 }
 
 .posts-list {
@@ -370,6 +364,12 @@ header.site-header.minimal .actions {
   .posts-list .title {
     margin-bottom: 0.5rem;
   }
+  .site-name {
+    font-size: 1.3rem;
+  }
+  .section-title {
+    font-size: 0.95rem;
+  }
 }
 
 main:has(> .home-banner) {
@@ -381,6 +381,13 @@ main:has(> .home-banner) {
   width: 100%;
   height: auto;
   margin: 0 0 1rem;
+}
+
+@media (max-width: 767px) {
+  .home-banner {
+    aspect-ratio: 1872 / 472;
+    object-fit: cover;
+  }
 }
 
 .home-banner--dark {
@@ -398,7 +405,7 @@ main:has(> .home-banner) {
 .section-title {
   font-family: var(--heading-serif);
   font-weight: 700;
-  font-size: 1.4rem;
+  font-size: 1.15rem;
   margin: 2.5rem 0 1rem;
   display: flex;
   align-items: center;

@@ -389,6 +389,26 @@ const formattedChars = typeof chars === 'number' ? chars.toLocaleString(lang) : 
     }
   }
 
+  @media (max-width: 600px) {
+    :global(main) {
+      padding-top: 0.25rem;
+      padding-bottom: 2.5rem;
+    }
+
+    article h1 {
+      font-size: 1.5rem;
+      margin-top: 0.75rem;
+    }
+
+    article :global(.post-meta) {
+      margin-bottom: 0.75rem;
+    }
+
+    .post-actions {
+      margin-top: 0.4rem;
+    }
+  }
+
 </style>
 
 <script is:inline>

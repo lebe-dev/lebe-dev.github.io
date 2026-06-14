@@ -25,7 +25,7 @@ export const ogLocale: Record<Lang, string> = {
 export const ui = {
   en: {
     'site.name': 'Eugene Lebedev',
-    'site.tagline': 'enthusiast',
+    'site.tagline': 'blog',
     'site.description': 'Personal site & blog of Eugene Lebedev.',
     'nav.blog': 'Blog',
     'nav.home': 'Home',
@@ -34,7 +34,7 @@ export const ui = {
     'section.posts': 'Posts',
     'section.allPosts': 'All posts',
     'bio.body':
-      "Hi. I'm Eugene, a developer. This is my corner of the web — I write about software, tools I build, and things I learn along the way.",
+      "Hi. I'm Eugene, a developer and open source enthusiast. I write about software, tools I build, and things I learn along the way.",
     'projects.submarine.title': 'Submarine',
     'projects.submarine.description':
       'A toolkit for translating subtitles with the help of LLMs.',
@@ -48,11 +48,11 @@ export const ui = {
       'A modern web UI for the Transmission BitTorrent client.',
     'projects.transmitter.cta': 'View on GitHub',
     'projects.shortly.title': 'Shortly',
-    'projects.shortly.description': 'A simple URL shortener service.',
+    'projects.shortly.description': 'A service for creating short links.',
     'projects.shortly.cta': 'View on GitHub',
-    'projects.cc.title': 'Crypto Spread Calculator',
+    'projects.cc.title': 'BTC/GEL Calculator',
     'projects.cc.description':
-      'A small PWA that calculates the BTC/GEL spread between a crypto exchange office and the live market rate.',
+      'Calculates the BTC/GEL rate spread between an exchange office and the market price.',
     'projects.cc.cta': 'Open app',
     'theme.light': 'Switch to light theme',
     'theme.dark': 'Switch to dark theme',
@@ -76,7 +76,7 @@ export const ui = {
   },
   ru: {
     'site.name': 'Eugene Lebedev',
-    'site.tagline': 'энтузиаст',
+    'site.tagline': 'блог',
     'site.description': 'Личный сайт и блог Евгения Лебедева.',
     'nav.blog': 'Блог',
     'nav.home': 'Главная',
@@ -85,7 +85,7 @@ export const ui = {
     'section.posts': 'Записи',
     'section.allPosts': 'Все записи',
     'bio.body':
-      'Привет. Я Евгений, разработчик. Это мой угол интернета — пишу про софт, инструменты, которые мастерю, и то, что узнаю по пути.',
+      'Привет. Я Евгений, разработчик open source и энтузиаст. Пишу про софт, инструменты, которые мастерю, и то, что узнаю по пути.',
     'projects.submarine.title': 'Submarine',
     'projects.submarine.description':
       'Набор инструментов для перевода субтитров с помощью LLM.',
@@ -99,11 +99,11 @@ export const ui = {
       'Современный веб-интерфейс для торрент-клиента Transmission.',
     'projects.transmitter.cta': 'Открыть на GitHub',
     'projects.shortly.title': 'Shortly',
-    'projects.shortly.description': 'Простой сервис сокращения ссылок.',
+    'projects.shortly.description': 'Сервис для создания коротких ссылок.',
     'projects.shortly.cta': 'Открыть на GitHub',
-    'projects.cc.title': 'Калькулятор крипто-спреда',
+    'projects.cc.title': 'Калькулятор BTC/GEL',
     'projects.cc.description':
-      'Небольшое PWA, которое считает спред по курсу BTC/GEL между обменником и рыночной ценой.',
+      'Считает спред по курсу BTC/GEL между обменником и рыночной ценой.',
     'projects.cc.cta': 'Открыть приложение',
     'theme.light': 'Переключить на светлую тему',
     'theme.dark': 'Переключить на тёмную тему',
@@ -127,7 +127,7 @@ export const ui = {
   },
   es: {
     'site.name': 'Eugene Lebedev',
-    'site.tagline': 'entusiasta',
+    'site.tagline': 'blog',
     'site.description': 'Sitio personal y blog de Eugene Lebedev.',
     'nav.blog': 'Blog',
     'nav.home': 'Inicio',
@@ -136,7 +136,7 @@ export const ui = {
     'section.posts': 'Entradas',
     'section.allPosts': 'Todas las entradas',
     'bio.body':
-      'Hola. Soy Eugene, desarrollador. Este es mi rincón de la web — escribo sobre software, herramientas que construyo y cosas que aprendo por el camino.',
+      'Hola. Soy Eugene, desarrollador y entusiasta del open source. Escribo sobre software, herramientas que construyo y cosas que aprendo por el camino.',
     'projects.submarine.title': 'Submarine',
     'projects.submarine.description':
       'Un conjunto de herramientas para traducir subtítulos con ayuda de LLM.',
@@ -150,11 +150,11 @@ export const ui = {
       'Una interfaz web moderna para el cliente BitTorrent Transmission.',
     'projects.transmitter.cta': 'Ver en GitHub',
     'projects.shortly.title': 'Shortly',
-    'projects.shortly.description': 'Un sencillo servicio acortador de URL.',
+    'projects.shortly.description': 'Un servicio para crear enlaces cortos.',
     'projects.shortly.cta': 'Ver en GitHub',
-    'projects.cc.title': 'Calculadora de spread cripto',
+    'projects.cc.title': 'Calculadora BTC/GEL',
     'projects.cc.description':
-      'Una pequeña PWA que calcula el spread de BTC/GEL entre una casa de cambio de criptomonedas y el precio de mercado en tiempo real.',
+      'Calcula el spread del tipo de cambio BTC/GEL entre una casa de cambio y el precio de mercado.',
     'projects.cc.cta': 'Abrir app',
     'theme.light': 'Cambiar a tema claro',
     'theme.dark': 'Cambiar a tema oscuro',
@@ -178,7 +178,7 @@ export const ui = {
   },
   zh: {
     'site.name': 'Eugene Lebedev',
-    'site.tagline': '爱好者',
+    'site.tagline': '博客',
     'site.description': 'Eugene Lebedev 的个人网站与博客。',
     'nav.blog': '博客',
     'nav.home': '首页',
@@ -187,7 +187,7 @@ export const ui = {
     'section.posts': '文章',
     'section.allPosts': '所有文章',
     'bio.body':
-      '你好，我是 Eugene，一名开发者。这里是我在网络上的小角落——我会写一些关于软件、我开发的工具，以及在过程中学到的东西。',
+      '你好，我是 Eugene，一名开发者，也是开源爱好者。我会写一些关于软件、我开发的工具，以及在过程中学到的东西。',
     'projects.submarine.title': 'Submarine',
     'projects.submarine.description':
       '借助 LLM 翻译字幕的工具集。',
@@ -200,11 +200,11 @@ export const ui = {
     'projects.transmitter.description': '面向 Transmission BitTorrent 客户端的现代化 Web 界面。',
     'projects.transmitter.cta': '在 GitHub 上查看',
     'projects.shortly.title': 'Shortly',
-    'projects.shortly.description': '一个简单的短链接服务。',
+    'projects.shortly.description': '用于创建短链接的服务。',
     'projects.shortly.cta': '在 GitHub 上查看',
-    'projects.cc.title': '加密货币价差计算器',
+    'projects.cc.title': 'BTC/GEL 计算器',
     'projects.cc.description':
-      '一个小型 PWA，用于计算加密货币兑换点与实时市场价之间的 BTC/GEL 价差。',
+      '计算兑换点与市场价格之间的 BTC/GEL 汇率价差。',
     'projects.cc.cta': '打开应用',
     'theme.light': '切换到浅色主题',
     'theme.dark': '切换到深色主题',
@@ -228,7 +228,7 @@ export const ui = {
   },
   ja: {
     'site.name': 'Eugene Lebedev',
-    'site.tagline': '愛好家',
+    'site.tagline': 'ブログ',
     'site.description': 'Eugene Lebedev の個人サイト・ブログ。',
     'nav.blog': 'ブログ',
     'nav.home': 'ホーム',
@@ -237,7 +237,7 @@ export const ui = {
     'section.posts': '記事',
     'section.allPosts': 'すべての記事',
     'bio.body':
-      'こんにちは。私は開発者の Eugene です。ここは私のウェブ上の小さな場所で、作っているソフトウェアやツール、その過程で学んだことについて書いています。',
+      'こんにちは。私は開発者で、オープンソース愛好家の Eugene です。作っているソフトウェアやツール、その過程で学んだことについて書いています。',
     'projects.submarine.title': 'Submarine',
     'projects.submarine.description':
       'LLM を活用して字幕を翻訳するためのツールキット。',
@@ -250,11 +250,11 @@ export const ui = {
     'projects.transmitter.description': 'Transmission BitTorrent クライアント向けのモダンな Web UI。',
     'projects.transmitter.cta': 'GitHub で見る',
     'projects.shortly.title': 'Shortly',
-    'projects.shortly.description': 'シンプルな URL 短縮サービス。',
+    'projects.shortly.description': '短縮リンクを作成するサービス。',
     'projects.shortly.cta': 'GitHub で見る',
-    'projects.cc.title': '暗号資産スプレッド計算機',
+    'projects.cc.title': 'BTC/GEL計算機',
     'projects.cc.description':
-      '暗号資産両替所とリアルタイムの市場価格との BTC/GEL スプレッドを計算する小さな PWA です。',
+      '両替所とリアルタイムの市場価格との BTC/GEL レートのスプレッドを計算します。',
     'projects.cc.cta': 'アプリを開く',
     'theme.light': 'ライトテーマに切り替え',
     'theme.dark': 'ダークテーマに切り替え',
@@ -278,7 +278,7 @@ export const ui = {
   },
   fr: {
     'site.name': 'Eugene Lebedev',
-    'site.tagline': 'passionné',
+    'site.tagline': 'blog',
     'site.description': "Site personnel et blog d'Eugene Lebedev.",
     'nav.blog': 'Blog',
     'nav.home': 'Accueil',
@@ -287,7 +287,7 @@ export const ui = {
     'section.posts': 'Articles',
     'section.allPosts': 'Tous les articles',
     'bio.body':
-      "Bonjour. Je suis Eugene, développeur. Voici mon coin du web — j'écris sur les logiciels, les outils que je crée et ce que j'apprends en chemin.",
+      "Bonjour. Je suis Eugene, développeur et passionné d'open source. J'écris sur les logiciels, les outils que je crée et ce que j'apprends en chemin.",
     'projects.submarine.title': 'Submarine',
     'projects.submarine.description':
       "Une boîte à outils pour traduire des sous-titres à l'aide de LLM.",
@@ -301,11 +301,11 @@ export const ui = {
       'Une interface web moderne pour le client BitTorrent Transmission.',
     'projects.transmitter.cta': 'Voir sur GitHub',
     'projects.shortly.title': 'Shortly',
-    'projects.shortly.description': "Un simple service de raccourcissement d'URL.",
+    'projects.shortly.description': 'Un service de création de liens courts.',
     'projects.shortly.cta': 'Voir sur GitHub',
-    'projects.cc.title': 'Calculateur de spread crypto',
+    'projects.cc.title': 'Calculateur BTC/GEL',
     'projects.cc.description':
-      'Une petite PWA qui calcule le spread BTC/GEL entre un bureau de change crypto et le cours du marché en temps réel.',
+      'Calcule le spread du taux BTC/GEL entre un bureau de change et le cours du marché.',
     'projects.cc.cta': "Ouvrir l'app",
     'theme.light': 'Passer au thème clair',
     'theme.dark': 'Passer au thème sombre',
@@ -329,7 +329,7 @@ export const ui = {
   },
   de: {
     'site.name': 'Eugene Lebedev',
-    'site.tagline': 'Enthusiast',
+    'site.tagline': 'Blog',
     'site.description': 'Persönliche Website und Blog von Eugene Lebedev.',
     'nav.blog': 'Blog',
     'nav.home': 'Startseite',
@@ -338,7 +338,7 @@ export const ui = {
     'section.posts': 'Beiträge',
     'section.allPosts': 'Alle Beiträge',
     'bio.body':
-      'Hallo, ich bin Eugene, Entwickler. Das ist meine Ecke im Web — ich schreibe über Software, Tools, die ich baue, und Dinge, die ich dabei lerne.',
+      'Hallo, ich bin Eugene, Entwickler und Open-Source-Enthusiast. Ich schreibe über Software, Tools, die ich baue, und Dinge, die ich dabei lerne.',
     'projects.submarine.title': 'Submarine',
     'projects.submarine.description':
       'Ein Toolkit zum Übersetzen von Untertiteln mit Hilfe von LLMs.',
@@ -352,11 +352,11 @@ export const ui = {
       'Eine moderne Web-Oberfläche für den BitTorrent-Client Transmission.',
     'projects.transmitter.cta': 'Auf GitHub ansehen',
     'projects.shortly.title': 'Shortly',
-    'projects.shortly.description': 'Ein einfacher URL-Verkürzungsdienst.',
+    'projects.shortly.description': 'Ein Dienst zum Erstellen von Kurzlinks.',
     'projects.shortly.cta': 'Auf GitHub ansehen',
-    'projects.cc.title': 'Krypto-Spread-Rechner',
+    'projects.cc.title': 'BTC/GEL-Rechner',
     'projects.cc.description':
-      'Eine kleine PWA, die den BTC/GEL-Spread zwischen einer Krypto-Wechselstube und dem aktuellen Marktkurs berechnet.',
+      'Berechnet den BTC/GEL-Kursspread zwischen einer Wechselstube und dem Marktkurs.',
     'projects.cc.cta': 'App öffnen',
     'theme.light': 'Zu hellem Design wechseln',
     'theme.dark': 'Zu dunklem Design wechseln',
