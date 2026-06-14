@@ -239,6 +239,30 @@ const localeUrls = Object.fromEntries(translations.map((tr) => [tr.code, tr.url]
     border-color: var(--accent-2);
     color: #fff;
   }
+
+  :root.dark .ai-usage-disclaimer {
+    border-left-color: #c4b5fd;
+    background: #291f43;
+  }
+
+  :root.dark .ai-usage-disclaimer-accept,
+  :root.dark .ai-usage-disclaimer-leave {
+    border-color: #202248;
+    background: #3a2d5e;
+    color: #c4b5fd;
+  }
+
+  :root.dark .ai-usage-disclaimer-accept:hover {
+    background: #22c55e;
+    border-color: #22c55e;
+    color: #1a1a1a;
+  }
+
+  :root.dark .ai-usage-disclaimer-leave:hover {
+    background: #f87171;
+    border-color: #f87171;
+    color: #1a1a1a;
+  }
 </style>
 
 <script is:inline>

@@ -419,6 +419,47 @@ article .post-meta {
   margin: 0.25rem 0 1.25rem;
 }
 
+/* Restore list markers in article content (Tailwind preflight resets them) */
+article ul,
+article ol {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+article ul {
+  list-style: disc;
+}
+
+article ol {
+  list-style: decimal;
+}
+
+article li {
+  margin: 0.35rem 0;
+}
+
+article li > ul,
+article li > ol {
+  margin: 0.35rem 0;
+}
+
+/* External link icon (lucide: square-arrow-out-up-right) */
+a[href^="http"]:not([href*="lebe-dev.github.io"])::after {
+  content: "";
+  display: inline-block;
+  width: 0.6em;
+  height: 0.6em;
+  margin-left: 0.15em;
+  vertical-align: 0.05em;
+  background-color: currentColor;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6'/%3E%3Cpath d='m21 3-9 9'/%3E%3Cpath d='M15 3h6v6'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6'/%3E%3Cpath d='m21 3-9 9'/%3E%3Cpath d='M15 3h6v6'/%3E%3C/svg%3E");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+}
+
 @layer base {
 	* {
 		@apply border-border outline-ring/50;

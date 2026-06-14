@@ -97,5 +97,17 @@ const otherLangs = (Object.keys(languages) as Lang[]).filter((l) => l !== lang);
       <slot />
     </main>
     <Footer lang={lang} />
+    <script is:inline>
+      (() => {
+        document.querySelectorAll('a[href^="http"]').forEach((link) => {
+          if (link.hostname === location.hostname) return;
+          link.target = '_blank';
+          const rel = new Set((link.getAttribute('rel') || '').split(/\s+/).filter(Boolean));
+          rel.add('noopener');
+          rel.add('noreferrer');
+          link.setAttribute('rel', [...rel].join(' '));
+        });
+      })();
+    </script>
   </body>
 </html>
