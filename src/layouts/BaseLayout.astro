@@ -31,6 +31,10 @@ const otherLangs = (Object.keys(languages) as Lang[]).filter((l) => l !== lang);
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>{pageTitle}</title>
     <meta name="description" content={pageDescription} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="canonical" href={canonical.toString()} />
     <link rel="alternate" hreflang={lang} href={canonical.toString()} />
     {otherLangs.map((l) => (

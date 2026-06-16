@@ -1,4 +1,4 @@
-const CACHE_VERSION = "cc-v5";
+const CACHE_VERSION = "cc-v6";
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 
 const STATIC_ASSETS = [
@@ -7,6 +7,7 @@ const STATIC_ASSETS = [
   "/cc/manifest.json",
   "/cc/js/app.js",
   "/cc/js/ui.js",
+  "/cc/js/calc.js",
   "/cc/css/tailwind.min.css",
   "/cc/css/daisyui.min.css",
   "/cc/css/custom.css",

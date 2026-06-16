@@ -27,7 +27,7 @@ const posts = all
     pubDate: e.data.pubDate,
   }));
 ---
-<BaseLayout lang={lang} title={t('section.allPosts')}>
+<BaseLayout lang={lang} title={t('section.allPosts')} description={t('blog.description')}>
   <h1>{t('section.allPosts')}</h1>
   <PostsList lang={lang} posts={posts} />
 </BaseLayout>

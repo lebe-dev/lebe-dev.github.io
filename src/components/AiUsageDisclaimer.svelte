@@ -43,8 +43,14 @@
   }
 
   function leave() {
+    // window.close() only works for tabs opened via script; for regular
+    // tabs it's a no-op, so fall back to navigating away from the article.
     window.close();
-    window.location.href = 'about:blank';
+    if (window.history.length > 1) {
+      window.history.back();
+    } else {
+      window.location.href = '/';
+    }
   }
 </script>
 

@@ -149,3 +149,8 @@ export function renderLiveRate(rate) {
   valueEl.textContent = rate.toLocaleString("en-US");
   el.classList.remove("hidden");
 }
+
+export function hideLiveRate() {
+  const el = document.getElementById("live-rate");
+  if (el) el.classList.add("hidden");
+}

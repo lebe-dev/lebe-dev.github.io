@@ -1,0 +1,75 @@
+---
+import { useTranslations } from '../i18n/utils';
+import type { Lang } from '../i18n/ui';
+
+interface Heading {
+  depth: number;
+  slug: string;
+  text: string;
+}
+
+interface Props {
+  lang: Lang;
+  headings: Heading[];
+}
+
+const { lang, headings } = Astro.props;
+const t = useTranslations(lang);
+const items = headings.filter((h) => h.depth >= 2 && h.depth <= 4);
+---
+{items.length >= 2 && (
+  <nav class="toc" aria-label={t('post.toc')}>
+    <p class="toc-title">{t('post.toc')}</p>
+    <ul class="toc-list">
+      {items.map((h) => (
+        <li class:list={['toc-item', `toc-item--h${h.depth}`]}>
+          <a href={`#${h.slug}`}>{h.text}</a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+)}
+
+<style>
+  .toc {
+    margin: 1.25rem 0;
+    padding: 0.85rem 1rem;
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+  }
+
+  .toc-title {
+    margin: 0 0 0.5rem;
+    font-family: var(--heading-serif);
+    font-weight: 700;
+    font-size: 0.9rem;
+  }
+
+  .toc-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  .toc-item a {
+    font-size: 0.85rem;
+    text-decoration: none;
+    color: var(--text-muted);
+    transition: color 0.15s ease;
+  }
+
+  .toc-item a:hover {
+    color: var(--link);
+  }
+
+  .toc-item--h3 {
+    padding-left: 1rem;
+  }
+
+  .toc-item--h4 {
+    padding-left: 2rem;
+  }
+</style>

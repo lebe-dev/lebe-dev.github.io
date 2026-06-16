@@ -31,7 +31,7 @@ export async function getStaticPaths() {
 
 const { entry, translations } = Astro.props;
 const lang = entry.data.lang as Lang;
-const { Content } = await render(entry);
+const { Content, headings } = await render(entry);
 const disclaimer = resolveAiUsageDisclaimer(lang, entry.data);
 const readingStats = getReadingStats(entry.body ?? '');
 ---
@@ -45,6 +45,8 @@ const readingStats = getReadingStats(entry.body ?? '');
   minutes={readingStats.minutes}
   markdown={entry.body ?? ''}
   translations={translations}
+  showToc={entry.data.showToc}
+  headings={headings}
   aiUsageDisclaimer={disclaimer.aiUsageDisclaimer}
   aiUsageDisclaimerShowLeaveButton={disclaimer.aiUsageDisclaimerShowLeaveButton}
   aiUsageDisclaimerLeaveButtonText={disclaimer.aiUsageDisclaimerLeaveButtonText}

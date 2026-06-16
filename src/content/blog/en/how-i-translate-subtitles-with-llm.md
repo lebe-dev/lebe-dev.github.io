@@ -1,5 +1,6 @@
 ---
 title: How I Translate Subtitles with LLMs
+description: How I translate movie subtitles with LLMs using my submarine utility — a case study with the film Silent Friend (2025).
 pubDate: 2026-06-14
 draft: true
 lang: en

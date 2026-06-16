@@ -2,8 +2,15 @@
 import BaseLayout from './BaseLayout.astro';
 import PostLangSwitch from '../components/PostLangSwitch.svelte';
 import AiUsageDisclaimer from '../components/AiUsageDisclaimer.svelte';
+import TableOfContents from '../components/TableOfContents.astro';
 import { formatDate, useTranslations } from '../i18n/utils';
 import type { Lang } from '../i18n/ui';
+
+interface Heading {
+  depth: number;
+  slug: string;
+  text: string;
+}
 
 interface Props {
   lang: Lang;
@@ -20,6 +27,8 @@ interface Props {
   aiUsageDisclaimerLeaveButtonText?: string;
   aiUsageDisclaimerShowAcceptButton?: boolean;
   aiUsageDisclaimerAcceptButtonText?: string;
+  showToc?: boolean;
+  headings?: Heading[];
 }
 
 const {
@@ -37,6 +46,8 @@ const {
   aiUsageDisclaimerLeaveButtonText,
   aiUsageDisclaimerShowAcceptButton,
   aiUsageDisclaimerAcceptButtonText,
+  showToc = true,
+  headings = [],
 } = Astro.props;
 const t = useTranslations(lang);
 const formattedChars = typeof chars === 'number' ? chars.toLocaleString(lang) : null;
@@ -99,6 +110,7 @@ const formattedChars = typeof chars === 'number' ? chars.toLocaleString(lang) : 
         client:load
       />
     )}
+    {showToc && <TableOfContents lang={lang} headings={headings} />}
     <slot />
     <hr />
     <p>

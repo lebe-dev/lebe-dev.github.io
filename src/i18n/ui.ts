@@ -33,6 +33,7 @@ export const ui = {
     'section.projects': 'Projects',
     'section.posts': 'Posts',
     'section.allPosts': 'All posts',
+    'blog.description': "All blog posts by Eugene Lebedev — software, tools I build, and things I learn along the way.",
     'bio.body':
       "Hi. I'm Eugene, a developer and open source enthusiast. I write about software, tools I build, and things I learn along the way.",
     'projects.submarine.title': 'Submarine',
@@ -68,10 +69,12 @@ export const ui = {
     'post.copyMdShort': 'COPY',
     'post.backToTop': 'Back to top',
     'post.copyHeadingLink': 'Copy link to this section',
+    'post.toc': 'Table of contents',
     'footer.privacy':
       'This page respects your privacy by not using cookies or similar technologies and by not collecting any personally identifiable information.',
     '404.title': 'Page not found',
     '404.body': "The page you are looking for doesn't exist.",
+    '404.description': "The page you are looking for doesn't exist. It may have been moved or removed.",
     '404.home': 'Go home',
   },
   ru: {
@@ -84,6 +87,7 @@ export const ui = {
     'section.projects': 'Проекты',
     'section.posts': 'Записи',
     'section.allPosts': 'Все записи',
+    'blog.description': 'Все записи блога Евгения Лебедева — про софт, инструменты, которые мастерю, и то, что узнаю по пути.',
     'bio.body':
       'Привет. Я Евгений, разработчик open source и энтузиаст. Пишу про софт, инструменты, которые мастерю, и то, что узнаю по пути.',
     'projects.submarine.title': 'Submarine',
@@ -119,10 +123,12 @@ export const ui = {
     'post.copyMdShort': 'СКОПИРОВАТЬ',
     'post.backToTop': 'Наверх',
     'post.copyHeadingLink': 'Скопировать ссылку на раздел',
+    'post.toc': 'Содержание',
     'footer.privacy':
       'Эта страница уважает вашу приватность: не использует cookies или аналогичные технологии и не собирает персональные данные.',
     '404.title': 'Страница не найдена',
     '404.body': 'Такой страницы не существует.',
+    '404.description': 'Такой страницы не существует. Возможно, она была перемещена или удалена.',
     '404.home': 'На главную',
   },
   es: {
@@ -135,6 +141,7 @@ export const ui = {
     'section.projects': 'Proyectos',
     'section.posts': 'Entradas',
     'section.allPosts': 'Todas las entradas',
+    'blog.description': 'Todas las entradas del blog de Eugene Lebedev — software, herramientas que construyo y cosas que aprendo por el camino.',
     'bio.body':
       'Hola. Soy Eugene, desarrollador y entusiasta del open source. Escribo sobre software, herramientas que construyo y cosas que aprendo por el camino.',
     'projects.submarine.title': 'Submarine',
@@ -170,10 +177,12 @@ export const ui = {
     'post.copyMdShort': 'COPIAR',
     'post.backToTop': 'Volver arriba',
     'post.copyHeadingLink': 'Copiar enlace a esta sección',
+    'post.toc': 'Índice',
     'footer.privacy':
       'Esta página respeta tu privacidad: no usa cookies ni tecnologías similares y no recopila información personal identificable.',
     '404.title': 'Página no encontrada',
     '404.body': 'La página que buscas no existe.',
+    '404.description': 'La página que buscas no existe. Puede que se haya movido o eliminado.',
     '404.home': 'Ir al inicio',
   },
   zh: {
@@ -186,6 +195,7 @@ export const ui = {
     'section.projects': '项目',
     'section.posts': '文章',
     'section.allPosts': '所有文章',
+    'blog.description': 'Eugene Lebedev 博客的所有文章——关于软件、我开发的工具，以及在过程中学到的东西。',
     'bio.body':
       '你好，我是 Eugene，一名开发者，也是开源爱好者。我会写一些关于软件、我开发的工具，以及在过程中学到的东西。',
     'projects.submarine.title': 'Submarine',
@@ -220,10 +230,12 @@ export const ui = {
     'post.copyMdShort': '复制',
     'post.backToTop': '返回顶部',
     'post.copyHeadingLink': '复制本节链接',
+    'post.toc': '目录',
     'footer.privacy':
       '本页面尊重您的隐私：不使用 Cookie 或类似技术，也不收集任何可识别个人身份的信息。',
     '404.title': '页面未找到',
     '404.body': '您要访问的页面不存在。',
+    '404.description': '您要访问的页面不存在。它可能已被移动或删除。',
     '404.home': '返回首页',
   },
   ja: {
@@ -236,6 +248,7 @@ export const ui = {
     'section.projects': 'プロジェクト',
     'section.posts': '記事',
     'section.allPosts': 'すべての記事',
+    'blog.description': 'Eugene Lebedev のブログ記事一覧 — ソフトウェアや作っているツール、その過程で学んだことについて。',
     'bio.body':
       'こんにちは。私は開発者で、オープンソース愛好家の Eugene です。作っているソフトウェアやツール、その過程で学んだことについて書いています。',
     'projects.submarine.title': 'Submarine',
@@ -270,10 +283,12 @@ export const ui = {
     'post.copyMdShort': 'コピー',
     'post.backToTop': 'トップへ戻る',
     'post.copyHeadingLink': 'このセクションへのリンクをコピー',
+    'post.toc': '目次',
     'footer.privacy':
       'このページはプライバシーを尊重し、Cookieなどの技術を使用せず、個人を識別できる情報も収集しません。',
     '404.title': 'ページが見つかりません',
     '404.body': 'お探しのページは存在しません。',
+    '404.description': 'お探しのページは存在しません。移動または削除された可能性があります。',
     '404.home': 'ホームに戻る',
   },
   fr: {
@@ -286,6 +301,7 @@ export const ui = {
     'section.projects': 'Projets',
     'section.posts': 'Articles',
     'section.allPosts': 'Tous les articles',
+    'blog.description': "Tous les articles du blog d'Eugene Lebedev — logiciels, outils que je crée et choses apprises en chemin.",
     'bio.body':
       "Bonjour. Je suis Eugene, développeur et passionné d'open source. J'écris sur les logiciels, les outils que je crée et ce que j'apprends en chemin.",
     'projects.submarine.title': 'Submarine',
@@ -321,10 +337,12 @@ export const ui = {
     'post.copyMdShort': 'COPIER',
     'post.backToTop': 'Haut de page',
     'post.copyHeadingLink': 'Copier le lien vers cette section',
+    'post.toc': 'Sommaire',
     'footer.privacy':
       "Cette page respecte votre vie privée : elle n'utilise pas de cookies ni de technologies similaires et ne collecte aucune information personnelle identifiable.",
     '404.title': 'Page introuvable',
     '404.body': "La page que vous recherchez n'existe pas.",
+    '404.description': "La page que vous recherchez n'existe pas. Elle a peut-être été déplacée ou supprimée.",
     '404.home': "Retour à l'accueil",
   },
   de: {
@@ -337,6 +355,7 @@ export const ui = {
     'section.projects': 'Projekte',
     'section.posts': 'Beiträge',
     'section.allPosts': 'Alle Beiträge',
+    'blog.description': 'Alle Blogbeiträge von Eugene Lebedev — Software, Tools, die ich baue, und Dinge, die ich dabei lerne.',
     'bio.body':
       'Hallo, ich bin Eugene, Entwickler und Open-Source-Enthusiast. Ich schreibe über Software, Tools, die ich baue, und Dinge, die ich dabei lerne.',
     'projects.submarine.title': 'Submarine',
@@ -372,10 +391,12 @@ export const ui = {
     'post.copyMdShort': 'KOPIEREN',
     'post.backToTop': 'Nach oben',
     'post.copyHeadingLink': 'Link zu diesem Abschnitt kopieren',
+    'post.toc': 'Inhaltsverzeichnis',
     'footer.privacy':
       'Diese Seite respektiert deine Privatsphäre: Sie verwendet keine Cookies oder ähnliche Technologien und sammelt keine personenbezogenen Daten.',
     '404.title': 'Seite nicht gefunden',
     '404.body': 'Die gesuchte Seite existiert nicht.',
+    '404.description': 'Die gesuchte Seite existiert nicht. Sie wurde möglicherweise verschoben oder entfernt.',
     '404.home': 'Zur Startseite',
   },
 } as const satisfies Record<Lang, Record<string, string>>;

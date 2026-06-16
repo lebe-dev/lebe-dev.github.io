@@ -1,16 +1,13 @@
 <script lang="ts">
-  import { onMount } from 'svelte';
   import { Button } from '$lib/components/ui/button';
   import SunIcon from '@lucide/svelte/icons/sun';
   import MoonIcon from '@lucide/svelte/icons/moon';
 
   let { labelLight, labelDark }: { labelLight: string; labelDark: string } = $props();
 
-  let isDark = $state(false);
-
-  onMount(() => {
-    isDark = document.documentElement.classList.contains('dark');
-  });
+  let isDark = $state(
+    typeof document !== 'undefined' && document.documentElement.classList.contains('dark'),
+  );
 
   function toggle() {
     isDark = document.documentElement.classList.toggle('dark');

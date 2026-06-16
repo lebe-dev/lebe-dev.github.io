@@ -215,6 +215,11 @@ a:visited:hover {
   color: var(--link-visited-hover);
 }
 
+::selection {
+  background-color: var(--rule);
+  color: var(--link);
+}
+
 /* Treat all links as new (no visited styling) on selected pages */
 main.reset-visited a:visited {
   color: var(--link);

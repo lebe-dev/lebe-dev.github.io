@@ -5,26 +5,24 @@ import {
   renderError,
   hideError,
   renderLiveRate,
+  hideLiveRate,
 } from "./ui.js";
+import {
+  calcSpread,
+  calcBtcAmount,
+  calcSats,
+  isRateStale,
+  getFriendlyErrorMessage,
+  isPositiveNumber,
+} from "./calc.js";
 
 const COINGECKO_API =
   "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=gel";
 const CACHE_KEY_RATE = "cc-lastRate";
 const CACHE_KEY_HISTORY = "cc-history";
-const RATE_CACHE_DURATION = 120000;
 const MAX_HISTORY_ENTRIES = 50;
 
 let currentCalculation = null;
-
-function calcSpread(officeRate, marketRate) {
-  if (marketRate === 0) return 0;
-  return ((officeRate - marketRate) / marketRate) * 100;
-}
-
-function calcBtcAmount(gel, officeRate) {
-  if (officeRate === 0) return 0;
-  return gel / officeRate;
-}
 
 async function fetchRate() {
   try {
@@ -90,24 +88,6 @@ function getCachedRate() {
   }
 }
 
-function isRateStale(timestamp) {
-  return Date.now() - timestamp > RATE_CACHE_DURATION;
-}
-
-function getFriendlyErrorMessage(errorMessage, ageMs) {
-  const minutes = Math.floor(ageMs / 60000);
-
-  if (errorMessage.includes("rate limit") || errorMessage.includes("429")) {
-    return `Кэш (${minutes} мин) — API лимит, данные актуальны`;
-  }
-
-  if (errorMessage.includes("timeout") || errorMessage.includes("AbortError")) {
-    return `Кэш (${minutes} мин) — медленное соединение`;
-  }
-
-  return `Кэш (${minutes} мин) — нет связи`;
-}
-
 async function getMarketRate(forceRefresh = false) {
   const cached = getCachedRate();
 
@@ -131,6 +111,7 @@ async function getMarketRate(forceRefresh = false) {
       return cached;
     }
     renderStatus("offline", "Offline");
+    hideLiveRate();
     throw new Error("Cannot fetch market rate. Check internet connection.");
   }
 }
@@ -204,10 +185,10 @@ function cleanupStorage() {
 }
 
 function validateInputs(gel, officeRate) {
-  if (!gel || gel <= 0) {
+  if (!isPositiveNumber(gel)) {
     throw new Error("GEL amount must be greater than zero");
   }
-  if (!officeRate || officeRate <= 0) {
+  if (!isPositiveNumber(officeRate)) {
     throw new Error("Office rate must be greater than zero");
   }
 }
@@ -220,9 +201,7 @@ function validateFormState() {
   const gel = parseFloat(gelInput.value);
   const officeRate = parseFloat(rateInput.value);
 
-  const isValid =
-    !isNaN(gel) && gel > 0 && !isNaN(officeRate) && officeRate > 0;
-  submitBtn.disabled = !isValid;
+  submitBtn.disabled = !(isPositiveNumber(gel) && isPositiveNumber(officeRate));
 }
 
 async function handleCalculate(e) {
@@ -242,7 +221,7 @@ async function handleCalculate(e) {
     const marketRate = rateData.rate;
 
     const btcAmount = calcBtcAmount(gel, officeRate);
-    const sats = Math.floor(btcAmount * 100000000);
+    const sats = calcSats(btcAmount);
     const spread = calcSpread(officeRate, marketRate);
     const rateAge = Date.now() - rateData.timestamp;
 
@@ -301,7 +280,11 @@ function showUpdateLink() {
 }
 
 function handleUpdate() {
-  window.location.reload();
+  if (newWorker) {
+    newWorker.postMessage({ type: "SKIP_WAITING" });
+  } else {
+    window.location.reload();
+  }
 }
 
 function registerSW() {

@@ -12,11 +12,16 @@ dev:
 check:
     npm run check
 
-# Lint: type-check + ban console.log/debugger in shipped JS of the calculator
+# Lint: type-check + unit tests + ban console.log/debugger in shipped JS of the calculator
 lint: check
+    npm run test
     @echo "Checking for console.log and debugger in public/cc/js/..."
     @! grep -rn "console\\.log\\|debugger" public/cc/js/ || (echo "❌ Found console.log or debugger statements" && exit 1)
     @echo "✓ Lint passed"
+
+# Run unit tests, optionally filtered by file/test name
+test NAME='':
+    npx vitest run {{NAME}}
 
 # Production build to dist/
 build: lint
