@@ -28,16 +28,15 @@ Blog posts live in `src/content/blog/<lang>/*.md` (Astro content collection, sch
 All commands use `just` (Justfile-based):
 
 ```bash
-just dev       # Start local dev server on http://localhost:8000
-just lint      # Check for console.log and debugger statements in JS
-just build     # Validate all required files exist + run lint
+just dev       # Start local dev server on http://localhost:4200
+just lint      # Type-check + run unit tests + check for console.log/debugger in public/cc/js/
+just build     # Run lint, then build + validate dist/ output (each locale dir, calculator index.html)
+just test      # Run Vitest unit tests, optionally filtered: just test <name>
 ```
-
-For focused testing: `just test <name>` (inherited from global CLAUDE.md, adapt as needed)
 
 ## Code Architecture
 
-### Crypto Exchange Calculator (cc/)
+### Crypto Exchange Calculator (public/cc/)
 
 **Single-page PWA with two-tab UI:**
 - **Tab 1: Calculator** — Input GEL amount + office rate → calculates BTC spread + amount received
@@ -45,13 +44,14 @@ For focused testing: `just test <name>` (inherited from global CLAUDE.md, adapt 
 
 **File Structure:**
 ```
-cc/
+public/cc/
 ├── index.html              # Single page with two DaisyUI tabs
 ├── manifest.json           # PWA manifest (standalone mode)
 ├── sw.js                   # Service Worker (cache-first static assets, network-first API)
 ├── js/
-│   ├── app.js              # Core logic: API calls, calculations, storage (~350 lines)
-│   └── ui.js               # Pure DOM rendering functions (~150 lines)
+│   ├── app.js              # Core logic: API calls, event wiring, storage (~400 lines)
+│   ├── ui.js               # Pure DOM rendering functions (~150 lines)
+│   └── calc.js             # Pure calculation helpers, covered by Vitest (calc.test.js)
 ├── css/
 │   ├── tailwind.min.css    # Vendored Tailwind CSS v4 (no CDN)
 │   ├── daisyui.min.css     # Vendored DaisyUI (no CDN)
@@ -110,7 +110,7 @@ satoshis = btcAmount × 100,000,000
 **Caching Strategy:**
 - Static assets (HTML, JS, CSS, icons): **cache-first** (fast, offline support)
 - API calls to coingecko.com: **network-first** with 5s timeout, fall back to cache
-- Cache versioning: `cc-v1` (bump in sw.js to force update)
+- Cache versioning: `cc-vN` (currently `cc-v6`; bump `CACHE_VERSION` in sw.js to force update)
 
 **Update Flow:**
 - On new version detected: show update banner (via `updatefound` event)
@@ -165,9 +165,12 @@ satoshis = btcAmount × 100,000,000
 
 ## Testing Approach
 
-Manual checklist (no automated tests file yet):
-- Calculate with known values: 1000 GEL, office 272000, market 259498 → spread 4.82%
-- Verify satoshi conversion: 1 BTC = 100,000,000 sats
+**Automated (Vitest):**
+- `public/cc/js/calc.test.js` — `calcSpread`/`calcBtcAmount`/`calcSats`, the CLAUDE.md worked example (1000 GEL, office 272000, market 259498 → spread 4.82%), `isRateStale`, `getFriendlyErrorMessage`, `isPositiveNumber`
+- `src/i18n/utils.test.ts`, `src/i18n/aiUsageDisclaimer.test.ts` — pure i18n/content helpers
+- Run via `just test` or `npm run test`
+
+**Manual checklist (DOM/PWA-only behaviour not covered by unit tests):**
 - Warning icon appears at spread > 2%, absent at spread ≤ 2%
 - Negative spread displays in green without warning
 - Offline mode: disable network → cached rate displayed with age
