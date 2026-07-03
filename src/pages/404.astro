@@ -1,12 +1,19 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { ui, languages } from '../i18n/ui';
+import type { Lang } from '../i18n/ui';
+
+const langCodes = Object.keys(languages) as Lang[];
+const titles = Object.fromEntries(langCodes.map((code) => [code, `${ui[code]['404.title']} — ${ui[code]['site.name']}`]));
 ---
 <BaseLayout lang="en" title={ui.en['404.title']} description={ui.en['404.description']}>
   <article>
-    <h1>{ui.en['404.title']} · {ui.ru['404.title']}</h1>
-    <p>{ui.en['404.body']}</p>
-    <p>{ui.ru['404.body']}</p>
+    {langCodes.map((code) => (
+      <div class="lang-block" data-lang={code} hidden={code !== 'en'}>
+        <h1>{ui[code]['404.title']}</h1>
+        <p>{ui[code]['404.body']}</p>
+      </div>
+    ))}
     <p>
       {Object.entries(languages).map(([code, name], i) => (
         <>
@@ -17,3 +24,16 @@ import { ui, languages } from '../i18n/ui';
     </p>
   </article>
 </BaseLayout>
+<script is:inline define:vars={{ titles }}>
+  (() => {
+    const blocks = document.querySelectorAll('.lang-block');
+    const known = new Set([...blocks].map((el) => el.dataset.lang));
+    const segment = location.pathname.split('/')[1];
+    const lang = known.has(segment) ? segment : 'en';
+    document.documentElement.lang = lang;
+    if (titles[lang]) document.title = titles[lang];
+    blocks.forEach((el) => {
+      el.hidden = el.dataset.lang !== lang;
+    });
+  })();
+</script>
