@@ -201,6 +201,7 @@ satoshis = btcAmount × 100,000,000
 - `just lint` (catch console.log/debugger)
 - `just build` (validate all files)
 - `git push origin main` → auto-deployed to https://lebe-dev.github.io/cc/
+- `just deploy` - deploy latest changes on site
 
 ## Browser & Platform Support
 
