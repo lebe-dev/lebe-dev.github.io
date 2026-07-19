@@ -31,6 +31,7 @@ export const ui = {
     'nav.home': 'Home',
     'section.about': 'About',
     'section.projects': 'Projects',
+    'section.projects.subtitle': 'Self-hosted apps and services',
     'section.posts': 'Posts',
     'section.allPosts': 'All posts',
     'blog.description': "All blog posts by Eugene Lebedev — software, tools I build, and things I learn along the way.",
@@ -55,6 +56,10 @@ export const ui = {
     'projects.cc.description':
       'Calculates the BTC/GEL rate spread between an exchange office and the market price.',
     'projects.cc.cta': 'Open app',
+    'projects.deepreader.title': 'Deep Reader',
+    'projects.deepreader.description':
+      'An app for reading English articles with AI-assisted translation tuned to your CEFR level.',
+    'projects.deepreader.cta': 'View on GitHub',
     'theme.light': 'Switch to light theme',
     'theme.dark': 'Switch to dark theme',
     'lang.switch': 'Choose language',
@@ -85,11 +90,12 @@ export const ui = {
     'nav.home': 'Главная',
     'section.about': 'Обо мне',
     'section.projects': 'Проекты',
+    'section.projects.subtitle': 'Self-hosted приложения и сервисы, которые я смастерил.',
     'section.posts': 'Записи',
     'section.allPosts': 'Все записи',
     'blog.description': 'Все записи блога Евгения Лебедева — про софт, инструменты, которые мастерю, и то, что узнаю по пути.',
     'bio.body':
-      'Привет. Я Евгений, разработчик open source и энтузиаст. Пишу про софт, инструменты, которые мастерю, и то, что узнаю по пути.',
+      'Привет. Я Евгений, разработчик open source и энтузиаст. Пишу обо всём, что волнует.',
     'projects.submarine.title': 'Submarine',
     'projects.submarine.description':
       'Набор инструментов для перевода субтитров с помощью LLM.',
@@ -109,6 +115,10 @@ export const ui = {
     'projects.cc.description':
       'Считает спред по курсу BTC/GEL между обменником и рыночной ценой.',
     'projects.cc.cta': 'Открыть приложение',
+    'projects.deepreader.title': 'Deep Reader',
+    'projects.deepreader.description':
+      'Приложение для чтения статей на английском с AI-переводом, подстроенным под ваш уровень владения языком (CEFR).',
+    'projects.deepreader.cta': 'Открыть на GitHub',
     'theme.light': 'Переключить на светлую тему',
     'theme.dark': 'Переключить на тёмную тему',
     'lang.switch': 'Выбрать язык',
@@ -139,6 +149,7 @@ export const ui = {
     'nav.home': 'Inicio',
     'section.about': 'Sobre mí',
     'section.projects': 'Proyectos',
+    'section.projects.subtitle': 'Aplicaciones y servicios self-hosted',
     'section.posts': 'Entradas',
     'section.allPosts': 'Todas las entradas',
     'blog.description': 'Todas las entradas del blog de Eugene Lebedev — software, herramientas que construyo y cosas que aprendo por el camino.',
@@ -163,6 +174,10 @@ export const ui = {
     'projects.cc.description':
       'Calcula el spread del tipo de cambio BTC/GEL entre una casa de cambio y el precio de mercado.',
     'projects.cc.cta': 'Abrir app',
+    'projects.deepreader.title': 'Deep Reader',
+    'projects.deepreader.description':
+      'Una aplicación para leer artículos en inglés con traducción asistida por IA adaptada a tu nivel CEFR.',
+    'projects.deepreader.cta': 'Ver en GitHub',
     'theme.light': 'Cambiar a tema claro',
     'theme.dark': 'Cambiar a tema oscuro',
     'lang.switch': 'Elegir idioma',
@@ -193,6 +208,7 @@ export const ui = {
     'nav.home': '首页',
     'section.about': '关于',
     'section.projects': '项目',
+    'section.projects.subtitle': '自托管应用与服务',
     'section.posts': '文章',
     'section.allPosts': '所有文章',
     'blog.description': 'Eugene Lebedev 博客的所有文章——关于软件、我开发的工具，以及在过程中学到的东西。',
@@ -216,6 +232,10 @@ export const ui = {
     'projects.cc.description':
       '计算兑换点与市场价格之间的 BTC/GEL 汇率价差。',
     'projects.cc.cta': '打开应用',
+    'projects.deepreader.title': 'Deep Reader',
+    'projects.deepreader.description':
+      '一个应用，帮助你阅读英语文章，并根据你的 CEFR 水平提供部分 AI 辅助翻译。',
+    'projects.deepreader.cta': '在 GitHub 上查看',
     'theme.light': '切换到浅色主题',
     'theme.dark': '切换到深色主题',
     'lang.switch': '选择语言',
@@ -246,6 +266,7 @@ export const ui = {
     'nav.home': 'ホーム',
     'section.about': 'プロフィール',
     'section.projects': 'プロジェクト',
+    'section.projects.subtitle': '自分でホストできるアプリとサービス',
     'section.posts': '記事',
     'section.allPosts': 'すべての記事',
     'blog.description': 'Eugene Lebedev のブログ記事一覧 — ソフトウェアや作っているツール、その過程で学んだことについて。',
@@ -269,6 +290,10 @@ export const ui = {
     'projects.cc.description':
       '両替所とリアルタイムの市場価格との BTC/GEL レートのスプレッドを計算します。',
     'projects.cc.cta': 'アプリを開く',
+    'projects.deepreader.title': 'Deep Reader',
+    'projects.deepreader.description':
+      'CEFR レベルに合わせた AI 支援翻訳付きで英語の記事を読めるアプリです。',
+    'projects.deepreader.cta': 'GitHub で見る',
     'theme.light': 'ライトテーマに切り替え',
     'theme.dark': 'ダークテーマに切り替え',
     'lang.switch': '言語を選択',
@@ -299,6 +324,7 @@ export const ui = {
     'nav.home': 'Accueil',
     'section.about': 'À propos',
     'section.projects': 'Projets',
+    'section.projects.subtitle': 'Applications et services self-hosted',
     'section.posts': 'Articles',
     'section.allPosts': 'Tous les articles',
     'blog.description': "Tous les articles du blog d'Eugene Lebedev — logiciels, outils que je crée et choses apprises en chemin.",
@@ -323,6 +349,10 @@ export const ui = {
     'projects.cc.description':
       'Calcule le spread du taux BTC/GEL entre un bureau de change et le cours du marché.',
     'projects.cc.cta': "Ouvrir l'app",
+    'projects.deepreader.title': 'Deep Reader',
+    'projects.deepreader.description':
+      'Une application pour lire des articles en anglais avec une traduction partielle assistée par IA adaptée à votre niveau CEFR.',
+    'projects.deepreader.cta': 'Voir sur GitHub',
     'theme.light': 'Passer au thème clair',
     'theme.dark': 'Passer au thème sombre',
     'lang.switch': 'Choisir la langue',
@@ -353,6 +383,7 @@ export const ui = {
     'nav.home': 'Startseite',
     'section.about': 'Über mich',
     'section.projects': 'Projekte',
+    'section.projects.subtitle': 'Self-hosted Apps und Dienste',
     'section.posts': 'Beiträge',
     'section.allPosts': 'Alle Beiträge',
     'blog.description': 'Alle Blogbeiträge von Eugene Lebedev — Software, Tools, die ich baue, und Dinge, die ich dabei lerne.',
@@ -377,6 +408,10 @@ export const ui = {
     'projects.cc.description':
       'Berechnet den BTC/GEL-Kursspread zwischen einer Wechselstube und dem Marktkurs.',
     'projects.cc.cta': 'App öffnen',
+    'projects.deepreader.title': 'Deep Reader',
+    'projects.deepreader.description':
+      'Eine App zum Lesen englischer Artikel mit teilweiser KI-gestützter Übersetzung, angepasst an dein CEFR-Niveau.',
+    'projects.deepreader.cta': 'Auf GitHub ansehen',
     'theme.light': 'Zu hellem Design wechseln',
     'theme.dark': 'Zu dunklem Design wechseln',
     'lang.switch': 'Sprache wählen',

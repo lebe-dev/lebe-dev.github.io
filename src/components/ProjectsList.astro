@@ -8,7 +8,12 @@ const t = useTranslations(lang);
 ---
 <section aria-labelledby="projects-heading">
   <h2 id="projects-heading" class="section-title">{t('section.projects')}</h2>
+  <p class="muted section-subtitle">{t('section.projects.subtitle')}</p>
   <ul class="projects-list">
+    <li>
+      <span class="proj-title"><a href="https://github.com/lebe-dev/deep-reader" target="_blank" rel="noopener">{t('projects.deepreader.title')}</a></span>
+      <span class="proj-desc">{t('projects.deepreader.description')}</span>
+    </li>
     <li>
       <span class="proj-title"><a href="https://github.com/lebe-dev/submarine" target="_blank" rel="noopener">{t('projects.submarine.title')}</a></span>
       <span class="proj-desc">{t('projects.submarine.description')}</span>
