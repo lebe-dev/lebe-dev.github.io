@@ -8,6 +8,9 @@ install:
 dev:
     npm run dev
 
+run:
+    @just dev
+
 # Type / content check
 check:
     npm run check

@@ -1,0 +1,426 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import {
+  buildAltTitles,
+  formatDateRu,
+  formatDateSpoken,
+  formatDuration,
+  formatDurationSpoken,
+  titleLang,
+  toDateAttr,
+} from '../lib/subtitles';
+import { subtitles } from '../data/subtitles';
+
+const langNames: Record<string, string> = {
+  en: 'английский',
+  de: 'немецкий',
+  fr: 'французский',
+  es: 'испанский',
+  it: 'итальянский',
+  ja: 'японский',
+  zh: 'китайский',
+  ko: 'корейский',
+  tr: 'турецкий',
+  pt: 'португальский',
+  th: 'тайский',
+};
+
+// genitive, for the "переведено с ___ на русский" sentence read by screen readers
+const langNamesFrom: Record<string, string> = {
+  en: 'английского',
+  de: 'немецкого',
+  fr: 'французского',
+  es: 'испанского',
+  it: 'итальянского',
+  ja: 'японского',
+  zh: 'китайского',
+  ko: 'корейского',
+  tr: 'турецкого',
+  pt: 'португальского',
+  th: 'тайского',
+};
+
+const entries = [...subtitles]
+  .sort((a, b) => new Date(b.dateAdded).valueOf() - new Date(a.dateAdded).valueOf())
+  .map((e) => {
+    const added = new Date(e.dateAdded);
+    return {
+      ...e,
+      altTitles: buildAltTitles(e),
+      titleLang: titleLang(e.title, e.originalLang),
+      sourceLang: langNames[e.originalLang] ?? e.originalLang.toUpperCase(),
+      sourceLangFrom: langNamesFrom[e.originalLang] ?? e.originalLang.toUpperCase(),
+      addedAttr: toDateAttr(added),
+      addedText: formatDateRu(added),
+      addedSpoken: formatDateSpoken(added),
+      durationText: e.duration ? formatDuration(e.duration) : undefined,
+      durationSpoken: e.duration ? formatDurationSpoken(e.duration) : undefined,
+      sourceHost: e.sourceUrl ? new URL(e.sourceUrl).hostname.replace(/^www\./, '') : undefined,
+      hasProcessDetails: Boolean(e.translatedWith || e.notes || e.sourceUrl),
+    };
+  });
+---
+<BaseLayout lang="ru" title="Субтитры" description="Субтитры на русском, переведённые с помощью LLM." minimalHeader>
+  <h1>Субтитры</h1>
+  <p class="muted lede">
+    Перевожу субтитры на русский с помощью LLM и выкладываю их здесь.
+  </p>
+  <ul class="subtitles-list" role="list" aria-label="Список переведённых субтитров">
+    {entries.map((e) => (
+      <li>
+        <article aria-labelledby={`sub-title-${e.fileName}`}>
+          <div class="sub-head">
+            <h2 class="sub-title" id={`sub-title-${e.fileName}`}>
+              {e.wikipediaUrl ? (
+                <a
+                  href={e.wikipediaUrl}
+                  hreflang={e.wikipediaUrl.includes('ru.wikipedia.org') ? 'ru' : 'en'}
+                  title={`«${e.title}» в Википедии — откроется в новой вкладке`}
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <span lang={e.titleLang}>{e.title}</span>
+                  <span class="visually-hidden"> — Википедия, новая вкладка</span>
+                </a>
+              ) : <span lang={e.titleLang}>{e.title}</span>}
+              {e.year && (
+                <span class="sub-year">
+                  <span class="visually-hidden">, {e.year} год</span>
+                  <span aria-hidden="true" title={`Год выхода фильма: ${e.year}`}>{e.year}</span>
+                </span>
+              )}
+            </h2>
+            <a
+              class="sub-download"
+              href={`/subtitles/${e.fileName}`}
+              download
+              type={e.format === 'srt' ? 'application/x-subrip' : 'text/vtt'}
+              title={`Скачать файл ${e.fileName}`}
+              aria-label={`Скачать субтитры к фильму «${e.title}» в формате ${e.format.toUpperCase()}`}
+            >
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <path d="M12 15V3" />
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <path d="m7 10 5 5 5-5" />
+              </svg>
+              <span aria-hidden="true">.{e.format}</span>
+            </a>
+          </div>
+          {e.altTitles.length > 0 && (
+            <p class="sub-alt-titles" title="Название на языке оригинала и на английском">
+              <span class="visually-hidden">Другие названия: </span>
+              {e.altTitles.map((alt, i) => (
+                <>
+                  {i > 0 && (
+                    <>
+                      <span class="visually-hidden">, </span>
+                      <span aria-hidden="true"> · </span>
+                    </>
+                  )}
+                  <span lang={alt.lang}>{alt.text}</span>
+                </>
+              ))}
+            </p>
+          )}
+          <p class="sub-meta">
+            <span>
+              <span class="visually-hidden">Переведено с {e.sourceLangFrom} на русский.</span>
+              <span aria-hidden="true" title={`Перевод с ${e.sourceLangFrom} языка на русский`}>
+                {e.sourceLang} → русский
+              </span>
+            </span>
+            {e.durationText && (
+              <span>
+                <span class="visually-hidden">Продолжительность: {e.durationSpoken}.</span>
+                <span aria-hidden="true" title={`Продолжительность фильма: ${e.durationSpoken}`}>
+                  {e.durationText}
+                </span>
+              </span>
+            )}
+          </p>
+          <div class="sub-footer">
+            {e.hasProcessDetails ? (
+              <details class="sub-details">
+                <summary class="sub-details-summary" title={`Как переводились субтитры к фильму «${e.title}»`}>
+                  <svg class="sub-details-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                    <path d="m9 18 6-6-6-6" />
+                  </svg>
+                  Как переводил<span class="visually-hidden"> субтитры к фильму «{e.title}»</span>
+                </summary>
+                <div class="sub-details-content">
+                  {e.translatedWith && <p>Инструменты: {e.translatedWith}</p>}
+                  {e.notes && <p>{e.notes}</p>}
+                  {e.sourceUrl && (
+                    <p>
+                      Источник субтитров:{' '}
+                      <a
+                        href={e.sourceUrl}
+                        title={`Оригинальные субтитры на ${e.sourceHost} — откроется в новой вкладке`}
+                        target="_blank"
+                        rel="noopener"
+                      >
+                        {e.sourceHost}
+                        <span class="visually-hidden"> — откроется в новой вкладке</span>
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </details>
+            ) : <span></span>}
+            <span class="sub-added">
+              <span class="visually-hidden">Добавлено {e.addedSpoken}.</span>
+              <time
+                datetime={e.addedAttr}
+                aria-hidden="true"
+                title={`Субтитры добавлены на сайт ${e.addedSpoken}`}
+              >{e.addedText}</time>
+            </span>
+          </div>
+        </article>
+      </li>
+    ))}
+  </ul>
+</BaseLayout>
+
+<style>
+  /* This page uses a minimal header with no tagline below it,
+     so the default main padding-top leaves too much air above the h1. */
+  :global(main:has(.subtitles-list)) {
+    padding-top: 1rem;
+  }
+
+  /* One small size for everything except the titles */
+  .lede,
+  .sub-year,
+  .sub-download,
+  .sub-alt-titles,
+  .sub-meta,
+  .sub-details-summary,
+  .sub-details-content {
+    font-size: 0.85rem;
+  }
+
+  .lede {
+    margin: 0 0 2.5rem;
+  }
+
+  .subtitles-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .subtitles-list li {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .subtitles-list li:first-child {
+    padding-top: 0;
+  }
+
+  .subtitles-list li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  /* Fixed two-column head: the download button stays on the first line
+     no matter how many lines the title takes. */
+  .sub-head {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: start;
+    column-gap: 1.25rem;
+  }
+
+  .sub-title {
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: 1.05rem;
+    line-height: 1.35;
+    margin: 0;
+    letter-spacing: -0.005em;
+  }
+
+  .sub-title a {
+    text-decoration: none;
+  }
+
+  .sub-title a:hover {
+    text-decoration: underline;
+  }
+
+  .sub-year {
+    float: right;
+    margin-left: 0.5rem;
+    font-weight: 400;
+    color: var(--text-muted);
+    white-space: nowrap;
+  }
+
+  .sub-download {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.25rem 0.6rem;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    color: var(--text-muted);
+    font-family: var(--sans);
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.15s ease, border-color 0.15s ease;
+  }
+
+  .sub-download svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  .sub-download:hover {
+    color: var(--link);
+    border-color: var(--link);
+  }
+
+  .sub-alt-titles {
+    margin: 0.3rem 0 0;
+    font-family: var(--sans);
+    line-height: 1.45;
+    color: var(--text-muted);
+  }
+
+  .sub-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.2rem 1.25rem;
+    margin: 0.55rem 0 0;
+    font-family: var(--sans);
+    color: var(--text-muted);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .sub-footer {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 0.7rem;
+  }
+
+  .sub-added {
+    flex-shrink: 0;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    font-family: var(--sans);
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+
+  .sub-details {
+    margin-top: 0;
+  }
+
+  .sub-details-summary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    cursor: pointer;
+    list-style: none;
+    font-family: var(--sans);
+    color: var(--text-muted);
+    transition: color 0.15s ease;
+  }
+
+  .sub-details-summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .sub-details-summary:hover {
+    color: var(--fg);
+  }
+
+  .sub-details-chevron {
+    width: 11px;
+    height: 11px;
+    flex-shrink: 0;
+    transition: transform 0.15s ease;
+  }
+
+  .sub-details[open] .sub-details-chevron {
+    transform: rotate(90deg);
+  }
+
+  .sub-details-content {
+    margin: 0.45rem 0 0;
+    font-family: var(--sans);
+    color: var(--text-muted);
+    line-height: 1.55;
+  }
+
+  .sub-details-content p {
+    margin: 0;
+  }
+
+  /* Visible keyboard focus on every interactive element of the page */
+  .sub-title a:focus-visible,
+  .sub-download:focus-visible,
+  .sub-details-summary:focus-visible,
+  .sub-details-content a:focus-visible {
+    outline: 2px solid var(--link);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  .sub-title a:focus-visible {
+    text-decoration: underline;
+  }
+
+  .sub-download:focus-visible {
+    color: var(--link);
+    border-color: var(--link);
+  }
+
+  .sub-details-summary:focus-visible {
+    color: var(--fg);
+  }
+
+  /* Comfortable touch targets for motor impairments (WCAG 2.5.8) */
+  .sub-download,
+  .sub-details-summary {
+    min-height: 24px;
+  }
+
+  @media (max-width: 540px) {
+    .sub-head {
+      grid-template-columns: minmax(0, 1fr);
+      row-gap: 0.6rem;
+      justify-items: start;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .sub-download,
+    .sub-details-summary,
+    .sub-details-chevron {
+      transition: none;
+    }
+  }
+
+  /* Higher contrast for low-vision users who ask the OS for it */
+  @media (prefers-contrast: more) {
+    .sub-year,
+    .sub-icon,
+    .sub-alt-titles,
+    .sub-meta,
+    .sub-details-summary,
+    .sub-details-content,
+    .sub-download {
+      color: var(--fg);
+    }
+
+    .sub-download {
+      border-color: var(--fg);
+    }
+  }
+</style>

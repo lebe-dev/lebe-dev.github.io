@@ -43,6 +43,13 @@ const posts = all
     </h2>
     <PostsList lang={lang} posts={posts} />
   </section>
+  {lang === 'ru' && (
+    <section aria-labelledby="subtitles-heading">
+      <h2 id="subtitles-heading" class="section-title">Субтитры</h2>
+      <p class="muted section-subtitle">Субтитры, которые я перевожу</p>
+      <a href="/subtitles/">Смотреть список →</a>
+    </section>
+  )}
   <ProjectsList lang={lang} />
   <Bio lang={lang} />
 </BaseLayout>
