@@ -23,6 +23,23 @@ Blog posts live in `src/content/blog/<lang>/*.md` (Astro content collection, sch
 - `draft: true` → post is **visible in `astro dev`** but **excluded from `astro build`** (the production artifact).
 - The behaviour lives in `src/lib/blog.ts`: `getBlogPosts()` hides drafts only when `import.meta.env.PROD` is true. Always fetch blog entries through this helper, not `getCollection('blog')` directly, so drafts are filtered consistently across the listing pages, `[slug]` route (including translation links), and RSS feed.
 
+## Subtitles page (/subtitles)
+
+Single, Russian-only, non-localized page (unlike blog/[lang] routes) listing subtitles the author translates into Russian.
+
+- Page: `src/pages/subtitles.astro` (builds to `/subtitles/`, standalone `<BaseLayout lang="ru">`, not under `[lang]`)
+- Data: `src/data/subtitles.ts` — array of `SubtitleEntry` objects, edited by hand for each new release
+- Subtitle files themselves live in `public/subtitles/` (raw `.srt`/`.vtt`, downloaded via a link on the page)
+- Formatting helpers: `src/lib/subtitles.ts` (unit-tested in `subtitles.test.ts`) — duration/date in both a visible short form and a spelled-out form for screen readers, plus `titleLang`/`buildAltTitles`
+- `SubtitleEntry` fields: `title` (the Russian title when there is one), `originalTitle?` (native-language title, transliterated if the script isn't Latin), `englishTitle?`, `year?`, `originalLang` (ISO code, mapped to Russian names via `langNames`/`langNamesFrom` in the page), `dateAdded` (ISO 8601, date the entry was added to the site — entries are sorted newest-added-first), `fileName`, `format`, `duration?` (HH:MM:SS, copied by hand from the source video file), `wikipediaUrl?` (film's Wikipedia page, if any), `sourceUrl?` (where the original-language subtitles were sourced from), `translatedWith?`, `notes?`
+- Linked from the Russian homepage (`src/pages/[lang]/index.astro`) in a "Субтитры" section shown only when `lang === 'ru'`, placed right after the "Записи" (posts) section
+
+**Layout of one entry:** a lucide `captions` icon hanging left of the title (`text-indent` trick, so wrapped lines align with the text), title + year, download button pinned to the first line by a two-column grid; below it the alternative titles on one line, then a single meta row (`язык → русский`, duration, date). Everything except the title is one small size (0.85rem) in `var(--sans)`.
+
+**Accessibility:** `duration`/`dateAdded` are rendered twice — a short visible form marked `aria-hidden`, and a spelled-out `.visually-hidden` sentence ("Продолжительность: 1 час 49 минут") for screen readers. `title` attributes always sit on the `aria-hidden` element so they never double-read. Titles carry `lang` (`titleLang()` picks `ru` / the source language / `xx-Latn` for transliterations) so speech synthesis switches pronunciation. Also: `role="list"` (Tailwind preflight strips list semantics), `<article aria-labelledby>` per entry, `aria-label` on download links, per-entry text in the `<summary>`, `:focus-visible` outlines, `prefers-reduced-motion` and `prefers-contrast` handling. `.visually-hidden` lives in `src/styles/global.css`.
+
+**Adding a new entry:** drop the file in `public/subtitles/`, add an object to the `subtitles` array in `src/data/subtitles.ts`.
+
 ## Development Commands
 
 All commands use `just` (Justfile-based):
