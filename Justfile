@@ -32,6 +32,7 @@ build: lint
     @test -f dist/index.html || (echo "❌ Missing dist/index.html" && exit 1)
     @for l in en ru es zh ja fr de; do test -d dist/$l || (echo "❌ Missing dist/$l/" && exit 1); done
     @test -f dist/cc/index.html || (echo "❌ Missing dist/cc/index.html (calculator)" && exit 1)
+    @for l in en ru es zh ja fr de; do test -f dist/$l/podcasts/index.html || (echo "❌ Missing dist/$l/podcasts/" && exit 1); done
     @echo "✓ Build validation passed"
 
 # Preview production build

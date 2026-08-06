@@ -5,4 +5,5 @@ pubDate: 2026-06-14
 draft: true
 lang: zh
 translationKey: translate-subtitles-with-llm
+aiUsageDisclaimer: true
 ---

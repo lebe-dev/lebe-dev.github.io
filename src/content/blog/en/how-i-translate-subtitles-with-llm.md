@@ -5,11 +5,7 @@ pubDate: 2026-06-14
 draft: true
 lang: en
 translationKey: translate-subtitles-with-llm
-disclaimer: |
-  This article was written by a russian speaker and translated with LLM into English. If you cannot accept that fact and feel unsafe, please push the button:
-
-disclaimerShowLeaveButton: true
-disclaimerLeaveButtonText: "Emergency button"
+aiUsageDisclaimer: true
 ---
 
 ![submarine, Text-based User Interface](/images/article-llm-intro.png)

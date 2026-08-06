@@ -12,6 +12,10 @@ The calculator helps users in Georgia's crypto exchange offices determine if the
 - How much BTC they'll receive for their GEL amount
 - Calculation history saved to localStorage
 
+## Dev instance
+
+Dev-сервер проксирован на https://test.home. Тебе ничего не надо запускать/перезапускать для этого, изменения в файлах подхватываются автоматически.
+
 ## Translation rules
 
 This site supports multiple languages but author's primary language is Russian. So when you will translate articles don't pretend to be a native.
@@ -22,6 +26,16 @@ Blog posts live in `src/content/blog/<lang>/*.md` (Astro content collection, sch
 
 - `draft: true` → post is **visible in `astro dev`** but **excluded from `astro build`** (the production artifact).
 - The behaviour lives in `src/lib/blog.ts`: `getBlogPosts()` hides drafts only when `import.meta.env.PROD` is true. Always fetch blog entries through this helper, not `getCollection('blog')` directly, so drafts are filtered consistently across the listing pages, `[slug]` route (including translation links), and RSS feed.
+
+## AI usage disclaimer
+
+The disclaimer above a post is **opt-in**, never automatic (`src/i18n/aiUsageDisclaimer.ts`, resolved in `src/pages/[lang]/blog/[slug].astro`):
+
+- `aiUsageDisclaimer: true` — use the language default text (and its button settings) from `aiUsageDisclaimerDefaults`
+- `aiUsageDisclaimer: "…"` — a custom text; button fields still fall back to the language default
+- field absent, `false`, or an empty string — no disclaimer is rendered at all
+
+Translated posts normally carry `aiUsageDisclaimer: true`; a Russian original only gets one when it explicitly asks for it.
 
 ## Subtitles page (/subtitles)
 
@@ -39,6 +53,32 @@ Single, Russian-only, non-localized page (unlike blog/[lang] routes) listing sub
 **Accessibility:** `duration`/`dateAdded` are rendered twice — a short visible form marked `aria-hidden`, and a spelled-out `.visually-hidden` sentence ("Продолжительность: 1 час 49 минут") for screen readers. `title` attributes always sit on the `aria-hidden` element so they never double-read. Titles carry `lang` (`titleLang()` picks `ru` / the source language / `xx-Latn` for transliterations) so speech synthesis switches pronunciation. Also: `role="list"` (Tailwind preflight strips list semantics), `<article aria-labelledby>` per entry, `aria-label` on download links, per-entry text in the `<summary>`, `:focus-visible` outlines, `prefers-reduced-motion` and `prefers-contrast` handling. `.visually-hidden` lives in `src/styles/global.css`.
 
 **Adding a new entry:** drop the file in `public/subtitles/`, add an object to the `subtitles` array in `src/data/subtitles.ts`.
+
+## Podcast translations (/[lang]/podcasts/)
+
+Localized section (unlike `/subtitles`): it exists in every site locale, and the *transcript* language is chosen on the episode page itself, independently of the site locale.
+
+- Pages: `src/pages/[lang]/podcasts/index.astro` (listing) and `[slug].astro` (one episode)
+- Metadata: `src/data/podcasts.ts` — array of `PodcastEpisode`, edited by hand per episode: `slug`, `podcast`, `podcastUrl?`, `episode?`, `publishedAt?`, `dateAdded`, `sourceUrl?`, `translatedWith?`
+- Transcripts: `src/data/podcasts/<slug>.<lang>.json`, shape `{ title, guest?, url?, transcript: [{ start, end, speaker, text }] }` with `HH:MM:SS` timecodes. **Title, guest, link to the original and duration all come from the JSON** and are deliberately not duplicated in `podcasts.ts` — `guest` is meant to become searchable later. `guest` is written in the transcript's own language, like `title` (`Ruben Laukkonen` / `Рубен Лаукконен`). `sourceUrl` in `podcasts.ts` exists only as an override for `url` (see `originalUrl`).
+- Listing order: newest `dateAdded` first, ties broken by `publishedAt` (newest release first). Several episodes usually land on the same day, so keep `publishedAt` filled in — without it a tie falls back to array order.
+- Loading/derivation: `src/lib/podcasts.ts` (unit-tested in `podcasts.test.ts`) — `import.meta.glob` over the JSON files, `availableLangs`, `preferredLang`, `transcriptDuration`, `originalUrl`, `listEpisodes` (returns `EpisodeSummary`: the episode plus `title`/`titleLang`/`guest`/`duration`/`langs` resolved for a given site locale)
+- UI strings: `podcasts.*` and `section.podcasts*` keys in `src/i18n/ui.ts`, present in all seven locales
+- Optional `glossary: [{ term, definition }]` in a transcript JSON renders as a definition list after the transcript. It is **per language** and per episode — it lives inside `Transcript.svelte` so it switches together with the transcript, and the whole section is skipped for languages that don't have one. Only the heading (`podcasts.glossary`) comes from the site locale.
+- Pure timecode helpers live separately in `src/lib/podcastTimecode.ts` **on purpose**: the Svelte component imports them, and importing `podcasts.ts` there would drag every transcript JSON into the client bundle
+- Linked from every locale's homepage (`src/pages/[lang]/index.astro`) in a "Podcast translations" section right after "Posts"
+
+**Language selection:** the site locale picks the initial transcript (`ru` → Russian, everything else → English, via `preferredLang`); the reader then switches freely with the toggle in `src/components/Transcript.svelte`, which persists the choice in `localStorage` under `podcast-transcript-lang` and restores it on mount. Both languages ship in the page (~70 KB gzipped for a 55-minute episode), so switching needs no reload. The `<h1>` lives inside the component so the title switches with the transcript; `<title>`/`og:` stay in the locale's preferred language.
+
+**Show filters on the listing:** chips above the list ("All" + one per show), derived from the episodes themselves (`new Set` over `podcast`), so a new show gets its chip for free. Filtering toggles `hidden` on the `<li>`s from a plain inline script in `index.astro` — the bar itself ships `hidden` and is revealed by that script, so no dead buttons without JS. Because `:first-child`/`:last-child` can't see past hidden items, the script adds `filterable` to the `<ul>` and marks the first/last *visible* entry with `is-first`/`is-last`; the CSS for spacing and rules is keyed off those classes. Keep this in mind when touching `.podcast-list` spacing.
+
+**Search on the listing:** a `data-search` text input above the filter chips, case-insensitive, matched against `data-title` then `data-guest` on each `<li>` (either matching is enough — combined with the show filter via `applyFilters()` in the same inline script). A `data-no-results` message toggles when a query leaves nothing visible. The input also reads a `?q=` URL param on load to pre-fill and apply a search — that's how the guest link on the episode page lands here pre-filtered.
+
+**Guest link on the episode page:** `Transcript.svelte` renders a link right after the `<h1>` (`guest`/`guestHref`/`guestLabel` props, from `[slug].astro`) pointing at `/${lang}/podcasts/?q=<guest>`. The guest text is fixed to the episode's `initial` transcript language (matching how `listEpisodes` resolves guest for that site locale) and does not follow the in-page language toggle — switching the toggle would otherwise point the link at a guest spelling the listing page can't match.
+
+**Missing translations are fine:** only the languages actually present on disk are offered. With a single language the toggle is hidden and a `podcasts.onlyOneLang` note is shown instead.
+
+**Adding an episode:** drop `<slug>.en.json` / `<slug>.ru.json` into `src/data/podcasts/`, add an object to the `podcasts` array in `src/data/podcasts.ts`. Nothing else — routes, listing, filters, duration, guest and the link to the original all follow from the data. `just build` checks that `dist/<lang>/podcasts/` exists for every locale.
 
 ## Development Commands
 

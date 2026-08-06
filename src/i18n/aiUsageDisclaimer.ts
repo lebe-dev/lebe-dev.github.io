@@ -1,19 +1,29 @@
 import type { Lang } from "./ui";
 
 export interface AiUsageDisclaimerSettings {
-  aiUsageDisclaimer?: string;
+  /**
+   * `true` — use the language default below, a string — a custom text,
+   * `false` / an empty string / absent — no disclaimer at all.
+   */
+  aiUsageDisclaimer?: string | boolean;
   aiUsageDisclaimerShowLeaveButton?: boolean;
   aiUsageDisclaimerLeaveButtonText?: string;
   aiUsageDisclaimerShowAcceptButton?: boolean;
   aiUsageDisclaimerAcceptButtonText?: string;
 }
 
-// Per-language defaults, applied to every post in that language folder
-// unless the post's own frontmatter overrides a field.
-// To opt a single post out of a default, set the field explicitly
-// (e.g. `aiUsageDisclaimer: ""`).
+/** A language default, opted into per post with `aiUsageDisclaimer: true`. */
+export interface AiUsageDisclaimerPreset
+  extends Omit<AiUsageDisclaimerSettings, "aiUsageDisclaimer"> {
+  aiUsageDisclaimer?: string;
+}
+
+// Per-language texts. They are NOT applied automatically: a post shows a
+// disclaimer only when its frontmatter asks for one — `aiUsageDisclaimer: true`
+// for the default below, or a string for a custom text. Anything else
+// (absent, `false`, an empty string) means no disclaimer.
 export const aiUsageDisclaimerDefaults: Partial<
-  Record<Lang, AiUsageDisclaimerSettings>
+  Record<Lang, AiUsageDisclaimerPreset>
 > = {
   ru: {
     aiUsageDisclaimer:
@@ -69,14 +79,38 @@ export const aiUsageDisclaimerDefaults: Partial<
   },
 };
 
+export interface ResolvedAiUsageDisclaimer {
+  aiUsageDisclaimer?: string;
+  aiUsageDisclaimerShowLeaveButton: boolean;
+  aiUsageDisclaimerLeaveButtonText: string;
+  aiUsageDisclaimerShowAcceptButton: boolean;
+  aiUsageDisclaimerAcceptButtonText: string;
+}
+
+const hiddenDisclaimer: ResolvedAiUsageDisclaimer = {
+  aiUsageDisclaimer: undefined,
+  aiUsageDisclaimerShowLeaveButton: false,
+  aiUsageDisclaimerLeaveButtonText: "",
+  aiUsageDisclaimerShowAcceptButton: false,
+  aiUsageDisclaimerAcceptButtonText: "",
+};
+
 export const resolveAiUsageDisclaimer = (
   lang: Lang,
   data: AiUsageDisclaimerSettings,
-): Required<Omit<AiUsageDisclaimerSettings, "aiUsageDisclaimer">> &
-  Pick<AiUsageDisclaimerSettings, "aiUsageDisclaimer"> => {
+): ResolvedAiUsageDisclaimer => {
   const defaults = aiUsageDisclaimerDefaults[lang] ?? {};
+  const text =
+    data.aiUsageDisclaimer === true
+      ? defaults.aiUsageDisclaimer
+      : typeof data.aiUsageDisclaimer === "string"
+        ? data.aiUsageDisclaimer
+        : undefined;
+
+  if (!text) return hiddenDisclaimer;
+
   return {
-    aiUsageDisclaimer: data.aiUsageDisclaimer ?? defaults.aiUsageDisclaimer,
+    aiUsageDisclaimer: text,
     aiUsageDisclaimerShowLeaveButton:
       data.aiUsageDisclaimerShowLeaveButton ??
       defaults.aiUsageDisclaimerShowLeaveButton ??

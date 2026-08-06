@@ -6,6 +6,7 @@ draft: true
 lang: en
 translationKey: hello-world
 tags: [meta]
+aiUsageDisclaimer: true
 ---
 
 This is the first entry of this blog. I'm Eugene, a developer working on backends, tools, and the occasional small web app. I plan to use this space for short notes about software I build and ideas I want to think through in writing.

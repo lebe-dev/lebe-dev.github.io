@@ -1,0 +1,110 @@
+import { podcasts, transcriptLangs, type PodcastEpisode, type TranscriptLang } from '../data/podcasts';
+
+export { formatTimecode, segmentId, timecodeToSeconds } from './podcastTimecode';
+
+export interface TranscriptSegment {
+  start: string; // HH:MM:SS
+  end: string; // HH:MM:SS
+  speaker: string;
+  text: string;
+}
+
+export interface GlossaryEntry {
+  term: string;
+  definition: string;
+}
+
+export interface Transcript {
+  title: string;
+  guest?: string; // the episode's guest, for finding episodes by who was on
+  url?: string; // the original episode this transcript was made from
+  transcript: TranscriptSegment[];
+  /** Optional terms worth explaining, rendered after the transcript. Per language. */
+  glossary?: GlossaryEntry[];
+}
+
+/** Every transcript in src/data/podcasts, keyed by "<slug>.<lang>". */
+const files = import.meta.glob<Transcript>('../data/podcasts/*.json', {
+  eager: true,
+  import: 'default',
+});
+
+const transcripts = new Map<string, Transcript>(
+  Object.entries(files).map(([path, data]) => [
+    path.replace(/^.*\//, '').replace(/\.json$/, ''),
+    data,
+  ]),
+);
+
+export const getTranscript = (slug: string, lang: TranscriptLang): Transcript | undefined =>
+  transcripts.get(`${slug}.${lang}`);
+
+/** Transcript languages actually present on disk for an episode, in a stable order. */
+export const availableLangs = (slug: string): TranscriptLang[] =>
+  transcriptLangs.filter((lang) => transcripts.has(`${slug}.${lang}`));
+
+/**
+ * Which transcript to show first: the site locale's own language when it exists,
+ * English otherwise, and — if even that is missing — whatever we do have.
+ */
+export const preferredLang = (
+  siteLang: string,
+  available: readonly TranscriptLang[],
+): TranscriptLang | undefined => {
+  const wanted = available.find((lang) => lang === siteLang);
+  if (wanted) return wanted;
+  return available.find((lang) => lang === 'en') ?? available[0];
+};
+
+/**
+ * Link to the original episode. The transcripts carry it; `sourceUrl` in
+ * podcasts.ts overrides them when the two ever disagree.
+ */
+export const originalUrl = (
+  slug: string,
+  langs: readonly TranscriptLang[],
+  override?: string,
+): string | undefined =>
+  override ?? langs.map((lang) => getTranscript(slug, lang)?.url).find(Boolean);
+
+/** Episode length, taken from the last segment's end timecode. */
+export const transcriptDuration = (transcript: Transcript): string | undefined =>
+  transcript.transcript.at(-1)?.end;
+
+export interface EpisodeSummary extends PodcastEpisode {
+  langs: TranscriptLang[];
+  title: string; // title in the preferred language for the given site locale
+  titleLang: TranscriptLang;
+  guest?: string;
+  duration?: string;
+}
+
+/**
+ * Episodes for the listing page, newest addition first. Several episodes are
+ * usually added on the same day, so ties fall back to the release date — the
+ * listing then still reads newest-to-oldest instead of following array order.
+ */
+export const listEpisodes = (siteLang: string): EpisodeSummary[] =>
+  [...podcasts]
+    .sort(
+      (a, b) =>
+        new Date(b.dateAdded).valueOf() - new Date(a.dateAdded).valueOf() ||
+        (b.publishedAt ?? '').localeCompare(a.publishedAt ?? ''),
+    )
+    .flatMap((episode) => {
+      const langs = availableLangs(episode.slug);
+      const titleLang = preferredLang(siteLang, langs);
+      if (!titleLang) return []; // no transcript on disk — nothing to link to
+
+      const transcript = getTranscript(episode.slug, titleLang)!;
+      return [
+        {
+          ...episode,
+          langs,
+          title: transcript.title,
+          titleLang,
+          guest: transcript.guest,
+          duration: transcriptDuration(transcript),
+        },
+      ];
+    });

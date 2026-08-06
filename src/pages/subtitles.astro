@@ -71,18 +71,20 @@ const entries = [...subtitles]
         <article aria-labelledby={`sub-title-${e.fileName}`}>
           <div class="sub-head">
             <h2 class="sub-title" id={`sub-title-${e.fileName}`}>
-              {e.wikipediaUrl ? (
-                <a
-                  href={e.wikipediaUrl}
-                  hreflang={e.wikipediaUrl.includes('ru.wikipedia.org') ? 'ru' : 'en'}
-                  title={`«${e.title}» в Википедии — откроется в новой вкладке`}
-                  target="_blank"
-                  rel="noopener"
-                >
-                  <span lang={e.titleLang}>{e.title}</span>
-                  <span class="visually-hidden"> — Википедия, новая вкладка</span>
-                </a>
-              ) : <span lang={e.titleLang}>{e.title}</span>}
+              <span class="sub-title-text">
+                {e.wikipediaUrl ? (
+                  <a
+                    href={e.wikipediaUrl}
+                    hreflang={e.wikipediaUrl.includes('ru.wikipedia.org') ? 'ru' : 'en'}
+                    title={`«${e.title}» в Википедии — откроется в новой вкладке`}
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <span lang={e.titleLang}>{e.title}</span>
+                    <span class="visually-hidden"> — Википедия, новая вкладка</span>
+                  </a>
+                ) : <span lang={e.titleLang}>{e.title}</span>}
+              </span>
               {e.year && (
                 <span class="sub-year">
                   <span class="visually-hidden">, {e.year} год</span>
@@ -234,12 +236,19 @@ const entries = [...subtitles]
   }
 
   .sub-title {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
     font-family: var(--sans);
     font-weight: 600;
     font-size: 1.05rem;
     line-height: 1.35;
     margin: 0;
     letter-spacing: -0.005em;
+  }
+
+  .sub-title-text {
+    min-width: 0;
   }
 
   .sub-title a {
@@ -251,8 +260,9 @@ const entries = [...subtitles]
   }
 
   .sub-year {
-    float: right;
-    margin-left: 0.5rem;
+    flex-shrink: 0;
+    margin-left: auto;
+    padding-left: 0.5rem;
     font-weight: 400;
     color: var(--text-muted);
     white-space: nowrap;
@@ -264,7 +274,7 @@ const entries = [...subtitles]
     gap: 0.3rem;
     padding: 0.25rem 0.6rem;
     border: 1px solid var(--rule);
-    border-radius: 999px;
+    border-radius: 6px;
     color: var(--text-muted);
     font-family: var(--sans);
     font-weight: 600;

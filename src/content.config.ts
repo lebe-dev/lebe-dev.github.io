@@ -14,7 +14,9 @@ const blog = defineCollection({
     lang: z.enum(['en', 'ru', 'es', 'zh', 'ja', 'fr', 'de']),
     translationKey: z.string().optional(),
     tags: z.array(z.string()).default([]),
-    aiUsageDisclaimer: z.string().optional(),
+    // `true` — the language default from src/i18n/aiUsageDisclaimer.ts,
+    // a string — a custom text, absent/`false` — no disclaimer.
+    aiUsageDisclaimer: z.union([z.string(), z.boolean()]).optional(),
     aiUsageDisclaimerShowLeaveButton: z.boolean().optional(),
     aiUsageDisclaimerLeaveButtonText: z.string().optional(),
     aiUsageDisclaimerShowAcceptButton: z.boolean().optional(),

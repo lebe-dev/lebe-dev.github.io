@@ -5,6 +5,7 @@ pubDate: 2026-06-14
 draft: true
 lang: ru
 translationKey: translate-subtitles-with-llm
+aiUsageDisclaimer: true
 ---
 
 ![submarine, Text-based User Interface](/images/article-llm-intro-ru.png)

@@ -43,6 +43,11 @@ const posts = all
     </h2>
     <PostsList lang={lang} posts={posts} />
   </section>
+  <section aria-labelledby="podcasts-heading">
+    <h2 id="podcasts-heading" class="section-title">{t('section.podcasts')}</h2>
+    <p class="muted section-subtitle">{t('section.podcasts.subtitle')}</p>
+    <a href={`/${lang}/podcasts/`}>{t('section.allPodcasts')}</a>
+  </section>
   {lang === 'ru' && (
     <section aria-labelledby="subtitles-heading">
       <h2 id="subtitles-heading" class="section-title">Субтитры</h2>

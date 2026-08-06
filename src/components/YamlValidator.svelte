@@ -66,7 +66,7 @@
     background: var(--rule);
     color: var(--fg);
     border: 1px solid var(--rule);
-    border-radius: 6px;
+    border-radius: 5px;
     padding: 0.9rem 1rem;
     tab-size: 2;
   }
