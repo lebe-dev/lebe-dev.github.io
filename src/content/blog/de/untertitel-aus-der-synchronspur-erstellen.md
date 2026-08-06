@@ -2,7 +2,7 @@
 title: Untertitel aus der Synchronspur erstellen
 description: Wie ich Filmuntertitel mit Hilfe eines LLM aus der Synchronspur erstelle
 pubDate: 2026-08-06
-draft: true
+draft: false
 lang: de
 translationKey: create-subtitles-from-translated-audio
 aiUsageDisclaimer: true

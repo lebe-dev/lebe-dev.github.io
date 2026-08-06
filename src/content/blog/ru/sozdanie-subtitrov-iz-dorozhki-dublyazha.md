@@ -2,7 +2,7 @@
 title: Создание субтитров из дорожки дубляжа
 description: Как я создаю субтитры к фильмам из дорожки дубляжа и с помощью LLM
 pubDate: 2026-08-06
-draft: true
+draft: false
 lang: ru
 translationKey: create-subtitles-from-translated-audio
 aiUsageDisclaimer: false

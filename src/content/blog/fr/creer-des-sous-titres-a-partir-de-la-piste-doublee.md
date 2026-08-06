@@ -2,7 +2,7 @@
 title: Créer des sous-titres à partir de la piste doublée
 description: Comment je crée des sous-titres de films à partir de la piste doublée avec l'aide d'un LLM
 pubDate: 2026-08-06
-draft: true
+draft: false
 lang: fr
 translationKey: create-subtitles-from-translated-audio
 aiUsageDisclaimer: true

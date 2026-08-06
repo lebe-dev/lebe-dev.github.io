@@ -2,7 +2,7 @@
 title: Crear subtítulos a partir de la pista de doblaje
 description: Cómo creo subtítulos de películas a partir de la pista de doblaje con ayuda de un LLM
 pubDate: 2026-08-06
-draft: true
+draft: false
 lang: es
 translationKey: create-subtitles-from-translated-audio
 aiUsageDisclaimer: true

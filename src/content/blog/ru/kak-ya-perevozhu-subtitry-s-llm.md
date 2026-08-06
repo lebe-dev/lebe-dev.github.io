@@ -2,7 +2,7 @@
 title: Как я перевожу субтитры с LLM
 description: Как я перевожу субтитры к фильмам с помощью LLM и своей утилиты submarine — разбираю кейс с фильмом «Молчаливый друг» (2025).
 pubDate: 2026-06-14
-draft: true
+draft: false
 lang: ru
 translationKey: translate-subtitles-with-llm
 aiUsageDisclaimer: false

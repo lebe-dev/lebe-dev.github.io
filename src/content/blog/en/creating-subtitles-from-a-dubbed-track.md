@@ -2,7 +2,7 @@
 title: Creating Subtitles from a Dubbed Audio Track
 description: How I create movie subtitles out of a dubbed audio track with the help of an LLM
 pubDate: 2026-08-06
-draft: true
+draft: false
 lang: en
 translationKey: create-subtitles-from-translated-audio
 aiUsageDisclaimer: true
