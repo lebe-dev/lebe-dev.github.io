@@ -5,8 +5,7 @@ import ThemeToggle from './ThemeToggle.svelte';
 import LanguageSwitch from './LanguageSwitch.svelte';
 
 type Props = { lang: Lang; showTitle?: boolean; minimal?: boolean; backHref?: string };
-const { lang, showTitle = true, minimal = false } = Astro.props;
-const backHref = Astro.props.backHref ?? `/${lang}/`;
+const { lang, showTitle = true, minimal = false, backHref = `/${lang}/` } = Astro.props;
 const t = useTranslations(lang);
 const siteName = lang === 'ru' ? 'Евгений Лебедев' : t('site.name');
 ---

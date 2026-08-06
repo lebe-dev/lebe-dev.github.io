@@ -14,10 +14,11 @@ interface Props {
   description?: string;
   showHeaderTitle?: boolean;
   minimalHeader?: boolean;
+  backHref?: string;
   resetVisited?: boolean;
 }
 
-const { lang, title, description, showHeaderTitle = true, minimalHeader = false, resetVisited = false } = Astro.props;
+const { lang, title, description, showHeaderTitle = true, minimalHeader = false, backHref, resetVisited = false } = Astro.props;
 const t = useTranslations(lang);
 const pageTitle = title ? `${title} — ${t('site.name')}` : t('site.name');
 const pageDescription = description ?? t('site.description');
@@ -76,7 +77,7 @@ const otherLangs = (Object.keys(languages) as Lang[]).filter((l) => l !== lang);
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5DRJHT5J"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <Header lang={lang} showTitle={showHeaderTitle} minimal={minimalHeader} />
+    <Header lang={lang} showTitle={showHeaderTitle} minimal={minimalHeader} backHref={backHref} />
     <main class:list={[{ 'reset-visited': resetVisited }]}>
       <slot />
     </main>

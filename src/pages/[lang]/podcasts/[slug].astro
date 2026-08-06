@@ -52,6 +52,7 @@ const onlyOneLang =
   title={titles[initial]}
   description={`${episode.podcast}${episode.episode !== undefined ? ` #${episode.episode}` : ''} — ${titles[initial]}`}
   minimalHeader
+  backHref={`/${lang}/podcasts/?show=${encodeURIComponent(episode.podcast)}`}
 >
   <div class="episode">
     <p class="show">

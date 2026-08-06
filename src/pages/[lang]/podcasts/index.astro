@@ -145,8 +145,20 @@ const shows = [...new Set(episodes.map((e) => e.podcast))];
       markEdges();
     };
 
+    // Lets a link (e.g. the episode page's back button) land here pre-filtered
+    // to one show.
+    const presetShow = new URLSearchParams(location.search).get('show');
+    if (presetShow) selectedShow = presetShow;
+
     if (bar) {
       bar.hidden = false;
+      if (presetShow) {
+        for (const other of bar.querySelectorAll<HTMLButtonElement>('.filter')) {
+          const active = other.dataset.show === presetShow;
+          other.classList.toggle('active', active);
+          other.setAttribute('aria-pressed', String(active));
+        }
+      }
       bar.addEventListener('click', (event) => {
         const target = event.target as HTMLElement;
         const button = target.closest<HTMLButtonElement>('.filter');
