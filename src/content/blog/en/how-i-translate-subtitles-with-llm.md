@@ -12,22 +12,18 @@ aiUsageDisclaimer: true
 
 In this article I want to share how I translate subtitles using large language models (LLMs). It just so happens that I watch movies, TV series, documentaries, cartoons, anime, and everything else only with the original audio.
 
-– Why do my ears keep bleeding? – I asked the doctor, and he answered with 100% confidence:
-
-– You're allergic to dubbing, try subtitles.
-
 All the other subtopics, like "why don't you just watch on streaming services?" and so on, are out of scope for this article.
 
-A few years ago LLMs appeared, but it's only been about a year since they became good enough for translation. Still, even in 2026 there's no silver bullet for all subtitle problems. Believe me, there are plenty of them. Here are the top ones:
+A few years ago LLMs appeared, but it's only been about a year since they became good enough for translation. Still, even in 2026 there's no "silver bullet" for all subtitle problems. Believe me, there are plenty of them. Here are the top ones:
 
 1. There are no subtitles for the movie at all
-2. Subtitles exist only in a language I don't know
-3. Subtitles exist, but they're incomplete (yes, that happens too, more on this below)
-4. Subtitles exist, but they don't match the edition of the film (theatrical cut, director's cut, etc.)
+2. Subtitles exist only in a language I don't know well enough, or don't know at all
+3. The subtitles are incomplete (yes, that happens too, more on this below)
+4. The subtitles run ahead or lag behind. This happens when the edition of the film doesn't match (theatrical cut, director's cut, and so on)
 5. LLMs are great at translating into many languages, but they break down on subtitles: they ruin timings, drop lines, and so on
 6. The text in subtitles has no context, and if the movie is new, the LLM might fail at the translation. Some words differ a lot in translation depending on the time period of the story
 
-So the only idea that came to mind is that the LLM needs help somehow. What kind of help can we give it?
+So the only idea that came to mind is that the LLM needs help somehow. Here's what we can help with:
 
 1. Track translation progress
 2. Verify the integrity of the result
@@ -48,7 +44,9 @@ On top of that, the utility lets you assess the translation using a TUI (Text-ba
 
 ![submarine, Text-based User Interface](/images/article-llm-submarine.png)
 
-Besides basic up/down navigation, this mode supports various movement options. For example, random jumps (hotkey `r`). This is handy for eyeballing translation quality.
+Besides basic up/down navigation, this mode supports various movement options. For example, random jumps (hotkey `r`). This is handy for eyeballing translation quality ("trust, but verify").
+
+To install it, it's enough to give the agent a link to the project on github — https://github.com/lebe-dev/submarine.
 
 Next, as an example, I'll walk through how I prepared Russian subtitles for the movie "Silent Friend" (2025).
 
@@ -94,6 +92,8 @@ As confirmation, `Opus 4.8` (in `high` mode) explained in its final response tha
 
 ### Incomplete subtitles
 
+![A still from the film "Silent Friend"](/images/article-llm-kovitus.png)
+
 After that, I started the movie and skipped back and forth to random scenes. At one point I noticed that a number of scenes had no translation. I checked the original English subtitle file, and indeed there was no translation there either. I downloaded another subtitle file from a different translator, and those scenes were translated there.
 
 So, in the same session, I asked the agent to fix this — merge the files and translate the missing parts along the way. Opus did a great job translating the missing fragments and inserted them using my utility.
@@ -104,6 +104,10 @@ While watching the movie, comfortably on the couch, about half an hour before th
 
 The utility comes with a set of commands for fixing delays or drift; similar cases are described in the [documentation](https://github.com/lebe-dev/submarine/blob/main/docs/usecases/README.md). The agent handles this without any trouble.
 
+![A still from the film "Silent Friend"](/images/article-llm-final-thoughts.png)
+
 ## Conclusion
 
 Of course, I haven't solved absolutely every subtitle translation problem — for example, I still don't know how to determine the gender of a speaker. The next experiment I want to try is transcribing the audio track and getting some kind of markup indicating the speaker's gender. But even that won't give 100% accuracy :)
+
+- [Download the subtitles](/subtitles/Stille.Freundin.2025.WEB-DL.1080p.H.264.ru.full.srt)
