@@ -13,11 +13,11 @@ It all started while I was digging into mindfulness, Buddhism, meditation and ot
 Mindfulness and meditation constantly refer to Hindu terms and to the enormous [Buddhist cosmology](https://en.wikipedia.org/wiki/Buddhist_cosmology).
 For a person with a Western mindset it is very distracting and makes understanding and practice even more confusing.
 
-That is why I decided to use an LLM to transcribe podcast episodes and to explain Buddhist terms along the way.
+That is why I decided to use an LLM to transcribe podcast episodes and to explain complex terms along the way.
 
 ## Which model
 
-Just like for [subtitle translation](/subtitles/) I use a top-tier model with Medium Effort, no matter whose model it is (Anthropic or OpenAI).
+Just like for [subtitle translation](/subtitles/) I use a top-tier model with Medium Effort. As of August 2026, it doesn't matter whose model it is (from Anthropic or OpenAI).
 
 ## How to make a transcription
 
@@ -55,16 +55,16 @@ Michael interviews some of the most radical and original thinkers, authors, and 
 
 ## Translation specifics
 
-I don't know Indian terminology or Buddhist cosmology, so add a short explanation in brackets next to the word/term.
-
-Also collect all these terms and build a Glossary at the end.
+- I don't know Indian terminology or Buddhist cosmology, so add a short explanation in brackets next to the word/term.
+- Also collect all these terms and build a Glossary at the end.
+- Remove ads.
 
 ## Additionally
 
 If something is unclear to you or you have to make a choice — ask me.
 ```
 
-Claude will pick Whisper for the transcription by default, even if you don't mention it in the prompt.
+For transcription, the LLM will pick Whisper by default, even if you don't mention it in the prompt. But for simpler models, it's worth specifying the model explicitly just in case.
 
 Put the mp3 file into the directory where you are going to run the agent (Claude Code, Codex, opencode — doesn't matter) and ask it: `take on Deconstructing Yourself-112-A Conversation with Joe Hudson.mp3`.
 

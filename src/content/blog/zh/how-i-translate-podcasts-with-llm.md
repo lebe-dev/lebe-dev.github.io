@@ -13,11 +13,11 @@ aiUsageDisclaimer: true
 正念和冥想的话题常常牵涉到印度教术语和庞大的[佛教宇宙观](https://en.wikipedia.org/wiki/Buddhist_cosmology)。
 对于西方思维方式的人来说，这非常容易分散注意力，也让理解和实践更加混乱。
 
-因此我决定用 LLM 来转写播客节目，并顺带解释佛教术语。
+因此我决定用 LLM 来转写播客节目，并顺带解释复杂术语。
 
 ## 用哪个模型
 
-和[翻译字幕](/subtitles/)一样，我使用 Medium Effort 的顶级模型，不管它是谁家的（Anthropic 还是 OpenAI）。
+和[翻译字幕](/subtitles/)一样，我使用 Medium Effort 的顶级模型。截至 2026 年 8 月，不管它是谁家的（Anthropic 还是 OpenAI）。
 
 ## 如何做转写
 
@@ -55,16 +55,16 @@ Michael interviews some of the most radical and original thinkers, authors, and 
 
 ## 翻译要求
 
-我不熟悉印度术语和佛教宇宙观，所以请在词语/术语旁边用括号给出简短解释。
-
-同时把这些术语都收集起来，在最后编成一个术语表。
+- 我不熟悉印度术语和佛教宇宙观，所以请在词语/术语旁边用括号给出简短解释。
+- 同时把这些术语都收集起来，在最后编成一个术语表。
+- 去掉广告。
 
 ## 补充
 
 如果你有不明白的地方，或者面临选择，就来问我。
 ```
 
-即使不在提示词里写明，Claude 默认也会选择 Whisper 来做转写。
+对于转写，即使不在提示词里写明，LLM 默认也会选择 Whisper。但对于比较简单的模型，为保险起见最好明确指定模型。
 
 把 mp3 文件放进我们要运行智能体（Claude Code、Codex、opencode，都无所谓）的目录，然后请它：`处理一下 Deconstructing Yourself-112-A Conversation with Joe Hudson.mp3`。
 

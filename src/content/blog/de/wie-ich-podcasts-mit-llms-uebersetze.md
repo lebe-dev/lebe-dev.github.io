@@ -13,11 +13,11 @@ Angefangen hat alles damit, dass ich mich mit Achtsamkeit, Buddhismus, Meditatio
 Achtsamkeit und Meditation verweisen ständig auf hinduistische Begriffe und auf die riesige [buddhistische Kosmologie](https://en.wikipedia.org/wiki/Buddhist_cosmology).
 Für einen Menschen mit westlichem Denken lenkt das stark ab und macht Verständnis und Praxis noch verworrener.
 
-Deshalb habe ich beschlossen, ein LLM für die Transkription der Podcast-Folgen zu nutzen und dabei gleich die buddhistischen Begriffe erklären zu lassen.
+Deshalb habe ich beschlossen, ein LLM für die Transkription der Podcast-Folgen zu nutzen und dabei gleich die komplexen Begriffe erklären zu lassen.
 
 ## Welches Modell
 
-Wie bei der [Übersetzung von Untertiteln](/subtitles/) nutze ich ein Spitzenmodell mit Medium Effort, egal von wem das Modell stammt (Anthropic oder OpenAI).
+Wie bei der [Übersetzung von Untertiteln](/subtitles/) nutze ich ein Spitzenmodell mit Medium Effort. Im August 2026 spielt es keine Rolle, von wem das Modell stammt (von Anthropic oder OpenAI).
 
 ## Wie man die Transkription macht
 
@@ -55,16 +55,16 @@ Michael interviews some of the most radical and original thinkers, authors, and 
 
 ## Besonderheiten der Übersetzung
 
-Ich beherrsche weder die indischen Begriffe noch die Kosmologie des Buddhismus, also füge neben dem Wort/Begriff in Klammern eine kurze Erklärung ein.
-
-Sammle außerdem all diese Begriffe und erstelle am Ende ein Glossar.
+- Ich beherrsche weder die indischen Begriffe noch die Kosmologie des Buddhismus, also füge neben dem Wort/Begriff in Klammern eine kurze Erklärung ein.
+- Sammle außerdem all diese Begriffe und erstelle am Ende ein Glossar.
+- Entferne Werbung.
 
 ## Zusätzlich
 
 Wenn dir etwas unklar ist oder du vor einer Wahl stehst — frag mich.
 ```
 
-Claude wählt für die Transkription standardmäßig Whisper, auch wenn man es im Prompt nicht erwähnt.
+Für die Transkription wählt das LLM standardmäßig Whisper, auch wenn man es im Prompt nicht erwähnt. Bei einfacheren Modellen sollte man das Modell aber sicherheitshalber explizit angeben.
 
 Wir legen die mp3-Datei in das Verzeichnis, in dem wir den Agenten starten (Claude Code, Codex, opencode — egal), und bitten: `nimm dir Deconstructing Yourself-112-A Conversation with Joe Hudson.mp3 vor`.
 

@@ -13,11 +13,11 @@ Todo empezó cuando, estudiando el tema de la atención plena, el budismo, la me
 El tema de la atención plena y la meditación remite constantemente a términos hindúes y a la gigantesca [cosmología budista](https://en.wikipedia.org/wiki/Buddhist_cosmology).
 Para una persona con mentalidad occidental eso distrae mucho y complica aún más la comprensión y la práctica.
 
-Por eso decidí usar un LLM para transcribir los episodios del podcast y, de paso, descifrar los términos budistas.
+Por eso decidí usar un LLM para transcribir los episodios del podcast y, de paso, descifrar los términos complejos.
 
 ## Qué modelo
 
-Igual que para la [traducción de subtítulos](/subtitles/), uso un modelo de primer nivel con Medium Effort, sin importar de quién sea el modelo (Anthropic u OpenAI).
+Igual que para la [traducción de subtítulos](/subtitles/), uso un modelo de primer nivel con Medium Effort. En agosto de 2026, no importa de quién sea el modelo (de Anthropic o de OpenAI).
 
 ## Cómo hacer la transcripción
 
@@ -55,16 +55,16 @@ Michael interviews some of the most radical and original thinkers, authors, and 
 
 ## Particularidades de la traducción
 
-No domino los términos indios ni la cosmología del budismo, así que añade una breve explicación entre paréntesis junto a la palabra/término.
-
-Además, recopila todos esos términos y al final elabora un Glosario.
+- No domino los términos indios ni la cosmología del budismo, así que añade una breve explicación entre paréntesis junto a la palabra/término.
+- Además, recopila todos esos términos y al final elabora un Glosario.
+- Elimina la publicidad.
 
 ## Adicionalmente
 
 Si algo no te queda claro o tienes que elegir, pregúntame.
 ```
 
-Claude elegirá Whisper para la transcripción por defecto, aunque no lo indiques en el prompt.
+Para la transcripción, el LLM elegirá Whisper por defecto, aunque no lo indiques en el prompt. Pero con modelos más sencillos, por si acaso conviene indicar el modelo explícitamente.
 
 Ponemos el archivo mp3 en el directorio donde vamos a ejecutar el agente (Claude Code, Codex, opencode, da igual) y le pedimos: `ponte con Deconstructing Yourself-112-A Conversation with Joe Hudson.mp3`.
 

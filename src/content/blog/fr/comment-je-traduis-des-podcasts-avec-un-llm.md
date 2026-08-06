@@ -13,11 +13,11 @@ Tout a commencé alors que j'explorais la pleine conscience, le bouddhisme, la m
 Le thème de la pleine conscience et de la méditation renvoie souvent à des termes hindous et à l'immense [cosmologie bouddhique](https://en.wikipedia.org/wiki/Buddhist_cosmology).
 Pour une personne de culture occidentale, cela distrait beaucoup et embrouille encore davantage la compréhension et la pratique.
 
-J'ai donc décidé d'utiliser un LLM pour transcrire les épisodes du podcast et, au passage, décrypter les termes bouddhiques.
+J'ai donc décidé d'utiliser un LLM pour transcrire les épisodes du podcast et, au passage, décrypter les termes complexes.
 
 ## Quel modèle
 
-Comme pour la [traduction de sous-titres](/subtitles/), j'utilise un modèle de premier plan en Medium Effort, peu importe à qui il appartient (Anthropic ou OpenAI).
+Comme pour la [traduction de sous-titres](/subtitles/), j'utilise un modèle de premier plan en Medium Effort. En août 2026, peu importe à qui il appartient (Anthropic ou OpenAI).
 
 ## Comment faire la transcription
 
@@ -55,16 +55,16 @@ Michael interviews some of the most radical and original thinkers, authors, and 
 
 ## Particularités de la traduction
 
-Je ne maîtrise ni les termes indiens ni la cosmologie du bouddhisme, donc ajoute une brève explication entre parenthèses à côté du mot/terme.
-
-Rassemble aussi tous ces termes et établis un Glossaire à la fin.
+- Je ne maîtrise ni les termes indiens ni la cosmologie du bouddhisme, donc ajoute une brève explication entre parenthèses à côté du mot/terme.
+- Rassemble aussi tous ces termes et établis un Glossaire à la fin.
+- Supprime les publicités.
 
 ## En complément
 
 Si quelque chose n'est pas clair pour toi ou si tu dois faire un choix, demande-moi.
 ```
 
-Claude choisira Whisper pour la transcription par défaut, même si ce n'est pas précisé dans le prompt.
+Pour la transcription, le LLM choisira Whisper par défaut, même si ce n'est pas précisé dans le prompt. Mais pour des modèles plus simples, mieux vaut préciser le modèle explicitement, par sécurité.
 
 On place le fichier mp3 dans le répertoire où l'on va lancer l'agent (Claude Code, Codex, opencode, peu importe) et on lui demande : `occupe-toi de Deconstructing Yourself-112-A Conversation with Joe Hudson.mp3`.
 
