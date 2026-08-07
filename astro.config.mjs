@@ -4,8 +4,18 @@ import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
 
 import svelte from '@astrojs/svelte';
+import { rehypePromptBlocks } from './src/lib/rehypePromptBlocks.ts';
 
 export default defineConfig({
+  markdown: {
+    shikiConfig: {
+      // `prompt` isn't a real grammar — alias it to plaintext so Shiki
+      // doesn't fall back and overwrite `data-language` before our
+      // rehype plugin can see the original fence language.
+      langAlias: { prompt: 'plaintext' },
+    },
+    rehypePlugins: [rehypePromptBlocks],
+  },
   server: { port: 4200, host: true },
   vite: {
     plugins: [tailwindcss()],

@@ -483,4 +483,44 @@ const formattedChars = typeof chars === 'number' ? chars.toLocaleString(lang) : 
       heading.appendChild(anchor);
     });
   })();
+
+  (() => {
+    document.querySelectorAll('[data-copy-prompt]').forEach((btn) => {
+      const block = btn.closest('.prompt-block');
+      const code = block?.querySelector('pre code');
+      if (!code) return;
+
+      const copyLabel = btn.dataset.labelCopy || btn.title;
+      const copiedLabel = btn.dataset.labelCopied || 'Copied!';
+      let resetTimer;
+
+      btn.addEventListener('click', async () => {
+        const text = code.textContent ?? '';
+        try {
+          await navigator.clipboard.writeText(text);
+        } catch {
+          const ta = document.createElement('textarea');
+          ta.value = text;
+          ta.style.position = 'fixed';
+          ta.style.opacity = '0';
+          document.body.appendChild(ta);
+          ta.select();
+          try {
+            document.execCommand('copy');
+          } finally {
+            document.body.removeChild(ta);
+          }
+        }
+        btn.classList.add('is-copied');
+        btn.title = copiedLabel;
+        btn.setAttribute('aria-label', copiedLabel);
+        clearTimeout(resetTimer);
+        resetTimer = setTimeout(() => {
+          btn.classList.remove('is-copied');
+          btn.title = copyLabel;
+          btn.setAttribute('aria-label', copyLabel);
+        }, 2000);
+      });
+    });
+  })();
 </script>

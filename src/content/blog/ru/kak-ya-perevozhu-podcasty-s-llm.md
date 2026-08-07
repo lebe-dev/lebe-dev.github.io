@@ -28,7 +28,7 @@ translationKey: translate-podcasts-with-llm
 
 Модельке лучше дать точный промпт, иначе она переведёт усреднённым способом. Поэтому я составил такой `CLAUDE.md`:
 
-```markdown
+```prompt
 # CLAUDE.md
 
 В этом каталоге мы делаем транскрибацию подкаста Deconstructing Yourself и переводы на русский язык.

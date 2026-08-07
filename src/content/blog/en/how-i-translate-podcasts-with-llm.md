@@ -29,7 +29,7 @@ Next you need a Speech to Text model. At the time of writing, one of the best mo
 
 It is better to give the model a precise prompt, otherwise it will translate in an averaged-out way. So I put together this `CLAUDE.md`:
 
-```markdown
+```prompt
 # CLAUDE.md
 
 In this directory we transcribe the Deconstructing Yourself podcast and translate it into Russian.

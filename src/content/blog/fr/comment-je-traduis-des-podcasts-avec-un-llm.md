@@ -29,7 +29,7 @@ Ensuite il faut un modèle de type Speech to Text. Au moment où j'écris ces li
 
 Mieux vaut donner au modèle un prompt précis, sinon il traduira de façon moyennée. J'ai donc rédigé ce `CLAUDE.md` :
 
-```markdown
+```prompt
 # CLAUDE.md
 
 Dans ce répertoire, nous transcrivons le podcast Deconstructing Yourself et le traduisons en russe.

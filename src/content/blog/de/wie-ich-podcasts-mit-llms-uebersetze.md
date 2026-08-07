@@ -29,7 +29,7 @@ Danach braucht man ein Modell der Klasse Speech to Text. Zum Zeitpunkt dieses Te
 
 Dem Modell gibt man besser einen präzisen Prompt, sonst übersetzt es auf durchschnittliche Weise. Deshalb habe ich diese `CLAUDE.md` verfasst:
 
-```markdown
+```prompt
 # CLAUDE.md
 
 In diesem Verzeichnis transkribieren wir den Podcast Deconstructing Yourself und übersetzen ihn ins Russische.

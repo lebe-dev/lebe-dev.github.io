@@ -29,7 +29,7 @@ Después hace falta un modelo de la clase Speech to Text. En el momento de escri
 
 Es mejor darle al modelo un prompt preciso, si no, traducirá de forma promediada. Por eso preparé este `CLAUDE.md`:
 
-```markdown
+```prompt
 # CLAUDE.md
 
 En este directorio hacemos la transcripción del podcast Deconstructing Yourself y las traducciones al ruso.

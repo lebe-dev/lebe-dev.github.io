@@ -29,7 +29,7 @@ aiUsageDisclaimer: true
 
 モデルには正確なプロンプトを与えたほうがよく、そうしないと平均的なやり方で翻訳してしまいます。そこで私はこのような `CLAUDE.md` を用意しました。
 
-```markdown
+```prompt
 # CLAUDE.md
 
 このディレクトリでは、ポッドキャスト Deconstructing Yourself の文字起こしとロシア語への翻訳を行います。

@@ -29,7 +29,7 @@ aiUsageDisclaimer: true
 
 最好给模型一个精确的提示词，否则它会用一种平均化的方式来翻译。于是我写了这样一份 `CLAUDE.md`：
 
-```markdown
+```prompt
 # CLAUDE.md
 
 在这个目录里我们对播客 Deconstructing Yourself 做转写并翻译成俄语。
