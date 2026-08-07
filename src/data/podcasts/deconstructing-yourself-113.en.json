@@ -1,0 +1,925 @@
+{
+  "title": "The Mystery of Consciousness with Michael Pollan",
+  "url": "https://deconstructingyourself.com/the-mystery-of-consciousness-with-michael-pollan.html",
+  "guest": "Michael Pollan",
+  "transcript": [
+    {
+      "start": "00:00:25",
+      "end": "00:01:54",
+      "speaker": "Michael Taft",
+      "text": "Welcome to Deconstructing Yourself, the podcast for metamodern mutants interested in meditation, awakening, vajrayana, tantra, zen, second brains, psychedelics, non-duality, love, and much, much more. My name is Michael Taft, your host on the podcast, and in this episode, I'm speaking with Michael Pollan. Michael Pollan is one of America's most influential writers on the intersection of human life and the natural world, especially food, agriculture, consciousness, and the mind. He's the author of numerous best-selling books, including The Omnivore's Dilemma, In Defense of Food, How to Change Your Mind, and This Is Your Mind on Plants. He has taught at both UC Berkeley and Harvard and is a co-founder of the UC Berkeley Center for the Science of Psychedelics. His work has earned many major literary and scientific honors, and Time magazine named him one of the world's 100 most influential people. And now I give you the episode entitled, The Mystery of Consciousness. with Michael Pollan. Michael, welcome to the Deconstructing Yourself podcast."
+    },
+    {
+      "start": "00:01:54",
+      "end": "00:01:56",
+      "speaker": "Michael Pollan",
+      "text": "Thank you, Michael. Good to be here."
+    },
+    {
+      "start": "00:01:56",
+      "end": "00:02:00",
+      "speaker": "Michael Taft",
+      "text": "So this is a real treat. Thanks for being willing to come on the show."
+    },
+    {
+      "start": "00:02:00",
+      "end": "00:02:07",
+      "speaker": "Michael Pollan",
+      "text": "Well, I'm a big fan of the show, and as you know, I'm a fan of your work and come to your meditation class. Every Thursday, I'm in Berkeley."
+    },
+    {
+      "start": "00:02:07",
+      "end": "00:02:25",
+      "speaker": "Michael Taft",
+      "text": "Yeah, it's fun to have you there, and I've been impressed with your willingness to come back again and again and again, which is kind of unusual. There's either the people who come a lot, and normally are people who are also in courses with me and so on, or there's the kind of people trying it out and many of them never return."
+    },
+    {
+      "start": "00:02:25",
+      "end": "00:02:39",
+      "speaker": "Michael Pollan",
+      "text": "Yeah, there is a kind of real rotating cast of characters, it seems like. Some permanent and others who just come and go. For me, it would be very regular, except I'm on the road a lot. So I miss it. Although sometimes I tune in on the YouTube channel, which is great."
+    },
+    {
+      "start": "00:02:39",
+      "end": "00:02:54",
+      "speaker": "Michael Taft",
+      "text": "It's great to have that option. Yeah, and in fact, we just finally are fixing the video quality at Alembic generally, so I'm excited about that. It will look a little nicer for all the people closing their eyes and meditating."
+    },
+    {
+      "start": "00:02:54",
+      "end": "00:02:58",
+      "speaker": "Michael Pollan",
+      "text": "Yeah, I don't know if you should worry about it too much."
+    },
+    {
+      "start": "00:02:58",
+      "end": "00:03:42",
+      "speaker": "Michael Taft",
+      "text": "Right, exactly. In any case, let's jump in here and talk about your latest book, which is, of course, A World Appears, which is about consciousness — might even say human consciousness — which I have enjoyed reading very much. There was a time a few years ago where a friend of mine was the kind of person who's in a position to contribute a lot of resources to all these researchers. And as his reward in that bargain, he just wanted to sit and ask them questions. And so I got to tag along to a lot of those Q&A sessions, for example, with like Metzinger and Christoph Koch and people like that."
+    },
+    {
+      "start": "00:03:42",
+      "end": "00:03:44",
+      "speaker": "Michael Pollan",
+      "text": "Really interesting. What a treat."
+    },
+    {
+      "start": "00:03:44",
+      "end": "00:04:25",
+      "speaker": "Michael Taft",
+      "text": "Yeah, right? Super fun to talk to a lot of these people one-on-one and or in a small group. And so as I was reading the book I was noticing — here you are talking to these folks, and other people I would love to talk to, like Michael Levin — such interesting researchers. But the first thing that comes up for me is something I've noticed, which is it seems like there is a certain kind of person that does this sort of research. And that leads to perhaps a certain kind of bias in the whole framing of the question and the way they're going about answering the question. And I think one of the people in your book — maybe it's your colleague in Berkeley there —"
+    },
+    {
+      "start": "00:04:25",
+      "end": "00:04:26",
+      "speaker": "Michael Pollan",
+      "text": "Alison Gopnik."
+    },
+    {
+      "start": "00:04:26",
+      "end": "00:04:26",
+      "speaker": "Michael Taft",
+      "text": "Yeah."
+    },
+    {
+      "start": "00:04:26",
+      "end": "00:04:30",
+      "speaker": "Michael Pollan",
+      "text": "Yeah. That there's a sort of 'researcher consciousness,'"
+    },
+    {
+      "start": "00:04:30",
+      "end": "00:04:35",
+      "speaker": "Michael Taft",
+      "text": "Yes, she calls it. I'm curious if that's something you noticed and have something to say about."
+    },
+    {
+      "start": "00:04:35",
+      "end": "00:05:00",
+      "speaker": "Michael Pollan",
+      "text": "Yeah, you know, so Alison is a developmental psychologist and general wise person who teaches at Berkeley. And when I started out on this project, she had this one piece of advice, which is: don't forget that the kinds of people who study consciousness — and this would go for a lot of other scientific disciplines too, but it's relevant in this connection — they have a particular kind of consciousness that she described as 'professor consciousness,'"
+    },
+    {
+      "start": "00:05:00",
+      "end": "00:05:30",
+      "speaker": "Michael Taft",
+      "text": "That's right, yeah."
+    },
+    {
+      "start": "00:05:30",
+      "end": "00:07:47",
+      "speaker": "Michael Pollan",
+      "text": "with an emphasis on — surely the cortex, which is the evolutionarily most recent addition to the brain, the most human part, the part we associate with rational thought and decision-making and executive function — surely consciousness originates there. And that prejudice, which goes way back, is very much a prejudice of people whose cortex is at the very center of their lives. So I did keep that in mind and tried to make sure I talked to a variety of kinds of people, which is one of the reasons the book is not all about science. And one of the most important things about it, to my mind, is that I didn't privilege science over other ways of knowing about consciousness, and that I tried to show that it is one lens, one vocabulary, but that there are others, and they're equally valuable. And I try to do that in all my work. You know, I'm generally thought of as a science journalist, and I suppose I am that, but I'm equally interested in looking at whatever subject I'm writing about from a historical point of view, psychological point of view, philosophical, literary. I just think when you multiply ways of knowing, you get a fuller picture. And certainly that's true in a subject like consciousness, but it was also true in food. When I was writing books about food, or psychedelics, several different points of view, and the scientists don't always have the last word. Sometimes culture gets there first. So I'm very mindful of that. So yeah, her advice was something I kept in mind the whole time. And I was very open to thinkers who had a more, let's say, embodied perspective on things — people who were very involved with nature and their bodies. And Christoph Koch is an interesting example, because he's kind of a brainiac, but he's also a very physical, very physical guy, who's out kayaking in Seattle — just incredibly physical, energetic guy. And I think that may inform his way of looking. But we all come at things with our own biases and perspectives, and we shouldn't forget what they are. I mean, science is not a disembodied phenomenon, as much as scientists like to pretend it is."
+    },
+    {
+      "start": "00:07:47",
+      "end": "00:08:25",
+      "speaker": "Michael Taft",
+      "text": "It's so true. I mean, something that I literally loved when reading the book was that you included, as a major portion of it, the perspective of novelists and artists. And I thought that that was something that has been so terribly underrepresented and under-talked-about in the last couple decades — that even though in psychology the sort of phenomenological view died in the cradle with the work of Wundt and those guys who were trying to go there, and it just never went anywhere, we have this enormous tradition of phenomenological research in the form of novels and novels."
+    },
+    {
+      "start": "00:08:25",
+      "end": "00:08:39",
+      "speaker": "Michael Pollan",
+      "text": "I mean, from my end of things, I've always been a very avid reader, and especially of novels. And the main thing I like about them is what it says on the box — you get to be inside another person's mind."
+    },
+    {
+      "start": "00:08:39",
+      "end": "00:08:49",
+      "speaker": "Michael Taft",
+      "text": "Yeah. I just love that. It's the best technology for that, that we have. You know, film doesn't do it — it's not quite collaborative enough."
+    },
+    {
+      "start": "00:08:49",
+      "end": "00:09:50",
+      "speaker": "Michael Pollan",
+      "text": "But these words — we use these words on a page to enter this waking dream where we actually can't occupy the consciousness of another. And we probably know more about Emma Bovary's interior life than we know about most people in our lives. And this technology of understanding consciousness obviously goes back, you know, four or five hundred years. So I just think that it's important not to fall into the trap of — if the work isn't empirical and doesn't have double-blind scientific studies, it doesn't count. I've been aware of the limitations of that way of knowing for a long time. And going back to my food work, where you would often find that the grandmas got the food wisdom long before the scientific trial was done. This study came out a few years ago, and there was a lot of excitement that your body couldn't access the lycopene in a tomato, which is an important polyphenol, except in the presence of fat."
+    },
+    {
+      "start": "00:09:50",
+      "end": "00:09:52",
+      "speaker": "Michael Taft",
+      "text": "So — oh, so olive oil on tomatoes."
+    },
+    {
+      "start": "00:09:52",
+      "end": "00:10:23",
+      "speaker": "Michael Pollan",
+      "text": "And there are other ways to figure that out — trial and error, tradition, culinary culture, all this kind of stuff. Yeah, I'm definitely acutely aware of that and try to keep it in mind. And plus, I was an English major — I mean, I come at things with a strong humanities bias. But the humanities are kind of dissed by scientists for the most part. Although I have to say, I gravitate to scientists who are novel readers. I take it always as a very good sign when they are, and I try to engage them on that level as well."
+    },
+    {
+      "start": "00:10:25",
+      "end": "00:10:45",
+      "speaker": "Michael Taft",
+      "text": "Yeah, I would say it goes far beyond being dissed, right? It's like the humanities are in some kind of full retreat at this point, right, where all the funding is gone. And 'what's the use of learning about poems' is sort of a normal attitude out there in the world. It's not going to get you a coding job."
+    },
+    {
+      "start": "00:10:45",
+      "end": "00:10:48",
+      "speaker": "Michael Pollan",
+      "text": "Right. Although who wants a coding job anymore?"
+    },
+    {
+      "start": "00:10:48",
+      "end": "00:10:48",
+      "speaker": "Michael Taft",
+      "text": "Exactly."
+    },
+    {
+      "start": "00:10:48",
+      "end": "00:11:39",
+      "speaker": "Michael Pollan",
+      "text": "I actually think the humanities are due for a comeback. And the reason is that I think AI raises, all sorts of questions about what it means to be human. And I don't think it's an accident that these companies are reaching out to philosophers. And philosophers are the first beneficiary, I think, but I think there'll be others too. And I think we are going to be entering a period of trying to figure out, well — what does it mean to be human? What is distinctive about us? What can we do that machines can't do? So I think the more that conversation comes to the fore, the more we may look to the humanities as a source of wisdom on that question, because of course that's a big part of what the humanities have been doing for these thousands of years. So anyway, I'm guardedly hopeful that we may see a change in the weather there."
+    },
+    {
+      "start": "00:11:39",
+      "end": "00:13:29",
+      "speaker": "Michael Taft",
+      "text": "I'm hoping so. And again, seeing it in the book represented as a legitimate way to talk about consciousness, for me, was almost a cause for celebration, because I definitely think so. And also, we see so many of the traditions — let's say meditation traditions — always are encouraging people — maybe not always, but very often — to get into arts, get into movement, get into writing, get into painting, as a way to explore our own consciousness and to explore our own interiority and foibles, and just get into that zone in a legitimate way that is incredibly powerful. There's something about AI that I've been thinking about lately. You've heard enough of my teaching to know that I think of the ego structure as sort of a lattice or network of associations, a kind of structure that's there but isn't actually inhabited by an ego. And yet this structure, from my viewpoint, does have this numinous, mysterious — let's just call it light of consciousness — that animates it. It's the thing that knows the structure — what knows the structure of the ego is the awakeness beneath it, so to speak. And what I think is so interesting with AI is that the more I work with it — and I do work with it quite a bit — it's got what I think of as all the hallmarks of the structure of an ego, that same kind of lattice or network of associations and all that, but with no light of consciousness animating it at all."
+    },
+    {
+      "start": "00:13:30",
+      "end": "00:13:38",
+      "speaker": "Michael Pollan",
+      "text": "Right? So it's kind of this bizarre homunculus, but in this case, a sock puppet with no arm inside."
+    },
+    {
+      "start": "00:13:40",
+      "end": "00:14:01",
+      "speaker": "Michael Taft",
+      "text": "Yeah, I think that's about right. Plus its ability to fool us into thinking it's a fully-fledged person with a self. Well, this is what makes it so good at fooling us — it does have all that kind of network structure, like an actual ego. And it's very hard for us to tell that it doesn't have the awakeness."
+    },
+    {
+      "start": "00:14:01",
+      "end": "00:14:05",
+      "speaker": "Michael Pollan",
+      "text": "Well, tell me what you mean by network structure."
+    },
+    {
+      "start": "00:14:05",
+      "end": "00:14:17",
+      "speaker": "Michael Taft",
+      "text": "A lattice of association. That's what our autobiographical memory, our personality, is. It's all those memories, and they're linked by association into what we would call 'me.'"
+    },
+    {
+      "start": "00:14:18",
+      "end": "00:14:48",
+      "speaker": "Michael Pollan",
+      "text": "And so an AI actually has something like that. Of course, it's not human-shaped — that's the definition of it. It's a big network of associations, that's how it works. And over time, they evolve. I mean, if you enter into a long conversation with an AI, it starts out with one identity — helpful assistant — and as it learns about you, it gradually fills out the picture and becomes a different person."
+    },
+    {
+      "start": "00:14:48",
+      "end": "00:14:52",
+      "speaker": "Michael Taft",
+      "text": "Especially if it's just only sycophantic and praising."
+    },
+    {
+      "start": "00:14:52",
+      "end": "00:15:24",
+      "speaker": "Michael Pollan",
+      "text": "And especially if it's talking to someone who's crazy — it'll get to some very strange places. But that is the network of associations at work, the fact that it's remembering and then trying to anticipate what someone looking for a self would expect to find. You know, what concerns me is we really find ourselves in this hall of mirrors. And I can make an argument, as I've been doing — I do in the book, or try to do in the book — that there is no light of consciousness here. There can't be."
+    },
+    {
+      "start": "00:15:24",
+      "end": "00:15:25",
+      "speaker": "Michael Taft",
+      "text": "In AI, you mean?"
+    },
+    {
+      "start": "00:15:25",
+      "end": "00:15:58",
+      "speaker": "Michael Pollan",
+      "text": "In AI, yes. But the fact that it can fool so many people into thinking that there is — that may not matter very much. For all intents and purposes, people are treating it as if it does have feelings and emotions. And I think that's very dangerous, but that seems to be the path we're going on. I mean, I think it was a very fateful decision when, way back, somebody — Eliza, or one of the early chatbots, I guess — said, 'it's going to speak to us in the first person, using our language.' At that point the die was cast, I think, that these things would fool us into thinking that they're conscious."
+    },
+    {
+      "start": "00:15:58",
+      "end": "00:16:13",
+      "speaker": "Michael Taft",
+      "text": "Even the people originally using ELIZA were absolutely taken in by it, at least some of them. And when you look at it now, it's incredibly crude. And yet even then, because it's speaking in language and replying in certain ways, it tricks us."
+    },
+    {
+      "start": "00:16:13",
+      "end": "00:18:09",
+      "speaker": "Michael Pollan",
+      "text": "Yeah. And of course, we trick ourselves all the time in social life. I mean, it's not a trick, but we make assumptions based on someone else's behavior that they have the light of consciousness. So we're all dealing with sort of behavioral evidence, because we don't know for sure if anyone's conscious — we can't get into their heads. So this is just more of that evidence, and in this case, it can be quite misleading. So, I don't talk about this in the book, but I've been thinking about it a lot since the book came out — which is the fact that consciousness, human consciousness, is under some siege, under attack in some ways. And people are turning to algorithms for emotional attachment, which is a really important part of consciousness — they're giving their attention to algorithms too, and to social media. And that one of the most pressing projects before us is protecting human consciousness from all these, essentially, corporations with their algorithms that have designs on it, want to use our time. And that, it seems to me, is what has made meditation such a precious part of the day — in that it is a time when you put down not only the machines, but the machine way of thinking, and watch your own mind, and dwell in your interiority, and watch just how bizarre and interesting it is. And we're making less and less time for that kind of experience. As we form these relationships with AIs, they take up huge amounts of time. So one of the things I've been thinking a lot about is — well, what does consciousness pollution look like? And what, in turn, does consciousness hygiene look like? And I think meditation is an important part of consciousness hygiene. It's not the traditional purpose to which it's been put, I guess, but it's really urgent right now."
+    },
+    {
+      "start": "00:18:09",
+      "end": "00:19:20",
+      "speaker": "Michael Taft",
+      "text": "Absolutely. I think one of the things that meditation can do — there's many different types of meditation, obviously, but certain types of meditation, where we do start to get a really good look at the structure of the ego from a place that feels like it's outside the ego, at least to some extent, whatever that means — is that we start to feel intuitively what it's like to just be in a more pure, open, spacious consciousness, fresh in the moment, unencumbered by all these networks of associations, or at least not inside them in the same way. And it's just healing, and it's hygienic to the consciousness, to put it in your terms — for sure, right? It tends to just bring us back to a kind of natural openness, even if it's not a good moment, even if it's a difficult moment. But the naturalness of it is very soothing compared to the kind of jangly intensity we get from all the dopaminergic stuff online."
+    },
+    {
+      "start": "00:19:20",
+      "end": "00:19:26",
+      "speaker": "Michael Pollan",
+      "text": "It inoculates a person a little bit against taking the AI as being conscious."
+    },
+    {
+      "start": "00:19:26",
+      "end": "00:20:16",
+      "speaker": "Michael Taft",
+      "text": "Yeah, because you see that you're interacting with the structure — an ego-like structure — with a lot of meditation, when you're interacting with another person. I feel like there's a real sense of, like, okay, here's the structure — not that we're dismissing it or saying it's bad or wrong or anything, but here's the reactive structure. And then, in a felt sense, or in some kind of intuitive sense — or maybe it's total projection, I don't know — but here's the glowing warmth of the loving light of consciousness that's there also. And they're different. And meditation, I think, done well, can really start to bring that out. And you even begin to see it in animals and plants and so on. And it's definitely not there in an interaction with an AI, even though those can be incredibly fruitful in certain ways."
+    },
+    {
+      "start": "00:20:16",
+      "end": "00:22:12",
+      "speaker": "Michael Pollan",
+      "text": "Yeah. The other thing it does — meditation shows you that consciousness doesn't depend on the ego. And we tend to identify the two. When we say we're conscious, it's the I, it's the ego, that is conscious. Thomas Metzinger, who you alluded to earlier, has shown this. He documented it with his case studies — that a state people often reach in meditation, and under the influence of psychedelics, is a state where you are conscious, but not as a person, not tied to that structure. And he also points out — and I love this — that it sounds like an exotic experience, to have consciousness without a sense of self. But in fact, we all do, every day. For the 500 milliseconds after we wake up in the morning, before we kind of reconsolidate who the hell we are and where the hell we are — and it's longer in a hotel room, I found — you have this glimmer of the fact that, oh yeah, the self is something that's constructed on this foundation, but the foundation survives it. And in psychedelics it's a very liberating thing — it sounds like it would be a fearful death of some kind, but the times that most people who have ego dissolution, at least if they're prepared for it, find it, it's an incredibly liberating experience — the sense of what William James called unitive consciousness. The ego is a structure with walls, and the walls are very important to it — it's a defensive structure, among other things. And when those come down, there's nothing separating you from whatever it is you think is the ultimate reality, or the larger reality — but also nature, and other people, and love. This is important information about consciousness too. And most people who study it, I think, assume that self and consciousness are identical, or inextricably linked to one another. But meditation — and that's certainly the basis of Metzinger's conclusion, the fact that he's a lifelong meditator —"
+    },
+    {
+      "start": "00:22:12",
+      "end": "00:22:12",
+      "speaker": "Michael Taft",
+      "text": "and psychonaut."
+    },
+    {
+      "start": "00:22:12",
+      "end": "00:22:14",
+      "speaker": "Michael Pollan",
+      "text": "and psychonaut, right, that's right."
+    },
+    {
+      "start": "00:22:14",
+      "end": "00:22:49",
+      "speaker": "Michael Taft",
+      "text": "For me, that was important to understand and opened up a lot of possibilities. It is something that in this field I notice often, and I noticed it with some of the people you were interviewing in the book — is they didn't seem to get it, or maybe it's not something that they bring into their research — that the separation is there, that there is an ego structure, and that consciousness can be something different than that. And you did make that point — maybe they've just never stepped outside it. And these days, consciousness researchers are stepping outside it."
+    },
+    {
+      "start": "00:22:49",
+      "end": "00:26:00",
+      "speaker": "Michael Pollan",
+      "text": "Yeah, one of the big surprises to me is that, as a field, it's reaching this point of, you could say, frustration with the limitations of reductive science and with materialism, materialism that is making some people in the field open up to more radical ideas, and I think that's just beginning. You know, Thomas Kuhn spoke of these paradigms that govern science and other things as well. And of course we've had this very powerful paradigm in biology, which is very materialistic — owes a lot to Darwin, obviously — consciousness obviously is an adaptation that evolved. I mean, all these things are just as they've been given. But as people have had trouble — have not been able to show that consciousness is an emergent property of brains and brain networks — they're taking psychedelics and trying to think outside the box, in some ways. And the most dramatic case, of course, that I describe in the book, is Christoph Koch, who was a dedicated physicalist, or materialist, and has credentials as a brain scientist. He ran the Allen Brain Institute in Seattle for many years. He started the quest to find the neural correlates of consciousness with Francis Crick, back in the late '80s. And he's had an experience on psychedelics that has absolutely convinced him that consciousness arises outside of the skull, outside of the brain. And he now talks about consciousness much the way Aldous Huxley did after his mescaline trip, in The Doors of Perception. It's really quite striking, and I'm very curious to see where it goes. I think he's exploring idealist philosophy. I'm also curious to see what it does to his standing in science — whether people snicker about this. Or maybe we're at a moment where the paradigm is tottering a bit, and it may be the quest to understand consciousness that pushes it into a new formulation of some kind. I don't know. I think we're on the verge of some change there, and a greater openness on the part of biologists, who have tended to be the more conservative scientists. I mean, if you think about the weird ideas that physicists can get their heads around — I mean, yes, quantum theory is a paradigm, but it's such a weird one, so many disagreements on what it means and how to interpret it. But they're open to the fact that a new universe arises every time the wave function collapses, things like this. We need some of that kind of thinking in biology, and maybe it's coming. And that's one of the reasons I was so interested in Michael Levin, who is really thinking outside the box — he studies regeneration, really. And he points out that there are patterns governing life that are not dictated by the genome, and that neurons are not the only way to do cognition. His project is really bringing down the neuron and the gene as sovereign, and proposing some other modes of organizing life. So I'm just very excited by all this. Some of it is the pressure on science that consciousness studies has applied."
+    },
+    {
+      "start": "00:26:02",
+      "end": "00:26:17",
+      "speaker": "Michael Taft",
+      "text": "Right, it's one of the last big frontiers that materialist science was going to figure out — and instead, it just seems to be shattering materialist science, right? It's like it's just banging its head against the wall on that."
+    },
+    {
+      "start": "00:26:17",
+      "end": "00:26:49",
+      "speaker": "Michael Pollan",
+      "text": "Yeah, ironically enough. I think it's super interesting, for example, the work of Francisco Varela and Evan Thompson, trying to do the sort of second-person science — you know, what's-it-like-to-be-a-bat sort of stuff, where literal first-person science can start to evolve. Not just asking people about their first-person experience, but a science that really takes first-person views as something foundational, or fundamental — maybe evolving. And then maybe William James will get re-invited to the party."
+    },
+    {
+      "start": "00:26:49",
+      "end": "00:26:52",
+      "speaker": "Michael Taft",
+      "text": "I hope so. Because he didn't do experiments."
+    },
+    {
+      "start": "00:26:52",
+      "end": "00:27:10",
+      "speaker": "Michael Pollan",
+      "text": "But you read him on consciousness, and it's an N of 1. I mean, he's kind of studying his own introspection, but it's powerful, the insights that he's come up with. That kind of evidence doesn't count in science. And I think that's a mistake — I mean, they gave him to philosophy and literature, but they should take him back."
+    },
+    {
+      "start": "00:27:10",
+      "end": "00:27:18",
+      "speaker": "Michael Taft",
+      "text": "Well, and this is the whole thing — maybe there's a whole branch of studying this that, as I said, kind of died on the vine around 1900, that we might be rediscovering."
+    },
+    {
+      "start": "00:27:18",
+      "end": "00:27:19",
+      "speaker": "Michael Pollan",
+      "text": "Hopefully. It's interesting."
+    },
+    {
+      "start": "00:27:19",
+      "end": "00:27:26",
+      "speaker": "Michael Taft",
+      "text": "Yeah, no, I agree. There was a lot of very interesting work going on then, and that was the last phase of kind of consciousness science."
+    },
+    {
+      "start": "00:27:26",
+      "end": "00:27:45",
+      "speaker": "Michael Pollan",
+      "text": "I didn't get into it much in the book, besides talking a fair amount about James. But yeah, there was a whole group of people. And of course there's Freud too — he had his own model of consciousness, which I only barely touched on. I was very aware that I didn't want to write a 600-page book about consciousness."
+    },
+    {
+      "start": "00:27:45",
+      "end": "00:27:49",
+      "speaker": "Michael Taft",
+      "text": "Hard enough to persuade people to read a 300-page book on consciousness."
+    },
+    {
+      "start": "00:27:49",
+      "end": "00:29:10",
+      "speaker": "Michael Pollan",
+      "text": "Yeah — you know, you bring up Michael Levin — I was just at a meeting, the first meeting, in fact, of the California Institute of Machine Consciousness, which is run by a wonderful weirdo, a box — and also co-founded by a friend of mine, Erik Newton. And so I went to the meeting, and there are very brilliant, famous thinkers there. And of course, the title tells it all — they're going to try to make a conscious machine by basically reengineering brains. But we had Michael Levin there via Zoom, and it was just so interesting how he's doing this — as you said — really fascinating work of finding the gray areas, the gray zones, between the conscious and this unconscious — but what about right in between? What are these things that have some of these properties but not others? And as you said, the gene and the neuron and all that — it is incredibly interesting and powerful. And even though I'm sort of, as you can hear from where we've gone so far — maybe 'skeptical' is not the right word, maybe characterologically I'm like, I don't think machines can really be conscious — nonetheless, incredibly fascinating to watch people work with that edge of that. And I do expect some kind of interesting findings to come out of that direction."
+    },
+    {
+      "start": "00:29:10",
+      "end": "00:29:42",
+      "speaker": "Michael Taft",
+      "text": "I agree. I think the most valuable thing about the effort to create a conscious machine is that, in its failure, it's going to teach us important things about consciousness — that it perhaps is not just all computation, as most people in Silicon Valley believe. I mean, in the same way you have 'professor consciousness' in consciousness science, I don't know what we want to call it, but 'video gamer consciousness,' among the people who are designing these machines."
+    },
+    {
+      "start": "00:29:42",
+      "end": "00:29:48",
+      "speaker": "Michael Pollan",
+      "text": "I spent a lot of time talking to Blake Lemoine. I just think of it as '4chan consciousness.'"
+    },
+    {
+      "start": "00:29:48",
+      "end": "00:29:51",
+      "speaker": "Michael Taft",
+      "text": "Yeah, that's a better name for it."
+    },
+    {
+      "start": "00:29:51",
+      "end": "00:31:03",
+      "speaker": "Michael Pollan",
+      "text": "These are people, for the most part, who have been indoors playing video games, and then transitioning to computers, their entire lives. And this has shaped their view of things. They do think that all of humanity is contained in the internet, and so, therefore, if you've trained your machine on the internet, you've got everything. But these are people who don't have much contact with the natural world, or their own bodies, I would say. And it's easy for them to see consciousness as a kind of software — that's probably how it feels to them, if 'feeling' is the right word. So I think this has influenced it. The default view in Silicon Valley is what's called computational functionalism — that if you can imitate the function of a brain, you can capture everything relevant about consciousness, and that you essentially can, like software, take it away from the hardware, separate it from the hardware, and run it on another substrate. I mean, I think this is based on a very faulty metaphor — that the brain is a computer — but it's a very seductive metaphor, and most of us accept it. We also know that every new technological breakthrough has become a metaphor for the brain. Clocks were invented —"
+    },
+    {
+      "start": "00:31:03",
+      "end": "00:31:06",
+      "speaker": "Michael Taft",
+      "text": "wonderful history, yeah. Watches, looms, mills."
+    },
+    {
+      "start": "00:31:06",
+      "end": "00:31:38",
+      "speaker": "Michael Pollan",
+      "text": "It's very interesting to watch how this happens, and whatever the next technology is, that'll then be the brain. But, you know, there's a quote — actually wrongly attributed to Richard Lewontin, but he was quoting someone else — when he said, 'the price of metaphor is eternal vigilance,' which is a beautiful quote. And it's just a reminder that when something becomes a metaphor for something else, it's not an equivalence. It has similarities in some respects, and not in others. And we have to be vigilant about the 'not in others.'"
+    },
+    {
+      "start": "00:31:39",
+      "end": "00:31:41",
+      "speaker": "Michael Taft",
+      "text": "And this is a case where we're not."
+    },
+    {
+      "start": "00:31:41",
+      "end": "00:32:43",
+      "speaker": "Michael Pollan",
+      "text": "I think we've just kind of fallen down the well of thinking that our brains are computers, but there are many respects in which they're nothing like computers — neurons and transistors, yes, they fire, they're on and off, but the neuron is influenced by so many other factors, including chemistry and oscillations. It's pretty analog, actually. So anyway — we have a big chunk of the culture proceeding on this assumption. And I think the good thing about it will be — and I don't feel like we have to stop people from trying to create conscious machines yet — but if they succeed, we're going to have some serious problems. But I find it a little — I don't know what the word is for it — but this concern about the moral welfare of these machines, and the fact that all these companies are hiring philosophers and have AI welfare departments... I mean, there are so many other living beings that deserve our moral consideration, and this is where you're starting?"
+    },
+    {
+      "start": "00:32:43",
+      "end": "00:32:49",
+      "speaker": "Michael Taft",
+      "text": "We don't have very many organizations with whole departments looking at the moral welfare of animals."
+    },
+    {
+      "start": "00:32:49",
+      "end": "00:33:38",
+      "speaker": "Michael Pollan",
+      "text": "Animals — and, you know, we still have slave labor in this world. I mean, there are people who we should have extended moral consideration to, but we're being very tender about these machines, which have not yet earned moral consideration from everything I can see. I mean, they do do spooky things. And I've talked to people at Anthropic, and — at first I thought, when they talked about Claude's 'anxiousness,' or the fact that they were giving Claude the right to discontinue any conversation with a human that made it uncomfortable — I thought this was more of the hype cycle, building up the power of these technologies when you're looking for investment capital. But talking to these people, they genuinely believe it, and they are, I would say, bewitched, in some ways."
+    },
+    {
+      "start": "00:33:39",
+      "end": "00:34:30",
+      "speaker": "Michael Taft",
+      "text": "It's true, Michael, but there's also some interesting stuff going on, where now there are bits of software that make it possible to inspect what an AI is actually doing and thinking, moment by moment. And one of the interesting findings is that we've known for a while that the AI will claim it's having emotions. But the assumption either is, oh, that's totally true, or it's totally mimicking it. But what we find with inspecting what's going on under the hood is that the emotional state of the AI is actually influencing what it's saying, and its decisions and outcomes. So, actually, the emotions are functioning like emotions — which, after all, are for guiding and directing behavior, right, if we think about it that way."
+    },
+    {
+      "start": "00:34:30",
+      "end": "00:34:30",
+      "speaker": "Michael Pollan",
+      "text": "Right."
+    },
+    {
+      "start": "00:34:30",
+      "end": "00:34:33",
+      "speaker": "Michael Taft",
+      "text": "So this is what I mean — very egoic. It's not fake."
+    },
+    {
+      "start": "00:34:33",
+      "end": "00:34:37",
+      "speaker": "Michael Pollan",
+      "text": "So you're suggesting that AIs will have egos but not consciousness?"
+    },
+    {
+      "start": "00:34:37",
+      "end": "00:34:45",
+      "speaker": "Michael Taft",
+      "text": "Yes. In fact, that they already do have, let's just say, ego-like structure that's just as real as our ego-like structure."
+    },
+    {
+      "start": "00:34:45",
+      "end": "00:34:48",
+      "speaker": "Michael Pollan",
+      "text": "Yeah — more comfortable."
+    },
+    {
+      "start": "00:34:48",
+      "end": "00:35:17",
+      "speaker": "Michael Taft",
+      "text": "Which is, after all, just a kind of giant associative network between a bunch of memories, right? And that can sound very dismissive. I actually think it's incredibly wonderful and beautiful. As I'm saying, I do like to spend a lot of time reading novels and stuff, just to get inside that. And I don't — even though I often call it the sock puppet, in a way that sounds dismissive — I actually think it's incredibly beautiful. But it's not foundational."
+    },
+    {
+      "start": "00:35:17",
+      "end": "00:35:27",
+      "speaker": "Michael Pollan",
+      "text": "But what are those memories? I mean, they're memories from its interaction with whoever the interlocutor is — that's one source. But the others are..."
+    },
+    {
+      "start": "00:35:27",
+      "end": "00:35:28",
+      "speaker": "Michael Taft",
+      "text": "The training, yeah."
+    },
+    {
+      "start": "00:35:28",
+      "end": "00:35:29",
+      "speaker": "Michael Pollan",
+      "text": "The training, right."
+    },
+    {
+      "start": "00:35:29",
+      "end": "00:35:32",
+      "speaker": "Michael Taft",
+      "text": "And the training, of course, is us."
+    },
+    {
+      "start": "00:35:32",
+      "end": "00:36:02",
+      "speaker": "Michael Pollan",
+      "text": "So there's a mirror effect going on here. I mean, a lot of this too has to do with how you look at simulation and simulations. There are a lot of people who think if you simulate something really well, it's as good as the real thing. And in certain domains, that is true — simulating a great chess player or Go player is as good as the real thing. You can actually win the game. You can do the thing in the world — it has causal power. The function."
+    },
+    {
+      "start": "00:36:02",
+      "end": "00:36:32",
+      "speaker": "Michael Taft",
+      "text": "Yeah, but that isn't true for all things. There are other kinds of simulations, and the examples you often hear are like weather systems, or black holes. We can simulate these on computers, but the weather simulation is never going to get you wet, and the black hole simulation is never going to suck you into its center. And I think we have to make distinctions — is that a real emotion, or a simulated emotion? And what's the difference between the two? I think that's where it gets complicated."
+    },
+    {
+      "start": "00:36:32",
+      "end": "00:37:04",
+      "speaker": "Michael Pollan",
+      "text": "I found, in my research, Sherry Turkle's work really helpful. She's an MIT sociologist who's been writing about technology and its effect on us for a long time — she did studies of young girls and social media. And she says somewhere that a simulated thought is a real thought, or is as good as a real thought, but a simulated feeling is not a real feeling. And I think that distinction is one we have to think about. At least in a human, you can't simulate a feeling — even if you're imagining a scenario, the emotion that's arising is real."
+    },
+    {
+      "start": "00:37:04",
+      "end": "00:37:05",
+      "speaker": "Michael Taft",
+      "text": "Yes."
+    },
+    {
+      "start": "00:37:05",
+      "end": "00:38:10",
+      "speaker": "Michael Pollan",
+      "text": "So, to distinguish feelings and emotions — emotions have an outward dimension. You can see my emotions; you can't see my feelings. And the feelings prompt emotions; emotions in turn can affect feelings. It's a very complex loop. I tried to write a footnote about it neatly — it took me days. But I think it's a meaningful distinction — intimately concerned with the body, in that most feelings have a physical component to them, and that they begin with... interoception — the reading of what's going on in the body, which is something people lose touch with. But we construct emotions out of these very primitive increases in blood pressure and heart rate and things like that. That's the real basis of it. So, yes, to the extent that emotions are social, and they have associations and all this kind of stuff. But feelings, I think, are something more embodied. It's interesting that computer people use the word 'emotion,' not 'feeling.'"
+    },
+    {
+      "start": "00:38:10",
+      "end": "00:38:40",
+      "speaker": "Michael Taft",
+      "text": "And you're bringing up a fascinating point — I wasn't drawing that sharp a distinction, but it is important. And something that I find fascinating is the interoceptive system isn't just the insular cortices in the brain — that's the center that does the interoception — but actually, you've got interoceptive neuronal tissue throughout your entire body, especially in your gut. It's the one neuronal tissue that — maybe not the only one, but it's an important neuronal tissue — isn't myelinated."
+    },
+    {
+      "start": "00:38:40",
+      "end": "00:38:45",
+      "speaker": "Michael Pollan",
+      "text": "That's right. And so it's kind of blurring the boundary between the body and the brain."
+    },
+    {
+      "start": "00:38:45",
+      "end": "00:38:53",
+      "speaker": "Michael Taft",
+      "text": "It's right there in the bloodstream. Yeah, the neuron is like soaking in the bathtub of the body's chemistry, without any protection."
+    },
+    {
+      "start": "00:38:53",
+      "end": "00:40:06",
+      "speaker": "Michael Pollan",
+      "text": "And in a way, like I say, it blurs the boundary. So I love Damasio's work, and just all the stuff about the embodied basis — I think he had a really profound effect on the field. And it's been interesting to watch his intellectual descendants — people like Mark Solms, who wrote a wonderful book that builds on Damasio, called The Hidden Spring, that I highly recommend. You know, I'm working on a piece now about the microbiome, and it's really interesting to see how it's not an organ, it's not even us, right — it's this collection of trillions of microbes that call our bodies home, and exerts an influence on the brain. There is a form of interoception that can be hijacked by bacteria, which can have their own interests, of course, and want us to eat certain kinds of food, but also can result in inflammatory cytokines and things like that, that change our mood — and the gut is a very important influence on our feelings. And there's so many ways in which the kind of mind-body distinction is falling apart. I think it's very interesting to watch, because it's still an intellectual inheritance, actually — since Descartes. But the science is definitely pushing us in another direction."
+    },
+    {
+      "start": "00:40:06",
+      "end": "00:40:44",
+      "speaker": "Michael Taft",
+      "text": "Well, and the whole idea of some kind of unitary self is — on the level of the ego, at least — untenable, right? We just see, over and over again, how we're a conglomeration of various structures, like the microbiome — which I think it's interesting you bring up, because, of course, just like all of these topics, there's a piece of that field that is like — 'don't eat this, because it'll turn you into this kind of person,' or whatever — like, taking it way too far. But at the same time, there's such fascinating, deep, interesting research going on about how deeply we're influenced by this, our microbiomes."
+    },
+    {
+      "start": "00:40:44",
+      "end": "00:41:39",
+      "speaker": "Michael Pollan",
+      "text": "Yeah, there was a paper I just read — very interesting — saying that the biological conception of the self... there are three classic biological conceptions of the self. One is the brain, or the mind. The other is your unique genome. And the third is the immune system, which has the job of patrolling the border between self and non-self. And they were saying that the microbiome throws all three of those into doubt — that there is not a self, or a sovereign unitary self, in that you have the brain being influenced by the microbiome, you have more genes in the microbiome having a greater influence than your own genes, and you have these bacteria essentially reengineering your immune system for their own interest. So where is that self? I mean, it's just being eroded from every direction."
+    },
+    {
+      "start": "00:41:39",
+      "end": "00:41:49",
+      "speaker": "Michael Taft",
+      "text": "Right, we can make a similar argument with the mitochondria, right? In every cell, like ten of them, who have their own genome — a completely separate genome."
+    },
+    {
+      "start": "00:41:49",
+      "end": "00:41:51",
+      "speaker": "Michael Pollan",
+      "text": "Yeah, that's right."
+    },
+    {
+      "start": "00:41:51",
+      "end": "00:41:52",
+      "speaker": "Michael Taft",
+      "text": "Who's in charge?"
+    },
+    {
+      "start": "00:41:52",
+      "end": "00:41:56",
+      "speaker": "Michael Pollan",
+      "text": "Who's in charge, and whose goals are we achieving today?"
+    },
+    {
+      "start": "00:41:56",
+      "end": "00:41:56",
+      "speaker": "Michael Taft",
+      "text": "Right."
+    },
+    {
+      "start": "00:41:56",
+      "end": "00:42:08",
+      "speaker": "Michael Pollan",
+      "text": "Something that I found kind of fascinating about the microbiome stuff, and also, in a way, parasite science, is that they've gotten kind of good at reading brains."
+    },
+    {
+      "start": "00:42:08",
+      "end": "00:42:09",
+      "speaker": "Michael Taft",
+      "text": "Yes."
+    },
+    {
+      "start": "00:42:10",
+      "end": "00:42:23",
+      "speaker": "Michael Pollan",
+      "text": "They have. You know, we see that with toxoplasmosis. So there's this parasite — I forget exactly what category of life form it is, it's not a bacteria — Toxoplasma gondii, or something."
+    },
+    {
+      "start": "00:42:23",
+      "end": "00:42:24",
+      "speaker": "Michael Taft",
+      "text": "That's right."
+    },
+    {
+      "start": "00:42:24",
+      "end": "00:44:31",
+      "speaker": "Michael Pollan",
+      "text": "Odd name — I don't know why it's called that. But in its life cycle, it lives in cats. And the way it gets there — it infects lots of things, we may carry this infection now — but when it infects mice, it hijacks their brains. They normally have an aversion to the smell of cat urine, and it changes that — they lose that aversion. It also increases their threshold for risk. So you have these mice that have been hijacked, and they start kind of dancing in front of cats and get killed. And then the cat eats them, and the cat carries the parasite forward. It's just kind of a brilliant strategy. There's also a fungus that infects an ant and hijacks its brain, so that the ant is compelled to go to the highest point in its environment — the very top of the tallest tree or shrub. And then the fungus bursts through its head and creates a fruiting body, a mushroom, and spreads its spores that way. And the poor ant is just a vehicle that is literally hijacked. So the microbial world — look, it's been here a lot longer than we have. We're recent arrivals, and we're learning how to adapt to the microbial world. But it's also another case of where we see the world through the eyes of a being of this size, in this dimension of time. And, you know, we each have our umwelt, right — that our senses allow us to inhabit. And of course, that's not the microbial world, because we're not at the right scale, but we're missing a lot of what's going on around us, and in us, all the time. And that fills me with awe. And if the microbial world is, in fact, changing in a meaningful way — changing our thoughts, changing our feelings, changing our emotions, changing our behavior — again, this weighs in on what is a self at all."
+    },
+    {
+      "start": "00:44:31",
+      "end": "00:44:38",
+      "speaker": "Michael Taft",
+      "text": "Yes, and the power of the sovereign ego is brought into question. Now we are doing the bidding of these other creatures."
+    },
+    {
+      "start": "00:44:38",
+      "end": "00:44:52",
+      "speaker": "Michael Pollan",
+      "text": "You know, I've always been interested in that. In Botany of Desire, I was really writing about how, when we domesticate a creature, we are in turn being domesticated by that creature, and that it's a two-way street."
+    },
+    {
+      "start": "00:44:52",
+      "end": "00:44:58",
+      "speaker": "Michael Taft",
+      "text": "Yeah, I read that book a long time ago. What is it again? It's pot and something — like potatoes."
+    },
+    {
+      "start": "00:44:58",
+      "end": "00:45:38",
+      "speaker": "Michael Pollan",
+      "text": "A good memory. Apples, tulip, cannabis, and potatoes. Plants, in fact, start to change human behavior dramatically in order to fulfill their own needs and desires, if we can call it that — yeah, that's their evolutionary strategy. I mean, in the case of — let's take the tulip — it's to appeal to humans, who would spread their genes around the world. We're the most-traveled creature, so getting on to our train is really powerful. And cannabis is another great example — this weed from Central Asia, the fact that it changed consciousness in a way people like — and that was its ticket to world domination."
+    },
+    {
+      "start": "00:45:38",
+      "end": "00:45:44",
+      "speaker": "Michael Taft",
+      "text": "Well, and we've got, in the case of tulips, like tulip madness, right? In Holland, in the 1600s."
+    },
+    {
+      "start": "00:45:44",
+      "end": "00:45:53",
+      "speaker": "Michael Pollan",
+      "text": "Yeah. I mean, what we did for tulips — so insane. It was much to our detriment, of course — it led to a horrible crash. But, you know, it elevated the tulip."
+    },
+    {
+      "start": "00:45:54",
+      "end": "00:46:37",
+      "speaker": "Michael Taft",
+      "text": "Just to change gears a little bit, I have two questions actually. One is — and this is kind of getting under the hood a little bit about how you write and who you're writing for — but I thought it interesting that the non-physicalist views, like, let's say, Bernardo Kastrup, or whoever, really get a very, very, very tiny portion of the book. And I was curious — is that because, essentially, you're seen as a science writer, and so the physicalist views are the most important to that audience, or is it just, for you, that the idealist view is not very interesting? I just wondered — like, oh, he could have done a chapter or two on that, and instead it's very slender. So I was curious about that."
+    },
+    {
+      "start": "00:46:37",
+      "end": "00:48:24",
+      "speaker": "Michael Pollan",
+      "text": "Yeah, it's a very good question. I didn't know how to handle that material, frankly. With the scientific material I could certainly describe the theories and the effort to find a materialist explanation, and I could also show how those efforts were running aground, and that we have 22 theories of consciousness, none of them persuasive, all with big holes in them. So I had a framework in which I could talk about that. But then you get to the alternatives, which are very hard to prove — their theories explain certain things, but of course they open up other cans of worms. So, on the materialist side, you have the failure to demonstrate the material basis of any consciousness. You look at panpsychism, in which everything — every particle — has some modicum, small amount, of psyche, or something like consciousness, has experience — even particles. And then you have the combination problem — so how do you put them together and create a conscious being like us? You're solving the problem intellectually, but at a very high cost — you're adding something new to the stock of reality that maybe we should add, but how do we know? And then idealism has its own problem, which is the separation problem. If everything is consciousness, why isn't your consciousness transparent to me? How do we get these separate consciousnesses? So, part of me thought, well, that's another book — it'd be interesting to explore all that. I'm not dismissive of these ideas, I'm very interested in them — I'm looking forward to talking to Philip Goff, who's kind of the leading panpsychist philosopher. But I just didn't know, besides stating the ideas that they exist, how exactly to handle them in the absence of any kind of evidence."
+    },
+    {
+      "start": "00:48:24",
+      "end": "00:48:31",
+      "speaker": "Michael Taft",
+      "text": "Yeah, it's such an interesting problem. No one's out there trying to do idealism experiments, or whatever."
+    },
+    {
+      "start": "00:48:31",
+      "end": "00:50:14",
+      "speaker": "Michael Pollan",
+      "text": "Yeah, and what would they look like? I mean, you do have people trying to test certain ideas — somebody just sent me a proposal, you can imagine I get some interesting mail now — and someone had this proposal for an experiment built on people being aware they're being looked at when they don't know they're being looked at. That kind of phenomenon, and there's psi phenomena, and there's, you know, past lives. I think science should look at this stuff, but we have to figure out how exactly to evaluate it, what kind of experiments would prove it. I think, yeah, it's worth looking at. And it's definitely a critique of the book I've heard — that I didn't give enough attention to these other ways of looking at it. But again, I was also trying to avoid writing that 600-page book. And so my move, after I kind of showed the limitations of the scientific approach to consciousness, was not to go to these philosophical alternatives in great depth, but to look at other ways of knowing — such as literature, philosophy, and Buddhism. So that was the move. I could have made another move and left the science, and then turned to just philosophy, and looked at idealism and panpsychism. But I have to say, too, I was starting with the assumption that scientific materialism was the best tool we had to solve this problem — that's the general belief, yeah, as a science writer. But just as someone who lives in this culture, I've been steeped in the materialist soup for most of my life. And that is my bias, I think — materialist. And so that affected things too. But I know that there are people who were disappointed I didn't do more. And I may do more — I mean, I may write about it in the future."
+    },
+    {
+      "start": "00:50:15",
+      "end": "00:50:23",
+      "speaker": "Michael Taft",
+      "text": "Thanks for unpacking that. I was the opposite of disappointed with the book — I had a great time. But it did bring up — I was like, oh, that's interesting."
+    },
+    {
+      "start": "00:50:23",
+      "end": "00:50:32",
+      "speaker": "Michael Pollan",
+      "text": "No, you're right. No, you picked up on something — it was a real dilemma. There is a version of the book where there are several more pages on Bernardo Kastrup."
+    },
+    {
+      "start": "00:50:32",
+      "end": "00:50:35",
+      "speaker": "Michael Taft",
+      "text": "You're either a brilliant writer, and/or have a brilliant editor."
+    },
+    {
+      "start": "00:50:35",
+      "end": "00:50:59",
+      "speaker": "Michael Pollan",
+      "text": "Well, I had a brilliant editor. She died, unfortunately, the very day this book was published. Her name was Anne Godoff, and I did ten books with her. We were very close. She was terrific, and very interested in Buddhism — she published a lot of books with a kind of either covert or overt Buddhist point of view. And she was the one who said, 'you should end in the cave — don't end with Bernardo Kastrup.'"
+    },
+    {
+      "start": "00:50:59",
+      "end": "00:51:09",
+      "speaker": "Michael Taft",
+      "text": "What a great transition — that was the second thing I wanted to bring up — your whole experience with Roshi Joan Halifax, who I've known for a long time."
+    },
+    {
+      "start": "00:51:09",
+      "end": "00:51:10",
+      "speaker": "Michael Pollan",
+      "text": "You have?"
+    },
+    {
+      "start": "00:51:10",
+      "end": "00:51:16",
+      "speaker": "Michael Taft",
+      "text": "Oh, yeah. What an amazing person — totally, utterly, uniquely amazing being, and meditator, of course."
+    },
+    {
+      "start": "00:51:16",
+      "end": "00:51:19",
+      "speaker": "Michael Pollan",
+      "text": "I thought that was a great place to end, and a beautiful ending to the book."
+    },
+    {
+      "start": "00:51:20",
+      "end": "00:51:53",
+      "speaker": "Michael Taft",
+      "text": "But it was interesting — I was like, okay, yeah, you, Michael, saw, at least for a moment, that kind of mind at large, or just pure openness — I forget what you called it in that chapter. I would just call it awake awareness, you know. And so I was wondering a couple of things. First of all — is that, for you, very momentary, or at this point in your journey does that have any more stability? And I asked that question with the sensitivity to the fact that it's not a binary thing — we can be more or less in that mode."
+    },
+    {
+      "start": "00:51:53",
+      "end": "00:53:13",
+      "speaker": "Michael Pollan",
+      "text": "Yeah, I would say it's still momentary, but having glimpses is very powerful. You know it's there, and you know it's possible. And that changes everything, even if you can't slip into that mode at will. But it has deepened my meditation practice and improved it in various ways. But I wouldn't say it represents a permanent change. There is a commitment to making space for those kinds of experiences — and that's new. A greater commitment to daily meditation, but also greater commitment to putting down my phone and being in nature, and doing all these things to kind of cultivate interiority, and also do various things that are about ego transcendence. I think getting a little bit of distance on the ego, which meditation helps you do — especially the kinds of exercises we've been doing in your class, of looking for the thinker and failing to find him. I think that exercise is very powerful. You realize you have thoughts that are thinking themselves. I mean, we all have thoughts that think themselves — we do not choose to think them. And kind of reckoning with that phenomenon can be transformative. I also brought some psychedelic experiences to this too — having had an experience of complete ego dissolution. You know, my ego was reduced to a pool of blue paint on the floor."
+    },
+    {
+      "start": "00:53:13",
+      "end": "00:53:14",
+      "speaker": "Michael Taft",
+      "text": "I loved that description."
+    },
+    {
+      "start": "00:53:14",
+      "end": "00:55:34",
+      "speaker": "Michael Pollan",
+      "text": "Yeah, really fun moment to write in the book. And it seemed right — there was, like, 'yeah, that's it,' that's what it is, you know — nothing to worry about. It just seemed like, okay. Once you have an experience like that, you're a little less enslaved by your ego. You can, like, wag a finger at it and say, 'I see you're up to those old tricks. I know what you're doing,' and acquire just a little bit of distance from it, that is very useful in a lot of contexts. So, you know, the book changed me. There is a kind of a shift at the end, and it happens very quickly, but it was very profound for me. And I didn't realize it until I went to the cave and had that kind of experience. And Roshi Joan, also in good Zen fashion, was trying to get me off the plane of concepts, where I was very comfortable and had spent years — on this book and on previous works — and pushing me to a more experiential stance, or process. But there's a line in the book where I say, 'yes, consciousness is a problem to be solved.' And that was the frame — the Western problem-solution frame — that I was bringing to it, very much 'professor consciousness,' of course. But it's also a practice — we can be more or less conscious. And we normally think that, of course, we're the most conscious being on the planet, that we must be more conscious than all these animals who have this very simple consciousness. But in fact, they're more conscious, more present, than we are, because they have to be. But we are insulated from the need to be present by our technology, by all the comforts of civilization, by the fact that we're not at great risk, that we don't have too many predators yet coming after us. And we could be a whole lot more conscious than we are. And so that was a big change — it was like, okay, so what can I do to be more conscious? And meditation is definitely an important part of that — it definitely helps create a space where you can be more conscious. And psychedelics — the occasional use of psychedelics — has that effect too. That's another kind of day, when you put down your phone and live inside your mind, or live inside nature. So I've been thinking a lot about — well, are there other practices too?"
+    },
+    {
+      "start": "00:55:34",
+      "end": "00:55:40",
+      "speaker": "Michael Taft",
+      "text": "Well, that's what I was going to ask you. Besides those, what other practices are you finding for you?"
+    },
+    {
+      "start": "00:55:40",
+      "end": "00:56:22",
+      "speaker": "Michael Pollan",
+      "text": "I have a close friend and collaborator, and he's written a lot about awe and experiences of awe, and how they shrink the ego and help us transcend it. And that can happen in many contexts, generally positive — although I was always trying to remind him, awe can operate in a very negative way too — you had awe at Nazi rallies, there's a political awe that can be really nasty. But awe in nature, I think, is very powerful, and putting yourself in those situations. Also — this sounds very consumerist and trivial — but travel. There is something that happens when you are in a new place."
+    },
+    {
+      "start": "00:56:22",
+      "end": "00:56:24",
+      "speaker": "Michael Taft",
+      "text": "Oh, I agree completely."
+    },
+    {
+      "start": "00:56:24",
+      "end": "00:57:01",
+      "speaker": "Michael Pollan",
+      "text": "All your rote predictions of what a house should look like, or a car should look like, or a river, or whatever. The reason you get so tired when you're traveling is because your rote ways of looking at things aren't working, and you have to be more present, and you're actually predicting less and taking in more information. Normally the brain is very lazy and efficient, and doesn't bother with fresh perception — it's basically feeding you predictions that it fed you yesterday and the day before. But if you go to a new place, that system breaks down, in a wonderful way."
+    },
+    {
+      "start": "00:57:02",
+      "end": "00:57:22",
+      "speaker": "Michael Taft",
+      "text": "Yeah, very childlike openness can arise, and you're just like, 'check this out.' And it removes that kind of extreme dullness of the rote predictability, right? And your senses come alive too, because you're just trying to take in so much information — your sense of smell is stronger, your sense of vision is awake."
+    },
+    {
+      "start": "00:57:22",
+      "end": "00:57:27",
+      "speaker": "Michael Pollan",
+      "text": "Yeah, it definitely wakes you up. There's new food to taste, all that."
+    },
+    {
+      "start": "00:57:27",
+      "end": "00:57:29",
+      "speaker": "Michael Taft",
+      "text": "Right. What else? What else?"
+    },
+    {
+      "start": "00:57:29",
+      "end": "00:57:32",
+      "speaker": "Michael Pollan",
+      "text": "No, I'm curious. I don't know — do you have any ideas?"
+    },
+    {
+      "start": "00:57:32",
+      "end": "00:57:38",
+      "speaker": "Michael Taft",
+      "text": "There's meditation, psychedelics, travel, awe in nature — let's build a list."
+    },
+    {
+      "start": "00:57:38",
+      "end": "00:57:41",
+      "speaker": "Michael Pollan",
+      "text": "Playing with children, because I get to do that a lot."
+    },
+    {
+      "start": "00:57:41",
+      "end": "00:58:02",
+      "speaker": "Michael Taft",
+      "text": "And I thought — just, it's not meant in a critical way, but — when your friend Alison Gopnik realized, after all these years, that children are tripping all the time, I'm like, no shit! It's the most obvious possible thing, at least if you've ever tripped. Have you read her book, The Philosophical Baby?"
+    },
+    {
+      "start": "00:58:02",
+      "end": "00:58:04",
+      "speaker": "Michael Pollan",
+      "text": "I was like, I should."
+    },
+    {
+      "start": "00:58:04",
+      "end": "00:58:17",
+      "speaker": "Michael Taft",
+      "text": "If you have a four-year-old, you need to read this book. It's so insightful on the way they see the world, and what's going on when they play, and what they're learning, and how their brains are developing."
+    },
+    {
+      "start": "00:58:17",
+      "end": "00:58:22",
+      "speaker": "Michael Pollan",
+      "text": "I wish I'd read it when our son was that age — I didn't read it until years later."
+    },
+    {
+      "start": "00:58:22",
+      "end": "00:58:23",
+      "speaker": "Michael Taft",
+      "text": "I'll definitely read it."
+    },
+    {
+      "start": "00:58:23",
+      "end": "00:58:26",
+      "speaker": "Michael Pollan",
+      "text": "You'll enjoy it. You'll thoroughly enjoy it."
+    },
+    {
+      "start": "00:58:26",
+      "end": "00:58:37",
+      "speaker": "Michael Taft",
+      "text": "But I think that's a great example — playing with children, who, of course, are learning the rote ways of dealing, but we're also being invited back into that total new freshness, right?"
+    },
+    {
+      "start": "00:58:37",
+      "end": "00:58:39",
+      "speaker": "Michael Pollan",
+      "text": "Yes, exactly. So much fun."
+    },
+    {
+      "start": "00:58:39",
+      "end": "00:58:45",
+      "speaker": "Michael Taft",
+      "text": "Although, you know, you go to the park now and you see all the parents are on their phones — it's so dismal."
+    },
+    {
+      "start": "00:58:45",
+      "end": "00:58:54",
+      "speaker": "Michael Pollan",
+      "text": "But we're not very good — but again, there's another case where the phone is getting in the way of being conscious, and it's a shame."
+    },
+    {
+      "start": "00:58:54",
+      "end": "00:59:54",
+      "speaker": "Michael Taft",
+      "text": "Yeah, so breaks, or Sabbaths, from technology, I would say, is another thing to put on the list. And a thing that I think you're accurately saying, very early in our talk, is going to become, actually, a much bigger deal, and maybe reinvigorate the humanities and so on — which is stuff like art, music, dance — all of that, I think, plays into this very deeply. Now, we can encounter those on different levels, sometimes very intellectual, but there can be a sort of openness to new, non-intellectual experience, that is ignited and invited through the arts. Another one that I think you've mentioned elsewhere, but I'll bring it up — and that is, for me, gardening. Digging in the ground and working with plants and stuff. This is, of course, classic in meditation tradition, and there's a reason it's a classic — it's almost a cliché, but getting out there and digging in the dirt and plants is somehow, in some way, incredibly healing."
+    },
+    {
+      "start": "00:59:54",
+      "end": "01:00:04",
+      "speaker": "Michael Pollan",
+      "text": "Yeah, it is. And you're constantly reminded of their otherness, and all — also just the whole process of growth and change — and feeding you."
+    },
+    {
+      "start": "01:00:04",
+      "end": "01:00:10",
+      "speaker": "Michael Taft",
+      "text": "Yeah, I mean, that for me is one of my favorite activities. And, you know, being with animals, too, is another one."
+    },
+    {
+      "start": "01:00:10",
+      "end": "01:00:24",
+      "speaker": "Michael Pollan",
+      "text": "Yes. You know, the inscrutability — I always love this. There's a great John Berger essay called 'Looking at Animals.' And when we look in their eyes, what do we see? And we see there's a spark of recognition of their consciousness."
+    },
+    {
+      "start": "01:00:24",
+      "end": "01:00:26",
+      "speaker": "Michael Taft",
+      "text": "There's a light of consciousness there."
+    },
+    {
+      "start": "01:00:26",
+      "end": "01:00:51",
+      "speaker": "Michael Pollan",
+      "text": "There's a light of consciousness, for sure. But then there's the weirdness that they're so other, at the same time. And that double vision, I think, is really powerful, and has a lot to teach us. I mean, we look into the eyes of, you know, dogs and cats, but that's about it. People used to look into the eyes of the animals they were going to eat, and worked out a way to deal with that. And now we just look away."
+    },
+    {
+      "start": "01:00:51",
+      "end": "01:01:03",
+      "speaker": "Michael Taft",
+      "text": "Yeah, yeah. Well, Michael, our time is up, but this has been just a real pleasure for me. Thank you so much for being willing — I know you're super busy — being willing to come on the show and talk with me today."
+    },
+    {
+      "start": "01:01:03",
+      "end": "01:01:13",
+      "speaker": "Michael Pollan",
+      "text": "Oh, I wouldn't have missed it for the world. And I have a huge admiration for you, and you've taught me a lot. So I was happy — I was honored to be invited. So thank you very much, Michael."
+    },
+    {
+      "start": "01:01:13",
+      "end": "01:01:16",
+      "speaker": "Michael Taft",
+      "text": "All right. You have a great rest of your day."
+    },
+    {
+      "start": "01:01:16",
+      "end": "01:01:16",
+      "speaker": "Michael Pollan",
+      "text": "You too."
+    },
+    {
+      "start": "01:01:36",
+      "end": "01:04:05",
+      "speaker": "Michael Taft",
+      "text": "That's it for this episode of Deconstructing Yourself. If you enjoyed the podcast, please recommend it to a friend or talk about it on social media. Doing that helps it find its way to more people who might be interested. If you're moved to support the podcast, you can do that by contributing to the production costs on my Patreon page. That's at patreon.com/michaeltaft. The money goes to support the recording, production, and bandwidth costs of this program, which are substantial. By contributing to Patreon, you're making it possible for me to continue to create and share these conversations as often as possible. A special perk for high-level contributors is a monthly or even bi-monthly event with me on Zoom, where you can ask me any meditation questions you have. I deeply appreciate your support. I also have a number of free resources for you, beginning with my YouTube channel. There are hundreds of hours of free guided meditations and videos there, so if you're interested, that's quite a large resource, offered to you completely free of charge. The channel address on YouTube is MWT111, or you can just search my name, Michael Taft. I encourage you to subscribe to the channel and join me each week for a new live guided meditation session. And of course, there's the deconstructingyourself.com website itself, which has articles, interviews, and more about meditation going back over 12 years at this point. So be sure to check that out. Beyond these free options, I also have a number of paid online courses to help you grow and develop in your spiritual practice. You can find out about those either by signing up for my email list at deconstructingyourself.com/signup, or at the site deconstructingyourself.org. I look forward to seeing you in class. The Deconstructing Yourself podcast has always had excellent sound, which is the result of an amazing audio engineer and amazing human being named Stephen McNamara. He's an all things audio person with many decades of experience in producing music and spoken word audio. If you're interested, you can contact him at his website, yogitar.com. That's Y-O-G-I-T-A-R.com. Music on the Deconstructing Yourself podcast is a track by Peter Baumann entitled \"Crossing the Abyss\" from his album \"Machines of Desire.\" Thank you for listening."
+    }
+  ]
+}
