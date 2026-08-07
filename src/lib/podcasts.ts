@@ -80,16 +80,15 @@ export interface EpisodeSummary extends PodcastEpisode {
 }
 
 /**
- * Episodes for the listing page, newest addition first. Several episodes are
- * usually added on the same day, so ties fall back to the release date — the
- * listing then still reads newest-to-oldest instead of following array order.
+ * Episodes for the listing page, newest release first. Episodes without a
+ * `publishedAt` sort last within ties, falling back to `dateAdded`.
  */
 export const listEpisodes = (siteLang: string): EpisodeSummary[] =>
   [...podcasts]
     .sort(
       (a, b) =>
-        new Date(b.dateAdded).valueOf() - new Date(a.dateAdded).valueOf() ||
-        (b.publishedAt ?? '').localeCompare(a.publishedAt ?? ''),
+        (b.publishedAt ?? '').localeCompare(a.publishedAt ?? '') ||
+        new Date(b.dateAdded).valueOf() - new Date(a.dateAdded).valueOf(),
     )
     .flatMap((episode) => {
       const langs = availableLangs(episode.slug);

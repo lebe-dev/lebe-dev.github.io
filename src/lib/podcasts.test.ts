@@ -128,13 +128,13 @@ describe('listEpisodes', () => {
     expect(first.guest).toBeTruthy();
   });
 
-  it('sorts newest addition first', () => {
-    const dates = listEpisodes('en').map((e) => e.dateAdded);
+  it('sorts newest release first', () => {
+    const dates = listEpisodes('en').map((e) => e.publishedAt ?? '');
     expect([...dates].sort().reverse()).toEqual(dates);
   });
 
-  it('breaks a dateAdded tie by the episode release date, newest first', () => {
-    const keys = listEpisodes('en').map((e) => `${e.dateAdded} ${e.publishedAt ?? ''}`);
+  it('breaks a publishedAt tie by dateAdded, newest first', () => {
+    const keys = listEpisodes('en').map((e) => `${e.publishedAt ?? ''} ${e.dateAdded}`);
     expect([...keys].sort().reverse()).toEqual(keys);
   });
 });
