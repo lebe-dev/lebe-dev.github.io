@@ -1,0 +1,1 @@
+import"./attributes.VG47DL2r.js";import{I as n,s as t,r as p}from"./Icon.D6JBUIsl.js";function d(o,e){let r=p(e,["$$slots","$$events","$$legacy"]);const s=[["path",{d:"m6 9 6 6 6-6"}]];n(o,t({name:"chevron-down"},()=>r,{get iconNode(){return s}}))}export{d as C};
