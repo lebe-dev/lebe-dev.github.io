@@ -131,7 +131,7 @@ const otherLangs = (Object.keys(languages) as Lang[]).filter((l) => l !== lang);
     right: 1.75rem;
     bottom: 1.75rem;
     z-index: 900;
-    display: none;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     width: 2.75rem;
@@ -157,12 +157,5 @@ const otherLangs = (Object.keys(languages) as Lang[]).filter((l) => l !== lang);
     opacity: 1;
     color: var(--link);
     border-color: var(--link);
-  }
-
-  /* Desktop only */
-  @media (hover: hover) and (min-width: 768px) {
-    .back-to-top {
-      display: inline-flex;
-    }
   }
 </style>
