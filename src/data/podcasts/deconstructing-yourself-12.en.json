@@ -1,0 +1,853 @@
+{
+    "title": "Consciousness, Spirituality, and Intellectual Honesty, with Thomas Metzinger",
+    "url": "https://deconstructingyourself.com/dy-012-consciousness-spirituality-intellectual-honesty-guest-thomas-metzinger.html",
+    "guest": "Thomas Metzinger",
+    "transcript": [
+        {
+            "start": "00:00:26",
+            "end": "00:02:50",
+            "speaker": "Michael Taft",
+            "text": "Welcome to Deconstructing Yourself, the podcast for modern mutants interested in mindfulness, meditation, awakening, compassion for all beings, scientific inquiry, and much more. My name is Michael W. Taft, your host on the podcast. And in this episode, I'm speaking with Thomas Metzinger. Thomas Metzinger is a full professor and director of the Theoretical Philosophy Group and the research group on neuroethics and neurophilosophy at the Department of Philosophy of the Johannes Gutenberg University of Mainz in Germany. He's the founder and director of the MIND Group and an adjunct fellow at the Frankfurt Institute for Advanced Studies in Germany. His research centers on analytic philosophy of mind, applied ethics and philosophy of cognitive science. He's the editor of Neural Correlates of Consciousness and the author of the books Being No One and The Ego Tunnel. I first became aware of Thomas when I read his epic tome entitled Being No One. At the time I was struggling to reconcile my meditation practice and spiritual understanding in some way with science, and especially neuroscience. But at the time the two seemed pretty far apart. This was about ten or fifteen years ago, and there wasn't as much attention on the topic as there is today. From the first page of his book, however, I was completely entranced. And I realized that here was a person who had not only brought meditation and neuroscience together in some sense, but also added philosophy into the mix as well. For me it was heady stuff. I loved it. Later, when working with Peter Baumann to create the Being Human project, I suggested that we bring Thomas over from Germany for the event. Since that time I've gotten to know Thomas well, and I still think he may have the most informed, solid, and clear view of meditation and consciousness there is today. Recently Thomas has been working with virtual reality to create out-of-body experiences and as an ethicist in the field of robotics. So he's doing a lot of really interesting stuff, and I was extremely pleased that he agreed to come on the podcast. And so now, without further ado, I give you the episode that I call Consciousness, Spirituality, and Intellectual Honesty."
+        },
+        {
+            "start": "00:02:53",
+            "end": "00:02:55",
+            "speaker": "Michael Taft",
+            "text": "Welcome to Deconstructing Yourself."
+        },
+        {
+            "start": "00:02:55",
+            "end": "00:02:57",
+            "speaker": "Thomas Metzinger",
+            "text": "Hi, Michael."
+        },
+        {
+            "start": "00:02:58",
+            "end": "00:03:00",
+            "speaker": "Michael Taft",
+            "text": "How's it going today?"
+        },
+        {
+            "start": "00:03:00",
+            "end": "00:03:05",
+            "speaker": "Thomas Metzinger",
+            "text": "Oh, it has been a wonderful day. Much too warm and sunny in Germany."
+        },
+        {
+            "start": "00:03:05",
+            "end": "00:03:10",
+            "speaker": "Michael Taft",
+            "text": "Is Germany suffering also from the effects of the climate crisis?"
+        },
+        {
+            "start": "00:03:11",
+            "end": "00:03:53",
+            "speaker": "Thomas Metzinger",
+            "text": "Well, as you know, this is all statistically not significant, but there's this intuitive feel. Yeah, the last three winters — there were two winters with two days of snow and one winter with three weeks of ice. We've had a storm where seven people died last week, and the railway system took like two and a half days to recover. New insects migrate farther north. And now we have these unusually hot four days because some tropical storm has shoveled African air up to Central Europe. It's a bit unreal."
+        },
+        {
+            "start": "00:03:54",
+            "end": "00:04:55",
+            "speaker": "Michael Taft",
+            "text": "Yes, we're in a very smoky studio here in San Francisco as wildfires continue to burn. So it's an interesting time. And maybe a good platform for beginning our talk today is just to notice that it's an interesting time out there. And that reminds me of really one of the main things I've been wanting to talk to you about for a while now, which is: I saw you speak at — I believe it was the Battery in San Francisco, maybe a different location — but you gave your talk entitled Spirituality and Intellectual Honesty. And I have known you from before that talk and from the Being Human conference and so on, and was very excited to hear that talk. And I was just knocked out by it. I couldn't get over it. You said so many surprising and fascinating things. So since then I've had a lot of questions, and before this discussion I rewatched the video and made notes, because you've given this talk several times. There's a more up-to-date version, a 2017 video of it, that I watched."
+        },
+        {
+            "start": "00:04:55",
+            "end": "00:05:09",
+            "speaker": "Thomas Metzinger",
+            "text": "You could find that through Ojai, through the Krishnamurti Foundation of America, where I was in April. So that's maybe good to watch."
+        },
+        {
+            "start": "00:05:09",
+            "end": "00:05:20",
+            "speaker": "Michael Taft",
+            "text": "It's really something I would recommend that listeners take the time to watch. It takes about an hour, and you will not be visually blown away by the slides."
+        },
+        {
+            "start": "00:05:20",
+            "end": "00:05:27",
+            "speaker": "Thomas Metzinger",
+            "text": "You're welcome to just listen to it. All the information is there. Yeah, and the essay is on my homepage if you just want to read it."
+        },
+        {
+            "start": "00:05:28",
+            "end": "00:05:41",
+            "speaker": "Michael Taft",
+            "text": "I'm just teasing Thomas about the slides. It's a cool presentation. So Thomas, I realize this is probably anathema to you, but can you summarize the point that you make in that discussion for listeners?"
+        },
+        {
+            "start": "00:05:42",
+            "end": "00:07:25",
+            "speaker": "Thomas Metzinger",
+            "text": "If I remember it correctly — I see what arises in my mind. I've given this talk in many countries, and in many countries I've had very different experiences. So there are a number of simple claims in it. One claim is that the opposite of religion is not science, but spirituality; and that the strictly rational, intellectually honest attitude of science is actually a special case of the spiritual stance. So there's something like a spiritual stance. Spiritual people want to know. They don't want to have faith. And they also at least try to be radically honest with themselves, to face what really arises within themselves and look at it. And that is, of course, exactly identical to the attitude true scientists have. And many people have discovered in the past — this is not new — that early magicians, but of course also many of the more serious spiritual practitioners, yogis, monks in different cultures, were actually scientists. They were first-person-method consciousness researchers who often were very rigorous and very serious about what they're doing. But then on the other hand, if you meet really good scientific researchers in the academic context, many of them are actually spiritual persons, but they would immediately deny this of themselves. They would never see themselves like that."
+        },
+        {
+            "start": "00:07:25",
+            "end": "00:08:55",
+            "speaker": "Thomas Metzinger",
+            "text": "So radical intellectual honesty and a rational, evidence-based approach to knowledge and insight is actually something that unites the scientific way of approaching reality with what can be called a spiritual stance. That's one of the main ideas. And it has been very interesting for me: of all the non-academic things I've written in my life, this essay is clearly the one that has the greatest impact. It's clearly the one that most people have been interested in. And it's funny — I had almost forgotten that talk at the Battery in San Francisco. This was actually for me a rather unpleasant experience. I mean, you were there and a lot of nice people, but I also saw these bored wives of millionaires with pink champagne in their hand who were dropping in and trying to check out if this could be something interesting and amusing — spirituality and intellectual honesty. And I saw the guys in the back rows constantly on their iPhones. And I saw that that was really an audience where just a few people were open to the message. The actual opposite, the real opposite of it, I once gave in Trivandrum in South India."
+        },
+        {
+            "start": "00:08:55",
+            "end": "00:10:35",
+            "speaker": "Thomas Metzinger",
+            "text": "In India there was a 300-plus-people audience, and they were so passionate about this deep question — can spirituality be secularized, or can it not be secularized? That's one of those core questions. And I still remember, this was actually a biochemistry institute, but I gave a talk of about 40 minutes and this discussion wouldn't stop. The discussion period was an hour and 45 minutes, because they were so honestly and so deeply interested in the issue. But there was also a moment in that talk in India, in the public discussion, where the mood of the audience was almost tipping over. I still remember it. There was a very old, distinguished man — you know, southern India is very Christian — asking me: can you just please say this again, so I don't misunderstand you? You are saying that all people of Christian faith on this planet are intellectually dishonest? And it didn't come to my mind to say, well, if they ever had a chance to be intellectual — like many, say for instance, Christians in poor, underdeveloped countries in Africa, they cannot be intellectually dishonest because they have just been missionarized and have never had a chance to go to school or something like this. So I said: yes, sir, that's actually what I'm saying. To be a Christian is lying to yourself, is being dishonest."
+        },
+        {
+            "start": "00:10:35",
+            "end": "00:11:35",
+            "speaker": "Thomas Metzinger",
+            "text": "And I could feel in the audience that this was a very critical point in our discussion. And it was interesting, because days before, in Pune, people had told me — you know, I was always giving scientific lectures and I was also giving just public lectures to the general public — and people told me: Thomas, don't exaggerate, don't try to play Richard Dawkins in India. Last year there was somebody here in Pune who got shot with a machine pistol from a motorbike after trying to give talks like this. So be careful. And I still remember: if you look at the slides, you will find one slide where there is a picture in which Hitler and Pope Pius XII are on the same picture, looking at each other. And you may know — maybe your listeners in America don't know this — but there has been some intense Italian-German cooperation."
+        },
+        {
+            "start": "00:11:35",
+            "end": "00:12:30",
+            "speaker": "Thomas Metzinger",
+            "text": "For instance, the Vatican helped all the German spies. If you Google or look in Wikipedia, look for the word ratline. When the Russians came in, Germany was losing the war, all these high-ranking Nazis had to be evacuated and rescued. And they went through the Red Cross there, which gave them new passports and got them onto ships to South America. And the Americans knew it but didn't do anything, because they had to get their own spies out alive as well, on the same ratline. So, just to give you another example: I was giving this talk in Torino, with Italian slides, in Italy, and the organizers came and said, could I take this picture with Hitler and Pope Pius XII out of my talk? And I said, no, I'm not censoring myself. And they didn't say goodbye to me."
+        },
+        {
+            "start": "00:12:30",
+            "end": "00:12:47",
+            "speaker": "Thomas Metzinger",
+            "text": "They didn't like this at all. So these are just examples — San Francisco, Trivandrum, Torino — where different cultures, different countries, different audiences react very differently to this talk."
+        },
+        {
+            "start": "00:12:47",
+            "end": "00:13:30",
+            "speaker": "Michael Taft",
+            "text": "And how do you hope someone would react to this message — that spirituality must be intellectually honest to be true spirituality at all, or to have a kind of moral integrity with yourself? I think it's one of the most interesting points, that for most people the idea of moral integrity is externally focused — doing things right for other people or animals or in the world — and yet the talk is focused on internal moral integrity."
+        },
+        {
+            "start": "00:13:30",
+            "end": "00:14:30",
+            "speaker": "Thomas Metzinger",
+            "text": "Yes, a very important point. So in academic philosophy there are these technical debates centered around topics like the ethics of belief or virtue epistemology. The question is whether you also have, so to speak, moral obligations in your inner life, in terms of which beliefs you make your own. That beliefs or views arise in you actually is not your fault — or judgments arise. And every meditator, of course, knows this, that awareness is not so choiceless, and judgments arise. That is one thing that is still innocent. But to appropriate them, to make them your own, is actually an inner action. To hold on to them and believe them."
+        },
+        {
+            "start": "00:14:30",
+            "end": "00:16:00",
+            "speaker": "Thomas Metzinger",
+            "text": "I'm not the person to say or to tell anybody what true spirituality is. I don't know that. But it is part, I think, of practice to become aware of that mechanism too — the mechanism of belief formation. Because it's very tricky. And I'll give you some examples of it that many people may recognize from their own life. People somehow stumble into practice, right? They start to practice and then some people realize, oh, there is more than just relaxation and clarity here. They sense there's something deep and beautiful there and they continue. And then that mechanism — the ego mechanism, the mechanism of self-modeling that acquires everything, just like capital — it integrates everything. It starts to form certain beliefs. And typically the two things that happen for everyone who begins to continue his practice, that they have tested out, is: the first thing is, oh, I'm on a path. There is a ladder, and that ladder has rungs, and you can be advanced. And I'm different — you know, I'm not like all these other New Age flakes, I'm serious. I'm going to practice seriously and I'm on a path, the spiritual path. And that is the first trap many people run into. If you acquire that belief, then you have a romantic narrative, a new narrative for your life. I am a practitioner on a path. And some people never free themselves from that for the rest of their lives. Some people stay in that."
+        },
+        {
+            "start": "00:16:03",
+            "end": "00:16:33",
+            "speaker": "Michael Taft",
+            "text": "Yeah, they've just created a new ego, or a slight variation on their current ego, which says: now I'm this person doing this romantic thing."
+        },
+        {
+            "start": "00:16:33",
+            "end": "00:17:13",
+            "speaker": "Thomas Metzinger",
+            "text": "It is very romantic, because it also offers a possibility for mortality denial. You know, I've read these scriptures, and sometimes it takes many lives. So if I don't get giga-bingo liberation in this life, unfortunately I have to be born again and continue the path. So, you know, the whole reincarnation story is often folded into this. That's the first thing that happens: I am on a path. And sometimes people hear somebody like Krishnamurti saying truth is a pathless land, and then they think, ah, this is destructive, this is nihilistic, I'm an ordinary person. And there is something to be said about this — maybe we can talk about it later."
+        },
+        {
+            "start": "00:17:14",
+            "end": "00:18:45",
+            "speaker": "Thomas Metzinger",
+            "text": "The second thing — I don't know if it happened to you, it happens literally to everybody, it happened to me — is: I cannot flourish if I don't find the right teacher. One needs a master. They all talk about spiritual masters. And these books are full of masters of all kinds. And that belief and that emotional structure very closely resemble something that many young people, say between 16 and 20, have, where they have this secret longing to fall in love. I don't really want to screw my brains out or have a relationship — I would so much like to really fall in love mutually with somebody else. Like the real thing, that enchants my whole life. And so many young people are wandering through the world and actually their deepest longing — they often don't admit it like this — is to have something real happening, and not a relationship or something like that, right? So many people then start to see if they can fall in love, travel to India, do workshops, watch YouTube videos — that's the new thing in our time, that you have an endless supermarket with masters — and try to find an authority they can believe in. That's also a process of belief formation."
+        },
+        {
+            "start": "00:18:45",
+            "end": "00:18:47",
+            "speaker": "Michael Taft",
+            "text": "And certainly one that I took to the nth degree."
+        },
+        {
+            "start": "00:18:47",
+            "end": "00:18:48",
+            "speaker": "Thomas Metzinger",
+            "text": "Really?"
+        },
+        {
+            "start": "00:18:48",
+            "end": "00:18:50",
+            "speaker": "Michael Taft",
+            "text": "Oh yeah."
+        },
+        {
+            "start": "00:18:50",
+            "end": "00:20:00",
+            "speaker": "Thomas Metzinger",
+            "text": "That's why I have been fortunate: I attended talks of Krishnamurti very early in my life, and that's the one thing I'm very grateful for. He took this away from me at an early stage, but it hurt terribly. It had psychosomatic consequences, and it wasn't easy, and I didn't like it. And all my friends said, yeah, yeah, yeah, he's just standing up on this mountain and saying, just be up here, be like me, but don't walk. And I said, silly — everybody can say something like this, but we are real human beings and real human beings need real teachers. And today I think both things are true at the same time. But many of my friends — I don't know about you — of the generation that went deeply into this actually got lost in that second thing. I have many friends who are over 50 years old and still have guru pictures on their bedside table and have some little, as we say in German, Schrebergarten — a little intellectual homey place, something, with their perfect little master and their authority — and they stay in that."
+        },
+        {
+            "start": "00:20:00",
+            "end": "00:21:08",
+            "speaker": "Michael Taft",
+            "text": "In my case, I found a teacher and was never disappointed. I mean, the teacher is someone who I love and got a lot of help from. I just ended up needing to move on and understanding that maybe that relationship that I was having of, like, this is a perfect person — that was a projection from me that I needed to get rid of. The good news is that sometimes we can avoid the situation that happens so often — it's more often than not, as far as I can tell — of being actually abused or mistreated, or simply treated like a cog in a giant enlightenment factory or something. So luckily, you know, I'm still friends with my Hindu teacher and like her very much. But I have quite a different relationship with the whole idea of teacher now. It's fascinating to me, because I think we do need teachers. But what we definitely don't need is guru-relationship-type situations from that classical Indian model, where you just surrender autonomy. There's nothing good about that."
+        },
+        {
+            "start": "00:21:09",
+            "end": "00:22:39",
+            "speaker": "Thomas Metzinger",
+            "text": "I don't know. If I had to make a big fat theory — I mean, surrendering, letting go, surrendering autonomy may be a very important topic at slightly advanced stages. And maybe there have been some human beings for whom this has worked in the context of another person. But it is just so extremely dangerous, because of course Indian society also is patriarchic, authoritarian. There are people used to exploiting Westerners. That's what one discovers if one travels a bit and looks at these things oneself. It's basically deep, deep superstition. I think, in the way things have historically unfolded, that is actually something the West can bring to the table: the values of enlightenment in the Western sense of the term — critical self-reflection, this never-ending evidence-based search for what is true, the knowledge that there are cognitive biases and naturally evolved forms of self-deception that may blind us. I mean, these are all contributions that came out of Western science, not out of these traditions. So the question is whether there can be a combination, whether there can be a fully secularized form of spirituality."
+        },
+        {
+            "start": "00:22:39",
+            "end": "00:23:44",
+            "speaker": "Thomas Metzinger",
+            "text": "And just to make this very clear: I think this is an open question. Maybe it is not possible. I'll give two examples that maybe go to the heart of the matter. One is: if you want to keep on with a practice for years and decades, an ordinary human being needs some kind of motivational structure. And most people I've met in my life who have done this for a long time also believe in something crazy. They have a little corner where there's something crazy in their life, something where criticism doesn't go and rational thought doesn't go. For instance, many of the mindfulness teachers will like to pose as secular in public, but then in their homes they will have things hanging on the wall that are not so secular; and they're actually crypto-Buddhists, in a sense they are pious Buddhists, and they think they have to pose as very open in public."
+        },
+        {
+            "start": "00:23:44",
+            "end": "00:24:24",
+            "speaker": "Thomas Metzinger",
+            "text": "And it's easy to say — can one live without having faith? Can one be so aware and so open, you know, have an examined life in the sense that one doesn't believe in anything that is not evidence-based and has rational argument behind it? Or is this just not livable for human beings? Don't we, for our motivational structure, meet this crazy corner in all of us, which may be very different for different people?"
+        },
+        {
+            "start": "00:24:24",
+            "end": "00:24:30",
+            "speaker": "Michael Taft",
+            "text": "The question is, aren't there large areas of important human experience that science actually has nothing to say about?"
+        },
+        {
+            "start": "00:24:30",
+            "end": "00:25:22",
+            "speaker": "Thomas Metzinger",
+            "text": "Or nothing interesting to say about. So I'm getting a bit bored. And, you know, as a researcher, I don't systematically follow meditation research, but you may know that there is a second wave of meditation research that is very successful. I monitor this as a hobby. And guess what? They're finding something in the brain. I'm always a little astonished when in public debates people find it interesting that somebody can show colored brain scans — there's a large part of the audience who thinks that that is somehow helpful. That there is a neural correlate of effortless mindfulness is something that I find very valuable and interesting as an academic to know. But yeah — if you eat vanilla ice cream, something happens in your brain too. Right?"
+        },
+        {
+            "start": "00:25:22",
+            "end": "00:26:22",
+            "speaker": "Thomas Metzinger",
+            "text": "Was that so interesting? Is that the interesting thing about the gustatory quality of vanilla, that there's a neural correlate? Maybe it could help us to enjoy ice cream even better in the future. But the question is whether science could ever make contributions to enhancing practice, and not just amassing data about the brain. So, as you know, I've been in cognitive science and philosophy of cognitive science for more than three decades and I monitor this. But what of the scientific advance is really relevant for the important things — what you called the really relevant forms of human experience? I can imagine some things. I have these ideas that I never put into practice. I would like to build some neurofeedback devices, for instance. I shouldn't say this in public, because somebody's gonna steal it in California."
+        },
+        {
+            "start": "00:26:22",
+            "end": "00:27:22",
+            "speaker": "Thomas Metzinger",
+            "text": "But I want to build these AR glasses that follow this principle: you only see clearly if you see clearly. That is, they detect mind-wandering episodes through a wireless EEG and a correlate, and you wear these glasses that become dark immediately as you lose contact with the present moment. And this would enable you — if it were a light thing that you can wear, you know, light glasses, probably VR glasses with a camera and a portable EEG cap — to do walking meditation or even everyday life in a different way, because you could just not take the next step, because it would go dark if your mind goes dark. And then you would have, in your dominant sensory modality, a direct feedback about how cloudy or clear your mind is right now, and you simply couldn't walk any further if another bout of what scientists today call spontaneous task-unrelated thought has started, right?"
+        },
+        {
+            "start": "00:27:22",
+            "end": "00:28:53",
+            "speaker": "Thomas Metzinger",
+            "text": "So we could of course ask: could there not be just cool Google gadgets and apps, but could we use this neuroscience of meditation for developing neurofeedback devices that actually mean something to these more relevant parts of human experience? Or would people who try them for a couple of months say, okay, very nice, but I'd rather do my walking meditation without the gadget? It could be helpful, because research on mind-wandering shows that if you externally cue people — like if you have a buzzer on your arm and whenever that goes off in random fashion you have to say, was I on target or was I mind-wandering — you discover much more mind-wandering than when you meditate, when you just look to internal cues and try to discover that you have lost the breath or the walking and have gone off into a little movie, into a fantasy. There is a difference between the two, and that's an interesting discovery: you discover more episodes of mind-wandering by external cueing. That's called experience sampling. The question is, of course, whether that is true. There are some episodes of mind-wandering which are totally unconscious, which even the meditator never discovers. Maybe in these cases a neurofeedback device could actually be insightful or helpful."
+        },
+        {
+            "start": "00:28:53",
+            "end": "00:29:25",
+            "speaker": "Michael Taft",
+            "text": "Yeah, I think this is one of the reasons why, when a person begins taking their meditation practice into life and doing the practice as they're walking around or working or doing their daily activities, it starts to have a much, much deeper effect — not only because they're integrating it into their life, but also because they're getting externally cued that their mind is wandering."
+        },
+        {
+            "start": "00:29:25",
+            "end": "00:29:30",
+            "speaker": "Thomas Metzinger",
+            "text": "Interesting."
+        },
+        {
+            "start": "00:29:30",
+            "end": "00:29:35",
+            "speaker": "Michael Taft",
+            "text": "Have you looked at the neurofeedback research of Judson Brewer?"
+        },
+        {
+            "start": "00:29:35",
+            "end": "00:30:00",
+            "speaker": "Thomas Metzinger",
+            "text": "Oh yeah, yeah. Once we have briefly Skyped. You know, I've been working in this European project for virtual embodiment and robotic re-embodiment for five years as an ethicist. So I've been in many of the best VR labs in Europe. And of course I've been thinking about whether one could use any of these new technologies to enhance the contemplative experience. I'm not so sure whether this wouldn't distract."
+        },
+        {
+            "start": "00:30:00",
+            "end": "00:31:20",
+            "speaker": "Thomas Metzinger",
+            "text": "But I'll tell you another thing I have just found out. So I've thought, could we design really fancy VR stuff? You know, we have tried to artificially create out-of-body experiences by, as it were, transposing the sense of self into avatars. But I've recently — that's a second example — discovered something very simple. So we have a computer with a good graphics card and an Oculus Rift in our university, and my wonderful assistant had found some new demos for me, and I was looking at some demos. I find — although I'm fully in this area of research — I would always much rather go for a walk in the forest than look at the craziest new demo. I'm just not so fascinated. But anyway, so I was looking, only maybe for 25 minutes, at really well done VR stuff. And then I took off the Oculus Rift and walked to the parking lot. And I realized that for almost four minutes I had something resembling a derealization experience: that the normal optical flow in the elevator and on the street still had this VR quality to it. And there is something very interesting there that I would like to research more deeply."
+        },
+        {
+            "start": "00:31:20",
+            "end": "00:31:50",
+            "speaker": "Thomas Metzinger",
+            "text": "So, you know, there's all this huge Buddhist literature about emptiness."
+        },
+        {
+            "start": "00:31:22",
+            "end": "00:31:24",
+            "speaker": "Michael Taft",
+            "text": "Yes."
+        },
+        {
+            "start": "00:31:24",
+            "end": "00:32:36",
+            "speaker": "Thomas Metzinger",
+            "text": "But a completely modern new term that might make us understand what emptiness is could be virtuality. So what is actually the phenomenology of virtuality in VR when you do this? I think — I'm not sure, I'm thinking about this — it is what I call the phenomenology of metaphysical indeterminacy. What makes the experience in VR really philosophically interesting is that there is a neither-nor-ness of \"this is real\" or \"this is not real.\" I mean, it looks very real, it can get very good and you can be immersed and you can identify, but there's always a part of you that knows this is not real. This kind of conscious experience is actually something historically almost new. It's the phenomenology, at least I think, of metaphysical indeterminacy, of experiencing something that is neither real nor unreal."
+        },
+        {
+            "start": "00:32:36",
+            "end": "00:33:36",
+            "speaker": "Thomas Metzinger",
+            "text": "Now, if my theory is right, normal conscious experience outside of VR is Mother Nature's own virtual reality. You know, I've written a lot about this also in the book The Ego Tunnel. Conscious experience is a virtual model running in our brain. That's also what our best mathematical models of the brain say right now: it's a prediction machine. What you experience is actually a hypothesis about the next sensory input, and so on and so forth. So we are actually born into VR. That is why we are not liberated. Our fate is, so to speak, that we grew up with a headset on, and that headset is the neural correlate of consciousness in our brains. Now, I'm coming a long way, but many spiritual practices try to give you exactly — not intellectually, but by way of direct experience —"
+        },
+        {
+            "start": "00:33:36",
+            "end": "00:34:36",
+            "speaker": "Thomas Metzinger",
+            "text": "— an insight into the virtuality of it all, of your normal conscious experience; into the emptiness of it all, in the sense that in a certain way it has no inherent existence at all. In that sense it's unreal, right? All the objects are empty. They have no inherent existence. You can directly experience that. But then there's also this quality of suchness, if you will. That's a word that's very close to me. I don't know if you understand what I mean by it."
+        },
+        {
+            "start": "00:34:36",
+            "end": "00:34:38",
+            "speaker": "Michael Taft",
+            "text": "Absolutely."
+        },
+        {
+            "start": "00:34:38",
+            "end": "00:35:03",
+            "speaker": "Thomas Metzinger",
+            "text": "So spiritual practice would then actually be something where you de-immerse yourself from the virtual reality you were born into, the one that your brain creates. And that is much cooler than any of these gadgets and computers, because it has been optimized for millions of years. It has high resolution, perfect multisensory integration. That is cool, you know, and we call it conscious experience. It's much better than all the stuff that's on the market, but we are lost in it. You know, we even identify with the agent in it. We identify with the avatar, the protagonist of the narrative. And one way to interpret all these classical teachings about the emptiness of it all in modern terms could be to say: well, it is virtual. It's an as-if reality, all of it."
+        },
+        {
+            "start": "00:35:03",
+            "end": "00:36:27",
+            "speaker": "Michael Taft",
+            "text": "I think that's exactly correct. And many, many of the classical techniques and even modern techniques are focused on noticing either the as-if-ness of it, or noticing the inadvertent artifacts of the constructedness of it. For example, just as a metaphor or an analogy: if you were looking at virtual reality through a pair of goggles, you might notice digital noise, or it stutters, or it blanks out for a second, or you might actually see some pixelation or whatever. There's artifacts, right? They're inadvertent artifacts. And there are many, many methods in spiritual practice for noticing those exact same class of artifacts, but in the human virtual reality system. So you just start to notice the constructedness of the phenomenal world model. And it's extremely powerful when you start noticing it. That sense of both real and not real at the same time becomes quite intense. And I'm curious — in your phenomenology, you're calling it suchness, which is a term we use in Buddhist or Hindu practice. But I'm curious, do you have a term that describes the feeling of something being real? Maybe it's transparency, I'm not sure how you describe that. Just that judgment that the brain makes — yes, that's real; no, that's not real — and then once you make the judgment, yes, that's real, there's this feeling of surety that comes with it."
+        },
+        {
+            "start": "00:36:27",
+            "end": "00:37:52",
+            "speaker": "Thomas Metzinger",
+            "text": "Of course. So on the level of phenomenology, philosophers distinguish between transparency and opacity — at least, of course, different philosophers have different views on this. But a conscious representation is transparent when we cannot experience the fact that it is a representation. We may have a high-level belief, this is all a model in my brain, but that's not what it is about. Transparency is this phenomenology of direct perception, of immediacy, of certainty. I just see the table and the flower pot in front of me. Now, this is highly relevant to spiritual practice in many ways. One is: if that is true, there should also be something like opacity, where increasingly the model is also experienced as a model, with its artifacts and flaws."
+        },
+        {
+            "start": "00:37:52",
+            "end": "00:38:56",
+            "speaker": "Thomas Metzinger",
+            "text": "And the first thing I find very interesting is that many very normal people actually have artifacts in their conscious experience all the time. We have blurry vision. We know optical illusions. There is a lot of evidence for the normal person that this is actually a model and that it can misrepresent. We meet other people with colorblindness. We see that things change with age, that the whole model changes — say, for instance, olfactory blindness in old age: that suddenly your mother doesn't cook so well anymore, because she hasn't noticed that her sense of smell and taste has become much weaker. And the interesting thing is, we have this robust prior that this is reality out there, so that most people who never think about this just bypass all the indicators in our normal everyday life that this is actually a model that can go wrong."
+        },
+        {
+            "start": "00:38:56",
+            "end": "00:39:46",
+            "speaker": "Thomas Metzinger",
+            "text": "I mean, hallucinogens have, for many people, really done the job. And maybe that's one of their major advantages: that they irrevocably make it clear to somebody that this is a model for a certain time. That even the realness itself can, like a volume, be tuned up and down. So realness is a very interesting phenomenological quality, because in epileptic seizures, in certain religious experiences, or on certain psychoactive substances, things can also be more real than in so-called ordinary life. But then spiritual practice can, for some people, add a quality of virtuality, an emptiness, to everyday perception."
+        },
+        {
+            "start": "00:39:46",
+            "end": "00:40:30",
+            "speaker": "Thomas Metzinger",
+            "text": "And we all know brief moments of what psychiatrists call derealization. So when your doorbell rings and somebody says, Peter has died, the first thing you say is: no, this is not true, I cannot believe this, I just talked to him on the phone. Or maybe some of you have experienced this directly after a car accident, or walking behind a coffin during a funeral — that the whole situation is unreal, man. It's unreal. So actually, realness itself is something that goes up and down. It's like a volume in a piece of music."
+        },
+        {
+            "start": "00:40:30",
+            "end": "00:42:00",
+            "speaker": "Thomas Metzinger",
+            "text": "I think an important part of spiritual practice is to become more sensitive to that, because that has to do with attachment and identification as well. So I was just going to say, when we were ten minutes back talking about potential technological means to enhance practice, that something that might be much simpler than designing fantastic virtual realities for meditation practice — maybe something I would really like to test out on a retreat with people — namely: put on your headset, be in VR, take it off and meditate, and put it on again after three or five minutes, and take it off again, and take it on again, and take it off again. And I could even imagine a situation where what was in the virtual reality was nothing but the meditation hall itself, right — a pre-recording of the setting. So that this change between \"I know I'm in VR now and this is VR phenomenology\" and \"ha, now I took the gadget off, now I am in direct perceptual contact again\" — that that brings insight into the opacity, into the constructed nature, into the fact that all of this is always a representation, and that there's a certain sense in which there's no difference between technologically induced VR and normal VR during everyday life."
+        },
+        {
+            "start": "00:42:00",
+            "end": "00:42:30",
+            "speaker": "Thomas Metzinger",
+            "text": "So I have this intuition: one could just use quick changes between undramatic VR experiences and so-called ecologically valid everyday experience as a new practice that helps you maybe faster to penetrate into this mechanism of realness."
+        },
+        {
+            "start": "00:42:30",
+            "end": "00:43:20",
+            "speaker": "Thomas Metzinger",
+            "text": "But to come back to the phenomenology: philosophers would say phenomenally transparent is every representation where you have only the content. You can introspect only content properties; but, in old-fashioned terminology, vehicle properties are not available to you. And I'll just tell you: in my own life, this first dawned on me — fully dawned on me — when I asked a brilliant visual scientist: but what is it that I'm seeing when I have taken a minor dose of a hallucinogen and there's this breathing abstract geometric pattern on the white wall? And it's breathing, and, as some people have said, evolving into ever deeper forms of beauty and meaningfulness."
+        },
+        {
+            "start": "00:43:20",
+            "end": "00:44:37",
+            "speaker": "Thomas Metzinger",
+            "text": "What is this that I am seeing? And this very hard-headed visual neuroscientist said: it's earlier processing stages in your brain. And if that is right, penetrating into earlier processing stages allows you to see the representational nature of it all. And also that this right now is probably a misrepresentation — say, if that is how your hallucinogenic experience just starts, and you know this is a misrepresentation. But interestingly, you still take all the rest of the room and the rest of the wall for real. So you have transparency and opacity at the same time. So conscious representations can either be transparent or opaque. Unconscious representations are neither transparent nor opaque in that sense — just so as not to make any logical mistakes. And the interesting question is, of course, whether emptiness or the practice of mindfulness has something to do with that: to penetrate into earlier processing stages, to make the representational process itself a content of consciousness. If that could be liberating — that would be the idea."
+        },
+        {
+            "start": "00:44:37",
+            "end": "00:45:07",
+            "speaker": "Michael Taft",
+            "text": "I'm not sure if you're aware of this: Shinzen Young and I talked about this idea of meditating on the pre-processing of the sensory channels in an earlier Deconstructing Yourself episode. And that's certainly my experience, and his experience, that you are able — at least it seems to be so subjectively. We don't have scientific evidence for this."
+        },
+        {
+            "start": "00:45:07",
+            "end": "00:45:17",
+            "speaker": "Thomas Metzinger",
+            "text": "Yes, we have. There is lab data showing that meditators can expand the space of what they can consciously experience into fine-grained areas that are simply unconscious for normal people."
+        },
+        {
+            "start": "00:45:17",
+            "end": "00:46:00",
+            "speaker": "Michael Taft",
+            "text": "Well, in experience, it's quite amazing, because the more that you allow awareness to sink into this pre-processing of the senses, it does reduce the transparency — dramatically, right? The sense of it being real goes away. And furthermore, the sense of — just to relate this to another one of your recent papers — the sense of suffering just starts to diminish radically. And there are reasons for that."
+        },
+        {
+            "start": "00:46:00",
+            "end": "00:47:00",
+            "speaker": "Thomas Metzinger",
+            "text": "It is very hard to really detach from a lot of things. So, as you invited me to come on this podcast, in the past weeks I've listened to almost all episodes now. And many things were very interesting and directly relate to my own practice. I'll give you an example, or a confession. But I also thought this should not be called Deconstructing Yourself. This should be called Ruining Innocence. Because what you guys do — I mean, you get so technical, and you read all these books, and you discuss all these things, and Dzogchen and everything. I mean, how can anybody meditate and be innocent if one talks about all of this so much and has all these concepts and thinks about it so much? And I'm saying this as a professor of philosophy, so I'm ruining this thing for myself my whole life."
+        },
+        {
+            "start": "00:47:00",
+            "end": "00:47:30",
+            "speaker": "Thomas Metzinger",
+            "text": "The best instruction I probably got in a long time was when this wonderful Swiss meditation teacher just held my arm very gently at the end of her retreat and told me: Thomas, you do not have to understand everything. And she probably spotted a large part of what my problem is — not only doing it and surrendering to it in an innocent way, but wanting to understand it. And that's part of the clever things that the ego mechanism tries to keep itself alive with, you know."
+        },
+        {
+            "start": "00:47:30",
+            "end": "00:47:52",
+            "speaker": "Thomas Metzinger",
+            "text": "I'll tell you what the next two stages are, after \"I'm on a path\" and \"I need a teacher.\" For people who go on to the next two stages, where it gets really serious and they lose it all: they start to teach themselves."
+        },
+        {
+            "start": "00:47:52",
+            "end": "00:47:56",
+            "speaker": "Michael Taft",
+            "text": "Wait, are you going to ruin our innocence even more completely here, Thomas?"
+        },
+        {
+            "start": "00:47:56",
+            "end": "00:48:42",
+            "speaker": "Thomas Metzinger",
+            "text": "Yes, but I mean, you know, some people then go to Japan or India and find some representative of some dying tradition who gives them a name, and then they return home and wear funny clothes and teach what was so valuable. That's a more interesting way of losing it. And I've heard there have been absolutely dramatic cases where people have started podcasts and stuff, but I'm not entirely sure. So the mechanism is always there. And the mechanism of also trying to understand it — but this is only half serious. When I listened to your podcast, I thought: my God, these guys are talking about this and they're building up taxonomies and they're comparing really fine-grained stuff, and this is — yeah, it's interesting, and I often know what they're talking about, a trillion cessations and all that."
+        },
+        {
+            "start": "00:48:42",
+            "end": "00:49:12",
+            "speaker": "Thomas Metzinger",
+            "text": "But then I also thought — I don't know if you can understand this — my God, in a certain sense this is killing the whole thing for yourself. Maybe it's only my thing."
+        },
+        {
+            "start": "00:49:12",
+            "end": "00:49:42",
+            "speaker": "Michael Taft",
+            "text": "In creating this podcast, I thought, you know, I have these great discussions with advanced practitioners, I get so much out of it, and I wonder if others would get something out of these discussions as well. It was really, paradoxically, that innocent of a desire — to just share conversations one might have with people, with teachers and, let's say, brilliant German philosopher-neuroscientist people or whatever, that we usually have off the mic."
+        },
+        {
+            "start": "00:49:42",
+            "end": "00:50:06",
+            "speaker": "Thomas Metzinger",
+            "text": "I'll tell you something very personal that I got out of it just in the very last four weeks. So the idea is, of course, I have written a lot about attentional agency, and I have this complicated story about how we have a phenomenal model, a conscious model, of the arrow of attention itself, you know. What I'm saying is not only that the self is also a virtual body that's sitting there, and the perceptual objects out there."
+        },
+        {
+            "start": "00:50:06",
+            "end": "00:51:00",
+            "speaker": "Thomas Metzinger",
+            "text": "But the process of \"I am now a knowing self, let us say, attending to this flower out there\" or attending to its breath — that is itself a model. It's a model of attentional processing going on in the brain. And famous philosophers like Edmund Husserl have talked about der Blickstrahl der Aufmerksamkeit, the ray glance of attention. And that is why it was very interesting when you talked with Shinzen about this arrow of attention, and that it can actually be very helpful not to forget the back end of it all — that the back end of the arrow is something that many of us have something about that I sometimes fancifully like to call introspective neglect."
+        },
+        {
+            "start": "00:51:01",
+            "end": "00:52:01",
+            "speaker": "Thomas Metzinger",
+            "text": "So maybe some of your listeners know this neuropsychological syndrome of visual hemineglect. So you have these patients — Oliver Sacks has described people like this in his book The Man Who Mistook His Wife for a Hat. So you will have patients who only eat one half of their plate. And if you turn the plate around, they eat the other half. And they will also only shave one half of their face and only dress one half of their body. The question is, of course — the research question is — is the left model of reality in the brain completely gone for these patients? Or is it that the model is actually there, but that for some reason attention can never go there anymore? The flashlight of attention cannot go to the left side of the plate, so the patient just cannot discover that there is something to eat there, or another half of the face to be shaved."
+        },
+        {
+            "start": "00:52:01",
+            "end": "00:52:53",
+            "speaker": "Thomas Metzinger",
+            "text": "So an interesting thing is to look at the state of being obviously not liberated and fully immersed as a situation where you maybe have something like visual hemineglect — that there is something there already, say, an unpersonal presence, a knowing witness or something like that, but you just cannot direct your attention there, because you always follow the arrow outward. And even if you take meditation courses, you always follow the arrow to your breath or whatever the teacher, the instructor, tells you to. But you always miss that part, the nock of the arrow, right? So the arrow can actually point in two directions."
+        },
+        {
+            "start": "00:52:53",
+            "end": "00:53:53",
+            "speaker": "Thomas Metzinger",
+            "text": "Now the personal confession. So that was something I found very valuable in your podcast that related to my experience. And it's a difference when you don't get carried away by the arrow, because there is an arrowless awareness that is not pointed, that is allocentric and not egocentric, as scientists would say. And that doesn't even have to be established. So — you know, one goes through phases — in these last months I have been a bit attracted by the idea of not ignoring what is already there. And many people think mindfulness is: oh, I must notice. Am I mindful? Do I actually really, really notice the sensation — you've talked about that — in my knee? Or do I only think, yeah, yeah, yeah, I'm mindful, I notice it? And these differences. But another way to understand what mindfulness could actually be"
+        },
+        {
+            "start": "00:53:53",
+            "end": "00:54:53",
+            "speaker": "Thomas Metzinger",
+            "text": "— it is to be mindful of your continuous automatic attempt to ignore what is already there. That there is nothing that has to be established. I don't know if I'm making myself clear, but you could attend to this your whole life being an ongoing crime of one part of you finding ever new tricks — by being a clever spiritual self and meditating — to just ignore what is already fully established and what might devour you and put an end to you. So some people have gotten too close to it. They develop spiritual games and interesting meditation techniques just to keep an arrow somehow, and keep an arrow pointed."
+        },
+        {
+            "start": "00:54:53",
+            "end": "00:55:30",
+            "speaker": "Thomas Metzinger",
+            "text": "And before I tell you what I actually wanted to tell you, I get completely sidetracked. I'm going to share a story of my life with you that was maybe five years past. So I was washing dishes and I was in an extreme hurry. I had to clean the kitchen and had to get into that car, I had to get out. And so I was washing dishes, and while I was completely mindlessly washing dishes and was nervous and anxious, I had this thought: oh shit, and you haven't done your evening meditation yet. And how is that going to fit in? There's no time for it. And in the moment I had that thought,"
+        },
+        {
+            "start": "00:55:30",
+            "end": "00:55:59",
+            "speaker": "Thomas Metzinger",
+            "text": "I suddenly realized the whole room is already meditating. The cupboards. Very briefly — the room, as meditating. This sounds very mystical; it isn't. It's a simple thing. But imagine it would meditate all the time and you would be ignoring it all the time by practicing mindfulness."
+        },
+        {
+            "start": "00:55:59",
+            "end": "00:56:07",
+            "speaker": "Michael Taft",
+            "text": "Indeed, this is in fact one of the common criticisms of mindfulness — that it's teaching you to ignore that."
+        },
+        {
+            "start": "00:56:07",
+            "end": "00:57:07",
+            "speaker": "Thomas Metzinger",
+            "text": "Right. As I'm getting sidetracked all the time, I'll tell you just another personal story. So 30 years ago I ran into Douglas Harding. And I thought, oh, that's cool, that's highly original — and forgot all about it, you know, the headless way. And in the last four weeks it just came back into my life and I've been devouring all his writings. Apart from the very strong metaphysical claims that he himself is God, I think this is an absolutely fantastic phenomenologist. He has made extremely fine-grained and valuable observations about the phenomenology, and he has actually discovered original new routes for practice. And so I've been wondering — I've tried, you probably have tried that too — to just meditate or go for a walk with open eyes and try to attend to the fact that there's a scenery and you're seeing it."
+        },
+        {
+            "start": "00:57:10",
+            "end": "00:57:49",
+            "speaker": "Thomas Metzinger",
+            "text": "But there's no head — that there is actually a panoramic view. There's a lower boundary. There's a body. But this is unbroken. It's one big expanse. And what is directed at it is not Michael. It's a quality of pure awareness that is seeing it all. Now, after I read Harding again in the last four weeks and tried to practice this a little bit — I'm far away from understanding it fully — I ask myself: what is the difference between looking in the headless way,"
+        },
+        {
+            "start": "00:57:49",
+            "end": "00:58:47",
+            "speaker": "Thomas Metzinger",
+            "text": "— seeing out of emptiness, selflessly, very undramatically — and that moment when you lose it and you look into the world like you normally look into it when you're unaware and running around? What is the difference actually? And I thought it might have something to do with virtual reality and that interesting concept of immersion. There is a phenomenology of being immersed — for instance in a visual scene, and that's the average, normal way of running around being immersed: you think you are a knowing, seeing self in a visual world, and you walk around in it. That's being immersed in the brain's own VR. Now, but what actually happens when you attend to the fact that there is no head there? I mean, what is it that Douglas Harding has really discovered, and what is so helpful?"
+        },
+        {
+            "start": "00:58:47",
+            "end": "00:59:37",
+            "speaker": "Thomas Metzinger",
+            "text": "It has something to do with the nock of your arrow. It has something to do with the nock of Shinzen's arrow of visual attention. Because if you attend to the origin of the first-person perspective, you realize there is no point of origin there. The idea of an origin is empty. There is not this seeing self that you normally completely hallucinate when you have your ordinary visual perspective and you think there's a head there and I'm looking out of it. This is a model the brain creates, of a seeing self that knows visual objects. And what Harding has discovered, I think, is: if you attend to the very simple and obvious fact that there is actually nothing there —"
+        },
+        {
+            "start": "00:59:37",
+            "end": "01:00:30",
+            "speaker": "Thomas Metzinger",
+            "text": "— there is no head that is being seen, but just this panoramic, unified field of vision. Maybe some glasses and, you know, maybe some edges of your face, but it's all in that panoramic expanse. You dissolve the knowing self. Suddenly, what sees is awareness itself, and not this little seeing entity that somehow identifies with the origin of the perspective, or the origin of the arrow of attention. Can you make any sense of this? Or does it sound strange?"
+        },
+        {
+            "start": "01:00:30",
+            "end": "01:00:45",
+            "speaker": "Michael Taft",
+            "text": "No, I think you're absolutely on point. The headless practice is very clever because, as you have mentioned, it's a really simple way to do something that's actually fairly advanced. In deeper mindfulness practice you can notice this representation your brain is always making. It's like a 3D model of the world around you all the time, that's actually visual. It's very, very subtle visual."
+        },
+        {
+            "start": "01:00:45",
+            "end": "01:00:48",
+            "speaker": "Thomas Metzinger",
+            "text": "Yes, with closed eyes, you mean."
+        },
+        {
+            "start": "01:00:48",
+            "end": "01:01:17",
+            "speaker": "Michael Taft",
+            "text": "Well, everyone's doing it with their eyes open also. But yeah, it's very noticeable when your eyes are closed — like you move your head and you notice that some part of your brain is tracking what part of the room you must be looking at. That model. And so, a subset of that visual model is the model of yourself doing it, your body in that space. And there are many ways to sort of put a crowbar into that crack and open it up so the model collapses. And a lot of them are really technical or quite difficult. But what Harding has discovered is a really, really easy way to do it. And it's very effective."
+        },
+        {
+            "start": "01:01:17",
+            "end": "01:01:47",
+            "speaker": "Thomas Metzinger",
+            "text": "Yeah, I've just rediscovered this for the second time in my life. And I'm still experimenting with it. Of course, the interesting question is, for instance, interoceptive body feelings. What about that? Is there an internal perspective into your internal body landscape? Do things work differently there?"
+        },
+        {
+            "start": "01:01:47",
+            "end": "01:02:37",
+            "speaker": "Michael Taft",
+            "text": "I don't think they do. In my experience, body sensation without an internal three-dimensional representation — body sensation all takes place in a lump or in a pile. It's very high-resolution body sensation, but it's not mapped onto the shape of the body. Instead, that requires this same kind of representation, where there's a 3D model in your mind of, oh, that's out there, that sensation is out there on my fingertip, over there, and this other body sensation is in my hip down here. And as we know, developmentally it takes humans a long time to be able to do that, to understand that their body is in space in a certain way and that if they move their hand over here, it will bump into something."
+        },
+        {
+            "start": "01:02:37",
+            "end": "01:03:37",
+            "speaker": "Thomas Metzinger",
+            "text": "It's called motor babbling. You know, infants do that — just making random movements and getting the feedback and trying to construct their own body model. It has been shown in newborn rats now, interestingly, during dreams, which is not disembodied: those motor twitches we have in sleep may also play a role in consolidating and repairing that body model. And also in teaching robots trying to have a model of themselves, the same principle is used, you know: generate random movements and then continuously update your internal predictions of where your limbs, your effectors, actually are in space. So there's a lot to be said about this. I just want to mention my last four papers — you'll find them all for free on my English website — on mind wandering."
+        },
+        {
+            "start": "01:03:37",
+            "end": "01:04:55",
+            "speaker": "Thomas Metzinger",
+            "text": "And I've been interested in where subjectivity, or a first-person perspective, starts in a strong sense, in a philosophically interesting sense. So our visual model of reality is of course egocentric, it has a geometry, but in a sense that's trivial — that there is a center in space. And I now think that the decisive thing the human brain does is when it creates something that I call an epistemic agent model: that is a model of an entity that is a knowing self, that has knowledge relations to the world or to itself, and that controls what it will know and what it will not know. And I think the earliest stage of this is when, as children, we learn to control our attention, and we have this sense of effort of being an agent that tries to hold its focus or sustain its focus of attention on an object. I think now that that is one of the deepest origins of selfhood — agency, mental agency in the pursuit of knowing something, of grasping a concept, or of attending to something."
+        },
+        {
+            "start": "01:04:55",
+            "end": "01:06:02",
+            "speaker": "Thomas Metzinger",
+            "text": "And if that is true — of course, all of this is directly relevant to advanced practice as well. If that concept is right, then maybe — I don't want to pontificate on anything I haven't really fully understood here — but maybe what Harding has discovered is that if you just attend to the emptiness where your head is and have this non-centered view, you destroy the epistemic agent model. So in normal, unaware vision you constantly, automatically are conditioned to construct a model of a seeing agent, a little thing that visually knows the world and directs its arrow of attention, knowing it. And then if you suddenly discover this is a hallucination, there is no agent there, there is no head, and there is no entity looking out of this — you neutralize the epistemic agent model, and you see with a different kind of — I call it a selfless subject of experience — that emerges. Something still sees, but it's entirely unpersonal and it's not an agent. It's choiceless. It doesn't make selections. It just sees."
+        },
+        {
+            "start": "01:06:02",
+            "end": "01:06:42",
+            "speaker": "Thomas Metzinger",
+            "text": "And if I am right about this, this mechanism is so automatic and so fast that it was actually quite an achievement for Harding to discover the obvious — and the very obvious phenomenological fact is that there really is nothing there. Talking about personal experiences, I'll tell you what were the most shocking sentences I know. I guess I read two or three Harding books. It shocked me. And as we all know, reality or teachers or books tell you things many times,"
+        },
+        {
+            "start": "01:06:42",
+            "end": "01:07:34",
+            "speaker": "Thomas Metzinger",
+            "text": "— but there's only one time when you're, for the first time, ready to hear this. So he has this interesting, playful distinction between the big one and the little one. So the big one is that timeless witness that is there. And the little one is Michael, right? And he says the little one is not conscious. And I still haven't digested that, but I think he's right. So Michael Taft is not conscious. I think we could say that publicly now for the first time. So what actually is the carrier of experience is something else. But the interesting thing is, Michael Taft thinks he's conscious. It's part of his own model of himself, because he's aware, right?"
+        },
+        {
+            "start": "01:07:34",
+            "end": "01:08:04",
+            "speaker": "Thomas Metzinger",
+            "text": "So I don't know. I will not pretend I have fully understood this, but this may actually be in one sentence — it's like the nock. So what does a brain do that has discovered it is aware? It integrates this discovery into the model of the organism it has also created, and creates a model where that organism model is conscious, which is actually false."
+        },
+        {
+            "start": "01:08:04",
+            "end": "01:08:34",
+            "speaker": "Michael Taft",
+            "text": "Yeah, this is a known thing that spirituality people often talk about. Yes, your ego never gets enlightened, right? This is very clear, that it's not the small self that gets enlightened, or the little one. And at the same time, a new enlightened ego does arise, which is an ego that has — or let's say a sense of self, a phenomenal self-model that includes…"
+        },
+        {
+            "start": "01:08:34",
+            "end": "01:08:40",
+            "speaker": "Thomas Metzinger",
+            "text": "Just like capitalism, it eats everything."
+        },
+        {
+            "start": "01:08:40",
+            "end": "01:08:45",
+            "speaker": "Michael Taft",
+            "text": "There's a lot of tricks for hacking this capitalistic ego."
+        },
+        {
+            "start": "01:08:45",
+            "end": "01:09:23",
+            "speaker": "Thomas Metzinger",
+            "text": "I'm trying to come to terms with what I, just like you, have heard a million times: that I will never be liberated. But I was talking about consciousness. I mean, Harding says even the normal person is not conscious. In the non-practitioner, in the people who don't listen to crazy podcasts like this, the little one is unconscious."
+        },
+        {
+            "start": "01:09:23",
+            "end": "01:09:53",
+            "speaker": "Michael Taft",
+            "text": "To me, I just take that as the perennial description of a non-liberated person as being asleep. They are in some way not fully conscious. To be more specific, when I say \"in some way\" — I think the way that they are not conscious is: they're not paying attention to all the stuff we've been talking about for this whole episode. Noticing the nock of the arrow. They're not noticing the glitches in perception. They're not noticing their own construction of reality. All that is unconscious. And in fact, what's interesting is that they're not even noticing — or we are not even noticing — that the model of the world is just a dream."
+        },
+        {
+            "start": "01:09:53",
+            "end": "01:11:00",
+            "speaker": "Thomas Metzinger",
+            "text": "Yeah, it's an ongoing game. You can help me — I'm trying to get at something related but slightly different. So if people ask me that I should explain my complicated philosophical theory in accessible terms, I sometimes talk about a transparent avatar in your brain. So I would say that what you consciously experience as yourself right now — your own thoughts, your emotional state, your bodily sensations — is the content of what I call a self-model that your brain runs. And in a nutshell, the theory is: because that self-model is transparent, you as an organism as a whole, the person, identify with the content of the model, and you are unable to make the difference between the content of the model and the model itself, which is actually only a part of you in your brain. Now, I think what Harding is telling us when he says the little one is not conscious is: that model, that avatar in your brain, is not conscious. It is a model of an organism that is aware; but if you look closely, that entity with which you always identify is itself not conscious."
+        },
+        {
+            "start": "01:11:00",
+            "end": "01:11:15",
+            "speaker": "Thomas Metzinger",
+            "text": "And how could one discover that, if it is right? First question is: is it at all intelligible to you?"
+        },
+        {
+            "start": "01:11:15",
+            "end": "01:11:28",
+            "speaker": "Michael Taft",
+            "text": "It's like asking, when you're playing a video game, is the avatar on the screen conscious? You know, of course it's not. It's just a model."
+        },
+        {
+            "start": "01:11:28",
+            "end": "01:11:53",
+            "speaker": "Thomas Metzinger",
+            "text": "Yeah, but now the question to your listeners listening to the podcast: is the listener conscious? This is also a question, of course, about the value of science. If science and modern philosophy of mind would help us to understand the things we've just been talking about in the last 20 minutes more clearly — you know, in terms of fantastic computational models of the brain and stuff — would that be interesting?"
+        },
+        {
+            "start": "01:11:53",
+            "end": "01:12:00",
+            "speaker": "Michael Taft",
+            "text": "If it helps us to wake up, I think it would be incredibly — not only interesting, but incredibly important."
+        },
+        {
+            "start": "01:12:00",
+            "end": "01:12:05",
+            "speaker": "Thomas Metzinger",
+            "text": "Yeah, what's your intuition? Will it ever help us?"
+        },
+        {
+            "start": "01:12:05",
+            "end": "01:12:12",
+            "speaker": "Michael Taft",
+            "text": "I think it is already helping us. So I suspect that it will continue to help us."
+        },
+        {
+            "start": "01:12:12",
+            "end": "01:12:38",
+            "speaker": "Thomas Metzinger",
+            "text": "So you have this idea that the centuries of different techniques and practices that have been tested by millions that came before us — one position would be that's good enough. I'm actually more of this school: shut up and sit. That's basically my basic attitude about all of this. But you think we could make relevant progress there if we get modern science into it? Or is this just another way of entertaining ourselves?"
+        },
+        {
+            "start": "01:12:39",
+            "end": "01:13:39",
+            "speaker": "Michael Taft",
+            "text": "Well, I think we've already made relevant progress by getting science in there. And I think that even though emotionally or characterologically I love that shut-up-and-sit mood — like just do it — I think the thing that is not recognized often enough is that those practices were developed by monks for monks, who had nothing else to do but shut up and sit. And so sure, if you've got 40 spare years to just keep doing one simple thing till you finally break through, it'll work. But we are in quite a different situation — not only personally being quite busy, but also I would contend that our planet is not in a situation where we have 40 spare years for everyone to get a clue. So to me there's an actual, let's say, moral imperative to try to get better at this."
+        },
+        {
+            "start": "01:13:39",
+            "end": "01:14:09",
+            "speaker": "Thomas Metzinger",
+            "text": "Well, somebody might say: no, we need a secular monastic tradition. We have to found a fresh tradition. And this is actually only for people who in the end want to devote their whole life to it. And if they don't, they don't. But what we've lost is a clear and honest monastic tradition that is not completely clouded by some traditional religion or belief systems."
+        },
+        {
+            "start": "01:14:09",
+            "end": "01:14:14",
+            "speaker": "Michael Taft",
+            "text": "What's wrong with devoting all your life to it?"
+        },
+        {
+            "start": "01:14:14",
+            "end": "01:14:39",
+            "speaker": "Thomas Metzinger",
+            "text": "I mean, it may just be a clever trick to say: yeah, yeah, yeah, you can have children and you can pursue your worldly career, and now we even give you liberation as a product on top of it."
+        },
+        {
+            "start": "01:14:39",
+            "end": "01:15:07",
+            "speaker": "Michael Taft",
+            "text": "Yeah, if we see it through the lens of just another thing that capitalism is co-opting and selling back to the world, we can quickly imagine it to be some kind of utter debasement of the tradition. On the other hand, science is already — and even Western ways of working are — really helping to clarify some of the dark corners of these traditions. We're sharing information about techniques and talking about what works and what doesn't, and trying to minimally get a handle on what's going on. I think one of the most interesting questions you have in your papers that I've read is just the question of: is there any such thing as enlightenment at all? And if so, what is it?"
+        },
+        {
+            "start": "01:15:07",
+            "end": "01:15:12",
+            "speaker": "Michael Taft",
+            "text": "Maybe that's the original scam from the traditions. Maybe it's just crypto-eternalism."
+        },
+        {
+            "start": "01:15:12",
+            "end": "01:16:12",
+            "speaker": "Thomas Metzinger",
+            "text": "Yeah, well, that's very interesting. So the last book I actually bought were the sermons of Johannes Tauler, who was a German medieval mystic, one of the two major disciples of Meister Eckhart — the other was Heinrich Seuse. And I'm torn between two things. There is this popular view that many people like to entertain themselves with: there's the philosophia perennis, and they have all been talking about the same thing for centuries. Some — okay, the Buddhist tradition is more on selflessness and Advaita has a big self — but that's all just words and concepts, and there is this one culturally and context-invariant human experience. But then, when you go and look at experiential reports — when I was younger I did this a little bit at university, on the mystics — and you just look at them,"
+        },
+        {
+            "start": "01:16:12",
+            "end": "01:16:42",
+            "speaker": "Thomas Metzinger",
+            "text": "— they are very different. I mean, it's the interpreters who have the goal of giving us the feeling, oh yeah, this is all, you know, a nice harmonious world: Hildegard von Bingen and Ramana Maharshi, it's matching. Of course it isn't, if you look at their real lives and their real reports. There are these similar things about nothingness and emptiness and annihilation of the self. Other details are very, very different in different reporters."
+        },
+        {
+            "start": "01:16:42",
+            "end": "01:17:20",
+            "speaker": "Thomas Metzinger",
+            "text": "So the question is, of course, would we be ready to arrive at some unsettling results? I think intellectual honesty and open-mindedness, if I may add this, actually come at a high price. One of the high prices to be paid is what I sometimes in my own mind call the mortality constraint. To just openly see that — we don't know this, but all the modern knowledge about the brain and evolution very strongly converges on the fact that we are fully mortal beings."
+        },
+        {
+            "start": "01:17:20",
+            "end": "01:18:18",
+            "speaker": "Thomas Metzinger",
+            "text": "To take a simple example: if I put you or me — and we put a needle in our arms and we fix a little bottle with a general anesthetic to it — and we sit there in the deepest and clearest state of meditation that is available to us, and you just let this general anesthetic drip in, the lights go out. You know, all lights go out. And everything we know scientifically really converges on the simple insight that a functioning brain, in beings like us, is a necessary condition for any kind of conscious experience at all. And human beings — there's this new research on terror management and strategies of mortality denial that people have — human beings have the problem that we have this toxic self-knowledge,"
+        },
+        {
+            "start": "01:18:18",
+            "end": "01:19:12",
+            "speaker": "Thomas Metzinger",
+            "text": "— that we discover at about the age of eight, when children discover that all human beings die. And we spend a lot of our life just trying to build anxiety buffers to manage this blow to our self-esteem: that we are actually finite beings and that our predictive horizon will eventually shrink to zero. So we're always battling this chasm, as I call it, this deep wound in our self-model. We have this long biological imperative that says you must survive under all conditions — millions of years have burned it into our nervous systems — and we have this brand-new, high-level cognitive self-model that tells us: no,"
+        },
+        {
+            "start": "01:19:12",
+            "end": "01:20:00",
+            "speaker": "Thomas Metzinger",
+            "text": "— you will disappear, like billions that have disappeared before you, that were walking over this planet. Nobody knows where their graves are, what their names were. We just disappear — as a radical form of impermanence here. And of course a lot of the spiritual traditions, and also these reports about mystical experience, serve the psychological function of mortality denial for most of us. This whole idea of a path of progress, the idea of a philosophia perennis, that in all traditions there is an invariant core of clear white light or something like this — that is actually a form of mortality denial."
+        },
+        {
+            "start": "01:20:00",
+            "end": "01:20:45",
+            "speaker": "Thomas Metzinger",
+            "text": "My suspicion is that for many of us and many spiritual practitioners, the motivation to actually keep investigating, to keep practicing, is that this is the strategy for mortality denial that they have found. That is the strategy of developing some motivating belief system that leaves a little, little back door open. That's also the problem I have with Harding. You can tell me what your take is on this, but this standard idea that many people subscribe to is: yes, of course, I don't deny any of modern science, evolution, neuroscience. The little one will go. Nothing will be left. This brain will fall apart. There will be no conscious experience."
+        },
+        {
+            "start": "01:20:45",
+            "end": "01:21:20",
+            "speaker": "Thomas Metzinger",
+            "text": "But the eternal witness is timeless, and has always been there, is always there. If you put that general anesthetic into your arm, that eternal witness, if you experience it, also disappears. Very quickly. Yeah, I noticed you are a fan of transcendental napping also. You have developed a special relationship to sleep — maybe you want to tell us about this. But what is your view on this whole issue of mortality?"
+        },
+        {
+            "start": "01:21:20",
+            "end": "01:22:46",
+            "speaker": "Michael Taft",
+            "text": "Well, I think that the thing you're pointing out — which is that people are creating a model, by hook or by crook, that one way or another, no matter what, somehow they can slip through the eye of the needle and live forever in their witness, or even kind of secretly in their ego state — this is very, very common, right? That's what everyone's doing. And I think we know from all the experiments and the psychological research that it's a very strong motivation, denial of death, and that you and I are now going to experience all kinds of microaggressions against us from listeners, because they're so mad that we've interrupted their denial-of-death strategy. So to me, that's all stunningly clear. However — and of course I'm far too wise to ever fall prey to that in any way —"
+        },
+        {
+            "start": "01:22:46",
+            "end": "01:23:35",
+            "speaker": "Michael Taft",
+            "text": "— the door that I always leave open is the one, in a way, that we've been talking about the whole time: which is that science can't really tell us anything about deep reality. We might be running in a hypervisor on a substrate somewhere in a simulation, because when we look at even the world around us, all we see is simulation. There's just simulation upon simulation — in our senses, in our model of our senses, in our model of ourselves. And so maybe — and this is just in a totally speculative manner — maybe even all the science we're getting is about some level of the simulation, but who knows what's beyond that. That's the little window for me. I can't tell if that's just total death denial or if it's a cosmic question mark. I don't know. But I do tend to always put that caveat on the end of any scientific sentence that I read, like: probably, or as best as we know."
+        },
+        {
+            "start": "01:23:35",
+            "end": "01:24:45",
+            "speaker": "Thomas Metzinger",
+            "text": "Yeah, well, of course there are centuries of philosophical thinking about idealism and this direction. And one of the most beautiful thoughts that human beings have created is that the world, you and I, might be thoughts in the mind of God. That's another way of formulating the simulation hypothesis. So it could actually be that this universe — there's a very interesting passage in the dialogue between Krishnamurti and David Bohm where Krishnamurti listens and actually says: yes, that must be it, the whole universe is in meditation always. So if that is true — I mean, that is extreme speculative metaphysics here, something I actually abhor — but if the universe or God is in meditation, then it's very obvious that there are these entities that are disturbing its peace, like Michael Taft. The Michael Taft thought is a particularly persistent thing that comes into the mind of God and disturbs his peace, right? It's not very enlightened, this God that's meditating."
+        },
+        {
+            "start": "01:24:46",
+            "end": "01:24:49",
+            "speaker": "Michael Taft",
+            "text": "And your fault."
+        },
+        {
+            "start": "01:24:50",
+            "end": "01:25:04",
+            "speaker": "Thomas Metzinger",
+            "text": "I mean, you get the general idea. The question would then be: if this is a simulation and we are something like thoughts in the mind of God, maybe our contribution would be to let ourselves go, right?"
+        },
+        {
+            "start": "01:25:04",
+            "end": "01:25:34",
+            "speaker": "Michael Taft",
+            "text": "Indeed. And in fact, any simulation hypothesis, whether it's true or not: A, you can't prove whether it's true or not, and B, it doesn't make any difference anyway to anything that would matter. So in a way it's a useless hypothesis. Yet in another way, there's a form of intellectual honesty there, in just recognizing that we know what we know about what we know, but we should also remember that we don't know what we don't know about what we don't know."
+        },
+        {
+            "start": "01:25:34",
+            "end": "01:25:38",
+            "speaker": "Thomas Metzinger",
+            "text": "This is Rumsfeld, isn't it? Unknown unknowns."
+        },
+        {
+            "start": "01:25:38",
+            "end": "01:25:41",
+            "speaker": "Michael Taft",
+            "text": "That's right."
+        },
+        {
+            "start": "01:25:42",
+            "end": "01:26:42",
+            "speaker": "Thomas Metzinger",
+            "text": "That is a question that I have not come to terms with. I have a very allergic reaction when people seriously do this illusion talk, veil of Maya, it's all not real. Because, coming from Germany, I think the suffering in the gas chambers of Auschwitz was real. And it would be very hard for me to let go of the idea that this is actually something that happened in the real world. I think in a certain sense it would be a total lack of compassion. It would be deeply unethical to play with ideas that in the end say: yeah, but it was just a thought in the mind of God, or it is just a level of reality. I don't know what you think about this, but I find it very dangerous if there's this complacent \"it's all an illusion\" talk."
+        },
+        {
+            "start": "01:26:42",
+            "end": "01:27:31",
+            "speaker": "Thomas Metzinger",
+            "text": "And I always have the feeling suffering also — animal suffering — must be taken seriously. Because for the creatures living through it, it's the most real thing imaginable. And there must be something wrong with any general picture that tries to get us out of the suffering in this world by saying: yeah, but ultimately, you know — and then you have a clever philosophical story. And there are many of these stories, and some are very clever, that say it's just a dream. Is suffering a dream?"
+        },
+        {
+            "start": "01:27:31",
+            "end": "01:28:36",
+            "speaker": "Michael Taft",
+            "text": "You know, Thomas, this is a beautiful question. And I want to make clear that what I'm saying is not that — at least not intended to say that, even if I'm accidentally stumbling into some philosophical conundrum here. But certainly, looking into the eyes of an animal, their suffering is absolutely real. And I think the suffering of beings is real. So I'm not making a statement that there isn't a real external world out there. But instead, what I'm trying to say is that on the other side of that, we don't know how deep deep reality goes. That's really the only question. Yes — for the real world that's out there, science is the best way we've found to figure out what's really there. It's what we have to talk about. I mean, it's very hard to have any sort of conversation about anything else that actually means anything. And so, yeah, I have very little, maybe no patience for any discussion that starts to deny that people are suffering or animals are suffering, or that the world isn't real. I think that that's just the sine qua non of spiritual bypassing."
+        },
+        {
+            "start": "01:28:37",
+            "end": "01:29:07",
+            "speaker": "Michael Taft",
+            "text": "So to me, that's not what I'm trying to say. Rather simply that — let me put it in another way. What if in 100 years we discover a whole new kind of science?"
+        },
+        {
+            "start": "01:29:00",
+            "end": "01:29:02",
+            "speaker": "Thomas Metzinger",
+            "text": "Yes."
+        },
+        {
+            "start": "01:29:02",
+            "end": "01:29:07",
+            "speaker": "Michael Taft",
+            "text": "One that doesn't deny our current science, but instead vastly expands it to areas that we had no idea even existed. That's more the direction. And that to me is just being appropriately humble about even our best knowledge."
+        },
+        {
+            "start": "01:29:07",
+            "end": "01:30:00",
+            "speaker": "Thomas Metzinger",
+            "text": "Right. And it's important to say this. The scientific method — this boring, incremental procedure of gathering data and falsifying hypotheses, of evidence and rational argument — is the best thing humankind has discovered so far. Which doesn't mean that we will not discover better things in the future, better procedures of gaining knowledge. And maybe we will discover that there has always been another tradition of ineffable and unverifiable access to knowledge, namely knowledge by identification — like by becoming one with the world, or by becoming one with your enemy's suffering, or something like that. This is not immune to criticism in any way. It's not verifiable. But maybe some future science could help us to transform"
+        },
+        {
+            "start": "01:30:00",
+            "end": "01:30:58",
+            "speaker": "Thomas Metzinger",
+            "text": "— this kind of knowledge, you know, experiential knowledge, into something that can also have value in the public space, or which can be somehow elevated to a higher level of certainty or something. Right now, the reports of mystics, or people who report special states of consciousness, are not something that anybody is forced to take seriously — at least if they make strong metaphysical conclusions from their own experience. They are just that, you know: conscious states. But one can imagine maybe that in the future there's a merging of third-person and first-person methods that creates a way of epistemic progress that hasn't been there before. Right now we have a planet in utter crisis. We have a very serious situation for mankind as a whole, as we all know. The question is if anything — if anything can still help us in this situation."
+        },
+        {
+            "start": "01:30:58",
+            "end": "01:31:02",
+            "speaker": "Michael Taft",
+            "text": "And on that cheery note…"
+        },
+        {
+            "start": "01:31:02",
+            "end": "01:31:06",
+            "speaker": "Thomas Metzinger",
+            "text": "Here's your gloomy European for you."
+        },
+        {
+            "start": "01:31:06",
+            "end": "01:31:17",
+            "speaker": "Michael Taft",
+            "text": "I'm about to get kicked out of the studio here, so we perforce must bring this to an end. Thank you so much, Thomas. I hope I can entice you back into another one of these sometime in the future."
+        },
+        {
+            "start": "01:31:17",
+            "end": "01:31:22",
+            "speaker": "Thomas Metzinger",
+            "text": "Thank you very much. It has been great, man."
+        },
+        {
+            "start": "01:31:37",
+            "end": "01:31:40",
+            "speaker": "Michael Taft",
+            "text": "That's it for this episode of Deconstructing Yourself."
+        }
+    ]
+}

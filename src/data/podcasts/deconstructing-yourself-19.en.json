@@ -1,0 +1,1993 @@
+{
+  "title": "Deconstructing Dependent Arising, with Leigh Brasington",
+  "url": "https://deconstructingyourself.com/dy-019-deconstructing-dependent-arising-with-guest-leigh-brasington.html",
+  "guest": "Leigh Brasington",
+  "transcript": [
+    {
+      "start": "00:00:25",
+      "end": "00:00:34",
+      "speaker": "Michael Taft",
+      "text": "Welcome to Deconstructing Yourself, the podcast for modern mutants fascinated by mindfulness, meditation, awakening, and more."
+    },
+    {
+      "start": "00:00:35",
+      "end": "00:01:05",
+      "speaker": "Michael Taft",
+      "text": "My name is Michael W. Taft, your host on the podcast, and in this episode I'm speaking with Leigh Brasington on the topic of dependent arising. Dependent arising, also called dependent origination, is a Buddhist theory of reality that is famously complex, arcane, and fascinating. Leigh Brasington has been practicing meditation for decades and is the senior American student of the late Venerable Ayya Khema."
+    },
+    {
+      "start": "00:01:05",
+      "end": "00:01:20",
+      "speaker": "Michael Taft",
+      "text": "Leigh teaches retreats in Europe and North America and is the author of the book Right Concentration: A Practical Guide to the Jhanas. And now, without further ado, I give you the episode that I call Deconstructing Dependent Arising."
+    },
+    {
+      "start": "00:01:24",
+      "end": "00:01:28",
+      "speaker": "Michael Taft",
+      "text": "Leigh, welcome to Deconstructing Yourself yet again."
+    },
+    {
+      "start": "00:01:28",
+      "end": "00:01:32",
+      "speaker": "Leigh Brasington",
+      "text": "Oh, thank you. It's very nice to be back yet again."
+    },
+    {
+      "start": "00:01:32",
+      "end": "00:01:54",
+      "speaker": "Michael Taft",
+      "text": "It's good to have you on the show, as always. I just want to point out to the audience that we have actually attempted to record this particular show once before, and because of various glitches and problems, we're going to record it again. So this is our second shot at talking about dependent origination."
+    },
+    {
+      "start": "00:01:54",
+      "end": "00:02:02",
+      "speaker": "Leigh Brasington",
+      "text": "It's an extraordinarily complex topic. It's really hard to get it down."
+    },
+    {
+      "start": "00:02:03",
+      "end": "00:02:29",
+      "speaker": "Michael Taft",
+      "text": "So dependent origination is kind of an interesting, funny thing in Buddhist theory, because it's really complicated. No two people appear to agree about what it even says or means. And I know a lot of practitioners just sort of set it on the shelf, like, well, maybe someday I'll figure that out, or someday I'll deal with dependent origination, but for now that's just beyond me."
+    },
+    {
+      "start": "00:02:29",
+      "end": "00:02:33",
+      "speaker": "Leigh Brasington",
+      "text": "Yeah, this is pretty common, because it's cryptic."
+    },
+    {
+      "start": "00:02:33",
+      "end": "00:02:40",
+      "speaker": "Leigh Brasington",
+      "text": "The most common presentation is of the 12 items that are linked together, and it really is weird. Caroline Rhys Davids, one of the early translators of the suttas, referred to it as a curious old rune."
+    },
+    {
+      "start": "00:02:40",
+      "end": "00:03:10",
+      "speaker": "Leigh Brasington",
+      "text": "And you look at it just at first glance, it doesn't make any sense. Why do you have birth right before the end? Why doesn't birth come first? And then there's tons of other stuff that just doesn't really make any sense. And to get an understanding of what the Buddha was actually talking about is actually quite difficult, even if you read everything in the suttas about it, because it's been worked over so many times that the original teaching is actually quite hard to dig out."
+    },
+    {
+      "start": "00:03:10",
+      "end": "00:03:40",
+      "speaker": "Michael Taft",
+      "text": "Okay, so we're going to attempt to dig out at least some of that in this program. But let's start with a description of what we're even talking about, assuming someone has never read it before and is not even familiar with what a sutta is."
+    },
+    {
+      "start": "00:03:40",
+      "end": "00:04:10",
+      "speaker": "Leigh Brasington",
+      "text": "Okay, so a sutta would be a discourse or sermon from the Buddha or one of his main disciples. So these would have supposedly occurred between about 450 and 404 BC, in this time frame. Now, most likely some of the material we have does come from that time period, and some of it was"
+    },
+    {
+      "start": "00:04:10",
+      "end": "00:04:40",
+      "speaker": "Leigh Brasington",
+      "text": "composed, shall we say, over a hundred years following that, with words being stuck in the Buddha's mouth. Nothing like, you know, trying to make your little essay sound really good, like claiming it was spoken by the Buddha. So in these discourses, these sermons, it actually says that paticca samuppada, which we translate as dependent origination or dependent arising, is the Dharma."
+    },
+    {
+      "start": "00:04:40",
+      "end": "00:04:48",
+      "speaker": "Leigh Brasington",
+      "text": "One who sees the Dharma sees dependent origination; one who sees dependent origination sees the Dharma."
+    },
+    {
+      "start": "00:04:48",
+      "end": "00:04:49",
+      "speaker": "Michael Taft",
+      "text": "Dharma being?"
+    },
+    {
+      "start": "00:04:49",
+      "end": "00:04:54",
+      "speaker": "Leigh Brasington",
+      "text": "The teachings of the Buddha, the essence of what he was trying to teach."
+    },
+    {
+      "start": "00:04:54",
+      "end": "00:04:56",
+      "speaker": "Michael Taft",
+      "text": "Or just plain \"the truth\"."
+    },
+    {
+      "start": "00:04:56",
+      "end": "00:04:58",
+      "speaker": "Leigh Brasington",
+      "text": "The truth, with two capital T's."
+    },
+    {
+      "start": "00:04:58",
+      "end": "00:04:58",
+      "speaker": "Michael Taft",
+      "text": "Yes."
+    },
+    {
+      "start": "00:04:58",
+      "end": "00:05:04",
+      "speaker": "Leigh Brasington",
+      "text": "So what is it? Well, basically it says that things arise dependent on other things."
+    },
+    {
+      "start": "00:05:05",
+      "end": "00:05:35",
+      "speaker": "Leigh Brasington",
+      "text": "In later Buddhism this came to be synonymous with what's called emptiness, that nothing stands alone. When you look at a table, it doesn't contain any tableness. It arises dependent on, well, if it's a wooden table, trees, and somebody cutting down the trees, and somebody milling the lumber, and somebody assembling it into a shape, and us designating it as a table."
+    },
+    {
+      "start": "00:05:35",
+      "end": "00:05:44",
+      "speaker": "Michael Taft",
+      "text": "And presumably you could take apart the legs and maybe the sections of the table, and then you'd end up with a pile of parts, but nowhere in that pile of parts is a table."
+    },
+    {
+      "start": "00:05:44",
+      "end": "00:05:54",
+      "speaker": "Leigh Brasington",
+      "text": "Correct. And you wouldn't even have to take it apart. If there was a flood and it came floating by, it's going to be a life raft. You just immediately conceive of it in a different way."
+    },
+    {
+      "start": "00:05:55",
+      "end": "00:06:03",
+      "speaker": "Michael Taft",
+      "text": "So, so far what we understand is that dependent arising is a theory in Buddhist scripture, correct?"
+    },
+    {
+      "start": "00:06:04",
+      "end": "00:06:12",
+      "speaker": "Leigh Brasington",
+      "text": "It's as close as we get to metaphysics in Buddhism. Early Buddhism. And it's going to take a little while to unpack this."
+    },
+    {
+      "start": "00:06:12",
+      "end": "00:06:26",
+      "speaker": "Michael Taft",
+      "text": "And so why should we bother to unpack it? Like, why should I care if, let's say, I'm not interested in the religiosity of Buddhism? What do I get out of looking into this as someone who's interested in meditation?"
+    },
+    {
+      "start": "00:06:27",
+      "end": "00:06:36",
+      "speaker": "Leigh Brasington",
+      "text": "Well, one of the other things besides a table that arises dependently is how you react to your sensory input."
+    },
+    {
+      "start": "00:06:37",
+      "end": "00:07:07",
+      "speaker": "Leigh Brasington",
+      "text": "And basically what the Buddha was teaching was for you to change your reactions. He wasn't able to prevent all the unpleasant things that happen in the world from happening, but he was able to teach a way so that when something unpleasant happens, you don't get so freaked out. And part of what enables you to not get so freaked out is understanding the dependently originating nature of your reactions."
+    },
+    {
+      "start": "00:07:07",
+      "end": "00:07:09",
+      "speaker": "Michael Taft",
+      "text": "Of your own experience."
+    },
+    {
+      "start": "00:07:09",
+      "end": "00:07:24",
+      "speaker": "Leigh Brasington",
+      "text": "Of your own experience, yeah. Not only the dependently originating nature of your sensory input, but particularly the dependently originating nature of how you react to your sensory input."
+    },
+    {
+      "start": "00:07:24",
+      "end": "00:07:37",
+      "speaker": "Michael Taft",
+      "text": "Okay, good. So if we spend the time to look into this, we're going to understand a little more richly our own experience, our own reactions, and presumably"
+    },
+    {
+      "start": "00:07:37",
+      "end": "00:07:39",
+      "speaker": "Michael Taft",
+      "text": "even what we are or who we are."
+    },
+    {
+      "start": "00:07:39",
+      "end": "00:07:42",
+      "speaker": "Leigh Brasington",
+      "text": "Right, exactly. That's the whole idea."
+    },
+    {
+      "start": "00:07:42",
+      "end": "00:07:46",
+      "speaker": "Michael Taft",
+      "text": "Okay, great. I'm ready to buy in. Let's go there."
+    },
+    {
+      "start": "00:07:46",
+      "end": "00:07:58",
+      "speaker": "Leigh Brasington",
+      "text": "All right. So if we look at what we could say are the basic teachings of Buddhism, and statements called the Four Noble Truths, the first truth is that dukkha happens."
+    },
+    {
+      "start": "00:07:59",
+      "end": "00:08:08",
+      "speaker": "Leigh Brasington",
+      "text": "They used to put that on bumper stickers. They didn't use a Pali word, they used a four-letter Anglo-Saxon word. But it's the same thing: things go wrong."
+    },
+    {
+      "start": "00:08:09",
+      "end": "00:08:23",
+      "speaker": "Leigh Brasington",
+      "text": "And the Buddha just simply points out: hey, things go wrong. You incarnate in human form, you're going to experience things going wrong, right? The second truth is that dukkha arises dependent on craving."
+    },
+    {
+      "start": "00:08:24",
+      "end": "00:08:52",
+      "speaker": "Leigh Brasington",
+      "text": "Okay, so we have dependent origination happening right here. What the Buddha is pointing out is that a necessary condition for the arising of the experience \"this is bad, this shouldn't be happening, this is unsatisfactory, I hate this, this is a bummer\" — a necessary condition for that sort of mental functioning to arise in your mind is that there is some craving."
+    },
+    {
+      "start": "00:08:53",
+      "end": "00:08:55",
+      "speaker": "Michael Taft",
+      "text": "You want it to be different in some way."
+    },
+    {
+      "start": "00:08:55",
+      "end": "00:09:01",
+      "speaker": "Leigh Brasington",
+      "text": "Yeah, exactly. Craving to get what you don't have, craving to keep what you do have,"
+    },
+    {
+      "start": "00:09:01",
+      "end": "00:09:20",
+      "speaker": "Leigh Brasington",
+      "text": "craving to not get what you don't want to have, craving to get rid of what you don't want that you do have, etc. So this craving is a necessary condition. And so now we have the dukkha, the unpleasantness, arising dependent"
+    },
+    {
+      "start": "00:09:20",
+      "end": "00:09:22",
+      "speaker": "Leigh Brasington",
+      "text": "on craving."
+    },
+    {
+      "start": "00:09:22",
+      "end": "00:09:52",
+      "speaker": "Leigh Brasington",
+      "text": "So here's our first example of it. Now, the cool thing about necessary conditions, which apparently wasn't really widely known at the time of the Buddha, was that if you can get rid of the necessary condition, then the thing that arises dependent on it doesn't arise. And this is the third noble truth: if you don't want any dukkha, don't crave. This is like, if you don't want the light on, turn off the light switch. The light switch is a necessary condition for the light to be on."
+    },
+    {
+      "start": "00:09:52",
+      "end": "00:10:00",
+      "speaker": "Leigh Brasington",
+      "text": "It's not a sufficient condition. You've got to have the power plant pumping out electricity, you've got to have the wires intact and the light switch on, but"
+    },
+    {
+      "start": "00:10:00",
+      "end": "00:10:18",
+      "speaker": "Leigh Brasington",
+      "text": "even that's not the cause of the light. The cause of the light is electrons getting excited and pumping out photons. But if you just want to turn off the light, you don't need to know any of that. You just need to know where the light switch is and turn it off."
+    },
+    {
+      "start": "00:10:18",
+      "end": "00:10:24",
+      "speaker": "Michael Taft",
+      "text": "Yeah, so if you want to break a chain, you really only need to remove one link, not all the links."
+    },
+    {
+      "start": "00:10:24",
+      "end": "00:10:30",
+      "speaker": "Leigh Brasington",
+      "text": "Exactly. And this is what the teaching on dependent origination at its heart is really about."
+    },
+    {
+      "start": "00:10:30",
+      "end": "00:10:46",
+      "speaker": "Michael Taft",
+      "text": "But saying I don't want to experience any unsatisfactoriness, and actually stopping craving, are two different things. It can sound a little bit like, if you don't want to have a headache, just cut off your head. I mean, how do I not crave stuff?"
+    },
+    {
+      "start": "00:10:46",
+      "end": "00:11:00",
+      "speaker": "Leigh Brasington",
+      "text": "Right, exactly. And that's what the fourth of these noble truths is all about, which is the path of practice that leads to the end of dukkha. But actually, it's the path of practice that teaches you how to stop craving."
+    },
+    {
+      "start": "00:11:00",
+      "end": "00:11:07",
+      "speaker": "Leigh Brasington",
+      "text": "And this path of practice, what it uncovers is the dependently originated nature of the universe."
+    },
+    {
+      "start": "00:11:07",
+      "end": "00:11:14",
+      "speaker": "Michael Taft",
+      "text": "And could we also say the empty nature of the universe, if we were to speak sort of like later Buddhists?"
+    },
+    {
+      "start": "00:11:14",
+      "end": "00:11:30",
+      "speaker": "Leigh Brasington",
+      "text": "Yes. Nagarjuna, who lived in the second century AD, so we're saying 500 years after the Buddha, actually in his Mulamadhyamakakarika, the fundamental verses on the middle way, explicitly points out that everything is dependently"
+    },
+    {
+      "start": "00:11:30",
+      "end": "00:11:41",
+      "speaker": "Leigh Brasington",
+      "text": "originated, everything is empty. In other words, he points to the fact that they're exactly the same thing, just different words, just different fingers pointing at the same moon."
+    },
+    {
+      "start": "00:11:42",
+      "end": "00:11:58",
+      "speaker": "Michael Taft",
+      "text": "Okay, so just to back up a little bit, you've been talking about dependent origination, but then you just told us the Four Noble Truths. So I still am not hearing the dependent origination."
+    },
+    {
+      "start": "00:11:58",
+      "end": "00:12:12",
+      "speaker": "Leigh Brasington",
+      "text": "Okay, so the Four Noble Truths are, as my teacher Ayya Khema used to say, dependent origination in telegram style, or as we'd say today, dependent origination in Twitter style."
+    },
+    {
+      "start": "00:12:12",
+      "end": "00:12:22",
+      "speaker": "Leigh Brasington",
+      "text": "So dependent origination in its most general form is that things arise dependent on other things. Nothing stands alone. It's explicitly laid out as—"
+    },
+    {
+      "start": "00:12:22",
+      "end": "00:12:25",
+      "speaker": "Michael Taft",
+      "text": "Isn't it like a list of 12 things?"
+    },
+    {
+      "start": "00:12:25",
+      "end": "00:12:42",
+      "speaker": "Leigh Brasington",
+      "text": "—a list of varying numbers of things, the most common example being 12 things. The 12 is probably a later development. The Buddha might be quite surprised to find out that there were 12 in the list. I'm not sure that the 12 showed up during his lifetime."
+    },
+    {
+      "start": "00:12:42",
+      "end": "00:12:52",
+      "speaker": "Michael Taft",
+      "text": "Well, just for our edification, because most people encounter it as a list of 12 things, at least in America. So what's the list?"
+    },
+    {
+      "start": "00:12:52",
+      "end": "00:12:59",
+      "speaker": "Leigh Brasington",
+      "text": "All right. So old age, sickness, and death, which are dukkha, arise dependent on birth."
+    },
+    {
+      "start": "00:13:00",
+      "end": "00:13:16",
+      "speaker": "Leigh Brasington",
+      "text": "Which is pretty obvious. If you don't get born, you don't experience any old age, sickness, or death. Birth arises dependent on becoming. Becoming we could sort of look at as like the urge that Mother Nature has to reproduce."
+    },
+    {
+      "start": "00:13:16",
+      "end": "00:13:20",
+      "speaker": "Michael Taft",
+      "text": "So birth arises out of the urge to reproduce. Becoming."
+    },
+    {
+      "start": "00:13:21",
+      "end": "00:13:24",
+      "speaker": "Leigh Brasington",
+      "text": "Becoming arises dependent on clinging."
+    },
+    {
+      "start": "00:13:25",
+      "end": "00:13:32",
+      "speaker": "Leigh Brasington",
+      "text": "Clinging arises dependent on craving. So clinging is, I've got it."
+    },
+    {
+      "start": "00:13:32",
+      "end": "00:13:52",
+      "speaker": "Leigh Brasington",
+      "text": "But you've got to actually crave it to really want to hang on to it. If you have a pair of worn-out socks, got holes in them, and somebody says, hey, can I have those socks? You're like, sure, fine. You're not craving them. But, you know, your new electric car, somebody says, hey, can I have your car? It's like, no, man."
+    },
+    {
+      "start": "00:13:52",
+      "end": "00:13:53",
+      "speaker": "Michael Taft",
+      "text": "How's your Leaf doing?"
+    },
+    {
+      "start": "00:13:53",
+      "end": "00:13:54",
+      "speaker": "Leigh Brasington",
+      "text": "No, I have a Bolt."
+    },
+    {
+      "start": "00:13:54",
+      "end": "00:13:55",
+      "speaker": "Michael Taft",
+      "text": "How's your Bolt doing?"
+    },
+    {
+      "start": "00:13:55",
+      "end": "00:13:56",
+      "speaker": "Leigh Brasington",
+      "text": "It's doing great."
+    },
+    {
+      "start": "00:13:56",
+      "end": "00:13:58",
+      "speaker": "Michael Taft",
+      "text": "How long have you had your Bolt?"
+    },
+    {
+      "start": "00:13:58",
+      "end": "00:14:02",
+      "speaker": "Leigh Brasington",
+      "text": "I got it in August. What's that, seven months? Six and a half months?"
+    },
+    {
+      "start": "00:14:02",
+      "end": "00:14:06",
+      "speaker": "Michael Taft",
+      "text": "And you're completely pleased with your car so far?"
+    },
+    {
+      "start": "00:14:06",
+      "end": "00:14:09",
+      "speaker": "Leigh Brasington",
+      "text": "So good. Yeah, it's really, really nice."
+    },
+    {
+      "start": "00:14:09",
+      "end": "00:14:11",
+      "speaker": "Michael Taft",
+      "text": "It is a dependently originated phenomenon."
+    },
+    {
+      "start": "00:14:11",
+      "end": "00:14:24",
+      "speaker": "Leigh Brasington",
+      "text": "Yes. And my love of it is dependent on the fact that it's taking me where I wanted to go, it's green, it's comfortable, it's fun to drive, it's not destroying the atmosphere. And it's green."
+    },
+    {
+      "start": "00:14:24",
+      "end": "00:14:29",
+      "speaker": "Michael Taft",
+      "text": "Yeah, exactly. Okay, so you've got a little bit of craving for your Bolt."
+    },
+    {
+      "start": "00:14:29",
+      "end": "00:14:32",
+      "speaker": "Leigh Brasington",
+      "text": "Right. I have a little bit of clinging for my Bolt."
+    },
+    {
+      "start": "00:14:32",
+      "end": "00:14:53",
+      "speaker": "Leigh Brasington",
+      "text": "Right? Because there's things about it that give me pleasure. Now, that's the whole key, all right? The clinging arises dependent on craving. Craving arises dependent on, well, the word in Pali is vedana. We could translate it as valence, but maybe that's a little too obscure."
+    },
+    {
+      "start": "00:14:53",
+      "end": "00:14:56",
+      "speaker": "Michael Taft",
+      "text": "Valence as in emotional tone?"
+    },
+    {
+      "start": "00:14:56",
+      "end": "00:15:00",
+      "speaker": "Leigh Brasington",
+      "text": "Yes, but not so much emotional tone as the tone of the input."
+    },
+    {
+      "start": "00:15:00",
+      "end": "00:15:02",
+      "speaker": "Michael Taft",
+      "text": "Okay. Hedonic tone, perhaps."
+    },
+    {
+      "start": "00:15:02",
+      "end": "00:15:07",
+      "speaker": "Leigh Brasington",
+      "text": "Okay. And there are three possibilities: pleasant, unpleasant, neutral."
+    },
+    {
+      "start": "00:15:08",
+      "end": "00:15:17",
+      "speaker": "Leigh Brasington",
+      "text": "That's it. You know, when you get a sensory input, it's going to generate either a pleasant, unpleasant, or neutral reaction."
+    },
+    {
+      "start": "00:15:18",
+      "end": "00:15:25",
+      "speaker": "Leigh Brasington",
+      "text": "This is actually quite important to see. All right, so the vedana are dependent on sensory input."
+    },
+    {
+      "start": "00:15:25",
+      "end": "00:15:45",
+      "speaker": "Leigh Brasington",
+      "text": "When there's a sensory input, there is going to be a vedana. It's going to arise within the first tenth of a second after your sensory input. And you're going to start basically dealing with the sensory input. And the first cut that you make to deal with it is to put it in one of three categories: pleasant, unpleasant, neutral."
+    },
+    {
+      "start": "00:15:45",
+      "end": "00:15:54",
+      "speaker": "Michael Taft",
+      "text": "So as sensory input is streaming in, you're essentially judging it or having a reaction to it, saying, I like it, I don't like it, or I don't care."
+    },
+    {
+      "start": "00:15:54",
+      "end": "00:15:55",
+      "speaker": "Leigh Brasington",
+      "text": "Right. And the I like it,"
+    },
+    {
+      "start": "00:15:55",
+      "end": "00:16:20",
+      "speaker": "Leigh Brasington",
+      "text": "if you're not careful, results in craving to get it and keep it, and then you're clinging to it. Or if you don't like it, craving to make it go away, right? If it's unpleasant. Or if it's neutral, you can ignore it, because it seems like somebody handed most of us an instruction manual when we got born that said: seek pleasure, avoid pain, live forever."
+    },
+    {
+      "start": "00:16:21",
+      "end": "00:16:44",
+      "speaker": "Leigh Brasington",
+      "text": "And the vedana is how we seek pleasure and avoid pain. You can see this is actually an almost universal thing for life. If you have amoebas and you put some food in, they'll go towards it. You put some salt in where they are and they'll go away from it. So anything that's alive is responding to its environment either positively or negatively."
+    },
+    {
+      "start": "00:16:44",
+      "end": "00:16:51",
+      "speaker": "Michael Taft",
+      "text": "Yeah, there's approach and withdrawal behavior. And basically this is how evolution works, right?"
+    },
+    {
+      "start": "00:16:51",
+      "end": "00:17:03",
+      "speaker": "Leigh Brasington",
+      "text": "To maintain the species. And so it moves towards the stuff that supports, which we would call pleasant, the preservation of the species, and away from things that tend to bring it to an end."
+    },
+    {
+      "start": "00:17:03",
+      "end": "00:17:21",
+      "speaker": "Michael Taft",
+      "text": "Okay, so let's recap here. All right, so we have old age, sickness, and death that are dependent on being born, which is dependent on becoming, which is dependent on clinging, which is dependent on craving, which is dependent upon pleasant, unpleasant, neutral—"
+    },
+    {
+      "start": "00:17:21",
+      "end": "00:17:22",
+      "speaker": "Leigh Brasington",
+      "text": "Sensory contact."
+    },
+    {
+      "start": "00:17:22",
+      "end": "00:17:38",
+      "speaker": "Michael Taft",
+      "text": "Okay, so basically what's happening is a sensory contact, and then that's going to be followed by a vedana, pleasant, unpleasant, neutral. And if you're not careful, you'll wind up in craving and clinging and eventually dukkha."
+    },
+    {
+      "start": "00:17:38",
+      "end": "00:17:50",
+      "speaker": "Leigh Brasington",
+      "text": "So one of the things to know about dependent origination is that it's very important to get in there between the arising of the vedana and the arising of the craving."
+    },
+    {
+      "start": "00:17:50",
+      "end": "00:17:56",
+      "speaker": "Michael Taft",
+      "text": "That certainly matches my meditation experience, but let's just get the rest of the list first."
+    },
+    {
+      "start": "00:17:56",
+      "end": "00:18:08",
+      "speaker": "Leigh Brasington",
+      "text": "So your sensory contact depends upon having sense organs. And in Buddhism, there are six senses. There are the five external senses of seeing, hearing, smelling, tasting, touching,"
+    },
+    {
+      "start": "00:18:08",
+      "end": "00:18:14",
+      "speaker": "Leigh Brasington",
+      "text": "and then the sixth sense of the mind, so your thoughts and emotions and memories and intentions."
+    },
+    {
+      "start": "00:18:15",
+      "end": "00:18:31",
+      "speaker": "Leigh Brasington",
+      "text": "Your sense organs are dependent upon having a mind and body. At least that's how the phrase nama rupa is usually translated in dependent origination. It literally means name and form. And we could probably do a whole podcast discussing what that is."
+    },
+    {
+      "start": "00:18:31",
+      "end": "00:18:32",
+      "speaker": "Michael Taft",
+      "text": "Name and form, you bet."
+    },
+    {
+      "start": "00:18:32",
+      "end": "00:18:43",
+      "speaker": "Leigh Brasington",
+      "text": "Yeah, what's going on there. But often in dependent origination it's mind and body. In other words, you don't find senses wandering around, except if they're embedded."
+    },
+    {
+      "start": "00:18:43",
+      "end": "00:18:45",
+      "speaker": "Michael Taft",
+      "text": "Eyeballs rolling down the road."
+    },
+    {
+      "start": "00:18:45",
+      "end": "00:18:51",
+      "speaker": "Leigh Brasington",
+      "text": "Exactly. They're embedded in a mind and body. Mind and body is dependent on consciousness."
+    },
+    {
+      "start": "00:18:51",
+      "end": "00:19:01",
+      "speaker": "Leigh Brasington",
+      "text": "If you have a mind and body and you're not conscious, things are not working. And if you stay that way long, you're going to be dead. So you really need consciousness happening."
+    },
+    {
+      "start": "00:19:01",
+      "end": "00:19:15",
+      "speaker": "Leigh Brasington",
+      "text": "Consciousness requires an object, and the objects are referred to as sankharas. Anything that is manufactured is a sankhara. So you're a sankhara, I'm a sankhara, that table is a sankhara, my Bolt is a sankhara."
+    },
+    {
+      "start": "00:19:15",
+      "end": "00:19:16",
+      "speaker": "Michael Taft",
+      "text": "I was not manufactured."
+    },
+    {
+      "start": "00:19:16",
+      "end": "00:19:31",
+      "speaker": "Leigh Brasington",
+      "text": "You were put together out of pieces. Literally sankhara means making together. So you were made together out of cells. You were made together out of a sperm and an egg. So you're made together out of the food that you've eaten,"
+    },
+    {
+      "start": "00:19:31",
+      "end": "00:20:00",
+      "speaker": "Leigh Brasington",
+      "text": "the air that you breathe, the water you drink, yeah, it goes on and on and on. So consciousness requires this assembly. And an object is a sankhara, something that's manufactured. And sankharas arise dependent on ignorance, which sounds a little strange until you really begin to get into the depths of the Buddhist teachings and you start realizing that the things that are made together are actually"
+    },
+    {
+      "start": "00:20:00",
+      "end": "00:20:30",
+      "speaker": "Leigh Brasington",
+      "text": "what our mind is doing. They don't have independent existence. So we are ignoring the fact that actually there's just the whole universe, which is too big for our little pea brains to handle. So we chop it up into bits and pieces. We make it into these sankharas, the table and the Bolt and you and me. And that's what we become conscious of. The word for consciousness is vinnana, and it appears to mean in Pali"
+    },
+    {
+      "start": "00:20:30",
+      "end": "00:20:39",
+      "speaker": "Leigh Brasington",
+      "text": "divided knowing. So when you become conscious of something, you divide the thing you're conscious of out from the rest of,"
+    },
+    {
+      "start": "00:20:40",
+      "end": "00:21:10",
+      "speaker": "Leigh Brasington",
+      "text": "say, the visual field. If you just look at a scene and you see a horse, you've divided the horse out from all the trees and grass and fence and whatever else is there. So consciousness, divided knowing, does its dividing and comes up with these sankharas, these concoctions — fabrications is the best translation — which is happening out of ignorance."
+    },
+    {
+      "start": "00:21:10",
+      "end": "00:21:18",
+      "speaker": "Leigh Brasington",
+      "text": "That's the best way of interpreting the 12 links. The standard way of interpreting the 12 links is that this happens over three lifetimes."
+    },
+    {
+      "start": "00:21:18",
+      "end": "00:21:21",
+      "speaker": "Michael Taft",
+      "text": "Yeah, it's not about your own sensory experience, right?"
+    },
+    {
+      "start": "00:21:21",
+      "end": "00:21:40",
+      "speaker": "Leigh Brasington",
+      "text": "Well, in the middle there, it's about your own sensory experience, but the whole thing is given over three lifetimes. In your previous life, you were ignorant and you made karmic formations, which is what they translate sankhara as, which, okay, they're ignoring what the word means, but that's pretty typical of the"
+    },
+    {
+      "start": "00:21:40",
+      "end": "00:22:09",
+      "speaker": "Leigh Brasington",
+      "text": "commentaries. So in your previous life, you were ignorant, you acted in ways that now you've been incarnated in this life with a certain type of consciousness and mind and body. And then the real stuff happens. You get sensory input through your senses and it produces vedana. And if you're not careful, you get craving and clinging. That's this life. And then when you die, because you're clinging to still incarnate, you will become again in the future and be born and experience old age, sickness, and death in that life."
+    },
+    {
+      "start": "00:22:10",
+      "end": "00:22:14",
+      "speaker": "Michael Taft",
+      "text": "And who's the originator of this three-lifetime interpretation?"
+    },
+    {
+      "start": "00:22:14",
+      "end": "00:22:40",
+      "speaker": "Leigh Brasington",
+      "text": "We have no idea. There's no sutta, none of the, shall we say, 6,000 discourses from early Buddhism, that would be interpreted as three lifetimes. There is one that could be interpreted as two lifetimes. But the suttas are pretty much anonymous. So probably what happened was the two-lifetime interpretation got shoved in there after the Buddha's death, I would think."
+    },
+    {
+      "start": "00:22:40",
+      "end": "00:22:47",
+      "speaker": "Leigh Brasington",
+      "text": "And then it got expanded. The two-lifetime interpretation only has nine links, not 12."
+    },
+    {
+      "start": "00:22:47",
+      "end": "00:23:07",
+      "speaker": "Leigh Brasington",
+      "text": "And then it got expanded to the 12 links, and the three-lifetime model stuck in, and it becomes popular in the Abhidhamma, which is 200 or so years after the Buddha's death, and becomes the de facto standard for Theravadan Buddhism by the time of the Visuddhimagga, which is like 900 years after the Buddha's death."
+    },
+    {
+      "start": "00:23:07",
+      "end": "00:23:14",
+      "speaker": "Michael Taft",
+      "text": "Yeah, so we've got kind of this crazy, difficult-to-understand list, and then some even weirder interpretations."
+    },
+    {
+      "start": "00:23:14",
+      "end": "00:23:14",
+      "speaker": "Leigh Brasington",
+      "text": "Correct."
+    },
+    {
+      "start": "00:23:14",
+      "end": "00:23:17",
+      "speaker": "Michael Taft",
+      "text": "So how can we understand this in a way that's helpful?"
+    },
+    {
+      "start": "00:23:17",
+      "end": "00:23:35",
+      "speaker": "Leigh Brasington",
+      "text": "Well, one of the ways that's helpful for understanding it is to look at all the examples of dependent origination in those 6,000 suttas and try and find what we can that we might identify as early. Clearly there are layers in here, so we're doing some archaeological work."
+    },
+    {
+      "start": "00:23:35",
+      "end": "00:23:38",
+      "speaker": "Michael Taft",
+      "text": "Early, you mean versions of the list?"
+    },
+    {
+      "start": "00:23:38",
+      "end": "00:23:43",
+      "speaker": "Leigh Brasington",
+      "text": "Yeah, early versions of the list. Probably composed early in the Buddha's teaching career."
+    },
+    {
+      "start": "00:23:44",
+      "end": "00:24:10",
+      "speaker": "Leigh Brasington",
+      "text": "And there actually does turn out to be a version of it that is in a collection called the Atthakavagga, which most scholars say probably represents the very earliest strata of the Buddha's teachings. In fact, Gil Fronsdal has a translation of this, which also includes a nice commentary, in a book entitled The Buddha Before Buddhism."
+    },
+    {
+      "start": "00:24:10",
+      "end": "00:24:14",
+      "speaker": "Michael Taft",
+      "text": "Okay, so we're getting really early material here."
+    },
+    {
+      "start": "00:24:14",
+      "end": "00:24:38",
+      "speaker": "Leigh Brasington",
+      "text": "And so in the 11th sutta in the Sutta Nipata, book four, the list is: quarrels and disputes arise dependent upon what's endearing. Endearing arises dependent on what's desirable. Desirable arises dependent on what's pleasant and unpleasant. Pleasant and unpleasant arises dependent on contact. And contact arises dependent on nama rupa,"
+    },
+    {
+      "start": "00:24:39",
+      "end": "00:24:40",
+      "speaker": "Leigh Brasington",
+      "text": "name and form."
+    },
+    {
+      "start": "00:24:40",
+      "end": "00:24:52",
+      "speaker": "Leigh Brasington",
+      "text": "So this appears to be the earliest version of it. And you notice birth and becoming weren't in there, and the six senses weren't there, and consciousness, sankharas, and ignorance weren't there."
+    },
+    {
+      "start": "00:24:52",
+      "end": "00:24:56",
+      "speaker": "Michael Taft",
+      "text": "Yeah, it's a stripped-down list that seems easier to understand."
+    },
+    {
+      "start": "00:24:56",
+      "end": "00:25:10",
+      "speaker": "Leigh Brasington",
+      "text": "Yes, and it actually makes sense. And it's saying exactly the same thing using slightly different words. And so instead of dukkha, we've got quarrels and disputes. Instead of clinging, we've got endearing. Instead of craving, we've got desirable."
+    },
+    {
+      "start": "00:25:10",
+      "end": "00:25:18",
+      "speaker": "Leigh Brasington",
+      "text": "It is pleasant, it is unpleasant. We have exactly the same word for contact, and exactly the same phrase, nama rupa, for nama rupa."
+    },
+    {
+      "start": "00:25:19",
+      "end": "00:25:29",
+      "speaker": "Michael Taft",
+      "text": "Mind and body is how it's usually translated. Yeah, so this six-piece list seems not only easier to understand, but it's in more everyday language."
+    },
+    {
+      "start": "00:25:29",
+      "end": "00:25:30",
+      "speaker": "Leigh Brasington",
+      "text": "Yes, yes."
+    },
+    {
+      "start": "00:25:30",
+      "end": "00:25:36",
+      "speaker": "Michael Taft",
+      "text": "So the question that arises: how do we get from the six list to the 12 list? And why?"
+    },
+    {
+      "start": "00:25:36",
+      "end": "00:26:00",
+      "speaker": "Leigh Brasington",
+      "text": "And why. And we can see that the six list got some new words, which I just mentioned, and then other things got stuffed in there. You can actually watch the bits and pieces get stuffed in along the way until you wind up with the 12. You could actually put this in some sort of chronological order and see the development of it."
+    },
+    {
+      "start": "00:26:00",
+      "end": "00:26:18",
+      "speaker": "Leigh Brasington",
+      "text": "It turns out there's the Vedic hymn of creation. So the Vedas are part of Brahmanism, which was the dominant religious paradigm at the time of the Buddha. And so the Brahmins would memorize these chants, and one of the chants was the Vedic hymn of creation."
+    },
+    {
+      "start": "00:26:19",
+      "end": "00:26:49",
+      "speaker": "Leigh Brasington",
+      "text": "And it turns out the Vedic hymn of creation is very, very similar to the 12 links of dependent origination. And in fact, you can basically identify the 12 links of dependent origination in it. So the Buddha had a lot of disciples that were former Brahmins. In fact, I would guess that probably that was the caste that he drew the most from. The caste system at that time in India was not quite as rigid as it is today, even though it supposedly no longer exists in India,"
+    },
+    {
+      "start": "00:26:49",
+      "end": "00:26:59",
+      "speaker": "Leigh Brasington",
+      "text": "but it was just beginning to be formed at that time. But the Brahmins were the spiritual teachers, and so they were the ones probably most interested in spiritual teachings, like the Buddha was doing."
+    },
+    {
+      "start": "00:27:00",
+      "end": "00:27:17",
+      "speaker": "Leigh Brasington",
+      "text": "And so it would appear that the Buddha took the words from the hymn of creation, but gave them a different tune. He did this frequently. There are numerous words in Buddhism that he adopted from some other religion, but he changed the meaning slightly."
+    },
+    {
+      "start": "00:27:17",
+      "end": "00:27:23",
+      "speaker": "Michael Taft",
+      "text": "One example of something close to that that comes to mind for me is the Fire Sermon."
+    },
+    {
+      "start": "00:27:23",
+      "end": "00:27:24",
+      "speaker": "Leigh Brasington",
+      "text": "Yeah."
+    },
+    {
+      "start": "00:27:24",
+      "end": "00:27:30",
+      "speaker": "Michael Taft",
+      "text": "Because, of course, a Vedic Brahmin has a fire ceremony as the core ritual of the religion."
+    },
+    {
+      "start": "00:27:30",
+      "end": "00:27:43",
+      "speaker": "Michael Taft",
+      "text": "That's how you practice Vedic Brahmanism. And so the Buddha in that sermon takes the whole metaphor of doing a fire ceremony or doing fire worship and kind of flips it on its head."
+    },
+    {
+      "start": "00:27:43",
+      "end": "00:28:00",
+      "speaker": "Leigh Brasington",
+      "text": "Exactly. And so he did this all over. I mean, you could take a word like asava, which to the Jains meant the influxes, all your bad karma coming to fruition. And the Buddha goes back to the original meaning, which means intoxicants. We are intoxicated"
+    },
+    {
+      "start": "00:28:00",
+      "end": "00:28:10",
+      "speaker": "Leigh Brasington",
+      "text": "by sensual desire, by becoming, by ignorance. And we act stupid, like we're intoxicated, because of these."
+    },
+    {
+      "start": "00:28:10",
+      "end": "00:28:40",
+      "speaker": "Leigh Brasington",
+      "text": "So he does this frequently, and it appears that he just took his idea with the original words found in Sutta Nipata 411 and just put in the words that his Brahminical disciples were more familiar with, but changed the meaning of it. What happened, though, appears to be that the other words to that other song kept getting stuffed in there until we wind up with this curious old rune that"
+    },
+    {
+      "start": "00:28:40",
+      "end": "00:28:43",
+      "speaker": "Leigh Brasington",
+      "text": "really is difficult to make sense of."
+    },
+    {
+      "start": "00:28:43",
+      "end": "00:29:05",
+      "speaker": "Michael Taft",
+      "text": "So now we get to the crux of the matter. So we've kind of talked about the history of these spiritual documents and how they got unpacked over time, or how variously encrusted over time. But how do you make sense of it? What does it mean? What is the Buddha attempting to teach us with it?"
+    },
+    {
+      "start": "00:29:05",
+      "end": "00:29:10",
+      "speaker": "Leigh Brasington",
+      "text": "Well, I think there's several levels of meaning. If we're looking at the links,"
+    },
+    {
+      "start": "00:29:10",
+      "end": "00:29:25",
+      "speaker": "Leigh Brasington",
+      "text": "the most important is basically that you get sensory input, and that sensory input is going to generate pleasant, unpleasant, neutral vedana. How are you going to deal with those vedana?"
+    },
+    {
+      "start": "00:29:26",
+      "end": "00:29:29",
+      "speaker": "Leigh Brasington",
+      "text": "So you like some stuff, you don't like some other stuff."
+    },
+    {
+      "start": "00:29:29",
+      "end": "00:29:32",
+      "speaker": "Michael Taft",
+      "text": "Yeah, some stuff you can just ignore."
+    },
+    {
+      "start": "00:29:32",
+      "end": "00:29:56",
+      "speaker": "Leigh Brasington",
+      "text": "How are you going to deal with that? How are you going to respond to that? Normally we react to it, but what if you could respond to it? One of the big things that's come out of Buddhism is mindfulness. Mindfulness was very important to the Buddha. And it's nice to see that it's got a lot going on, but I don't think it gets the full measure in the secular world."
+    },
+    {
+      "start": "00:29:56",
+      "end": "00:30:00",
+      "speaker": "Leigh Brasington",
+      "text": "The second establishment of mindfulness — the first establishment is body, but the second"
+    },
+    {
+      "start": "00:30:00",
+      "end": "00:30:02",
+      "speaker": "Leigh Brasington",
+      "text": "establishment is vedana."
+    },
+    {
+      "start": "00:30:02",
+      "end": "00:30:04",
+      "speaker": "Michael Taft",
+      "text": "What do you mean, establishment?"
+    },
+    {
+      "start": "00:30:04",
+      "end": "00:30:12",
+      "speaker": "Leigh Brasington",
+      "text": "An arena in which to establish your mindfulness. So the first arena in which to establish your mindfulness is mindfulness of your body."
+    },
+    {
+      "start": "00:30:12",
+      "end": "00:30:13",
+      "speaker": "Michael Taft",
+      "text": "Right, okay."
+    },
+    {
+      "start": "00:30:13",
+      "end": "00:30:23",
+      "speaker": "Leigh Brasington",
+      "text": "And the second arena in which to establish your mindfulness is the vedana, the pleasant, unpleasant, neutral categorizations of your sensory input."
+    },
+    {
+      "start": "00:30:23",
+      "end": "00:30:27",
+      "speaker": "Michael Taft",
+      "text": "Right, so it's things to use your mindfulness on, essentially."
+    },
+    {
+      "start": "00:30:27",
+      "end": "00:30:30",
+      "speaker": "Leigh Brasington",
+      "text": "Right, yeah. Things to aim your mindfulness at."
+    },
+    {
+      "start": "00:30:30",
+      "end": "00:30:31",
+      "speaker": "Leigh Brasington",
+      "text": "Right, and so you need to be mindful of your vedana,"
+    },
+    {
+      "start": "00:30:31",
+      "end": "00:30:48",
+      "speaker": "Leigh Brasington",
+      "text": "know that they're happening. If you can be mindful of it, you have a chance to get in there between the arising of the vedana and the onset of craving. The vedana arises automatically when you get a sensory input. You don't have any control over that."
+    },
+    {
+      "start": "00:30:49",
+      "end": "00:31:10",
+      "speaker": "Leigh Brasington",
+      "text": "But you do have a chance to respond in ways that are wiser, other than just simply craving the pleasant or craving for the absence of the unpleasant. And so if you're mindful and you're seeing this is a pleasant vedana, then you've got a chance to deal with it in a healthy way. Now, this takes place very quickly."
+    },
+    {
+      "start": "00:31:10",
+      "end": "00:31:19",
+      "speaker": "Michael Taft",
+      "text": "Yes. So this is where concentration and a lot of clarity is necessary, to notice that moment of the arising of the craving and aversion."
+    },
+    {
+      "start": "00:31:20",
+      "end": "00:31:48",
+      "speaker": "Leigh Brasington",
+      "text": "Or actually to notice the moment of arising of the pleasant and the unpleasant. You want to get there. And so what you need to do is make a habit of recognizing, oh, I'm experiencing something pleasant. Oh, I'm experiencing something unpleasant. Oh, I'm experiencing something and I don't really care. So you want to be there, as opposed to suddenly realizing that you're swept away with craving and clinging."
+    },
+    {
+      "start": "00:31:48",
+      "end": "00:31:54",
+      "speaker": "Michael Taft",
+      "text": "Which is, as that pleasant and unpleasant unfolds, you start to get swept away in the—"
+    },
+    {
+      "start": "00:31:54",
+      "end": "00:32:07",
+      "speaker": "Leigh Brasington",
+      "text": "Right. What the Buddha actually talks about, he says that when there's the vedana, that's immediately followed by sanna, which is usually translated as perception, but I want to translate it as conceptualization."
+    },
+    {
+      "start": "00:32:08",
+      "end": "00:32:11",
+      "speaker": "Leigh Brasington",
+      "text": "In other words, there's something pleasant"
+    },
+    {
+      "start": "00:32:12",
+      "end": "00:32:32",
+      "speaker": "Leigh Brasington",
+      "text": "and you conceptualize what this thing is. This is my friend. That's Beethoven's Ninth Symphony. Whatever the sensory input is. And then what follows are, and we're back to this old word, sankhara, which usually gets translated as mental formations, but I would translate it as mental activities."
+    },
+    {
+      "start": "00:32:32",
+      "end": "00:32:40",
+      "speaker": "Michael Taft",
+      "text": "Okay, so there's a sensory input. It produces a vedana. You identify what the sensory input is by conceptualizing it."
+    },
+    {
+      "start": "00:32:40",
+      "end": "00:32:49",
+      "speaker": "Michael Taft",
+      "text": "And then you start thinking and emoting and having memories come up. And if you're not careful, it runs off and gets away from you."
+    },
+    {
+      "start": "00:32:49",
+      "end": "00:32:53",
+      "speaker": "Leigh Brasington",
+      "text": "And one of the sankharas that gets created is craving"
+    },
+    {
+      "start": "00:32:54",
+      "end": "00:32:57",
+      "speaker": "Leigh Brasington",
+      "text": "and/or clinging. And so instead,"
+    },
+    {
+      "start": "00:32:57",
+      "end": "00:33:08",
+      "speaker": "Leigh Brasington",
+      "text": "the Buddhists recommend you get in there. You experience the pleasant. You can identify it, and that's it. Don't go any further. Don't get lost in what comes up."
+    },
+    {
+      "start": "00:33:09",
+      "end": "00:33:12",
+      "speaker": "Michael Taft",
+      "text": "And from your viewpoint, how do you not go any further?"
+    },
+    {
+      "start": "00:33:13",
+      "end": "00:33:43",
+      "speaker": "Leigh Brasington",
+      "text": "Practice. Same way you get to Carnegie Hall: practice. In other words, one of the things is to get your mind in there so that you actually can see what's going on. The other is to recognize that the going further, when it leads to craving and clinging, actually does lead to dukkha. And this is getting some of the teaching of dependent origination. Particularly that, oh yeah, anytime I'm in dukkha, if the Buddha's correct, then there must have been some craving associated with it. And this is another establishment of mindfulness:"
+    },
+    {
+      "start": "00:33:43",
+      "end": "00:33:49",
+      "speaker": "Leigh Brasington",
+      "text": "mindfulness of the Four Noble Truths, actually in action. Recognizing, oh, I'm experiencing dukkha."
+    },
+    {
+      "start": "00:33:50",
+      "end": "00:33:54",
+      "speaker": "Leigh Brasington",
+      "text": "And then identifying what's the craving associated with this."
+    },
+    {
+      "start": "00:33:55",
+      "end": "00:34:05",
+      "speaker": "Leigh Brasington",
+      "text": "And then, can I let go of this craving? Now, identifying what the craving is, you can usually do that. But letting go of it is like, no, I really want that chocolate."
+    },
+    {
+      "start": "00:34:05",
+      "end": "00:34:06",
+      "speaker": "Michael Taft",
+      "text": "Yeah."
+    },
+    {
+      "start": "00:34:06",
+      "end": "00:34:25",
+      "speaker": "Leigh Brasington",
+      "text": "Okay. So you've got to be able to identify the dukkha, and you've got to be able to identify the craving, and see, okay, this is a relationship that's going on. And then sometimes you can let go of the craving and the dukkha disappears right away. Maybe the Buddha's onto something here. So you've got two things going on:"
+    },
+    {
+      "start": "00:34:25",
+      "end": "00:34:48",
+      "speaker": "Leigh Brasington",
+      "text": "one is really paying attention when you get pleasant, unpleasant, neutral sensory input, and the other is coming to understand that yeah, indeed, this craving is not a good thing, because it often leads to experiencing dukkha. All the dukkha I experience is arising due to some sort of craving. So it's the combination of those two that are what you're actually working on."
+    },
+    {
+      "start": "00:34:49",
+      "end": "00:34:54",
+      "speaker": "Michael Taft",
+      "text": "You keep using this phrase, then you see if you can let go of the craving."
+    },
+    {
+      "start": "00:34:54",
+      "end": "00:34:55",
+      "speaker": "Leigh Brasington",
+      "text": "Right."
+    },
+    {
+      "start": "00:34:55",
+      "end": "00:35:01",
+      "speaker": "Michael Taft",
+      "text": "Right? So there's like kind of a magic moment in there of, how do I let go of it?"
+    },
+    {
+      "start": "00:35:01",
+      "end": "00:35:13",
+      "speaker": "Leigh Brasington",
+      "text": "Well, the magic comes when you've got enough insight into the nature of reality. In particular, you're able to see the impermanent nature of that which you're craving,"
+    },
+    {
+      "start": "00:35:13",
+      "end": "00:35:23",
+      "speaker": "Leigh Brasington",
+      "text": "the ultimately unsatisfactory nature of that which you are craving, or the empty, coreless nature of that which you are craving."
+    },
+    {
+      "start": "00:35:24",
+      "end": "00:35:54",
+      "speaker": "Leigh Brasington",
+      "text": "The empty, coreless bit is probably the most difficult to see, but guess what? We have dependent origination to help us with this. So that nice new Chevy Bolt that you're craving is a dependently originated phenomenon. It's not going to be ultimately satisfying. It is going to wear out eventually, and it's going to cost a lot of money to start with. And it's empty. It's something that's dependently originated."
+    },
+    {
+      "start": "00:35:54",
+      "end": "00:36:18",
+      "speaker": "Leigh Brasington",
+      "text": "A lot of parts went into it. A lot less than on your Corvette, but you know, it's still got a lot of parts in there. And if you were to take all the parts apart, you wouldn't find a Bolt. Well, there's probably lots of bolts, but you wouldn't find a Chevy Bolt. You wouldn't find the essence of it in any of that. It's just a conglomeration that we're finding quite useful to get from one place to another."
+    },
+    {
+      "start": "00:36:18",
+      "end": "00:36:24",
+      "speaker": "Michael Taft",
+      "text": "Yeah, but there is no sort of Platonic essence of Chevy-Bolt-ness that you're going to find at the bottom of the—"
+    },
+    {
+      "start": "00:36:24",
+      "end": "00:36:37",
+      "speaker": "Leigh Brasington",
+      "text": "Right, you won't even find car or automobile or transportation or anything like that. These are all concepts we're laying on top of everything. Eventually you begin to get the idea, oh,"
+    },
+    {
+      "start": "00:36:37",
+      "end": "00:36:49",
+      "speaker": "Leigh Brasington",
+      "text": "all my conceptualization, I'm really caught up in playing with my concepts. I'm lost in my concepts, as opposed to really understanding what's going on."
+    },
+    {
+      "start": "00:36:50",
+      "end": "00:37:20",
+      "speaker": "Leigh Brasington",
+      "text": "And this can help not get so attached, craving, clinging to what's going on. You see, it's just a concept. Can you take your automobile and just use it for transportation without getting a craving and clinging to it? And, you know, you go out one day and it's been stolen. How are you going to react? If it's just transportation, it's like, oh, I guess I have to call the police about this. If it's your baby,"
+    },
+    {
+      "start": "00:37:20",
+      "end": "00:37:23",
+      "speaker": "Leigh Brasington",
+      "text": "there's got to be a lot more."
+    },
+    {
+      "start": "00:37:23",
+      "end": "00:37:23",
+      "speaker": "Michael Taft",
+      "text": "Yeah."
+    },
+    {
+      "start": "00:37:24",
+      "end": "00:37:54",
+      "speaker": "Michael Taft",
+      "text": "Yeah, fascinating. So I did want to come back around to the emptiness part, since that's usually a much more familiar concept to people, at least as a word, or something that is an important point in Buddhist practice. So dependent origination seems to be saying something about emptiness, how things are constructed, so to speak. But it also seems to be saying more than that, like how that leads to suffering."
+    },
+    {
+      "start": "00:37:54",
+      "end": "00:38:24",
+      "speaker": "Leigh Brasington",
+      "text": "The point is that whatever it is that you're craving and clinging to, it's a constructed thing. All that arises also ceases. This is a fairly common realization spoken of in the suttas. So whatever it is, this is a constructed thing, and it's going to wear out. Get hold of the fact that it's impermanent. It's not going to give you lasting happiness. It may give you some temporary happiness, but it's not going to be ultimately satisfying."
+    },
+    {
+      "start": "00:38:24",
+      "end": "00:38:51",
+      "speaker": "Leigh Brasington",
+      "text": "And it may not even be ultimately satisfying and yet it hasn't manifested that impermanence. You know, when I was a kid, the Sears and Roebuck catalog would come in November. You know, the toys part in the back there. Yeah, I looked through all the toys, and I'm going to get me one of these. Santa Claus is going to bring it. And he did. And I got it. It was fantastic for three days. And then, you know, like, okay."
+    },
+    {
+      "start": "00:38:51",
+      "end": "00:38:54",
+      "speaker": "Michael Taft",
+      "text": "Right. So nothing is ultimately satisfying."
+    },
+    {
+      "start": "00:38:54",
+      "end": "00:39:24",
+      "speaker": "Leigh Brasington",
+      "text": "It's not possible for something to be ultimately satisfying. It can provide some temporary satisfaction, and certainly enjoy it when it's doing that. And then the fact that it is a dependently originated phenomenon, it doesn't have essence and it's empty. So these are just sort of three windows into the same thing, three lenses for looking at the same thing. The impermanent nature of it, because it's dependently originated; the unsatisfactory nature of it,"
+    },
+    {
+      "start": "00:39:24",
+      "end": "00:39:37",
+      "speaker": "Leigh Brasington",
+      "text": "because it's impermanent and dependently originated; and the essencelessness of it, since it's just a collection of parts assembled in a way that we conceptualize it as whatever it is we're conceptualizing it as."
+    },
+    {
+      "start": "00:39:37",
+      "end": "00:39:47",
+      "speaker": "Michael Taft",
+      "text": "Good. So bring us back from there to the Four Noble Truths again. How do you pack dependent origination back into this list of four things?"
+    },
+    {
+      "start": "00:39:47",
+      "end": "00:40:00",
+      "speaker": "Leigh Brasington",
+      "text": "Okay, so the problem is dukkha. That's what's wrong. The dukkha arises in this world. We found a necessary condition that it arises dependent on. Dukkha is a dependently arisen phenomenon."
+    },
+    {
+      "start": "00:40:00",
+      "end": "00:40:30",
+      "speaker": "Leigh Brasington",
+      "text": "It's a mental thing, and it has some sort of craving as a necessary condition. If we can find a necessary condition that we can manipulate and turn it off, then the antecedent condition goes away. In other words, if we stop craving, there won't be any dukkha. And then there's the path to learn to stop craving. And a lot of that path actually has aspects of dependent origination"
+    },
+    {
+      "start": "00:40:30",
+      "end": "00:40:44",
+      "speaker": "Leigh Brasington",
+      "text": "in it. The first thing is right view. And right view at times is about keeping an open mind, about not getting entangled in views, but at other times it's about, well, the Four Noble Truths and dependent origination."
+    },
+    {
+      "start": "00:40:45",
+      "end": "00:41:00",
+      "speaker": "Leigh Brasington",
+      "text": "There's right intention. The Buddha says the right intentions are renunciation, non-ill-will, and harmlessness. So renunciation is letting go. That's something to do with not craving and clinging, right?"
+    },
+    {
+      "start": "00:41:00",
+      "end": "00:41:10",
+      "speaker": "Leigh Brasington",
+      "text": "And non-ill-will and harmlessness are love and compassion, basically. Then we have right speech: use your speech truthfully,"
+    },
+    {
+      "start": "00:41:10",
+      "end": "00:41:20",
+      "speaker": "Leigh Brasington",
+      "text": "in a way that can be easily understood, and not frivolously. Right action, that's refraining from killing, stealing, misusing your sexual energy."
+    },
+    {
+      "start": "00:41:21",
+      "end": "00:41:32",
+      "speaker": "Leigh Brasington",
+      "text": "Right livelihood: how you manage to stay alive in this world should arise from doing something that makes the world a better place, not a worse place."
+    },
+    {
+      "start": "00:41:33",
+      "end": "00:41:59",
+      "speaker": "Leigh Brasington",
+      "text": "Again, this is dependent origination. You need to eat. You need to get money so you can buy food so you can eat. How do you get that money? Whatever you do is going to have consequences. Is it going to make the world a better place or a worse place? So there's dependent origination in that as well. Then there's right effort, which can be effort as not too much, not too little. The phrase I like is relaxed diligence,"
+    },
+    {
+      "start": "00:42:00",
+      "end": "00:42:07",
+      "speaker": "Leigh Brasington",
+      "text": "but also effort as the four great efforts: to make an arisen unwholesome state go away,"
+    },
+    {
+      "start": "00:42:08",
+      "end": "00:42:13",
+      "speaker": "Leigh Brasington",
+      "text": "to make an unarisen unwholesome state not arise,"
+    },
+    {
+      "start": "00:42:13",
+      "end": "00:42:43",
+      "speaker": "Leigh Brasington",
+      "text": "to make an unarisen wholesome state arise, and to make an arisen wholesome state stick around and come to perfection. Now, you notice there's arising in there: dependent origination, dependent arising. So if you're going to understand how states of mind arise, you're going to be exploring dependent origination, dependent arising. Then right mindfulness. Okay, so mindfulness of the body in particular, paying attention to what goes on there, and you're going to see dependent origination"
+    },
+    {
+      "start": "00:42:43",
+      "end": "00:42:48",
+      "speaker": "Leigh Brasington",
+      "text": "there. Mindfulness of the vedana, which we've already talked about,"
+    },
+    {
+      "start": "00:42:48",
+      "end": "00:43:18",
+      "speaker": "Leigh Brasington",
+      "text": "mindfulness of the pleasant, unpleasant, neutral categorizations of your sensory input. The next one is mindfulness of mind states. Now, this is just knowing the states. But once you know a state, the fourth establishment of mindfulness is, how do you deal with these states? In particular, are they a hindrance to your practice? And if they're a hindrance, how did you get there? How can you get out of it? All this is dependent origination. If it's a positive state, one of the factors of awakening,"
+    },
+    {
+      "start": "00:43:18",
+      "end": "00:43:48",
+      "speaker": "Leigh Brasington",
+      "text": "yeah, how do you get there? How do you keep it around? And then right concentration, which is defined as the jhanas, and the jhanas are dependently originated states. You want to get to the jhanas, then you need to have a foundation of sila, so that when you sit down to meditate, you have a clear mind, that you can get concentrated, that you can then aim at something pleasant, and then you can have this state arise, and from that you can transform it to the next one, etc. So dependent origination flows through all"
+    },
+    {
+      "start": "00:43:48",
+      "end": "00:43:52",
+      "speaker": "Leigh Brasington",
+      "text": "of the Four Noble Truths and through the Eightfold Path as well."
+    },
+    {
+      "start": "00:43:52",
+      "end": "00:44:00",
+      "speaker": "Michael Taft",
+      "text": "And so if I wanted to just kind of keep it in mind in the simplest way possible as I'm practicing or walking around,"
+    },
+    {
+      "start": "00:44:01",
+      "end": "00:44:05",
+      "speaker": "Michael Taft",
+      "text": "what's kind of the bare bones, or the motto, or, you know?"
+    },
+    {
+      "start": "00:44:05",
+      "end": "00:44:10",
+      "speaker": "Leigh Brasington",
+      "text": "At its most bare, it would be: everything arises dependent on other things."
+    },
+    {
+      "start": "00:44:10",
+      "end": "00:44:31",
+      "speaker": "Michael Taft",
+      "text": "So this makes me recall the Thich Nhat Hanh interbeing description. If we have a piece of paper in a book we're reading, that piece of paper — he kind of says it poetically — but it's like made of the sunlight that shone on the trees, and the rain clouds that dropped the rain water on"
+    },
+    {
+      "start": "00:44:31",
+      "end": "00:44:35",
+      "speaker": "Michael Taft",
+      "text": "the trees, and, you know, it goes through a whole list."
+    },
+    {
+      "start": "00:44:35",
+      "end": "00:45:01",
+      "speaker": "Leigh Brasington",
+      "text": "Yeah, and it's brilliant. That's an important part of seeing what's going on there. I actually like to take it to something that's not quite as succinct as everything arises dependent on other things. What I want to say is what I call SODAPI — S-O-D-A-P-I: streams of dependently arising processes interacting. And that's the entire universe:"
+    },
+    {
+      "start": "00:45:01",
+      "end": "00:45:05",
+      "speaker": "Leigh Brasington",
+      "text": "streams of dependently arising processes interacting."
+    },
+    {
+      "start": "00:45:05",
+      "end": "00:45:15",
+      "speaker": "Michael Taft",
+      "text": "So this is where we're getting from metaphorically Newtonian chunks into metaphorically Einsteinian or quantum fluxes."
+    },
+    {
+      "start": "00:45:15",
+      "end": "00:45:24",
+      "speaker": "Leigh Brasington",
+      "text": "Yeah, it's very important to realize there actually aren't any nouns. It's just some verbs move kind of slow."
+    },
+    {
+      "start": "00:45:24",
+      "end": "00:45:26",
+      "speaker": "Michael Taft",
+      "text": "Although you did say streams."
+    },
+    {
+      "start": "00:45:26",
+      "end": "00:45:31",
+      "speaker": "Leigh Brasington",
+      "text": "Yeah, actually, it would be better to say streamings."
+    },
+    {
+      "start": "00:45:32",
+      "end": "00:45:36",
+      "speaker": "Michael Taft",
+      "text": "Okay, so nothing but streamings—"
+    },
+    {
+      "start": "00:45:37",
+      "end": "00:45:41",
+      "speaker": "Leigh Brasington",
+      "text": "nothing but streamings of dependently"
+    },
+    {
+      "start": "00:45:41",
+      "end": "00:46:04",
+      "speaker": "Leigh Brasington",
+      "text": "arising processes interacting. I can't quite get the noun-ness out of the streamings, because a major way that we interact with our environment is to make entities, this conceptualizing. And so it's really hard to communicate. But yeah, the whole thing of SODAPI should be seen as a verb."
+    },
+    {
+      "start": "00:46:04",
+      "end": "00:46:34",
+      "speaker": "Michael Taft",
+      "text": "Yeah, this makes sense. I mean, we understand that there are no actual classes of things, right? The whole idea that there's two identical things in a class is just a conceptualization. And yet we need that to have nouns at all, because nouns define classes, right? So, yeah, we actually need it to communicate. But it's really important not to confuse the map with the territory. And what we're doing with our communication is we're drawing a map for someone."
+    },
+    {
+      "start": "00:46:34",
+      "end": "00:46:41",
+      "speaker": "Leigh Brasington",
+      "text": "What happens with communication, as far as I've been able to tell, is we take a concept and we throw the concept to the other person."
+    },
+    {
+      "start": "00:46:42",
+      "end": "00:46:51",
+      "speaker": "Leigh Brasington",
+      "text": "And then we throw them another concept, and we throw them another concept, and we're hoping they'll take those concepts and assemble them into the idea that we had."
+    },
+    {
+      "start": "00:46:51",
+      "end": "00:47:03",
+      "speaker": "Michael Taft",
+      "text": "Yeah, I think it's really fascinating. The typical move here is to say, well, there's no real nouns out there in the world, or no actual objects. And then we'll start going into some quantum this or that."
+    },
+    {
+      "start": "00:47:03",
+      "end": "00:47:04",
+      "speaker": "Leigh Brasington",
+      "text": "Right."
+    },
+    {
+      "start": "00:47:04",
+      "end": "00:47:10",
+      "speaker": "Michael Taft",
+      "text": "However, for me, that's not really the interesting direction, unless we're going to do it as actual physics."
+    },
+    {
+      "start": "00:47:10",
+      "end": "00:47:12",
+      "speaker": "Leigh Brasington",
+      "text": "Correct. As physicists."
+    },
+    {
+      "start": "00:47:12",
+      "end": "00:47:16",
+      "speaker": "Michael Taft",
+      "text": "When I hear you talk about the SODAPI, the streams of, say it again."
+    },
+    {
+      "start": "00:47:16",
+      "end": "00:47:25",
+      "speaker": "Leigh Brasington",
+      "text": "Dependently arising phenomena interacting, or processes interacting. Let's just say streams of processes interacting, for short."
+    },
+    {
+      "start": "00:47:25",
+      "end": "00:47:33",
+      "speaker": "Michael Taft",
+      "text": "To me, what you're pointing to is the direct first-person experience of your own senses, because it's just information streams."
+    },
+    {
+      "start": "00:47:33",
+      "end": "00:47:34",
+      "speaker": "Leigh Brasington",
+      "text": "Right."
+    },
+    {
+      "start": "00:47:34",
+      "end": "00:47:42",
+      "speaker": "Michael Taft",
+      "text": "And so instead of making that move of, yeah, we're going to talk about that there's no objects in the exterior world,"
+    },
+    {
+      "start": "00:47:42",
+      "end": "00:47:51",
+      "speaker": "Michael Taft",
+      "text": "it's more like, well, there might be, but what's important for meditation is to notice that all you're experiencing is a stream of sensory input."
+    },
+    {
+      "start": "00:47:51",
+      "end": "00:48:06",
+      "speaker": "Leigh Brasington",
+      "text": "Yeah. However, the objects in the material world — what I think is the most profound discourse of all the suttas: the Venerable Kaccanagotta asks the Buddha, right view, right view, in what way, venerable sir, is there right view?"
+    },
+    {
+      "start": "00:48:06",
+      "end": "00:48:16",
+      "speaker": "Leigh Brasington",
+      "text": "The Buddha replies: Kaccana, this world for the most part depends upon a duality, the notion it is and the notion it is not."
+    },
+    {
+      "start": "00:48:17",
+      "end": "00:48:21",
+      "speaker": "Leigh Brasington",
+      "text": "And so the Buddha then proceeds to chart a path in the middle"
+    },
+    {
+      "start": "00:48:22",
+      "end": "00:48:31",
+      "speaker": "Leigh Brasington",
+      "text": "between it is and it is not. And he concludes by saying, without veering towards either of these extremes,"
+    },
+    {
+      "start": "00:48:31",
+      "end": "00:48:41",
+      "speaker": "Leigh Brasington",
+      "text": "everything is or everything is not, a Tathagata, one who truly knows, teaches the Dhamma, the truth, via the middle:"
+    },
+    {
+      "start": "00:48:42",
+      "end": "00:48:51",
+      "speaker": "Leigh Brasington",
+      "text": "with this as a necessary condition, that arises; with the ceasing of this necessary condition, that ceases. In other words, dependent origination."
+    },
+    {
+      "start": "00:48:51",
+      "end": "00:48:54",
+      "speaker": "Michael Taft",
+      "text": "Yes, but when he says the world, is he talking about—"
+    },
+    {
+      "start": "00:48:54",
+      "end": "00:48:56",
+      "speaker": "Leigh Brasington",
+      "text": "The sensory input world."
+    },
+    {
+      "start": "00:48:56",
+      "end": "00:49:01",
+      "speaker": "Michael Taft",
+      "text": "Right, which is what I'm pointing at. It's the first-person experience world."
+    },
+    {
+      "start": "00:49:01",
+      "end": "00:49:12",
+      "speaker": "Leigh Brasington",
+      "text": "Yes, exactly, exactly. Yeah, so he's not the least bit interested in what's going on out there. What he's interested in is, how are you responding to your sensory input?"
+    },
+    {
+      "start": "00:49:12",
+      "end": "00:49:25",
+      "speaker": "Michael Taft",
+      "text": "Right. And just metaphorically, but with a fair amount of accuracy, we can take, for example, a sense organ like the eye and the optic nerve and compare it to something like a video camera with a cable."
+    },
+    {
+      "start": "00:49:25",
+      "end": "00:49:26",
+      "speaker": "Leigh Brasington",
+      "text": "Yeah."
+    },
+    {
+      "start": "00:49:26",
+      "end": "00:49:42",
+      "speaker": "Michael Taft",
+      "text": "And, you know, it's taking photons and converting it to signals, and the signals are moving along that cable, and then they get interpreted. And it's that stream of signals that I think you're referring to when you talk about SODAPI."
+    },
+    {
+      "start": "00:49:42",
+      "end": "00:50:00",
+      "speaker": "Leigh Brasington",
+      "text": "Yeah, it's the stream of signals. But some of the signals you don't pick up on, or you're not aware of, and they're still influencing you. Like your first-grade teacher: you probably hadn't thought about her all day, but she's still influencing what's happening with you right now. The fact that we're doing"
+    },
+    {
+      "start": "00:50:00",
+      "end": "00:50:16",
+      "speaker": "Leigh Brasington",
+      "text": "this in English — one of the streams that's making us speak this in English is that the British came over here, ran off the Dutch, ran off the French, ran off the Spanish, and suppressed the natives. That stream is why we're speaking English here."
+    },
+    {
+      "start": "00:50:16",
+      "end": "00:50:22",
+      "speaker": "Michael Taft",
+      "text": "Sure, but now you're taking it into another direction, right? That's like an orthogonal dimension."
+    },
+    {
+      "start": "00:50:23",
+      "end": "00:50:53",
+      "speaker": "Leigh Brasington",
+      "text": "It's important to see all of these directions, not just the direction of the sensory input, but the entire world. So what you want to do is basically cut off any avenue where you might try and run off and do some craving and clinging, and see that it's all just dependently arising phenomena. And you're experiencing them as streams. But even if you step out of your experience and try and contact"
+    },
+    {
+      "start": "00:50:53",
+      "end": "00:51:00",
+      "speaker": "Leigh Brasington",
+      "text": "what's behind my experience, you're not going to find anything else other than just all these streams running into each other."
+    },
+    {
+      "start": "00:51:01",
+      "end": "00:51:06",
+      "speaker": "Leigh Brasington",
+      "text": "In other words, there is no solidity to be found anywhere. And how are you going to deal with that?"
+    },
+    {
+      "start": "00:51:07",
+      "end": "00:51:16",
+      "speaker": "Michael Taft",
+      "text": "Well, and who is the you that thinks you're solid, to try to deal with that? Because it works in the other direction as well, right?"
+    },
+    {
+      "start": "00:51:16",
+      "end": "00:51:26",
+      "speaker": "Leigh Brasington",
+      "text": "Right. And the you is some aspect of your memories, thoughts, and emotions that has now come into working memory, and you're calling it by your name."
+    },
+    {
+      "start": "00:51:26",
+      "end": "00:51:34",
+      "speaker": "Michael Taft",
+      "text": "Right, which is just more streams of experience, especially if we take the mind sense as the sixth sense, right?"
+    },
+    {
+      "start": "00:51:34",
+      "end": "00:51:37",
+      "speaker": "Leigh Brasington",
+      "text": "Exactly. So that memory is just another stream."
+    },
+    {
+      "start": "00:51:37",
+      "end": "00:51:37",
+      "speaker": "Michael Taft",
+      "text": "Yeah."
+    },
+    {
+      "start": "00:51:37",
+      "end": "00:51:51",
+      "speaker": "Leigh Brasington",
+      "text": "We're only scratching the surface of the various interpretations. Another really important practical recognition or interpretation of dependent origination is that what gets born is a sense of self."
+    },
+    {
+      "start": "00:51:51",
+      "end": "00:51:55",
+      "speaker": "Michael Taft",
+      "text": "What? Slow that down. What gets born is a sense of self?"
+    },
+    {
+      "start": "00:51:55",
+      "end": "00:51:59",
+      "speaker": "Leigh Brasington",
+      "text": "Yeah. So you're conscious and you have a mind and body."
+    },
+    {
+      "start": "00:52:00",
+      "end": "00:52:04",
+      "speaker": "Michael Taft",
+      "text": "There's just streams of dependently arising, you know, information."
+    },
+    {
+      "start": "00:52:04",
+      "end": "00:52:07",
+      "speaker": "Leigh Brasington",
+      "text": "Yeah, so let's play it out. This is from Ajahn Buddhadasa."
+    },
+    {
+      "start": "00:52:07",
+      "end": "00:52:07",
+      "speaker": "Michael Taft",
+      "text": "Oh, okay."
+    },
+    {
+      "start": "00:52:07",
+      "end": "00:52:11",
+      "speaker": "Leigh Brasington",
+      "text": "And it's from his book Practical Dependent Origination."
+    },
+    {
+      "start": "00:52:11",
+      "end": "00:52:14",
+      "speaker": "Michael Taft",
+      "text": "There's a book called Practical Dependent Origination?"
+    },
+    {
+      "start": "00:52:14",
+      "end": "00:52:30",
+      "speaker": "Leigh Brasington",
+      "text": "Yeah. It's been superseded by a much better book, which takes all of his teachings on dependent origination. It was translated by Santikaro, and the name escapes me right now. It was going to be called It All Depends, which is a much better title than the publisher came up with."
+    },
+    {
+      "start": "00:52:30",
+      "end": "00:52:32",
+      "speaker": "Leigh Brasington",
+      "text": "Oh, it's entitled Under the Bodhi Tree."
+    },
+    {
+      "start": "00:52:32",
+      "end": "00:52:32",
+      "speaker": "Michael Taft",
+      "text": "Okay."
+    },
+    {
+      "start": "00:52:32",
+      "end": "00:52:39",
+      "speaker": "Leigh Brasington",
+      "text": "But what Buddhadasa says is, all right, you're conscious, you have a mind and body, and you're conscious."
+    },
+    {
+      "start": "00:52:40",
+      "end": "00:53:10",
+      "speaker": "Leigh Brasington",
+      "text": "You have sense organs, they get sense contacts, this produces vedana, pleasant, unpleasant, neutral. If you're not careful, this leads to craving and clinging. And the craving and clinging will result in becoming, and you're generating a sense of self as the craver and the clinger. I mean, if you're craving something, it has to be somebody who's going to get it. If you're clinging to something, it has to be somebody who owns it. And so the birth is the birth of the sense of self."
+    },
+    {
+      "start": "00:53:10",
+      "end": "00:53:38",
+      "speaker": "Leigh Brasington",
+      "text": "But the self is an illusory made-up thing, so it often dies. An example: you've never had a mango. You go to the grocery store, you're in the produce section, you see a sign that says mangoes, you're like, oh, I've heard of mangoes, they're supposed to be good. So you take a mango home and you put away the rest of the groceries and you attack the mango, and of course you get it peeled and you make a big mess, because that's what happens when you attack a mango the first time. But now—"
+    },
+    {
+      "start": "00:53:38",
+      "end": "00:53:40",
+      "speaker": "Michael Taft",
+      "text": "But they're delicious."
+    },
+    {
+      "start": "00:53:40",
+      "end": "00:54:10",
+      "speaker": "Leigh Brasington",
+      "text": "You've got a mind and body, and you've got your sense of taste, and mango hits the tongue: contact, vedana, pleasant vedana. Oh, lots of pleasant vedana. It's really good. This is great, I'm going to get some more. And in fact, my friends Bob and Carol and Ted and Alice, they've never had a mango, I'm going to turn them on to mango. So you go see your friends, you bring a mango, and they're like, oh cool, a mango, and they love it. And you've become the mango bringer, right? And every time you go see your friends you bring them a mango, and they're"
+    },
+    {
+      "start": "00:54:10",
+      "end": "00:54:40",
+      "speaker": "Leigh Brasington",
+      "text": "like, oh cool, another mango, until about the 10th time, they're like, what's with all the mangoes? Oh — death of the mango bringer. But you create a sense of self around the stuff that you crave and cling to. And this is actually a very important way of looking at dependent origination. So here's another much more useful one than the three-lifetime model. But again, it's not exhaustive. I mean, dependent origination has got so many layers."
+    },
+    {
+      "start": "00:54:40",
+      "end": "00:54:45",
+      "speaker": "Michael Taft",
+      "text": "So we basically build senses of self around things that we crave and cling to."
+    },
+    {
+      "start": "00:54:45",
+      "end": "00:54:45",
+      "speaker": "Leigh Brasington",
+      "text": "Yes, exactly."
+    },
+    {
+      "start": "00:54:45",
+      "end": "00:55:09",
+      "speaker": "Michael Taft",
+      "text": "So here we are doing this interview in Oakland, and there's everyone running around with their Raiders jerseys and their Raiders hats and their Raiders cars and the Oakland Raiders this and that, right? Or this year it would be more probably the Golden State Warriors. But those are objects of craving and clinging that get expanded into really complex identities."
+    },
+    {
+      "start": "00:55:09",
+      "end": "00:55:10",
+      "speaker": "Leigh Brasington",
+      "text": "Yes, exactly."
+    },
+    {
+      "start": "00:55:10",
+      "end": "00:55:17",
+      "speaker": "Leigh Brasington",
+      "text": "Exactly, exactly. I mean, the whole soccer hooligans thing in Europe is just getting completely out of hand."
+    },
+    {
+      "start": "00:55:17",
+      "end": "00:55:40",
+      "speaker": "Michael Taft",
+      "text": "Yeah. Okay, I see that. I'm curious about — this is a punch-in for a different point — you know, one of the interesting things about noticing that moment of contact, vedana, craving: to me, that place I'm actually talking about often in these conversations on Deconstructing Yourself is that with practice"
+    },
+    {
+      "start": "00:55:40",
+      "end": "00:55:46",
+      "speaker": "Michael Taft",
+      "text": "you begin to notice earlier and earlier moments in the actual construction of perception."
+    },
+    {
+      "start": "00:55:46",
+      "end": "00:55:47",
+      "speaker": "Leigh Brasington",
+      "text": "Yes, yes."
+    },
+    {
+      "start": "00:55:47",
+      "end": "00:56:08",
+      "speaker": "Michael Taft",
+      "text": "So instead of seeing in the average way of noticing a simple object in the world — the computer on the desk, that's how we work, it's very efficient, it's just there's a computer — but if you pay really close attention, a lot happens before that moment of that's a computer."
+    },
+    {
+      "start": "00:56:08",
+      "end": "00:56:10",
+      "speaker": "Leigh Brasington",
+      "text": "Oh yeah, yeah."
+    },
+    {
+      "start": "00:56:10",
+      "end": "00:56:29",
+      "speaker": "Michael Taft",
+      "text": "And it seems like that's a lot of what you're talking about. There's this noticing of, at first, it's just some shapes and some color and some darkness, brightness, maybe a humming sound, but we don't even know it's humming yet, right? There's just the very basics of the beginning of like raw sense input."
+    },
+    {
+      "start": "00:56:29",
+      "end": "00:56:29",
+      "speaker": "Leigh Brasington",
+      "text": "Right."
+    },
+    {
+      "start": "00:56:29",
+      "end": "00:56:40",
+      "speaker": "Michael Taft",
+      "text": "And then gradually that sense input gets kind of like voted up the chain of interpretation, and it starts to get layered on that, oh, that's a rectangular shape"
+    },
+    {
+      "start": "00:56:40",
+      "end": "00:56:46",
+      "speaker": "Michael Taft",
+      "text": "and it's kind of shiny and metallic, and it's got a big glowing apple on it, and oh, it's a computer."
+    },
+    {
+      "start": "00:56:46",
+      "end": "00:56:46",
+      "speaker": "Leigh Brasington",
+      "text": "Right."
+    },
+    {
+      "start": "00:56:46",
+      "end": "00:56:49",
+      "speaker": "Michael Taft",
+      "text": "Right, and now we've kind of found its label."
+    },
+    {
+      "start": "00:56:49",
+      "end": "00:56:54",
+      "speaker": "Leigh Brasington",
+      "text": "Right. Though, interestingly, neuroscience says that we guess is what it is."
+    },
+    {
+      "start": "00:56:54",
+      "end": "00:57:09",
+      "speaker": "Leigh Brasington",
+      "text": "We guess it's a computer, and then we start looking for things that indicate, yeah, it's rectangular, it's got the glowing apple, it must be a computer. But we guess based on previous input."
+    },
+    {
+      "start": "00:57:09",
+      "end": "00:57:13",
+      "speaker": "Michael Taft",
+      "text": "Exactly. And then the beginnings of this input."
+    },
+    {
+      "start": "00:57:13",
+      "end": "00:57:24",
+      "speaker": "Leigh Brasington",
+      "text": "Right. So it's coming from both the bottom up and the top down. And when they meet in the middle and it all still makes sense, then we go, we got it."
+    },
+    {
+      "start": "00:57:24",
+      "end": "00:57:35",
+      "speaker": "Michael Taft",
+      "text": "Yeah. I think it's just so fascinating to really start to kind of magnify that moment, or sort of slow it down, so that there can be a way to point your attention at a spot in that construction of the concept of computer previous"
+    },
+    {
+      "start": "00:57:37",
+      "end": "00:57:39",
+      "speaker": "Michael Taft",
+      "text": "to it becoming an object."
+    },
+    {
+      "start": "00:57:39",
+      "end": "00:57:40",
+      "speaker": "Leigh Brasington",
+      "text": "Yes, yes."
+    },
+    {
+      "start": "00:57:40",
+      "end": "00:57:46",
+      "speaker": "Michael Taft",
+      "text": "Now, for me, that's one of the ways under this hood of craving."
+    },
+    {
+      "start": "00:57:46",
+      "end": "00:57:46",
+      "speaker": "Leigh Brasington",
+      "text": "Yeah."
+    },
+    {
+      "start": "00:57:46",
+      "end": "00:57:57",
+      "speaker": "Michael Taft",
+      "text": "Because if it doesn't become an actual thing as a concept, it's hard to crave it exactly. If you just see the visual shape"
+    },
+    {
+      "start": "00:57:58",
+      "end": "00:58:08",
+      "speaker": "Michael Taft",
+      "text": "and leave it as just the visual shape, and notice that, as you're putting it, the streams of dependently arising phenomena interacting, it's not even a stable shape."
+    },
+    {
+      "start": "00:58:08",
+      "end": "00:58:09",
+      "speaker": "Leigh Brasington",
+      "text": "Right."
+    },
+    {
+      "start": "00:58:09",
+      "end": "00:58:21",
+      "speaker": "Michael Taft",
+      "text": "The shape is moving and changing, the light is reflecting differently, the sound and all that. To me, that gives us that moment right in there, and kind of hanging out in that moment is really crucial."
+    },
+    {
+      "start": "00:58:21",
+      "end": "00:58:28",
+      "speaker": "Leigh Brasington",
+      "text": "Yeah. This is what the open awareness practices that show up both in the Vipassana movement and in Tibetan teachings,"
+    },
+    {
+      "start": "00:58:28",
+      "end": "00:58:37",
+      "speaker": "Leigh Brasington",
+      "text": "and I assume in the shikantaza of Zen, is all about. It's just really being open to what the sensory field is like prior to processing."
+    },
+    {
+      "start": "00:58:37",
+      "end": "00:58:39",
+      "speaker": "Michael Taft",
+      "text": "Yeah, or very early in the process."
+    },
+    {
+      "start": "00:58:39",
+      "end": "00:58:47",
+      "speaker": "Leigh Brasington",
+      "text": "Right, yeah, exactly. They would claim it's without processing, but I doubt that's possible. Trying to get as early as possible."
+    },
+    {
+      "start": "00:58:47",
+      "end": "00:58:54",
+      "speaker": "Michael Taft",
+      "text": "Yeah, I agree. You can't very easily get before any processing. And if you do, it's a pretty profound state."
+    },
+    {
+      "start": "00:58:54",
+      "end": "00:58:54",
+      "speaker": "Leigh Brasington",
+      "text": "Yeah."
+    },
+    {
+      "start": "00:58:56",
+      "end": "00:59:05",
+      "speaker": "Michael Taft",
+      "text": "Leigh, thanks for unpacking a little bit the very complex topic of dependent arising. Anything you want to leave the listeners with?"
+    },
+    {
+      "start": "00:59:06",
+      "end": "00:59:36",
+      "speaker": "Leigh Brasington",
+      "text": "Yeah, in the Tibetan tradition they talk about a teaching having multiple levels, you know, the obvious level and the secret level and the most secret level is something. The Buddha said he teaches with an open hand, so there's no secrets. No acariya mutthi. Yeah, so there's no secrets here, but there are multiple levels. The most important level to get is that sensory input generates vedana, pleasant, unpleasant, neutral."
+    },
+    {
+      "start": "00:59:36",
+      "end": "01:00:00",
+      "speaker": "Leigh Brasington",
+      "text": "That's sort of the most basic level of dependent origination. And then you start getting into deeper and more profound levels, to eventually getting to the point where the idea of existing and non-existing is irrelevant, and you're just seeing all the streamings running into each other. And there's a lot of stuff to be played with along the way."
+    },
+    {
+      "start": "01:00:00",
+      "end": "01:00:10",
+      "speaker": "Leigh Brasington",
+      "text": "So the key thing is, get that bit about how are you going to respond to your input, and then add the other bits and pieces as you get more understanding."
+    },
+    {
+      "start": "01:00:10",
+      "end": "01:00:11",
+      "speaker": "Michael Taft",
+      "text": "Thanks, Leigh."
+    },
+    {
+      "start": "01:00:11",
+      "end": "01:00:12",
+      "speaker": "Leigh Brasington",
+      "text": "Thank you."
+    },
+    {
+      "start": "01:00:27",
+      "end": "01:02:56",
+      "speaker": "Michael Taft",
+      "text": "That's it for this episode of Deconstructing Yourself. If you enjoyed the podcast, please recommend it to a friend or talk about it on social media. Doing that helps it find its way to more people who might be interested. If you're moved to support the podcast, you can do that by contributing to the production costs on my Patreon page. That's at patreon.com/michaeltaft. The money goes to support the recording, production, and bandwidth costs of this program, which are substantial. By contributing to Patreon, you're making it possible for me to continue to create and share these conversations as often as possible. A special perk for high-level contributors is a monthly or even bi-monthly event with me on Zoom, where you can ask me any meditation questions you have. I deeply appreciate your support. I also have a number of free resources for you, beginning with my YouTube channel. There are hundreds of hours of free guided meditations and videos there, so if you're interested, that's quite a large resource, and offered to you completely free of charge. The channel address on YouTube is MWT111, or you can just search my name, Michael Taft. I encourage you to subscribe to the channel and join me each week for a new live guided meditation session. And of course, there's the deconstructingyourself.com website itself, which has articles, interviews, and more about meditation going back over 12 years at this point, so be sure to check that out. Beyond these free options, I also have a number of paid online courses to help you grow and develop in your spiritual practice. You can find out about those either by signing up for my email list at deconstructingyourself.com/signup, or at the site deconstructingyourself.org. I look forward to seeing you in class. The Deconstructing Yourself podcast has always had excellent sound, which is the result of an amazing audio engineer and amazing human being named Stephen McNamara. He's an all-things-audio person with many decades of experience in producing music and spoken-word audio. If you're interested, you can contact him at his website, yogitar.com — that's Y-O-G-I-T-A-R dot com. Music on the Deconstructing Yourself podcast is a track by Peter Baumann entitled Crossing the Abyss, from his album Machines of Desire. Thank you for listening."
+    }
+  ]
+}
