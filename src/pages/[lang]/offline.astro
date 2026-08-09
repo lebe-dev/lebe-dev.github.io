@@ -1,0 +1,75 @@
+---
+// Fallback served by the service worker when a page that has not been saved
+// is opened without a connection. Precached for every locale on install, so
+// the fallback itself is never the missing piece.
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { useTranslations } from '../../i18n/utils';
+import type { Lang } from '../../i18n/ui';
+
+export const getStaticPaths = () => [
+  { params: { lang: 'en' } },
+  { params: { lang: 'ru' } },
+  { params: { lang: 'es' } },
+  { params: { lang: 'zh' } },
+  { params: { lang: 'ja' } },
+  { params: { lang: 'fr' } },
+  { params: { lang: 'de' } },
+];
+
+const lang = Astro.params.lang as Lang;
+const t = useTranslations(lang);
+---
+<BaseLayout lang={lang} title={t('offline.title')} description={t('offline.description')} noindex>
+  <article class="offline">
+    <h1>{t('offline.title')}</h1>
+    <p>{t('offline.body')}</p>
+
+    <p class="offline-actions">
+      <button type="button" data-offline-retry>{t('offline.retry')}</button>
+    </p>
+
+    <nav class="offline-links" aria-label={t('nav.home')}>
+      <a href={`/${lang}/`}>{t('nav.home')}</a>
+      <a href={`/${lang}/blog/`}>{t('nav.blog')}</a>
+      <a href={`/${lang}/podcasts/`}>{t('podcasts.title')}</a>
+    </nav>
+  </article>
+</BaseLayout>
+
+<script is:inline>
+  document.querySelector('[data-offline-retry]')?.addEventListener('click', () => {
+    location.reload();
+  });
+</script>
+
+<style>
+  .offline-actions {
+    margin-top: 1.5rem;
+  }
+
+  .offline-actions button {
+    padding: 0.45rem 0.9rem;
+    border: 1px solid var(--rule);
+    border-radius: 0.4rem;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--sans);
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: color 0.15s ease, border-color 0.15s ease;
+  }
+
+  .offline-actions button:hover {
+    color: var(--link);
+    border-color: var(--link);
+  }
+
+  .offline-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem 1rem;
+    margin-top: 2rem;
+    font-family: var(--sans);
+    font-size: 0.9rem;
+  }
+</style>

@@ -3,11 +3,26 @@ import { useTranslations } from '../i18n/utils';
 import type { Lang } from '../i18n/ui';
 import ThemeToggle from './ThemeToggle.svelte';
 import LanguageSwitch from './LanguageSwitch.svelte';
+import OfflineToggle from './OfflineToggle.svelte';
 
 type Props = { lang: Lang; showTitle?: boolean; minimal?: boolean; backHref?: string };
 const { lang, showTitle = true, minimal = false, backHref = `/${lang}/` } = Astro.props;
 const t = useTranslations(lang);
 const siteName = lang === 'ru' ? 'Евгений Лебедев' : t('site.name');
+
+const offlineLabels = {
+  badge: t('offline.badge'),
+  badgeTitle: t('offline.badgeTitle'),
+  save: t('offline.save'),
+  saving: t('offline.saving'),
+  saved: t('offline.saved'),
+  cancel: t('offline.cancel'),
+  remove: t('offline.remove'),
+  failed: t('offline.failed'),
+  updateAvailable: t('update.available'),
+  updateAction: t('update.action'),
+  updateDismiss: t('update.dismiss'),
+};
 ---
 <header class:list={['site-header', { minimal }]}>
   <div class="header-row">
@@ -28,6 +43,7 @@ const siteName = lang === 'ru' ? 'Евгений Лебедев' : t('site.name'
     )}
     <div class="actions">
       {!minimal && <LanguageSwitch lang={lang} label={t('lang.switch')} client:load />}
+      <OfflineToggle lang={lang} labels={offlineLabels} client:idle />
       <ThemeToggle labelLight={t('theme.light')} labelDark={t('theme.dark')} client:load />
     </div>
   </div>

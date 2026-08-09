@@ -5,6 +5,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 import svelte from '@astrojs/svelte';
 import { rehypePromptBlocks } from './src/lib/rehypePromptBlocks.ts';
+import { offline } from './src/integrations/offline.ts';
 
 export default defineConfig({
   markdown: {
@@ -42,9 +43,11 @@ export default defineConfig({
     fallback: { ru: 'en', es: 'en', zh: 'en', ja: 'en', fr: 'en', de: 'en' },
   },
   integrations: [sitemap({
+    // The offline fallback is a service-worker utility page, not content.
+    filter: (page) => !page.includes('/offline/'),
     i18n: {
       defaultLocale: 'en',
       locales: { en: 'en', ru: 'ru', es: 'es', zh: 'zh', ja: 'ja', fr: 'fr', de: 'de' },
     },
-  }), svelte()],
+  }), svelte(), offline()],
 });

@@ -92,6 +92,44 @@ Localized section (unlike `/subtitles`): it exists in every site locale, and the
 
 **Adding an episode:** drop `<slug>.en.json` / `<slug>.ru.json` into `src/data/podcasts/`, add an object to the `podcasts` array in `src/data/podcasts.ts`. Nothing else — routes, listing, filters, duration, guest and the link to the original all follow from the data, and `just dev`/`just build` generate the glossary sidecars. `just build` checks that `dist/<lang>/podcasts/` exists for every locale and that at least one Russian transcript still highlights terms.
 
+## Offline support / PWA (site-wide)
+
+The whole site works offline through a root service worker at `/sw.js`, scoped to `/`. The calculator under `/cc/` keeps its **own** worker (`public/cc/sw.js`, scope `/cc/`) — the root worker bails out of every `/cc/` request, and the more specific registration wins for those pages anyway. Don't merge the two.
+
+**`/sw.js` is generated, never committed.** `src/integrations/offline.ts` (an Astro integration wired up in `astro.config.mjs`) assembles it from two hand-written sources:
+
+- `src/sw/shared.js` — pure helpers (`normalizePath`, `classifyAsset`, `planSync`, `staleUrls`, `formatBytes`, …), unit-tested in `shared.test.js` and also imported by `OfflineToggle.svelte`
+- `src/sw/worker.js` — the worker body (lifecycle, fetch strategies, message protocol)
+
+The two are **concatenated into one classic worker** with the leading `export` keywords stripped, so `shared.js` may only contain `export const` / `export function` / `export class` declarations — no `import`, no `export { … }`, no `export default`. The build throws a named error otherwise, and `src/integrations/offline.test.ts` compiles the real assembled output with `node:vm` to catch it in `just test`.
+
+In `astro build` the integration scans `dist/`, hashes every file and inlines a manifest (`buildId`, `version`, `langs`, `shell` / `pages` / `media` entries with `url`, `hash`, `size`). In `astro dev` an `astro:server:setup` middleware serves the same worker with a `mode: 'dev'` manifest whose page list is derived from the content on disk — **dev and production behave the same**, except the dev worker never prefers the cache (Vite rewrites modules on every edit) and caches no assets.
+
+**Caching strategies** (`src/sw/worker.js`):
+
+| what | cache | strategy |
+|---|---|---|
+| `/_astro/*`, icons, `manifest.webmanifest` | `site-shell` | cache-first — every URL is content-hashed |
+| HTML | `site-pages` | stale-while-revalidate; offline page as fallback |
+| `/images/*`, `/subtitles/*.srt` | `site-media` | cache-first |
+| previous manifest | `site-meta` | — |
+
+Pages are keyed by `normalizePath()` — one entry serves `/ru/blog/x`, `/ru/blog/x/` and `/ru/podcasts/?q=name`.
+
+**Install precaches only the seven `/[lang]/offline/` pages.** Everything else arrives through runtime caching, so a first visit costs nothing extra.
+
+**Updates.** A deploy changes `buildId`, which changes `sw.js` byte-wise, so the normal service-worker update check applies: the new worker installs, waits, and `OfflineToggle.svelte` shows the update banner. On activate the worker compares the stored manifest with the new one and drops **only the URLs whose hash actually moved** (`staleUrls`) — a "saved for offline" copy survives a deploy and a re-save fetches just the changed pages. Bump `SW_VERSION` in `src/integrations/offline.ts` when the worker's own caching rules change; activating a worker with a new version wipes the content caches instead.
+
+**"Save the site for offline reading"** is the cloud button in the header, next to the theme toggle (`src/components/OfflineToggle.svelte`, `client:idle`). It owns *all* service-worker interaction on the page: the offline badge (shown when `navigator.onLine` is false), the save/cancel/delete button with its progress ring, and the update banner. Saving covers the **current locale only** — the shell, the media and that locale's pages plus the shared ones (`/`, `/404.html`, `/subtitles/`, `/yaml/`), roughly 15 MB of storage for `ru`. Saving all seven locales would be ~67 MB, almost all of it podcast transcripts, so `planSync()` filters by locale on purpose. The size is shown in the button's label before anything is downloaded, and a running save is cancellable.
+
+Message protocol, page → worker: `OFFLINE_STATUS`, `OFFLINE_SAVE`, `OFFLINE_CANCEL`, `OFFLINE_PURGE` (all carry `lang`), plus `SKIP_WAITING`. The worker broadcasts `OFFLINE_STATUS` and `OFFLINE_SYNC` to every window client.
+
+**Registration lives in `BaseLayout.astro`** as an inline script rather than in the island, so offline support survives a hydration failure.
+
+`public/manifest.webmanifest` + `public/icons/` make the site installable; icons are generated from `public/favicon.svg` with `rsvg-convert`. `/[lang]/offline/` is `noindex` and filtered out of the sitemap.
+
+**Testing it:** `just preview` (a real build — the dev server's worker deliberately never serves stale content). Stop the preview server and keep navigating to see the cached site; a locale you never saved falls back to its `/[lang]/offline/` page.
+
 ## Development Commands
 
 All commands use `just` (Justfile-based):
@@ -99,7 +137,7 @@ All commands use `just` (Justfile-based):
 ```bash
 just dev       # Start local dev server on http://localhost:4200
 just lint      # Type-check + run unit tests + check for console.log/debugger in public/cc/js/
-just build     # Run lint, then build + validate dist/ output (each locale dir, calculator index.html)
+just build     # Run lint, then build + validate dist/ output (each locale dir, calculator index.html, sw.js, offline pages)
 just test      # Run Vitest unit tests, optionally filtered: just test <name>
 ```
 
@@ -237,6 +275,8 @@ satoshis = btcAmount × 100,000,000
 **Automated (Vitest):**
 - `public/cc/js/calc.test.js` — `calcSpread`/`calcBtcAmount`/`calcSats`, the CLAUDE.md worked example (1000 GEL, office 272000, market 259498 → spread 4.82%), `isRateStale`, `getFriendlyErrorMessage`, `isPositiveNumber`
 - `src/i18n/utils.test.ts`, `src/i18n/aiUsageDisclaimer.test.ts` — pure i18n/content helpers
+- `src/sw/shared.test.js` — the worker's pure helpers: URL normalization, locale detection, asset classification, the per-locale save plan, the stale-URL diff between two builds, size formatting
+- `src/integrations/offline.test.ts` — that the assembled `sw.js` still compiles as a classic script and carries its manifest, that non-inlineable module syntax fails the build, and that `buildManifest` sorts `dist/` into the right caches and only marks genuinely changed files stale
 - Run via `just test` or `npm run test`
 
 **Manual checklist (DOM/PWA-only behaviour not covered by unit tests):**
