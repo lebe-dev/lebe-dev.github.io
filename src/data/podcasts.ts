@@ -16,6 +16,15 @@ export interface PodcastEpisode {
 
 export const podcasts: PodcastEpisode[] = [
   {
+    slug: 'deconstructing-yourself-31',
+    podcast: 'Deconstructing Yourself',
+    podcastUrl: 'https://deconstructingyourself.com/',
+    episode: 31,
+    publishedAt: '2019-01-20',
+    dateAdded: '2026-08-09',
+    translatedWith: 'Opus 5',
+  },
+  {
     slug: 'deconstructing-yourself-25',
     podcast: 'Deconstructing Yourself',
     podcastUrl: 'https://deconstructingyourself.com/',

@@ -1,0 +1,709 @@
+{
+    "title": "Deconstructing the Heart Sutra, with Jayarava Attwood",
+    "url": "https://deconstructingyourself.com/dy-031-deconstructing-the-heart-sutra-with-jayarava-attwood.html",
+    "guest": "Jayarava Attwood",
+    "transcript": [
+        {
+            "start": "00:00:25",
+            "end": "00:01:24",
+            "speaker": "Michael Taft",
+            "text": "Welcome to Deconstructing Yourself, the podcast for modern mutants interested in meditation, awakening, emptiness, hardcore dharma, really good science fiction novels, and much more. My name is Michael Taft, your host on the podcast. And in this episode, I'm happy to be speaking with Jayarava Attwood. Jayarava is a long-time member of the Triratna Buddhist Order, and he writes about the history of ideas in Buddhism. Since 2012, he's been mainly focused on revising the text and history of the Heart Sutra, and also writes about karma and how ideas about karma changed over time. Jayarava's blog explores the clash between modernity and tradition with respect to Buddhism, and he also works in various art forms including music, painting, photography, and calligraphy. And now, without further ado, the episode that I call Deconstructing the Heart Sutra with Jayarava."
+        },
+        {
+            "start": "00:01:29",
+            "end": "00:01:33",
+            "speaker": "Michael Taft",
+            "text": "Jayarava, welcome to the Deconstructing Yourself podcast."
+        },
+        {
+            "start": "00:01:33",
+            "end": "00:01:37",
+            "speaker": "Jayarava Attwood",
+            "text": "Thank you very much. I'm really honored to be asked."
+        },
+        {
+            "start": "00:01:37",
+            "end": "00:01:59",
+            "speaker": "Michael Taft",
+            "text": "Well, I'm honored to have you here. We've been sort of interacting together, I would say, on Twitter for probably, I don't know, 18 months now or something. And I've been very intrigued by a lot of your posts and questions and your publications and so on. And I ended up listening to you on the Post-Traditional Buddhism podcast recording, I think you did several years ago."
+        },
+        {
+            "start": "00:01:59",
+            "end": "00:02:01",
+            "speaker": "Jayarava Attwood",
+            "text": "Yeah, yeah."
+        },
+        {
+            "start": "00:02:01",
+            "end": "00:02:11",
+            "speaker": "Michael Taft",
+            "text": "And it just ended up being obvious that you would be an awesome guest on the show. So here we are. Now, if I'm not mistaken, you are in Cambridge?"
+        },
+        {
+            "start": "00:02:11",
+            "end": "00:02:13",
+            "speaker": "Jayarava Attwood",
+            "text": "That's right, yeah."
+        },
+        {
+            "start": "00:02:13",
+            "end": "00:02:17",
+            "speaker": "Michael Taft",
+            "text": "Yeah, but you are originally a Kiwi, is that correct?"
+        },
+        {
+            "start": "00:02:17",
+            "end": "00:02:24",
+            "speaker": "Jayarava Attwood",
+            "text": "That's right. I grew up in New Zealand and I moved here about 16 years ago."
+        },
+        {
+            "start": "00:02:24",
+            "end": "00:02:31",
+            "speaker": "Michael Taft",
+            "text": "So what brought you from, you know, all the way on the other side of the world up to Cambridge? Small town Kiwi boy ends up in the center of England."
+        },
+        {
+            "start": "00:02:31",
+            "end": "00:02:37",
+            "speaker": "Jayarava Attwood",
+            "text": "I got involved in the Triratna Buddhist movement in 1994, and we were sort of an outpost."
+        },
+        {
+            "start": "00:02:37",
+            "end": "00:02:41",
+            "speaker": "Michael Taft",
+            "text": "Can you just briefly explain what the Triratna Order is?"
+        },
+        {
+            "start": "00:02:41",
+            "end": "00:02:53",
+            "speaker": "Jayarava Attwood",
+            "text": "Yeah, it's a modern Buddhist movement founded by an Englishman in the mid-60s, and it combines mostly traditional Buddhist teachings with some more sort of modern ideas."
+        },
+        {
+            "start": "00:02:53",
+            "end": "00:02:56",
+            "speaker": "Michael Taft",
+            "text": "And is this a large group?"
+        },
+        {
+            "start": "00:02:56",
+            "end": "00:03:07",
+            "speaker": "Jayarava Attwood",
+            "text": "There's a little over 2,000 members of the order, plus I don't know how many people that come along, hang around."
+        },
+        {
+            "start": "00:03:07",
+            "end": "00:03:09",
+            "speaker": "Michael Taft",
+            "text": "And that's what brought you to the UK."
+        },
+        {
+            "start": "00:03:09",
+            "end": "00:03:32",
+            "speaker": "Jayarava Attwood",
+            "text": "Yeah, yeah. So I wanted to get more involved. I wanted to be what we would call a full-time Buddhist. So I came over and I was living in a Buddhist community and working in a Buddhist business. All my friends were Buddhists and everything I did was Buddhist. So I sort of threw myself into that, and that was 16 years ago and now I'm still here."
+        },
+        {
+            "start": "00:03:33",
+            "end": "00:03:47",
+            "speaker": "Michael Taft",
+            "text": "And so one of the main things I noticed, obviously, in your posts is that you are a scholar of Buddhist texts like suttas and sutras. Did you come to that by way of the Triratna Order, or how did you get involved in doing that?"
+        },
+        {
+            "start": "00:03:47",
+            "end": "00:04:20",
+            "speaker": "Jayarava Attwood",
+            "text": "I often teach myself what I want to know. So when I got involved in Buddhism, I started looking at texts. And one of the things that intrigued me was how different translations were. I started looking into Pali as a first step, and it took me a few goes and a few years, but I eventually taught myself Pali and got interested in the Pali canon, especially the suttas. So that was kind of my way in, really — just trying to figure out why translations were so different from each other."
+        },
+        {
+            "start": "00:04:20",
+            "end": "00:04:55",
+            "speaker": "Michael Taft",
+            "text": "As you may know, my original college degree was in German language and literature, and also just generally linguistics. The professor I worked with the most was really fascinated by Kafka, so we would read Kafka all the time. And then I would look at the English translations and see that they were really, really different. And also that the author-translators had interpolated tremendous amounts of material that was not in the original text — for a writer that was only dead at the time for 50 years or whatever. And here we have these Pali texts that are however old."
+        },
+        {
+            "start": "00:04:55",
+            "end": "00:04:57",
+            "speaker": "Jayarava Attwood",
+            "text": "That's right, yeah."
+        },
+        {
+            "start": "00:04:57",
+            "end": "00:05:03",
+            "speaker": "Michael Taft",
+            "text": "You can only imagine the layers of interpretation and interpolation."
+        },
+        {
+            "start": "00:05:03",
+            "end": "00:05:33",
+            "speaker": "Jayarava Attwood",
+            "text": "They were probably relatively fixed about 2,000 years ago, but they have been edited since. There was a big editing program went on in Burma in the 12th or 13th century, I think. But yes, all the translations that we read are modified and interpreted. If there's a difficult passage, often even a good translator will consult the commentary and translate the commentary instead of the text itself."
+        },
+        {
+            "start": "00:05:33",
+            "end": "00:05:37",
+            "speaker": "Michael Taft",
+            "text": "And so by the commentary, you mean commentaries from a thousand years ago?"
+        },
+        {
+            "start": "00:05:37",
+            "end": "00:05:50",
+            "speaker": "Jayarava Attwood",
+            "text": "Yeah, mainly with Pali, we're talking about commentaries composed by Buddhaghosa in Sri Lanka around the 5th century of the Common Era, so about 1,500 years old."
+        },
+        {
+            "start": "00:05:50",
+            "end": "00:06:50",
+            "speaker": "Michael Taft",
+            "text": "Okay, so why don't you just take us through the history of the Pali canon. There's sort of the received version, the one that you usually get in your local Buddhist center. Let me see if I can recite this and then you can correct me. But generally what I learned was that nothing at all was written down in Buddhism for approximately 300 years after the Buddha died — the historical Buddha, if that person existed. There was 300 years of radio silence, and then they started writing this down. And naturally the question comes up: well, how did they get it right 300 years later? And the usual answer is that these were arhats with tremendous powers of memory that we can't even imagine, who transmitted it in memorized fashion, teacher to student, for 300 years before finally it was committed to paper or palm leaf or whatever they were writing it on. And then we have the Pali Canon, and that's it."
+        },
+        {
+            "start": "00:06:50",
+            "end": "00:07:06",
+            "speaker": "Jayarava Attwood",
+            "text": "Yeah. Well, there's a different story that most scholars would tell. It's not so different. There's, I think, good evidence that the Pali texts reflect a pre-Common Era society. For example, they talk about cities."
+        },
+        {
+            "start": "00:07:06",
+            "end": "00:07:32",
+            "speaker": "Jayarava Attwood",
+            "text": "So Savatthi, Rajagaha, Kasi. And these cities we know from archaeology didn't really exist before about the 6th century BCE. And the versions of them in the stories are obviously like mature city-states, almost. So say 500 would be a good ballpark figure for the earliest time that the suttas could have been written. They couldn't have been written before these cities became established."
+        },
+        {
+            "start": "00:07:32",
+            "end": "00:08:15",
+            "speaker": "Jayarava Attwood",
+            "text": "And they don't mention King Ashoka. He lived around the middle of the third century — that's a fairly secure date. They don't mention Alexander of Macedonia, who destroyed the Achaemenid Persian Empire but also invaded India, or what we call Greater India — actually, these days it's Pakistan. But he crossed the Indus River. So they don't mention him. And there are a few other little clues as well, that probably the main period of composition was about 500 BCE to 300 BCE. We don't know, there's no actual evidence. The very earliest physical Buddhist texts are about the second century BCE."
+        },
+        {
+            "start": "00:08:16",
+            "end": "00:08:36",
+            "speaker": "Jayarava Attwood",
+            "text": "But I think the texts themselves do reflect that sort of period. Whether there were arahants with magical memories, I don't know. There's no evidence of that as far as I know. Perhaps you'd know better than I — you seem to know a few arahants."
+        },
+        {
+            "start": "00:08:36",
+            "end": "00:08:38",
+            "speaker": "Michael Taft",
+            "text": "No comment."
+        },
+        {
+            "start": "00:08:38",
+            "end": "00:08:41",
+            "speaker": "Jayarava Attwood",
+            "text": "You've talked to Daniel Ingram, haven't you? How's his memory?"
+        },
+        {
+            "start": "00:08:41",
+            "end": "00:08:44",
+            "speaker": "Michael Taft",
+            "text": "Sure. You know, he's a very smart guy, right?"
+        },
+        {
+            "start": "00:08:44",
+            "end": "00:08:46",
+            "speaker": "Jayarava Attwood",
+            "text": "Yeah, yeah, sure. I tend not to believe in magic, so..."
+        },
+        {
+            "start": "00:08:46",
+            "end": "00:09:10",
+            "speaker": "Michael Taft",
+            "text": "I agree. I would say that certainly I've had my own memory vastly improved by meditation, and I see that that happens to other people. But the extreme levels that would be required to memorize huge amounts of text and transmit it for 300 years without error seems somewhat far-fetched."
+        },
+        {
+            "start": "00:09:10",
+            "end": "00:10:03",
+            "speaker": "Jayarava Attwood",
+            "text": "Yeah, I think so too. And the thing is, the texts themselves, when you start to look at them closely — what they look like is that they're made of almost like bricks of text. So there are paragraphs and sentences that are repeated time and time again, and parts of them are quite formulaic, and the formulas get repeated time and time again. And that's a sign of an oral culture, where you have a kind of outline of a story that's quite stable. And then the story gets told by the storyteller. So the storyteller will have like a map, and they will describe the territory for you anew each time. And there's quite a number of stories in the Pali suttas that are told several different times with slightly different details."
+        },
+        {
+            "start": "00:10:04",
+            "end": "00:11:12",
+            "speaker": "Jayarava Attwood",
+            "text": "So it's fairly clear, I think, that it was this kind of storytelling based around templates that went on, and that that was what was recorded in the end. You know, people do memorize a huge amount of stuff even today. But, you know, I play music and sing songs, and even now that I'm not practicing a lot, I could probably sing 50 or 60 songs off the top of my head and play the guitar to them. If you were a professional musician and you were putting on two-hour shows every night, you'd have a pretty vast knowledge of lyrics and music that you could trot out without really having to think that hard about it. So it's not that astounding, really, that people might remember two or three dozen stories and be able to repeat them, and that you'd have loads of people that could do that. Yeah, so that's what the Pali suttas look like to me. They look like a collection of stories built around stock phrases and repeated in that way."
+        },
+        {
+            "start": "00:11:12",
+            "end": "00:11:57",
+            "speaker": "Michael Taft",
+            "text": "Of course, these are oral cultures also, where people tend to memorize a lot more material, and people are used to memorizing stuff. We see that in cultures up to 100 years ago where people were non-literate. They had members of society who were sort of the brain bank of the culture — the griot or whatever — who remembered all the stories and the birth and death trees for everyone and all that. So it does make sense. And yet there's also this idea that some of this could drift pretty far over a few hundred years. What was the most surprising thing you discovered that was just completely different from how it had been taught to you?"
+        },
+        {
+            "start": "00:11:57",
+            "end": "00:12:50",
+            "speaker": "Jayarava Attwood",
+            "text": "There's something that comes to mind immediately. The thing that really rocked me is that there are two ideas that are quite important in the early Buddhist texts, one of which is karma. So karma says that I do an action now and the consequences manifest sometime in the future. It might be this life. It's quite likely to be in my next life, in terms of determining where I'm going to be reborn. But it could be in some life after that. So any time in the future, but potentially quite a long time in the future. So that's karma. And then we have this other idea, dependent arising. And there's a classic formula — I'm not going to be able to recite the Pali off the top of my head, I'm afraid, but in English: from the arising of this comes the arising of that, and so on. And the last bit is: from the ceasing of this, that ceases."
+        },
+        {
+            "start": "00:12:50",
+            "end": "00:13:25",
+            "speaker": "Jayarava Attwood",
+            "text": "So that tells us that when the condition for an effect ceases, the effect has to also cease. The condition and the effect have to be coincident in time. And that says that you can't have a time gap between the action and the consequence. The consequence has to happen at the same time, which is a contradiction of karma. So there's that. And that might sound crazy if it was just me saying it, but actually, when you look at the next phase of Buddhism, the Abhidharma phase, what happens is that each of the Abhidharma groups realizes this and tries to solve the problem. And they all solve it differently."
+        },
+        {
+            "start": "00:13:25",
+            "end": "00:14:33",
+            "speaker": "Jayarava Attwood",
+            "text": "So the Sarvāstivādins, for example, who are less well known these days but were a very important group of Buddhists in North India, especially perhaps North West India — they looked at it and they said, well, if the conditions have to be present for the effect to exist, then if something is existing now on the basis of past conditions, those conditions must still exist. That's the logic of it. It's kind of inescapable unless you start tinkering with it. So they came up with a solution that everything exists all the time, which is what sarva asti means. So they got called the Sarvāstivāda, the doctrine that everything exists. And that sounds crazy when you just hear it out of context, but in terms of this problem of matching up the discontinuity between karma and dependent arising, it's one of the answers that you could come up with."
+        },
+        {
+            "start": "00:14:33",
+            "end": "00:15:41",
+            "speaker": "Jayarava Attwood",
+            "text": "The one that most people would be familiar with would be the doctrine of momentariness. And that says that it's a bit like calculus, if you know calculus: each condition is infinitesimally short, but it provides the conditions for the next moment, and then that arises and passes away in the moment and creates the conditions for the next one. So you get this stream of very, very short-lived moments that connect the condition or the action to the consequence. The problem with this is that Buddhists also believe that you can only have one mental event at a time. So it's one citta at a time, and this is an almost universal kind of belief about mental processes. And unfortunately, that means if you have two actions, you've got to have a stream of momentary mental events streaming away from those into the future. They've got to time-share the mind somehow, and it means that you can't have continuity. So the doctrine of momentariness doesn't explain how you get consequences in the future. And nor does the Sarvāstivāda, nor do the other versions."
+        },
+        {
+            "start": "00:15:41",
+            "end": "00:16:04",
+            "speaker": "Jayarava Attwood",
+            "text": "The only one that comes close to working is Nāgārjuna's explanation, which is that it's all an illusion. Karma and dependent arising and actions and actors, people that do actions — it's all just relative truth, and actually in the ultimate it doesn't exist. It's still important because it's part of the skillful means that helps people get enlightened, but none of it's real. Which I find quite unsatisfactory as an explanation."
+        },
+        {
+            "start": "00:16:04",
+            "end": "00:17:10",
+            "speaker": "Michael Taft",
+            "text": "Yeah, that one is almost like saying it's magic. It explains nothing. It's interesting if you look into the history of karma — at least the histories that I've read, the scholarly histories. It's coming from this Vedic period in which there's a belief that reminds me of the Egyptian belief, where you're going to go to an afterlife, but you have to maintain that afterlife by the sacrifices you make — however many horses you sacrifice into the fire and so on, and sometimes there were thousands and thousands of animals involved. But they're sacrificing these animals, and then that buys you a certain time in paradise, but eventually this runs out. The merit, the puñña, runs out and then you come back. And so it's the logic of sacrifice, that buying-your-way-into-heaven kind of thing, that brought about this whole idea that then you have to come back."
+        },
+        {
+            "start": "00:17:10",
+            "end": "00:18:22",
+            "speaker": "Jayarava Attwood",
+            "text": "There's a slightly weird thing about that, because when you start looking at the Vedas, coming back is a good thing. So our Buddhist king of hell is Yama. But Yama in the Vedas is a culture hero. He's like Prometheus. He's the one that found the way to the ancestors in the afterlife. And he's the one that sort of set up the cycle of cycling back and forth between this world and living in heaven with your ancestors. And that's a great thing. But at some point, perhaps a little bit before Buddhism and starting to shade into the kind of ideas you were talking about, it becomes a bad thing. Rebirth becomes a burden to escape from. And the first thing that I'm aware of with that is a text called the Bṛhadāraṇyaka Upaniṣad, which is an earlier Upanishad, probably a little bit before Buddhism, and they talk about how you have to do the rituals in order to not come back, to go to Brahman. And I still haven't seen anything that really explains this transition from rebirth being a good thing because you get to come back, to rebirth being a bad thing because you have to come back."
+        },
+        {
+            "start": "00:18:23",
+            "end": "00:19:05",
+            "speaker": "Michael Taft",
+            "text": "It's a very interesting distinction. I do think that's a very fascinating turn, right? A 180 in the whole idea of the meaning of rebirth. And yet the point I was going for here is that rebirth is just one of these things hanging around in Vedic culture at the time of the Buddha, right? It's just an idea in the air that everyone believes in. And so it doesn't necessarily follow that in his transcendental insight into the nature of the universe, the Buddha was insisting that rebirth was something that was real or necessary, but instead just talking about it because everyone was talking about it all the time."
+        },
+        {
+            "start": "00:19:05",
+            "end": "00:19:29",
+            "speaker": "Jayarava Attwood",
+            "text": "Yeah, it certainly seems to be part of Indian culture generally. The Buddha lived in a place where Vedic culture was just starting to come east and encroach on an area which we sometimes call the Śramaṇa religions — Buddhism, the Ājīvikas — and they also had an idea about karma."
+        },
+        {
+            "start": "00:19:29",
+            "end": "00:20:30",
+            "speaker": "Jayarava Attwood",
+            "text": "There's a theory by an obscure scholar called Jayarava that the idea of karma came about because there were some recent immigrants from Iran who had these ideas about heaven. And they arrived in India where the afterlife was cyclic. So you had these two ideas of going around and around from life to afterlife to life. And then this new idea arrived that they hadn't come across before, which was that you go somewhere after you're dead and you stay there. My theory on this is partly based on something that Michael Witzel said informally on an academic forum some years before, but I got it published with his permission. So Buddhism has this quite interesting hybrid afterlife where, if you do nothing, you go round and around, and if you work at it you can get off that cycle — and we're not quite sure where you go, but you don't come back. So it's a quite strange hybrid of the two different kinds of afterlife that you generally see."
+        },
+        {
+            "start": "00:20:30",
+            "end": "00:21:11",
+            "speaker": "Michael Taft",
+            "text": "And you were bringing up the difficulty in the idea of karma with the idea of dependent origination. You know, as far as I can tell, there's nobody who can explain dependent origination satisfactorily. There are many attempts, and they're so different — some of them including like three lives, one cycle of dependent origination over three rebirths; some of them talking about what's happening in your brain moment to moment. I mean, it seems to be some kind of impenetrable puzzle. So you brought up how seeing that karma was explained in so many different ways was shocking to you, or a revelation to you. What was another thing?"
+        },
+        {
+            "start": "00:21:12",
+            "end": "00:22:30",
+            "speaker": "Jayarava Attwood",
+            "text": "If you go back to the source texts, they're all different. All the manuscripts of the Pali suttas — all the different manuscripts are different from each other. And when you read Pali, what you tend to read is someone's edited version of all those different manuscripts. So usually either the Pali Text Society version, or there's a more recent one that's available electronically through the Vipassana Research Institute. So you have this edited version of it. But in reality, all of the manuscripts are different. They disagree. And this is a common problem with written traditions. The New Testament has the same problem. I was listening to a lecture on it recently, and the guy was saying there are more differences between the different manuscripts of the New Testament than there are words in the New Testament. And I would think that that's probably true of the suttas as well. I would think there are probably more differences than there are words. So that's one of the things as well — that when you start working with primary texts, you realize how far the translations are from the actual materials that people have been passing on all these years."
+        },
+        {
+            "start": "00:22:30",
+            "end": "00:22:42",
+            "speaker": "Michael Taft",
+            "text": "So, to make up a number, we could get five different source texts of exactly the same sutta and translate them individually, and they might say different or even opposite things."
+        },
+        {
+            "start": "00:22:42",
+            "end": "00:23:52",
+            "speaker": "Jayarava Attwood",
+            "text": "Potentially opposite, always different. Usually in quite small ways, you know, to be fair — it's usually spelling mistakes and things like that. But they can be quite big differences. And sometimes spelling mistakes and things get incorporated into the text and become part of the tradition as well. When you start studying primary texts, you really have to spend a lot of time figuring out what the scribe was doing when they were copying the thing. Were they concentrating, or did they skip a line or spell a word wrong? Sometimes letters look the same and the scribe isn't concentrating and they write one thing instead of the other because it looks similar. It's all that kind of thing that you have to watch out for. And I think if you only deal with translations, you have no sense of how insecure these texts really are. They look like these solid things. It's almost like the Buddha spoke English. But he didn't. And these texts are not 100% reliable even as written texts."
+        },
+        {
+            "start": "00:23:52",
+            "end": "00:23:56",
+            "speaker": "Michael Taft",
+            "text": "So what was your point about these discrepancies?"
+        },
+        {
+            "start": "00:23:56",
+            "end": "00:24:36",
+            "speaker": "Jayarava Attwood",
+            "text": "Well, just that most of us don't know about them. Most of us have no idea that things are so vague at that level. We're dealing with translations that are influenced by commentaries, ancient and modern, so they're interpretations as well as translations. And then the translations are from an edition, and the edition is someone's best guess at what the manuscripts should have said, based on comparing all the different manuscripts. I really noticed that when I got into the Heart Sutra, because Conze had 14 manuscripts and I managed to look at 10 of them. Some of them I actually held in my hand."
+        },
+        {
+            "start": "00:24:36",
+            "end": "00:25:10",
+            "speaker": "Jayarava Attwood",
+            "text": "And they're all different. They're all different enough that you have to really focus on it and figure out what was intended. You've got to try and reconstruct what the author intended. So the average Buddhist who's reading an English translation of something, or a German translation or whatever, they're a long way from what the artifacts say. And the artifacts are a long way from anything that the Buddha might have said. So actually this idea that we're in touch with the Buddha through the texts is a bit nebulous, really. It's a nice story, but I'm not quite sure how real that is. One of the downsides of studying texts is that — I don't think cynical is the right word — but you do realize that the grounds are shifting much more than people might expect. Certainly than I expected. I expected it to be much more solid than what I found."
+        },
+        {
+            "start": "00:25:10",
+            "end": "00:25:55",
+            "speaker": "Michael Taft",
+            "text": "Yeah, so you brought up the Heart Sutra, and this seems to be your central object of focus for your studies recently. I take it that you have said — and let's say discovered and published — some things about the Heart Sutra that are pretty shocking, actually. So tell us what the Heart Sutra is and sort of the tradition around it, and then what you think is actually different from the way it's normally talked about."
+        },
+        {
+            "start": "00:25:56",
+            "end": "00:27:05",
+            "speaker": "Jayarava Attwood",
+            "text": "As far as the Buddhist tradition is concerned, I think if you read about the Heart Sutra, usually the first thing that any writer says about it is that it's the most popular Mahayana text. And I think that's probably true. It's chanted all over the world. Millions of people probably chant this text every day. And it's seen as epitomizing not just perfection of wisdom teachings, but also Mahayana teachings more generally. It also has quite a magical quality, so people chant it for protection or for good luck. There's a long tradition of chanting it for protection — there's a story that goes back to Xuanzang, the Chinese pilgrim who went to India and brought back a load of texts in the 7th century. So it's very well known, it's very well loved, it's very important, and it's been quite difficult for some Buddhists to accept the modern scholarship on it, which says that it's something else. Although I think the new interpretation certainly has value, and certainly values the Heart Sutra as a text."
+        },
+        {
+            "start": "00:27:05",
+            "end": "00:27:32",
+            "speaker": "Michael Taft",
+            "text": "It's interesting also about the name, because we have these sort of short English names for some of these big texts, like the Diamond Sutra and the Heart Sutra. And they're not really called that, right? So the Diamond Sutra is really the Diamond Cutter Sutra. And the Heart Sutra is part of these Perfection of Wisdom texts — it would be called the Heart of Perfect Wisdom Sutra. And so knowing that it's part of these Perfection of Wisdom texts is important."
+        },
+        {
+            "start": "00:27:33",
+            "end": "00:29:03",
+            "speaker": "Jayarava Attwood",
+            "text": "Yes, and the Perfection of Wisdom texts themselves are long, they're abstruse, especially in translation, because they're difficult in Sanskrit, so translations tend to be more difficult rather than less difficult. So the Heart Sutra is an easy way for most people to engage with this body of texts that are really important historically. Going back to the second century of the Common Era, the first Prajñāpāramitā translation was made in China. The oldest manuscript of the 8,000-line text, which we think is probably the oldest text, is carbon dated with quite a wide spread, but the spread is centered on about 70 CE, so the middle of the first century of the Common Era. So we're really getting in these texts to the heart of Mahayana emerging as a phenomenon and growing into not just a movement, but the main movement of North Indian and Asian Buddhism. So yeah, the Heart Sutra is very important. You mentioned the titles and the translations and how we get them wrong. The Diamond Sutra, for example, is called the Vajracchedikā Sūtra, and vajra doesn't mean diamond in Sanskrit. That's a meaning that it picked up quite a bit later."
+        },
+        {
+            "start": "00:29:03",
+            "end": "00:29:07",
+            "speaker": "Michael Taft",
+            "text": "Thunderbolt. Vajra is like a thunderbolt, like Zeus's thunderbolt."
+        },
+        {
+            "start": "00:29:07",
+            "end": "00:29:28",
+            "speaker": "Jayarava Attwood",
+            "text": "It's Indra's thunderbolt. And I looked at the various compounds that use that -chedikā ending, and it seems that the thing that is cut is the first word. So it's the sutra that cuts the thunderbolt, not the thunderbolt sutra that cuts, if you get my meaning."
+        },
+        {
+            "start": "00:29:28",
+            "end": "00:29:31",
+            "speaker": "Michael Taft",
+            "text": "Fascinating."
+        },
+        {
+            "start": "00:29:31",
+            "end": "00:30:00",
+            "speaker": "Jayarava Attwood",
+            "text": "Yeah, yeah. Well, Paul Harrison figured that out, I'm just quoting him. And then the Heart Sutra is the Prajñāpāramitā-hṛdaya. It's not always called a sutra in Sanskrit, and sometimes the Nepalese manuscripts refer to it as a dhāraṇī, which is an idea that has floated around in Japanese scholarship as well — that the text isn't a sutra, it's a dhāraṇī, but it's called a sutra."
+        },
+        {
+            "start": "00:30:00",
+            "end": "00:30:03",
+            "speaker": "Michael Taft",
+            "text": "So like a remembrance or a short meditation?"
+        },
+        {
+            "start": "00:30:03",
+            "end": "00:30:14",
+            "speaker": "Jayarava Attwood",
+            "text": "Something like that, yeah. Dhāraṇī is a tricky word, it has loads of different meanings, and the scholarship on it is a bit patchy still. But prajñāpāramitā-hṛdaya would mean something like the heart of perfect wisdom, or the heart of perfection of insight. Yeah, along those lines."
+        },
+        {
+            "start": "00:30:14",
+            "end": "00:31:08",
+            "speaker": "Jayarava Attwood",
+            "text": "So this is a complex subject and it's hard to know sometimes where to start. My work is partly historical, partly linguistic and partly exegetical. So I'm trying to understand what it says, why it says that, and what that means. I'm sort of consolidating work by two other scholars as well. And I think it's quite important to acknowledge that scholarship is not like one person beavering away — although, you know, that is me, one person beavering away, but I do it on the basis of all this pre-existing work. And there are two people that are really worth mentioning. One is Jan Nattier, who's now retired but was a professor of Buddhist studies. She made the discovery that the original Heart Sutra was Chinese, and that the Sanskrit Heart Sutra is a translation from Chinese."
+        },
+        {
+            "start": "00:31:08",
+            "end": "00:31:38",
+            "speaker": "Michael Taft",
+            "text": "And I think that people find that hard to accept. So, yeah, typically the idea is that these sutras were originally in Sanskrit — these Mahayana sutras were in the Sanskrit language, and then they would have been translated into Chinese much later. And so it's a pretty shocking claim to say, well, actually, this one was written in Chinese much later, and then they kind of back-translated it into Sanskrit to pretend it had a firmer pedigree than it actually did."
+        },
+        {
+            "start": "00:31:38",
+            "end": "00:33:05",
+            "speaker": "Jayarava Attwood",
+            "text": "Yeah, and I still can't figure out in this case why anyone would have done that. I'd really like to have a suspect. I know they had the means and the opportunity, but I don't know their motive. I can't quite see a motive other than the obvious one. But yeah, someone must have forged a Sanskrit manuscript at some point and used that to convince the Buddhist establishment of Tang Dynasty China that this text was something other than it was. But on the other hand, it's worth saying — because I don't think this is at all in the general public domain — that this went on all the time. It wasn't a one-off. There's a catalogue from the early 6th century that lists 2,100 Buddhist texts. 450 of those are what they call chāojīng, or compilation texts, that are quotes from sutras put together by various people in Chinese and then circulated as separate sutras. So maybe 20, 25% of all the texts circulating at that point were of the same type as the Heart Sutra. And that's one of the things that we know about the Heart Sutra — that it's made up of quotes, mainly from one particular translation of a Perfection of Wisdom text."
+        },
+        {
+            "start": "00:33:05",
+            "end": "00:33:10",
+            "speaker": "Michael Taft",
+            "text": "And do you feel like it matters?"
+        },
+        {
+            "start": "00:33:10",
+            "end": "00:33:13",
+            "speaker": "Jayarava Attwood",
+            "text": "Yeah, it's a good question."
+        },
+        {
+            "start": "00:33:13",
+            "end": "00:33:26",
+            "speaker": "Michael Taft",
+            "text": "Is it basically a kind of digest or summary of other texts made later in Chinese? Or is there something really important about the fact that this started out as a Chinese document?"
+        },
+        {
+            "start": "00:33:26",
+            "end": "00:34:51",
+            "speaker": "Jayarava Attwood",
+            "text": "It depends what you value. Partly whether the Heart Sutra has value to you depends on what you think is valuable. So there are a load of people who don't believe this story at all. Senior Japanese scholars who are also Buddhist priests have written denunciations of this theory and supposed refutations, although as far as I can see, it's exactly right. And I've made my own contribution to showing why it's right. But what gives it value is this other article that was written more recently. Jan Nattier's article was 1992; there's another article published in 2014 by a guy who was part of a Taiwanese Buddhist order. At the time he was going by the name Huifeng, and these days he's gone back to being Matthew Osborne. So Matthew wrote this paper which looked at a word — well, he looked at three words, but one word in particular. It's five Chinese characters. My Chinese pronunciation is terrible, but it's yǐ wú suǒ dé gù, and we've translated this word to mean \"attainment\". It's hard to do it without the text in front of you, but the thing is that someone's put a full stop before it, and that full stop should have been after it. It should be part of the previous part of the text, and it completely changes the meaning of the text."
+        },
+        {
+            "start": "00:34:52",
+            "end": "00:35:15",
+            "speaker": "Jayarava Attwood",
+            "text": "So most people would take the text to be — well, a lot of it is about negating categories. So there is no form, there is no feeling, these kinds of ideas. So there's no knowledge, there's no attainment. It's all about contradiction and negation."
+        },
+        {
+            "start": "00:35:15",
+            "end": "00:35:18",
+            "speaker": "Michael Taft",
+            "text": "That certainly seems to be the surface meaning of the text, yeah."
+        },
+        {
+            "start": "00:35:18",
+            "end": "00:35:40",
+            "speaker": "Jayarava Attwood",
+            "text": "Yeah, but if you get this word right and you get it in the right place in the text, it says something completely different that I think is really much more interesting. So rather than it meaning \"attainment\", it's related to another Sanskrit word, which is a big long word: anupalambha-yogena. Mate, I can write some of this stuff down and you can put it on your website maybe, some of these words."
+        },
+        {
+            "start": "00:35:40",
+            "end": "00:35:42",
+            "speaker": "Michael Taft",
+            "text": "Yes."
+        },
+        {
+            "start": "00:35:42",
+            "end": "00:36:31",
+            "speaker": "Jayarava Attwood",
+            "text": "This word means the practice of non-apprehension. Anupalambha means non-apprehension, and yoga means practice. And it goes with the previous part. So roughly what the Heart Sutra is saying is more like: in the meditative state of emptiness, by means of — or through — the practice of non-apprehension, there is no form. And that's a wholly different kind of way of looking at it. So it's not saying, okay, form doesn't exist, it's just an illusion. It's saying: when you get to a certain point in your meditation, form stops arising. It's not that there's no form. It's just that for you in that moment, form doesn't exist, or it doesn't arise."
+        },
+        {
+            "start": "00:36:31",
+            "end": "00:36:45",
+            "speaker": "Michael Taft",
+            "text": "I see. So instead of being sort of an assertion of the Cittamātra school, like the whole world is an illusion, this is actually talking about cessations, or nirodha, or something."
+        },
+        {
+            "start": "00:36:45",
+            "end": "00:37:07",
+            "speaker": "Jayarava Attwood",
+            "text": "Yes, exactly. A colleague of mine called Satyadhana wrote an article for our order journal, and he pointed out that there were some continuities with some texts about śūnyatā in the Pali canon. So particularly there's the Cūḷasuññata Sutta and the Mahāsuññata Sutta, and they're in the Majjhima Nikāya, and they talk about a kind of meditation practice."
+        },
+        {
+            "start": "00:37:07",
+            "end": "00:38:15",
+            "speaker": "Jayarava Attwood",
+            "text": "And in this practice, instead of intensely focusing on an object and gradually sharpening that focus so that gradually that becomes everything in your field of experience — you're still focusing, but what you're paying attention to is what's absent. So you go from your normal busy life, you go and find a quiet place, and you sit down and you just notice how your normal busy life doesn't arise if the conditions aren't there. You know, the text says you go to the forest. So instead of the busy village, you have the forest. And then you do your concentration practice, or maybe you focus on your body. When I've tried doing it, I focus on my body. And if you can get absorbed in the sensations of your body, then the room around you sort of fades into the background and actually kind of disappears. And then if you bring your concentration further into, say, the sensations of breathing, then the sensations of the body fade into the background and kind of disappear."
+        },
+        {
+            "start": "00:38:15",
+            "end": "00:39:07",
+            "speaker": "Jayarava Attwood",
+            "text": "And so the idea of the meditation is that you take that in, and instead of going through the jhānas or the dhyānas, you go into the formless spheres — the sphere of infinite space, the sphere of infinite consciousness and so on. And from there, when you go beyond those spheres, you end up in what in Pali they call the suññatā-vihāra, dwelling in emptiness. And I found this quite exciting, because this is like a practical meditation that anyone can do. I've had a few goes at it. I'm not a great meditator. People I know have taken it further. And this seems to be what the Heart Sutra is talking about. And because that's what the Heart Sutra seems to be talking about, it seems that that's what the Perfection of Wisdom is talking about. I've done a little bit of work tracing that idea in the Perfection of Wisdom texts as well."
+        },
+        {
+            "start": "00:39:07",
+            "end": "00:39:23",
+            "speaker": "Jayarava Attwood",
+            "text": "So rather than being about negating things and about telling you that the world doesn't exist, it's actually saying: look, what you need to do is meditate in this way so that your world, your personal world, ceases — you experience its cessation."
+        },
+        {
+            "start": "00:39:23",
+            "end": "00:39:43",
+            "speaker": "Michael Taft",
+            "text": "As you say — cessation, nirodha, there are all sorts of words for it. I think nirvana is another synonym that's on the same level, at least originally. Emptiness. These are all pointing to the same kind of experience where the world stops. And then when you're finished, the world starts up again."
+        },
+        {
+            "start": "00:39:44",
+            "end": "00:40:04",
+            "speaker": "Jayarava Attwood",
+            "text": "Well, from talking to people who do more meditation, it seems like it's almost like watching the world start up again is where the insight arises. You see the world starting up again and you realize: oh, I'm making this. It's not something I'm doing, it's not something being done to me."
+        },
+        {
+            "start": "00:40:04",
+            "end": "00:40:12",
+            "speaker": "Michael Taft",
+            "text": "Yeah, not only watching the world start up, but watching the layers of the sense of self start up."
+        },
+        {
+            "start": "00:40:12",
+            "end": "00:40:14",
+            "speaker": "Jayarava Attwood",
+            "text": "Yes."
+        },
+        {
+            "start": "00:40:14",
+            "end": "00:40:28",
+            "speaker": "Michael Taft",
+            "text": "And so it's kind of the rebooting of self and world, or the perception of various layers of self and world slowly happening, that is so insight-producing. Because you can watch it happening in real time and then it's like: oh, this is what's there all the time."
+        },
+        {
+            "start": "00:40:28",
+            "end": "00:40:30",
+            "speaker": "Jayarava Attwood",
+            "text": "Yes."
+        },
+        {
+            "start": "00:40:30",
+            "end": "00:41:05",
+            "speaker": "Michael Taft",
+            "text": "And so you seem to be saying two really interesting things simultaneously. One is that the pedigree or origin of the Heart Sutra is completely different from what we imagine it to be — even though it's sort of summarized from legitimate Perfection of Wisdom Sanskrit texts, the original text of the Heart Sutra itself, the Heart of Perfect Wisdom Sutra itself, is Chinese. So that's one thing. And then the second thing is that, due to translation errors, the meaning of it is quite a bit different from what people tend to think it is. Is that correct?"
+        },
+        {
+            "start": "00:41:05",
+            "end": "00:41:50",
+            "speaker": "Jayarava Attwood",
+            "text": "Yes, and quite a lot more interesting, I think — especially the recovering of this word that Matthew Osborne has done makes it a much more interesting prospect, I think. So the paper is called \"Apocryphal Treatment for Conze's Heart Problems: 'Non-attainment', 'Apprehension', and 'Mental Hanging' in the Prajñāpāramitā Hṛdaya\", by Matthew Osborne. I think the ideas in it are brilliant. It's not an easy read, and the argument is broken up in a way that I think is a bit unhelpful. But it's a very important discovery, I think."
+        },
+        {
+            "start": "00:41:50",
+            "end": "00:42:02",
+            "speaker": "Michael Taft",
+            "text": "And have you written any commentary on this paper? Is there a sort of summary that you've created that makes it easier to apprehend?"
+        },
+        {
+            "start": "00:42:02",
+            "end": "00:43:21",
+            "speaker": "Jayarava Attwood",
+            "text": "Yeah, I wrote a blog post on non-apprehension. So in a sense, the peculiar history of the text is less peculiar when you know more about Chinese history and texts. And it doesn't matter so much that it's not quite what we thought, because actually it's quite a valuable summary of a style of practice and a way of thinking about Buddhism that seems to have ongoing value. And it's interesting — one of the questions that someone on Twitter posed was: if you do this sort of critical analysis of Buddhism and parts of it fail, what's left? What's left is that we have these practices, and even ways of talking about them, that are still viable. And I'm not necessarily going to be the one using it — I'm not a hardcore meditator — but I think it's there for hardcore meditators to play around with. And, you know, people like yourself and other people that you've had on your podcast, you are experiencing cessation. You are having that kind of experience of the world stopping and then starting up again. And this is another way of approaching that."
+        },
+        {
+            "start": "00:43:21",
+            "end": "00:44:41",
+            "speaker": "Michael Taft",
+            "text": "That's really fascinating, Jayarava. I mean, I couldn't agree more that, like you, the ideas about karma and rebirth and the sort of ontological status of various entities, and even the whole worldview of Buddhism, are not anywhere near as interesting as the actual practices. I mean, here we have 2,500 years of people trying to do really interesting and hopefully useful and helpful things with their minds. That is a tremendous wealth of empirical knowledge about the interesting and helpful and useful things we can do with our minds. And even if digging into these texts in the way that you and other scholars do tends to break some of the mythology around them, getting the language correct — or as correct as we can — can actually help us unearth the really useful parts of these, right? I mean, this is what's so important about this. I don't really care what anybody believes about the nature of the universe. It's all speculative. But it is really fascinating if someone can make use of one of these texts and do it themselves and really find it powerful and helpful."
+        },
+        {
+            "start": "00:44:41",
+            "end": "00:45:29",
+            "speaker": "Jayarava Attwood",
+            "text": "Yes. I think it's clear that meditation and other practices as well — you know, even devotional practices — they are important and useful. One of the things that I've been aware of: David Chapman put me onto McMahan's book, The Making of Buddhist Modernism. And I read that and I thought, oh yeah, this is really significant. We're very much modernists. And I still sort of identify as a Buddhist. I still feel like I want to be a Buddhist. I want to be part of the order that I'm a part of. Sometimes it gets difficult, you know, if I'm sort of saying, well, I don't believe in karma and rebirth in any traditional form. People kind of look at me as though I'm slightly crazy, or people often say, well, what's left? And I'm like, well, the practice, the practices, the meditations — that's what's left. The important part is what's left."
+        },
+        {
+            "start": "00:45:29",
+            "end": "00:45:46",
+            "speaker": "Michael Taft",
+            "text": "Yeah, that's it. We're not Buddhists because of what we believe, I think. We're Buddhists because of what we do."
+        },
+        {
+            "start": "00:45:46",
+            "end": "00:47:20",
+            "speaker": "Jayarava Attwood",
+            "text": "And what we're trying to do. And I think even those of us who aren't necessarily maybe temperamentally suited to realistically seeking out cessation, we still want to live better lives. And we still live in this world where everyone's hyper-stimulated and calming down is just really difficult for a lot of people. So just even that as a contribution. But I think we have a real problem in trying to sell it as religion. I think religion has got less and less interesting to more and more people. Where it's holding on is at the fringes — so it's fundamentalist Christianity or even fundamentalist Islam. There's a growing body of people who just aren't interested in anything that's presented to them as religion or talked about as religion. So somehow these new secular approaches, I think, are quite interesting. I've long thought that secular mindfulness, despite the criticisms, is a great development for us as Buddhists, because it takes us to a new audience who wouldn't come to a Buddhist center, who wouldn't want to meet committed Buddhists. All they want is some way of working with their mind. And, well, we have that. We can offer that. We can offer these really powerful techniques for working with your mind. Should we do it in a way that puts people off? It's not the bodhisattva spirit. The bodhisattva spirit is that you do it in a way that is approachable."
+        },
+        {
+            "start": "00:47:20",
+            "end": "00:48:31",
+            "speaker": "Michael Taft",
+            "text": "That's right. There's room enough for everyone here. There are people who are committed to the belief system and mythological structure parts of Buddhism — the various teachings of karma and rebirth and all that. There's plenty of that being taught and plenty of that available for those who want that. And so why not have this other way of looking at the tradition that is wholly secular, wholly practical, for the people who will get a lot of use out of that? It doesn't have to be one or the other out there in the world. I mean, I would personally like it if both of those streams of, let's say, Buddhist practice were less critical of each other. Like, let's all admit we don't know what's going on and just let each other do what we're doing. There's a real utility in presenting a form of these practices that, while certainly saluting the background from which it comes, is completely secular and completely focused on the practical, useful, real-world effects in your life and the way that you can be kind and helpful to others."
+        },
+        {
+            "start": "00:48:31",
+            "end": "00:49:25",
+            "speaker": "Jayarava Attwood",
+            "text": "I think temperamentally I'm sort of a monist. I'd like there to be one right answer. I've been like that most of my life. And I've just been reading the history and philosophy of science — a guy called Hasok Chang — and he's making quite strong arguments for pluralism that I find convincing on an intellectual level, but I haven't emotionally got on board completely yet. So I agree that multiple ways of teaching are valuable. And for some people, the mythology is what works for them. People sometimes look or sound quite aggrieved if I'm careless in the way that I state my beliefs. I can say it in a way that seems to disregard the value of other beliefs. And I'm more and more sensitive to that these days."
+        },
+        {
+            "start": "00:49:25",
+            "end": "00:50:00",
+            "speaker": "Michael Taft",
+            "text": "Not everyone has to see it my way. It becomes problematic in another way too. Like, for example, here in the Bay Area there's a large Tibetan refugee community who are practicing their religion. For me, Mr. Old White Straight Male, to step up to them and say, you know, you're wrong because of this or that logical reason — I mean, that's just not excusable. We really have to stop doing that, old white guys, don't we?"
+        },
+        {
+            "start": "00:50:00",
+            "end": "00:50:04",
+            "speaker": "Jayarava Attwood",
+            "text": "Yeah. It's none of our business."
+        },
+        {
+            "start": "00:50:04",
+            "end": "00:50:13",
+            "speaker": "Michael Taft",
+            "text": "Yeah, right? And I mean, I'm not really interested in doing that anyway, but as far as I'm concerned, this pluralism of belief is a much more supportable way of living and being with others."
+        },
+        {
+            "start": "00:50:13",
+            "end": "00:51:25",
+            "speaker": "Jayarava Attwood",
+            "text": "Yes, yes, I'm convinced of that intellectually. There's another aspect of it for me as well, which is that if what we're talking about is something that goes on in the mind of the meditator or the practitioner, then we're not talking about reality in the way that philosophers talk about reality. And there is this distinction in Pali between the world as — you know, the world the way that we talk about the world, as everything that exists — and the world that is your world, the world that we live in as individuals, that we create. And if we're focused on this world that we create rather than a reality which is independent of our minds, then we can step back from ontological claims, philosophical claims about metaphysics and ontology, and leave that to the people who are good at that, which I would say is mainly scientists and some philosophers, and not clash with them."
+        },
+        {
+            "start": "00:51:25",
+            "end": "00:52:12",
+            "speaker": "Jayarava Attwood",
+            "text": "We can coexist much better with them if we're saying: look, if you do this, something really happens in your mind. Something really interesting happens in your mind. And then we just leave it at that. And we don't say \"and then you discover the ultimate nature of reality\". At that point, most of the world switches off and goes, okay — and pigeonholes us with all the other people who claim to know the ultimate nature of reality. And it's difficult, because in my tradition we talk about discovering the nature of reality. That's what we all think we're trying to do. And I went through a period of being uncomfortable, and then quietly disagreeing, and then now I'm just like, well, I just don't think that's what we're doing."
+        },
+        {
+            "start": "00:52:12",
+            "end": "00:52:39",
+            "speaker": "Jayarava Attwood",
+            "text": "I still think we're doing something important and profound and interesting and valuable. I just don't think it has anything to do with reality. So I'm for pluralism, and I understand that some people won't agree with that. But it seems to me that if we took that stance, we'd be in a much better position in the modern world to talk to people about what we're doing and why we're doing it, and to see how that fits into a modern world."
+        },
+        {
+            "start": "00:52:39",
+            "end": "00:53:29",
+            "speaker": "Michael Taft",
+            "text": "Yeah, as someone who teaches meditation to a lot of people, what I've seen over and over is that — and this will be controversial to say, but it's just what I've seen — the mistake they're making is that they're trying to make the meditation match their understanding of how objective external reality is supposed to be. And as far as I'm concerned, that always leads in a non-useful direction, or at least often leads in a non-useful direction. And what is actually useful is to say: no, we're talking about subjective experience here. You're examining your mind. And so let go of this conceptual model of the world that you're layering over your experience. And let's just look at your experience — your utterly subjective, personal experience — and let's see what's going on there."
+        },
+        {
+            "start": "00:53:29",
+            "end": "00:53:35",
+            "speaker": "Jayarava Attwood",
+            "text": "Yeah, because that's fascinating. There's so much going on there."
+        },
+        {
+            "start": "00:53:35",
+            "end": "00:54:00",
+            "speaker": "Michael Taft",
+            "text": "That's where there's pay dirt, right? You start to really get somewhere, in quotes, in your meditation when you work that way — because it's about examining the nature of experience and examining the nature of the mind, which to me is utter subjectivity. I know, like you, people get frustrated and irate with me when I say that, because..."
+        },
+        {
+            "start": "00:54:00",
+            "end": "00:54:02",
+            "speaker": "Jayarava Attwood",
+            "text": "Not me. I love it. Say it again."
+        },
+        {
+            "start": "00:54:02",
+            "end": "00:55:01",
+            "speaker": "Michael Taft",
+            "text": "But this phrase, like \"we're seeing reality as it really is\" or \"discovering the nature of reality\" or whatever, is such a compelling phrase and it's used so often. But to me, I always add in the qualifier that we're discovering things as they seem to really be to me, and discovering the nature of subjective reality. And when you do that, it's just so powerful. If you want to discover the nature of external objective reality, let's bust out an electron microscope or whatever. That's what that's for. And scientists are really good at doing that. And none of it's about sitting quietly in your room on a meditation cushion, just breathing and noticing your own experience. That's maybe one of the best ways, however, to discover the nature of subjective reality."
+        },
+        {
+            "start": "00:55:01",
+            "end": "00:56:24",
+            "speaker": "Jayarava Attwood",
+            "text": "And then if you want to have a conversation with those people — and they're, I think, slowly becoming the majority — I think it's true to Buddhism to say that we're trying to understand the nature of experience. I think that's very true to Buddhism and it's not undervaluing anything. But it also opens the door to talking to people who study the nature of reality. And you can go to someone and say: look, I had this really amazing experience, how would you explain this? I think this is where Thomas Metzinger's ideas had a real influence on me, where he sort of realized that his out-of-body experiences didn't involve his consciousness leaving his body, but they were nonetheless extremely interesting. And I think he says any philosophy of mind which doesn't explain these kinds of experiences is just not interesting. And I think if we're clear about what we're doing, what we're experiencing, we'll be able to have a better conversation with people like Metzinger and other philosophers who are perhaps less open than he is. And to me, that seems like a really exciting possibility."
+        },
+        {
+            "start": "00:56:24",
+            "end": "00:57:33",
+            "speaker": "Michael Taft",
+            "text": "Thomas Metzinger is just amazing on these points. He's so brilliant and so good at kind of teasing apart the really important features. That book Being No One, besides being a real nut to crack your mind on — it's a really difficult read, but what an amazing text, right? It's so powerful for really seeing some of the nuances here. It becomes really humorous to me when someone says to me, like, \"I had this amazing experience in my meditation — was that real?\" And, you know, it's like: well, has it changed your life since then? And has it changed your behavior? And do you have insight into yourself and the world? And do you have insight into others? And is it useful and practical, and is it really making a difference? And if so, then what do you mean by \"is it real\"? Of course it's real enough to have this amazing effect. But if you're saying, does it relate to some kind of objective reality — that's almost a meaningless question."
+        },
+        {
+            "start": "00:57:33",
+            "end": "00:57:39",
+            "speaker": "Jayarava Attwood",
+            "text": "Yeah, the question \"is it real\" becomes useless. It just gets in the way of the practice."
+        },
+        {
+            "start": "00:57:39",
+            "end": "00:58:48",
+            "speaker": "Jayarava Attwood",
+            "text": "One of the effects of reading Thomas Metzinger's book was that when I put it down, I realized that I had no lingering belief in the supernatural. And most of the people I know are religious, including my mum. She's quite a religious Christian — I mean, God talks to her sometimes and stuff. A lot of people I know are quite into the supernatural. And one of the houses that we own here in Cambridge is haunted. It's a really famous haunted house. So it's been there in the background, and I always was quite a rationalist so I didn't want to believe, but I had these nagging sort of doubts — like emotions, like fear around the supernatural. And when I put Thomas's book, The Ego Tunnel, down, I realized: oh, there's just nothing there anymore. There's just no question for me that there's anything supernatural. A lot of stuff that we don't understand and a lot of experiences that I can't explain — but I'd rather say I don't understand and I can't explain, than \"oh, it was a ghost\" or \"it was something supernatural\"."
+        },
+        {
+            "start": "00:58:48",
+            "end": "00:59:08",
+            "speaker": "Jayarava Attwood",
+            "text": "So he's had quite a profound effect on me in terms of, well, what's going on in my mind is going on in my mind, and what's going on in the world goes on in the world, and somehow there's an overlap there, and that's where we live. And yeah, it's quite a peculiar situation that we're in."
+        },
+        {
+            "start": "00:59:08",
+            "end": "00:59:14",
+            "speaker": "Michael Taft",
+            "text": "Indeed. Well, Jayarava, thank you for coming on the Deconstructing Yourself podcast."
+        },
+        {
+            "start": "00:59:14",
+            "end": "00:59:16",
+            "speaker": "Jayarava Attwood",
+            "text": "Yes, thank you."
+        },
+        {
+            "start": "00:59:33",
+            "end": "01:02:02",
+            "speaker": "Michael Taft",
+            "text": "That's it for this episode of Deconstructing Yourself. If you enjoyed the podcast, please recommend it to a friend or talk about it on social media. Doing that helps it find its way to more people who might be interested. If you're moved to support the podcast, you can do that by contributing to the production costs on my Patreon page. That's at patreon.com slash Michael Taft. The money goes to support the recording, production, and bandwidth costs of this program, which are substantial. By contributing to Patreon, you're making it possible for me to continue to create and share these conversations as often as possible. A special perk for high-level contributors is a monthly or even bi-monthly event with me on Zoom, where you can ask me any meditation questions you have. I deeply appreciate your support. I also have a number of free resources for you, beginning with my YouTube channel. There are hundreds of hours of free guided meditations and videos there, so if you're interested, that's quite a large resource and offered to you completely free of charge. And of course, there's the deconstructingyourself.com website itself, which has articles, interviews, and more about meditation going back over 12 years at this point, so be sure to check that out. Beyond these free options, I also have a number of paid online courses to help you grow and develop in your spiritual practice. You can find out about those either by signing up for my email list at deconstructingyourself.com/signup, or at the site deconstructingyourself.org. I look forward to seeing you in class. The Deconstructing Yourself podcast has always had excellent sound, which is the result of an amazing audio engineer and amazing human being named Stephen McNamara. He's an all things audio person with many decades of experience in producing music and spoken word audio. If you're interested, you can contact him at his website yogitar.com. That's Y-O-G-I-T-A-R dot com. Music on the Deconstructing Yourself podcast is a track by Peter Baumann entitled Crossing the Abyss from his album Machines of Desire. Thank you for listening."
+        }
+    ]
+}
