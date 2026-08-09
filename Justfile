@@ -4,8 +4,15 @@
 install:
     npm install
 
+# Recompute where podcast glossary terms occur in their transcripts
+# (src/data/podcasts/*.terms.json). Incremental: unchanged transcripts are
+# skipped before pymorphy3 is even imported, so this costs ~40ms as a no-op.
+glossary *ARGS:
+    @command -v uv >/dev/null || (echo "❌ uv is required for the glossary step — https://docs.astral.sh/uv/" && exit 1)
+    @uv run --quiet scripts/glossary_terms.py {{ARGS}}
+
 # Start Astro dev server on http://localhost:4200
-dev:
+dev: glossary
     npm run dev
 
 run:
@@ -27,12 +34,13 @@ test NAME='':
     npx vitest run {{NAME}}
 
 # Production build to dist/
-build: lint
+build: glossary lint
     npm run build
     @test -f dist/index.html || (echo "❌ Missing dist/index.html" && exit 1)
     @for l in en ru es zh ja fr de; do test -d dist/$l || (echo "❌ Missing dist/$l/" && exit 1); done
     @test -f dist/cc/index.html || (echo "❌ Missing dist/cc/index.html (calculator)" && exit 1)
     @for l in en ru es zh ja fr de; do test -f dist/$l/podcasts/index.html || (echo "❌ Missing dist/$l/podcasts/" && exit 1); done
+    @grep -rl 'class="term ' dist/ru/podcasts/ >/dev/null 2>&1 || (echo "❌ No glossary terms highlighted in any transcript — run 'just glossary'" && exit 1)
     @echo "✓ Build validation passed"
 
 # Preview production build

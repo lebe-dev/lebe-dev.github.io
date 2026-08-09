@@ -1,6 +1,9 @@
 <script lang="ts">
   import { onMount } from 'svelte';
+  import { Tooltip as TooltipPrimitive } from 'bits-ui';
+  import * as Tooltip from '$lib/components/ui/tooltip';
   import { formatTimecode, segmentId } from '$lib/podcastTimecode';
+  import { hitsBySegment, splitSegment, type TermHit } from '$lib/podcastTerms';
 
   interface Segment {
     start: string;
@@ -18,6 +21,7 @@
     titles,
     transcripts,
     glossaries,
+    termHits,
     langNames,
     initial,
     switchLabel,
@@ -30,6 +34,7 @@
     titles: Record<string, string>;
     transcripts: Record<string, Segment[]>;
     glossaries: Record<string, GlossaryEntry[]>;
+    termHits: Record<string, TermHit[]>;
     langNames: Record<string, string>;
     initial: string;
     switchLabel: string;
@@ -40,6 +45,10 @@
     guestLabel?: string;
   } = $props();
 
+  // One tooltip instance shared by every highlighted word: an episode can carry
+  // 150 occurrences, and each would otherwise bring its own floating layer.
+  const tether = TooltipPrimitive.createTether<GlossaryEntry>();
+
   const STORAGE_KEY = 'podcast-transcript-lang';
 
   const langs = Object.keys(transcripts);
@@ -48,6 +57,8 @@
   const segments = $derived(transcripts[current] ?? []);
   // Only some languages of some episodes carry one; the section is skipped otherwise.
   const glossary = $derived(glossaries[current] ?? []);
+  // Where those terms sit in the text, precomputed by `just glossary`.
+  const hits = $derived(hitsBySegment(termHits[current] ?? []));
 
   // Two segments can legitimately share a start timecode (e.g. a one-word
   // interjection), which would otherwise collide as both the #each key and
@@ -112,21 +123,51 @@
   </div>
 {/if}
 
-<div class="transcript" lang={current}>
-  {#each segments as segment, i (ids[i])}
-    {@const id = ids[i]}
-    <article class="segment" {id}>
-      <header class="segment-head">
-        <span class="speaker">{segment.speaker}</span>
-        <a class="timecode" href={`#${id}`} title={timecodeLabel}>
-          <span class="visually-hidden">{timecodeLabel} — </span>
-          {formatTimecode(segment.start)}
-        </a>
-      </header>
-      <p class="segment-text">{segment.text}</p>
-    </article>
-  {/each}
-</div>
+<Tooltip.Provider delayDuration={150} disableCloseOnTriggerClick>
+  <Tooltip.Root {tether}>
+    {#snippet children({ payload })}
+      {#if payload}
+        <Tooltip.Content
+          lang={current}
+          sideOffset={6}
+          collisionPadding={12}
+          class="block max-w-[min(24rem,calc(100vw-1.5rem))] rounded-md border border-primary/80 bg-popover px-3 py-2 text-left font-sans text-[0.8rem] leading-snug text-popover-foreground shadow-lg"
+          arrowClasses="bg-popover fill-popover border-b border-r border-primary/80"
+        >
+          <strong class="block font-semibold">{payload.term}</strong>
+          {payload.definition}
+        </Tooltip.Content>
+      {/if}
+    {/snippet}
+  </Tooltip.Root>
+
+  <div class="transcript" lang={current}>
+    {#each segments as segment, i (ids[i])}
+      {@const id = ids[i]}
+      {@const parts = splitSegment(segment.text, hits.get(i) ?? [])}
+      <article class="segment" {id}>
+        <header class="segment-head">
+          <span class="speaker">{segment.speaker}</span>
+          <a class="timecode" href={`#${id}`} title={timecodeLabel}>
+            <span class="visually-hidden">{timecodeLabel} — </span>
+            {formatTimecode(segment.start)}
+          </a>
+        </header>
+        <!-- Kept on one line on purpose: a newline between the parts would be
+             rendered as a space and pull the sentence apart. -->
+        <p class="segment-text">{#each parts as part, p (p)}{#if part.term !== undefined && glossary[part.term]}<Tooltip.Trigger
+              {tether}
+              id={`${id}-t${p}`}
+              payload={glossary[part.term]}
+              onclick={() => tether.open(`${id}-t${p}`)}
+            >{#snippet child({ props })}{@const { type, ...attrs } = props}<span
+                  {...attrs}
+                  role="button"
+                  class="term">{part.text}</span>{/snippet}</Tooltip.Trigger>{:else}{part.text}{/if}{/each}</p>
+      </article>
+    {/each}
+  </div>
+</Tooltip.Provider>
 
 {#if glossary.length > 0}
   <section class="glossary" lang={current} aria-labelledby="glossary-heading">
@@ -271,6 +312,27 @@
     margin: 0;
   }
 
+  /* Frequent terms recur dozens of times in one episode, so the mark has to be
+     quiet enough to read straight through and still be findable. */
+  .term {
+    border-bottom: 1px dotted var(--text-muted);
+    cursor: help;
+    transition: border-color 0.15s ease, background-color 0.15s ease;
+  }
+
+  .term:hover,
+  .term[data-state='instant-open'],
+  .term[data-state='delayed-open'] {
+    border-bottom-color: var(--link);
+    background-color: color-mix(in srgb, var(--link) 8%, transparent);
+  }
+
+  .term:focus-visible {
+    outline: 2px solid var(--link);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
   .glossary {
     margin-top: 3rem;
     padding-top: 1.25rem;
@@ -317,7 +379,8 @@
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .lang-switch button {
+    .lang-switch button,
+    .term {
       transition: none;
     }
   }
@@ -326,6 +389,11 @@
     .timecode,
     .lang-switch button {
       color: var(--fg);
+    }
+
+    .term {
+      border-bottom-style: solid;
+      border-bottom-color: var(--fg);
     }
   }
 

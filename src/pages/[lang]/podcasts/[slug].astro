@@ -7,6 +7,7 @@ import { podcasts } from '../../../data/podcasts';
 import {
   availableLangs,
   formatTimecode,
+  getTermHits,
   getTranscript,
   originalUrl,
   preferredLang,
@@ -38,6 +39,13 @@ const glossaries = Object.fromEntries(
     return glossary?.length ? [[l, glossary] as const] : [];
   }),
 );
+// Positions of those terms inside the transcript, precomputed by `just glossary`.
+const termHits = Object.fromEntries(
+  langs.flatMap((l) => {
+    const hits = getTermHits(slug, l);
+    return hits.length ? [[l, hits] as const] : [];
+  }),
+);
 const langNames = Object.fromEntries(langs.map((l) => [l, languages[l]]));
 
 const duration = transcriptDuration(getTranscript(slug, initial)!);
@@ -67,6 +75,7 @@ const onlyOneLang =
       titles={titles}
       transcripts={transcripts}
       glossaries={glossaries}
+      termHits={termHits}
       langNames={langNames}
       initial={initial}
       switchLabel={t('podcasts.transcriptLang')}
