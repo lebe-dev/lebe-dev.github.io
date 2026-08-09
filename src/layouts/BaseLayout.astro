@@ -7,6 +7,7 @@ import type { Lang } from '../i18n/ui';
 import { ui, languages, ogLocale } from '../i18n/ui';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import { sentryEnabled } from '../lib/sentry';
 
 interface Props {
   lang: Lang;
@@ -25,6 +26,37 @@ const pageTitle = title ? `${title} — ${t('site.name')}` : t('site.name');
 const pageDescription = description ?? t('site.description');
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const otherLangs = (Object.keys(languages) as Lang[]).filter((l) => l !== lang);
+
+// Buffers errors thrown before the lazily-loaded Sentry SDK is up, so a failure
+// during hydration is not lost to the loading gap. src/lib/sentry.ts drains the
+// queue, then replaces it with a live sink and calls __sentryEarlyStop() so
+// nothing is reported twice. Written as a string rather than inline markup
+// because Astro would read its braces as expressions.
+const earlyErrorBuffer = `(() => {
+  const queue = [];
+  const CAP = 25;
+  const onError = (event) => {
+    if (queue.length < CAP) queue.push({
+      kind: 'error',
+      error: event.error,
+      message: event.message,
+      filename: event.filename,
+      lineno: event.lineno,
+      colno: event.colno,
+    });
+  };
+  const onRejection = (event) => {
+    if (queue.length < CAP) queue.push({ kind: 'rejection', reason: event.reason });
+  };
+
+  window.__sentryEarly = queue;
+  window.addEventListener('error', onError);
+  window.addEventListener('unhandledrejection', onRejection);
+  window.__sentryEarlyStop = () => {
+    window.removeEventListener('error', onError);
+    window.removeEventListener('unhandledrejection', onRejection);
+  };
+})();`;
 ---
 <!doctype html>
 <html lang={lang}>
@@ -60,6 +92,8 @@ const otherLangs = (Object.keys(languages) as Lang[]).filter((l) => l !== lang);
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonical.toString()} />
     <meta property="og:locale" content={ogLocale[lang]} />
+    {sentryEnabled && <script is:inline set:html={earlyErrorBuffer} />}
+
     <script is:inline>
       (() => {
         try {
@@ -109,10 +143,21 @@ const otherLangs = (Object.keys(languages) as Lang[]).filter((l) => l !== lang);
       // integration's middleware, so dev and production behave the same.
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/sw.js').catch(() => {});
+          navigator.serviceWorker.register('/sw.js').catch((error) => {
+            // Reaches Sentry through the early buffer when it is enabled, and
+            // is a no-op otherwise — this script must not depend on the island.
+            window.__sentryEarly?.push({ kind: 'offline', op: 'register', error });
+          });
         });
       }
     </script>
+
+    {sentryEnabled && (
+      <script>
+        import { bootSentry } from '../lib/sentry';
+        bootSentry();
+      </script>
+    )}
 
     <script is:inline>
       (() => {

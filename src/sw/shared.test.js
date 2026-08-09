@@ -7,7 +7,11 @@ import {
   langFromPath,
   normalizePath,
   offlinePagePath,
+  parseSentryDsn,
   planSync,
+  sentryEnvelope,
+  sentryException,
+  sentryStackFrames,
   staleUrls,
 } from './shared.js';
 import { languages } from '../i18n/ui';
@@ -117,6 +121,10 @@ describe('classifyAsset', () => {
     expect(classifyAsset('/images/blog-light-banner.png')).toBe('media');
   });
 
+  it('skips source maps, which exist for Sentry rather than for readers', () => {
+    expect(classifyAsset('/_astro/hoisted.BxYz.js.map')).toBe('skip');
+  });
+
   it('skips feeds and anything unrecognised', () => {
     expect(classifyAsset('/ru/rss.xml')).toBe('skip');
     expect(classifyAsset('/something.txt')).toBe('skip');
@@ -189,5 +197,108 @@ describe('formatBytes', () => {
 
   it('drops the fraction for large values', () => {
     expect(formatBytes(64 * 1048576, 'en')).toBe('64 MB');
+  });
+});
+
+describe('parseSentryDsn', () => {
+  it('splits a DSN into the ingest endpoint and its key', () => {
+    expect(parseSentryDsn('https://abc123@o42.ingest.de.sentry.io/4508')).toEqual({
+      url: 'https://o42.ingest.de.sentry.io/api/4508/envelope/?sentry_key=abc123&sentry_version=7',
+      publicKey: 'abc123',
+      projectId: '4508',
+    });
+  });
+
+  it('keeps a path prefix, as used by self-hosted Sentry', () => {
+    expect(parseSentryDsn('https://key@sentry.example.com/prefix/7')?.url).toBe(
+      'https://sentry.example.com/prefix/api/7/envelope/?sentry_key=key&sentry_version=7',
+    );
+  });
+
+  it('rejects anything that is not a usable DSN', () => {
+    for (const dsn of ['', 'change-me', 'https://o42.ingest.sentry.io/4508', undefined, null]) {
+      expect(parseSentryDsn(dsn)).toBeNull();
+    }
+  });
+});
+
+describe('sentryStackFrames', () => {
+  it('parses a V8 stack, oldest frame first', () => {
+    const frames = sentryStackFrames(
+      [
+        'Error: boom',
+        '    at storeUrl (https://lebe-dev.github.io/sw.js:314:9)',
+        '    at async sync (https://lebe-dev.github.io/sw.js:290:7)',
+        '    at https://lebe-dev.github.io/sw.js:12:1',
+      ].join('\n'),
+    );
+
+    expect(frames).toEqual([
+      { filename: 'https://lebe-dev.github.io/sw.js', function: '?', lineno: 12, colno: 1, in_app: true },
+      { filename: 'https://lebe-dev.github.io/sw.js', function: 'sync', lineno: 290, colno: 7, in_app: true },
+      { filename: 'https://lebe-dev.github.io/sw.js', function: 'storeUrl', lineno: 314, colno: 9, in_app: true },
+    ]);
+  });
+
+  it('parses the Firefox/Safari `fn@url` form', () => {
+    expect(sentryStackFrames('storeUrl@https://x.dev/sw.js:314:9\n@https://x.dev/sw.js:1:1')).toEqual([
+      { filename: 'https://x.dev/sw.js', function: '?', lineno: 1, colno: 1, in_app: true },
+      { filename: 'https://x.dev/sw.js', function: 'storeUrl', lineno: 314, colno: 9, in_app: true },
+    ]);
+  });
+
+  it('returns nothing for a missing or unparseable stack', () => {
+    expect(sentryStackFrames(undefined)).toEqual([]);
+    expect(sentryStackFrames('Error: boom')).toEqual([]);
+  });
+});
+
+describe('sentryException', () => {
+  it('describes a real Error with its frames', () => {
+    const error = new TypeError('cannot cache /ru/');
+    error.stack = 'TypeError: cannot cache /ru/\n    at storeUrl (https://x.dev/sw.js:1:2)';
+
+    expect(sentryException(error)).toEqual({
+      values: [
+        {
+          type: 'TypeError',
+          value: 'cannot cache /ru/',
+          stacktrace: {
+            frames: [
+              { filename: 'https://x.dev/sw.js', function: 'storeUrl', lineno: 1, colno: 2, in_app: true },
+            ],
+          },
+          mechanism: { type: 'generic', handled: false },
+        },
+      ],
+    });
+  });
+
+  it('accepts a thrown non-Error, which is what a rejected promise often carries', () => {
+    const [value] = sentryException('QuotaExceededError').values;
+    expect(value.type).toBe('Error');
+    expect(value.value).toBe('QuotaExceededError');
+    expect(value.stacktrace).toBeUndefined();
+  });
+
+  it('does not choke on a DOMException-shaped object', () => {
+    const [value] = sentryException({ name: 'QuotaExceededError', message: 'quota' }).values;
+    expect(value.type).toBe('QuotaExceededError');
+    expect(value.value).toBe('quota');
+  });
+});
+
+describe('sentryEnvelope', () => {
+  it('emits the three newline-separated envelope lines', () => {
+    const body = sentryEnvelope({ event_id: 'e1', message: 'boom' }, 'https://abc123@o42.ingest.sentry.io/4508');
+    const [header, itemHeader, payload] = body.split('\n');
+
+    expect(JSON.parse(header)).toMatchObject({
+      event_id: 'e1',
+      dsn: 'https://abc123@o42.ingest.sentry.io/4508',
+    });
+    expect(JSON.parse(header).sent_at).toMatch(/^\d{4}-\d{2}-\d{2}T/);
+    expect(JSON.parse(itemHeader)).toEqual({ type: 'event' });
+    expect(JSON.parse(payload)).toEqual({ event_id: 'e1', message: 'boom' });
   });
 });

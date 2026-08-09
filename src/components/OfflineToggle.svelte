@@ -7,6 +7,7 @@
   import WifiOffIcon from '@lucide/svelte/icons/wifi-off';
   import RefreshCwIcon from '@lucide/svelte/icons/refresh-cw';
   import { formatBytes } from '../sw/shared.js';
+  import { captureOffline, warnOffline } from '$lib/sentry';
 
   type Labels = {
     badge: string;
@@ -98,6 +99,17 @@
       totalBytes = data.totalBytes;
       failed = data.failed;
       syncing = data.phase === 'start' || data.phase === 'progress';
+
+      // The worker reports the cause; this is the reader's side of it — the
+      // one case where the button ends up claiming less than it promised.
+      if (data.phase === 'partial') {
+        warnOffline('sync.partial', `offline save finished with ${data.failed} failures`, {
+          lang,
+          failed: data.failed,
+          saved: data.saved,
+          total: data.total,
+        });
+      }
     }
   };
 
@@ -143,12 +155,17 @@
       location.reload();
     });
 
-    void navigator.serviceWorker.ready.then((registration) => {
-      worker = registration.active;
-      watchUpdates(registration);
-      send({ type: 'OFFLINE_STATUS' });
-      void registration.update().catch(() => {});
-    });
+    void navigator.serviceWorker.ready
+      .then((registration) => {
+        worker = registration.active;
+        if (!worker) {
+          warnOffline('ready.noActiveWorker', 'service worker ready without an active worker');
+        }
+        watchUpdates(registration);
+        send({ type: 'OFFLINE_STATUS' });
+        void registration.update().catch((error) => captureOffline('update', error, { lang }));
+      })
+      .catch((error) => captureOffline('ready', error, { lang }));
 
     return () => {
       window.removeEventListener('online', setOnline);

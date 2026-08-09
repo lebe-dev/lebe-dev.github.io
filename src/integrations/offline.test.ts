@@ -70,6 +70,27 @@ describe('assembleWorker', () => {
       expect(worker).toContain(helper);
     }
   });
+
+  // No .env, no SENTRY_DSN, or `astro dev` — all three arrive here as no config
+  // at all, and the worker must then report nothing.
+  it('switches error reporting off when no Sentry config is passed', () => {
+    expect(output).toMatch(/^const SENTRY_CONFIG = null;$/m);
+    expect(worker).toContain('SENTRY_CONFIG ? parseSentryDsn(SENTRY_CONFIG.dsn) : null');
+  });
+
+  it('injects the Sentry config when there is one, and still compiles', () => {
+    const withSentry = assembleWorker(shared, worker, emptyManifest(), {
+      dsn: 'https://key@o1.ingest.sentry.io/2',
+      environment: 'production',
+      release: 'abc1234',
+    });
+
+    expect(withSentry).toMatch(/^const SENTRY_CONFIG = \{"dsn":"https:\/\/key@/m);
+    expect(() => new vm.Script(withSentry)).not.toThrow();
+    for (const helper of ['parseSentryDsn', 'sentryException', 'sentryEnvelope']) {
+      expect(withSentry).toContain(`const ${helper} = `);
+    }
+  });
 });
 
 describe('buildManifest', () => {

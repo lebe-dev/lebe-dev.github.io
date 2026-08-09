@@ -31,6 +31,85 @@ const DEV = MANIFEST.mode === 'dev';
 let syncInFlight = false;
 let syncCancelled = false;
 
+// ------------------------------------------------------------- error reports
+//
+// SENTRY_CONFIG is injected next to MANIFEST by src/integrations/offline.ts and
+// is null unless .env carried a SENTRY_DSN into a production build — the dev
+// server never gets one. Reporting from here rather than forwarding to a page
+// on purpose: install and activate usually run with no window client attached,
+// and those are exactly the failures worth seeing.
+
+const SENTRY = SENTRY_CONFIG ? parseSentryDsn(SENTRY_CONFIG.dsn) : null;
+
+/** A broken deploy must not turn into a few hundred events per reader. */
+const REPORT_LIMIT = 12;
+const reported = new Set();
+
+const eventId = () =>
+  typeof crypto !== 'undefined' && crypto.randomUUID
+    ? crypto.randomUUID().replace(/-/g, '')
+    : `${Date.now().toString(16)}${Math.random().toString(16).slice(2)}`.padEnd(32, '0').slice(0, 32);
+
+/**
+ * @param {'error' | 'warning' | 'info'} level
+ * @param {{ op: string, error?: unknown, message?: string, extra?: object }} what
+ */
+function send(level, { op, error, message, extra }) {
+  if (!SENTRY || reported.size >= REPORT_LIMIT) return;
+
+  const description = message ?? (error && error.message) ?? String(error);
+  const key = `${op}:${description}`;
+  if (reported.has(key)) return;
+  reported.add(key);
+
+  const event = {
+    event_id: eventId(),
+    timestamp: Date.now() / 1000,
+    platform: 'javascript',
+    level,
+    logger: 'service-worker',
+    environment: SENTRY_CONFIG.environment,
+    release: SENTRY_CONFIG.release || undefined,
+    transaction: op,
+    tags: { scope: 'offline', runtime: 'service-worker', op, build: MANIFEST.buildId },
+    extra: { ...extra, swVersion: MANIFEST.version, online: self.navigator?.onLine },
+    request: { url: self.location.href },
+  };
+
+  if (error !== undefined) {
+    event.exception = sentryException(error);
+  } else {
+    event.message = { formatted: description };
+  }
+
+  // Cross-origin, so the fetch handler above ignores it. A failure to report is
+  // swallowed — there is nowhere left to report it to.
+  fetch(SENTRY.url, {
+    method: 'POST',
+    body: sentryEnvelope(event, SENTRY_CONFIG.dsn),
+    headers: { 'content-type': 'application/x-sentry-envelope' },
+    credentials: 'omit',
+    keepalive: true,
+  }).catch(() => {});
+}
+
+/** @param {unknown} error @param {string} op @param {object} [extra] */
+const captureError = (error, op, extra) => send('error', { op, error, extra });
+
+/** @param {string} message @param {string} op @param {object} [extra] */
+const captureWarning = (message, op, extra) => send('warning', { op, message, extra });
+
+self.addEventListener('error', (event) => {
+  captureError(event.error ?? new Error(event.message), 'worker.error', {
+    filename: event.filename,
+    lineno: event.lineno,
+  });
+});
+
+self.addEventListener('unhandledrejection', (event) => {
+  captureError(event.reason, 'worker.unhandledrejection');
+});
+
 const cacheNameFor = (kind) =>
   kind === 'shell' ? SHELL_CACHE : kind === 'page' ? PAGES_CACHE : MEDIA_CACHE;
 
@@ -39,6 +118,14 @@ const cacheNameFor = (kind) =>
 const cacheKeyFor = (url, kind) => (kind === 'page' ? normalizePath(url.pathname) : url.pathname);
 
 const isCacheable = (response) => response && response.ok && !response.redirected;
+
+/**
+ * A write to a cache, with the failure reported rather than swallowed —
+ * QuotaExceededError above all, which is otherwise completely silent and turns
+ * "saved for offline" into a lie.
+ */
+const cachePut = (cache, key, response, op, extra) =>
+  cache.put(key, response).catch((error) => captureError(error, op, { ...extra, key }));
 
 // ---------------------------------------------------------------- lifecycle
 
@@ -49,8 +136,14 @@ self.addEventListener('install', (event) => {
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     (async () => {
-      await dropUnknownCaches();
-      await adoptCurrentBuild();
+      try {
+        await dropUnknownCaches();
+        await adoptCurrentBuild();
+      } catch (error) {
+        // A worker that cannot adopt the new build serves stale pages for as
+        // long as it lives — worth an event even though it still claims.
+        captureError(error, 'activate', { buildId: MANIFEST.buildId });
+      }
       await self.clients.claim();
     })(),
   );
@@ -61,7 +154,13 @@ self.addEventListener('activate', (event) => {
 async function precacheFallbacks() {
   const cache = await caches.open(PAGES_CACHE);
   await Promise.all(
-    MANIFEST.langs.map((lang) => storeUrl(cache, offlinePagePath(lang)).catch(() => {})),
+    MANIFEST.langs.map((lang) =>
+      storeUrl(cache, offlinePagePath(lang)).catch((error) => {
+        // The fallback page failing to precache is the one failure that leaves
+        // a reader with a blank screen instead of a graceful offline page.
+        captureError(error, 'precache', { lang, url: offlinePagePath(lang) });
+      }),
+    ),
   );
 }
 
@@ -139,9 +238,13 @@ async function handleNavigation(event) {
     }
 
     const response = await fetchWithTimeout(event.request, NAVIGATION_TIMEOUT);
-    if (isCacheable(response)) event.waitUntil(cache.put(key, response.clone()));
+    if (isCacheable(response)) {
+      event.waitUntil(cachePut(cache, key, response.clone(), 'navigate.put'));
+    }
     return response;
   } catch {
+    // Not reported: a failed navigation while offline is the normal path, and
+    // the fallback below is what the whole worker exists for.
     return offlineFallback(url);
   }
 }
@@ -154,7 +257,9 @@ async function handleAsset(event, url, kind) {
 
   try {
     const response = await fetch(event.request);
-    if (isCacheable(response)) event.waitUntil(cache.put(key, response.clone()));
+    if (isCacheable(response)) {
+      event.waitUntil(cachePut(cache, key, response.clone(), 'asset.put', { kind }));
+    }
     return response;
   } catch {
     return Response.error();
@@ -164,7 +269,7 @@ async function handleAsset(event, url, kind) {
 async function refresh(cache, key, request) {
   try {
     const response = await fetchWithTimeout(request, NAVIGATION_TIMEOUT);
-    if (isCacheable(response)) await cache.put(key, response);
+    if (isCacheable(response)) await cachePut(cache, key, response, 'revalidate.put');
   } catch {
     // Offline, or the page vanished — the cached copy stays.
   }
@@ -176,6 +281,13 @@ async function offlineFallback(url) {
   const page =
     (await cache.match(offlinePagePath(lang))) ?? (await cache.match(offlinePagePath('en')));
   if (page) return page;
+
+  // Install precaches every locale's offline page, so getting here means one of
+  // them is gone — the reader is looking at a bare "You are offline" string.
+  captureWarning('offline fallback page missing from cache', 'offline-fallback', {
+    lang,
+    path: url.pathname,
+  });
 
   return new Response(
     '<!doctype html><meta charset="utf-8"><title>Offline</title><p>You are offline.</p>',
@@ -200,21 +312,26 @@ self.addEventListener('message', (event) => {
   const data = event.data;
   if (!data || typeof data.type !== 'string') return;
 
+  // Whatever a command throws would otherwise vanish into a waitUntil: the
+  // button in the header would simply stop responding, with nothing logged.
+  const run = (op, promise) =>
+    event.waitUntil(promise.catch((error) => captureError(error, op, { lang: data.lang })));
+
   switch (data.type) {
     case 'SKIP_WAITING':
       self.skipWaiting();
       break;
     case 'OFFLINE_STATUS':
-      event.waitUntil(reportStatus(data.lang));
+      run('status', reportStatus(data.lang));
       break;
     case 'OFFLINE_SAVE':
-      event.waitUntil(sync(data.lang));
+      run('save', sync(data.lang));
       break;
     case 'OFFLINE_CANCEL':
       syncCancelled = true;
       break;
     case 'OFFLINE_PURGE':
-      event.waitUntil(purge(data.lang));
+      run('purge', purge(data.lang));
       break;
   }
 });
@@ -284,23 +401,44 @@ async function sync(lang) {
 
   await report('start');
 
-  await runPool(
-    missing.map((entry) => async () => {
-      if (syncCancelled) return;
-      const cache = await caches.open(cacheNameFor(classifyAsset(entry.url)));
-      try {
-        await storeUrl(cache, entry.url);
-        saved += 1;
-        savedBytes += entry.size;
-      } catch {
-        failed += 1;
-      }
-      if (Date.now() - lastReport >= PROGRESS_INTERVAL) await report('progress');
-    }),
-    SYNC_CONCURRENCY,
-  );
+  // One event carries the first failure with its cause; the summary below
+  // carries how bad it got. Reporting every failed URL would mean hundreds of
+  // identical events from a reader who went offline mid-save.
+  let firstFailure = null;
 
-  syncInFlight = false;
+  try {
+    await runPool(
+      missing.map((entry) => async () => {
+        if (syncCancelled) return;
+        const cache = await caches.open(cacheNameFor(classifyAsset(entry.url)));
+        try {
+          await storeUrl(cache, entry.url);
+          saved += 1;
+          savedBytes += entry.size;
+        } catch (error) {
+          failed += 1;
+          if (!firstFailure) firstFailure = { error, url: entry.url };
+        }
+        if (Date.now() - lastReport >= PROGRESS_INTERVAL) await report('progress');
+      }),
+      SYNC_CONCURRENCY,
+    );
+  } finally {
+    syncInFlight = false;
+  }
+
+  if (failed > 0 && !syncCancelled) {
+    captureError(firstFailure.error, 'save.entry', { url: firstFailure.url, lang });
+    captureWarning(`offline save incomplete: ${failed} of ${missing.length} failed`, 'save', {
+      lang,
+      failed,
+      saved,
+      missing: missing.length,
+      total: entries.length,
+      online: self.navigator?.onLine,
+    });
+  }
+
   await report(syncCancelled ? 'cancelled' : failed > 0 ? 'partial' : 'done');
   await reportStatus(lang);
 }

@@ -130,6 +130,33 @@ Message protocol, page → worker: `OFFLINE_STATUS`, `OFFLINE_SAVE`, `OFFLINE_CA
 
 **Testing it:** `just preview` (a real build — the dev server's worker deliberately never serves stale content). Stop the preview server and keep navigating to see the cached site; a locale you never saved falls back to its `/[lang]/offline/` page.
 
+## Error reporting (Sentry)
+
+Unhandled exceptions from the pages and everything the offline machinery swallows are reported to Sentry. The calculator under `/cc/` is **not** covered.
+
+**Configuration is read from `.env` at build time and baked into the bundle** — the site is static, there is nothing to read at runtime. `astro.config.mjs` calls Vite's `loadEnv` with an *empty* prefix (these names carry no `PUBLIC_`, so `import.meta.env` would never expose them) and inlines three `vite.define` constants, declared in `src/env.d.ts`: `__SENTRY_DSN__`, `__SENTRY_ENVIRONMENT__` (default `production`), `__SENTRY_RELEASE__` (the short git SHA). A DSN is a write-only key; shipping it is expected. `.env` is gitignored — see `.env.example`.
+
+**Nothing is sent unless there is a DSN.** `SENTRY_DSN` is validated with the same `parseSentryDsn()` the worker uses, so a missing `.env`, an empty value and the `change-me` placeholder all resolve to "off": `sentryEnabled` is false, `BaseLayout.astro` renders neither boot script, the worker gets `SENTRY_CONFIG = null`, and no source maps are emitted. `astro dev` never reports either (`import.meta.env.PROD`, and the dev worker is assembled without the config) — **use `just preview` to test reporting**.
+
+**Two independent reporters, on purpose:**
+
+| where | how |
+|---|---|
+| pages | `@sentry/browser`, lazily loaded (`src/lib/sentry.ts` → `sentry.boot.ts`) |
+| `/sw.js` | ~60 hand-written lines in `src/sw/worker.js` + helpers in `shared.js` |
+
+The worker is a classic script assembled by concatenation — there is nothing to `import` from. It also reports during install/activate, when no window client exists to forward through, which is exactly when a broken deploy shows up. `parseSentryDsn`, `sentryStackFrames`, `sentryException` and `sentryEnvelope` live in `src/sw/shared.js` and are unit-tested in `shared.test.js`.
+
+**Lazy loading and the early buffer.** The SDK is ~30 KB gzipped; a text-first blog should not spend its first seconds on it, so `bootSentry()` loads it on `requestIdleCallback` (3 s timeout). Errors thrown before it arrives would be lost, so a small inline script in `<head>` buffers `error`/`unhandledrejection` into `window.__sentryEarly` (capped at 25); when the SDK is up, `sentry.ts` replays the queue, calls `window.__sentryEarlyStop()` to remove those listeners and replaces the array with a live sink, so nothing is reported twice and late pushes still work. A pending error makes it skip the idle wait.
+
+**`sentry.boot.ts` exists for tree-shaking, not tidiness.** Reaching the SDK through a namespace (`import('@sentry/browser').then((m) => m.init(…))`) keeps the whole namespace object alive and ships replay, feedback and tracing with it — 150 KB gzipped instead of 30. Static named imports in a separate module are what keeps it small. **Do not merge the two files.**
+
+**Offline events** carry `scope: offline` plus an `op` tag. Worker side: `precache`, `activate`, `save`/`save.entry` (first failing URL + a summary of how many failed), `purge`, `status`, `navigate.put`/`asset.put`/`revalidate.put` (`QuotaExceededError` above all — a full storage box is otherwise completely silent), `offline-fallback` (the precached offline page is gone), and the two global handlers. Page side (`captureOffline`/`warnOffline`): `register` (pushed through the early buffer from the inline registration script in `BaseLayout.astro`, so it does not depend on the island), `ready`, `update`, `sync.partial`. A **failed navigation while offline is not reported** — that is the normal path and the reason the worker exists. The worker caps itself at 12 events per lifetime and dedupes by `op` + message.
+
+**The browser offline transport** (`makeBrowserOfflineTransport`) queues events in IndexedDB and sends them when the connection returns — on this site the interesting errors happen precisely while offline.
+
+**Source maps are published**, not uploaded: `vite.environments.client.build.sourcemap` (Astro 6 reads the client build's flag from there, *not* from `vite.build.sourcemap`) emits `dist/_astro/*.map`, and Sentry fetches them itself over `sourceMappingURL` — no auth token, no upload step. They are only emitted when a DSN is set, and `classifyAsset()` skips `.map` so they never end up in a reader's offline copy.
+
 ## Development Commands
 
 All commands use `just` (Justfile-based):
@@ -275,8 +302,8 @@ satoshis = btcAmount × 100,000,000
 **Automated (Vitest):**
 - `public/cc/js/calc.test.js` — `calcSpread`/`calcBtcAmount`/`calcSats`, the CLAUDE.md worked example (1000 GEL, office 272000, market 259498 → spread 4.82%), `isRateStale`, `getFriendlyErrorMessage`, `isPositiveNumber`
 - `src/i18n/utils.test.ts`, `src/i18n/aiUsageDisclaimer.test.ts` — pure i18n/content helpers
-- `src/sw/shared.test.js` — the worker's pure helpers: URL normalization, locale detection, asset classification, the per-locale save plan, the stale-URL diff between two builds, size formatting
-- `src/integrations/offline.test.ts` — that the assembled `sw.js` still compiles as a classic script and carries its manifest, that non-inlineable module syntax fails the build, and that `buildManifest` sorts `dist/` into the right caches and only marks genuinely changed files stale
+- `src/sw/shared.test.js` — the worker's pure helpers: URL normalization, locale detection, asset classification, the per-locale save plan, the stale-URL diff between two builds, size formatting, and the worker's hand-rolled Sentry bits (DSN parsing, V8/SpiderMonkey stack parsing, exception payload, envelope body)
+- `src/integrations/offline.test.ts` — that the assembled `sw.js` still compiles as a classic script and carries its manifest, that non-inlineable module syntax fails the build, that `buildManifest` sorts `dist/` into the right caches and only marks genuinely changed files stale, and that the Sentry config is injected when there is one and `null` when there is not
 - Run via `just test` or `npm run test`
 
 **Manual checklist (DOM/PWA-only behaviour not covered by unit tests):**

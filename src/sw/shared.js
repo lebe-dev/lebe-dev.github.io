@@ -67,6 +67,9 @@ export const classifyAsset = (url) => {
   if (url.startsWith('/cc/')) return 'skip';
   if (url === '/sw.js' || url === '/robots.txt' || url.startsWith('/sitemap')) return 'skip';
   if (url.endsWith('.DS_Store')) return 'skip';
+  // Published for Sentry, never for readers — and large enough to matter to
+  // someone saving the site over mobile data.
+  if (url.endsWith('.map')) return 'skip';
   if (url.startsWith('/_astro/')) return 'shell';
   if (
     url === '/manifest.webmanifest' ||
@@ -129,6 +132,105 @@ export const staleUrls = (previous, next) => {
     .filter((entry) => fresh.get(entry.url) !== entry.hash)
     .map((entry) => entry.url);
 };
+
+// ------------------------------------------------------------------- Sentry
+//
+// The worker cannot use @sentry/browser: it is a classic script assembled by
+// concatenation, so there is nothing to `import` from. These four helpers are
+// the whole reporter — enough to send an exception with a readable stack. The
+// pages use the real SDK (src/lib/sentry.ts); only the worker uses this.
+
+/**
+ * DSN → the envelope endpoint to POST to. Returns null for anything unusable
+ * (missing, still `change-me`, no public key), which is how reporting stays
+ * off when .env carries no DSN.
+ * @param {string | null | undefined} dsn
+ * @returns {{ url: string, publicKey: string, projectId: string } | null}
+ */
+export const parseSentryDsn = (dsn) => {
+  if (typeof dsn !== 'string') return null;
+  const match = /^(https?):\/\/([^:@/]+)(?::[^@/]*)?@([^/]+)(\/.*)$/.exec(dsn.trim());
+  if (!match) return null;
+
+  const [, protocol, publicKey, host, path] = match;
+  const segments = path.split('/').filter(Boolean);
+  const projectId = segments.pop();
+  if (!projectId) return null;
+
+  const prefix = segments.length > 0 ? `/${segments.join('/')}` : '';
+  return {
+    url: `${protocol}://${host}${prefix}/api/${projectId}/envelope/?sentry_key=${publicKey}&sentry_version=7`,
+    publicKey,
+    projectId,
+  };
+};
+
+/** `at fn (url:line:col)` — V8. */
+const V8_FRAME = /^\s*at\s+(?:async\s+)?(?:(.+?)\s+\()?(.+?):(\d+):(\d+)\)?$/;
+/** `fn@url:line:col` — Firefox and Safari. */
+const SPIDERMONKEY_FRAME = /^(.*?)@(.+?):(\d+):(\d+)$/;
+
+/**
+ * Stack string → Sentry frames, oldest call first (the order Sentry renders
+ * bottom-up). Lines it cannot read — the leading `Error: message`, native
+ * frames — are dropped rather than guessed at.
+ * @param {string | undefined} stack
+ * @returns {{ filename: string, function: string, lineno: number, colno: number, in_app: boolean }[]}
+ */
+export const sentryStackFrames = (stack) => {
+  if (typeof stack !== 'string') return [];
+
+  const frames = [];
+  for (const line of stack.split('\n')) {
+    const match = V8_FRAME.exec(line) ?? SPIDERMONKEY_FRAME.exec(line);
+    if (!match) continue;
+    frames.push({
+      filename: match[2],
+      function: match[1] || '?',
+      lineno: Number(match[3]),
+      colno: Number(match[4]),
+      in_app: true,
+    });
+  }
+  return frames.reverse();
+};
+
+/**
+ * Anything thrown → a Sentry `exception` payload. A rejected promise often
+ * carries a string or a DOMException rather than an Error, so this never
+ * assumes more than `name`/`message`/`stack`.
+ * @param {unknown} error
+ * @returns {{ values: object[] }}
+ */
+export const sentryException = (error) => {
+  const object = typeof error === 'object' && error !== null ? /** @type {any} */ (error) : null;
+  const frames = sentryStackFrames(object?.stack);
+
+  return {
+    values: [
+      {
+        type: (typeof object?.name === 'string' && object.name) || 'Error',
+        value: typeof object?.message === 'string' ? object.message : String(error),
+        stacktrace: frames.length > 0 ? { frames } : undefined,
+        mechanism: { type: 'generic', handled: false },
+      },
+    ],
+  };
+};
+
+/**
+ * The newline-separated envelope body Sentry's ingest endpoint expects:
+ * envelope header, item header, event.
+ * @param {{ event_id?: string }} event
+ * @param {string} dsn
+ * @returns {string}
+ */
+export const sentryEnvelope = (event, dsn) =>
+  [
+    JSON.stringify({ event_id: event.event_id, sent_at: new Date().toISOString(), dsn }),
+    JSON.stringify({ type: 'event' }),
+    JSON.stringify(event),
+  ].join('\n');
 
 /**
  * Human-readable size, localized without needing a translation string.

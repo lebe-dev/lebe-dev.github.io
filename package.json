@@ -17,6 +17,7 @@
     "@astrojs/sitemap": "^3.0.0",
     "@astrojs/svelte": "^8.1.1",
     "@fontsource/merriweather": "^5.2.11",
+    "@sentry/browser": "^10.69.0",
     "@tailwindcss/vite": "^4.3.1",
     "astro": "^6.0.0",
     "js-yaml": "^4.1.1",
