@@ -71,6 +71,20 @@
     send({ type: 'OFFLINE_SAVE' });
   };
 
+  // The button keeps its focus-visible ring for keyboard activation, but a
+  // mouse/touch click leaves it focused too — that draws the same ring
+  // around an icon button, which reads as a stray black frame. Blur only
+  // when the click came from a pointer.
+  let pointerActivated = false;
+  const onPointerDown = () => {
+    pointerActivated = true;
+  };
+  const onButtonClick = (event: MouseEvent) => {
+    onClick();
+    if (pointerActivated) (event.currentTarget as HTMLElement).blur();
+    pointerActivated = false;
+  };
+
   const applyUpdate = () => {
     reloadOnControllerChange = true;
     waitingWorker?.postMessage({ type: 'SKIP_WAITING' });
@@ -190,7 +204,8 @@
       size="icon"
       aria-label={buttonLabel}
       title={buttonLabel}
-      onclick={onClick}
+      onpointerdown={onPointerDown}
+      onclick={onButtonClick}
     >
       {#if syncing}
         <XIcon />
