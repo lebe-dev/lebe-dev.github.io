@@ -4,6 +4,7 @@ import { useTranslations, formatDate } from '../../../i18n/utils';
 import { languages, type Lang } from '../../../i18n/ui';
 import { formatTimecode, listEpisodes } from '../../../lib/podcasts';
 import { getBlogPosts } from '../../../lib/blog';
+import ReadingMarks from '../../../components/ReadingMarks.astro';
 
 export async function getStaticPaths() {
   // The blog post about the translation method — same one for every locale,
@@ -72,6 +73,15 @@ const shows = [...new Set(episodes.map((e) => e.podcast))];
           <article aria-labelledby={`ep-${e.slug}`}>
             <h2 class="ep-title" id={`ep-${e.slug}`}>
               <a href={`/${lang}/podcasts/${e.slug}/`} lang={e.titleLang}>{e.title}</a>
+              {/* Filled in from localStorage by ReadingMarks.astro. The episode
+                  is scrolled through separately in each transcript language. */}
+              <span
+                class="reading-mark"
+                data-reading-mark
+                data-read-id={`podcast:${e.slug}`}
+                data-progress-ids={e.langs.map((l) => `podcast:${e.slug}:${l}`).join(',')}
+                hidden
+              ></span>
             </h2>
             <p class="ep-meta">
               <span>
@@ -104,6 +114,8 @@ const shows = [...new Set(episodes.map((e) => e.podcast))];
     </ul>
     </>
   )}
+
+  <ReadingMarks lang={lang} />
 </BaseLayout>
 
 <script>

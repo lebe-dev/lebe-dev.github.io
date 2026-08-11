@@ -84,6 +84,15 @@ const onlyOneLang =
       guest={guest}
       guestHref={guest ? `/${lang}/podcasts/?q=${encodeURIComponent(guest)}` : undefined}
       guestLabel={t('podcasts.guest')}
+      slug={slug}
+      readingLabels={{
+        progress: t('reading.progress'),
+        markRead: t('reading.markRead'),
+        markUnread: t('reading.markUnread'),
+        read: t('reading.read'),
+        resume: t('reading.resume'),
+        resumeDismiss: t('reading.resumeDismiss'),
+      }}
     />
 
     {onlyOneLang && <p class="ep-note muted">{onlyOneLang}</p>}

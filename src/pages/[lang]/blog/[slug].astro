@@ -31,6 +31,9 @@ export async function getStaticPaths() {
 
 const { entry, translations } = Astro.props;
 const lang = entry.data.lang as Lang;
+// Reading progress is shared across translations, so it is keyed by the
+// translationKey rather than by this language's slug.
+const readingKey = entry.data.translationKey ?? entry.id.replace(/^[a-z]{2}\//, '');
 const { Content, headings } = await render(entry);
 const disclaimer = resolveAiUsageDisclaimer(lang, entry.data);
 const readingStats = getReadingStats(entry.body ?? '');
@@ -45,6 +48,7 @@ const readingStats = getReadingStats(entry.body ?? '');
   minutes={readingStats.minutes}
   markdown={entry.body ?? ''}
   translations={translations}
+  readingKey={readingKey}
   showToc={entry.data.showToc}
   headings={headings}
   aiUsageDisclaimer={disclaimer.aiUsageDisclaimer}

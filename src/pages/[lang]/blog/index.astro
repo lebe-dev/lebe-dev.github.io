@@ -2,6 +2,7 @@
 import { getBlogPosts } from '../../../lib/blog';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import PostsList from '../../../components/PostsList.astro';
+import ReadingMarks from '../../../components/ReadingMarks.astro';
 import { useTranslations } from '../../../i18n/utils';
 import type { Lang } from '../../../i18n/ui';
 
@@ -21,13 +22,19 @@ const t = useTranslations(lang);
 const all = await getBlogPosts((e) => e.data.lang === lang);
 const posts = all
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
-  .map((e) => ({
-    slug: e.id.replace(/^[a-z]{2}\//, ''),
-    title: e.data.title,
-    pubDate: e.data.pubDate,
-  }));
+  .map((e) => {
+    const slug = e.id.replace(/^[a-z]{2}\//, '');
+    return {
+      slug,
+      title: e.data.title,
+      pubDate: e.data.pubDate,
+      // Reading state is shared across translations.
+      key: e.data.translationKey ?? slug,
+    };
+  });
 ---
 <BaseLayout lang={lang} title={t('section.allPosts')} description={t('blog.description')}>
   <h1>{t('section.allPosts')}</h1>
   <PostsList lang={lang} posts={posts} />
+  <ReadingMarks lang={lang} />
 </BaseLayout>

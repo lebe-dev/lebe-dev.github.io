@@ -1,0 +1,97 @@
+---
+/**
+ * Fills in the "read" / "45%" marks in a listing from localStorage.
+ *
+ * The marks cannot be rendered at build time — the state lives in the reader's
+ * browser — so the markup ships an empty `[data-reading-mark]` slot per entry
+ * and this script fills the ones that have something to say. Include it once
+ * per page that carries such slots.
+ *
+ * A slot declares its content with:
+ *   data-read-id       — the "read" key, e.g. `post:hello-world`
+ *   data-progress-ids  — comma-separated position keys (defaults to data-read-id);
+ *                        a podcast has one per transcript language and the
+ *                        furthest of them is shown.
+ */
+import { useTranslations } from '../i18n/utils';
+import type { Lang } from '../i18n/ui';
+
+type Props = { lang: Lang };
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+<span
+  id="reading-marks-i18n"
+  hidden
+  data-read={t('reading.read')}
+  data-progress={t('reading.progress')}
+></span>
+
+<script>
+  import {
+    STORAGE_KEY,
+    formatPercent,
+    getProgress,
+    isRead,
+    loadStore,
+    shouldResume,
+  } from '../lib/readingProgress';
+
+  const i18n = document.getElementById('reading-marks-i18n');
+  const slots = Array.from(document.querySelectorAll<HTMLElement>('[data-reading-mark]'));
+
+  if (i18n && slots.length > 0) {
+    const readLabel = i18n.dataset.read || 'Read';
+    const progressLabel = i18n.dataset.progress || 'Reading progress';
+
+    const check =
+      '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>';
+
+    const render = () => {
+      const store = loadStore();
+
+      for (const slot of slots) {
+        const readId = slot.dataset.readId;
+        if (!readId) continue;
+
+        const declared = (slot.dataset.progressIds || readId).split(',').filter(Boolean);
+        const progressIds = declared.length > 0 ? declared : [readId];
+        const read = isRead(store, { progressId: readId, readId });
+        // A podcast is scrolled through separately in each language; the
+        // furthest of them is what the reader wants to see in the listing.
+        const progress = Math.max(
+          ...progressIds.map((progressId) => getProgress(store, { progressId, readId })),
+        );
+
+        slot.parentElement?.classList.toggle('reading-read', read);
+
+        if (read) {
+          slot.className = 'reading-mark reading-mark--read';
+          slot.innerHTML = `${check}<span class="visually-hidden">${readLabel}</span>`;
+          slot.title = readLabel;
+          slot.hidden = false;
+          continue;
+        }
+
+        if (shouldResume(progress, read)) {
+          const percent = formatPercent(progress);
+          slot.className = 'reading-mark reading-mark--progress';
+          slot.textContent = percent;
+          slot.title = `${progressLabel}: ${percent}`;
+          slot.hidden = false;
+          continue;
+        }
+
+        slot.hidden = true;
+        slot.textContent = '';
+        slot.removeAttribute('title');
+      }
+    };
+
+    render();
+    // Another tab (or another window of the PWA) reading the same post.
+    window.addEventListener('storage', (event) => {
+      if (event.key === null || event.key === STORAGE_KEY) render();
+    });
+  }
+</script>

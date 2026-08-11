@@ -6,6 +6,8 @@ interface Post {
   slug: string;
   title: string;
   pubDate: Date;
+  /** Language-independent id — the post's translationKey, or its slug. */
+  key: string;
 }
 
 type Props = { lang: Lang; posts: Post[] };
@@ -15,7 +17,11 @@ const { lang, posts } = Astro.props;
   {posts.map((p) => (
     <>
       <li class="date">{formatDate(p.pubDate)}</li>
-      <li class="title"><a href={`/${lang}/blog/${p.slug}/`}>{p.title}</a></li>
+      <li class="title">
+        <a href={`/${lang}/blog/${p.slug}/`}>{p.title}</a>
+        {/* Filled in from localStorage by ReadingMarks.astro. */}
+        <span class="reading-mark" data-reading-mark data-read-id={`post:${p.key}`} hidden></span>
+      </li>
     </>
   ))}
 </ul>

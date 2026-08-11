@@ -92,6 +92,36 @@ Localized section (unlike `/subtitles`): it exists in every site locale, and the
 
 **Adding an episode:** drop `<slug>.en.json` / `<slug>.ru.json` into `src/data/podcasts/`, add an object to the `podcasts` array in `src/data/podcasts.ts`. Nothing else — routes, listing, filters, duration, guest and the link to the original all follow from the data, and `just dev`/`just build` generate the glossary sidecars. `just build` checks that `dist/<lang>/podcasts/` exists for every locale and that at least one Russian transcript still highlights terms.
 
+## Reading progress & "read" marks (blog posts + podcast transcripts)
+
+The site remembers how far the reader got in a post or a transcript, and lets them mark it read by hand. Everything is client-side: one `localStorage` key, no account, no sync, nothing sent anywhere.
+
+**All the logic is in `src/lib/readingProgress.ts`** (pure, unit-tested in `readingProgress.test.ts`) — parsing/serializing the store, the position math, pruning. Only `loadStore()`/`saveStore()` at the bottom touch `localStorage`, and both swallow every error (Safari private mode throws on *access*, a full quota throws on write, and neither may break reading).
+
+**Storage:** `localStorage['reading-progress']` = `{ v: 1, items: { [id]: { p, read, at } } }`, `p` a 0…1 position, `at` epoch ms. Anything unparseable, malformed or of a foreign `v` reads as empty, so a format change needs only a `STORE_VERSION` bump. Capped at `MAX_ENTRIES` (500), least recently touched dropped first.
+
+**Identity is language-independent, and that is the point.** A `Target` carries two ids:
+
+| content | `progressId` | `readId` |
+|---|---|---|
+| blog post | `post:<translationKey>` | same |
+| podcast episode | `podcast:<slug>:<transcriptLang>` | `podcast:<slug>` |
+
+A post read in Russian therefore shows as read in every translation (`translationKey`, falling back to the slug — every post currently has one). For a podcast the *position* is per transcript language — the two languages are two different texts to scroll through — while "read" belongs to the episode as a whole, so finishing the English transcript marks the Russian one read too. This split was a deliberate choice; don't collapse it.
+
+**On the page — `src/components/ReadingProgress.svelte`**, one island that renders three things: the inline read toggle (it is placed where the toggle belongs, the other two are `position: fixed`), the 2px progress rail at the top of the viewport, and the "continue reading · 45%" pill.
+
+- Progress is measured against a content element passed as `contentSelector` (`article` for posts, `.episode` for podcast pages) by the *bottom* of the viewport, so the last screenful counts as read and content shorter than the viewport is read on sight.
+- **Nothing is written until the reader actually scrolls.** Merely opening a page must not overwrite the position saved on the previous visit — that is what the `dirty` flag guards, and it is why the resume pill still has something to offer.
+- Reaching `READ_THRESHOLD` (95%) marks read automatically; scrolling back up never un-reads. Unmarking by hand resets the position to 0, so the pill does not immediately offer the very end.
+- The pill is **never an auto-scroll**: it appears only when the stored position is a real distance ahead (`RESUME_MIN_GAP`), there is no `#hash` in the URL (an anchor is an explicit destination), and it disappears by itself after 15 s. Its scroll respects `prefers-reduced-motion`.
+- Writes are debounced (400 ms) and flushed on `pagehide`/`visibilitychange`.
+- In `Transcript.svelte` the island is nested inside the component (not placed in `[slug].astro`) because `progressId` follows the in-page language toggle. Switching language flushes the old language's position before adopting the new one — that `$effect` is the whole reason the component takes ids rather than a slug.
+
+**In listings — `src/components/ReadingMarks.astro`.** The marks cannot be rendered at build time, so the markup ships an empty `<span class="reading-mark" data-reading-mark …>` slot per entry and one script per page fills the ones that have something to say (a check + "read", or "45%"), and puts `reading-read` on the slot's parent so the title dims. A slot declares `data-read-id` and optionally `data-progress-ids` (comma-separated; a podcast lists one per transcript language and the *furthest* is shown). Include `<ReadingMarks lang={lang} />` once on any page carrying slots — currently the homepage, `/[lang]/blog/` and `/[lang]/podcasts/`. It re-renders on the `storage` event, so a second tab stays in sync. `.reading-mark` / `.reading-read` styles live in `src/styles/global.css`.
+
+**i18n:** the `reading.*` keys in `src/i18n/ui.ts`, present in all seven locales.
+
 ## Offline support / PWA (site-wide)
 
 The whole site works offline through a root service worker at `/sw.js`, scoped to `/`. The calculator under `/cc/` keeps its **own** worker (`public/cc/sw.js`, scope `/cc/`) — the root worker bails out of every `/cc/` request, and the more specific registration wins for those pages anyway. Don't merge the two.

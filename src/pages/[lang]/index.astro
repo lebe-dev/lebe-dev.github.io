@@ -4,6 +4,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Bio from '../../components/Bio.astro';
 import ProjectsList from '../../components/ProjectsList.astro';
 import PostsList from '../../components/PostsList.astro';
+import ReadingMarks from '../../components/ReadingMarks.astro';
 import { useTranslations } from '../../i18n/utils';
 import type { Lang } from '../../i18n/ui';
 
@@ -23,11 +24,16 @@ const t = useTranslations(lang);
 const all = await getBlogPosts((e) => e.data.lang === lang);
 const posts = all
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
-  .map((e) => ({
-    slug: e.id.replace(/^[a-z]{2}\//, ''),
-    title: e.data.title,
-    pubDate: e.data.pubDate,
-  }));
+  .map((e) => {
+    const slug = e.id.replace(/^[a-z]{2}\//, '');
+    return {
+      slug,
+      title: e.data.title,
+      pubDate: e.data.pubDate,
+      // Reading state is shared across translations.
+      key: e.data.translationKey ?? slug,
+    };
+  });
 ---
 <BaseLayout lang={lang} resetVisited>
   <img class="home-banner home-banner--light" src="/images/blog-light-banner.png" alt="" aria-hidden="true" />
@@ -55,6 +61,7 @@ const posts = all
       <a href="/subtitles/">Смотреть список →</a>
     </section>
   )}
+  <ReadingMarks lang={lang} />
   <ProjectsList lang={lang} />
   <Bio lang={lang} />
 </BaseLayout>

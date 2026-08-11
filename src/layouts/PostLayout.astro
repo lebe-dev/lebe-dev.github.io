@@ -3,6 +3,8 @@ import BaseLayout from './BaseLayout.astro';
 import PostLangSwitch from '../components/PostLangSwitch.svelte';
 import AiUsageDisclaimer from '../components/AiUsageDisclaimer.svelte';
 import TableOfContents from '../components/TableOfContents.astro';
+import ReadingProgress from '../components/ReadingProgress.svelte';
+import { postTarget } from '../lib/readingProgress';
 import { formatDate, useTranslations } from '../i18n/utils';
 import type { Lang } from '../i18n/ui';
 
@@ -29,6 +31,8 @@ interface Props {
   aiUsageDisclaimerAcceptButtonText?: string;
   showToc?: boolean;
   headings?: Heading[];
+  /** Language-independent id of this post — its translationKey, or its slug. */
+  readingKey: string;
 }
 
 const {
@@ -48,9 +52,19 @@ const {
   aiUsageDisclaimerAcceptButtonText,
   showToc = true,
   headings = [],
+  readingKey,
 } = Astro.props;
 const t = useTranslations(lang);
 const formattedChars = typeof chars === 'number' ? chars.toLocaleString(lang) : null;
+const reading = postTarget(readingKey);
+const readingLabels = {
+  progress: t('reading.progress'),
+  markRead: t('reading.markRead'),
+  markUnread: t('reading.markUnread'),
+  read: t('reading.read'),
+  resume: t('reading.resume'),
+  resumeDismiss: t('reading.resumeDismiss'),
+};
 ---
 <BaseLayout lang={lang} title={title} description={description} showHeaderTitle={false} minimalHeader resetVisited>
   <article>
@@ -70,33 +84,38 @@ const formattedChars = typeof chars === 'number' ? chars.toLocaleString(lang) : 
           </span>
         </>
       )}
-      {(translations.length > 1 || markdown) && (
-        <span class="post-actions">
-          {translations.length > 1 && (
-            <span class="post-lang-inline">
-              <PostLangSwitch lang={lang} label={t('lang.switch')} translations={translations} client:load />
-            </span>
-          )}
-          {markdown && (
-            <button
-              type="button"
-              id="copy-md"
-              class="copy-md"
-              title={t('post.copyMd')}
-              aria-label={t('post.copyMd')}
-            >
-              <svg class="copy-md__icon copy-md__icon--copy" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-              </svg>
-              <svg class="copy-md__icon copy-md__icon--check" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M20 6 9 17l-5-5"></path>
-              </svg>
-              <span class="copy-md__text">{t('post.copyMdShort')}</span>
-            </button>
-          )}
-        </span>
-      )}
+      <span class="post-actions">
+        <ReadingProgress
+          client:idle
+          progressId={reading.progressId}
+          readId={reading.readId}
+          contentSelector="article"
+          labels={readingLabels}
+        />
+        {translations.length > 1 && (
+          <span class="post-lang-inline">
+            <PostLangSwitch lang={lang} label={t('lang.switch')} translations={translations} client:load />
+          </span>
+        )}
+        {markdown && (
+          <button
+            type="button"
+            id="copy-md"
+            class="copy-md"
+            title={t('post.copyMd')}
+            aria-label={t('post.copyMd')}
+          >
+            <svg class="copy-md__icon copy-md__icon--copy" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+            <svg class="copy-md__icon copy-md__icon--check" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"></path>
+            </svg>
+            <span class="copy-md__text">{t('post.copyMdShort')}</span>
+          </button>
+        )}
+      </span>
     </p>
     {markdown && <textarea id="post-markdown" hidden readonly>{markdown}</textarea>}
     {aiUsageDisclaimer && (

@@ -4,6 +4,8 @@
   import * as Tooltip from '$lib/components/ui/tooltip';
   import { formatTimecode, segmentId } from '$lib/podcastTimecode';
   import { hitsBySegment, splitSegment, type TermHit } from '$lib/podcastTerms';
+  import ReadingProgress from './ReadingProgress.svelte';
+  import { podcastTarget } from '$lib/readingProgress';
 
   interface Segment {
     start: string;
@@ -30,6 +32,8 @@
     guest,
     guestHref,
     guestLabel,
+    slug,
+    readingLabels,
   }: {
     titles: Record<string, string>;
     transcripts: Record<string, Segment[]>;
@@ -43,6 +47,15 @@
     guest?: string;
     guestHref?: string;
     guestLabel?: string;
+    slug: string;
+    readingLabels: {
+      progress: string;
+      markRead: string;
+      markUnread: string;
+      read: string;
+      resume: string;
+      resumeDismiss: string;
+    };
   } = $props();
 
   // One tooltip instance shared by every highlighted word: an episode can carry
@@ -59,6 +72,9 @@
   const glossary = $derived(glossaries[current] ?? []);
   // Where those terms sit in the text, precomputed by `just glossary`.
   const hits = $derived(hitsBySegment(termHits[current] ?? []));
+  // The position is per transcript language — the two languages are two
+  // different texts — while "read" belongs to the episode as a whole.
+  const reading = $derived(podcastTarget(slug, current));
 
   // Two segments can legitimately share a start timecode (e.g. a one-word
   // interjection), which would otherwise collide as both the #each key and
@@ -91,19 +107,28 @@
 
 <h1 lang={current}>{titles[current] ?? ''}</h1>
 
-{#if (guest && guestHref) || glossary.length > 0 || langs.length > 1}
-  <div class="meta-row">
-    {#if guest && guestHref}
-      <p class="guest-link">
-        {guestLabel}: <a href={guestHref}>{guest}</a>
-      </p>
-    {/if}
+<!-- Always rendered: the read toggle lives here even when an episode has no
+     guest, no glossary and a single transcript language. -->
+<div class="meta-row">
+  {#if guest && guestHref}
+    <p class="guest-link">
+      {guestLabel}: <a href={guestHref}>{guest}</a>
+    </p>
+  {/if}
 
-    {#if glossary.length > 0}
-      <p class="glossary-link">
-        <a href="#glossary-heading">{glossaryLabel}</a>
-      </p>
-    {/if}
+  {#if glossary.length > 0}
+    <p class="glossary-link">
+      <a href="#glossary-heading">{glossaryLabel}</a>
+    </p>
+  {/if}
+
+  <div class="tools">
+    <ReadingProgress
+      progressId={reading.progressId}
+      readId={reading.readId}
+      contentSelector=".episode"
+      labels={readingLabels}
+    />
 
     {#if langs.length > 1}
       <div class="lang-switch" role="group" aria-label={switchLabel}>
@@ -121,7 +146,7 @@
       </div>
     {/if}
   </div>
-{/if}
+</div>
 
 <Tooltip.Provider delayDuration={150} disableCloseOnTriggerClick>
   <Tooltip.Root {tether}>
@@ -229,9 +254,15 @@
     text-decoration: underline;
   }
 
-  .lang-switch {
+  .tools {
     grid-column: 3;
     justify-self: end;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .lang-switch {
     display: inline-flex;
     gap: 0.2rem;
     padding: 0.15rem;
@@ -404,7 +435,7 @@
     }
 
     .glossary-link,
-    .lang-switch {
+    .tools {
       grid-column: 1;
       justify-self: start;
     }
