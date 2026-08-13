@@ -1,0 +1,463 @@
+{
+    "title": "John Vervaeke on Relevance Realization",
+    "url": "https://deconstructingyourself.com/john-vervaeke-on-relevance-realization.html",
+    "guest": "John Vervaeke",
+    "transcript": [
+        {
+            "start": "00:00:00",
+            "end": "00:01:24",
+            "speaker": "Michael Taft",
+            "text": "Welcome to Deconstructing Yourself, the podcast for meta-modern mutants interested in meta-modern meditation, hardcore dharma, wisdom, predictive processing, psychedelics, Galadriel, Vajrayana, and a whole bunch more. My name is Michael Taft, your host on the podcast, and in this episode I'm speaking with John Vervaeke. John Vervaeke is an award-winning lecturer at the University of Toronto in psychology, cognitive science, and Buddhist psychology. His areas of interest include wisdom, mindfulness, meditation, relevance realization, which we talk a whole bunch about in this episode, general intelligence, rationality, and more. He is the author of the very large YouTube series called Awakening from the Meaning Crisis, and co-author of Zombies in Western Culture: A 21st Century Crisis. And now I give you a conversation with John Vervaeke."
+        },
+        {
+            "start": "00:01:29",
+            "end": "00:01:32",
+            "speaker": "Michael Taft",
+            "text": "John, welcome to the Deconstructing Yourself podcast."
+        },
+        {
+            "start": "00:01:33",
+            "end": "00:01:34",
+            "speaker": "John Vervaeke",
+            "text": "Thank you, Michael. Great pleasure to be here."
+        },
+        {
+            "start": "00:01:35",
+            "end": "00:01:43",
+            "speaker": "Michael Taft",
+            "text": "Yeah, it's a real pleasure to have you here in this late September time. I'm curious, how has your summer been going?"
+        },
+        {
+            "start": "00:01:43",
+            "end": "00:02:49",
+            "speaker": "John Vervaeke",
+            "text": "So I've been calling this my thunderbolt summer, because just so much and high intensity and those moments of revelation you get when lightning strikes. I've done so much. I went to Rafe Kelly's Return to the Source in Washington State, and then went to Tuscany, Italy, the Symposium on Embodiment, and then went to Vermont and did the Respond Retreat. Just got back from Thunder Bay. We did the Consciousness and Conscience Conference. And then this weekend, I'm heading off to Prague to do the International Symposium on Democracy in the 21st Century. In between, along the way, I flew down to Austin and did the Lex Fridman podcast, which was really, really wonderful. So it's just been getting a lot of stuff published. Got a major article published three weeks ago, I think, with Brett Anderson and Mark Miller, integrating my work on relevance realization with the whole predictive processing framework. So it's just like everything is just rolling right now for me. All of these experiences were intense in a good way. Some of them were profoundly transformative, especially Return to the Source."
+        },
+        {
+            "start": "00:02:49",
+            "end": "00:02:52",
+            "speaker": "Michael Taft",
+            "text": "Yeah, in what way was Return to the Source transformative? I'm curious."
+        },
+        {
+            "start": "00:02:52",
+            "end": "00:04:26",
+            "speaker": "John Vervaeke",
+            "text": "So Rafe Kelly and his team, they put together an amazing ecology of practices, and it involves, like, you go into the wilderness, you're doing parkour, you're doing nature connection, you're doing sit spotting, you're doing mindfulness practices. I also got to teach some tai chi and taught them philosophical contemplation and dialectic into dialogos. I coined a phrase: every day you were taken to the horizon of horror. I was having to do stuff that was scary, really challenging. And I got to really dig deep into my Socratic reservoirs for courage and commitment. And, you know, it's so well designed. It's very intense. You're in the zone of proximal development. It's scaled so you can, like, if you really summon your courage and put in your commitment, you can go through the course. It was pretty shattering to my ego in some ways, because Rafe's kids were there and they're just sort of bouncing along doing amazing parkour and I'm scrambling over rocks, almost falling and falling into the water. But I was dogged, so all the 20-somethings, many of them came up and said, hey, we were really impressed, you just kept showing up, you kept coming. I was in the zone of proximal development, I was open, I was participating, forming some very deep conversations, deep connections, getting to teach my stuff in, you know, very challenging and different circumstances and seeing it take and land. It was profound. I came away from that really changed in some sort of fundamental, almost visceral levels of how I inhabit my mind and my body."
+        },
+        {
+            "start": "00:04:26",
+            "end": "00:05:02",
+            "speaker": "Michael Taft",
+            "text": "That's so exciting. Sounds like a great program. I can just still feel the scintillating experience you had just in the way you're describing it. Really cool. So you mentioned that you had been teaching on relevance realization and meditation. And so I want to start there. And as you know, this is in general, we could say overall a meditation podcast, even though we touch on a lot of other topics, that's really kind of home base. And so because this teaching of yours centers on that, why don't we start there?"
+        },
+        {
+            "start": "00:05:02",
+            "end": "00:06:15",
+            "speaker": "John Vervaeke",
+            "text": "Yeah, I do work, as you said, on relevance realization, and I do work on mindfulness and on meditation and contemplation. Recently published in the Routledge Handbook on the philosophy of meditation, trying to make some connections between what's going on between our attention, our capacity for insight, and thereby the cultivation of wisdom through mindfulness practices, how it has to do with relevance realization. Relevance realization is this idea that at the core of our general intelligence is a general ability, which we have a lot of psychometric evidence for. And my argument, my proposal, the stuff I publish on, is that that central ability is your ability to zero in on relevant information. The problem you're facing in many dimensions of your cognition, your attention, for example, there's so much you can pay attention to. And so you have to intelligently ignore most of it, because you can't pay attention to all of the information that's available to you, even in the room you're sitting in. You have so much information in your long-term memory and all the possible combinations, you can't possibly search all your memory, but somehow you retrieve the relevant information. The number of possibilities you can consider is overwhelming, and yet you zero in on the ones that largely bear relevantly on your current circumstances."
+        },
+        {
+            "start": "00:06:15",
+            "end": "00:06:18",
+            "speaker": "Michael Taft",
+            "text": "What do we know about how that happens?"
+        },
+        {
+            "start": "00:06:21",
+            "end": "00:09:09",
+            "speaker": "John Vervaeke",
+            "text": "So we can get into some pretty technical stuff, but maybe I can start at a more phenomenological level that people can even be aware of, and you're aware of in a meditative practice. I mentioned that, how do you decide to pay attention? You can't consult everything, all the possible things in your environment, because you'd have to direct your attention at them, and that would overwhelm you, and you wouldn't have enough life in you even to get all the information in your room. But think about what's happening to you right now, and how meditation can make this more available to your awareness. Part of your attention, it's called the task-focused network, is being very selective. It's trying to keep you on a particular task. Presumably, you are trying to listen to me. You're focusing. You're selecting on that. But part of you, the default mode network, wants to do mind-wandering. Your attention might be drifting away. You might start thinking about other things and lose the thread. And what happens is there's like an opponent processing there. These two are pushing and pulling on each other, and the default mode network is introducing variation, potential things you could be interested in, and then the task-focused network is selecting, killing off most of those potential interests, keeping a few of them alive, and then they go into how you are interested in the current situation. Have you noticed that's very much like the machinery of evolution? Right, there's variation and then there's selection, and only a little bit of the variation survives. And then from that, there's new variation and new selection, new variation, new selection. And so your attention is constantly evolving your cognitive fittedness, your attentional fittedness to the environment so that you are optimally gripping it for whatever it is you're trying to do, what problems you're trying to solve. And that, of course, is happening at many different levels in many different ways. You can see that opponent processing, you can see it within your attention, you can see it within your arousal, in between your sympathetic and parasympathetic system, you can see it between your left and right hemispheres, you can see it between frontal and back areas of the brain. There's this huge dynamic of opponent processing, self-organizing criticality, that is constantly in a multidimensional, moment-by-moment manner evolving your fittedness to the environment. So when you're looking out right now or listening out right now, you have this textured, flowing, salient landscape of what is foregrounded, what is backgrounded, what is obvious to you, what is obscure to you, that is honing in and shaping you to the environment, and then shaping which parts of the environment are shining into your awareness."
+        },
+        {
+            "start": "00:09:10",
+            "end": "00:09:46",
+            "speaker": "Michael Taft",
+            "text": "Yeah, and so this kind of dynamic balance between the default mode network generating this proliferation of possibilities and then the task-focused network pruning us down and pruning us down. I assume that at various points during the day and at these various levels, that's all shifting and moving around and continuously finding new relevance and so on. It might be that our fittedness to our environment has different set points. And maybe we're stuck in a really quotidian set point or, like, local minimum."
+        },
+        {
+            "start": "00:09:47",
+            "end": "00:09:47",
+            "speaker": "John Vervaeke",
+            "text": "Yeah."
+        },
+        {
+            "start": "00:09:47",
+            "end": "00:10:10",
+            "speaker": "Michael Taft",
+            "text": "Yeah, we're sort of fitted to our environment in a shallow way, like a survival way of getting along in society pretty well and so on. But maybe way over here, outside of this local minimum, there's a much more relevant zone of wisdom and meaning and connectedness to life and all that. And so how do we move towards that?"
+        },
+        {
+            "start": "00:10:11",
+            "end": "00:12:43",
+            "speaker": "John Vervaeke",
+            "text": "Yeah, no, excellent. So think about it. The very processes that make you adaptively fitted also make you perennially susceptible to self-deceptive behavior that actually undermines your connectedness to the world. Because remember, this adaptive process is having you ignore so much. And sometimes what you're ignoring, right, what's outside your mental framing, is actually what is needed in order to solve some problem. Now, you have moments where you realize that. You realize that you've been misframing a situation, and you need to alter your frame and open yourself up to information you were previously ignoring and maybe downplay some information that you were regarding as particularly salient. So this can happen to you. You can say, oh, you know, I thought she was angry, but I get it. I get it. Aha, she's actually afraid. And I've been merely misconstruing what she's doing. I need to reframe how I relate to her and connect to her. I need to readjust my salience landscape so that I can more properly have insight into her. And that's, of course, what the experience is. It's the experience of insight. It's when we realize that our framing has actually misframed a situation in a fundamental way, and we need to break up that inappropriate frame and then rely on the dynamics of that adaptive cognition to re-self-organize a new frame. And that's what happens in an insight. You break up a frame. You don't make the new one. You open yourself up to this process by which a new frame takes shape, and then you participate and you see by means of it more deeply into reality. And then if you think about it, we don't just have one-off insights. Sometimes we have systematic insights. Sometimes we have insights not into one problem, but into a whole family of problems. And so the transformation is not just in one moment, but in ongoing areas of many dimensions of our life, we start to zero in on the relevant information better. We cut through the irrelevant distractions. We're able to reshape the misframings. And that's what a wise person is. A wise person is a person that can come into situations high in ill-definedness, messiness, complexity, novelty, zero in on the relevant information and properly shape themselves to be in right relationship with that relevant information."
+        },
+        {
+            "start": "00:12:43",
+            "end": "00:12:58",
+            "speaker": "Michael Taft",
+            "text": "I'm very interested in the state that occurs right when we realize, okay, we've misframed this, toss out the old frame, but we don't have a new frame yet. What does that look like? And is that a third network?"
+        },
+        {
+            "start": "00:12:58",
+            "end": "00:14:53",
+            "speaker": "John Vervaeke",
+            "text": "If I understand you correctly, that's actually the situation of impasse. This is where we know that we are misframing a situation, but we do not know how to reframe it. And we do not know what it would be like to be in that different perspective. And if you think about it, this is, you know, prototypical state for people seeking therapy. They can often tell you in propositions what it is that's problematic, how they're not seeing the world correctly, but that's not the same as knowing how to transform, knowing what skills to cultivate or bring to bear, what perspectives need to be generated, even at the participatory level what identity has to be crafted. So, for example, a person will come into therapy and you'll say, well, what's the problem? And they'll say, you know, this keeps coming up in all my relationships, I'm really stubborn and it's really undermining so much of what I do. And then what you do is you talk to them and you get them away from that topic, and then you come back and say, tell me something about yourself you really like, you really identify with. And they'll say very, very cheerfully, oh, I'm very persistent, I keep going no matter what. And of course they don't realize that those two things are different aspects, right, of the same phenomena, their persistence and their stubbornness need to be seen together. And there has to be an alteration in their sense of identity in order to actually transform and break out of that misframing. So knowing that you have misframed, you even may take sort of steps to disavow it or stand back from it, is not the same as coming to the place where you actually make the necessary procedural, perspectival, and participatory transformation."
+        },
+        {
+            "start": "00:14:53",
+            "end": "00:14:58",
+            "speaker": "Michael Taft",
+            "text": "Yeah, and that's what I'm pointing to, is there's the moment of seeing the misframing."
+        },
+        {
+            "start": "00:14:58",
+            "end": "00:14:58",
+            "speaker": "John Vervaeke",
+            "text": "Yes."
+        },
+        {
+            "start": "00:14:59",
+            "end": "00:15:29",
+            "speaker": "Michael Taft",
+            "text": "And then there's a moment when change can actually occur, even if you don't know what it is yet, but it's moving from that feeling of stuckness, or I only know what the problem is, to suddenly starting to feel curious, engaged, maybe even playful or something, and yet you're still not 100% sure where you're going. It's like you enter some kind of process of finding the new frame."
+        },
+        {
+            "start": "00:15:29",
+            "end": "00:16:38",
+            "speaker": "John Vervaeke",
+            "text": "So there's considerable variation between people on that. And so there's a degree to which that process is afforded by training, you know, dispositional habits and virtues, training yourself to wonder, training yourself to explore, training yourself to bring a certain amount of courage to bear. But you also need what's called safety framing. That needs to be a situation in which you are not feeling overwhelmed by the threat of the unresolved problem. If you're in a scarcity mentality, you won't be able to do that exploration. You won't be able to do that search. So I imagine what we're looking for is some fit between dispositional proclivities that you've trained, and also situational, circumstantial structures that give you the safety framing. And between the two of them, you could begin the exploration, that necessary search process. What's probably going on is activity has shifted primarily from the left hemisphere, which is trying to make you try to solve a problem, to the right hemisphere, which is searching for potential problem formulations."
+        },
+        {
+            "start": "00:16:38",
+            "end": "00:16:55",
+            "speaker": "Michael Taft",
+            "text": "It's so interesting, of course, to engage in playful problem solving. The safety framing makes perfect sense, right? You can't be in too much fraught danger there in order for that to work. And so for you, how do we work towards becoming this wise person?"
+        },
+        {
+            "start": "00:16:55",
+            "end": "00:19:37",
+            "speaker": "John Vervaeke",
+            "text": "Well, I mean, there's a lot of things, but there's a couple of general points. One thing is to realize there is no panacea practice. As I mentioned, the dynamics of your intelligence is working with opponent processing, multiple opponent processing at multiple dimensions, and they're interwoven in complex ways, and they're interwoven to make you sort of adaptive, which means trying to intervene on them with one-shot interventions, they have the dynamics such that, you know, they reconfigure and stabilize themselves and resist your perturbations, resist your attempts to bring about change. And of course, if we're caught in that kind of parasitic processing we were talking about earlier, where we're locked into a mal-framing, getting out of it is typically not a single practice. So I tell people, you've got to give up the idea of a panacea practice. You need a rich ecology of practices, and they have to be directed towards different faculties, attention, changing consciousness, cultivating traits of character, building particular skills. You've got to be able to extend your safety framing. So whatever practices you're doing, they have to work with a general orientation practice. You can see this in Stoicism and Buddhism and Taoism, giving you the virtues, the set of beliefs and skills and character traits, states of mind and states of consciousness, such that you can reconstrue most situations as one in which you can find a kind of safety. That's what Stoicism and Buddhism and Taoism do. So you need to grow your comprehensive safety framing. You need within that to be homing on ecology of practices. And you've got to be constantly testing to see, are those practices transferring out into the world, into many different domains, many different roles you undertake, many different types of problems. What you're looking for is an ecology of practice that affords broad and deep transformation. And if you have that sort of safety framing, homing, the ecology of practice, broad and deep transfer, you also want to belong to a community of people so that you can enter into kind of a meta-practice where you're entering into what I call dialogos, these mutually emerging kinds of dialogue that afford us an access to the collective intelligence of distributed cognition that can act as a touchstone, as a normative guide for us as we try to create and curate and correct our individual ecologies of practices, and our overall safety framing."
+        },
+        {
+            "start": "00:19:37",
+            "end": "00:19:48",
+            "speaker": "Michael Taft",
+            "text": "And so in your own experience, what does it feel like to be able to zero in on the relevant more easily or more, like, intuitively or fluidly?"
+        },
+        {
+            "start": "00:19:48",
+            "end": "00:20:32",
+            "speaker": "John Vervaeke",
+            "text": "It feels wonderful. It feels a kind of enhanced connectedness to myself, to other people, to the world. And what's really interesting about that, Michael, is that sense of connectedness to oneself, to other people, to the world, that's what actually drives the sense of meaning in life. So when I'm enhancing that ability to zero in on relevant information, I experientially get this enhanced sense of connectedness, and that's experienced by me as meaningfulness, meaningful connectedness, right relationship that is so central to making a human life worth living."
+        },
+        {
+            "start": "00:20:32",
+            "end": "00:21:05",
+            "speaker": "Michael Taft",
+            "text": "And so would you say that zeroing in, again, I understand there's no silver bullet or single practice that brings about transformation to wisdom or whatever, we need an ecology of practices. And do you feel like really leaning in the direction of things that, for example, tend to dissolve defendedness or open the heart or put us into community relationships and so on are central to that process?"
+        },
+        {
+            "start": "00:21:05",
+            "end": "00:21:49",
+            "speaker": "John Vervaeke",
+            "text": "I think they should definitely be included. I think practices of authentic relating and communication and communing are part of any good ecology of practice, but I think also developing attentional skills are important to that. I think practicing active open-mindedness in opponent processing with mindfulness is really important for curating the instances where your inferential propositional knowing has to take priority, because there are situations in which that is the case. I think practices that make us more aware of the different kinds of knowing and how we inhabit them and the degree to which they're aligned or misaligned are important. What you said is important, but I wouldn't want to overemphasize it at the expense of many other of these dimensions that I feel are equally important."
+        },
+        {
+            "start": "00:21:50",
+            "end": "00:22:09",
+            "speaker": "Michael Taft",
+            "text": "That makes sense. And at the same time, when I asked you how it feels, you didn't say it feels like paying better attention. You really zeroed in on enhanced connectedness. So that's why I'm wondering, is that more important or are all of these things equally valuable? I guess it depends on the person."
+        },
+        {
+            "start": "00:22:09",
+            "end": "00:23:02",
+            "speaker": "John Vervaeke",
+            "text": "Well, I do have a response to that. I mean, for me, the connectedness, the religio, and I use that word deliberately, is actually what relevance realization is doing. I said earlier cognitive fittedness, but the experience of cognitive fittedness is that religio, is that sense of connectedness. And so for me, they are deeply interwoven together, both the experience of the connectedness and the functionality of being, you know, cognitively fitted to the environment. So realizing, having an insight and having that realization is both, if you think about it, an enhanced sense of connectedness, but also that flash, that flash of super salience, that redirection of attention, the sense of insight, seeing into situations. So I think it really is a multidimensional thing."
+        },
+        {
+            "start": "00:23:02",
+            "end": "00:23:13",
+            "speaker": "Michael Taft",
+            "text": "Okay. So here we are, we're zeroing in on relevant information more and more quickly. We're becoming really good at that. What does that do for us, besides maybe get us into more fittedness to our environment?"
+        },
+        {
+            "start": "00:23:14",
+            "end": "00:26:02",
+            "speaker": "John Vervaeke",
+            "text": "So, I mean, you have an enhanced sense of agency, your ability to be an agent in the world, but that is coupled to this increased sense of meaning in life. As I was saying, the sense of being connected to something other than yourself. People sometimes say bigger than yourself. What they mean is connected to something that has a reality and value to you. So when you think about it, what people are talking about, whether their life is meaningful or not, typically when you press them, let's think about somebody maybe, you know, approaching their death. They're going to talk about the relationships they had, maybe their relationships to themselves, where they had realizations, self-knowledge in a Socratic sense, deep connectedness to other people, all the different kinds of love, but also connectedness to reality. Perhaps they had these amazing experiences in nature or while they were sailing or, you know, maybe some people have climbed mountains, etc. Or they've raised a child, where they have committed themselves to something that has a reality and a value beyond their own egocentric concerns. These are the things that make life worth the suffering. Our culture is confused about this. We have confused wealth with subjective well-being, and we have confused subjective well-being with meaning in life. And those three things are distinct from each other, and they can vary independently from each other. And what really, I think, of those three, you need all of them, right? If you're in poverty, everything else collapses, right? You need some sense of subjective well-being. You have to have a sense of a kind of satisfaction with your life. If your life is permanently dissatisfying to you, then of course that is not a life well lived. But beyond that, you need this sense of meaning in life, this sense of mattering, of making a difference, of being connected, of discovering what's really real. And they vary independently of each other. And we need to get better. Part of what it means to be wise is not only reducing the self-deception and self-destruction, that's a big part, but also enhancing meaning in life and enhancing the discernment of the differences between meaning in life, subjective well-being, and wealth, which, like I say, our culture just confounds together. And so for me, this is part and parcel of a thing I talk about, the meaning crisis, how people are more and more suffering the sense that they don't have these real and important connections, that they're overwhelmed by self-deceptive, self-destructive behavior, not only within themselves, but within their relationships, within social media. So this, to me, is actually the burning issue."
+        },
+        {
+            "start": "00:26:03",
+            "end": "00:26:07",
+            "speaker": "Michael Taft",
+            "text": "And when you say this, you mean lack of the sense of meaning in life?"
+        },
+        {
+            "start": "00:26:07",
+            "end": "00:26:13",
+            "speaker": "John Vervaeke",
+            "text": "Yeah, the meaning crisis that is besetting our culture and showing up symptomatically in so many different ways."
+        },
+        {
+            "start": "00:26:13",
+            "end": "00:26:28",
+            "speaker": "Michael Taft",
+            "text": "Talk to me a little bit about meaning. Sometimes people say there is none. Sometimes people say we create our own. And neither of those answers are very satisfying, or neither of those positions. So I'm curious, how do we understand meaning itself?"
+        },
+        {
+            "start": "00:26:29",
+            "end": "00:29:22",
+            "speaker": "John Vervaeke",
+            "text": "Yeah, I think the idea that there is none is because we're trapped in a Cartesian framework that gives us two domains in which there's meaning, subjectivity or objectivity. And those two answers, by the way, are just mirror images of each other. There is none is basically there's no objective meaning and you make it for yourself, as it's a subjective thing. And that's just a fundamental misunderstanding. Let's go back to this notion of fittedness. I mentioned how relevance realization is like evolution. Well, think of the adaptivity of an organism, how well it's fitted to its environment. So the adaptivity of the great white shark, is that in the shark? Well, no, because if you drop it in the desert, it's dead. Is it in the environment? No, because if I put an elephant in the ocean, it dies, right? So we have to break out of that way of framing. What fittedness is, is a real relationship between the agent and the arena, between the organism and the environment, and a mutual shaping that both participate in. You know, I've got a glass right here next to me. The glass is graspable by me. That's an affordance. It's an affordance for action, but the graspability isn't in my hand or in the glass. It's in the real relationship, it's co-created by both the glass and my hand. That's how meaning is. Meaning is a real affordance for the connectedness of adaptive agency. And so the better way of putting it is we participate in meaning, just like you don't make an insight. You neither make an insight, you don't just subjectively project it on the world. Neither do you just empirically receive it from objective reality. You participate in the self-organization that is an insight. An insight is just a moment in which your connectedness has been enhanced and it comes into your awareness. Saying that there's no meaning, that would be saying that you're not connected in any important way to reality. And then I wonder what that person believes they're doing as they're moving around the world and talking to people and even bothering to tell us that there is no meaning. And also, the person who thinks they're just imposing meaning on reality, that means they're severing meaning from reality. Yet one of the defining features of meaningfulness is how real it is to you. If you find out an experience that is otherwise deeply pleasurable and gratifying and blah, blah, is actually not real, it will lose so much for you. In terms of people saying there is no meaning, I instantly ask, well, show me some of this meaninglessness. They instantly have a problem because, of course, if we're talking about eternal objective meanings or something, maybe that's a problem. But they're going to find something meaningful in their own experience immediately when I ask. Of course, right?"
+        },
+        {
+            "start": "00:29:22",
+            "end": "00:29:50",
+            "speaker": "Michael Taft",
+            "text": "Of course. And so let's say you have someone who is either lost in the delusion of meaninglessness, that's a lot of folks, right? Or is trying desperately to generate meaning from within, kind of out of nothing. As you said, it's a deep misunderstanding. Where can you point them? I mean, it sounds again like you're pointing them towards relationship. Is that an easy, correct direction? Or is it much more complex than that?"
+        },
+        {
+            "start": "00:29:50",
+            "end": "00:31:44",
+            "speaker": "John Vervaeke",
+            "text": "Well, in some sense, yes, to both what you said. My recommendation is that instead of looking for arguments, I mean, Nagel and others have pointed out that most of the arguments for nihilism are actually not logically valid. The arguments are after the fact of meaninglessness or absurdity, not before the fact. First of all, if you can get an acknowledgement that that's the case, then you say, well, then move out of the propositional. And what I want you to do is to undertake an ecology of practices such that you can fall in love with being again, because that's what we're actually talking about. And notice, to fall in love, you can't just sort of subjectively make it happen. We've all known this. I really wish I could love that person because they're so great. On paper, we'd make a great couple, but nope, nope, right? And you can't just wait for somebody to come up to you and say, oh, I'm the person you're in love with. That doesn't work either. So I'm using romantic love here as an analogy, right? But you have to properly orient and position yourself such that the self-organization of falling in love with the world, with being, becomes a real possibility for you again, and then have the courage and patience to live with that until it actually starts to take shape of its own accord. Because if you try to make it or wait for somebody to give it to you, you will never realize it. But on the other hand, there is a way. How do you fall in love with a person? Mutually accelerating disclosure, right? I disclose something about me, and in response, you disclose something about you, and then we do this, and if we keep doing this in a self-organized flow, we will fall into a kind of love. It doesn't have to be romantic or sexual. It could be friendship. It could be fellowship, et cetera. But get into practices that do that reciprocal opening. Fall in love with reality again. That's how I would answer that person."
+        },
+        {
+            "start": "00:31:45",
+            "end": "00:32:05",
+            "speaker": "Michael Taft",
+            "text": "I love that answer. I think it's so interesting. You know, I spend most of my day teaching people meditation and working with them on what we might basically call spiritual growth. And very often, quite reasonably, they will tend to get very involved in doing the techniques correctly."
+        },
+        {
+            "start": "00:32:05",
+            "end": "00:32:06",
+            "speaker": "John Vervaeke",
+            "text": "Yes."
+        },
+        {
+            "start": "00:32:06",
+            "end": "00:32:15",
+            "speaker": "Michael Taft",
+            "text": "And what's so interesting is, yes, it does help to do the techniques correctly, but that's, in a way, not enough."
+        },
+        {
+            "start": "00:32:16",
+            "end": "00:32:16",
+            "speaker": "John Vervaeke",
+            "text": "Yeah."
+        },
+        {
+            "start": "00:32:16",
+            "end": "00:32:25",
+            "speaker": "Michael Taft",
+            "text": "Because we can get contracted and tense about that and overly focused on that and forget that the point is to fall in love with being again."
+        },
+        {
+            "start": "00:32:25",
+            "end": "00:32:26",
+            "speaker": "John Vervaeke",
+            "text": "Yes."
+        },
+        {
+            "start": "00:32:26",
+            "end": "00:32:41",
+            "speaker": "Michael Taft",
+            "text": "It's so fascinating, because eventually it's like, can you laugh at this process? Can you have some fun? Can you see something beautiful? Like the beauty, for me, beauty is such an unbelievably important part of this process."
+        },
+        {
+            "start": "00:32:42",
+            "end": "00:32:42",
+            "speaker": "John Vervaeke",
+            "text": "Oh, yes."
+        },
+        {
+            "start": "00:32:42",
+            "end": "00:33:23",
+            "speaker": "Michael Taft",
+            "text": "And that's not operationalizable or to put in a flow chart or to mechanically go through the system, right? It's where's the beauty? Where's the fun? Where's your soul light up is such an important exploration. And currently, at least in the world of meditation practices out there, it feels like we've gotten perhaps overly focused on technique and all the various micro details of technique and so on. All of which, of course, I love and work with quite a bit. And yet, in a strange way, it's a little beside the point."
+        },
+        {
+            "start": "00:33:23",
+            "end": "00:34:28",
+            "speaker": "John Vervaeke",
+            "text": "Yep. Yeah, I agree. I'm thinking of Slingerland's book, Trying Not to Try, or I'm thinking of the Zen quote, you know, enlightenment is not found by seeking, but only seekers find it, and things like that, these paradoxical statements. But again, the paradox, there's something right about it, but don't get too fixated on it, especially in a sort of a propositional manner, because that is exactly, you know, how friendship forms, right? If you're trying really hard to be somebody's friend, something's going wrong. But if you're not making any effort, something's also going wrong. And yet, I can't give you a rule about what the correct ratio is between effort and receptivity, because it's constantly shifting and adapting because of, you know, relevance realization, etc., everything we've been talking about. And so I try to give people, when I'm teaching them meditation, contemplation, and the cultivation of wisdom, I actually tell them an overall orientation is to think about this practice as a way in which you are befriending yourself."
+        },
+        {
+            "start": "00:34:28",
+            "end": "00:34:32",
+            "speaker": "Michael Taft",
+            "text": "Yes, yes. Yeah, I would call it having intimacy with yourself."
+        },
+        {
+            "start": "00:34:32",
+            "end": "00:35:12",
+            "speaker": "John Vervaeke",
+            "text": "Same thing. Yeah. Because people are aware of the fact of how dynamic and self-organizing and flowing friendship is and how it has to take shape and take on a life of its own and bind the two of you together. And so they have a model that then helps them that is better than the model of sort of the instruction manual for how to put together your Ikea furniture or something like that, which I feel is the model that's often implicitly being used. Like, here's the set of instructions that if you do this, you will build wisdom. And that I think is a kind of fundamental misframing."
+        },
+        {
+            "start": "00:35:12",
+            "end": "00:35:14",
+            "speaker": "Michael Taft",
+            "text": "Flat pack wisdom kit."
+        },
+        {
+            "start": "00:35:14",
+            "end": "00:35:20",
+            "speaker": "John Vervaeke",
+            "text": "Yeah, yeah, yeah, exactly. Comes over in a container ship, right? And we just start packing it and put it together and there's the wisdom."
+        },
+        {
+            "start": "00:35:20",
+            "end": "00:35:24",
+            "speaker": "Michael Taft",
+            "text": "Yeah. You know, John, do you have any questions for me?"
+        },
+        {
+            "start": "00:35:24",
+            "end": "00:35:40",
+            "speaker": "John Vervaeke",
+            "text": "You mentioned what you're doing. I've got a sense, but I'd like to give you the opportunity if you could fill it out a little bit more and I could interact with it a little bit more explicitly. What is it you're doing, and how does this podcast fit into that overall project?"
+        },
+        {
+            "start": "00:35:40",
+            "end": "00:37:55",
+            "speaker": "Michael Taft",
+            "text": "Yeah, I think the short version is that I've gotten so much personal benefit and deep sense of meaning and fallen back in love with life over and over again via the general thing we might call meditation, or finding intimacy with your own self and the world, but we'll just say meditation, that something that gives me great pleasure is sharing that with others. Particularly sharing it with others in such a way that I don't know the truth and I'm not trying to put forth a particular religion or say there's one right way to do things, but rather enter into a kind of relationship with the other person and see what matters to them, what they're trying to do, where their dreams are, where their heart goes, and work together with them to use some of these meditation skills to help really deepen that and open up more fully in that direction of, like, generativity and beauty and meaning and fulfillment. And so it's an interesting way to work, because how people often present at the beginning is sort of like, what's the right technique and what's the right thing almost to want? How's the world work and things like that. And I'm like, sorry, I don't know the deep truth of the structure of the universe. And I doubt anybody does. And that's just not what I can help with. But what I can help with is let's see how you play with these things and what direction might be really fun and growthful and powerful and useful and maybe healing for you. So that's what I'm doing. And I put a lot of free material out. The podcast is free. There's hundreds and hundreds of free hours of guided meditation on YouTube, stuff like that. And then I also have students, or I could say clients or whatever, people who actually pay to have one-on-one interaction with me in an ongoing way, sometimes ongoing for a very long time. And in between those two things, courses and classes."
+        },
+        {
+            "start": "00:37:55",
+            "end": "00:38:49",
+            "speaker": "John Vervaeke",
+            "text": "Well, first of all, that sounds like a very wonderful life. But a particular thing that caught my attention is, it sounds like you are really realizing the deep inter-affordance of mindfulness and dialogical practice. It sounds like keeping the two of them really inter-affording and shaping each other is crucial to what you do. Because if you had your mindfulness skills, but you couldn't enter into those dialogical relationships you were just mentioning a few minutes ago, right? Then, of course, you wouldn't be able to share very well and draw people into the beauty so they can fall in love again. But on the other hand, if you had the dialogical practices without the self-knowledge, the sort of Socratic self-knowledge that mindfulness gives you, you couldn't actually offer people from the depths of your psyche and help them reach the depths of their own. Is this landing for you? This was just the sense I was getting about how deeply interpenetrating those two dimensions are for you."
+        },
+        {
+            "start": "00:38:49",
+            "end": "00:39:29",
+            "speaker": "Michael Taft",
+            "text": "They absolutely are. And normally, because people tend to assume that the technique side is the important side, I usually end up describing how important the what I would call, like, getting inside the other person's mind is. It's like unbelievably important to this way of working, because it's, again, it's not just about, like, here's the one truth or here's the one thing I want you to learn to do. It's so much richer than that. And you see how you can't really turn that into a sort of cookie-cutter version of here's the one right way for everyone to practice, right?"
+        },
+        {
+            "start": "00:39:29",
+            "end": "00:40:12",
+            "speaker": "John Vervaeke",
+            "text": "Right, right. That makes sense. So what happens, because I have something similar in my work, what happens when people do come to you and they have committed to a particular religious home, Buddhism or Vedanta or, you know, maybe even, you know, Christianity, Christian mindfulness traditions which are coming back, or so. What I'm getting at is if they have a kind of fixed worldview, how does that work? Two sides: what limitations does it put on your interaction? Because I could see there could be constraints, but also what does it afford that might not be afforded compared to people that are coming from a more secular background?"
+        },
+        {
+            "start": "00:40:12",
+            "end": "00:42:09",
+            "speaker": "Michael Taft",
+            "text": "It affords a lot. I mean, I'm willing to go there with anybody's religion or their orientation when they show up. And usually if it's strong, that's really good. It gives us a whole suite of already existing practices or worldviews that we can leverage over time into deeper and deeper insight, right? And so it just takes a little bit of understanding how these different religions or, let's say, worldviews or philosophies actually work in order to start to get some traction there. So I have a number of students who are, let's say, strong Christians, and that's not a problem. I can work with that. Or let's say they're coming from some other similar place. Even without going into something like perennial philosophy or whatever, there are, of course, already existing views and practices and modalities in those traditions for going towards the meaning, going towards the deep, going towards the beauty, going towards connection and love. And so I think it would be absurd to try to fight those or ignore those. We're just going to leave that over there. Instead, it's like so much easier to just start working right there with that stuff. And it just requires me to be able to take on that worldview, at least in the interaction and at least in designing or helping to fit the practices to what we're doing, which for the most part, I feel pretty capable of doing. However, there's always a really interesting and delicate dance between they're going to see me shifting around in worldview, and also showing them the way that they can shift their understanding of their own practice or their understanding of their own religion. And that might get uncomfortable."
+        },
+        {
+            "start": "00:42:09",
+            "end": "00:42:12",
+            "speaker": "John Vervaeke",
+            "text": "Right, right, right."
+        },
+        {
+            "start": "00:42:12",
+            "end": "00:42:48",
+            "speaker": "Michael Taft",
+            "text": "I'm never saying don't believe in that, and I wouldn't say something like that, but rather like, what about this way of understanding it, or what about this other way of holding it? Does that work for you? There's an interesting interaction going on there. I don't want to sound like I could work with anyone. It's not exactly that. But certainly, I love the question, because that's what my Tuesday looks like, is several different people arriving from very different places and working with each of them independently on their own course, starting where they're at. Does that answer your question?"
+        },
+        {
+            "start": "00:42:48",
+            "end": "00:44:05",
+            "speaker": "John Vervaeke",
+            "text": "It does. It's a great answer. I'm continually fascinated by the relationship between religio, this connectedness, mindedness that we've been talking about, and religion. And like you said, the dance between them, because I too have to learn the dance and practice it well. I guess for me, there's a dance on the other side, because I'm also trying to connect religio to good science. I'm a cognitive scientist, a psychologist. And part of what I'm trying to do is to get the world, if I can use that term neutrally, the world in which you're working, this world that has this name spirituality attached to it, I'm not really happy with that term, but so we'll just use it as a placeholder pointer to what we've been talking about, get that world and the scientific world into right relationship with each other again, so that they are mutually informing, constraining, and causing insight in each other. That's part of my job. But I'm wondering if you also seek to do that, if you seek to connect the practice with relevant cognitive science, neuroscience, psychology, that might inform what you're doing, or even transform what you're doing."
+        },
+        {
+            "start": "00:44:03",
+            "end": "00:44:22",
+            "speaker": "Michael Taft",
+            "text": "As much as possible. And sometimes that has been quite a lot. But I've never been formally trained in any of that. On the other hand, I do spend a lot of time talking to neuroscientists and psychologists and reading that kind of material. And I find it both really helpful and sometimes getting in the way."
+        },
+        {
+            "start": "00:44:22",
+            "end": "00:44:24",
+            "speaker": "John Vervaeke",
+            "text": "Yes. Yeah, that makes sense to me."
+        },
+        {
+            "start": "00:44:24",
+            "end": "00:44:56",
+            "speaker": "Michael Taft",
+            "text": "And currently, there's all the different flavors of the day and so on in terms of what's cool in science or what's cool in psychology. But currently, I really feel there's a deep, important, interesting, potentially very powerful connection going on with the world of free energy and predictive processing and Bayesian type stuff and meditation and psychology and so on. I think that that's really rich. We have to see where it's going to go. But that to me is a field with huge potential for revolutionizing how we understand this stuff."
+        },
+        {
+            "start": "00:44:56",
+            "end": "00:45:15",
+            "speaker": "John Vervaeke",
+            "text": "Well, I just published with Brett Anderson and Mark Miller in the journal Phenomenology and the Cognitive Sciences an article integrating relevance realization theory and predictive processing theory. So I completely agree with what you just said. I completely agree in a deep way."
+        },
+        {
+            "start": "00:45:15",
+            "end": "00:45:18",
+            "speaker": "Michael Taft",
+            "text": "And so for you, why is predictive processing interesting?"
+        },
+        {
+            "start": "00:45:18",
+            "end": "00:48:08",
+            "speaker": "John Vervaeke",
+            "text": "So sometimes I use the analogy that predictive processing gives me the genetics of cognitive fittedness, and relevance realization gives me the Darwinian theory of evolution, and you need to actually integrate the two together. But predictive processing, I mean, the fact that it's massively self-organizing and dynamic, and that the brain is actually predicting itself in order to predict the world. So self-knowledge and knowledge of the world are bound up in a really powerful way that points to a lot of, I think, what's going on in mindfulness practices. And then at the core of predictive processing is, well, what do you predict? And then you get down to precision weighting, and then precision weighting is about, you know, again, models of attention and salience distribution and how that is supposed to work at different levels, different longitudinal scopes, different levels of analysis, even I would say different levels of reality. And that to me is just rich with relevance realization, salience landscaping, finding the agent and the arena fitted together. It's actually more like anticipatory processing, right? It's allowing the organism to predict and prepare. And so it's allowing the organism to integrate, dynamically integrate self-models and models of the world so as to fit itself better to the world, which is measured by sort of reduction in how surprising the world is. But that sounds immediately boring to many people's ears. And that's because you can basically pursue short-term increases in how surprising the world is. That's what an insight is, because that actually allows you to gain more long-term reduction in surprise, which doesn't mean the world stops giving you new information. It means you get better and better at being able to appropriate the novelty of the world. And I put to you that that's a good component of what beauty actually is, is the ability to appropriate the novelty of the world without being overwhelmed by it in horror. And that's why I think in between beauty and the experience of wonder and horror is the experience of awe. And so for me, predictive processing, especially if you put it together with relevance realization, starts to open up, and this is where Mark Miller and I, and Brett Anderson and I, we talk as much about wisdom and spirituality and meaning as we do about the technicalities of relevance realization and predictive processing, this opens up so many areas for scientific investigation and explanation that are not attempts to explain away the phenomena, but actually disclose their richness, that would actually inform and afford enhanced practice and transformation. That is what I see in predictive processing."
+        },
+        {
+            "start": "00:48:08",
+            "end": "00:48:14",
+            "speaker": "Michael Taft",
+            "text": "John, your work just is completely fascinating. How do people learn more about it?"
+        },
+        {
+            "start": "00:48:14",
+            "end": "00:49:06",
+            "speaker": "John Vervaeke",
+            "text": "A good place to start is to go onto YouTube and follow my series Awakening from the Meaning Crisis. I also have companion series. I have an ongoing dialogical series where I talk with people, much like you and I have been talking, Michael, called Voices with Vervaeke. There I refer to a lot of material they can start investigating. There are communities all around the world doing study groups, discussion groups, Discord groups around this work, and there are related communities. And then if you start looking at that stuff, it also points you to the academic scientific stuff that I've been publishing, and you can take a look at that as well. And most importantly, in terms of allowing me to promote stuff, I have a new big series coming out called After Socrates. We've filmed 17 of the 25 episodes, and we plan to start releasing it in October. So please look for that."
+        },
+        {
+            "start": "00:49:06",
+            "end": "00:49:07",
+            "speaker": "Michael Taft",
+            "text": "Where do we find that?"
+        },
+        {
+            "start": "00:49:07",
+            "end": "00:49:13",
+            "speaker": "John Vervaeke",
+            "text": "That'll also be free on YouTube. It'll come out every Friday, just the same way Awakening from the Meaning Crisis did."
+        },
+        {
+            "start": "00:49:14",
+            "end": "00:49:21",
+            "speaker": "Michael Taft",
+            "text": "Fascinating. That sounds really cool. All right, John, thank you so much. It's been a real, real pleasure to talk to you today."
+        },
+        {
+            "start": "00:49:21",
+            "end": "00:49:28",
+            "speaker": "John Vervaeke",
+            "text": "Thank you, Michael. Likewise. I commend you for your practice and I encourage you to keep going. It sounds like you're doing really important work."
+        },
+        {
+            "start": "00:49:28",
+            "end": "00:49:31",
+            "speaker": "Michael Taft",
+            "text": "Thank you so much. All right. Bye-bye."
+        },
+        {
+            "start": "00:49:32",
+            "end": "00:49:32",
+            "speaker": "John Vervaeke",
+            "text": "Bye."
+        },
+        {
+            "start": "00:49:51",
+            "end": "00:49:59",
+            "speaker": "Michael Taft",
+            "text": "That's it for this episode of Deconstructing Yourself."
+        }
+    ]
+}

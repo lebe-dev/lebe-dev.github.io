@@ -1,0 +1,667 @@
+{
+    "title": "Sanity and Sainthood, with Dr. Tucker Peck",
+    "url": "https://deconstructingyourself.com/sanity-and-sainthood-with-dr-tucker-peck.html",
+    "guest": "Tucker Peck",
+    "transcript": [
+        {
+            "start": "00:00:00",
+            "end": "00:01:20",
+            "speaker": "Michael Taft",
+            "text": "Welcome to Deconstructing Yourself, the podcast for metamodern mutants interested in meditation, awakening, vajrayana, the laundry files, predictive processing, non-duality, consciousness hacking, and much, much more. My name is Michael Taft, your host on the podcast, and in this episode I'm speaking once again with Dr. Tucker Peck. Dr. Tucker Peck is a meditation teacher, clinical psychologist, and author. A former professor, he is the founding director of the scholarship fund Open Dharma Foundation and co-host of the podcast Teaching Meditation. He teaches a weekly class in person at the San Francisco Dharma Collective and has been teaching an online class for advanced meditators since 2012. And now, without further ado, I give you the episode that I call Sanity and Sainthood with Tucker Peck."
+        },
+        {
+            "start": "00:01:26",
+            "end": "00:01:29",
+            "speaker": "Michael Taft",
+            "text": "Tucker, welcome to the Deconstructing Yourself podcast."
+        },
+        {
+            "start": "00:01:29",
+            "end": "00:01:34",
+            "speaker": "Tucker Peck",
+            "text": "Thanks so much for having me. I don't know if you know it, but it's been seven years since the last time I was here."
+        },
+        {
+            "start": "00:01:34",
+            "end": "00:01:35",
+            "speaker": "Michael Taft",
+            "text": "Really?"
+        },
+        {
+            "start": "00:01:35",
+            "end": "00:01:39",
+            "speaker": "Tucker Peck",
+            "text": "I'm fulfilling my commitment that every seven years, I will be back."
+        },
+        {
+            "start": "00:01:39",
+            "end": "00:01:50",
+            "speaker": "Michael Taft",
+            "text": "I can't believe it's been that long. When I think about it, I'm just like, the creeping effects of aging or COVID or something. It seems like it's been maybe a couple years, but seven years, really?"
+        },
+        {
+            "start": "00:01:50",
+            "end": "00:02:00",
+            "speaker": "Tucker Peck",
+            "text": "Yeah, I think it was 2018. If it wasn't, your listeners will comment on this. I think in the Bible, they do things like on seven-year cycles. And so here I am, Michael."
+        },
+        {
+            "start": "00:02:00",
+            "end": "00:02:17",
+            "speaker": "Michael Taft",
+            "text": "I think of you as being very biblical, compliant. Very good. So it's been seven long years. Of course, you and I have seen each other many times in the meantime, but we haven't podcasted in all that time. So I just happened to notice that you just published a new book."
+        },
+        {
+            "start": "00:02:17",
+            "end": "00:02:26",
+            "speaker": "Tucker Peck",
+            "text": "Yeah, I published my first book, actually. A couple months ago, it's called Sanity and Sainthood. I spent five years writing it, although it's not actually all that long of a book."
+        },
+        {
+            "start": "00:02:26",
+            "end": "00:02:34",
+            "speaker": "Michael Taft",
+            "text": "Yeah, you know, when I saw the title, it made me think of that old Bill Hamilton book called Saints and Psychopaths. Does it have anything to do with that?"
+        },
+        {
+            "start": "00:02:34",
+            "end": "00:02:50",
+            "speaker": "Tucker Peck",
+            "text": "So actually, I had never heard of that book. It was after I published my book that people on Twitter started telling me, you know, did I rip off his title? Is this a sequel to his book? No, actually, just a coincidence. I doubt they're about the same topic, really, in any way."
+        },
+        {
+            "start": "00:02:50",
+            "end": "00:02:54",
+            "speaker": "Michael Taft",
+            "text": "Just very briefly, what's this new book, Sanity and Sainthood?"
+        },
+        {
+            "start": "00:02:54",
+            "end": "00:03:40",
+            "speaker": "Tucker Peck",
+            "text": "So the title Sanity and Sainthood, one of the things I want to say in the book is I think sainthood is a pretty good goal for meditation practice. I was contrasting this with a lot of my students come in with the idea that meditation is about feeling awesome all the time. And that's just certainly not what the Buddha said, right? The Buddha said, like, if you get really, really, really good at this, you can stop the second arrow but not the first arrow. I think a lot of my students come in thinking Dharma is about feeling really awesome, or getting some altered state like feeling as though you don't have a sense of self. I just think that's a pretty low goal to set, you know?"
+        },
+        {
+            "start": "00:03:40",
+            "end": "00:03:54",
+            "speaker": "Michael Taft",
+            "text": "Yeah, you know, I have to say, I see the same thing. It's like, people think somehow it's going to fix life, as opposed to like, giving you the internal resources to deal with life."
+        },
+        {
+            "start": "00:03:54",
+            "end": "00:04:15",
+            "speaker": "Tucker Peck",
+            "text": "Yeah. So I was trying to somehow counteract the argument that what good Dharma practice does is obliterate your psychology, obliterate your personality, essentially end all diversity, right? That the more awake you become, the more neutral, sterile, boring you become."
+        },
+        {
+            "start": "00:04:15",
+            "end": "00:04:19",
+            "speaker": "Michael Taft",
+            "text": "Flat, dead, completely not alive."
+        },
+        {
+            "start": "00:04:19",
+            "end": "00:04:37",
+            "speaker": "Tucker Peck",
+            "text": "Yeah, yeah. The Pali Canon says that once you become an arhat, you're sexually impotent and will die if you don't join a monastery in seven days. And I don't know about you, but that's not what I'm seeing. If it were, I wouldn't say it on your show. I wouldn't say, come study with me. You'll become impotent."
+        },
+        {
+            "start": "00:04:37",
+            "end": "00:04:40",
+            "speaker": "Michael Taft",
+            "text": "And have to move to a monastery."
+        },
+        {
+            "start": "00:04:40",
+            "end": "00:05:39",
+            "speaker": "Tucker Peck",
+            "text": "So the idea for me of sainthood is like what Dharma practice should give you is a really clear sense of how your psychology works. And if you have a really clear sense of how your mind is working, that should start uprooting the obstacles to being a really good person. I suppose there are some people out there who don't want to be good people, but I don't know a lot of them. Most people I know, if you ask them, do you want to respect the rights of others? Do you want to be morally high, as close as you can, a flawless person, most of the people I know would sign off on that. We're trying to do that. And then we consistently can't. I also think this helps undo the myth of the enlightened asshole, somebody who swears they abide in emptiness all the time and does all sorts of terrible things. It's a much cleaner goal that way. It's easier to tell who's made some movement towards sainthood or away from it."
+        },
+        {
+            "start": "00:05:39",
+            "end": "00:05:53",
+            "speaker": "Michael Taft",
+            "text": "Yeah. Do you think meditation can help with people who have actual conditions, like let's say narcissistic personality disorder or some kind of sociopathy or anything like that? I'm not a therapist. You are a PhD therapist, right? Tell me some things."
+        },
+        {
+            "start": "00:05:53",
+            "end": "00:07:23",
+            "speaker": "Tucker Peck",
+            "text": "Yeah. In terms of at the extremes, I don't know. The extremes being someone who truly cannot see anything beyond their own desires and their own sense of self. There blessedly aren't very many people like that. They tend to congregate. Unfortunately, they congregate at the tops of everything. So they run the government and they run the big companies and they run a lot of the big spiritual organizations and they don't tend to come to therapy, right? Narcissistic maniacs don't think they're the problem and that they need help. So I have seen one or two, but it's quite rare. So I don't really know the answer to at the extreme. But the thing where sociopathy or narcissism are traits that regular people have, yeah, I've certainly seen it overcome that. That's almost like one of the advertised purposes of Dharma. One of the themes I spend a while on in the book is the concept of the ego, and in Dharma we're trying to reduce the ego, release the ego. And that's almost like a direct counteracting to narcissism, sociopathy, where like there's almost a solipsism there. What matters is you and your desires, and not other people, their rights, your relationships, your heart space, anything like that."
+        },
+        {
+            "start": "00:07:23",
+            "end": "00:07:42",
+            "speaker": "Michael Taft",
+            "text": "Yes, you make an interesting dichotomy in the book. It's right there in the title, right? We're working for sanity and we're working for sainthood, and these are two different tracks that strongly interact. So would you agree with that before I go on?"
+        },
+        {
+            "start": "00:07:42",
+            "end": "00:07:46",
+            "speaker": "Tucker Peck",
+            "text": "Yeah, I sure would. I also realized I only got to define sainthood, and I was hoping to remember to get back to sanity."
+        },
+        {
+            "start": "00:07:46",
+            "end": "00:07:52",
+            "speaker": "Michael Taft",
+            "text": "That's right. That's where I was going next. So let's get back to the sanity part."
+        },
+        {
+            "start": "00:07:52",
+            "end": "00:08:43",
+            "speaker": "Tucker Peck",
+            "text": "Yeah. So the marketing around meditation, marketing around Dharma is what it does is obliterate your psychology. What it actually does is make your psychology very apparent. And this is why, you know, I don't think everybody's going through dark nights. In my teaching experience, I think that's not that common. But pretty much everybody who's hanging around meditation circles long enough starts coming face to face with how fucked up they are. And this seems to be true, even of people who've led relatively easy lives. What you should be cultivating in Dharma is, on one hand, mindfulness and equanimity. Mindfulness and equanimity is like, it's over there. It's not me. I don't care so much, right? There's a sense of being removed."
+        },
+        {
+            "start": "00:08:43",
+            "end": "00:08:43",
+            "speaker": "Michael Taft",
+            "text": "Distant, yeah."
+        },
+        {
+            "start": "00:08:43",
+            "end": "00:10:30",
+            "speaker": "Tucker Peck",
+            "text": "You should also be cultivating clear comprehension. So sati-sampajañña is the compound Pali term for mindfulness with clear comprehension. Clear comprehension is knowing what it is, what's actually happening in your mind. Of course, it's possible to meditate only with mindfulness and equanimity. That's called spiritual bypassing. It's cultivating delusion. If you're practicing right, if you're cultivating clear comprehension, you're going to see all the flaws in your psychology, and that feels pretty lousy. One way I'd think about it is when you can't see the flaws, you do insane things. You drink even though you don't want to. You yell at people who did nothing wrong. And when you start noticing all these flaws in your psychology, you're converting insane activity into insane feelings. You notice how poorly your mind is working, and by noticing it, you don't act out your own psychodrama in the world and towards others, but it certainly will feel temporarily for the vast majority of us like a decrease in sanity. And the way I'm defining sanity is appropriate reaction to the outside world, meaning if you have a good life most of the time, you should be happy most of the time. And if your grandma dies, you should feel sad about that. Insanity is the fairly ubiquitous situation where you're responding to things that didn't happen. You're having a terrible day because something bad happened 40 years ago, even though on the outside your day is great, or the flip side where you're too cut off from your emotions where something bad happens and you can't feel it."
+        },
+        {
+            "start": "00:10:30",
+            "end": "00:10:43",
+            "speaker": "Michael Taft",
+            "text": "And so what are some of the, let's say, bigger ideas that you've been working with lately? We haven't talked in seven years. It doesn't have to be in the book. What are some of the, let's just say, insights about meditation that you've had in the last half a decade?"
+        },
+        {
+            "start": "00:10:43",
+            "end": "00:10:48",
+            "speaker": "Tucker Peck",
+            "text": "Yeah, thanks. That's a great question. I could riff on that for a long time."
+        },
+        {
+            "start": "00:10:48",
+            "end": "00:10:55",
+            "speaker": "Michael Taft",
+            "text": "Let's riff with the best part, right? What's the most interesting part of whatever riff you would go with?"
+        },
+        {
+            "start": "00:10:55",
+            "end": "00:12:44",
+            "speaker": "Tucker Peck",
+            "text": "I have two things that feel most exciting to me right now. There's sort of vague allusions to them in my book, it's largely not about them. One is, it's like the most cliché possible Dharma teaching, but I feel like I get it a lot more than I used to. The teaching is something like, for beginner meditators the instruction is get state X, not state Y, right? So if you can't concentrate, learn how to concentrate. If you don't know how to enter jhanas, learn how to enter jhanas. And the advanced instructions are stop trying to switch your state. Teachers are going to tell you this all the time. It's kind of like if we were replaced by a robot, that's the first thing the robot would probably say. But I hadn't understood how extreme that teaching is. You know, like you look at your mind one day where you're hungry and exhausted and cranky and you've been staring at your computer for three hours, and it's like the worst possible mindset, obviously nothing good's going to come from this one. Like, you know, concentrate, do vipassana, do something to get a better mind state, and then relax and accept the mind state. The thing I've been working with in my own practice is noticing not just that that's bullshit, but it's really counterproductive to the Dharma. If you actually accept the state you're in, this starts leading to like pacification and eventually to nibbana. It's struggling against the state that not just prolongs and solidifies the state, but actually like creates any sense of duality, really."
+        },
+        {
+            "start": "00:12:44",
+            "end": "00:13:12",
+            "speaker": "Michael Taft",
+            "text": "Right. Let me interrupt for a minute and make sure I understand. The part that you think is bullshit is part one, right? So as you characterized post-Dharma teaching, start out learning to get in a better mind state, and then part two, accept whatever mind state you're in. And then you said that was bullshit, but I wasn't clear which part. I think what you're saying is part one."
+        },
+        {
+            "start": "00:13:12",
+            "end": "00:13:24",
+            "speaker": "Tucker Peck",
+            "text": "No, I'm glad you asked. I actually think when you're new at this, learning core competencies is a good idea. Yeah, it seems like there are people who can just like show up to a shikantaza retreat and get something out of it, but very few."
+        },
+        {
+            "start": "00:13:24",
+            "end": "00:13:26",
+            "speaker": "Michael Taft",
+            "text": "Yeah, very few."
+        },
+        {
+            "start": "00:13:26",
+            "end": "00:14:09",
+            "speaker": "Tucker Peck",
+            "text": "That most people, if you tell them just relax and let your mind do its thing, your mind is going to do the same useless things it was doing in the first place. It's actually the same in any skill where, you know, I play guitar. If you're going to play guitar, on week one you memorize the fingerings and follow the directions. If you just sit back and let the music flow through you, it will sound like when my three-year-old plays with my guitar, which is, you know, not music. If on year three you're like, okay, the D chord, this finger goes here, this finger goes here, you're gonna suck, right? That in any skill you should be methodical, follow direction, build core competencies, and then ignore the directions, break the rules, like go into a natural flow state."
+        },
+        {
+            "start": "00:14:09",
+            "end": "00:14:26",
+            "speaker": "Michael Taft",
+            "text": "Right. So I think we're in total agreement about how that works. And so let me guess again, you're saying what is bullshit is being expected to just do nothing or shikantaza meditation on day one."
+        },
+        {
+            "start": "00:14:26",
+            "end": "00:14:28",
+            "speaker": "Tucker Peck",
+            "text": "Oh, no, actually, what I was saying is..."
+        },
+        {
+            "start": "00:14:28",
+            "end": "00:14:31",
+            "speaker": "Michael Taft",
+            "text": "I'm still getting it wrong. This is awesome."
+        },
+        {
+            "start": "00:14:31",
+            "end": "00:15:04",
+            "speaker": "Tucker Peck",
+            "text": "This is great interviewing. Definitely lots of the listeners didn't know what I meant the first time. This is great. No, what I was saying is bullshit is the idea that certain mind states are fruitful to do nothing in and others aren't. I would put an exception here, unless you're like a quite advanced practitioner and really know what you're doing. The kind of mindset where you're sinking, like you're sad and you sit there doing nothing and get more and more and more sad, unless you're really quite advanced, you're going to want to abort that and do something else."
+        },
+        {
+            "start": "00:15:04",
+            "end": "00:15:06",
+            "speaker": "Michael Taft",
+            "text": "Yes."
+        },
+        {
+            "start": "00:15:06",
+            "end": "00:15:24",
+            "speaker": "Tucker Peck",
+            "text": "But at some point, you should be accepting every mind state. And that was the thing I was calling bullshit is like, not every mind state, like some of them are just filled with lust, filled with stupidity, filled with exhaustion."
+        },
+        {
+            "start": "00:15:24",
+            "end": "00:15:24",
+            "speaker": "Michael Taft",
+            "text": "Yeah."
+        },
+        {
+            "start": "00:15:24",
+            "end": "00:15:55",
+            "speaker": "Tucker Peck",
+            "text": "So of course, there's some mind states that are just so off track that it's better to get back on track. What I was finding recently in my own practice is not doing that has been really beneficial, like not getting back on track. If I had done this earlier in my practice, it would have been bad. You would just sink into these negative mind states. What I've been playing with is radical acceptance of all mind states without exception, and that's the thing that's leading to pacification and what I think would be called nibbana."
+        },
+        {
+            "start": "00:15:55",
+            "end": "00:16:29",
+            "speaker": "Michael Taft",
+            "text": "Yes. Okay. This is very interesting. Right now, in the way that I tend to think about this is, I think agreeing with what you're saying, which is you have to reach a certain place in your practice where that is fruitful first. You have to develop your core competencies good enough to be able to do that. But once you are in that place, then sitting with whatever comes up really does work very well."
+        },
+        {
+            "start": "00:16:29",
+            "end": "00:16:40",
+            "speaker": "Tucker Peck",
+            "text": "Yeah. It's the kind of thing where you'd want a teacher around the question of like, are you sinking into depression and letting yourself fall deeper? You'd want somebody to be able to answer that for you."
+        },
+        {
+            "start": "00:16:40",
+            "end": "00:16:47",
+            "speaker": "Michael Taft",
+            "text": "Yes. Okay. So tell me more about your own practice and how you're seeing yourself accepting any mind state and working with that, let's just say, productively."
+        },
+        {
+            "start": "00:16:47",
+            "end": "00:18:44",
+            "speaker": "Tucker Peck",
+            "text": "When I was here last time, I apologized for dropping a G-bomb. I had said the word God. I've been giving this Dharma talk quite a bit recently. I call it the three phases of pragmatic Dharma. Phase one is the way most of my students come in. It's rationalist, atheist, materialist. Truth is that which is reported in scientific journals. And phase one is really short, like six to 12 months of meditating, and that's out the window. You just start feeling, experiencing things that don't fit into the materialist model at all. Phase two is like new age hippie, reiki, ayahuasca, shamans. You start noticing energy moving through your body, for instance, and you want to work with people who know what to do about that. Phase two is quite long. Phase three is something I've come to call Christian. You go back to traditional religion. No, it's tongue in cheek when I say Christian. I've only had one person actually decide the resurrection literally occurred. But what does happen to people who've practiced for quite a while is the same way that when you get a little bit of quiet in your mind, you start noticing you have a really vast fucked up psychology. And that psychology moves through your body in the form of energy, right? In phase one, that sounds like the most woo-woo nonsense. And meditate for a year, and that's your direct experience, right? When you spend a lot of time being quiet, something lots of people seem to feel is like a loving, positive omnipresence, something that's always there and that's good."
+        },
+        {
+            "start": "00:18:44",
+            "end": "00:18:46",
+            "speaker": "Michael Taft",
+            "text": "This is absolutely the case."
+        },
+        {
+            "start": "00:18:46",
+            "end": "00:19:38",
+            "speaker": "Tucker Peck",
+            "text": "Yeah, yeah. And I don't have any solution for the problem of evil, right? Like if somebody seems to be in charge of the universe, either I really don't get their methods or they are capricious and unfair, right? So I don't have any solution for that. But as you say, if you sit quiet long enough, you start feeling a thing that seems pretty well described by the G word. And when I say Christianity tongue in cheek, it's not that people start like going to church. I mean, I grew up Jewish, and in one Catholic church one time or something. But people want to start talking about God, and for Westerners, Christianity is the most common language that people have for doing that, I think, for most people in Western society anyway. When you start feeling that, either the G word, God, or something like soul starts seeming like the right word."
+        },
+        {
+            "start": "00:19:38",
+            "end": "00:19:40",
+            "speaker": "Michael Taft",
+            "text": "Yeah."
+        },
+        {
+            "start": "00:19:40",
+            "end": "00:19:50",
+            "speaker": "Tucker Peck",
+            "text": "So the question you asked was like, okay, how do you accept mind states? This, I guess you could say, belief in God. It feels more like feeling of..."
+        },
+        {
+            "start": "00:19:50",
+            "end": "00:19:53",
+            "speaker": "Michael Taft",
+            "text": "In belief, I have to say I remain confused."
+        },
+        {
+            "start": "00:19:53",
+            "end": "00:19:59",
+            "speaker": "Tucker Peck",
+            "text": "Yeah. No, it's not a belief. You just have to cop to your actual experience."
+        },
+        {
+            "start": "00:19:59",
+            "end": "00:20:01",
+            "speaker": "Michael Taft",
+            "text": "Yeah."
+        },
+        {
+            "start": "00:20:01",
+            "end": "00:20:53",
+            "speaker": "Tucker Peck",
+            "text": "It feels like there's something out there that loves me and has my best interest. And I don't know why it didn't have the best interest of, throw a dart at a map, 20 million Native Americans, 6 million Jews, 20 million Soviets. It can't be that I'm just more spiritual than them or something like that. The belief all just falls apart, but the feeling is absolutely there and as real as anything else. And so that sort of fundamental faith, not like in the future necessarily, but in my mind at this moment, that kind of surrender is the thing that makes it easier to accept the mind state. The Theravada word is equanimity, and that's just not a verb, you know? Equanimity sounds too cold and distant and rational and almost like dissociative."
+        },
+        {
+            "start": "00:20:53",
+            "end": "00:21:19",
+            "speaker": "Michael Taft",
+            "text": "We need to get together and talk more. This is something I've been talking about for the past year, especially with a lot of passion, is what I would call the devotional aspect, the heart aspect. But I don't necessarily mean getting down and worshiping Shiva or something. What you're describing, like tuning into the love. Are you familiar with the Dzogchen being called Samantabhadra?"
+        },
+        {
+            "start": "00:21:19",
+            "end": "00:21:20",
+            "speaker": "Tucker Peck",
+            "text": "No."
+        },
+        {
+            "start": "00:21:20",
+            "end": "00:22:03",
+            "speaker": "Michael Taft",
+            "text": "This is interesting. In Dzogchen, the groundless ground of being, the Dharmakaya, the Buddha, Buddha nature, all that, we can picture that as a being, picture that as a Buddha. And the Buddha is called Samantabhadra. And this is the embodiment of the ground of being. But what does that word mean? What does Samantabhadra mean? In Sanskrit, it means everything's good. There's just some kind of basic goodness in the world. The groundless ground of being is somehow good, right? And in fact, you can very often translate it as the ever-present good. And so it's just kind of interesting resonance with what you're saying there. I know that's kind of an aside or a sidebar, but..."
+        },
+        {
+            "start": "00:22:03",
+            "end": "00:22:57",
+            "speaker": "Tucker Peck",
+            "text": "Well, but you're talking about the like perennial philosophy, right? If you sit quietly long enough, you'll use words based on your particular culture, but you'll talk about everything is God, God is love, everything is oneness, everything emanates from and returns to love. This seems to be the way people talk when they sit quietly long enough. And then you think they must be nuts. Like I look at the world and it doesn't look filled with love to me at all. And yet if you sit quietly, this is the feeling that comes up. So I'm a big fan of don't try to bridge the rational and the subjective. Just use the appropriate lens of analysis. So I have an insurance policy on my car, right? I don't think God will prevent me from crashing it. In my practice, I try to stick more in the realm of subjective. They just don't seem to converge very well to me."
+        },
+        {
+            "start": "00:22:57",
+            "end": "00:23:23",
+            "speaker": "Michael Taft",
+            "text": "Yeah. And again, in the later Buddhist tradition, this would have an analogy where they're saying the absolute and the relative are different, right? We have to treat the absolute one way and the relative the other. And maybe in the final analysis, they're not separate, but it's in some kind of deeply mysterious, cannot be thought by your brain way. In any kind of way of talking or thinking about it, they just are different. They don't go together."
+        },
+        {
+            "start": "00:23:23",
+            "end": "00:23:47",
+            "speaker": "Tucker Peck",
+            "text": "Yeah. I think about having an eight pound brain trying to understand the whole universe. We just can't. The same way that in physics, there's different rules of physics depending on what size object you're using. And at least the last time I read physics, nobody had any idea how to unify these things that seem beyond human intelligence. You just pick the appropriate lens of analysis and it works quite well."
+        },
+        {
+            "start": "00:23:47",
+            "end": "00:24:02",
+            "speaker": "Michael Taft",
+            "text": "That's right. Tell me more about this. So let's say one's practice, one has developed all the core competencies. What's it like, the way you teach it or the way you experience it, either way? What's it like to sit and accept all mind states?"
+        },
+        {
+            "start": "00:24:02",
+            "end": "00:24:52",
+            "speaker": "Tucker Peck",
+            "text": "The vast majority of the time, it is terrifically disappointing. The vast majority of the time, maybe 30 days of retreat last 15 months or something. And it used to feel like I would go on retreat and amazing things would happen. And I would come home with like war stories I could tell my students. And now most of the retreat is like sitting there thinking stupid thoughts, wondering if I'm just too lazy to practice anymore, if I kind of got old and lost my chops, punctuated by the most phenomenal sorts of insights I've ever had, usually about a week into rolling with disappointment."
+        },
+        {
+            "start": "00:24:52",
+            "end": "00:24:55",
+            "speaker": "Michael Taft",
+            "text": "Yeah. And can you characterize in any way the nature of these insights?"
+        },
+        {
+            "start": "00:24:55",
+            "end": "00:25:08",
+            "speaker": "Tucker Peck",
+            "text": "Oh, the short answer is no. The longer answer is yes, but like it's on the back of your kombucha bottle, it's on like the little insert on the tea bag, right?"
+        },
+        {
+            "start": "00:25:08",
+            "end": "00:25:10",
+            "speaker": "Michael Taft",
+            "text": "So it's a platitude."
+        },
+        {
+            "start": "00:25:10",
+            "end": "00:26:13",
+            "speaker": "Tucker Peck",
+            "text": "Yeah. David Foster Wallace says the deeper the truth, the more vapid the cliché you have to describe it with. Yeah, stop resisting things and you'll be happy, you know? I wind up talking about the four noble truths essentially constantly. It's just kind of understanding that better and better. My right arm, there's a tattoo that says even this, because I just found the four noble truths are really hard to remember. You know, you do your practice and you're like, oh, I'm like trying to control reality in all of these delusional stupid ways and it's really stressful. And when I stop doing that I feel great, I'm really happy to be alive. And when I do that I feel half dead inside and I should stop. And then like literally anything happens and you're like, no, no, no, I, you know, it's one degree warmer in here than I would prefer, I cannot live in a world like this, and you're back to the stupid control. I wrote it on my arm thinking maybe, uh, if you can't remember something, write it somewhere where you would see it often. But I mean, it looks cool, but it didn't work that well."
+        },
+        {
+            "start": "00:26:13",
+            "end": "00:26:19",
+            "speaker": "Michael Taft",
+            "text": "You just habituate to anything. Eventually your brain edits out the tattoo."
+        },
+        {
+            "start": "00:26:19",
+            "end": "00:27:09",
+            "speaker": "Tucker Peck",
+            "text": "Yeah, yeah. I don't remember I have tattoos unless I'm talking about them on a podcast. Yeah, I basically keep coming back to the way I describe the four noble truths in my book, is trying to control things in stupid ways is really stressful and you should stop. And I'm basically just trying to remember that and do that. And the insights could pretty much all be summed up as learning a different angle of that, learning that the truth of that is even more extreme than I had thought it was. Maybe some different mechanism to doing that. I don't feel like I'm learning a lot about mechanism. I feel like I'm kind of finding the key to the universe, remembering it for like four fucking seconds, and then going back to my pathological lifestyle."
+        },
+        {
+            "start": "00:27:09",
+            "end": "00:28:11",
+            "speaker": "Michael Taft",
+            "text": "One of the ways that I think about what you're describing is the difference between what I would call awakening and what I would call liberation. And pardon me if this is stunningly clear to you already, but for me, awakening is kind of that stuff you're talking about in the early retreats where you really, really were cutting through to some real non-conceptual open clarity and seeing for the first time what it's like to be outside or to understand that you don't have to exist as your ego and stuff like that. These big literal awakenings, openings. But liberation is like related, but it's a different axis where, let's just say, this is what in my way of thinking I would call the sanity axis, where it's about working through your conditioning and your material and all the baggage so that those insights of the awakening start to be available in all these other mind states."
+        },
+        {
+            "start": "00:28:11",
+            "end": "00:28:16",
+            "speaker": "Tucker Peck",
+            "text": "Normally, when we talk stuff out, we pretty much always come out on the same page. But I would think about it differently."
+        },
+        {
+            "start": "00:28:16",
+            "end": "00:28:17",
+            "speaker": "Michael Taft",
+            "text": "Good."
+        },
+        {
+            "start": "00:28:17",
+            "end": "00:29:04",
+            "speaker": "Tucker Peck",
+            "text": "The axis I would think here is what we call awakening. You know, the classical definitions of the different awakenings are so unhelpful, they're so vague that everybody uses their own definition and therefore the words don't mean anything. But at least what I would think of as first and second path awakenings are not that hard. With a few years on retreat, many people will experience that. If you experience it without any kind of cool effects, people can get really disappointed. But understanding the nature of self, understanding the nature of craving is not that hard. Remembering anything about these insights, you know, let's say it'll take you a year or two to have some of these insights, and like 30 years in you're remembering these insights one and a half percent of the time."
+        },
+        {
+            "start": "00:29:04",
+            "end": "00:30:02",
+            "speaker": "Tucker Peck",
+            "text": "Yeah, the sanity path. To me, if I was going to like sum up my book in one sentence, it would be focusing on mental processes when you can and mental content when you have to. So the original title for my book was Draining the Pond. I got rid of it partly because it sounded like a political slogan and partly because I actually love ponds and like wouldn't read a book about how to have fewer ponds in the world. The image is the path of therapy, the path of dealing with the content of your mind, fixing your mind, I'll say more about that in a second, it feels like draining a pond with a bucket. You know, there is a lot of water in there and you can't tell how much, it is getting lower so slowly, but like it really is getting lower over time."
+        },
+        {
+            "start": "00:30:02",
+            "end": "00:31:36",
+            "speaker": "Tucker Peck",
+            "text": "The idea of focusing on mental content is like what you do when you go to see a therapist, right? So if you go to a traditional Dharma teacher and start talking about your childhood trauma and your relationship with your parents, they're going to find some way of saying shut up, right? They're going to say, well, how are you relating to all of that? Why are you getting stuck in delusion? In at least the Theravada Dharma that I'm familiar with, in general, dealing with content is taught to be an error, a problem, a way of sinking deeper into delusion. The Buddha says a few times something like, do not say he robbed me, he beat me, he abused me. Somebody who even says that is already in the grips of Mara, the grips of the devil. Whereas imagine telling your therapist you were abused and them telling you, that's Satan talking. In therapy, what you're doing is going into the content of your mind and trying to improve it. And in Dharma, you're getting out of the content of your mind. So if you imagine that you have this disgusting pond with a variety of problems, right? You have leeches and you have mosquitoes and you have toxic algae and it smells bad. You could, you know, try to kill the leeches and you might succeed or fail. And even if you kill them, well, you've still got all the algae and you have to work on that. Whereas the Theravada, the path of focusing on mental process, is getting good at living next to a big stinky pond, because you will for a long time, right? Probably for the rest of your life, there will be a stinky pond next to you."
+        },
+        {
+            "start": "00:31:36",
+            "end": "00:32:17",
+            "speaker": "Tucker Peck",
+            "text": "I would think about what is the path of awakening, which is having the insights. Another is this thing where I go on retreat after retreat after retreat to get like faster at remembering the insights. You know, like I'll get really miserable from doing lots of tanha and I can remember much faster. No, I'm super miserable. I should stop doing that. And then this third path is like, instead of accepting all the mind states, you can actually get better mind states. It's probabilistic, but as you heal each individual issue in your psychology, you're setting yourself up for more positive mind states later."
+        },
+        {
+            "start": "00:32:17",
+            "end": "00:32:18",
+            "speaker": "Michael Taft",
+            "text": "Yeah, that makes perfect sense to me."
+        },
+        {
+            "start": "00:32:18",
+            "end": "00:32:20",
+            "speaker": "Tucker Peck",
+            "text": "It seems like we're agreeing."
+        },
+        {
+            "start": "00:32:20",
+            "end": "00:32:28",
+            "speaker": "Michael Taft",
+            "text": "Yeah, I think so. Yeah. And that's all that's important, Tucker, is that we agree. I just want to make sure that we are agreeing on this."
+        },
+        {
+            "start": "00:32:28",
+            "end": "00:32:47",
+            "speaker": "Tucker Peck",
+            "text": "That made me feel really good the first time we met, because we had totally different training, whole different lineages of Dharma, and you trained in Hinduism. And with almost no overlap in our training, the first couple of times we hung out, we couldn't stop talking. We agreed on pretty much everything, which made me feel like we were probably on some kind of good track."
+        },
+        {
+            "start": "00:32:47",
+            "end": "00:33:14",
+            "speaker": "Michael Taft",
+            "text": "Yeah, me too. And I think it's interesting that we haven't really discussed this much any time in the last several years, and it seems like I'm definitely really liking what you're saying. So tell me more. Tell me more. What's some other stuff that has been occurring to you lately about practice? Hearing from not only someone who's been practicing for a very long time, but also teaching it and seeing what's going on with others again and again and again, it's really interesting."
+        },
+        {
+            "start": "00:33:14",
+            "end": "00:33:46",
+            "speaker": "Tucker Peck",
+            "text": "Yeah. The thing that probably comes up most in my teaching is, in some of the Himalayan traditions, you start with ngöndro, right? So you say I want to meditate, and they're like, well, pray to this god for four years and bow at the statue of the Buddha and things like that, right? And in the lineage that I teach, we don't have that. One of the great effects of the ngöndro is it beats all of this striving, all of this wrong effort out of you."
+        },
+        {
+            "start": "00:33:46",
+            "end": "00:33:48",
+            "speaker": "Michael Taft",
+            "text": "In the most brute force kind of way, yes."
+        },
+        {
+            "start": "00:33:48",
+            "end": "00:35:16",
+            "speaker": "Tucker Peck",
+            "text": "Yeah. So if you don't start with these preparations, and I just don't think a lot of Americans are going to start with preparations, that just doesn't seem to be the mindset here, at least. If you dive right in, the thing you'll spend probably the first three years primarily dealing with is wrong effort, is trying to move the mind in ways that it doesn't move. And I think what's hard about letting go of it is the way that you move things in the world that leads to a lot of success is disastrous when you move the mind that way. If you want to have a certain career and you go to undergrad for that career and you go to grad school for that career and you work super hard and then you set up your business, all of this like planning what you want to happen, setting up the factors so you can get there, this really works. I live in Alameda here in the Bay Area. A lot of my students are quite successful people in tech or in business. So this idea of decide what you want and do it, and if it's not working, work harder, try harder, collect more information, this has led to really good lives, at least externally, for many of the people that I know. And internally it is just a fucking disaster. It's exactly the wrong way of approaching it."
+        },
+        {
+            "start": "00:35:16",
+            "end": "00:35:24",
+            "speaker": "Michael Taft",
+            "text": "Yeah, the analogy that I always use is, it's like if you wanted the wall, you want to make the room larger and you just start pushing on the wall."
+        },
+        {
+            "start": "00:35:24",
+            "end": "00:36:44",
+            "speaker": "Tucker Peck",
+            "text": "So it's a misunderstanding of cause and effect, right? That's not how walls move. And what's going to happen if you push on the wall? You're going to get exhausted, probably physical pain. You're going to feel like a failure, you're going to hate yourself, because if walls did move that way, you would be a failure right now, you know? And so the thing I've been working with most with students has been some form of pushing against the wall. And every time I try to explain that they should stop, they kind of think I'm winking at them. I've been teaching this retreat in Arizona every fall for a long time, a really long time. And I've taken to carrying a water pistol on my belt when I'm teaching the retreat, because so often people come into my office and be like, look, there's lots of air quotes while they're doing this, look, I know meditation isn't about getting what you want, anyways, look, I have a lot of suffering, I need this shit, I'm a busy person, give me the real teachings that you're not giving to everybody else. And so I just shoot them with the water gun. It's really effective. You just need to like shoot one or two people and then everybody else will be like, okay, don't shoot me with a water gun. But it's like cool, cool, that's mindfulness of striving right there. The water gun has led to that."
+        },
+        {
+            "start": "00:36:44",
+            "end": "00:37:39",
+            "speaker": "Tucker Peck",
+            "text": "You know, what I'm seeing is that the ultimate Dharma is about, at least, sorry, not that I know the ultimate Dharma, but as far as I've gone, is about maximal non-striving, complete letting go. When you're new at Dharma it shouldn't be completely that way, or intermediate at Dharma it shouldn't be completely that way, but the amount of effort you should be using, the amount of control, the amount of direction should definitely be less than you are using. One way I'll talk about it is the posture of meditation should be the posture of like a nun on her knees praying for the Holy Spirit to grace her, right? Like there's this clear recognition that she doesn't control whether this happens or not. She's just trying to create the right physical and mental posture. For all meditation, this is the way to practice. And that's the thing I've been dealing with most in teaching recently."
+        },
+        {
+            "start": "00:37:39",
+            "end": "00:37:47",
+            "speaker": "Michael Taft",
+            "text": "Wow, I love it. That's just so amazing. Again, coming back to what I would call surrender, grace, devotion, heart. It just makes everything possible in meditation."
+        },
+        {
+            "start": "00:37:47",
+            "end": "00:38:51",
+            "speaker": "Tucker Peck",
+            "text": "There's this particular variant of that, which is this like optimization, because a lot of the people I know have solved the big external problems. Obviously that's impermanent, but it can go for quite a while where like you have enough social connection, you have enough money, your heart feels full enough, you know, because many people over there, you know, solved many of their problems. You can get to this place where life is like 92% good. And I think that's probably the highest number. I think you actually can't get above about 92. So there's this obsessive, like, I think it comes from all the wellness videos, the jacked guys on the internet who wake up and you get to see them meditating as part of their being an optimal human ritual. You just struggle against your mind being the way it is to try to make it better, and that is the literal opposite of Dharma."
+        },
+        {
+            "start": "00:38:51",
+            "end": "00:38:53",
+            "speaker": "Michael Taft",
+            "text": "Tell me more."
+        },
+        {
+            "start": "00:38:53",
+            "end": "00:39:50",
+            "speaker": "Tucker Peck",
+            "text": "I've done this in a few of my retreats recently where I say, who would agree with this sentence? You know, particularly people who've been on, let's say, more than five long retreats. The sentence is, Dharma has given me benefits I would never have known to ask for. And pretty much all the hands go up, right? What you are expecting to get from Dharma is almost certainly what Western marketing has incorrectly told you you will get. Even the people who know that this is a straw man, and when I'm like, oh, you know, all these Westerners thinking you meditate, your psychology will be obliterated, you'll feel the way you want to feel all the time, these are people who will smile and nod and laugh at the straw man. Deep down, this is largely what they are believing. If you don't feel the way you want to feel all the time, this is an error in Dharma practice and you should try harder."
+        },
+        {
+            "start": "00:39:50",
+            "end": "00:40:10",
+            "speaker": "Tucker Peck",
+            "text": "What you should be doing is opening to the mystery. Dharma is about non-control, right? The four noble truths are stop controlling shit so much and you won't feel so miserable all the time. And, uh, this idea of Dharma as neurohacking, it's just the literal opposite of Dharma."
+        },
+        {
+            "start": "00:40:10",
+            "end": "00:40:12",
+            "speaker": "Michael Taft",
+            "text": "Right. Be in total control of your mind at all times."
+        },
+        {
+            "start": "00:40:12",
+            "end": "00:40:30",
+            "speaker": "Tucker Peck",
+            "text": "Yeah. Total control. So it does just what you want. It's so hard to break people out of that mindset, no matter how intellectually deeply they grasp the idea that's not what Dharma is about. To get them to actually practice as though that's not what Dharma is about is really challenging."
+        },
+        {
+            "start": "00:40:30",
+            "end": "00:40:34",
+            "speaker": "Michael Taft",
+            "text": "Hopefully, you and me agreeing with each other on this podcast will convince a couple."
+        },
+        {
+            "start": "00:40:34",
+            "end": "00:40:47",
+            "speaker": "Tucker Peck",
+            "text": "I'm not going to hold my breath about that, but yes. You have a pretty big viewership here. I think if we're just trying to convince a couple people, law of large numbers, we'll do it."
+        },
+        {
+            "start": "00:40:47",
+            "end": "00:41:00",
+            "speaker": "Michael Taft",
+            "text": "We'll do it. Okay, very good. So we've been talking about some of your very interesting ideas and the ways that you've been teaching lately and so on, but we barely talked about what your book is actually about. Is there anything you want to say about it?"
+        },
+        {
+            "start": "00:41:00",
+            "end": "00:41:23",
+            "speaker": "Tucker Peck",
+            "text": "The main reason I wanted to write a book is what I keep seeing is people coming to Dharma practice with the idea that it is linearly correlated with happiness and positive mental states. And our friend Daniel Ingram has popularized the idea of these horrible, life-ruining dark nights, but I don't see those too often."
+        },
+        {
+            "start": "00:41:23",
+            "end": "00:41:24",
+            "speaker": "Michael Taft",
+            "text": "They're very rare."
+        },
+        {
+            "start": "00:41:24",
+            "end": "00:41:30",
+            "speaker": "Tucker Peck",
+            "text": "Yeah, they're very rare. If he's listening to this right now, he's screaming at the laptop."
+        },
+        {
+            "start": "00:41:30",
+            "end": "00:42:32",
+            "speaker": "Tucker Peck",
+            "text": "And what is almost ubiquitous is like there's this beginner's luck where meditation feels amazing. There's often this place where you get over the beginner's luck and it's not quite so awesome. Some sits are awesome, some aren't. But what tends to happen is rather than obliterating your psychology and feeling the way you want to feel, you come face to face with your psychology. If you have a good map, that's what I'm calling the good map. If you do this long enough, you will see your psychology very clearly. Then noticing how insane you are is really positive, right? It's like the next step on the map. What most students I know are using as a map is you should feel progressively more awesome. And when three years in you're like a wreck, you know, like you barely used to cry and you're crying all the time now, and you've developed mental health symptoms that you didn't really have before, that's pretty normal."
+        },
+        {
+            "start": "00:42:32",
+            "end": "00:43:09",
+            "speaker": "Tucker Peck",
+            "text": "And I wanted to get across the sense that this is good. So I'm a psychotherapist. That's my full-time job. Teaching retreats, I'm really fortunate to be able to do that more as a side project. And most of my clients are advanced meditators who want therapy, but I keep about like 20% of my caseload random people who found me through the insurance company, because it's too easy to do therapy with advanced meditators. We're really good at it, right? We know what's going on in our mind and it doesn't feel like self. So you can have something really embarrassing, really ugly, and you can just say it."
+        },
+        {
+            "start": "00:43:09",
+            "end": "00:43:19",
+            "speaker": "Michael Taft",
+            "text": "So meditation should make you a great therapy client. It should make it clear what it is you need to work on. It should make it easier to access it."
+        },
+        {
+            "start": "00:43:19",
+            "end": "00:44:06",
+            "speaker": "Tucker Peck",
+            "text": "The sessions are a lot, lot more intense. If you've done enough Dharma practice, you're starting day one of therapy the way somebody else might be 10 years in. So that's one of the central themes of the book, this idea that Dharma brings you face to face with your psychology, but it doesn't heal it. And so the path of draining the pond and the path of getting used to living next to the pond, what you should be doing is both, right? If you're looking to feel great all the time, you at least won't for a very, very long time, right? If ever. And so you should get used to having a mind that's like pretty fucked up. And also, separately, at different times, you should work on having a mind that's less fucked up."
+        },
+        {
+            "start": "00:44:06",
+            "end": "00:44:15",
+            "speaker": "Michael Taft",
+            "text": "Tucker, thank you so much for coming on the Deconstructing Yourself podcast. How do people get in touch with you and learn more about your retreats and so on?"
+        },
+        {
+            "start": "00:44:15",
+            "end": "00:44:29",
+            "speaker": "Tucker Peck",
+            "text": "My website's meditatewithtucker.com. If you Google my name, or actually I'm the only Dharma teacher named Tucker, so if you just Google Tucker and meditation, you get a website, meditatewithtucker.com, and you can get my book basically anywhere online books are sold."
+        },
+        {
+            "start": "00:44:29",
+            "end": "00:44:34",
+            "speaker": "Michael Taft",
+            "text": "Fabulous. So thank you so much. It's been great. I'm very much looking forward to talking to you again in seven years."
+        },
+        {
+            "start": "00:44:34",
+            "end": "00:44:43",
+            "speaker": "Tucker Peck",
+            "text": "Yeah, that sounds great. I will see you in seven years. I will hopefully still have some hair."
+        },
+        {
+            "start": "00:44:43",
+            "end": "00:44:45",
+            "speaker": "Michael Taft",
+            "text": "Right. Thanks for sharing your wisdom today, Tucker. Sincerely, it's always a real pleasure."
+        },
+        {
+            "start": "00:44:57",
+            "end": "00:45:02",
+            "speaker": "Michael Taft",
+            "text": "That's it for this episode of Deconstructing Yourself."
+        }
+    ]
+}

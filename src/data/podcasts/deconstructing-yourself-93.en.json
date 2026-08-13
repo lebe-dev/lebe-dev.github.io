@@ -1,0 +1,355 @@
+{
+    "title": "Jhanas, Technology, and Tradition with Stephen Zerfas",
+    "url": "https://deconstructingyourself.com/jhanas-technology-and-tradition-with-stephen-zerfas.html",
+    "guest": "Stephen Zerfas",
+    "transcript": [
+        {
+            "start": "00:00:00",
+            "end": "00:01:21",
+            "speaker": "Michael Taft",
+            "text": "Welcome to Deconstructing Yourself, the podcast for metamodern mutants interested in meditation, awakening, hardcore dharma, Bluey, Dzogchen, consciousness hacking, direct path teachings, meditation of all kinds, and much, much more. My name is Michael Taft, your host on the podcast, and in this episode I'm speaking with Stephen Zerfas. Stephen Zerfas is a co-founder of Jhourney, a startup that is currently creating meditation retreats using novel methods to teach novices to reach jhana. Stephen stumbled into the first three jhanas on his own and has dedicated his career to scaling them after learning of their rich history. He's trained with several jhana teachers, including Leigh Brasington and Delson Armstrong. And now I give you the program that I call Jhanas, Technology, and Tradition with Stephen Zerfas."
+        },
+        {
+            "start": "00:01:26",
+            "end": "00:01:30",
+            "speaker": "Michael Taft",
+            "text": "Stephen, welcome to the Deconstructing Yourself podcast."
+        },
+        {
+            "start": "00:01:31",
+            "end": "00:01:33",
+            "speaker": "Stephen Zerfas",
+            "text": "Thanks, Michael. I'm excited to be here."
+        },
+        {
+            "start": "00:01:33",
+            "end": "00:02:06",
+            "speaker": "Michael Taft",
+            "text": "I'm excited to have you here. So transparently for the audience, I've been seeing Stephen's face in person for at least a couple of years now because I'm around the Alembic quite a bit, and so is he. And so we've had a chance to talk and to meet quite a bit and to know each other and so on. And so Stephen is someone that I know and Stephen knows me. It's not like we're two strangers having some interview here. On the other hand, it's not like we know each other well. Would you agree with that, Stephen?"
+        },
+        {
+            "start": "00:02:06",
+            "end": "00:02:20",
+            "speaker": "Stephen Zerfas",
+            "text": "Yeah, I think that's a good way of saying it. I've enjoyed seeing you frequently around the Alembic and getting to talk to you on the margins here and there. It's not as if we're a long time meditation teacher and student relationship or closely working colleagues."
+        },
+        {
+            "start": "00:02:20",
+            "end": "00:03:13",
+            "speaker": "Michael Taft",
+            "text": "So, you know, I want to talk to you about jhanas and a company called Jhourney, J-H-O-U-R-N-E-Y, Jhourney, that you're starting together with Alex Gruver. And I have a lot of questions about it. And I think other people have questions, a lot of interest. There's a tremendous amount of interest, certainly around, oh, let's say Alembic or the meditation scene online and folks I talk to, there's a lot of them are going to your retreats and so on. And so to me, that's really fascinating and interesting, but it's also a little bit controversial out there. It's not just like universally seen as a slam dunk that this is a great thing you're doing. So let's get right into it and talk about this. I think it'll be a great way to see what you have to say about all this."
+        },
+        {
+            "start": "00:03:13",
+            "end": "00:03:21",
+            "speaker": "Stephen Zerfas",
+            "text": "Okay. Sounds great."
+        },
+        {
+            "start": "00:03:21",
+            "end": "00:03:29",
+            "speaker": "Michael Taft",
+            "text": "Good. Let's start out with you and how you got interested in meditation and specifically the jhanas."
+        },
+        {
+            "start": "00:03:29",
+            "end": "00:05:33",
+            "speaker": "Stephen Zerfas",
+            "text": "Yeah. So my story really getting into meditation starts about five years ago. And I was going through a really terrible mental health patch. I was breaking up with a co-founder and a girlfriend at the same time. And I went on a 10 day silent Goenka Vipassana as a Hail Mary to see if I could find some new tool to help me through the tough time. And it was hell. I think I had three migraines in eight days. Everything was all going badly at once. And I had a tremendous amount of self-criticism. And on the last day, I ended up out of desperation, changing the technique and found myself in a clearly altered state, streaming tears of joy for 60 minutes, wide open, spacious gratitude, easily the most blissful thing I'd experienced in over a year. And I thought, what the heck is this? If this is replicable, this changes everything. And so for the next 10 months after retreat, I ran personal experiments, sitting on the edge of my bed for an hour a day at first, rotating the technique about every seven days. At one point, I ramped up to two to three hours a day and got to the point where I can reenter the state more or less some 20 minutes on any given day. And it's not an overstatement to say that this was life changing. My negative affect and neuroticism on psychometric tests even plummeted. It became easy to stay relaxed and focused at work. There was nothing more I wanted to share with family and friends. I didn't have a language for how to do so. You know, I would share a little bit of my story and people would be like, wow, that sounds great, but I don't have 10 months to run personal experiments and find out that you're a freak. Or like, that's great, Stephen, but like, maybe you should see somebody about these tears of joy you're crying before work every morning. And so it largely stayed my secret for a couple of years until I stumbled upon the framework of the jhanas. And I got goosebumps reading Right Concentration by Leigh Brasington, because the first three jhanas, maybe four, described my experience perhaps with more precision than I myself had ever described them. And so that was just a huge watershed moment for me. Around that time, I immediately began questioning, if I'm not alone, and there are already thousands of people who are practicing these states, thousands of people, then why are they not millions? Why isn't that a mega scale?"
+        },
+        {
+            "start": "00:05:33",
+            "end": "00:05:35",
+            "speaker": "Michael Taft",
+            "text": "So you independently trained yourself in jhanas. Like without any teacher at all?"
+        },
+        {
+            "start": "00:05:36",
+            "end": "00:06:03",
+            "speaker": "Stephen Zerfas",
+            "text": "Yes and no. It takes a village. In a sense, I was shaped by my Catholic upbringing. There was some great Catholic spirituality. There's also a lot of challenges there, but that no doubt shaped my experience. I did that Goenka Vipassana, and I'm grateful for the container that created. There were a number of other resources and techniques and teachers here and there I found online that sort of inspired some of the experiments I was running in my own head. But a lot of that was without knowing the word jhana, was without any sort of structured tradition or any sort of teacher-student relationship."
+        },
+        {
+            "start": "00:06:04",
+            "end": "00:06:12",
+            "speaker": "Michael Taft",
+            "text": "That's amazing. Just one other question on this point. And that is, when you were in the Goenka retreat, what was your initial move that you made?"
+        },
+        {
+            "start": "00:06:12",
+            "end": "00:07:36",
+            "speaker": "Stephen Zerfas",
+            "text": "The short answer is I infused the body scan with loving kindness, which I actually found out just last year is one of Sharon Salzberg's sort of favorite meditations as well. And she has a story about how that became one of the meditations she sort of quietly recommends on the side. The longer answer, which if you indulge me, the 30 second version is I just went out on a walk and was like, this can't get any worse. I've had three migraines in eight days. I'm self-criticizing like to unprecedented degrees. And I think what's happening here is I'm in a positive feedback loop where I'm doing the meditation, where I'm trying to avoid craving or aversion. I'm experiencing one or the other. And then I'm frustrated with myself or averse to the fact that I'm averse and then averse to the fact that I'm averse and so on. And so if this positive feedback loop is spiraling in a negative direction, or I mean, a downward direction, maybe I can flip it and get it to go the other degree. How do I do that? Well, I'll have to reverse the inputs. So I'm going to go in there and instead of being like drawn to pleasant sensations or averse to negative sensations, I'm going to try to just Aristotelian golden mean this thing. If I'm on the aversion vice, I'm going to go for the other side. So I'm just going to hit everything with as much love and kindness and compassion as I possibly can. And unbeknownst to me, that was just what I needed. And I now think that's for multiple reasons. Maybe the biggest of which is that equanimity is just so much closer to love than the indifference that I thought it had meant at the time. And so it was a happy stroke of luck."
+        },
+        {
+            "start": "00:07:37",
+            "end": "00:07:54",
+            "speaker": "Michael Taft",
+            "text": "That is a happy stroke of luck and also a beautiful story. So, okay, where did you go from there after working alone in your room or whatever for as long as you did? Once you discovered Leigh Brasington's book, then what happened next?"
+        },
+        {
+            "start": "00:07:54",
+            "end": "00:08:16",
+            "speaker": "Stephen Zerfas",
+            "text": "Yeah. I should also mention that the back half of running experiments alone in my room, I had discovered Jeffrey Martin's Finders Course. And so use that as a source of inspiration for all kinds of different experiments and like exposure to different meditation techniques. I never really found Jeffrey's matrix of locations to resonate with me. Although I did find this notion that there was some sort of like shift in fundamental okayness."
+        },
+        {
+            "start": "00:08:16",
+            "end": "00:08:21",
+            "speaker": "Michael Taft",
+            "text": "Did you actually do the Finders Course or just learn about it?"
+        },
+        {
+            "start": "00:08:21",
+            "end": "00:10:06",
+            "speaker": "Stephen Zerfas",
+            "text": "I did do the Finders Course. I think I did the Finders Course in a bit of a unique way because I was already on this like self-experimentation regiment and found a lot of analogous inspiration from there, even if I didn't go through perhaps as the average student. But back to your question about where to go from there. You know, once I discovered that the jhanas were a framework and a thing, and then it led me to the question of like, why isn't this at mega scale, so to speak? There's a historical sort of story there. That took me probably another year to sort of come up with at least a plausible explanation for why political historical accident might have prevented these states reaching large scale. But far more importantly is this fact that meditation itself is just hard to scale. There's something fundamentally different about meditation relative to most other skills we learn, and that it's hard to verify. If you're learning to swim or learning astrophysics, you have a very tight, clear, in some ways inarguable, confident feedback loop. And the rate of your learning is often a function of your feedback. And so the fact that we can't see, look into the headspace of the meditator and see that they are, in fact, turning left instead of turning right, so to speak, it puts so much more guesswork in the learning process, so much more guesswork in the teacher to student relationship. And we're talking about a literally pre-verbal space, not just invisible. And so it's not only that we have poor feedback loops in the sense that it's not visible, but it's also that words are a bad tool for the job. And so I looked at that and I said, well, are there modern tools that for the first time may help us crack open this hard to verify problem? And this is, you know, at the time I was an infrastructure engineer. And so it was already embedded in the tech ecosystem and began thinking, well, perhaps with enough biosensors and machine learning, we can find a way to crack open this hard to verify challenge and make it such that the jhanas first and perhaps other aspects of meditation could be taken to new scale."
+        },
+        {
+            "start": "00:10:07",
+            "end": "00:10:15",
+            "speaker": "Michael Taft",
+            "text": "Very good. So back to the story, because I believe you then went and studied more, correct?"
+        },
+        {
+            "start": "00:10:15",
+            "end": "00:11:27",
+            "speaker": "Stephen Zerfas",
+            "text": "Oh, yes. So for the next year, basically, after being captivated by this idea, I ended up quitting my job and then reading every related neuroscience and neurotech, either textbook or course that I thought would be relevant, talking to the relevant folks, and then teaching myself to analyze EEG time series data and bought a simple system to see if I could de-risk the idea that you could use modern tools to make meditation easier to verify. And after about nine to 12 months of that, and through this process, meeting a number of remarkable people, including Katie Devaney, who you started the Alembic with and ultimately introduced the two of us, it seemed to be the case that perhaps we can for the first time. Machine learning has gotten good enough that you can do remarkable things with signals from devices like EEGs. Emotion recognition rates for EEG devices, EEG emotion recognition has gotten much better with new ML algorithms. Consumer grade devices have gotten a lot cheaper and bright spots and some related neurofeedback for meditation literature all seem to point that perhaps this is primarily an ML problem. And so we set out to put together a small fundraise, raise the initial team and see if we could do that."
+        },
+        {
+            "start": "00:11:28",
+            "end": "00:11:42",
+            "speaker": "Michael Taft",
+            "text": "So you went from your bedroom and learning that there was a thing called jhanas directly into starting a company that could maybe provide the feedback to make it easier to learn jhanas, correct?"
+        },
+        {
+            "start": "00:11:42",
+            "end": "00:11:45",
+            "speaker": "Stephen Zerfas",
+            "text": "That's right. It depends on how you want to measure it, but it was a multi-year journey."
+        },
+        {
+            "start": "00:11:46",
+            "end": "00:11:56",
+            "speaker": "Michael Taft",
+            "text": "Yeah. Excellent. Now, in the course of that journey, did you work with any other jhana teachers?"
+        },
+        {
+            "start": "00:11:56",
+            "end": "00:12:39",
+            "speaker": "Stephen Zerfas",
+            "text": "I ended up sitting with Leigh not too long after reading his book. The thing that was so exciting to me about his book was that it wasn't just descriptive and prescriptive. I think I had encountered the first three, maybe first four jhanas on my own, but then his instructions, I tried them out and it was almost cause and effect. It was like, aha, here are some other states I didn't realize were here. And then I went and sat with him and had my first experiences, mostly the second four jhanas. And then a little bit later, I also sat with Delson Armstrong, Bhante Nanda, and Rachel O'Brien in the TWIM community. Scott Jordan was a part of that as well. And then we've now run a handful of jhana teaching retreats ourselves. We've had over 100 people on retreat. I've had over a couple hundred students now. And one of those retreats, we co-led with Doug Kraft, who's a TWIM teacher who's currently doing some work with Harvard."
+        },
+        {
+            "start": "00:12:40",
+            "end": "00:12:53",
+            "speaker": "Michael Taft",
+            "text": "This is really interesting. So jhana teachers such as Leigh have confirmed that you are doing the jhanas correctly, that you are going into these much higher jhana states and so on, correct?"
+        },
+        {
+            "start": "00:12:53",
+            "end": "00:12:53",
+            "speaker": "Stephen Zerfas",
+            "text": "Yes."
+        },
+        {
+            "start": "00:12:54",
+            "end": "00:13:05",
+            "speaker": "Michael Taft",
+            "text": "Yeah, that's great. So in a way, we could say you're almost a self-taught jhana person who then went to some retreats and learned to do it a lot better. So what's your relationship with jhana practice like right now?"
+        },
+        {
+            "start": "00:13:05",
+            "end": "00:16:36",
+            "speaker": "Stephen Zerfas",
+            "text": "Yeah, Michael, there's just nothing more I want to share with the world. I'm getting goosebumps right now thinking about how this has changed my life. Two parts of this. One part is like why and how I've found them so valuable. And then the second is like how I use it today. I think both of these are sort of facets of your question. Like what's my relationship today? And so people hear the jhanas and I think they immediately think pleasure and states of bliss, maybe states of profound peace. They certainly range the spectrum. That's no doubt part of the story. But the thing that's so exciting about the jhanas is it's not the first order effects that make them so extraordinary. It's the second order. The fact that you can enter into a peak state on 20 minutes notice, move towards these states into maybe relatively independent of external conditions can create a mentality of abundance that can function as like, maybe you call it insurance against mood scarcity in the day-to-day life. In the same way that having food on the table and a roof over your head makes it a lot easier to be pro-social or live into delayed gratification, effectively easier to be the person you already aspire to be. So too is it the case that if you know you can move yourself into a peak experience, in some ways it's not the moments when you're in the peak experience, but it's the moments in which you're protected by the insurance that you can, that allows you to live into the values aligned behavior you aspire to. So maybe the number one thing is this mentality of abundance. There's also a bunch of other like fantastic benefits. My moment to moment sort of in the body somatic emotional awareness is night and day different from where it was prior to me discovering these states. It's almost as if like there's new colors to life in a sense. This moment somatic awareness is not something that was a part of my life prior to this kind of meditation. Another huge thing, I see sort of versions of therapy and things like breathwork and psychedelic-assisted therapy as tools that sort of put you in a special state and then allow you to engage in versions of memory reconsolidation. The jhanas can be that special state that unlock versions of memory reconsolidation. Some of the folks that we've had on our podcast cite like sort of this new ability to do self-directed therapy where they drop into a jhana and they turn and pull up the most painful psychological thing they can come up with and let the two wash over them until the psychological pain dissolves into a certain amount of acceptance and peace. And then the most exciting thing is that when you encounter that stimuli in the real life that is now associated with the peace and acceptance of your meditation, it's like fixing bugs in production. You like check out your feature branch, go in there, do a little bit of hacking, and then ship it back up into production. And now when you encounter the stimuli in the real world, your subconscious responds with this sort of ease and acceptance that you aspire to. And so it's these kinds of things that I think make the jhanas really exciting, and they're also why they seem to me like such an exciting state to try to scale. You know, a really flip thing, in fact The Atlantic quoted me the other day, although they did this in a way that I thought made it sound as if we were a little naive in thinking this was going to usher in world peace, but there's this line that we do say sometimes internally, like imagine a world where Putin and Biden were tearing up with gratitude or joy every morning for 30 minutes as part of their morning routine. Would that not be a better world? And it's that kind of intuition primer. We don't literally believe that world peace is around the corner or that world leaders are going to be practicing jhana tomorrow, but there's this idea that if everybody could, that that would be worth a lot more than pleasure itself."
+        },
+        {
+            "start": "00:16:36",
+            "end": "00:16:42",
+            "speaker": "Michael Taft",
+            "text": "Very good. So you are aware of the concept called the jhana wars, are you not?"
+        },
+        {
+            "start": "00:16:42",
+            "end": "00:16:42",
+            "speaker": "Stephen Zerfas",
+            "text": "Yes."
+        },
+        {
+            "start": "00:16:42",
+            "end": "00:18:02",
+            "speaker": "Michael Taft",
+            "text": "Yeah, I've talked about it a bunch on the podcast, especially a few years ago. But for those who aren't aware of this term, it's sort of a joking term that describes one of the more confounding qualities of jhana practice, which is that they are described traditionally in a way that tells you the qualities of a jhana, but does not include the depth of the jhana, like how deep of an absorption you have to go into for it to, quote, count as a jhana. And so you get this interesting situation where some teachers require almost unbelievable super trance in order to count as a jhana, and other teachers require simply that the qualities be there at all. It is an altered state, it's still an absorption, but it's certainly on the other end of the spectrum compared to these super deep jhanas that are described in a text like the Visuddhimagga or similar. So I'm curious, in your initial experiences with this, where would you put yourself on that scale? And furthermore, to expand this out in the retreats that you're teaching, and I do think when you're talking about the Jhourney retreats, you talk about people reaching these states, and you even give a percentage of people that do reach the states, it's pretty specific. And so I'm curious, what are you calling a jhana in terms of depth?"
+        },
+        {
+            "start": "00:18:03",
+            "end": "00:20:37",
+            "speaker": "Stephen Zerfas",
+            "text": "Yeah, totally. A really important question. Another way that I like to think of the spectrum on the jhana wars is that the two sides of the spectrum roughly map to whether or not they're Visuddhimagga versus sutta inspired. Visuddhimagga folks trained in the tradition of Pa Auk Sayadaw, for example, this is Tina Rasmussen and Stephen Snyder and Beth Upton and Shaila Catherine. Obviously, they're teaching it, and so they don't believe that only one in a million people will enter, but they do have these really high bars. I don't think I have any experience in those states, and I haven't trained with any of those people. My experience is training with folks on the other side of the spectrum who draw their inspiration from the Pali suttas, and this is Leigh Brasington, this is the TWIM community, Delson Armstrong, and some of the other teachers that I mentioned I trained with earlier, and also Rob Burbea. We actually think of these three traditions being the traditions that we have drawn most of our inspiration from at Jhourney. The reason that we're so excited about this side of the spectrum is because they're accessible. We actually don't really have an opinion in the so-called jhana wars about what constitutes a jhana. What we think is just fascinating here is that there's clearly a community of people practicing states that they're able to learn to enter into relatively quickly, the accessibility component, that have profound implications for their well-being. There are still peak states. They talk about them as being as blissful and as dramatic as being on an MDMA psychotherapy journey. They talk about it as having some of the other cascading effects that I was sharing in my own experience earlier. And so this notion that, whoa, there's a group of people over here, they're using shared language to enter into these profound states that have not yet been scaled, that's the thing that's so exciting. So certainly identify as on the lighter end of the overall jhana war spectrum, and also not wanting to lay claims as to what strictly constitutes a jhana. We are using the term jhana because the communities of practice that we were first collecting data from and working the most closely with are using that term jhana. So we had to, you know, it made the most sense. Maybe there's a world in which we dropped the term jhana altogether, and I wouldn't be terribly surprised if that comes to pass. On our retreats, the way we basically define jhana is if someone is sharing in their interview that they are experiencing phenomenology that pattern matches to the hundreds of interviews that we've done, and they say something to the effect like, you know, this is as blissful of an experience or the best experience that I would have in many months or more. And about 70% say six months or more. Everybody says something like two to three months or more."
+        },
+        {
+            "start": "00:20:38",
+            "end": "00:20:47",
+            "speaker": "Michael Taft",
+            "text": "And so if it matches the qualities and the person also describes it as being the best state they've had in a while, then for you, that counts."
+        },
+        {
+            "start": "00:20:48",
+            "end": "00:20:48",
+            "speaker": "Stephen Zerfas",
+            "text": "That's right."
+        },
+        {
+            "start": "00:20:48",
+            "end": "00:21:00",
+            "speaker": "Michael Taft",
+            "text": "And interestingly, you were talking about whether to even use the term jhana or not. I can see why you came from that place initially, the story of how it came together. This is a personal question. Are you a Buddhist?"
+        },
+        {
+            "start": "00:21:01",
+            "end": "00:21:02",
+            "speaker": "Stephen Zerfas",
+            "text": "What do you mean by that?"
+        },
+        {
+            "start": "00:21:02",
+            "end": "00:21:11",
+            "speaker": "Michael Taft",
+            "text": "I think I mean it in the sense of, are you a Christian or are you a practicing Jew or are you a Buddhist? You know, do you have a religious affiliation with Buddhism?"
+        },
+        {
+            "start": "00:21:13",
+            "end": "00:22:03",
+            "speaker": "Stephen Zerfas",
+            "text": "Yeah. I would say I don't identify as having like a religious community. It's not like I go to a Buddhist Sangha, like the way a Christian goes to church. I am so unbelievably grateful for the psychotech that has been made accessible in Buddhist and actually other contemplative communities and circles. And so on the one hand, I feel like, yes, but I would also say like, I'm a Christian and I'm a grateful Christian. And some folks were like, well, you can't be both. On the other hand, I would say I don't have a relationship with the Buddhist community the way that most Christians do with church. The label Buddhist doesn't mean a whole lot to me, but I absolutely love the tech and what it can do for well-being."
+        },
+        {
+            "start": "00:22:03",
+            "end": "00:22:54",
+            "speaker": "Michael Taft",
+            "text": "Still, you know, this material, as you say, the tech, the jhanas, at least according to Buddhist history, these actually came from teachers before the Buddha, he learned them from others, but his formulation of them is unique. And so we could say this is, to put it in kind of the tech speak you're used to, this is Buddhist IP, you know. And it's like, I can just imagine, let's say, a religious Buddhist who was born in a Buddhist country and raised in a very traditional manner. How would you feel like they're like, oh, hey, what are you doing, Stephen? And you're like, hey, I'm secularizing this and scaling it and I'm charging money for it. And I mean, this is just a very theoretical question. But how do you feel about that? How would you feel if someone was like, I'm taking the Jesus technology and secularizing it and going to turn it into a business?"
+        },
+        {
+            "start": "00:22:54",
+            "end": "00:25:48",
+            "speaker": "Stephen Zerfas",
+            "text": "Yeah, the conversation doesn't seem super intimidating. It actually seems really interesting. It would be one in which I'm sure we would have a ton of similar interests and I would love to ask them a bunch of questions and learn from them. I also don't, I'm not terribly worried that there's anything we're doing here that's going to be something that they find amoral or unethical, like somehow against their deepest values. If we really look and inquire into those deepest values, if the reason they're Buddhist is to end suffering, then the conversation is, what is the best way to end suffering? And if you have a tool that works, usually scaling it is an important part of that puzzle. If they have other ideas, then that would be a fascinating part of the conversation. If the reason you're Buddhist is instead because you take particular pride in your tribe or in your people, there's like a beauty and wonder to that. And I can certainly think of the communities I've been a part of and grateful to be a part of. And there's so much like wonderful attention that can be drawn to the incredible teachers and people that have carried these tools forward. You know, the fact that we're able to refer our students, our alumni who are interested in more traditional spiritual or metaphysical training to the teachers that provided such important feedback. We had eight teachers come and give a very deliberate and intentional and repetition feedback for us when we were building our earliest retreat versions. And we can now refer folks to those teachers. And so there's a way here in which what we're doing, I think, can even draw more credibility and attention and appreciation to some of the great tribes that have come before us. If the question, I think, on the other hand, is like whether or not it's labeled as Buddhist and whether or not somebody has been anointed in the right way in order to be able to scale this, that's where I think we begin to start having differences in worldviews. And it's like, you know, I think the labels, particularly when we get into moralism and should, start to become violent. And I'm much more interested in finding ways of eliminating suffering or reducing suffering and finding a way to like pull my own heart open even more compassionately through what I perceive to be right livelihood than I am drawing fine lines in the sand about what should and should not be done with respect to who can and receive these kinds of instructions or these kinds of techniques. And maybe there's a final piece here, which is about like IP versus discovery. Like you can claim IP for an invention but you can't for discovery in legal terms. And like if these are natural human states that the Christian mystics and the Sufis and the Hindus, under the term dhyana, have found and scaled in their own ways over like time and space, then I'm not sure that the Buddhists have exclusive claim to these tools. While I certainly will say that I have found the most compelling, precise, and accurate or like specific instruction in some of the Buddhist circles so far, it certainly seems that these states have tremendous overlap with other communities as well."
+        },
+        {
+            "start": "00:25:48",
+            "end": "00:26:04",
+            "speaker": "Michael Taft",
+            "text": "Yeah. And so do you feel that there's any problem at all with using Buddhist terms and in a way kind of leveraging the reputation of Buddhism and Buddhist meditation to do this, even though you don't yourself feel like a Buddhist?"
+        },
+        {
+            "start": "00:26:04",
+            "end": "00:27:17",
+            "speaker": "Stephen Zerfas",
+            "text": "No, I do see why there can be like an indignation or like a fear of appropriation with with this kind of thing, but I think that's one way of looking at this. The other way of looking at it is like, hold on here, like there was someone, the Buddha, some millennia ago who discovered an incredible technique, an incredible technology by which to absolutely transform well-being and made it his life's work to find a way to take this to scale and share it with others. And since then, there have been a huge long line of incredible people that have dedicated their lives to building on and scaling that technique. And that's the important thing, that they built on and scaled that technique to find ways to share that and alleviate and reduce suffering. And it's the like scale and compassion that is like where the most exciting, most human stuff is at play. And so that's, I think, my biggest reaction to the question. If I fell in love with the San Francisco Zen Center and began going there regularly, the belonging to the community in my mind is sort of like a somewhat arbitrary thing relative to like attempting to scale the alleviation of suffering."
+        },
+        {
+            "start": "00:27:17",
+            "end": "00:27:40",
+            "speaker": "Michael Taft",
+            "text": "Okay. Again, you're really fond of talking about scaling the capacity for people to, or the number of people who can do jhanas. So let's talk about that. The Atlantic article, which does seem like they weren't being entirely fair to you, it didn't present you in a neutral light even. Would you say that the way that they presented you as not really knowing if it would work at all yet is accurate?"
+        },
+        {
+            "start": "00:27:40",
+            "end": "00:32:02",
+            "speaker": "Stephen Zerfas",
+            "text": "I think we have lots of evidence that in some ways already working. There's sort of a couple different ways to think about this. And by this here, I mean like taking the jhanas to scale. One is their secularization. The other is using tech of various forms, ranging from low-tech stuff like modern pedagogy to higher-tech stuff like biosensors and biofeedback to take things to scale. I'm super optimistic across the board, and I think we have evidence to be optimistic across the board. First, on the secularization, arguably TM saw like millions more scale with Herbert Benson's book on secularizing TM meditation. And arguably, Hatha Yoga and Advaita Vedanta and Zen saw the tens or hundreds of millions more scale with the secularization that Jon Kabat-Zinn rolled insights from many of those traditions into one when he created mindfulness-based stress reduction. And in some ways contributed to laying the foundation for the modern mindfulness movement as we know it today. The jhanas just haven't gone through that process yet. Going through the secularization, adapting it into terms that folks in a different time and a different place are maximally receptive to, and then applying the novel tools that we have today, ranging from the way we run clinical studies to really parse out and isolate the differences and the effects that these might have on different forms of mental health. These kinds of things could all be applied to the jhanas in a way that could take this to unprecedented scale. And I think in the process, it'd be a really, really exciting win for those who already practice the jhanas and who are looking to sort of evangelize and share some of the value of these states and the related intellectual frameworks for understanding the sort of insight pathways that open up when you're practicing this kind of stuff. And then, you know, what it's all about at the end of the day is alleviating and reducing or attempting to end suffering. And all the folks who don't currently have jhana access but could, if we were to find a way to scale it in the modern environment, I think that would just be an overwhelming win. On the tech side, ranging from modern technology all the way to biosensors, the modern pedagogy stuff, tons of low-hanging fruit there, stuff that I think just hasn't been tried, and that's what we're iterating on in our current retreats to see if there are novel ways that we can pull what we call top-down, bottoms-up, and community levers to help folks get into jhana faster. And then on the biosensor side, really specifically cracking open this hard-to-verify puzzle, the most important person to convince when you want to set out to build something is yourself. And when we raised the money and we built the team together, that was a point in time where we're like, this is cool. This is like a huge deal if true. There is a relatively small probability that we're going to be able to get this to work. But if so, it is absolutely massive. That is a power law bet that I would bet my career on. And so I did. Then six months in, when we had collected what we think is the largest data set in the world, over 100 hours of 30 subjects and moving through the jhanas, expert meditators, that was when we started seeing our ML algorithms hit above chance classification accuracy. And that was when we were looking at the data and we're like, holy cow, this is the zero to one moment. Like, this is very much a tractable problem. There was lots of reasons to believe that that was going to be the case. Jud Brewer's work with the PCC had already shown that you could use neurofeedback to arguably teach a novice to imitate a master's brainwaves in under 20 minutes, under an hour, on certain dimensions. The literature for neurofeedback is, in my mind, very hit or miss. It's not great. There's a bit more of a history here, but I largely think of three bright spots in the literature. Christopher deCharms's work on chronic pain, Jud Brewer's work on neurofeedback for advanced meditation, in my mind, are some of the biggest bright spots in neurofeedback. So these had already existed, but the fact that we now thought we could begin to classify the jhanas substantially above chance seemed to be like the zero to one moment of like, okay, we think this is going to work here too. We actually then began running retreats to increase the R&D pipeline. We knew we were going to need a lot of novice data, and so we actually just set out to run retreats not to teach them directly first, but to continue to follow down the R&D path. And the retreats ended up being a whole lot more successful than we expected. And so for the last nine months we've most of our resources. We've continued some tech stuff on the side, but it's been putting these retreats into place so that we can constantly churn out new jhana meditators and then gradually layer on tech over time."
+        },
+        {
+            "start": "00:31:57",
+            "end": "00:32:13",
+            "speaker": "Michael Taft",
+            "text": "So currently, if I were to go to a Jhourney retreat, there's not headsets being worn and EEGs happening, correct? It's straight up teaching people jhanas more or less the old-fashioned way, or is that not correct?"
+        },
+        {
+            "start": "00:32:13",
+            "end": "00:33:08",
+            "speaker": "Stephen Zerfas",
+            "text": "That's correct. The irony is that it's been about a year since we had our last headset retreat because those retreats we were collecting data from experts. We're now in a new chapter where we have data from experts, but we also need a lot of data from novices, and collecting data from novices is difficult. It's a lot less certain. It's also much more time intensive because it's like, when is this novice going to be in jhana? And like, who wants to spend hours under your equipment? And how the heck are you going to manage that? All these additional problems become an important part of the puzzle. And so it doesn't make sense to be investing heavily in novice jhana data collection until you can replicably and I think reliably pump out novice jhana experiences. And we're now at a point where we may be there, but then it raises interesting questions about, okay, how do you allocate resources? And when are you going to sequence the next step of the R&D? And do you want to raise yourself from 50 throughput a month to 100 throughput a month and then use it to funnel R&D and these kinds of things? And so those are all live questions for us right now."
+        },
+        {
+            "start": "00:33:08",
+            "end": "00:33:38",
+            "speaker": "Michael Taft",
+            "text": "And to what extent have you seen the jhana retreats that you're running be successful? You're using terms like churn out jhana meditators and stuff, but just in the sense of like there being more people experiencing either the jhanas or a very helpful meditative state, very positive, beautiful meditative state. To what extent have the retreats been actually achieving that?"
+        },
+        {
+            "start": "00:33:38",
+            "end": "00:34:21",
+            "speaker": "Stephen Zerfas",
+            "text": "Yeah. So we are, I think, running our 11th retreat this week, and we're still seeing consistently about 70% of people in a given retreat enter jhana. There's certainly variation in that number across retreats. There's also a new model that we're doing, a work-compatible retreat. And so rather than taking a week off to come meditate with us, you take off maybe two Fridays in a row, and then you meditate with us online Friday, Saturday, Sunday. You meditate with us before and after work during the work week, and then you meditate again with us Friday, Saturday, Sunday. And so it's like six full days on retreat, but it's also integrated into the real world. And the success rates on that, we don't have enough data yet to know if that's working as worse or better than the more traditional model."
+        },
+        {
+            "start": "00:34:23",
+            "end": "00:34:30",
+            "speaker": "Michael Taft",
+            "text": "Have you done any follow-up studies with people who got into jhana on the retreats to see whether that is continuing over time for them?"
+        },
+        {
+            "start": "00:34:31",
+            "end": "00:35:11",
+            "speaker": "Stephen Zerfas",
+            "text": "I talked to nine of our alumni today from a retreat that ended three weeks ago, and the folks who had deterministic access can still get into these states. Some of the folks did not have deterministic access by the time they left. They may have had some jhana experiences, but they weren't able to reliably replicate. For those folks, none of them, to my knowledge, have cracked the jhanas deterministically open on their own yet. All of these folks, I think, are still grappling with typical integration stuff, which is like the depth of meditation just doesn't have the same nature as a retreat container or building the habit or life gets in the way and some of all these things are still at play. We are starting to follow up with our alumni much more thoroughly than we have in the past. We haven't done a ton of it until recently."
+        },
+        {
+            "start": "00:35:11",
+            "end": "00:35:38",
+            "speaker": "Michael Taft",
+            "text": "What's really coming up for me is a curiosity about what you've seen as a new way of looking at this practice that has actually helped the retreats be more successful. What's new here? You're not actually using the EEG data or feedback in the retreats currently. What is new or different in what you're doing."
+        },
+        {
+            "start": "00:35:38",
+            "end": "00:38:05",
+            "speaker": "Stephen Zerfas",
+            "text": "Yeah. So existing jhana teachers are wonderful. A big part of this is just the fact that people either don't believe they exist or haven't taken the effort to try to learn them themselves. Or there can often be an effect where if you grow up in a different part of the meditation landscape, you may very well have to unlearn certain habits in order to meditate into certain parts of the jhanas. And so that can create a little bit of friction. But I want to be clear that I don't think what we're doing is like fixing some mistake that existing jhana teachers are doing. On the contrary, we're just blown away by how fantastic folks like Rob Burbea and the TWIM community and Leigh Brasington have carried the torch and are attempting to make our contribution to that as well. That being said, we do do a number of things that are probably unique. I'll just rattle off a few things. So the first is on our teaching philosophy, we talk a lot about agency through experimentation rather than dogma or gurus. We talk about the map is not the territory. We talk about the importance of play, curiosity, and self-compassion as being like absolutely fundamental mindsets to be engaging in meditation. If you don't have playfulness, curiosity, or self-compassion, we don't expect you to make basically any progress. And we lean hard into this idea of like come for the bliss, but stay for the personal growth. We then sort of tactically as a teaching team, think about three different sort of categories of things that we can lean into on retreat in order to change somebody's experience. And this is the top-down, bottoms-up, and community framework that I mentioned earlier. Top-down is about how do we build the best possible meditation pedagogy? This is cutting across insights from multiple traditions. This is using modern pedagogy tools about peer-to-peer sharing and structured reflection, maybe spaced repetition, like all kinds of stuff. You name it, we want to think about it and see if we can apply it. The bottoms up stuff is what can we do pre-meditation to move the nervous system closer to the attractor basins of these states? Can we take advantage of yoga or breath work or cold plunges, exercise, positive psychology exercises like gratitude letters to prime you before you even begin? And then community has to do with both learning from one another and the overall sort of like vibe or field or like sense of togetherness. There can be a powerful effect when you feel that you're in a group of friends versus you're in a group of strangers. And the extent to which we can create that on retreat, we think can contribute to the probability that anybody's going to enter into one of these states."
+        },
+        {
+            "start": "00:38:05",
+            "end": "00:38:23",
+            "speaker": "Michael Taft",
+            "text": "So you're presenting these as all fascinating possibilities, which they are. But my question is, have you seen any of them really look like, oh, this actually does make a huge difference, this particular one, especially in the bottom-up category?"
+        },
+        {
+            "start": "00:38:23",
+            "end": "00:39:34",
+            "speaker": "Stephen Zerfas",
+            "text": "So the problem is we have taken like a really pragmatic approach as opposed to like a very slow and rigorous approach on our retreat. Our sense is that like creating a sense of fun, relaxed, like positive social dynamics very early on is a high order bit. Our sense that emphasizing collectedness rather than concentration, and collectedness particularly via relaxation and then like and curiosity, is a higher bit. And I think we also feel pretty strongly about like experimentation not dogma and experience sharing. And so on our retreats, for example, rather than saying this is what the jhanas are, we will offer a number of different accounts. Like multiple instructors will share their personal experience, maybe some of our alumni will chime in as well, and we'll draw up a number of analogies and metaphors and intentionally give a somewhat broad sweep through the experience as opposed to dictating this is exactly what it's going to feel like. And then tell people, hey, you're the captain of your own ship. It's now time for you to figure out which of these pointers is going to gel best with your intuition and your particular background and chart your course from here."
+        },
+        {
+            "start": "00:39:34",
+            "end": "00:39:41",
+            "speaker": "Michael Taft",
+            "text": "Very good. What's your biggest vision for this being successful? What does this look like if it really works?"
+        },
+        {
+            "start": "00:39:41",
+            "end": "00:41:33",
+            "speaker": "Stephen Zerfas",
+            "text": "Yeah. So we dream of a world of tens of millions of people in jhanas. I think a hundred plus million is entirely doable. In order for that to happen, two huge things need to change. One is awareness and two is accessibility. Awareness is a problem we've existence proof, like we've already seen like mindfulness has reached hundreds of millions of people in the last couple of decades, thanks to changes in awareness. And multiple companies are sharing mindfulness with tens of millions of people, maybe daily, certainly monthly. So I think it's entirely possible that you could see the secularization of jhanas play out in a somewhat similar way, especially because their effects are just so huge. Mindfulness has a reputation for being incremental and a little challenging, maybe sometimes boring. But if you crack a jhana, it is not incremental, and it is no longer boring. And so there's some things that I think really play in our favor on that front. You know, getting over the activation energy, really cracking into the jhanas. I think we're seeing 70% success on week-long retreats, somewhere between probably 25 to 40 hours of practice. We actually do a little better with novices than with experienced meditators. We think because people have to unlearn habits so they don't realize they have to unlearn. In order to get to hundreds of millions or even tens of millions of people, I think you've got to get this down to something like under 10 hours. And it's possible you can get it down with like incredibly tight pedagogy. But this is where I think the tech is going to make a huge difference. And so getting the biofeedback dialed in to the point where you can accurately detect jhanas, you can rule out false positives, and you can provide a really positive closed loop experience where meditation has become easy to verify instead of hard to verify. Those are all really tough technical problems and stuff I feel really good about being something we can solve on the order of the next several years, but there are big open questions there."
+        },
+        {
+            "start": "00:41:33",
+            "end": "00:41:38",
+            "speaker": "Michael Taft",
+            "text": "Thanks, Stephen. I really appreciate you coming for the interview today."
+        },
+        {
+            "start": "00:41:38",
+            "end": "00:41:40",
+            "speaker": "Stephen Zerfas",
+            "text": "Sure thing, Michael. Thanks for having me."
+        },
+        {
+            "start": "00:41:40",
+            "end": "00:42:01",
+            "speaker": "Michael Taft",
+            "text": "That's it for this episode of Deconstructing Yourself."
+        }
+    ]
+}

@@ -1,0 +1,673 @@
+{
+    "title": "Talking with People about Things, with David McRaney",
+    "url": "https://deconstructingyourself.com/talking-with-people-about-things-with-david-mcraney.html",
+    "guest": "David McRaney",
+    "transcript": [
+        {
+            "start": "00:00:00",
+            "end": "00:01:55",
+            "speaker": "Michael Taft",
+            "text": "Welcome to Deconstructing Yourself, the podcast for metamodern mutants interested in meditation, hardcore dharma, unfindability, neuroscience, Inuyasha and Kagome, awakening, Vajrayana, and much, much more. My name is Michael Taft, your host on the podcast, and in this episode I'm speaking with science journalist, author, podcaster, and lecturer David McRaney. David McRaney began a blog about the psychology of reasoning in 2009. That blog became an internationally best-selling book entitled You Are Not So Smart. His follow-up book was You Are Now Less Dumb, and his third book, How Minds Change, all about how people do and do not update their beliefs and attitudes as individuals and cultures, will be published later this year. David currently hosts a bi-weekly Top 100 podcast about human judgment and decision making, and travels around the planet giving lectures on the topics he covers in his books, blog, and podcast. He's currently working on a documentary about IQ and genius, and a television show about how to better predict the impact of technological disruption. And now, without further ado, I give you my talk with David McRaney."
+        },
+        {
+            "start": "00:01:55",
+            "end": "00:01:59",
+            "speaker": "Michael Taft",
+            "text": "David, welcome to the Deconstructing Yourself podcast."
+        },
+        {
+            "start": "00:01:59",
+            "end": "00:02:06",
+            "speaker": "David McRaney",
+            "text": "Oh man, thank you so much. As I was just saying before we hit the record button, I miss you, man. And it's great to hear from you again. It's great to hang out again."
+        },
+        {
+            "start": "00:02:06",
+            "end": "00:02:14",
+            "speaker": "Michael Taft",
+            "text": "I miss you too. I remember meeting you at the Being Human conference that we had here in San Francisco, and that must have been around 2012 or something."
+        },
+        {
+            "start": "00:02:14",
+            "end": "00:02:22",
+            "speaker": "David McRaney",
+            "text": "Yeah, it was so cool. I got to hang out with Peter Baumann, and he was just the most beautifully eccentric human being. It was really great times."
+        },
+        {
+            "start": "00:02:22",
+            "end": "00:02:27",
+            "speaker": "Michael Taft",
+            "text": "Peter Baumann, yeah. His music is the music featured on this podcast. That's our theme music, is from Peter."
+        },
+        {
+            "start": "00:02:27",
+            "end": "00:02:28",
+            "speaker": "David McRaney",
+            "text": "Oh, that's so cool."
+        },
+        {
+            "start": "00:02:28",
+            "end": "00:02:34",
+            "speaker": "Michael Taft",
+            "text": "Yeah. And then, of course, our mutual friend, Lindsay Stark, was there as well."
+        },
+        {
+            "start": "00:02:34",
+            "end": "00:02:44",
+            "speaker": "David McRaney",
+            "text": "I love Lindsay so much. I've loved keeping up with her evolution into becoming a forest witch. Very, very fascinating. She's so cool. I love her so much."
+        },
+        {
+            "start": "00:02:44",
+            "end": "00:02:57",
+            "speaker": "Michael Taft",
+            "text": "Yeah, me too. And then there was in 2015 when I published The Mindful Geek. There was an interesting moment there where you had a meditation teacher on your hyper-skeptical podcast."
+        },
+        {
+            "start": "00:02:57",
+            "end": "00:03:20",
+            "speaker": "David McRaney",
+            "text": "Yeah, I enjoyed that episode. A lot of my audience are big-S skeptics, or they're in the big-A atheist community. And I've gone out to Austin a few times and hung out with them. And I go on some of their shows every once in a while. The Venn diagram doesn't fully overlap, and I often attempt to bring them into a more introspective frame. So I like to feel that I can move between these worlds with ease."
+        },
+        {
+            "start": "00:03:20",
+            "end": "00:03:25",
+            "speaker": "Michael Taft",
+            "text": "Yeah, and it seems like you do, although you also get a lot of flack for it, as far as I could tell."
+        },
+        {
+            "start": "00:03:25",
+            "end": "00:04:02",
+            "speaker": "David McRaney",
+            "text": "Yeah, my whole mission is to push those people, or put my finger in the chest of people who give me flack in that way. Because this is all about metacognition and thinking about thinking, and what does it mean to be a scoop of the ocean that got plopped on the land one day and then got sad? So I want to understand that deeply, and that means that all bets are off. As a science journalist, I move in the direction of evidence-based research. We're talking about how brains generate minds, and we're at the very, very, very beginning of a more than 1,000 years worth of science endeavor in that regard. So I like to hang out with as many different people as I can who are thinking deeply about these sorts of things."
+        },
+        {
+            "start": "00:04:02",
+            "end": "00:05:14",
+            "speaker": "Michael Taft",
+            "text": "Even though I follow your podcast and your books and all that very closely, because it's fascinating, lately, of course, you've been putting some stuff out there to help people navigate the post-, you know, insurrection scene in the U.S., which is so unbelievably complex and fascinating. And on the show here, I've had guys like Erik Davis, you know, good friend of mine, brilliant cultural critic who has been reporting on, for example, conspiracy theories forever, since the 90s at least. And, you know, he's been tracking the Q phenomenon and talking about it intelligently and so on. And when I saw your most recent post, I was like, oh my God, this could not be a better moment to talk to David McRaney about what's going on and how we can understand it. And also, I mean, I think that your themes of what is cognition, what is a human brain, you know, what does it even mean to be human in a way, like going back to the Being Human conference, really along this show and with my listeners as well. So, let's just dive right in and say, talk to me about what's going on here."
+        },
+        {
+            "start": "00:05:14",
+            "end": "00:05:43",
+            "speaker": "David McRaney",
+            "text": "What's happening? Okay. So, to preface this, I've spent the last five years working on a new book about how people do and do not change their minds. And it sort of follows three themes. One is how brains even come to form their models of reality. Then the second part of it is how it changes not just through experiences but through persuasion and bringing information in from other human perspectives, and then how all that scales up to social change."
+        },
+        {
+            "start": "00:05:43",
+            "end": "00:06:11",
+            "speaker": "Michael Taft",
+            "text": "And I just want to interject here and say it's really interesting, because if you read, for example — the main thrust of this podcast is meditation and awakening in a mainly Buddhist framework, and if you get into the philosophy, even beyond the mini, or just the very beginning of any of the philosophical stuff in that tradition, it's all about what is a valid source of knowledge? How can we know anything at all? I mean, it's immediately into the same territory. It's very fascinating. So that's just a sidebar."
+        },
+        {
+            "start": "00:06:11",
+            "end": "00:07:19",
+            "speaker": "David McRaney",
+            "text": "No, that's great. I did not expect it to take this long to write this book, but partially it took longer because a lot of things started happening in the world, like what just happened recently in the Capitol. And it was apparent that I needed to understand that and it had to be incorporated into the story. And the other thing is that unlike my previous work, this was a very on-the-ground reporting book. It's more akin to something like Jon Ronson would do, where you ride along with me as I spend time with a variety of conspiracy theory communities. I spend time with flat earthers. I spend time with 9/11 truthers, anti-vaxxers. I went out before COVID. I would spend weeks with different people, different groups, people who were still in, people who just left. I also spent time with activist communities who go door-to-door persuading people, or they have developed techniques for interacting with people one-on-one. Lots of different sciences who study all these things. I'd also spent time with people who had lived in cults and escaped cults and people who deprogrammed. I'm right there with you. You see me interviewing people, or you read as I'm interviewing people, or you read as I'm learning the topic. It doesn't start with an authoritative voice. It builds up to an authoritative voice about midway through as I, like, figure everything out. And so I just learned a lot."
+        },
+        {
+            "start": "00:07:19",
+            "end": "00:07:21",
+            "speaker": "Michael Taft",
+            "text": "So fascinating. What's the name of the book?"
+        },
+        {
+            "start": "00:07:21",
+            "end": "00:07:22",
+            "speaker": "David McRaney",
+            "text": "It can be How Minds Change."
+        },
+        {
+            "start": "00:07:22",
+            "end": "00:07:23",
+            "speaker": "Michael Taft",
+            "text": "How Minds Change?"
+        },
+        {
+            "start": "00:07:23",
+            "end": "00:08:01",
+            "speaker": "David McRaney",
+            "text": "Yeah. And I would feel like it wasn't really until the last maybe year or year and a half that I felt like I really totally do understand this. If you asked me to stand up in front of an audience and give a lecture, I wouldn't need notes at this point, because I've just sort of become absolutely obsessed. And when I saw what happened at the Capitol, I just felt like that's when I put up that long thread on Twitter. I was like, I understand this from top to bottom and here's exactly what happened. And I got a lot of traction because of it. And it was also me saying like, here's the whole book kind of in short form. So yeah, we can talk about that in any which way you want. I'm more into this than anything I've ever been into in my life, understanding how we update our models of reality, how we build them, and how we also resist doing that and so on."
+        },
+        {
+            "start": "00:08:01",
+            "end": "00:08:05",
+            "speaker": "Michael Taft",
+            "text": "The thing that grabbed my attention was you were talking about the difference between a topic conversation and a technique, I think you called it, conversation?"
+        },
+        {
+            "start": "00:08:05",
+            "end": "00:08:09",
+            "speaker": "David McRaney",
+            "text": "Yeah, it's called topic rebuttal versus technique rebuttal."
+        },
+        {
+            "start": "00:08:09",
+            "end": "00:08:33",
+            "speaker": "Michael Taft",
+            "text": "Yeah, and the scenario is that you're trying to talk with your QAnon-believing relative or whatever, and how do you work with that? At least in my mind, because I have such relatives. And so to me, I was like, okay, how does this work? And so I'll leave it to you to unpack that. But I read it and I was like, this is pure genius."
+        },
+        {
+            "start": "00:08:33",
+            "end": "00:09:22",
+            "speaker": "David McRaney",
+            "text": "Oh, great. Thank you. It took a long time to get my head around it. I like to start foundationally and move up. I really actually like to start at the level of neurons and move up to the world of abstractions and ideas. If you're going to engage with another person, another human brain, and you have a different perspective than them, the first thing I would ask is, what is the mental construct that we're dealing with? We could divide that into a thousand different terms, and you pick a different scientific discipline and they'll use different terms, and sometimes those terms aren't even close to defined. And I've spent time with a psychologist who studied belief, and I remember asking, like, just getting started here, could you define belief for me? And they just lean back in their chair and go, whoo, that is a tough one. Like, you've been studying this for 40 years. And, like, exactly, that's why it's so hard to give you an answer."
+        },
+        {
+            "start": "00:09:22",
+            "end": "00:10:43",
+            "speaker": "David McRaney",
+            "text": "But I do break it down in the book to beliefs, attitudes, and values. And there are many more things we could subdivide that into, and other things we can pull in like norms and such. But a belief is an estimation of, you know, whether or not something is or is not true. And an attitude is an estimation of, something is or is not good — it's good or bad, or positive or negative, and it's a valenced emotional estimation of something. And then a value is sort of combining those into what is worth your time, what are things that should be goal-oriented, and how should we make our plans, and how should we hierarchically stack our concerns. And these are all things that we are constantly engaged in conversation and deliberation with others about, to sort out what is and is not true, what is and is not the shared worldview, the model of reality that we can work together on, the sort of the terms we've agreed upon. And things come along, you know, you have people who — someone you know may think that the moon landing was a hoax, or the vaccines cause autism, and that very much feels like it's in the realm of belief, where you're trying to get the other person to take an estimation of truth, and you're trying to build their confidence or lower their confidence in a statement of truth. But you learn very quickly that attitudes are inseparable from it, because a lot of estimations of the truth are driven, are motivated by attitudes. So before I get too far out there, I'll go back to the beginning."
+        },
+        {
+            "start": "00:10:43",
+            "end": "00:11:19",
+            "speaker": "David McRaney",
+            "text": "The thing I talk about in the beginning of the book is the dress. If you remember the dress. What color is this dress? What color is this dress? And I actually got to see the real dress, touch the real dress. They did not let me wear it. I did ask if I could put it on just to take a picture with it, but they were like, please don't destroy the dress, it's very valuable to us. And I went to NYU and spent time with the researchers who have actually figured out why it was that people saw it differently. And it's very important for this conversation. If you remember the dress — for people who don't remember it, I have not spoken to anyone who doesn't, but some people, when they saw this image, it was black and blue. And some people, when they saw the image, it was white and gold. And there was nothing you could do about it. That's how it looked to you."
+        },
+        {
+            "start": "00:11:19",
+            "end": "00:12:02",
+            "speaker": "David McRaney",
+            "text": "That was the way your brain resolved it as an image and consciousness. And other people did it differently. And the scientific term for it is disambiguation. But what made this image so special was that it was very rare. There are all sorts of images that float around in neuroscience, like the duck-rabbit, and like the vase where it looks like two faces or a vase, and those are called bistable visual illusions — bistable in that the brain sees an image that's ambiguous and then it disambiguates it into either one thing or another, either the rabbit or the duck, or the vase or the silhouettes. That's interpersonally bistable."
+        },
+        {
+            "start": "00:12:02",
+            "end": "00:13:05",
+            "speaker": "David McRaney",
+            "text": "What makes the dress so unique was that it was cross-personally bistable, like different brains disambiguated it differently. And the researchers, being neuroscientists, they hypothesized that it must be because they'd had something happen to that brain leading up to that moment that was different from what had happened to other brains leading up to that moment. And the term for that, I'm sure your listeners are familiar with it, are in a lot of domains, is priors. And they had somehow had different visual priors. And long story short of it is, they figured out what it was: the lighting in the image was ambiguous, and when brains took in that novel information, it was ambiguous as to whether or not it was lit with sunlight or artificial light, and a person who had had more life experiences in the presence of sunlight disambiguated it one way, and people who had more life experiences with artificial light disambiguated it the other."
+        },
+        {
+            "start": "00:13:05",
+            "end": "00:13:30",
+            "speaker": "David McRaney",
+            "text": "And that combined with another effect called color constancy, where when we are in low lighting conditions, the brain will turn up the contrast of certain objects so that a green sweater will always look green, even really in low dim light. And to make it look green, it will do like a little Photoshopping. It will turn up the contrast. It'll add a little red to the image. And that's what was happening with them. Different brains were adding different levels of contrast and different levels of yellow to that image, and it would resolve as to blue and black for some people and yellow and gold for the others."
+        },
+        {
+            "start": "00:13:30",
+            "end": "00:14:27",
+            "speaker": "David McRaney",
+            "text": "So I write about that to demonstrate that reality itself is virtual, and that the brain is locked in the skull and brings in sensory information and then resolves it into perception. And that perception is a construction. It is absolutely an illusion. It is a waking dream, and that waking dream is built from all the experiences that brain has had up to that point. So when we engage with novel information, it must be disambiguated through the lens of our priors, and different people will come to different perceptual conclusions. If you add to that the many other dimensions that influence the way we resolve ambiguities, like social costs and motivations and drives and the things that we are pressured to do and not do, cultural concerns, you can have very different disambiguations of novel information."
+        },
+        {
+            "start": "00:14:27",
+            "end": "00:15:15",
+            "speaker": "David McRaney",
+            "text": "So the next level up from that is, our cognition is motivated. So with conspiracy theories like QAnon, with what happened at the Capitol, where you have people who are motivated to reach conclusions, and the goal they're going toward is not accuracy — since we're social primates, we pursue belonging goals above accuracy goals at all times. If we can combine them, that's great. Institutions like science, for example — it seems as if scientists are more motivated by accuracy than belonging, but they achieve their belonging goal by signaling to their fellow scientists that they are good accuracy seekers. So the two play nice with one another. The result is they get to do science without being ostracized."
+        },
+        {
+            "start": "00:15:15",
+            "end": "00:16:06",
+            "speaker": "David McRaney",
+            "text": "And with a person who's worried about a conspiracy theory, the motivation is usually a fear of authority, a sense of powerlessness, a distrust of institutions. Those things are some mix of nature and nurture. A lot of it is baseline biological settings that they came out into the world with. Their brain was built that way. But then that's shaped. It's sharpened and flattened by life experiences and social concerns in their environment as they grow up. And you end up with someone who, when they're engaged with novel information, they do it through a lens of fear of authority, a sense of powerlessness, distrust of institutions. So that's one thing. The other thing is that we're very motivated to maintain our reputation at all times with our trusted peer group. And reputational management is at the center of our attention at all times. And you combine that stuff together, you have motivated cognition, motivated reasoning."
+        },
+        {
+            "start": "00:16:06",
+            "end": "00:17:02",
+            "speaker": "David McRaney",
+            "text": "I can get into reasoning separately. It's a much longer discussion, what reasoning is, which may be fun. I think your audience would enjoy the idea that reasoning is not logic. Like, let me just say that before I go further: reasoning ain't logic. Reasoning is coming up with plausible explanations for why you feel a certain way. And certainty is a feeling. Certainty is an emotion. And when you are very certain or very uncertain about something, you engage in a process of reasoning to construct a plausible explanation for what it is that you're feeling certain or uncertain about. And plausible means that which you could defend to your trusted peer group. So that's what reasoning is. Reasoning is just coming up with reasons. Logic is a whole other thing, and it's great and it's very useful and it's a skill, and I'm very glad it was invented and it's very useful. But reasoning and logic are not the same thing. They get combined a lot, and that's just a sort of a confusion of terminology, but they're not the same thing."
+        },
+        {
+            "start": "00:17:02",
+            "end": "00:17:21",
+            "speaker": "Michael Taft",
+            "text": "You know, a couple things that are real interesting here. One is, we were talking about what is belief, and to me, in a non-scientific way, I've always maintained that a belief is a thought that you have a strong feeling about."
+        },
+        {
+            "start": "00:17:21",
+            "end": "00:18:37",
+            "speaker": "David McRaney",
+            "text": "That's absolutely right. Like one of the scientists I interviewed for the book, Robert Burton — he calls it the feeling of knowing. It's funny to me, he's like, there are no good terms for it, so I just came up with that kind of mealy-mouthed expression. And it's just certainty. Like, in his reckoning of it, there's a separate psychological module, a series of brain structures that work together to generate an emotional response in the presence of novel information, or information that you're thinking about, and deliver to you something you could quantify from, like, zero to 100, a level of certainty you have about that thing. And information that gets encoded into the brain or arrives via perception, you combine that with that feeling, and the downstream output of it is you believe it or you don't. And then you do it enough times and it becomes sort of a belief. But beliefs are not possessions. They're not like baubles on a shelf. They're not like marbles in a jar. They're not like files in a computer. Belief is a process. And every time you engage in that process, the result is the feeling of, I do or do not believe. But that happens anew each time you engage in that process. You don't go to sleep at night with a head full of beliefs. When the brain is doing the hard work of being conscious is when you're tasked with making sense of the world. That's when you go through the process of believing or not believing things."
+        },
+        {
+            "start": "00:18:37",
+            "end": "00:19:05",
+            "speaker": "David McRaney",
+            "text": "That's very useful to understand when you are thinking about persuasion, or you're thinking about education or something like that — is that you're trying to encourage that process, and encourage it to move through that process fully and introspectively and reflectively, and to bring a person into a state of metacognition so that they can, as best we can, almost observe their own process of believing. And that's really important for the work that I've been doing for the last few years."
+        },
+        {
+            "start": "00:19:05",
+            "end": "00:19:30",
+            "speaker": "Michael Taft",
+            "text": "Yeah, it's just really wild to watch, and watch it even in myself of course, that these things are not about the ideas themselves at all, or at least they're somewhere way back there it was about the ideas, but now it's just a feeling you have, and it's a strong emotional spike that you have around those words or around that set of ideas, and you're more like defending the emotion than you are the ideas."
+        },
+        {
+            "start": "00:19:30",
+            "end": "00:20:16",
+            "speaker": "David McRaney",
+            "text": "Absolutely. Someone attacks it. I put a study up today on Twitter trying to sort of prime people, because I'm going to talk about this later in the week. The way I have started everything I do was from the change blindness and choice blindness, and the famous study where they had people ask for directions. There's a person asking you for directions on a college campus, and then two people walk between you and that person carrying a big painting, and then one of the people carrying the painting switches out with the person that was asking directions, and the person who was giving directions only about half the time notices that the person they were just talking to is now a completely different human being. That's what got me into this whole career, because I was like, oh wow, I bet that's true for everything."
+        },
+        {
+            "start": "00:20:16",
+            "end": "00:20:21",
+            "speaker": "Michael Taft",
+            "text": "And reminds me of the gorilla basketball thing."
+        },
+        {
+            "start": "00:20:21",
+            "end": "00:21:44",
+            "speaker": "David McRaney",
+            "text": "Yeah, yeah, the same researchers, actually. The same researchers later did the invisible gorilla. But there's a great recent study in Sweden — Swedish researchers, they did it around the world, but they would have people fill out a survey, or they stop them on the street and ask them how they felt about certain politically charged issues like welfare and immigration and stuff like that. And they would ask them, how do you feel about this on a scale from one to 10? And as they were answering the questions, the interviewer marks the opposite on a separate piece of paper. And then when they go into the review part of it, they do a little sleight of hand and they replace their answers with the opposite. And then they ask the person, why did you answer that way? And they will dutifully defend and come up with explanations and rationalizations for the opposite of what they just expressed. Because at that point, now they're defending their reputation and their identity and their selfhood to this person. And the information they're basing that on is what's on the paper, but what they're motivated by has nothing to do with that. It has nothing to do with what the answers were. It has nothing to do with their stated opinion. It has to do now with, can I make this person feel like I'm a trustworthy individual for having an opinion at all? And it's another testament to the multiple dimensions of what takes place when you are introspecting and having some sort of metacognitive experience, exploring your own attitudes and beliefs and values with another individual."
+        },
+        {
+            "start": "00:21:44",
+            "end": "00:23:17",
+            "speaker": "Michael Taft",
+            "text": "It's reminding me of the famous prison camps during the Korean War, right? Where, in order to break the solidarity bonds between American prisoners of war — I think it was Chinese people who were running the prison camps — would have people write seemingly innocuous essays and read them aloud. And they would start with really minor topics, but you had to read it aloud in public. And eventually they'd be like, well, you can get more food if you write an essay about, you know, what might be good about communism. Not, you know, why it's better or anything, but just advantages, possible advantages. And so people would do this and read it out loud. And it was the reading out loud that was the magic part of the formula, because once they did that, they, just as you've been saying, they felt the need to defend what they had said in public. And then their further essays would get more and more virulent in defending that belief, until they were siding with the, at that point, communist enemy against their own, you know, fellows. And it's just a genius way of hacking and weaponizing this reputation defense. And recently I saw someone bringing up this historical fact and saying, and now with social media, the entire internet is an experiment in self-radicalization."
+        },
+        {
+            "start": "00:23:17",
+            "end": "00:23:18",
+            "speaker": "David McRaney",
+            "text": "Yes."
+        },
+        {
+            "start": "00:23:18",
+            "end": "00:23:20",
+            "speaker": "Michael Taft",
+            "text": "Right? So I'm just going to put that out there for you."
+        },
+        {
+            "start": "00:23:20",
+            "end": "00:23:35",
+            "speaker": "David McRaney",
+            "text": "It's 100% true. It's so important to come back to this idea that reasoning is not logic. I know that we have these cultural values around the idea of reason, you know, reason with a big R. We think of people in togas, we think of founding fathers, we think of all sorts of ideas."
+        },
+        {
+            "start": "00:23:35",
+            "end": "00:23:37",
+            "speaker": "Michael Taft",
+            "text": "The Enlightenment."
+        },
+        {
+            "start": "00:23:37",
+            "end": "00:24:41",
+            "speaker": "David McRaney",
+            "text": "Yeah, yeah. And philosophers and psychologists use that term differently. And talking about it amongst lay people, or just people who are into this, it can just become the semantic swamp of misinterpretation of what we're talking about. Research starting around 2003 really tried to cleave this concept out from the philosophical origins of it. Hugo Mercier and Dan Sperber are the two greatest researchers into this. They wrote a great book called The Enigma of Reason, where they really tried hard to present this argument and present their research. Reasoning, for the most part, is just coming up with reasons for what you think, feel, and believe. But that's not where it stops. As social creatures, we don't just do that in a vacuum. When you're in the shower coming up with what you're going to say to that person that you're angry at on Facebook, like, the reasoning behind your argument is absolutely couched in the idea that others are going to see what you're going to say. Like, you're thinking about how is it going to play on your own identity and how it's going to play on your own reputation amongst your trusted peer group. So reasoning is not just explaining yourself to yourself, it's explaining yourself to others. And you're imagining that gallery of others every time you're coming up with reasons."
+        },
+        {
+            "start": "00:24:41",
+            "end": "00:25:34",
+            "speaker": "David McRaney",
+            "text": "And that plays back with what you were saying with the essay writing with the prisoners. All the way back to the beginning of psychology, William James — he was asking how much of what we do is just an attempt to explain the observation of our own behavior. We behave and we do, and then we try to come up with an explanation for why we did that. And then that explanation becomes a narrative that we live by. It becomes the story of ourself. And he, at the very beginning, was asking how much of that narrative is fictional for the sake of creating a beautiful character to move around in a social landscape. That's still true right now with what we're talking about. And on social media, the great danger is, every time you express anything, it's another advertisement. It's another billboard for your brand as a human being. It's another stake in the ground of the ego that you're curating."
+        },
+        {
+            "start": "00:25:34",
+            "end": "00:26:43",
+            "speaker": "David McRaney",
+            "text": "And once social media — the perimeter expanded past posting pictures of babies and tacos and talking about movies and debating Star Wars and The Matrix, and it went into politics — it's so easy to become completely trapped in a loop of satisfying these social goals amongst who you imagine is the proper audience for your opinions. And if everyone doing that at the same time, every day, all day, has warped us a little bit. This is completely new. Humans have never faced such a thing ever, ever, ever. This has always been relegated — if we're doing it at all, we were doing it in coffee shops and pubs. And then we had some people who were doing it as a career, as politicians, and doing it as just everyday citizens who have lives that are completely divorced from that kind of reputational management. Now that we're all doing it, it's something that not all of us are great at. Honestly, even those of us who think we're great at it, we mess up a lot. If you ever written out a tweet or a post on Facebook and then deleted it? I urge you to ask yourself, how come? What were you afraid of? Why didn't you just put whatever you're thinking out there?"
+        },
+        {
+            "start": "00:26:43",
+            "end": "00:28:26",
+            "speaker": "David McRaney",
+            "text": "Let me back up for a second. So once we have a model of reality and we start to engage with all sorts of novelty around us, and whenever we encounter information that suggests that what we believe or what we feel or what we value might be an error, we experience what has commonly been referred to as cognitive dissonance. So it's a pretty nuanced and complex psychological, like, phenomenon, but in short it's a moment where you're like, either my model's incorrect or either the information is incorrect. And Piaget spent most of his life — even though Piaget is famous for all of his experiments showing development in children, there's just one aspect of his total mission in life, which is try to understand how knowledge is generated, right? And he put on the map the idea of assimilation and accommodation. Assimilation is when you fit novel information to your priors, and accommodation is when you update your priors to accommodate something that your model just simply can't, until you add another layer, or another strata, or another level of abstraction. You can see it in children, when you teach them what a dog is and then point at a new dog and they say dog and you're like, good. And then they see a horse and they point at it and go dog. And you're like, no, that's not a dog. That's a horse. And at that moment, they have to accommodate, they have to build another perceptual category, another level of abstraction. And the world becomes much richer and more complex in that moment. And we're doing this all the time. Like, every time we engage with information that challenges our preconceived notions, we feel that icky feeling of cognitive dissonance."
+        },
+        {
+            "start": "00:28:26",
+            "end": "00:29:36",
+            "speaker": "David McRaney",
+            "text": "It must be resolved, because it's a life or death situation, because if you need to update and you don't, you can become dangerously incorrect, and if you update when you shouldn't, you can become dangerously incorrect. So it draws all of our attention to the moment and it must be resolved, and until it's resolved we won't be able to draw our attention to anything else. It becomes the most salient thing in our environment. And in those moments, that's when the outside motivations come to play. So what happened at the Capitol? You had a lot of people, they have these strong, positive attitudes toward Republicans. They were Republicans and they were fans of Donald Trump. And they had this very strong attitude that was, it's good to be a Trump supporter. But then you see the carnage, and you see especially people disgracing something that they value. And they have another attitude that is inescapable, that these Trump supporters seem awful. They seem like bad people. So now you have these two competing attitudes that have been generated within the salient part of consciousness: it's good to be a Trump supporter; Trump supporters seem like bad people. These both can't be true, so it has to be resolved one way or the other. If it resolves in the direction of assimilation, you get to keep your model and move forward."
+        },
+        {
+            "start": "00:29:36",
+            "end": "00:29:40",
+            "speaker": "Michael Taft",
+            "text": "Antifa really did it, yeah."
+        },
+        {
+            "start": "00:29:40",
+            "end": "00:30:37",
+            "speaker": "David McRaney",
+            "text": "Yeah. If it resolves in the direction of accommodation, you have to change your mind. And to assuage that dissonance, if you can find a way to interpret the novel information so that it fits to the existing model, then the dissonance is resolved. And all that matters is that the dissonance gets resolved so you can go back to trying not to get eaten. And so that's when you create a dissonance-reducing causal narrative. And that causal narrative, like you said, is to say, oh, well, those just weren't Trump supporters. And it's so easy to get out of it. They weren't. And now you can go cherry-picking the novel information for signs that that's a good causal narrative. And so anything you can find that looks like it's evidence that that's the case puts you into the conspiratorial loop. That's what Steven Novella told me. That's what he called it. And that's any evidence of the contrary as part of the conspiracy, and any lack of evidence as part of the coverup. And that allows you to keep the causal narrative."
+        },
+        {
+            "start": "00:30:37",
+            "end": "00:31:27",
+            "speaker": "David McRaney",
+            "text": "But it traps you in a loop, because there's no way out of that. That's like a perfect logic loop. So you can't escape it through bottom-up processing. You can't escape it through turning raw sensory information to perception. It has to be changed through top-down processing, through metacognition, starting at the level of ideas and abstractions and moving down through until you get to the more granular parts of how brains make minds. And that's just — finally, and I know that's a long tangent, but that gets us all the way back to what you were talking about, technique rebuttal versus topic rebuttal, because you cannot bottom-up people if you can't start at the conclusion. I mean, the conclusion literally means that the processing has concluded and you're left with some sort of end product at the level of facts and assumptions and narratives. You're not going to get people to engage in that metacognitive process that's required for them to be persuaded."
+        },
+        {
+            "start": "00:31:27",
+            "end": "00:31:29",
+            "speaker": "Michael Taft",
+            "text": "So it hurts to think."
+        },
+        {
+            "start": "00:31:29",
+            "end": "00:32:37",
+            "speaker": "David McRaney",
+            "text": "It does, yeah. So what you need to do — these German researchers explained this to me. I actually went to Sweden and interviewed the leader of the flat earthers, after spending a lot of time with a number of organizations that use technique rebuttal. And those organizations are the deep canvassers, which are in your neck of the woods. Deep canvassers are all throughout Los Angeles and California and San Francisco. The street epistemology is more in the middle part of the country. And there's something called Smart Politics that Karen Tamerius runs. None of these organizations knew of each other, but they all use the exact same technique, which is sort of a very advanced Socratic method that applies a lot of things that have been learned through persuasion research over the last 70 years. And it also is something that you can find in therapeutic models, motivational interviewing, cognitive behavioral therapy. They all use a form of technique rebuttal. And the difference between topic rebuttal and technique rebuttal is just, instead of arguing with the person over where their processing has concluded, you help them move backwards into the processing itself, to help them sort of observe their own mind generating belief, generating an attitude, generating a value, and you work them through it."
+        },
+        {
+            "start": "00:32:37",
+            "end": "00:32:43",
+            "speaker": "Michael Taft",
+            "text": "So can you give like an example of doing one kind of rebuttal and then the other kind of rebuttal?"
+        },
+        {
+            "start": "00:32:43",
+            "end": "00:33:56",
+            "speaker": "David McRaney",
+            "text": "Well, let's say someone says, I believe vaccines cause autism, and you say, well, they don't. And they're like, yes, they do. And so you say, well... let me end discussion. Yeah. Probably most of us have an intuition that, since we're engaging that person at the level of our own conclusions, since we're engaging that person on the other side of the veil, it feels like that's where we should butt heads. So you might go to Google and get a bunch of links. You might show them some papers. You might show them some videos. You might give them some breakdowns. This is actually something that was done in research. Brendan Nyhan and his team did this. They got a group of anti-vaxxers. When I say group, I mean, we're talking about thousands of participants. And they showed them — they used four different ways of doing it. One was just text-based, another was with videos, another was with stories showing people that had experienced all sorts of things in the world of vaxxing, anti-vaxxing. And the long story short of it is, they successfully got those people to say, ah, I believe you, vaccines don't cause autism. And then they asked them, will you now vaccinate your children? They said, absolutely not. I'm now even more convinced than ever that it's too dangerous to vaccinate my kids."
+        },
+        {
+            "start": "00:33:56",
+            "end": "00:35:19",
+            "speaker": "David McRaney",
+            "text": "This has been replicated so many different ways. The first researchers into persuasion did this with common opinions during World War II, and they did it with soldiers. There've been people that have done this with capital punishment and all sorts of wedge issues. And it's also where the famous term, the backfire effect, came from. And all of these researchers are doing the same thing that a lot of us do, is we're conflating beliefs with attitudes, or conflating conclusions with attitudes. We're removing the sort of emotional aspect of what's happening. Because that person was motivated to — what that person really is experiencing is a distrust of authority that is manifested in, the state is going to hurt my child and inject a foreign thing into me from another institution that I also don't trust, which is science. So I've got government and science colluding to hurt my child with something I don't understand. That generates a visceral, strong, negative attitude toward all of that. Then when they look for a justification for that, for reasons why they feel that way, a good reason they can feel that way is because vaccines cause autism. If you take that reason away from them, they just engage in the same process again and find another reason to justify their emotions. So what you're attempting to work on here is that process, not that conclusion. And a lot of people just get frustrated at that level, because if you've ever had any argument with anyone at the level of conclusions or facts, it just doesn't work."
+        },
+        {
+            "start": "00:35:19",
+            "end": "00:35:33",
+            "speaker": "David McRaney",
+            "text": "They often get angry and upset and they get more invested in the attitude that brought them to that place. So if you want to do technique rebuttal, there are many different methods, but I've sort of combined them all into one sort of step-by-step process. Do you want to go through that? I could go through it."
+        },
+        {
+            "start": "00:35:33",
+            "end": "00:35:37",
+            "speaker": "Michael Taft",
+            "text": "That'd be so cool."
+        },
+        {
+            "start": "00:35:37",
+            "end": "00:36:19",
+            "speaker": "David McRaney",
+            "text": "Okay. So number one, the first thing you have to do is establish rapport. Why was that so important? Well, you're dealing with the part of their mind, the part of the brain that's generating this concern over reputation management. You don't want them to feel like there's any chance they're going to be ostracized or shamed. That's something that goes right in with their belonging goals. And you know, if that's the most important motivation for doing pretty much everything we do, that has to be addressed first. Oftentimes you can even plainly state, I'm not here to change your mind, I'm just here to understand where you're coming from. And rapport-building stage is very important. It's saying, I respect you, I'm going to listen to you, we're going to talk about this, you know. And that should not be performative. That should be also what it is that you're there to do."
+        },
+        {
+            "start": "00:36:19",
+            "end": "00:36:26",
+            "speaker": "Michael Taft",
+            "text": "People have a very strong sense of your congruence, and so if you're building rapport as a technique and faking it, they'll sense that."
+        },
+        {
+            "start": "00:36:26",
+            "end": "00:37:37",
+            "speaker": "David McRaney",
+            "text": "Yeah, it's good. One of the things I like most about technique rebuttal is that you can't fake it. Like, if you turn it into some sort of paint-by-numbers thing, it doesn't work. Like, you have to actually truly care about that other person's humanity and personhood, otherwise there's no chance that they're going to let you into this space. Then you work through their processing. And what you have to start with, you ask them for a claim. So it's very important that they make a definitive claim. What is it that you think, feel, or believe about this? When it comes to, like, the vaccines, you would ask them to make a very definitive claim. And then you ask for a measure of confidence in that claim. And this is where you say, like, a scale from zero to 10 or zero to 100, how strongly do you feel that way? Or how strongly do you believe that's true? And this is important because, as I said earlier, that feeling of knowing, that confidence, is the emotion that we're going to be working with. And this is the moment, usually, when people engage, sometimes for the very first time, in cognitive reflection, active processing, and metacognition — all these words that are describing a similar thing. Often that's really all this is about."
+        },
+        {
+            "start": "00:37:37",
+            "end": "00:38:08",
+            "speaker": "David McRaney",
+            "text": "And when I went to the leadership lab in Los Angeles — I visited them many times over the course of working on the book. They do something called deep canvassing, and they mainly focus on LGBT issues and issues related to transgender rights, abortion rights, things like that. They've done more than 17,000 one-on-one conversations using their technique, and they've recorded almost all of them. And I went through their archives and watched a lot of them. And it was astonishing to see people, the moment where they ask them, why do you feel that way? And let's put a number on your feeling."
+        },
+        {
+            "start": "00:38:08",
+            "end": "00:38:10",
+            "speaker": "Michael Taft",
+            "text": "Like how sure you are about the feeling."
+        },
+        {
+            "start": "00:38:10",
+            "end": "00:38:55",
+            "speaker": "David McRaney",
+            "text": "Yeah. That's the moment where you can just see something happen. You can tell when someone's never really done it. I think your work has so much to do with this very thing, like meditating deeply. And I'm sure you're very familiar, and people in your audience are familiar with, when a person is first introduced to that, it's marvelous and terrifying and otherworldly destabilizing. It's so wild to think about thinking, and then to think about the fact that you're going to be thinking about thinking, and to start to get into that infinite recursion, of that hall of mirrors of your mind. That's what happens often in these conversations. But if you've established rapport and you've been very open and honest with the person, they should feel exhilarated for a chance to explain themselves to themselves, and by way of doing that, to you as well."
+        },
+        {
+            "start": "00:38:55",
+            "end": "00:40:11",
+            "speaker": "David McRaney",
+            "text": "So you ask for a claim, you ask for a measure of confidence in the claim, and then you ask that next-level metacognitive thing of, what is the reasoning that supports that claim? What are your reasons for thinking that? And it's important when you're doing this to note that the reasons that they come up with may not be the actual reasons. They may not know the reason why they feel that way. If you ask that anti-vaxxer example, there's no way they're going to say, well, I feel this way because I have a base distrust of authority and I don't like institutions, I feel powerless, this came from some experiences I had in childhood. There's no way they're going to say that. They might get there on their own, but they will probably come up with something that just seems justifiable and plausible in the moment. And you let them do it. Don't call them out on it. Let them do it, because you can't copy-paste your reasoning into another person. That's what this is all about. You're guiding them through their reasoning so that they can understand their own reasoning and then decide whether or not their conclusions are conclusions they want to keep. So when you ask them what reasoning supports the claim, you then ask what justifies that reasoning. And then you explore if those justifications are then strong enough to hold that level of confidence. That's it."
+        },
+        {
+            "start": "00:40:11",
+            "end": "00:41:29",
+            "speaker": "David McRaney",
+            "text": "It's surprising how that is really it. And I have seen this done on every issue imaginable, even like ridiculous things like, like strawberry ice cream is better than chocolate ice cream. And people get into a state of active processing and cognitive reflection where it's almost impossible for your confidence to not go up a little bit or down a little bit, or for your attitude to not go more one direction or the other. And if that happens, sometimes in a conversation somebody will make a complete 180. It doesn't always happen, but sometimes. But often what happens is it moves a little bit one way or the other, either confidence goes up or down, or the attitude moves toward one valence or the other. And also you might make them ambivalent. I know it's nerdy, but I love the idea that ambivalent really does mean ambivalent. And that's great. Like, that's also something that's so illuminating, to feel all of a sudden that I feel strongly in two different directions, and so I'm in the middle. And at that point, you've changed that person's mind. Hopefully you'd be able to have more conversations with — some of the people that I've spent time with, they give you a little puzzle piece and you have to get three to make a picture, just to encourage them to talk to them at least two more times. But what you've really done is, you've encouraged that person to — you've alerted them to the idea, you've given them the opportunity to engage in active processing and introspect, and you've given them the gift of metacognition."
+        },
+        {
+            "start": "00:41:29",
+            "end": "00:41:59",
+            "speaker": "David McRaney",
+            "text": "And that really opens doors for them to explore why they think and feel the way they do. And that's really the core of what works when it comes to persuasion. If you engage in that kind of conversation with people in your family who are in that conspiratorial loop, that's how you eject them from the loop. Once you have them outside the loop, then you can have much better conversations with them, and you will avoid the heated argument that results in nothing, the one that may even push them farther into the thing you're trying to pull them out of."
+        },
+        {
+            "start": "00:41:59",
+            "end": "00:42:18",
+            "speaker": "Michael Taft",
+            "text": "So you're never going toe-to-toe up against the topic with logic and reasoning. You're simply and genuinely, authentically asking questions that allow the other person to enter, like, an introspection of their own thinking."
+        },
+        {
+            "start": "00:42:18",
+            "end": "00:43:21",
+            "speaker": "David McRaney",
+            "text": "Yeah. Steve Deline at the Leadership Lab, he said he liked to think of it as, we're trying to solve a mystery together. And my part is to just sort of be the — I mean, it's a lot like therapy. I mean, if you've ever been in any of those therapeutic models that use motivational interviewing or cognitive behavioral therapy, they are trying to solve a mystery. Those therapeutic models, the therapist is never allowed to tell you what you think or what you feel. Their job is to help you figure that out for yourself. And if a person has a strong opinion about something, or they have a belief that's wildly, factually incorrect, you're doing the same thing. You're asking them to figure out how they arrived there. And if it is factually incorrect, or it is a harmful attitude, they'll figure that out on their own. You never have to say so. And there's a safety in that, that they don't have to pay penance for it. They can privately update their priors without doing it in a way that will cause a hit to their reputation, whether with you or with somebody else, or whether with their own peer group. And that's really the big part of it."
+        },
+        {
+            "start": "00:43:21",
+            "end": "00:43:50",
+            "speaker": "David McRaney",
+            "text": "Motivational interviewing was designed for addicts. It was for alcoholics at first, and then it was expanded to other addiction issues. And they were concerned with something called the righting reflex. They said that therapists and doctors had a real problem with the righting reflex, which is the attempt to correct the other person at the level of their conclusions, the level of facts. And when a person's asking for help for a problem like that, they're already ambivalent. They already are fighting a desire to engage in that behavior and to stop engaging that behavior."
+        },
+        {
+            "start": "00:43:50",
+            "end": "00:43:57",
+            "speaker": "Michael Taft",
+            "text": "Yeah. The fact that they've showed up for some kind of treatment means they at least have some motivation to stop."
+        },
+        {
+            "start": "00:43:57",
+            "end": "00:44:44",
+            "speaker": "David McRaney",
+            "text": "Yeah. Yeah. And the reason that the behavior continues is they're ambivalent, because there's all sorts of reasons to drink and there's all sorts of reasons to stop. You're trying to give them the opportunity, on their own, to build a case more in the direction of stopping than in the direction of continuing. And therapy in the beginning had a real problem with saying like, well, you just really should stop and think about all the people you're hurting and this is not good for you. And now they're going to engage in the righting reflex, where they're going to come up with arguments in favor of the other emotion that they're feeling. And if they construct enough of them, then it gets weighted in the direction of continuing the behavior. So they moved into motivational interviewing, which is another form of technique rebuttal, that is helping a person do everything I just ran through, but in a framework of trying to alter a behavior that's destructive of their lives."
+        },
+        {
+            "start": "00:44:44",
+            "end": "00:44:59",
+            "speaker": "Michael Taft",
+            "text": "It's so fascinating that if you come in there swinging and telling them why they should settle on one pole of this ambivalence, their reaction is to defend the other pole and actually get stronger into exactly what you're trying to talk them out of."
+        },
+        {
+            "start": "00:44:59",
+            "end": "00:45:14",
+            "speaker": "David McRaney",
+            "text": "Yep. Everything that's ever been written about motivation, everything said that you've taken a person who was ambivalent and made them valent. And you did that. You did that. And they went in the direction you didn't want them to go."
+        },
+        {
+            "start": "00:45:14",
+            "end": "00:45:19",
+            "speaker": "Michael Taft",
+            "text": "Yeah. And we've all experienced that arguing politics with people — like, they leave that conversation more assured than when they entered it."
+        },
+        {
+            "start": "00:45:19",
+            "end": "00:46:00",
+            "speaker": "David McRaney",
+            "text": "That was famously called the backfire effect, but we got the backfire effect wrong. I did a four-part series about that, and the fourth episode was me saying, I think the first three episodes might have been a little off base here, because it was always construed as about facts, about the truth. And you give these people all these facts, and now they believe that — you've caused them to double down on their beliefs. They were not doubling down on their beliefs. Their attitude was growing stronger, and they were then looking for reasons why they felt that way. And the justifications mounted and mounted. And now they have so many justifications that they feel like they can maintain the attitude. And that's the true nature of the backfire effect."
+        },
+        {
+            "start": "00:46:00",
+            "end": "00:46:13",
+            "speaker": "Michael Taft",
+            "text": "I think, you know, we're discussing this in the context of trying to convince other people of something, or at least help other people look into their own convictions. But, of course, we can use the same technique on ourselves."
+        },
+        {
+            "start": "00:46:13",
+            "end": "00:46:14",
+            "speaker": "David McRaney",
+            "text": "Absolutely."
+        },
+        {
+            "start": "00:46:14",
+            "end": "00:46:24",
+            "speaker": "Michael Taft",
+            "text": "Right? It's really interesting. And I'm curious, in all your research, has that started to really influence your own metacognition on your mind?"
+        },
+        {
+            "start": "00:46:24",
+            "end": "00:47:05",
+            "speaker": "David McRaney",
+            "text": "So much. In fact, the way the book ends, I can give the way the ending here. Yes, I'll answer that in two ways. The first way is 1 billion percent yes. You know, it's the danger of getting into this — it's the danger of anybody getting into these topics: once you start trying to figure out what is the truth, and are my beliefs valid and justified, and am I disambiguating my sensory experiences into something — if I accept that it's virtual, how much does it comport with what is or is not objective out there in reality that I can never truly experience? Once you get into that place, it's not too far away from going and getting a cabin in the woods and never talking to anybody again, or saying like, I don't know, and I'm just going to get really into artisanal hot dogs or something, because I'm done thinking about thinking."
+        },
+        {
+            "start": "00:47:05",
+            "end": "00:47:10",
+            "speaker": "Michael Taft",
+            "text": "Artisanal sauerkraut."
+        },
+        {
+            "start": "00:47:10",
+            "end": "00:48:02",
+            "speaker": "David McRaney",
+            "text": "Artisanal sauerkraut, yeah. I think a lot of people who pickle a whole lot are people who got tired of philosophical conundrums. So, like, there is that, though. It's really enhanced my work too. Like, I'm much more comfortable moving in spaces where things aren't settled than I used to be. And I am far more fascinated with how people reach — I have found that I can disagree with a person's conclusions all the way, yet be very enamored with how beautiful their mind reaches those conclusions. It's allowed me to have so much more empathy, and it's opened up the range of the kind of personhood that I like to commiserate with. It's just pushed me way out of a sort of militant skepticism. It diminishes value and it keeps us from extracting something important in interpersonal communication. And that's helped a lot. So that's one aspect of it."
+        },
+        {
+            "start": "00:48:02",
+            "end": "00:48:31",
+            "speaker": "David McRaney",
+            "text": "Yeah, you should be doing this for all of your thoughts, feelings, and behaviors. This is the hard work of, once you're given the gift of cognitive reflection, and you're given the gift of metacognition, and you're given the gift of this kind of critical thinking, and once you're aware that your reasons may just be justifiable explanations for other people, you're left with that, oh God, how much of what I think, feel, and believe could a person using a technique like this have altered in me? Like, clearly it's worth taking some steps back and examining myself. So yeah."
+        },
+        {
+            "start": "00:48:31",
+            "end": "00:49:45",
+            "speaker": "David McRaney",
+            "text": "That's huge. That's a huge part of all of it. And I went to a retreat in Canada where I gave a lecture about all this, and I'd just come back from Sweden and talked a lot about flat earthers and why flat earthers fall into that epistemological framework. And somebody there at the event — these were all very sciencey people — and someone at the event said, I would like to see the technique you've been talking about, because I didn't talk about the technique, it wasn't what the lecture was about. I said, sure, let's sit down and do it. And we sat down at a table in the cafeteria, and there were other people there with us. Whatever it is you want to talk about needs to be something that's sort of fundamental, it really guides your thinking in other domains — that's really the best display of this. And I was using a modified version of what they call street epistemology, but it was also combining techniques from deep canvassing and the other stuff. And he said, well, I believe in God. And I was like, oh wow, that's really — that was not what I wanted to hear. Like, that's the big one. But I was willing to do it. And so I sat down across from him, and as we started the conversation, people started to gather around us. So I did what I said — you know, rapport was already built, because we had spent time together — and I asked for the claim, and the claim was, you know, I believe God is real. And I asked him what his level of confidence was. And he said it was around 80."
+        },
+        {
+            "start": "00:49:45",
+            "end": "00:49:53",
+            "speaker": "Michael Taft",
+            "text": "And 80 — kind of shockingly low for the God claim, right?"
+        },
+        {
+            "start": "00:49:53",
+            "end": "00:50:18",
+            "speaker": "David McRaney",
+            "text": "You know, obviously there's a lot more to this than just the bare minimum that I shared earlier. So there's other parts of the technique where, when you hear something like that, you're like, just like you said, like, if that's a little low, which means that there must be some reason why it's that way. And so now you're going to kind of explore that. And so the next question I asked was, was it always 80? And he said, oh no, it used to be much lower. I was like, well, could you tell me how it got to 80? And he told me the story."
+        },
+        {
+            "start": "00:50:18",
+            "end": "00:51:44",
+            "speaker": "David McRaney",
+            "text": "I'll tell you a very short version of it. He traveled to the Holy Land on a mission to become an atheist. He wanted to destroy his belief. And he went to some holy sites there and he talked to holy men and would listen to them and debate them. And he felt pretty confident that he was eradicating his belief. And he stepped outside of one of these holy sites after doing this, and he felt he was ready to go home, to go to his hotel, and he heard wailing in an alcove. And he went into the alcove and found a young woman there lying in her own vomit and filth, and she was dying. And he tried to figure out what was going on, and she had a suicide note, and she had recently broken up with her boyfriend and she had taken a bunch of pills. And he scooped her up, and he didn't know the language very well, he was walking along cobblestone streets trying to hail a taxi with this woman dying in his arms. And he eventually was able to get a taxi and he took her to a hospital, and he spent all night and day with her because he didn't know how to get a hold of her family. And, you know, they pumped her stomach and they brought her back to life, and eventually the family came around. He ended up spending time with the family and they ate together and they corresponded afterward. And he still had the note, and he showed me a picture of the note, and it was stained with her, like, tears and blood."
+        },
+        {
+            "start": "00:51:44",
+            "end": "00:52:33",
+            "speaker": "David McRaney",
+            "text": "And he tells me the story, and the story took a long time to tell, and I was drawing it out bit by bit, asking him questions. And at this point everyone who was at this retreat was standing around us and listening. And I knew what the next steps were in the method, and I sort of ran through the method with myself in my head about what I'm going to do next. And I asked him, if I were to tell you that I had a magical button, like under glass, that I could slide between us right now, and I opened up the glass and pushed the button, you'd go from 80 back down to 10 — would you press that button? And he thought about it for a long time, a very pregnant pause, and I could feel the room hesitating and waiting for the answer. And he said no, he wouldn't press it."
+        },
+        {
+            "start": "00:52:33",
+            "end": "00:53:52",
+            "speaker": "David McRaney",
+            "text": "And I could think of so many ways to move through what his fundamental claim was, which was that he went there to question his faith, but he felt like in doing so, that God put that woman there for him to truly test his faith, and that if there is a God, that is it. If there is something, he was a manifestation of it in that moment, the true version of it, whatever else it may mean for anybody, for himself or anyone — that he had come close to the divine, and that he had fulfilled the reason he went there, even if he didn't even understand what the reason was. And I had no desire to pick that apart. I don't think there was any good in doing so. And I had to ask myself, why would I want to do that? And I say in the book now, like, the actual first step is not build rapport. The first step is, ask yourself, why do you want to do this? Why do you want to change this person's mind? What are you doing here? And I stood up and said, I think this is as far as I want to go with this. I think that you've given me something more than I could ever give or take from you. So we stood up and hugged and cried in each other's arms, and the crowd collapsed around us. And it was one of the most powerful moments of my entire life."
+        },
+        {
+            "start": "00:53:52",
+            "end": "00:54:19",
+            "speaker": "Michael Taft",
+            "text": "So beginning, you know, with that basic connection and humanity actually is the main step, is what I'm hearing. You know, just the fact of respecting the other person and having real openness and some connection. It's powerful stuff, and it's powerful both ways. It's not somehow just a tool we're using on another person. It always works both ways."
+        },
+        {
+            "start": "00:54:19",
+            "end": "00:54:48",
+            "speaker": "David McRaney",
+            "text": "Yeah. It's so important to ask yourself, if I'm going to leverage the power of a hundred years of psychological research into persuasion in a way that is very effective, why am I doing that? What are my goals? What are the thoughts, feelings, and values that I'm exerting in this dynamic? And you almost can't help but change your own mind in just asking that question. I wouldn't want to give anybody this tool at the level of which I'm prepared to transmit it to another person without asking them to do that first."
+        },
+        {
+            "start": "00:54:48",
+            "end": "00:56:00",
+            "speaker": "David McRaney",
+            "text": "If you go back to, like, why this is even a part of our psychological makeup, why these mechanisms are even part of what genes construct via proteins to make brains — you can imagine, on a hill you've got three people in some sort of prehistoric time, and one person's looking one way, one person's looking the other way, one person's looking a third way. There's no way any one person, with our binocular vision, can see the entire landscape, and we have to depend on the other people in our group to see what we can't see, and to experience it through all the priors they've built up over their lifetime up in that moment. And then we combine these different perspectives into a worldview, and then we agree on that worldview. But that worldview is dynamic and changing. We deliberate, we argue — and I mean argue in the sense that we move ideas back and forth between us and sort out which ones are better, which ones are worth pursuing. That is the function of all this. And that's why this technique even works, is because if the worldview doesn't seem to be something that is close enough that we can all agree on it, we have a way to explore each other's processing to reach that idea of, let's solve this mystery together."
+        },
+        {
+            "start": "00:56:00",
+            "end": "00:56:55",
+            "speaker": "David McRaney",
+            "text": "And I think that is the true value of the whole obsession that I've been involved in for the last few years — is that's really what this is about. And it's such an amazing and powerful gift from natural selection, that it is what has forged all of culture and all of society. And as we gain new tools for building perspectives and building worldviews, it naturally is going to be something we have to continue with. And that's what we have here in this current moment, is that that same ancient process is now being tasked with expressing itself in a very new information environment, where I'm going to be examining your perspective with my perspective, but we are in such disparate situations geographically and ideologically that that can be very difficult and contentious. Because we aren't necessarily depending on one another for survival, even though in the end, I think it's evident, we are."
+        },
+        {
+            "start": "00:56:55",
+            "end": "00:57:38",
+            "speaker": "Michael Taft",
+            "text": "Yes, and this leads to the next thing I want to ask you, which is — I'm sure you get asked a lot, but I'm asking you to prognosticate here about where we're at in the States, and the fact that there are essentially at least two and probably more like four or five major groups of different kinds of belief happening here that are very hard to reconcile and very armored against each other, and almost like competing views of what's even true about a hundred different things. So based on everything you're learning, what's going to happen here, or how can we work with this?"
+        },
+        {
+            "start": "00:57:38",
+            "end": "00:57:59",
+            "speaker": "David McRaney",
+            "text": "It's two different questions. What's going to happen here? What's going to happen is we will eventually build up a literacy for these new tools in the new information environment. There's no guarantee that we won't stumble along the way. There's no guarantee that it'll all hold. I mean, the entire history of our species has punctuated with moments which we didn't do a good job of that."
+        },
+        {
+            "start": "00:57:59",
+            "end": "00:58:21",
+            "speaker": "Michael Taft",
+            "text": "Yeah, the new information environment idea is really compelling. If you look at when the printing press came around and the giant wars that happened immediately after that, people burning each other alive and so on. And then the radio comes around and you get massive disruption there. We don't have a great record of dealing with these new information environments."
+        },
+        {
+            "start": "00:58:21",
+            "end": "00:59:27",
+            "speaker": "David McRaney",
+            "text": "Yeah. I'm hugely into Marshall McLuhan, and I hope anyone listening to this read the machines of man. I mean, he outlined very clearly what happens when we are given a new ability to trade information back and forth. The whole idea of the medium is the message is that at some point the new medium becomes a new way to parse reality, and the shared reality that we experience will then meet it more than halfway. And then that happens continuously, as you're saying, like language first, then written word, then printing press, and then everything that came after, from radio, television, and so on, internet, everything — even VHS tapes fundamentally changed the way we thought about it. The word rewind is metaphorical now. It's something we can use to express an idea that we couldn't express before. I think it was Immanuel Kant invented the word angst. And so until then — it's not like people didn't feel angst, but when we had a word for it that we all agreed upon, it really changed how we could pass ideas back and forth and build on those ideas. Once you have a shared, agreed-upon term, you can build on that term and build much more complex levels of abstraction."
+        },
+        {
+            "start": "00:59:27",
+            "end": "01:00:18",
+            "speaker": "David McRaney",
+            "text": "This also happens every time we are gifted a new way of expressing ourselves and saying, here's my perspective, here's my disambiguation of the situation. And that gets pulled into that marketplace of ideas. But it's not this seamless stream of enlightenment. It's contentious. It's always contentious, because everyone is feeling multiple dimensional expressions of cognitive dissonance and struggling with whether to assimilate or accommodate, all together at once. And we now are in this vastly complex society where just one town over from the other has a different worldview, and you have millions of competing reality constructs that are all moving past each other like a swarm of jellyfish in the ocean. And it's complex."
+        },
+        {
+            "start": "01:00:18",
+            "end": "01:01:19",
+            "speaker": "David McRaney",
+            "text": "The institutions we have currently are not fitted to that environment. The information environment has far exceeded these institutions' ability to deal with that. And most of our institutions are still 19th century institutions. And we are still trying to build, even in the 21st century, something that is far beyond a 21st century mind's ability to make sense of those. So the literacy that is required of us to move in that space is something we will have to really work on and fight for over the next, I would say, the next 100 years at a minimum. And if there's any prescriptive advice, it's — at NYU, they kept using the phrase cognitive empathy, which is to try not to debate people at the level of conclusions. Ask yourself, why does that person think that way? And we can go one step further and help that person answer that question for themselves. These are ideas that go all the way back to the Greeks, but now is where they actually have to be put into practice in a way that is — this isn't something that is relegated just to the toga-wearing people who don't have day jobs. This is all of us now."
+        },
+        {
+            "start": "01:01:19",
+            "end": "01:01:24",
+            "speaker": "Michael Taft",
+            "text": "Good. Thank you so much for coming on the show. It's just an incredible pleasure and I hope to have you back again soon."
+        },
+        {
+            "start": "01:01:24",
+            "end": "01:01:31",
+            "speaker": "David McRaney",
+            "text": "I would love it. I obviously could talk about this endlessly and forever, and probably will. I've accepted that it's my fate."
+        },
+        {
+            "start": "01:01:31",
+            "end": "01:01:35",
+            "speaker": "Michael Taft",
+            "text": "And you did this to yourself."
+        },
+        {
+            "start": "01:01:35",
+            "end": "01:02:09",
+            "speaker": "David McRaney",
+            "text": "And in addition, I've reached a place in my life where I'm deeply interested in the kind of work that you do and the kind of things that you've become an expert in, or things that you're obsessed with. I feel like in some ways I have filled the room and I want to move beyond it. And to do so, I do have a more complete toolkit and a more complete understanding. I know there's no way to ever master anything, especially what we're talking about, but I'm aware that I've reached a limitation in that regard. And I'm now looking more toward people who work in your spaces to do that. And I think that what you do is incredibly valuable. So I can't wait to spend more time with you and yours."
+        },
+        {
+            "start": "01:02:09",
+            "end": "01:02:11",
+            "speaker": "Michael Taft",
+            "text": "Thanks."
+        },
+        {
+            "start": "01:02:11",
+            "end": "01:02:14",
+            "speaker": "David McRaney",
+            "text": "Me too, Michael."
+        },
+        {
+            "start": "01:02:14",
+            "end": "01:02:17",
+            "speaker": "Michael Taft",
+            "text": "Let's continue the conversation."
+        },
+        {
+            "start": "01:02:17",
+            "end": "01:02:31",
+            "speaker": "David McRaney",
+            "text": "Absolutely."
+        },
+        {
+            "start": "01:02:31",
+            "end": "01:02:35",
+            "speaker": "Michael Taft",
+            "text": "That's it for this episode of Deconstructing Yourself."
+        }
+    ]
+}

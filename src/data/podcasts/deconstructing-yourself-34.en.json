@@ -1,0 +1,787 @@
+{
+    "title": "The Liberating Practice of the Fire Kasina, with Daniel Ingram",
+    "url": "https://deconstructingyourself.com/the-liberating-practice-of-the-fire-kasina-with-daniel-ingram.html",
+    "guest": "Daniel Ingram",
+    "transcript": [
+        {
+            "start": "00:00:00",
+            "end": "00:01:43",
+            "speaker": "Michael Taft",
+            "text": "Welcome to Deconstructing Yourself, the podcast for modern mutants interested in mindfulness, meditation, awakening, hardcore dharma, emptiness, the Orville, and more. My name is Michael Taft, your host on the podcast, and in this episode, I'm excited to be speaking yet again with Daniel Ingram. Daniel Ingram is an emergency medicine physician and longtime dharma practitioner. He's the author of the seminal text, Mastering the Core Teachings of the Buddha, now out in its second edition, and also the main force behind the radical Dharma Overground website, which specializes in a brand of unusually frank discussion of meditation. After recording this program, I realized that Daniel and I used some jargon and concepts that might be fairly unfamiliar to some listeners. We got a little arcane. We not only talk about jhanas and ñanas, but also the somewhat controversial notion that these two systems can be mapped onto each other. Rather than explain it here, I'll put a link in the show notes that will help to orient you to these models if you're feeling like learning more about them. And now, the episode that I call The Liberating Practice of the Fire Kasina with Daniel Ingram."
+        },
+        {
+            "start": "00:01:47",
+            "end": "00:01:53",
+            "speaker": "Michael Taft",
+            "text": "Daniel, welcome once again to your fourth return to the Deconstructing Yourself podcast."
+        },
+        {
+            "start": "00:01:53",
+            "end": "00:01:58",
+            "speaker": "Daniel Ingram",
+            "text": "It is always wonderful to be here and speak with you about these wonderful topics, so I'm delighted."
+        },
+        {
+            "start": "00:01:59",
+            "end": "00:02:25",
+            "speaker": "Michael Taft",
+            "text": "Yeah, last time we got to do it face-to-face in the studio here in SF, today we're doing it across the continent via the magic of all kinds of electronics. So I'm happy to be able to talk with you about this topic. I got excited last time we were discussing stuff, and in fact, excited at the retreat I went to up on Denman Island at the Hermitage last fall, where you were leading a fire kasina retreat."
+        },
+        {
+            "start": "00:02:26",
+            "end": "00:02:27",
+            "speaker": "Daniel Ingram",
+            "text": "Yeah, it was wonderful to have you there."
+        },
+        {
+            "start": "00:02:28",
+            "end": "00:03:43",
+            "speaker": "Michael Taft",
+            "text": "Yeah, right? It was great. I so enjoyed it, and thanks for inviting me. When I was up there, it was really interesting, because I just needed a retreat. I didn't know what I was going to practice at all, and I thought I might go up there and spend six or seven days just kind of hanging out with my breath or something. I wasn't sure. I just knew I needed some time in the woods meditating. But, you know, I remembered when we were in North Carolina at the gathering there with Vince Horn and Ken Folk and all those wonderful beings. And I had played around with the fire kasina a little bit. And so I thought, well, here we are, up at Denman Island at the Hermitage inside the yurt, while it's dumping continuous rain outside. Might as well try out the fire kasina stuff a little more seriously. And yeah, that was really fun. I really enjoyed that practice and jumped right into it. Loved it. Did it for six days and had a blast not only actually getting involved in doing it, but also listening to the people who had been there for what, like three weeks at that point, two or three weeks, depending, talk about it and the discussions you all were having and the things that were going on."
+        },
+        {
+            "start": "00:03:43",
+            "end": "00:04:42",
+            "speaker": "Michael Taft",
+            "text": "And as you know, when we talked about this before, I think it was in our first podcast together, and in every discussion since then, you had been describing fire kasina in terms of its siddhi-producing potential, its potential to use for magical effects, which even in traditional Buddhism are there as something to explore for the people who want to go in that direction. And for me, the way you were talking about it was always like, yeah, yeah, Daniel, fire, kasina, magic, so what? You know, my students are trying to get awakened. This is what I'm interested in working with people on. And so I thought, yeah, that's cool, but whatever. But the thing that really caused my ears to stand up straight up there at the retreat was when one of the people got stream entry right there doing the fire kasina practice. I was like, wait a minute, wait a minute, wait a minute. These people are not just sitting around, you know, drawing unicursal hexagrams in the air with their mind. Something else is happening here. Hold on."
+        },
+        {
+            "start": "00:04:43",
+            "end": "00:04:43",
+            "speaker": "Daniel Ingram",
+            "text": "Yeah, right?"
+        },
+        {
+            "start": "00:04:44",
+            "end": "00:05:12",
+            "speaker": "Michael Taft",
+            "text": "And so that's when I was like, okay, we have to talk about the fire kasina practice and maybe just kasina practices in general, right? Because it doesn't have to be fire. And how those relate to jhanas, how they relate to ñanas, and how they relate to awakening, stream entry, which is a big topic, obviously. But I can think of no one who I would rather ask these questions to than you. So are you prepared for that as a topic?"
+        },
+        {
+            "start": "00:05:13",
+            "end": "00:05:28",
+            "speaker": "Daniel Ingram",
+            "text": "Everything you want to ask, I'm wide open to. And that's always a delight. Oh, one minor correction. It was really Shannon's retreat, not mine. I was a guest, and I helped organize a little bit, but it was really Shannon Stein's retreat, the person that was the co-author on the Fire Kasina book."
+        },
+        {
+            "start": "00:05:29",
+            "end": "00:05:33",
+            "speaker": "Michael Taft",
+            "text": "Yeah, this is Lama Shannon Stein, the Tibetan Lama from Winnipeg."
+        },
+        {
+            "start": "00:05:33",
+            "end": "00:05:33",
+            "speaker": "Daniel Ingram",
+            "text": "Yeah."
+        },
+        {
+            "start": "00:05:34",
+            "end": "00:06:33",
+            "speaker": "Michael Taft",
+            "text": "Okay, so my first question is just about using kasinas in general. This is kind of a forgotten practice, at least in American Theravada-type practices, right? You don't see too many people doing kasina work. At least I haven't. I have an old book by this guy named King. It's really fabulous. And there's a ton of chapters in there about making kasinas and using them. It's really, really interesting. So I had read all this, but back in the aughties, the 2000s, I wasn't finding anyone teaching it anywhere. And I was focused on the Shinzen stuff then anyway. So I just sort of left it alone. But lo and behold, here's Daniel Ingram willing to talk about kasinas all day long. Right. So first of all, can you just kind of set the general context for using any kind of kasina and how it fits in with Theravada practice?"
+        },
+        {
+            "start": "00:06:33",
+            "end": "00:07:19",
+            "speaker": "Daniel Ingram",
+            "text": "Yes. So you see the kasinas mentioned in the old Pali canon texts, then you get much more on them by the time you get to the commentaries, the Visuddhimagga and the Vimuttimagga. The Vimuttimagga being my favorite, but the Visuddhimagga is the encyclopedic hog that, you know, people get to brag if they actually read the whole thing. And it was used as a concentration practice as well as a practice that you would use for magical powers. But there's a funny thing in the old texts where this sort of line between jhanas and insight is kind of fuzzy to not there, to wait a second, they did all this jhana and then they got insight, or what's going on? And so then this gets complicated. Right now I don't want to get into all the politics of the debates of, you know, whether or not they're talking about shamatha jhanas, vipassana jhanas, or even if there are vipassana jhanas, or how all that works. That gets annoying."
+        },
+        {
+            "start": "00:07:19",
+            "end": "00:08:36",
+            "speaker": "Daniel Ingram",
+            "text": "But practically, when you sit and do these things, you know, you start paying attention to whatever images you're seeing and being generated off of your practice. And it's really hard not to notice them doing things like changing and flickering and changing on their own, and the sort of weird delay stuff between intention and something showing up. And you ask for something and then it shows up, and then you look at something and you think about it and you watch this back and forth impermanence and this sort of natural causal process happening, and insight starts to develop pretty much even if you don't want it to. In terms of, you know, this living tradition today, actually I heard a little bit about this stuff long ago when I was doing some sits at Bhavana Society with Bhante Gunaratana, and he mentions them in his works. And you also see them in Pa Auk. So the Pa Auk kids, so you can check out like Shaila Catherine or something, that tradition. I mentioned some kasina, and does some kasina stuff, I think too. I don't know as much about that tradition, but I know that they do traditional concentration practice stuff. And so hopefully you'll have some expert on your podcast who will fill in more and compensate for my ignorance of their tradition. But the point is that you do find some of this stuff today, but it's certainly not anything resembling widespread."
+        },
+        {
+            "start": "00:08:37",
+            "end": "00:09:13",
+            "speaker": "Daniel Ingram",
+            "text": "And so how it fits into the Pali canon, you know, or the practices back in the day is complicated. You actually see a lot of instruction on this in the commentaries, which makes me think that they really thought this was important, that a whole bunch of people were doing this. And they describe all these different kasinas, you know, six elements, earth, fire, air, water, limited space, limited consciousness, and those kinds of things. And so there's other objects you can use, you know, colors, red, blue, white, yellow. Actually, blue is also kind of green, because apparently the Pali word for blue is also green. I don't know what's up with that. But anyway."
+        },
+        {
+            "start": "00:09:14",
+            "end": "00:09:16",
+            "speaker": "Michael Taft",
+            "text": "Lots of languages have very few color words."
+        },
+        {
+            "start": "00:09:17",
+            "end": "00:09:47",
+            "speaker": "Daniel Ingram",
+            "text": "Yeah. And so these are practices that, yeah, you find traditionally with a lot of explanation, a lot of detail, a lot of emphasis. And I was reading these old books because I really like them. And I was thinking, man, this is really interesting. Like, why do they go on and on and on about this stuff and nobody does this anymore? So I started playing around with these things, kind of inspired by some of the magical practices I was doing and wondering if these practices would help me see the pentagrams I was drawing better."
+        },
+        {
+            "start": "00:09:47",
+            "end": "00:10:05",
+            "speaker": "Michael Taft",
+            "text": "Now, were you doing the classic thing of drawing the kasina on a piece of canvas? You know, if it's earth kasina, you put like mud, a circle on canvas, and stare at it and then close your eyes and attempt to recreate it in your mind, like that level? Or were you doing it in a different way?"
+        },
+        {
+            "start": "00:10:05",
+            "end": "00:11:17",
+            "speaker": "Daniel Ingram",
+            "text": "So back then I was usually using colors, although I used images as well. And I was typically taking either like a plate or like a piece of just blue or red or white construction paper and making a disc out of it. And sometimes I would just blow up a character of a dot. Back then it was ASCII characters, but now we have Unicode or whatever. And I would just blow one of these up to like 800 point font or whatever would fill my computer screen. And no, I don't think you have to go that high. Whatever font would get me a nice big dot on my computer screen. And I was using those. And then I went on this retreat where I was doing some insight practices. And after I'd finished up that, of many cycles of insight at Bhavana Society, I had about a week left and I was like, wow, I got this candle flame in my kuti, because, well, actually it was an oil lamp in my kuti and it was the only light source in the place. And I just started like, hey, I wonder if I could do fire kasina off this thing, and just started playing around with it. And before I knew it, I was seeing cool stuff and my concentration was getting stronger. And I was like, hey, this is pretty hip. So I just kind of figured it out and was like, hey, this works."
+        },
+        {
+            "start": "00:11:17",
+            "end": "00:12:32",
+            "speaker": "Daniel Ingram",
+            "text": "So now we've got a whole bunch of people who've played with this on retreat and in daily life. And as we do that, we continue to generate wisdom and experience and real field testing of, hey, if you look at the flame for this long versus that long, if you use this kind of flame versus that flame, if you use an LED versus a candle, if you put it at this distance versus this distance, if you use like an overhead light, if you use the moon, if you use like the sun through super dark glasses, not a great idea, by the way, if you do all these things, what happens and what objects do we like and what do these things lead to? And so we're getting more and more real world practitioner data from a range of people, which is really exciting. And so that's how this has been evolving. And it continues to evolve. We continue to evolve terminology. And we continue to evolve a sense of the best way to do this, you know, sort of on average, and everybody's got their personal favorite tweaks to exactly how they do it that they figure out for themselves. And cool. And I get the sense that that was also sort of the thing back in the day, because they talk about like different sized objects for different personality types. And they, you know, talk about that kind of thing and options you can use and how the nimitta might look sort of different sometimes. And so it's fun to get more data on this as more practitioners do it."
+        },
+        {
+            "start": "00:12:32",
+            "end": "00:12:53",
+            "speaker": "Michael Taft",
+            "text": "Is there something special about the fire kasina as opposed to looking at water for a water kasina or sky kasina or whatever? All of these elements and colors and so on are possible. Why did you settle on fire? Like what was it about that for you that was so compelling compared to the other kasinas?"
+        },
+        {
+            "start": "00:12:53",
+            "end": "00:14:10",
+            "speaker": "Daniel Ingram",
+            "text": "So I liked the retinal afterimage that I got. I liked the strength of it. It just had a brightness to it, and it was easy, and I didn't have to look at it as long to get a good image. Actually, you don't have to look at other colors of images if you have a nice contrasting background and you have enough light. Even a piece of blue or red or white construction paper and a disc or whatever shape you like will work. And you could almost use anything for this. Really, the kasina ends up not being as important, sort of. Really, once you sort of get the technique down and start getting afterimages and start turning afterimages into nimittas, again, not as important. But I really just personally love the aesthetics of a candle or a flame. I find that our minds are naturally drawn to flame. You know, I love watching campfires. I like the sort of old school kind of mystery, magically woo-woo kind of vibe of the whole thing. Those aesthetics just totally work for me. And in all honesty, like while the LED is so portable and you're not going to set anything on fire and it's, you know, really easy to use, whenever I see somebody doing like LED versus candle, like some little part of me goes, oh, like I can't do a candle. But no, it totally works. That's just my own weird aesthetics. And please, if you like an LED, knock yourself out. It works great. And it's safer, probably, and cheaper, and perhaps even better for the environment. I don't know, the batteries, whatever."
+        },
+        {
+            "start": "00:14:10",
+            "end": "00:14:21",
+            "speaker": "Michael Taft",
+            "text": "Okay, so you liked fire just partially because it's mythologically cool and beautiful, and there's an aesthetic to it, and also you get this nice afterimage."
+        },
+        {
+            "start": "00:14:21",
+            "end": "00:14:21",
+            "speaker": "Daniel Ingram",
+            "text": "Yeah."
+        },
+        {
+            "start": "00:14:22",
+            "end": "00:14:28",
+            "speaker": "Michael Taft",
+            "text": "Let me ask you, you've done so much fire kasina. Have you taken any of the other kasinas quite as far?"
+        },
+        {
+            "start": "00:14:28",
+            "end": "00:15:28",
+            "speaker": "Daniel Ingram",
+            "text": "So the first thing is, after doing the sun retreat and getting what I called a little bit elementally imbalanced, where I think I just got too hot. Fire kasina can cause these weird effects where like you start getting too hot. A lot of people report this. And so by taking other elements, you can sort of balance things out. And I actually did a retreat for 17 days, just myself in a little rented cabin down near the beaches of Alabama, which are gorgeous on the Gulf Coast. I spent about an hour or two a day either looking at sand or looking at water or looking out at the sky. I would just sit on the beach, sometimes three hours, sometimes a few more, depending on my mood. But I did a lot of fire kasina as well, and I found I didn't have nearly that sense of imbalance. So there is kind of something about the initial kasina you start with, which will have some magical elemental effect. But that said, whichever one you're using, other things can show up."
+        },
+        {
+            "start": "00:15:28",
+            "end": "00:16:58",
+            "speaker": "Daniel Ingram",
+            "text": "So what was interesting, particularly on this last retreat at Denman Island, I started getting all this air and space and earth and water imagery. Whereas on previous retreats, I'd gotten much more fire stuff, but I was pretty much just doing candle flame on that retreat. I wasn't really focusing on the other elements. And yet I started getting all these bubbles and like I was underwater, and I kept seeing these swirling, misting, blowing looking things that kind of looked like, yeah, just blowing mist. I got rain at points and snow, and I got these big sort of crystalline earthy structures that I kept looking at. And I kept getting these sort of giant star fields of wide open, expansive space with all these stars in the distance, like I was floating in some kind of space suit or something. And it was just beautiful to see the other elements showing up. But it was interesting, I got almost no fire, occasionally some, but not nearly that much. And so again, wherever you start, you can get the others. And it mentions this in some of the commentary, is that once you can do one element really well, you can get all the other colors, you can get all the other elements. The level of concentration that allows you to access one at a deep level allows you to access them all with just the subtlest of tweaking, or perhaps they just start showing up just because they think it's a good idea. Sometimes the practice goes where it seems to want to go, or perhaps need to go, and that's one of the neat things about it."
+        },
+        {
+            "start": "00:16:59",
+            "end": "00:17:08",
+            "speaker": "Michael Taft",
+            "text": "Excellent. So just to kind of rewind a little bit, is what we're doing with these kasinas essentially using them to go into jhanas?"
+        },
+        {
+            "start": "00:17:08",
+            "end": "00:18:18",
+            "speaker": "Daniel Ingram",
+            "text": "Yes. Now, of course, the word jhana itself is extraordinarily politically loaded, right? And so the whole problem with using this word, right, on one hand, you've got like Ajahn Brahm and B. Alan Wallace, sort of, and then you've got some other people. And then you've got me, who this is a very dimensional way of thinking about them, jhanic factors that can be of various strength, various depths, various focuses, tuned various ways from very light to very, very, very strong and everything in between. And so what I would say that I think could be politically less dangerous for a polarized audience perhaps who's been conditioned to get knee-jerk reactive about these things sometimes, no offense to anybody who obviously has gone far beyond that and has a mature response to the word jhana, the jhanic factors are definitely things we're cultivating. So you're definitely cultivating concentration, you're cultivating rapture and happiness, pīti and sukha, you're cultivating tranquility and equanimity and a cool, you know, clear bright mind removed from the hindrances. So you're definitely cultivating jhanic factors."
+        },
+        {
+            "start": "00:18:18",
+            "end": "00:19:27",
+            "speaker": "Daniel Ingram",
+            "text": "But the weird thing about this is this insight stuff slips in, because to really concentrate, to really pay attention to what's going on, you have to notice all the little details. If you're not noticing a lot of little details, your mind just isn't going to get as much out of this on any front. And so to notice all the little pixels and shifts and wiggles and tweaks and all the little ways your mind interacts with the objects, which is one of the coolest parts of this, because you really get to see how intent and judgment and expectation and requests and imagination feed back into this object, and you get to see the moment-to-momentariness of that. Like, oh, there's my intent, and then it showed up, or that showed up, and I kind of liked this part of it, and then it changed to something more like that. And you get to see these iterations that go through, which has an insight component, right? You're watching, you know, cause and effect. This affects that, that affects this, intent affects, you know, images, images affect our judgment and reactions to those. And the cycle goes round and round, bouncing back and forth. And so the insight slips in. And so it is definitely true that you're cultivating positive qualities of mind, positive meditative factors, jhanic factors, if you will."
+        },
+        {
+            "start": "00:19:27",
+            "end": "00:20:33",
+            "speaker": "Daniel Ingram",
+            "text": "But the insight stuff is also pretty much guaranteed to slip in, even if you don't want it to. So it's worth reviewing the stages of insight, as well as the standard jhanas, so you can see how those things relate, which is also one of the cooler things about this practice, because people actually get to see this mapped out. So all this weird stuff I talk about with the frequencies and attention shapes and phase characteristics and stuff of the various vipassana jhanas and how those correlate with the stages of insight, well, if you do this practice, you can actually see that really, really clearly for yourself, which is one of the things about this that I think is just the coolest, right? Because it's all interesting to read the theory, but when you've actually gotten to watch it, like a movie of it, the visuals of it, the interactivity of it, the play lab of your own mind of it. That's when it becomes so real and you go, okay, these people who are talking about this stuff are not just bullshitting or making up patterns or phases or attention shapes or whatever. This is just the way attention develops. And there's something incredibly cool and satisfying about that when I get to see other people discovering these things for themselves and their own brains."
+        },
+        {
+            "start": "00:20:33",
+            "end": "00:21:15",
+            "speaker": "Michael Taft",
+            "text": "One of the things that's so cool about working with the fire kasina, and really any kasina that I've played with, is that it's like having your own built-in neurofeedback machine. You're watching what's going on with the nimitta or these various, I'll just call it, afterimages that you're observing as the meditation goes deeper and deeper. You start to see all the types of things you're describing. And it's almost like you're able to get direct feedback about your level of concentration, direct feedback about your level of equanimity, all that just from the kasina itself as you're observing it. I love that aspect, that it's almost like a mirror of your mind."
+        },
+        {
+            "start": "00:21:15",
+            "end": "00:21:23",
+            "speaker": "Daniel Ingram",
+            "text": "Absolutely. You're kind of like a three-dimensional multicolored oscilloscope of your mind."
+        },
+        {
+            "start": "00:21:23",
+            "end": "00:21:46",
+            "speaker": "Michael Taft",
+            "text": "Exactly. Right. Super cool. So, okay. You just said a whole bunch of stuff. Let's go back and unpack a little bit of it, so it's slightly clearer. Let's say I've set up a candle. I'm sitting there. I have no idea what's going to happen next. Can you take me slowly through the stages of working with a fire kasina and what it means for jhanic factors and maybe even ñanic factors, but at least the jhanic factors."
+        },
+        {
+            "start": "00:21:46",
+            "end": "00:23:32",
+            "speaker": "Daniel Ingram",
+            "text": "All right, so you take a candle, you put it about arm's length, about four to six inches below eye level, and you look at it for a minute or two. And some people sort of notice like a shift or kind of a glow around it or kind of change in the background images. I look at it just until I get a little bit of that visual distortion where if you stare at anything too long, it starts to look a little bit weird, which again, you know, takes a minute or two. And then you close your eyes and you take a look at whatever is going on and you just focus on that. It's also very important when looking at the candle itself to really look at each moment of the candle and to really think about which part of the candle you're looking at. So if you look, there's kind of a clear part of the flame at the lower part of the wick, and towards the top part of the wick is the brightest part of the flame. And then there's the sort of, you know, peak of the flame up at the top, which is usually a little bit darker. But that middle part that's the brightest is usually the best place to stare, and stare at the center of it rather than to one side or the other side. This becomes important if you find your image wandering off to one side or the other. Really pay attention to exactly which part of the candle flame in each moment you're paying attention to, and get that real clarity, moment to moment. And this starts building concentration just through repetition of aiming and rubbing. Vitakka and vicāra, you know, applied and sustained thought or effort or attention or however you want to translate it. So vitakka and vicāra, these Pali words that mean, you know, applied and sustained effort. That's what you're doing. And you really get to practice that as you look at each moment of there's the candle, there's the candle, there's the candle, and there's exactly which part of the flame I'm attending to, ba-ba-ba-ba-ba, again and again and again."
+        },
+        {
+            "start": "00:23:32",
+            "end": "00:24:09",
+            "speaker": "Daniel Ingram",
+            "text": "And then when you close your eyes, you've already built up some concentration power with an easy object, right? The candle flame is easy to find. It holds the attention well. You can recognize that it's holding attention well, and you can really tune into that. And then when you close your eyes, you pay attention to whatever you've got, however it changes, shifts, and people will see various things. They'll see some of the afterimage around the candle. They may see something that looks kind of dark. They might see who knows what they see, but eventually the vast majority of people get a red dot or a red oblong thing or a red something. And then it may wander, fade, do various things. And you just pay attention to it until, you know, it's gone, and you watch how it moves and it'll move to the left."
+        },
+        {
+            "start": "00:24:09",
+            "end": "00:24:47",
+            "speaker": "Michael Taft",
+            "text": "Let me interrupt there just to make a comment. Yeah, this was the thing that intrigued me initially when you were describing how to do this down in North Carolina. And I was just playing around, is that, yeah, the afterimage, it's an afterimage, just like any other afterimage, no big deal. But focusing on it, there will suddenly be almost like a red LED that shows up in the middle of it. And that is completely unexpected. You're seeing this afterimage, and it's like this little red coal or LED kind of blinks on in the middle of it. I was like, what is that?"
+        },
+        {
+            "start": "00:24:47",
+            "end": "00:24:48",
+            "speaker": "Daniel Ingram",
+            "text": "Mm-hmm."
+        },
+        {
+            "start": "00:24:48",
+            "end": "00:24:54",
+            "speaker": "Michael Taft",
+            "text": "You know, why is that there? So can you talk about what that is and why it appears?"
+        },
+        {
+            "start": "00:24:55",
+            "end": "00:25:45",
+            "speaker": "Daniel Ingram",
+            "text": "Yeah, so I typically call this a nimitta, although the word nimitta, it turns out, is political. It's like the word jhana. So if you're hanging out with someone else, you use the word nimitta differently for some other thing. Okay, fine. Just realize it's another one of these hot button words in this strange little world we live in. Yeah. So it's funny, at the end of the frequently asked questions thing from Denman Island, which I just finished uploading, by the way, it's like three hours or something, two and a half probably, of answering like 65 or so common questions about the fire kasina. So you'll find that on the firekasina.org website. But at the end of that, we have a funny joke about like, you know, don't use the word nimitta, don't use the N-word, right? Because someone's going to get offended that we're using the word nimitta wrong. So nimitta in Pali just means sign, and it's one of the things that we use in jhana practice."
+        },
+        {
+            "start": "00:25:46",
+            "end": "00:25:50",
+            "speaker": "Michael Taft",
+            "text": "So why does the nimitta show up then? It's so fascinating."
+        },
+        {
+            "start": "00:25:50",
+            "end": "00:26:50",
+            "speaker": "Daniel Ingram",
+            "text": "Yeah, I have no idea what the effect is. What's the physiology of this? I don't know. But it happens for nearly everybody. So I used to run a sitting group in Louisville for a range of practitioners, and some were beginners and some were intermediate and some were a little bit stronger. But when I would do fire kasina, everybody got red dots, and everyone was like, oh my God, look at this red dot thing. And sometimes got some yellow in it, might have some green or blue around it, might be kind of a weird shape, you know, and it might wander off to the side or do whatever it does. But basically everybody gets them, and I don't know what the mechanism is, but it's this thing. And once you've got that, then you can figure out how to track that and trace that. And it'll last way longer than an afterimage does. And it's this mind-made thing. And once you get better at it, you can actually learn to manipulate it. You can learn to change the stuff happening inside it into, you know, like cartoons and make it like do spinning stars and letters and all kinds of stuff. And it's very responsive. The inside is actually very rapidly responsive, unlike the stuff that comes later, which is kind of more slowly responsive."
+        },
+        {
+            "start": "00:26:50",
+            "end": "00:27:47",
+            "speaker": "Daniel Ingram",
+            "text": "But the inside stuff, you can really get a fast, bright, clear mind. If you just look at every little wiggle and flicker and twitch and, you know, perturbation of this dot, then the mind can get incredibly sharp, almost like a stylus in a groove of a record where you're just tracking this dot up and down and left and right. And again, it may disappear. And then you open your eyes and refresh on the candle flame. Same way, close your eyes. Hopefully the dot shows up again. And then at some point the dot will start disappearing, and then you can kind of get it back if you kind of blink your eyes with your eyes closed, like kind of squinch them, and it'll come back sometimes, and then it'll disappear and you can get it back again. And eventually you got no dot, and then you go back to the flame, and then at some point it turns into the black dot, which we'll get to in a little bit, good times. Or the dark dot, I should say, because sometimes it's kind of a dark greenish or something. But anyway, I don't know the physiology of this thing, but it's a great object, and it's clearly a mind-made object because it's highly manipulable, and you can turn it into all kinds of cool stuff."
+        },
+        {
+            "start": "00:27:47",
+            "end": "00:27:56",
+            "speaker": "Michael Taft",
+            "text": "Does the arrival of this red dot nimitta winking on, does that indicate a particular level of concentration?"
+        },
+        {
+            "start": "00:27:56",
+            "end": "00:28:38",
+            "speaker": "Daniel Ingram",
+            "text": "From my point of view, once you've got a steady red dot that is clear and you can track, and you can stay on it with applied and sustained effort, that is a clear and unified mind, where you suppress a lot of hindrances. If you're really tracking that thing and able to get it steady, then you've got a lot of hindrances suppressed. You've got applied and sustained effort. And there's something really nice about that. So those are first jhanic factors, right? So you can say first jhanic factors are arising, and how strongly they may arise is going to vary by the person, but we can call those first jhanic factors or first jhana of, you know, it might be kind of light for some people. It might be strong for others, but it's got some first jhanic element to it. And then at some point the dot may change and the dot may start kind of showing up."
+        },
+        {
+            "start": "00:28:38",
+            "end": "00:29:03",
+            "speaker": "Daniel Ingram",
+            "text": "And then when it starts kind of showing up and getting a little brighter and stronger, it may get some wiggliness to it. It may get some fine flickering detail to it. And this is the point at which you don't really have to concentrate it in nearly the same way. It stops wandering off to the side and it kind of stays in the center and it gets this sort of brightness to it. It may get slightly bigger and it may get some little spinning green or purple or whatever blue things around the edge of it."
+        },
+        {
+            "start": "00:29:03",
+            "end": "00:29:04",
+            "speaker": "Michael Taft",
+            "text": "Yeah, it starts to turn green."
+        },
+        {
+            "start": "00:29:05",
+            "end": "00:30:23",
+            "speaker": "Daniel Ingram",
+            "text": "Yeah, it may turn green, and the thing itself may actually oscillate between like pink and green and sort of a pale yellow or a pale green, or actually do — the dot can do all kinds of weird stuff as the practice progresses. And so when it's showing up on its own and you're not having to apply applied and sustained effort, and you're really noticing all the fine details because your mind is even further into your concentration thing, and you can see all those little flickers and pulses, you know, lots of little wiggles of it, that to me are second jhanic factors. You've got, you know, with the dropping of applied and sustained thought, there's rapture and happiness and stronger concentration, basically. And so the second vipassana jhana also correlates with some arising and passing away stuff, which is where you're starting to see the real fine-grained movement of this thing, the flickering, the shifting, the shimmering, all the little fine-grained details. And the mind can get really fast. And people can be like, oh my gosh, I had no idea that my mind could see things that rapidly or perceive all those little fine flickering things. This is so cool. And at that point, you've got some second jhanic factors arising, or light to medium, for some people, very strong second jhana. And it doesn't get very bright sometimes. And they might kind of turn whitish. They might turn other colors. If you're using an LED, they might be kind of green. It kind of varies. But that's when you've got some second jhana stuff arising. And you might get some A and P, arising and passing away type jhanic factors arising then as well."
+        },
+        {
+            "start": "00:30:23",
+            "end": "00:30:27",
+            "speaker": "Michael Taft",
+            "text": "So I sense we're about to encounter the murk."
+        },
+        {
+            "start": "00:30:28",
+            "end": "00:30:28",
+            "speaker": "Daniel Ingram",
+            "text": "Yep."
+        },
+        {
+            "start": "00:30:29",
+            "end": "00:30:43",
+            "speaker": "Michael Taft",
+            "text": "So at a certain point, here we are in this sort of, I'll just call it a light second jhana, and we're observing the nimitta. And then at a certain point, the nimitta kind of goes away."
+        },
+        {
+            "start": "00:30:43",
+            "end": "00:31:17",
+            "speaker": "Daniel Ingram",
+            "text": "Yeah, sort of, except it goes away in a specific way. It becomes the dark dot or the black dot, as I tend to call it. And the black dot tends to be a little bit bigger. It may have obvious edges that may have a little ringiness around them and like purple or green or even like a pale yellow or white sometimes. And it tends to be like, wow, this thing seems black, except nothing is actually true black when you're looking at it. It's always got some texture, a little bit of static. Like even if you were looking at a black screen on a TV back when we had TVs that had tube displays or whatever."
+        },
+        {
+            "start": "00:31:18",
+            "end": "00:31:19",
+            "speaker": "Michael Taft",
+            "text": "Cathode ray tubes."
+        },
+        {
+            "start": "00:31:19",
+            "end": "00:32:05",
+            "speaker": "Daniel Ingram",
+            "text": "Yeah, you could see some graininess to it. It's not true black. And in the same way as this, you will never see true black. And black itself even is a color. And so a lot of people, they've gotten used to other colors like red or yellow or green or purple or whatever or white, and then they see black and they're like, well, black's not a color. Black is a color. This is a really hard thing to get people to learn, but it's very important. And once you recognize that black is a color and it can hold your attention just as well, you can track the blackness and start to check out the blackness and really go into all the fine little intricacies of the blackness and exactly how black is each little part of the black dot and what's kind of happening around that edge, because that's where the stuff starts getting interesting. And the more you focus on the black dot, the more the edge starts getting interesting. And then you can start to get into this wider stuff."
+        },
+        {
+            "start": "00:32:05",
+            "end": "00:33:37",
+            "speaker": "Daniel Ingram",
+            "text": "And here's where you get into the murk. And a lot of people, this sort of correlates with, you know, very early third jhana kind of factors with, you know, tranquility and equanimity. But unfortunately, that tranquility and equanimity early on can be like sloth and torpor and dullness and doubt. As you get into sort of a dissolution out past the A and P-ish kind of aspects of it, can be very confusing for people. And they're like, wow, I had the strong dot. I had the strong center. It was really nice and clear and bright and I can track it. And now I've got this sort of weird diffuse kind of vague thing that responds really slowly and I'm kind of spacing out and it's frustrating. And that's what we call the murk. And the murk is actually where the vast majority of the party is. And that's where the interesting work happens and where most of the cool images occur. And the murk is actually really, really important, but for people who really like the one-pointedness of the dot and that sort of sharpness that the dot has, it can be a frustrating object until you sort of get an acquired taste for the murk. The murk is having third-jhanic elements, is a more sophisticated, higher form of concentration, but the center seems out of phase and dark, and the periphery, which is where the party is, also seems kind of ghostly or strange or murky, which is why we call it the murk. And until you get those factors of mind built up and get some sort of neural strength or conditioning or training with looking at wider, more complicated, intricate objects, the murk can be sort of a stumbling point for some people. But with reassurance and just continued practice, it starts to gently show you its wonderful secrets."
+        },
+        {
+            "start": "00:33:37",
+            "end": "00:34:20",
+            "speaker": "Michael Taft",
+            "text": "Yeah, it seemed like this was the sticking point for many people at the retreat, was they got in the murk. And as you mentioned, it has some of the factors of the dukkha ñanas or roughly the dark night. And so they were kind of lost in the murk. It's like, there's just the dot, the nimitta has disappeared, the red one anyway. And you're just sitting in kind of these swirling, for me anyway, swirling clouds of interesting darkness. But for many people, it seemed like that went on a long time. And it had the ñanic factors of the dukkha ñanas, where they were really unhappy with it, having a hard time digging their way through the murk, as it were."
+        },
+        {
+            "start": "00:34:20",
+            "end": "00:36:07",
+            "speaker": "Daniel Ingram",
+            "text": "Yeah. And so that's where we continue to evoke what we have come to call Nikko's triad of patience, faith, and curiosity. So patience, meaning the murk takes some time. You're developing wider peripheral muscles. We've spent so much time developing our visual system on things in the center by reading, by looking at a computer screen or our phones. We've looked at very narrow things. But, you know, because we haven't been wandering in forests or jungles or savannas or whatever, we haven't developed a lot of our peripheral attention in the way that I think most people would have previously. And so if you spend a lot of time in forests or doing something that requires a lot of peripheral vision, then perhaps this will be easier for you. Parts of our brain seem kind of asleep, and they feel kind of asleep when you first start to activate them or get to them, and they can feel kind of sluggish or weak or just not well developed, and it just takes some time. And so with patience and with faith that with time these things will start activating and getting stronger and brighter and clearer and more interesting and intricate, and with curiosity, like, okay, what is this murk thing? How does it work? How does attention work in this? Why does now an intention to have something show up, to have a few second delay, you know, and then it kind of starts to show up really slowly, whereas the red dot responded to things really quickly? What's up with this wide peripheral thing? What's up with this sort of interesting sort of grainy pixelation? What's up with this sort of sense of budding three-dimensionality? What's up with this, you know, sort of sense of calm and expansiveness, that this makes me kind of feel sleepy? And can I figure out a way to be simultaneously expansive and kind of wide without being sleepy, and instead be kind of wide yet bright-minded? And that's the more sophisticated form of concentration that just takes time to develop. So with faith and patience and curiosity about what this thing is, hopefully people can get through it."
+        },
+        {
+            "start": "00:36:07",
+            "end": "00:36:41",
+            "speaker": "Daniel Ingram",
+            "text": "And you're right, the dukkha ñanas can also show up. So, you know, fear, misery, disgust, desire for deliverance, re-observation. The murk is a common time for people to get a little more projective or reactive or irritable or whatever it is, have some of their stuff come up. And so just watch for that. If you're like, wow, I'm getting all this murky stuff and now I'm feeling kind of restless or weird or reacting to people around me or the tradition or whatever. Yeah, that may just be what the murk does. That's normal, murky stuff. It's kind of like you get to walk through the strange, creepy, foggy, dark forest to get to the neat castle or something. It's kind of like that."
+        },
+        {
+            "start": "00:36:42",
+            "end": "00:36:45",
+            "speaker": "Michael Taft",
+            "text": "I found the murk strangely pleasant."
+        },
+        {
+            "start": "00:36:45",
+            "end": "00:36:46",
+            "speaker": "Daniel Ingram",
+            "text": "Yeah, it can be."
+        },
+        {
+            "start": "00:36:47",
+            "end": "00:36:48",
+            "speaker": "Michael Taft",
+            "text": "Wide. It's kind of chill."
+        },
+        {
+            "start": "00:36:49",
+            "end": "00:36:49",
+            "speaker": "Daniel Ingram",
+            "text": "Yeah."
+        },
+        {
+            "start": "00:36:50",
+            "end": "00:37:10",
+            "speaker": "Michael Taft",
+            "text": "There's actually a lot going on. It's just sort of like watching, as you said, it's never really black on black. It's sort of like different layers of darkness interacting in a three-dimensional fractally way. It's kind of wonderful. Very, very deeply focused and calm, but like really broad, right? It's kind of panoramic."
+        },
+        {
+            "start": "00:37:11",
+            "end": "00:37:59",
+            "speaker": "Daniel Ingram",
+            "text": "Yeah, true. That's that third jhana beauty to it. So the third jhana is the weirdest of all the jhanas. We're not used to something that's sort of wide and diffuse. We think a lot about, you know, one-pointed attention or focused attention. But instead, the third jhana presents us with something very different from that, where the center doesn't work very well, it seems, but the periphery starts to. And so that can be very restful to just sit in a wide-open, expansive, kind of diffuse thing, right? And so, yeah, it's nice to be able to have that attitude about it. And then the question is, for people who kind of like the tranquility and the equanimity, how to bring in a little bit of that sharpness as well that helps augment and clarify the beauty of that equanimity and tranquility."
+        },
+        {
+            "start": "00:37:59",
+            "end": "00:38:06",
+            "speaker": "Michael Taft",
+            "text": "Yeah. So let's say someone has dutifully marched through the murk. Where do they arrive?"
+        },
+        {
+            "start": "00:38:06",
+            "end": "00:38:39",
+            "speaker": "Daniel Ingram",
+            "text": "Yeah. So this gets complicated, right? One of the things that we found was a big thing on these retreats is you've got to be careful about managing expectations, because the vast majority of the party is in the murk. The murk is where the action is. The murk is where the interesting stuff takes place. That's where you can learn color control. That's where you can learn image control. That's where you can learn movement control. That's where you can make things more three-dimensional. You can do interesting things with the mantra, if you're doing a mantra with this kind of practice, which I like. We haven't talked much about that, mostly the visuals, but the mantra is an important aspect."
+        },
+        {
+            "start": "00:38:39",
+            "end": "00:40:11",
+            "speaker": "Daniel Ingram",
+            "text": "And so the vast majority of people will actually spend most of their time in the murk, right? Because once you get out past the red dot and then past the black dot, you're in this thing, and that's what takes the time. And so like 80, 90 percent of my time on a retreat is going to be in this phase, and figuring out how to navigate it and fine-tune it and amplify it and work with the colors and do interesting stuff. Some people like color control more, and that's the thing they'll focus on. So they'll start like figuring out, oh, I really like the color purple, which is my color or whatever. And some people really like other colors, and they'll start like, oh, I like it when this color shows up, and they'll start making more of that. Or some people kind of do like you do with cloud busting, or, you know, seeing cloud animals or cloud images, where you sort of start taking the swirling mists and things and start turning them into patterns and stuff. And some people start to see more and more rich and interesting patterns show up, and fractals and sacred geometry and complicated interesting patterns. And then some people like characters, like they'll spend their time like trying to tune these things into sort of cartoon-like images that will interact with or have stories, or animals — one guy was getting into tigers — and, you know, a lot of people like faces or eyeballs, and you know, whatever you want to turn into. This is where people start to differentiate, and you get to see what people like to concentrate on. And really they all work, as long as you're concentrating on these things they all get interesting, and they all will continue to develop concentration if you're putting in the time."
+        },
+        {
+            "start": "00:40:11",
+            "end": "00:41:34",
+            "speaker": "Daniel Ingram",
+            "text": "So some people will tune this more, right, rather than like color control or image control or shape control. Some people really like the more insidey aspect of this. So if they're tuning — because that's what the topic of this podcast is, sort of — and they'll really tune to just watching all the little pixels, all the little blips, kind of regardless of what the images are. And yeah, they may have like this image or that image and have some preferences and see some of that interactivity, but some people just kind of turn this into like, it almost gets like pixel rain, or like, you know, where everything's kind of like all these little staticky things getting more and more staticky or more and more brighter, sparkly or poppier, shifty or fluxy or rotating. I get a lot of things that look like hallways where I'm going down a long tunnel or a long hallway where the lines are sort of passing by me. And or I'll get into a lot of rotating things that look sort of like dandelions or fingers all flowing or fluxing or, I don't know, you know, various things that will show up. And so it can get into these more elaborate, complicated images that have sort of repeated patterns, or they can get into complex fractal stuff or whatever. And at that point is where, again, there's a lot of variability, whereas the red dot, the black dot thing, it's much more standardized. But the important thing is to really just keep concentrating and really paying attention to exactly what is going on and exactly what you're seeing and exactly how it works. Because just doing that in some ways will lead you on your own journey."
+        },
+        {
+            "start": "00:41:34",
+            "end": "00:42:55",
+            "speaker": "Daniel Ingram",
+            "text": "And so there's part of this, this is very personal. And people have their own aspects of this that are really like, wow, I did this and I got this interesting thing. And every time I've done this on retreat, I've gotten totally different stuff. You know, after I did this the first time and I was getting this very regular sacred geometry, I thought, of course, every time I do this I'll get regular sacred geometry. No. Sometimes I got monsters, sometimes I got, you know, huge fields of waving mushrooms, sometimes I've gotten all this strange stuff. And I'm not sure why, but I have this weird faith that it starts to show you things that you kind of need to see. And if you can get out past the sort of creepy stuff to the sort of more equanimity, flowing stuff, where things get more three-dimensional and things start getting more lifelike and things start getting more interactive and expansive and peaceful, and the gap between you and the objects, the sort of space between you and whatever you're looking at, starts to fill in with stuff, or the background starts to crack and open up and you start to see vast spaces beyond what you thought was kind of the threshold of how far into this thing you could see depth-wise. Or you start actually getting more photorealistic images, which sometimes can show up kind of early on and then disappear, but then if you go through the murk, then you get to more photorealistic stuff, and these can become interactive with personal messages and sort of mythic, magical, archetypal interactions."
+        },
+        {
+            "start": "00:42:55",
+            "end": "00:43:45",
+            "speaker": "Daniel Ingram",
+            "text": "And then there's the insight stuff. So, you know, people will start to notice the vast flowy fluxiness of space, and the flowiness of this side, of their head flowing into the thing, of their body flowing into the thing, of the energies flowing through them. And that's really where you're starting to get into real fourth jhanic territory, where you start to get these fourth jhanic integrative factors that start to take out the stuff that's on this side, the watcher side, and start to turn the whole space that you're in into one big object that you can then hopefully see the true nature of. And that's how you would get stream entry or the next path or whatever you're working on. And so that's kind of where it leads. But again, expectation management is important. For some people, it will take retreats and 100 or 200 hours to get to that. Some people will get there a lot faster. There's this range of talent and, you know, proclivity and training and background. So, you know, it's hard to predict."
+        },
+        {
+            "start": "00:43:46",
+            "end": "00:44:16",
+            "speaker": "Daniel Ingram",
+            "text": "But, you know, those are some of the places that this can lead to. But it's actually a fascinatingly wide and wild topic. And it's been really cool to hear all the reports of my fellow adventurers who are going out into this wild territory and seeing what shows up. And it really helps explain so much of what you see in the old texts, where they're talking about all this elemental stuff, or these powers or these realms or all these deities or, you know, demons or ghosts or devas or beings, all the stuff that you're like, really?"
+        },
+        {
+            "start": "00:44:16",
+            "end": "00:44:17",
+            "speaker": "Michael Taft",
+            "text": "Yeah, actually, really."
+        },
+        {
+            "start": "00:44:18",
+            "end": "00:44:53",
+            "speaker": "Daniel Ingram",
+            "text": "And so if you go far enough out past the murk, or even sort of in the murk in some weird way, you can start getting to these experiences that seem much more fantastic, except they're actually accessible if you do the practices that they did back in the day that led to those experiences. This is actually not much of a surprise, really. But anyway, it's still viscerally, it's really exciting when you get there. You're like, oh my golly, it actually is this thing, and it produces these cool effects that I read about in some old text or book or whatever and I just thought were just mythical, but actually you can do this. That was a long answer."
+        },
+        {
+            "start": "00:44:53",
+            "end": "00:45:09",
+            "speaker": "Michael Taft",
+            "text": "Yeah, it's a great answer. Let's slow that down just a little bit and rewind to, okay, so you've been working with the murk a long, long time. Exactly how do we switch into fourth jhanic territory and insight, stream entry type territory?"
+        },
+        {
+            "start": "00:45:09",
+            "end": "00:46:43",
+            "speaker": "Daniel Ingram",
+            "text": "It's very hard to explain how to shift into that stuff, and I wish it was easy, but it's not. There's some strange thing that happens. So the transition between third jhana and fourth jhana is one of the hardest ones to explain. But you're in third jhana and then you're sort of in fourth, and there's usually kind of almost a spacing out period or like a letting go that allows you to sort of cross that boundary between the two, because that's sort of the tricky boundary, right? Even doing straight up insight practices to get from re-observation to equanimity, that's the tricky boundary, or, you know, one of the tricky boundaries. And in that same way with this stuff, to get from the murk to the sort of expansive, integrative, interactive, much more three-dimensional, much more kind of living, vivid, more photorealistic, sometimes flowy, fluxy, kind of complete, vast, expansive spaces that have more of those fourth jhanic factors, the best thing I know to do is just to get the murk really done well. Because as they say in the old texts, if you try to jump to a jhana that you're not ready for yet, that you haven't built up the necessary foundation for, then you just miss and you don't get it and you just fall out or you fall back. But if you've developed the jhana before it really, really well, then the transition is not only much more likely when you try to intend to do it, but it may just show up on its own. And shows up on its own is how it happens for the vast majority of people the vast majority of the time. And so, again, the murk is where the party is."
+        },
+        {
+            "start": "00:46:43",
+            "end": "00:47:25",
+            "speaker": "Daniel Ingram",
+            "text": "Because a lot of people will get into the mentality of, oh, I need to get past the murk and into the fourth jhana and to equanimity or into these sort of more clear, expansive experiences. And that subtle rejection of the murk can really fuck up your ability to get the murk appreciated as what it is and to understand it and to work with it properly on its own terms. That subtle future mind I don't think is helpful. And so when trying to get to the fourth jhana, one has to be where one is and with what's going on, and be very careful that that subtle future mind thing doesn't derail your practice."
+        },
+        {
+            "start": "00:47:25",
+            "end": "00:47:41",
+            "speaker": "Michael Taft",
+            "text": "So let me ask it in a different way. Here we are, totally equanimous with the murk, happy to be in the murk, exploring every little detail of the murk. How do you know when the fourth jhana or the fourth jhanic factor arises?"
+        },
+        {
+            "start": "00:47:41",
+            "end": "00:48:50",
+            "speaker": "Daniel Ingram",
+            "text": "Yeah, so the things to look for are, one, much more three-dimensionality. So either vast sort of expansive spaces through cracks and whatever it was you were looking at, or those might just kind of dissolve and you might see something much larger in front of you, like you're standing on the deck of an observation tower or a spaceship or something, and looking out at this bigger field of much more clear, vivid, less pixelated, more photorealistic, like you're looking at an experience — that's very fourth jhanic. So there's the expansiveness out in front of you, but there's also the bridging of the gap towards you. Let's say your nimitta looked like it was like 18 inches to two feet away or something when you close your eyes, which is hard to tell distances with your eyes closed, but let's sort of work with that. When you start seeing stuff that's kind of bridging the gap all the way to your face between that thing and this thing, and you're seeing this like, you know, inside a terrarium rather than the backside of a terrarium or something, that is also very fourth jhanic kind of stuff."
+        },
+        {
+            "start": "00:48:50",
+            "end": "00:49:31",
+            "speaker": "Daniel Ingram",
+            "text": "So working with that spaciousness between the sense of observer and the object and seeing the things that are happening in there is very fourth jhanic. When the nimitta and the background start becoming kind of the same interactive object, that's also very fourth jhanic. So when like the nimitta might be like sinking into the background or oscillating with the background or getting wrapped in stuff from the background or the murk or the whatever, and the murk is wrapping around the nimitta and they're interacting in this much more three-dimensional kind of like they're all part of the same system kind of way, that's also very fourth jhanic, because the fourth jhana kind of puts together all the things you learned from the previous three jhanas all at the same time, and then you get the additional more complete space element thing."
+        },
+        {
+            "start": "00:49:31",
+            "end": "00:50:50",
+            "speaker": "Daniel Ingram",
+            "text": "Anything where you feel like highly immersed in it, like if you start getting images or the experience like you're flying over a landscape or like you're sitting on the bottom of the ocean, those are extremely fourth jhana kind of experiences. If you're traveling out of body and suddenly like find yourself in the candle or in the fireplace or like going off somewhere else, you know, or you're some other realm all of a sudden, or suddenly you realize that, wait, you're not sitting in the room anymore or wherever you were meditating. You're suddenly sitting in something that feels like a really different space and you're like interacting with it as if you're in that space, as if you were in a different place or realm. That's also got a lot of that fourth jhana feel to it, as well as anything starting to flow or flux that's highly volumetric, that seems to be coming towards your face or going far away into the distance, like turning, spinning, as if space is spinning or space is starting to turn or move or shift or rotate or flux. Like if you're starting to see wiggles in space, like three-dimensionally, like space was kind of wiggling jello and you could see the jelloness of it kind of wiggling, that's also got that really fourth jhana kind of feel to it. So those are a lot of the clues that you've got more of a fourth jhanic feel kind of showing up to what's going on. That may not be a complete list, but that's a bunch of them."
+        },
+        {
+            "start": "00:50:50",
+            "end": "00:51:23",
+            "speaker": "Michael Taft",
+            "text": "The thing that happened to me when I was trying this practice, the first time the fourth jhanic stuff showed up, it was so surprising, because you're hanging out in the murk. I'm hanging out in the murk watching these kind of like dissolving clouds of swirling interestingness. It's very fascinating. You know, it's like watching a really interesting dark screen of stuff moving around. But there's just this sudden vast city below me just erupted into vision, and it was like completely real looking."
+        },
+        {
+            "start": "00:51:24",
+            "end": "00:51:25",
+            "speaker": "Daniel Ingram",
+            "text": "Like hyper real."
+        },
+        {
+            "start": "00:51:25",
+            "end": "00:51:56",
+            "speaker": "Michael Taft",
+            "text": "Yeah. And then suddenly the vantage point swept down from the sky and was like an inch off the ground, like whipping past like plants and rocks, but like very high resolution, really bright colors, totally immersive, completely weird. I mean, it was just doing it on its own. It wasn't something I was thinking about. I was just suddenly flying through this like, let's say, ancient city of some sort, like an Aztec city or a Cambodian city or something."
+        },
+        {
+            "start": "00:51:57",
+            "end": "00:51:57",
+            "speaker": "Daniel Ingram",
+            "text": "Cool."
+        },
+        {
+            "start": "00:51:58",
+            "end": "00:52:16",
+            "speaker": "Michael Taft",
+            "text": "Right. It was super cool, but just completely unexpected. That is not what I thought was going to happen. It's like you're just looking at this interesting darkness and suddenly, boom, this total vision erupts. And it seems as real as anything or even realer than something you would see with your eyes open."
+        },
+        {
+            "start": "00:52:16",
+            "end": "00:52:16",
+            "speaker": "Daniel Ingram",
+            "text": "Yeah."
+        },
+        {
+            "start": "00:52:17",
+            "end": "00:52:20",
+            "speaker": "Michael Taft",
+            "text": "So I presume that's an example of what you're describing."
+        },
+        {
+            "start": "00:52:20",
+            "end": "00:53:14",
+            "speaker": "Daniel Ingram",
+            "text": "That's that stuff. And this gets into the whole discussion of screens, right? So because we needed more terms to describe what we were seeing, we came up with this sort of screen terminology. And then I gave them numbers because they seem to unfold in a specific sequence. So the first screen is like the red dot. And then the second screen is the murk, and it's sort of pixely and it's got kind of a delay thing. And it's sort of semi-three-dimensional, but kind of like on the inside of a surface. It's like you're looking at a semi-three-dimensional screen in front of you. And then a third screen is where you start to get photorealistic images, but you don't seem to be in the image. You're not actually in a different space. So photorealistic stuff is what we call third screen. And then fourth screen is when you're actually in another realm. You're literally somewhere else and it feels like you're someone else, like exactly what you're describing. So that's what we would call fourth screen stuff."
+        },
+        {
+            "start": "00:53:14",
+            "end": "00:53:18",
+            "speaker": "Michael Taft",
+            "text": "It was so weird because you're inside an environment."
+        },
+        {
+            "start": "00:53:18",
+            "end": "00:54:14",
+            "speaker": "Daniel Ingram",
+            "text": "Yeah. So fourth screen is immersive, right? Suddenly you're in the image. You're in the photorealistic stuff. It's like third screen, the photorealistic aspect, but suddenly you're in a realm. And so it's basically realms and that kind of thing. And these actually don't perfectly correlate with jhanas necessarily, because you can actually get some photorealistic images very early on before you have much jhanic factors developed. And some people would get deep, deep into fourth jhanic experiences and even have fruitions, but not getting them in a very fourth screen, immersive, realmy kind of way. And so we realized that we needed jhanic terminology, but we also needed screen terminology, to kind of realize that the jhanas and what you're actually seeing and its characteristics don't always perfectly correlate. And so that's why we developed the screen terminology to help with that, as sort of a technical working man's or woman's lexicon."
+        },
+        {
+            "start": "00:54:14",
+            "end": "00:54:35",
+            "speaker": "Michael Taft",
+            "text": "Fascinating. Okay, so we're going to just simply say here we are in a fourth jhanic kind of thing. We've come out of the murk, we've come into some kind of immersive environment, photorealistic environment. Now, how do we work from there towards insight, towards awakening?"
+        },
+        {
+            "start": "00:54:36",
+            "end": "00:55:05",
+            "speaker": "Daniel Ingram",
+            "text": "Yes, that's another challenging question. The first thing is, the more you develop an ability to appreciate the three characteristics of what you've seen up to that point, the more your mind will be conditioned to see that of whatever it is you're looking at, whatever screen or whatever jhana qualities are around. So the impermanence, not-self, and non-satisfactory elements of these images."
+        },
+        {
+            "start": "00:55:05",
+            "end": "00:55:07",
+            "speaker": "Michael Taft",
+            "text": "Yeah."
+        },
+        {
+            "start": "00:55:07",
+            "end": "00:55:52",
+            "speaker": "Daniel Ingram",
+            "text": "And so impermanence is all the little changing, flickering, subtly shifting pixelation and fine details and all of that. Just even a little subtle flickering image totally seems to work for the impermanence characteristic. Anything you're noticing changing in the visual screen is an impermanence thing. And then the more widely you can notice that, like whole fields shifting or moving or changing or fluxing or flowing or rotating or spinning or dropping away or coming in towards or whatever, all of that is really good. And the more broadly and inclusively you can begin to appreciate the sort of impermanence, the better. In terms of the no-self quality, that's another interesting one, to notice that all of these are observed objects, and even you can observe all the sensations in your head, right? So that's a funny thing."
+        },
+        {
+            "start": "00:55:52",
+            "end": "00:55:54",
+            "speaker": "Michael Taft",
+            "text": "Yes."
+        },
+        {
+            "start": "00:55:54",
+            "end": "00:57:38",
+            "speaker": "Daniel Ingram",
+            "text": "And that these things all arise causally, so to notice the causal back and forth nature of this, is just a cause leading to an effect leading to, you know, an effect, an effect, an effect, and causes leading to effects, and the iterations of, I intend to do this, it seems the intention arises to have a color arise or to look over here, to move attention in that way, or to open attention up, or to do whatever. And then the visuals do whatever they do. And then I react to that however I react. And this sort of back and forth reaction, intention, judgment, visual change, you know, iteration process, each of those pulses is actually also part of the impermanence thing, that back and forthiness. But it's also part of the no-self thing, the natural unfolding of intentions and reactions and that process. And then the suffering is this sort of weird tension in the sense of practicing itself, of wanting something itself, and keeping open to that sort of weird, desirous thing where you want something to happen. You're doing this for something. That wantingness, that, wow, that doesn't look quite right. I want it to be this way. Maybe that will satisfy me-ness. That, wow, maybe I could get to cooler images-ness. That wantingness is easy to miss, but as anybody who's done much of this will tell you, it's a powerful part of the practice that people just don't like to pay attention to. But paying attention to it, it turns out, really leads to good insight stuff, and it's highly recommended, right? So you can feel yourself kind of grabbing on, to your mind is tugging on to the parts it wants to have happen, and keeps subtly pushing and holding and sticking with these things it finds delightful and trying to go in a certain direction."
+        },
+        {
+            "start": "00:57:38",
+            "end": "00:57:41",
+            "speaker": "Michael Taft",
+            "text": "And all of that is the unsatisfactoriness of the experience to be explored."
+        },
+        {
+            "start": "00:57:41",
+            "end": "00:58:23",
+            "speaker": "Daniel Ingram",
+            "text": "Absolutely. And so just the more you've done that all along the way, the more likely your mind is to do that naturally when you get to the fourth jhanic stuff, which definitely looks the coolest when you get to it in a fourth screen mode. The fourth jhana can take anything, it turns out, as object, which is really interesting. It doesn't have to be some dramatic image. I've gotten plenty of fruition cycling through where what the mind took from a high fourth jhanic point of view and then conformity knowledge point of view, from a visual point of view, was really boring and murky. But from an insight point of view, it really comprehended the heck out of it. The mind totally locked onto it. Three characteristics of this boring, murky image, and got it."
+        },
+        {
+            "start": "00:58:23",
+            "end": "00:59:39",
+            "speaker": "Daniel Ingram",
+            "text": "And so one has to be careful with judging the image you're looking at, because you can look at anything in a fourth jhanic way, and conformity knowledge, which is the setup for stream entry or fruition or whatever, can take literally any content, any qualities, colors, shapes, images, screens, it does not matter. And so the biggest trick, if you really want to tweak this from an insight point of view, is to attend meticulously to the three characteristics whenever possible. Because the interesting thing is, when you get to the fourth jhana, the real high end of it, just like the fourth screen stuff, takes over, becomes its own thing, is beyond the sense of you doing it. It's just what shows up from prior conditioning, from expectation, intention, from factors that are sometimes very hard to identify. But the setup is something you do have more control over, it seems. And so all along the setup, if you set yourself up looking at things from a very insight point of view, then when you get to the mind space in which the mind can take things in a very complete way and comprehend them very clearly, if it's already conditioned and habituated to do that, that's what it's vastly more likely to do."
+        },
+        {
+            "start": "00:59:39",
+            "end": "01:00:42",
+            "speaker": "Michael Taft",
+            "text": "So my question is about how this meticulous and very fine-grained contacting of the three characteristics that you're developing through all of this interacts with the screens. Because if you are, as you know, trying to develop jhanas, having an overactive vipassana habit can kind of screw up your jhana. It makes it a little harder, because you're so used to deconstructing everything that the jhanic factors have a hard time kind of coalescing. And so you have to back off the insight quality a little bit to let the jhana sort of gather itself into a forceful experience. And then, of course, after that, you do the vipassana. So I'm curious if, as you're describing, getting all meticulously into the insight factors, does that screw up or impede the development of the screens in the fire kasina practice in a similar way?"
+        },
+        {
+            "start": "01:00:42",
+            "end": "01:01:52",
+            "speaker": "Daniel Ingram",
+            "text": "Yeah, definitely. In particular, the poster child for this is a guy named Christopher who was on the Denman Island retreat, who really was tuning this to insight. And he definitely mentioned that he was just getting rains of pixels and rains of particles and sort of blowing particle-y winds and all of this sort of just staticky stuff, but really intense, strong, clear static. And he was really attending to all the static. And so he did not get nearly as much of the bodily jhanic factors of bliss or tranquility or whatever. And he didn't get nearly as many cool images. But man, if he didn't get some insight. And so it was one of the more powerful examples I've seen of someone who was able to tune this, because he's like, yeah, that stuff's all cool, but what I want is insight. And so he just sort of filtered for that and approached it from a much more three-characteristic-y point of view than an image or color control or screen advancement or jhanic development point of view. And there's definitely inertia to that."
+        },
+        {
+            "start": "01:01:52",
+            "end": "01:02:49",
+            "speaker": "Daniel Ingram",
+            "text": "That said, if you get your concentration strong enough by any means, sort of a momentary pixely, rainy, snowy, blowing kind of, you know, pixel rain or whatever, staticky thing, or any other way, then at some point that strong concentration becomes more malleable, and you can turn it to some of the other stuff if you wish to. In the same way, if you get your jhanic trip really strong, truly very strong and very powerful sort of jhanic mind factors, then one, in theory, can turn that to insight and start watching everything just pixelate and shred and disappear and flux and flicker. And so in theory, you can kind of go back and forth, but these things definitely have inertia, and whatever conditioning or practice we're bringing to this is what we're more likely to see early on. If you decide, no, I really want the other, you know, if you're giving this some good attention, hopefully it won't be that long before you can start tuning it back the other way, to less three characteristics, more imagery or more magic or more whatever you want."
+        },
+        {
+            "start": "01:02:49",
+            "end": "01:02:56",
+            "speaker": "Michael Taft",
+            "text": "Have you seen people take the fire kasina to the immaterial type jhanas?"
+        },
+        {
+            "start": "01:02:56",
+            "end": "01:03:28",
+            "speaker": "Daniel Ingram",
+            "text": "Yeah, so the classic person, Shannon, was playing with that a whole lot on this last retreat, though as she and I and a number of other people have noticed, the inertia of color is tricky. So if you've been seeing colors and colors and colors and colors, to shut the colors off can sometimes be a real trick, and trying to get them to shut up, like stop, hey, I don't want colors, now I want to go formless, I want to, you know, boundless space, boundless consciousness, I want this clean nothingness, come on colors, would you get out of here? There's definitely inertia."
+        },
+        {
+            "start": "01:03:28",
+            "end": "01:03:31",
+            "speaker": "Michael Taft",
+            "text": "Anytime, guys, you can shut up now. You know, the mantra, would you stop, please? Any day."
+        },
+        {
+            "start": "01:03:31",
+            "end": "01:04:38",
+            "speaker": "Daniel Ingram",
+            "text": "Yeah, so there's definitely an inertia to these things, but I've usually found if I give them some number of hours of really directing it towards the more formless stuff that, you know, worked on before, and all that, then, you know, I can figure out how to go there, but it definitely is more tricky. And so that's why they tend to say in these practices, you know, when you're doing this practice, do this practice. If you're doing that practice, do that practice. And while it is kind of fun from a sort of a hyper-athletic, okay, can I show off and shift from this to that, to this color, to this jhana, to this formless thing, to this whatever, that's fun and interesting and a cool thing to learn if you're up for that kind of meditational athleticism. But there definitely is an inertia to these practices. And I think that's cool, actually. So hopefully, you know, if you've done this practice, later on you can do some other practice. And I found that it's generally easier to just give these things their due. And if I'm really doing colors and mantra, just do colors and mantra. If I'm just doing formless stuff, really just do formless stuff. And while it is true that all of these things develop concentration, yeah, the inertia can be annoying."
+        },
+        {
+            "start": "01:04:38",
+            "end": "01:04:52",
+            "speaker": "Daniel Ingram",
+            "text": "Yeah, so one of the things that's most exciting for me about this practice, and why I continue to do it. So for example, I've got another two-week retreat where I'm getting together with 10 other people in a rented castle in Normandy, France, coming up in the first two weeks of April."
+        },
+        {
+            "start": "01:04:53",
+            "end": "01:04:55",
+            "speaker": "Michael Taft",
+            "text": "Wow, that sounds really cool."
+        },
+        {
+            "start": "01:04:55",
+            "end": "01:05:01",
+            "speaker": "Daniel Ingram",
+            "text": "Yeah, really fun. It's a repeat of last year. We had Frogwarts, you know, sort of like Hogwarts, but, you know."
+        },
+        {
+            "start": "01:05:01",
+            "end": "01:05:02",
+            "speaker": "Michael Taft",
+            "text": "In France."
+        },
+        {
+            "start": "01:05:02",
+            "end": "01:05:12",
+            "speaker": "Daniel Ingram",
+            "text": "In France. Someone's going to get offended. I apologize. Anyway, you know, it's like Hogwarts because we're studying magic, right? And so this is Frogwarts 2, and I'm really excited."
+        },
+        {
+            "start": "01:05:12",
+            "end": "01:06:08",
+            "speaker": "Daniel Ingram",
+            "text": "And the reason I continue to be excited about this practice is it's just so fun to explore. And every time I go into it, it gives me something new. And these days, I have no idea what I'm going to get out of it. I don't know. And it gives me all these neat things that I didn't know to ask for. And I also get to watch all these other people around me really learn the stages of insight, with the vipassana jhanas, with the jhanic factors, with attention shapes. And they have seen it for themselves so well that now they really can't miss it. I mean, you can't not notice it because it's so glaringly obvious. And that's really exciting for me, because then people become vastly better diagnosticians. They become vastly better phenomenologists. They become much more attuned to subtleties of frequency and what analysis means and what intention is and how it interacts. And intention itself becomes a lot brighter."
+        },
+        {
+            "start": "01:06:09",
+            "end": "01:07:36",
+            "speaker": "Daniel Ingram",
+            "text": "And just the cool places this thing can go, because now I don't know where it's going to take me on this retreat. I have no goals beyond just the fact that I'll get concentrated, show up, and something will be interesting, and I'll follow it, and I'll end up somewhere interesting, and so will the people around me, and that is just really delightfully exciting to me. And I have a lot of faith in this practice now that it will give me what I need, that even if I'm staring at a candle and I need water element, it will give me that, or air element, or earth element. Also, the elemental understanding that's come from this is just brilliant. I did not get the elements before. I've read about them in alchemical descriptions and magical descriptions and texts. And yeah, like, you know, the earth element's like this and the air element's like this and the water element's like this. But when you've actually seen and felt them as like living, almost divine, luminous, interactive things in this kind of way that you're like, oh, that's earth element, at least for me, this is a much deeper understanding than I previously had before. And other people around me have noticed the same thing, even people who have been doing magical practices that had elemental aspects, you know, for years. And so that's one of the things that's exciting to me about this, as well as, in particular, as we mentioned, people getting paths on this stuff. So I know three people so far who I'm really pretty certain have gotten paths doing this stuff. And two of the paths that I think people got were actually second path. And so that's really interesting."
+        },
+        {
+            "start": "01:07:36",
+            "end": "01:09:10",
+            "speaker": "Daniel Ingram",
+            "text": "And the fact that it continues to work well as an insight object is also very, very exciting. And so the versatility of it and the powerful depths of concentration that people can develop, because a lot of people go on retreat and they don't have anything this immersive, this interactive, this engaging, and their concentration often just doesn't get as strong. It's not that you can't get concentration this strong with other objects. You can, but I don't think it happens as much. And I've had plenty of people report that they had done lots and lots and lots of retreats and all kinds of practices, and suddenly when they did this, they were like, okay, this was next level stuff for them. And that, again, performance will vary. But like, if you go to the Denman Island retreat and you listen to Pierre's reports or Nick Grabovac's reports under the Denman Island thing in the Fire Kasina site, those are really exciting. Or, you know, the stuff that happened at Cochise Stronghold, and you listen to Greg's report, for example. These are exciting things. There are more. I don't mean to, you know, disparage any of the other reports. A lot of people reporting cool stuff there. But just the neat depths of experience that people are suddenly getting into that they had never had before, despite a lot of practice, is just really, really rewarding to me. It helps me understand why they went on for page after page after page in this stuff back in the day when writing was really expensive and time consuming. It seems like this is the kind of practice that really benefits from talking about it with others and comparing experiences and sharing."
+        },
+        {
+            "start": "01:09:10",
+            "end": "01:09:19",
+            "speaker": "Daniel Ingram",
+            "text": "And part of it is that it's fun, right? It's fun and interesting, but it's not fun and interesting in a way that's just a distraction. It's fun and interesting in a way that takes you deeper into your insight practice."
+        },
+        {
+            "start": "01:09:19",
+            "end": "01:09:37",
+            "speaker": "Michael Taft",
+            "text": "And so if someone wanted to find a community or talk to other people about this or learn more about it, would the firekasina.org website be the best place to check that out? Or where would you recommend they go to?"
+        },
+        {
+            "start": "01:09:37",
+            "end": "01:10:15",
+            "speaker": "Daniel Ingram",
+            "text": "So the firekasina.org website — and for those not familiar with kasina, it's kasina with a K. I get asked this, casino? No, it's K-A-S-I-N-A. I don't know if we had spelled it out. It's not a community, but it has a lot of audio reports of people who have done this on retreat and then talked about what their experiences were and given their best advice to people who would come after. But the Dharma Overground, for example, is a community where you could talk about this. Or Awake Network would be another community where you could talk about these things. Or the Stream Entry subreddit would be a cool place to talk about these practices. And there are probably others that I just don't know about, and I'm sure they're great communities. So those would be good places to start."
+        },
+        {
+            "start": "01:10:15",
+            "end": "01:11:18",
+            "speaker": "Daniel Ingram",
+            "text": "A few responsible words of warning about this practice as well, because I don't want to be irresponsible. This stuff can get really, really weird, right? This stuff can get dangerously weird. People can see demons and devils and very creepy monster things. People can go kind of psychotic-y, crazy-ish kind on this stuff. I mean, you're intentionally cultivating hallucinations, which can bleed through into eyes open, not when you're practicing. Some of the visuals you can get can be incredibly compelling. In fact, the farther you go into the screens, oh, I want to have fourth screen experiences. I want to have fourth jhana experiences. Yeah, except those feel like you're literally there, like you're in the video game. They are as real seeming as anything. And just like there are plenty of video game situations where you think, oh, yeah, I really want to be in the video game. No, you don't. What are you, crazy? You don't want to be there right then. No, that's not where you want to be. In that same kind of way, you want to have your head screwed on straight when you do this stuff."
+        },
+        {
+            "start": "01:11:18",
+            "end": "01:12:24",
+            "speaker": "Daniel Ingram",
+            "text": "If you have a serious diagnosis like schizophrenia that's not well controlled or a diagnosis like that, you need to be careful. If you're bipolar or with psychotic features or anything like that, you need to be careful. If you have a history of psychotic breaks, you need to be very, very careful. Maybe avoid some of these practices or avoid doing them intensely, or make sure you keep those who help you stay on the rails in the loop a lot. So people need to be responsible with these technologies because they are very powerful things. It's like entheogens. You need to be very, very responsible with them. This is like that, except that in some ways it's even weirder, because when you're tripping, you kind of expect weird stuff, right? That's sort of what tripping is about for a lot of people. But in this, you may not be expecting stuff that feels like you're totally sober and it's 100% real. That can have a different flavor to it that is in some ways worse — is kind of the wrong word — but more compellingly, creepily, disorientingly, disturbingly something. And so you don't have the excuse of blaming it on the drug, right?"
+        },
+        {
+            "start": "01:12:24",
+            "end": "01:13:22",
+            "speaker": "Daniel Ingram",
+            "text": "And so in that same kind of way, people need to be safe with this stuff. And if you start going, okay, no, wait, I'm getting weird, or people around me are saying, hey, you're getting weird, or you're like, wow, yeah, maybe I need some help, get some help. Stop doing the practice. Ground down. Tell somebody, you know, reach out to one of the communities or wherever, your teacher or your friends or dharma or something, or a psychologist or psychiatrist or family or whatever, spouse, partner, and keep somebody in the loop, just so that we're meditating responsibly. Because this is high-end powerful junk. At the high end, which is the interesting reason to do this, actually — the low end is actually fascinating. Even the low end, you can develop much more strong concentration than you might ordinarily in the same amount of time, I think, doing some other practices. Again, I don't mean to be all like, this is the best practice ever, but it certainly is a really cool one. But that said, if you're going for the high end stuff, particularly on retreat, you know, practice safe meditation. Be prepared for things to maybe get pretty unusual."
+        },
+        {
+            "start": "01:13:23",
+            "end": "01:13:37",
+            "speaker": "Michael Taft",
+            "text": "Yeah. And a lot of people think, oh yeah, I'll handle things once they get really unusual and I'll be fine. That's not always true. And we may think, oh yeah, I've really got my head screwed on straight. I'm really sane. I'm really balanced."
+        },
+        {
+            "start": "01:13:37",
+            "end": "01:13:47",
+            "speaker": "Daniel Ingram",
+            "text": "Yeah. Except that sometimes these things can hit a little deeper than we were expecting or that we had ever experienced. And then you get to learn something about yourself."
+        },
+        {
+            "start": "01:13:47",
+            "end": "01:13:53",
+            "speaker": "Michael Taft",
+            "text": "Indeed. Daniel, thank you so much for taking the time to explain some of the finer points of the fire kasina practice to us today."
+        },
+        {
+            "start": "01:13:53",
+            "end": "01:14:07",
+            "speaker": "Daniel Ingram",
+            "text": "Hey, this has been absolutely delightful. And please check out the fine contributions of lots of other dedicated, accomplished co-adventurers who give their take on these things on the Fire Kasina website, because there's a lot of great information there by a whole bunch of other people."
+        },
+        {
+            "start": "01:14:07",
+            "end": "01:14:13",
+            "speaker": "Michael Taft",
+            "text": "I would recommend reading Daniel's book that he wrote together with Shannon Stein, the book called The Fire Kasina."
+        },
+        {
+            "start": "01:14:13",
+            "end": "01:14:48",
+            "speaker": "Daniel Ingram",
+            "text": "It's available on Lulu and we charge nothing for it. So it's just whatever Lulu cost to print it. We're not making any money on this thing at all. We don't make a cent. And also it's available for free on the Fire Kasina website. And there's also information you can find on this practice in a number of sections of Mastering the Core Teachings of the Buddha, the second edition in particular, which is also available for free at mctb.org. Or if you want a print copy, then you get to buy one from my publisher who does charge something. Anyway, so we're trying to get the information out there as best we can, and all worth checking out."
+        },
+        {
+            "start": "01:14:48",
+            "end": "01:14:50",
+            "speaker": "Michael Taft",
+            "text": "Excellent. All right. Thank you again, Daniel."
+        },
+        {
+            "start": "01:14:50",
+            "end": "01:14:52",
+            "speaker": "Daniel Ingram",
+            "text": "All right. It's been great."
+        },
+        {
+            "start": "01:14:52",
+            "end": "01:15:10",
+            "speaker": "Michael Taft",
+            "text": "That's it for this episode of Deconstructing Yourself."
+        }
+    ]
+}

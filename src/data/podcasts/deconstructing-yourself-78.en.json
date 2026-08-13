@@ -1,0 +1,523 @@
+{
+    "title": "Meditation and the Bayesian Brain with Shamil Chandaria",
+    "url": "https://deconstructingyourself.com/meditation-and-the-bayesian-brain-with-shamil-chandaria.html",
+    "guest": "Shamil Chandaria",
+    "transcript": [
+        {
+            "start": "00:00:00",
+            "end": "00:02:35",
+            "speaker": "Michael Taft",
+            "text": "Welcome to Deconstructing Yourself, the podcast for metamodern mutants interested in meditation, Mahamudra, mantras, Dzogchen, nondual Tantra, Vedanta, and all things liberation. My name is Michael Taft, your host on the podcast, and in this episode I'm speaking with Shamil Chandaria. Dr. Shamil Chandaria, OBE, is a philanthropist, serial entrepreneur, technologist, and academic, with multidisciplinary research interests spanning computational neuroscience, machine learning and artificial intelligence, and the philosophy and science of human well-being. His Ph.D. from the London School of Economics was in mathematical modeling of economic systems using stochastic differential equations and optimal control theory. Later, he completed an M.A. in philosophy with distinction from University College London, where he developed an interest in philosophy of science and philosophical issues in biology, neuroscience, and ethics. In 2018, Dr. Chandaria helped to endow the Global Priorities Institute at Oxford University, an interdisciplinary research institute focusing on the most important issues facing humanity. In 2019, he was a founder of the Centre for Psychedelic Research in the Department of Brain Sciences at Imperial College London, a neuroscience research institute investigating psychedelic therapies for a number of conditions including treatment-resistant depression. He is also funding research on the neuroscience of meditation at Harvard and at the University of California in Berkeley. In 2022, Dr. Chandaria was awarded a British OBE for services to science and technology, finance and philanthropy. He is also a long-term meditation practitioner. And with that, I give you the episode that I call Meditation and the Bayesian Brain with Shamil Chandaria. Shamil, welcome to the Deconstructing Yourself podcast."
+        },
+        {
+            "start": "00:02:35",
+            "end": "00:02:37",
+            "speaker": "Shamil Chandaria",
+            "text": "It's great to be on, Michael."
+        },
+        {
+            "start": "00:02:38",
+            "end": "00:02:51",
+            "speaker": "Michael Taft",
+            "text": "Yeah, of course, you and I talk very often, and so it seems really normal and comfortable to be speaking with you, but this is the first time we're talking on the podcast, so it's great to have you here, and thanks for coming."
+        },
+        {
+            "start": "00:02:51",
+            "end": "00:02:54",
+            "speaker": "Shamil Chandaria",
+            "text": "Yeah, I'm really looking forward to it. It's a really exciting topic."
+        },
+        {
+            "start": "00:02:55",
+            "end": "00:03:35",
+            "speaker": "Michael Taft",
+            "text": "Yeah, and it's a topic that's really been growing very rapidly from the time I did the episode with Ruben Laukkonen talking about predictive processing. It seems like quite a bit has been going on in the field since he and his collaborator, I think you say her name, Heleen Slagter, published their predictive processing paper about meditation. It seems to just be exploding and expanding. And recently, it seemed like maybe less than a month ago, you gave a talk at Oxford on predictive processing and meditation, and published it as a video on YouTube. So lots of people have been seeing that and commenting on that."
+        },
+        {
+            "start": "00:03:35",
+            "end": "00:03:40",
+            "speaker": "Shamil Chandaria",
+            "text": "Yeah, it's had a couple of thousand views already, and it seems to have got some pretty good feedback."
+        },
+        {
+            "start": "00:03:40",
+            "end": "00:03:44",
+            "speaker": "Michael Taft",
+            "text": "I'm so glad. Was that a pretty unusual topic for Oxford?"
+        },
+        {
+            "start": "00:03:44",
+            "end": "00:04:13",
+            "speaker": "Shamil Chandaria",
+            "text": "You know what? The Centre at Oxford is very forward-thinking. It's a multidisciplinary centre for human flourishing. So, it includes neuroscience, philosophy, psychology, anthropology. And psychedelics and meditation, you know, might have been really out there a few years ago, but I think it's an indication of how far we've come that these things are now center stage, I would say."
+        },
+        {
+            "start": "00:04:13",
+            "end": "00:04:22",
+            "speaker": "Michael Taft",
+            "text": "It's so fascinating. Now, you have an interesting background. Can you describe, just in general, how you got involved with predictive processing?"
+        },
+        {
+            "start": "00:04:22",
+            "end": "00:05:23",
+            "speaker": "Shamil Chandaria",
+            "text": "Well, I was a research fellow at the Institute of Philosophy in London University, the School of Advanced Study, and I was the only mathematical guy there. And about 2013, all the neuroscientists and philosophers were saying, hey, you know, there's this thing called the free energy principle, and we just can't understand it at all. Can you take a look at this? And so I really did a deep dive and really tried to understand what's going on. And, you know, the papers are quite complicated. Carl Friston is one of the key architects, and he's very mathematical and rigorous, and in a sense, is trying to do it as properly as possible, which can make these papers pretty inaccessible. So I have a background in physics, and later on, I have a background in machine learning and artificial intelligence. And actually, things really came together, and I started understanding that predictive processing is the closest thing we have to a general theory of how the brain works."
+        },
+        {
+            "start": "00:05:23",
+            "end": "00:05:29",
+            "speaker": "Michael Taft",
+            "text": "And so you found your way in both through math and physics and AI, is what I'm hearing."
+        },
+        {
+            "start": "00:05:29",
+            "end": "00:05:30",
+            "speaker": "Shamil Chandaria",
+            "text": "Yeah, exactly."
+        },
+        {
+            "start": "00:05:30",
+            "end": "00:05:31",
+            "speaker": "Michael Taft",
+            "text": "You were going to say something further there?"
+        },
+        {
+            "start": "00:05:31",
+            "end": "00:06:06",
+            "speaker": "Shamil Chandaria",
+            "text": "Yeah, I was going to say that, of course, it also resonated with me right from the beginning, because I've been a meditator for 35 years. And fundamentally, you know, one of the cornerstones of predictive processing is that, essentially, we construct our experience. And this insight is fundamental to a lot of Eastern philosophy and Eastern spiritual traditions. So it really resonated."
+        },
+        {
+            "start": "00:06:06",
+            "end": "00:06:09",
+            "speaker": "Michael Taft",
+            "text": "That's super fascinating. What is your specific meditation background?"
+        },
+        {
+            "start": "00:06:09",
+            "end": "00:06:34",
+            "speaker": "Shamil Chandaria",
+            "text": "Well, I started off 35 years ago doing TM, so mantra-based meditation, for many years. And then maybe about 20 years ago, I started my first Buddhist retreats, Goenka Vipassana retreats. Then maybe six or seven years ago, I started working with Rob Burbea's method at Gaia House, and that really propelled things. And then in the last couple of years, I've been Michael Taft non-dual style."
+        },
+        {
+            "start": "00:06:34",
+            "end": "00:06:50",
+            "speaker": "Michael Taft",
+            "text": "Yeah, this is such a varied and interesting background. And it seems like Burbea has made such an impact on the field. It's such a tribute to his teaching to see how many people have been affected by it in a positive way."
+        },
+        {
+            "start": "00:06:50",
+            "end": "00:07:07",
+            "speaker": "Shamil Chandaria",
+            "text": "I was just going to say that actually, another reason I really got interested in predictive processing is because Rob's sort of meta-Dharma framework seems to accord with this whole view of constructing one's reality."
+        },
+        {
+            "start": "00:07:07",
+            "end": "00:07:13",
+            "speaker": "Michael Taft",
+            "text": "Good. So let's dive into this a little bit. Can you explain to me how predictive processing works, what it means?"
+        },
+        {
+            "start": "00:07:13",
+            "end": "00:08:24",
+            "speaker": "Shamil Chandaria",
+            "text": "Yeah. So, you know, the place to start is that we are biological creatures with sense gates like eyes and ears and other forms of sensory data input. And from our data, we have to make sense of what is going on in the world. We have to form a hypothesis of what's going on. And that turns out to be a very difficult problem. And in general, the solution to that problem is given to us by Bayes' theorem, which tells us essentially how to find the probability of a particular hypothesis given some data. And it tells us that the way you do that is by seeing how likely the data is, if that hypothesis were true, coupled with how likely that hypothesis is likely to be true in general. So that's called the prior probability. And this Bayes' theorem is the mathematically optimal way to use information. And so somehow, if evolution is working and we haven't been eaten by the tiger, then evolution must converge towards the Bayesian optimal solution."
+        },
+        {
+            "start": "00:08:24",
+            "end": "00:08:58",
+            "speaker": "Shamil Chandaria",
+            "text": "Now, it turns out that actually you can't compute Bayes' theorem directly because it's kind of computationally explosive. So we have to do a workaround. And that workaround is essentially to simulate our reality. So what we have to do is we have to create an internal model of what is going on in the world, and then compare the output of that model with the sensory data that we get. And that sets up a prediction error."
+        },
+        {
+            "start": "00:08:58",
+            "end": "00:09:08",
+            "speaker": "Michael Taft",
+            "text": "So we're modeling what we think our senses should be experiencing, and then we see what they are experiencing, and then we see where there's an error, where it doesn't match."
+        },
+        {
+            "start": "00:09:08",
+            "end": "00:09:37",
+            "speaker": "Shamil Chandaria",
+            "text": "Right, exactly. And with that error, we then turn the dials and parameters and knobs and buttons of our generative model, that's our internal simulation, so we adjust our internal simulation so that we minimize the prediction error. So we minimize the difference between what our simulation is outputting and what our sensory data is."
+        },
+        {
+            "start": "00:09:37",
+            "end": "00:09:44",
+            "speaker": "Michael Taft",
+            "text": "So if our brains were perfect at this, our prediction would match exactly what's coming into our senses."
+        },
+        {
+            "start": "00:09:44",
+            "end": "00:09:55",
+            "speaker": "Shamil Chandaria",
+            "text": "Right, exactly. But what I've described so far turns out to be very difficult as well, because there's just a huge amount of guesses that we could take at, you know, what's going on."
+        },
+        {
+            "start": "00:09:55",
+            "end": "00:09:57",
+            "speaker": "Michael Taft",
+            "text": "You could take infinite guesses."
+        },
+        {
+            "start": "00:09:57",
+            "end": "00:10:59",
+            "speaker": "Shamil Chandaria",
+            "text": "Right. So then we come to the second part of what's important, which is the brain is trying to match the sensory data and adjusting the generative model, virtual simulation of what's going on, to minimize the prediction error with the sensory data. But there are too many possibilities of what could be going on. So we need to constrain the search space to be close to the prior expectations of what's going on. So we have certain priors. If I'm walking down the street and go into the park and I see this kind of wiggly thing on the ground, I could interpret that as a curvy branch or I could interpret it as a snake. And it could turn out that both explanations minimize the prediction error, in other words, are up close to the data that I'm getting through my eyes. But it's just more likely to be a branch, so I'm going to perceive it as a piece of wood."
+        },
+        {
+            "start": "00:10:59",
+            "end": "00:11:24",
+            "speaker": "Michael Taft",
+            "text": "I assume the idea here is that in any moment walking down the street, as you're describing, it's much more likely to be a branch, especially in England in the wintertime. It's going to probably be a branch, not a snake. And we're not even going to guess that it's some kind of alien tentacle because that just is so unlikely."
+        },
+        {
+            "start": "00:11:24",
+            "end": "00:11:33",
+            "speaker": "Shamil Chandaria",
+            "text": "Right, exactly. The prior probability of an alien tentacle would be much, much lower than either a snake or a branch. And actually, I should have not chosen a snake because that might be likely, but an alien tentacle is a great example."
+        },
+        {
+            "start": "00:11:33",
+            "end": "00:11:34",
+            "speaker": "Michael Taft",
+            "text": "So our brain kind of prunes the options."
+        },
+        {
+            "start": "00:11:34",
+            "end": "00:12:23",
+            "speaker": "Shamil Chandaria",
+            "text": "And essentially, it's a little better than this. There is this function, this kind of optimization that we're trying to do, which is minimize free energy. And free energy basically has two components. One is minimizing the prediction error. And the second is being as close as possible to your prior expectations. And as I said, it's a kind of a trade-off between these two factors in the free energy. So we have this kind of trade-off going on in the brain, where it isn't just trying to find the best fit model of what's going on, but it's actually trying to find the best fit model that is as close as possible to our prior expectations."
+        },
+        {
+            "start": "00:12:23",
+            "end": "00:12:51",
+            "speaker": "Michael Taft",
+            "text": "So does this help to explain, for example, the famous video where people are passing a basketball around a circle and a person in a gorilla suit comes in right in the middle of the video and dances around and then leaves the video? And most viewers, if they're concentrating on the basketball, never even see the gorilla. Is it because their brain is just not predicting that there's going to be a gorilla in a basketball scenario?"
+        },
+        {
+            "start": "00:12:51",
+            "end": "00:13:26",
+            "speaker": "Shamil Chandaria",
+            "text": "That could be a good explanation. I mean, I tend to think of that particular gorilla problem as simply the fact that your attention is focusing on the ball. And so it's more like you have a microscope at the ball, and everything else is in the background, and is not being processed, not being given enough resources in the brain to be processed. It's there somewhere in the back of the brain, but it's not being processed up. And so it doesn't come into the level of consciousness."
+        },
+        {
+            "start": "00:13:26",
+            "end": "00:13:31",
+            "speaker": "Michael Taft",
+            "text": "Yeah, that's the standard explanation. I just wondered if this would play into the prediction of what our prior expectations might be, would play in as well."
+        },
+        {
+            "start": "00:13:31",
+            "end": "00:13:46",
+            "speaker": "Shamil Chandaria",
+            "text": "Yeah, I think there could be a good explanation that, of course, if you were expecting a gorilla, you would actually be searching for it and your attention would move around looking for the gorilla. And so I think it does conform with the predictive processing view as well."
+        },
+        {
+            "start": "00:13:46",
+            "end": "00:13:48",
+            "speaker": "Michael Taft",
+            "text": "So interesting. Carry on."
+        },
+        {
+            "start": "00:13:48",
+            "end": "00:14:44",
+            "speaker": "Shamil Chandaria",
+            "text": "Yeah. So predictive processing, as I said, is this two-factor process. One is balancing, you know, trying to find the best fit model and then being close to your priors. Now, it's not just a one-shot game that we do. We actually have a hierarchy. So you have low-level priors, like, you know, we expect to see edges and corners and noses and eyes, because that's what we're designed to see in faces. And then we have very high-level priors. This is organized in a hierarchy. So low-level models are driven by priors from the layer above, and then those models in the layer above are driven by priors from the layer above that. There could be maybe half a dozen layers in this hierarchical predictive processing architecture. And so our moment-by-moment experience of the world around us is processed through layers of this predictive processing."
+        },
+        {
+            "start": "00:14:44",
+            "end": "00:14:49",
+            "speaker": "Michael Taft",
+            "text": "It's not just one big predictive process."
+        },
+        {
+            "start": "00:14:49",
+            "end": "00:15:45",
+            "speaker": "Shamil Chandaria",
+            "text": "Correct. And worth taking a step back to say that 20 years ago, if you asked most people how the brain works, they would say, well, you get sensory data, information that comes up from the bottom of the hierarchy and is processed up until we figure out what's going on at the top somewhere. The picture now is literally reversed, which is what's actually happening is that we are generating our expectations, which is going downwards from the top of the hierarchy to the bottom. And the only thing that goes up, the sensory data actually doesn't go up. What goes up is just the prediction errors, where the model has got it wrong. That's the only information that goes up. And actually, this may explain why we actually have about 10 times as many feedback connections in the brain than we have feed-forward connections."
+        },
+        {
+            "start": "00:15:45",
+            "end": "00:16:16",
+            "speaker": "Michael Taft",
+            "text": "So let me get this straight. Instead of this view that, for example, the eyes are like video cameras and we're just getting this video stream into the brain and then we're predictive processing it, it's not like that. It's like our prior expectations, what we expect to see, is actually what we're mainly seeing. And then from the stream of incoming information from the video cameras, we're only noticing the stuff that doesn't fit our prediction."
+        },
+        {
+            "start": "00:16:16",
+            "end": "00:17:26",
+            "speaker": "Shamil Chandaria",
+            "text": "Right, right, exactly. But let me just refine that a little bit, which is to say that what we experience is our generative model, is the output of our generative model. The sensory data simply adjusts the parameters, the knobs and buttons and dials of your generative model. So it's even worse in a sense that, you know, when you look around you're seeing this perfect picture, but of course what's coming through your eyes is like this messy data, and we can only see, you know, a few degrees in the center of our vision accurately. And yet when we look around we see things beautifully, we see all this cartoonish definition and painted in in a beautiful way. That's because we are living, we are experiencing our generative model. And within that generative model is a little avatar, which is the mini-me, you know, the actual, you know, who we think we are, we identify with. But that's just within our generative model, and so is everything else that you're seeing and hearing and sensing in your body."
+        },
+        {
+            "start": "00:17:26",
+            "end": "00:17:39",
+            "speaker": "Michael Taft",
+            "text": "Now, as you know, I have an infant in the house, and so it makes me think, but this must start somewhere. I mean, we don't get the model from nothing. So how does this generate in the first place?"
+        },
+        {
+            "start": "00:17:39",
+            "end": "00:18:33",
+            "speaker": "Shamil Chandaria",
+            "text": "Yeah, it's so wonderful. I mean, it's a great thing to see, you know, how these things develop from a baby's point of view. I mean, it's a beautiful thing, because when babies sort of explore the world, put things in their mouths and move around, they kind of do stuff and then see the impact that they're having and slowly build up their models. Now, in the case of child development, these models are not just purely learning randomly. There's probably stages of development. So what happens is that the models kind of learn some of the early layers first, and then those get sealed down, and then you learn the next layer and the next layer. I mean, there's kind of a whole complicated process of development that will happen. But these layers get learned sequentially, which allows them to be learned in a more systematic way."
+        },
+        {
+            "start": "00:18:33",
+            "end": "00:18:38",
+            "speaker": "Michael Taft",
+            "text": "So probably they start out with the edges and corners type predictions."
+        },
+        {
+            "start": "00:18:38",
+            "end": "00:18:49",
+            "speaker": "Shamil Chandaria",
+            "text": "Yeah, exactly. And very early on, you know, faces and access to milk and all this kind of stuff. That stuff is pretty much hardwired, whatever that means."
+        },
+        {
+            "start": "00:18:49",
+            "end": "00:18:57",
+            "speaker": "Michael Taft",
+            "text": "Yeah, so interesting. Now, how does this fit together with neural network type models?"
+        },
+        {
+            "start": "00:18:57",
+            "end": "00:20:54",
+            "speaker": "Shamil Chandaria",
+            "text": "Right. So, you know, it's interesting because in artificial intelligence, artificial neural networks have to do the same Bayesian inference problem. They take data and in the early parts of the network, they extract the low-level features and then later on in the network, the mid-level features. And then finally, right at the top, you get faces. This is Jack, this is Jill, right at the top. And the way we train neural networks is by having a whole lot of training data. In other words, a whole lot of examples of ground truth. And those ground truth examples can give a prediction error signal for the networks to learn, so that the networks make their best guess. And then you tell them the ground truth, you know, it was actually Jack or it was Jill. And then they use that prediction error to change the synaptic weights between the neurons. Now, of course, if you don't have a supervisor, if you don't have a whole lot of trained data, and there is no supervisor in the brain, you have to do something else called unsupervised learning. And what you do there is precisely, as I've been describing, you have these feedforward networks, which are taking their best guess of what's going on. And then given the best guess, sitting on top of that feedforward network is a generative model. In other words, if this was a cat, if this was Jill, then I have this other network which simulates what I would see, what are the pixel values that I would actually see. And that's the generative model. And then, of course, you compare the output of the generative model to the actual sensory data that we get, which, you know, which is the ground truth for human beings. It's the actual sensory data. That's the only kind of access we have to what we can call the ground truth. And then we see the prediction error, and that signal then trains the generative model and the recognition model, which is the feed-forward part."
+        },
+        {
+            "start": "00:20:54",
+            "end": "00:21:04",
+            "speaker": "Michael Taft",
+            "text": "Now, is there any evidence for these networks actually existing in the brain and layers of this processing happening in terms of structure?"
+        },
+        {
+            "start": "00:21:04",
+            "end": "00:21:32",
+            "speaker": "Shamil Chandaria",
+            "text": "Well, it's very early days, and this is very much a big question in research. I mean, I would say that there are hints of this and some structures, like the default mode network, are seen to be at the very top of this hierarchy. And other structures, like in V1, V2, of course, are at the bottom of the hierarchy. But exactly how it's fitting together, you know, that's going to be developed over the next few years, I think."
+        },
+        {
+            "start": "00:21:32",
+            "end": "00:21:35",
+            "speaker": "Michael Taft",
+            "text": "Sorry, what is V1 and V2?"
+        },
+        {
+            "start": "00:21:35",
+            "end": "00:21:44",
+            "speaker": "Shamil Chandaria",
+            "text": "It's the first layer of the visual cortex and the second system of the visual cortex, sort of the things that detect edges and corners and early features."
+        },
+        {
+            "start": "00:21:44",
+            "end": "00:22:05",
+            "speaker": "Michael Taft",
+            "text": "Got it. Okay, I think I have a handle on this. So how does this relate in any way to meditation? I mean, I think I can guess, and I've seen your talk, but I'm just curious. Let's imagine I've never heard this before. I might be going, okay, that's all very interesting, but what does this mean for me sitting?"
+        },
+        {
+            "start": "00:22:05",
+            "end": "00:25:24",
+            "speaker": "Shamil Chandaria",
+            "text": "Yeah, well, the first point is just to start with, you know, what are the contents of our generative model? As I said, you know, you might have body sensations, you might have emotions that are being generated. So we are simulating our internal environment, including our viscera, but we also are making sense of the sounds that we hear and putting them into words. And we've got thoughts that are going on, which could be visual or auditory kind of thoughts. And we have got a sense of self. Now, from an evolutionary point of view, it's extremely important to have a phenomenal self model, a model of the self that is being used to organize our world. So I am an agent, I am here, the tree that I'm looking at is over there, it's 10 degrees to the left, a little bit up and five yards away. And we use this self model to navigate the world and to have a perception of the world. And that self model is normally considered to be the subject. And then we have other parts of the generative model, like the tree and the breath at our nose, that are objects, perhaps. Now, in meditation, when we sit, there are several classical meditation techniques that are used. One of the first ones is calming the mind, doing something like paying attention to the breath at the nose, maybe something like a shamatha practice. And what that does is it puts the attention on a single aspect of the generative model. For example, the breath at the nose. And it increases the attention there, and everything else, the attention is reduced. And so one of the things that I should just mention is that there is this technical term which you might hear being bandied around, which is called precision weighting. But essentially what that is, is it's simply how do we weigh up the prior versus the sensory data. So we have some sensory data. If you remember, I said there's a sort of a trade-off between the sensory data and the evidence that we get from that and our prior expectation. And that trade-off is governed by a parameter, a sort of a knob, which makes one or the other stronger in that trade-off. And so what we do is we increase the weighting of the sensory data of the feeling of the breath at the nose and decrease the weighting of everything else. And that will then quieten the mind, and that becomes a very good preparation to start the meditative journey. But that, of course, is just the beginning. The next part of it is then to start deconstructing the hierarchical generative model, the sort of fabrications that we're doing through this modeling process."
+        },
+        {
+            "start": "00:25:24",
+            "end": "00:25:27",
+            "speaker": "Michael Taft",
+            "text": "And that would typically be some kind of Vipassana?"
+        },
+        {
+            "start": "00:25:27",
+            "end": "00:27:07",
+            "speaker": "Shamil Chandaria",
+            "text": "Right, Vipassana insight type practice. And I talked about neural networks, how they go from processing in the visual field, edges and corners, and then parts of objects like noses and eyes and ears, to then whole faces. So there's this fabrication hierarchy. And in Vipassana and deconstructive meditation, what we're learning to do is to notice the constructedness of these phenomena that are occurring in the generative model. So, you know, we could be hearing a word or a sound, and we come to see that the meaning that we associated with a sound is sort of a high-level concept, which is quite far up the hierarchy of fabrication. But we can go down closer to the sensory data and just hear it as raw sounds. And so we haven't changed the data, we've just deconstructed it into its components. And this can be done in various ways. I mean, sometimes you might have a pain in your knee, and that pain feels very, very solid. And as you put your attention to it and start to deconstruct it, you can start to see that it's composed of a myriad of tiny, tingling sensations that are moving around. And suddenly it loses the grip as a pain in your knee, because you see it as this kind of rich process rather than a single concept."
+        },
+        {
+            "start": "00:27:07",
+            "end": "00:28:11",
+            "speaker": "Michael Taft",
+            "text": "Yeah, you know, I think those of us who've done quite a bit of that kind of meditation really have an intuitive feel for what that's like. Because in the early days of doing Vipassana, let's say on a body sensation, at first it's almost like it's just one big pixel, so to speak. It's just there it is, the sensation. And that's, you know, at the level where we're just experiencing it as a high-level concept. But then with good instruction and a lot of diligent practice, we start to notice phenomenological qualities about the sensation, and suddenly, instead of just one big pixel, so to speak, we start to have an explosion of rich data, right? It gets more and more pixels, so to speak, until eventually we're really encountering this rich, continuously changing, highly various flow in the spot where previously we had quite a fixed and almost like a static concept."
+        },
+        {
+            "start": "00:28:11",
+            "end": "00:29:07",
+            "speaker": "Shamil Chandaria",
+            "text": "Right, exactly. That's beautifully put. And I would say that as we start this deconstruction process, one of the impacts that it has is, of course, these phenomena and objects, these concepts become de-reified. So rather than I thought I was having this pain, now it's seen as some sort of sparkling mental construction. And de-reified means that it's not taken to be a real object. It's more like a construction, a mental construction. You know, one of the consequences of that, of course, is that a mental construction like that then doesn't have the same grip, like the sort of sense of, I don't want this. If it's not seen as real, the charge of not wanting it seems to be reduced."
+        },
+        {
+            "start": "00:29:07",
+            "end": "00:29:11",
+            "speaker": "Michael Taft",
+            "text": "And does the predictive model have anything to say about that gripping?"
+        },
+        {
+            "start": "00:29:11",
+            "end": "00:29:52",
+            "speaker": "Shamil Chandaria",
+            "text": "Yeah, that's a good question. This is now sort of supposition, but I think the gripping tends to happen higher in the cortical hierarchy, so at the level of concepts. So there is a pain in my knee. I don't want this. But when you go down the cortical hierarchy and you see these raw sensations, and they're not yet formed into a concept, the automatic pathway between that concept of the pain and not wanting it isn't being activated so much. This is all still to be worked out, but that's the kind of story that one could imagine working out."
+        },
+        {
+            "start": "00:29:52",
+            "end": "00:30:06",
+            "speaker": "Michael Taft",
+            "text": "Very good. So, so far we've covered shamatha-type practices, the calming concentration, and then the deconstructive practices. Are there other types that we're modeling here with our predictive processing?"
+        },
+        {
+            "start": "00:30:06",
+            "end": "00:31:54",
+            "speaker": "Shamil Chandaria",
+            "text": "So I think that probably the biggest insight then comes when things are very calm and phenomena are deconstructed and de-reified. We're in this quiet space of relatively raw sensations and phenomena. And at that stage, there can be this recognition of the space of the generative model itself. We can recognize the empty space of phenomenal experience. And by space, I mean sort of a conceptual space of perception. And that is this kind of pure awareness that can be recognized. So I think that the really exciting thing about predictive processing is it, for the first time, gives us a language to understand this pure awareness, this pure non-dual awareness. And it's essentially identified as the entire space of the generative model itself. Now, initially, of course, it can be recognized as the background space in between phenomena, in between the contents of awareness. But later on, of course, we can recognize that it's not just the background, it's also the foreground, it's also the contents of awareness is also in that generative model space, the substrate of the generative model. And so that's the sort of picture for the first time of what we might mean by non-dual awareness."
+        },
+        {
+            "start": "00:31:54",
+            "end": "00:32:35",
+            "speaker": "Michael Taft",
+            "text": "So I have some questions that are probably going to require speculative answers on your part. This is, of course, tremendously fascinating, and many of us have the experience of noticing this in meditation. And so I have a kind of an experiential, intuitive sense of what you're describing. And so I'm just curious, are we then building a new kind of model? Or how is that shift coming about when we say we recognize the space of pure awareness or the space of the model itself? Does that require building another model sort of, quote, outside that? Or are we somehow rejiggering the insides of our current model?"
+        },
+        {
+            "start": "00:32:35",
+            "end": "00:33:33",
+            "speaker": "Shamil Chandaria",
+            "text": "That's a really good question. And let's take this slowly, because I think there are deep answers here, including finally, whether this awareness that we're recognizing, this pure, vast, non-dual awareness that we're recognizing is itself empty. But just backing up from that, there is this idea that maybe what we are doing is building up a processing ability in the brain of recognizing some sort of meta-awareness, which is awareness of where my awareness is. And then there could be even a layer above that, which is recognizing the space in which this awareness and meta-awareness is actually happening. So I think that to some extent we are making opaque machinery that was previously transparent in the brain's processing. So that might be a little confusing. I should probably just explain the use of the word transparent and opaque here."
+        },
+        {
+            "start": "00:33:33",
+            "end": "00:33:37",
+            "speaker": "Michael Taft",
+            "text": "Following Thomas Metzinger's way of describing this."
+        },
+        {
+            "start": "00:33:37",
+            "end": "00:34:38",
+            "speaker": "Shamil Chandaria",
+            "text": "Right, right. Thomas Metzinger uses transparency and opacity, and he really got that from a famous philosopher at the beginning of the 20th century called G.E. Moore. And essentially, the idea is that when I look through a window and see a bird, the window is transparent. I just think I'm seeing a bird. But when I become aware that there's a window in front of the bird, that window becomes opaque. I can recognize the window. Now, the analogy here is that the window is the mental construction process. So we can start to recognize the construction machinery itself. And when we go down enough layers, we can start to recognize the substrate in which all of this is happening. And this is making more and more processes in the brain opaque that were previously transparent. So that's one way of looking at it."
+        },
+        {
+            "start": "00:34:38",
+            "end": "00:34:50",
+            "speaker": "Michael Taft",
+            "text": "So it's almost as if you didn't realize you were wearing glasses because they were, quote, transparent, but this process renders them opaque. So you now notice that you're wearing glasses."
+        },
+        {
+            "start": "00:34:50",
+            "end": "00:35:41",
+            "speaker": "Shamil Chandaria",
+            "text": "Correct. And I would say that, you know, we could equally well use the metaphor, the opacity-transparency description, about the phenomenal self model. You know, one of the things that we're doing is that all models start to become opaque. There is a kind of global opacity that happens as one awakens, including understanding the self model and seeing that it's a construction. So this way of looking at things makes clearer what we might mean by no self. It doesn't mean that we're some sort of zombie without a self. What it means is that it's seen through as a model and as a construction. But the machinery around the self-model continues, otherwise we'd be in real trouble."
+        },
+        {
+            "start": "00:35:41",
+            "end": "00:35:53",
+            "speaker": "Michael Taft",
+            "text": "It's certainly what it feels like. You can tell that the process is still occurring. We're just experiencing it in quite a different way."
+        },
+        {
+            "start": "00:35:53",
+            "end": "00:36:25",
+            "speaker": "Shamil Chandaria",
+            "text": "Right. You can see that the model is opaque at a kind of a normal level of fabrication, but you can also start to experience the opacity of the model at a very unfabricated, deconstructed, empty level in which it feels kind of different. And, you know, there are different places to stand in awareness. In an awakening, we can be very empty or we can be more fabricated, but we can still recognize the global opacity."
+        },
+        {
+            "start": "00:36:25",
+            "end": "00:36:53",
+            "speaker": "Michael Taft",
+            "text": "Now, of course, this is very fascinating because it helps to explain exactly what's going on, or at least it's one model that's very compelling about what could be going on when we're learning to see the world and self in a non-dual way and so on. I'm curious, though, does it give us any pointers in our practice? Does it help us in any way to practice better?"
+        },
+        {
+            "start": "00:36:53",
+            "end": "00:38:44",
+            "speaker": "Shamil Chandaria",
+            "text": "Well, actually, I think it does. I think it does because traditional meditation systems have models, you know, have a narrative. And this is, of course, just another narrative, just another story. But the story conforms with our phenomenology pretty well. I mean, certainly, thinking about these things in this way for the last little while has really helped my practice. And I would say that especially the deconstruction and understanding the implications of awakening. So one of the things, of course, is that instructions may not be clear from some of the traditional lineages of what we might mean by no-self or non-dual awareness. But when we start thinking about it in these predictive processing terms, it starts to become clearer that we're not talking about eliminating all elements of the self from our brain architecture. It's just about making these things opaque so that they are de-reified, so that they are not who we really are. If we identify with anything, we could identify with the substrate of the whole generative model. After all, everything is within our awareness, including our phenomenal self model. So I think it does help. But I think the area where it really helps is in the next stage. So far, we've talked about deconstructive practices. But I think in the next stage, after we recognize the non-dual awareness, I think that's where the real meat of a spiritual path really is, how to then reconstruct our generative model in beautiful and helpful ways."
+        },
+        {
+            "start": "00:38:44",
+            "end": "00:39:35",
+            "speaker": "Michael Taft",
+            "text": "Yeah, something that I see here is that understanding this model helps us to understand that we don't need to have the elements of our life be different. We're not necessarily manipulating the external world or somehow manipulating our thoughts and emotions to be different, rather we are simply seeing the models through which we experience them. And so this points towards that sense of the non-duality of emptiness and form, right? So the form can still be everyday life, and yet our experience of it seen through this predictive processing model helps us to understand how our experience of it can be radically transformed, even while it itself is completely normal, so to speak. Would you agree with that?"
+        },
+        {
+            "start": "00:39:35",
+            "end": "00:41:53",
+            "speaker": "Shamil Chandaria",
+            "text": "I would agree with that. One thing that I think would be helpful to kind of introduce at this stage is the fact that once we start to be able to deconstruct our world, our phenomenal experience in this way, and go down to this substrate of pure awareness, we then are more easily able to start to change the top-level priors that we're bringing to our worldview. If you were a depressed person, one of the top-level priors that you would have is that, oh, the world is a terrible place. Everything always goes wrong. I'm a useless person. And then when you use that as a prior and then look at the probability of the sensory data given that prior, you find that I experience the world as terrible and it always goes wrong, see, and like I'm useless. And that then validates your prior. So you get stuck in this top-level prior. Now, when we deconstruct and quieten the world and quieten the top-level priors, we can then reformulate our top-level prior landscape and move to a new equilibrium. For example, we could move to another prior, which is the world's amazing. And it's a kind of a gift and it's just miraculous. And I love it. And, you know, it's a fabulous, beautiful place. And when I look at the world with that kind of lens and look at the probability of the data given that hypothesis, it then turns out that the world is kind of an amazing place and it's fabulous and it's deeply gratifying and beautiful, and it validates that prior. And so we shift into a new equilibrium. So I think, like psychedelics, meditation may be a way of going into reprogramming mode in the top-level priors, and then uploading new programs. Of course, not any program will do. It has to be a program that is self-reinforcing in some way."
+        },
+        {
+            "start": "00:41:53",
+            "end": "00:42:22",
+            "speaker": "Michael Taft",
+            "text": "And so, just to do a thought experiment, if we had person zero and then a copy of person zero called person one, and person zero had this depression top-level prior and person one had the beautiful life top-level prior, and they're sitting there observing the exact same experience in terms of its external content, they would have quite a different experience of the exact same situation."
+        },
+        {
+            "start": "00:42:22",
+            "end": "00:43:39",
+            "speaker": "Shamil Chandaria",
+            "text": "Right, exactly. And if you look at this from a Buddhist lens, you could actually describe this as dependent co-arising. You know, I mean, I think dependent co-arising is one of the deepest truths in Buddhism. And this is a way of looking at dependent co-arising as Bayesian inference, in the sense that the experienced world occurs when what we bring to the table, the ways of looking, the high-level priors, the beliefs, come and meet the external data. And when they meet, an experienced world co-arises from both of those, from the internal and the external. So I think that it's kind of wrong to say, oh, we're just living in our internal reality in some sort of solipsistic way, and we can construct anything we want to. No, it's about meeting the universe halfway, in Karen Barad's phrase. It's looking at the sensory data through a lens to dependently create an experienced world. So the experienced world is essentially a co-construction or dependent co-arising from the external data and the ways of looking."
+        },
+        {
+            "start": "00:43:39",
+            "end": "00:44:20",
+            "speaker": "Michael Taft",
+            "text": "It's so cool. I really like also how you brought in Rob Burbea's phrase, the ways of looking, in there. Good. So this model really fits with quite a bit of, let's say, Buddhist philosophical and meditation models, as well as other traditions. But we all know that these traditions don't really agree about a lot of stuff. And so I'm curious, here we've got kind of one model roughly sketched out. How does this model help us to understand these differences in various traditions?"
+        },
+        {
+            "start": "00:44:20",
+            "end": "00:46:17",
+            "speaker": "Shamil Chandaria",
+            "text": "Yeah, I think actually it helps a lot. And that's because, as I said, there were two parts of the path. One was this deconstructive path going down to pure awareness or maybe even pure nothingness. And then there's this reconstructive path, which is, okay, how do we want to now reconstruct our world? What priors and what models do we want to bring? And as we discussed, not every model will work. It's models that somehow are in equilibrium and actually the way of looking is reinforced by the experienced world that we have. Now, there can be different priors, different ways of looking that can be stable. And I would say, to some extent, the phenomenology of some deep meditative absorption state, some deep level of samadhi, the phenomenology is probably similar across traditions. However, the endpoint of the path for these traditions will vary. So for example, some traditions might end up with the path of Christian love, the path of Advaita Vedanta, we just want to be in pure awareness, and other paths, tantric paths. And I would say that that's because they are annealing or moving people in the lineage towards different high-level priors, different endpoints. One tradition could be cultivating the endpoint of a compassionate bodhisattva. Another could be cultivating the path of Sufi love and awe and reverence towards all of existence. Another path could be cultivating just seeing, just recognizing the great perfection of everything."
+        },
+        {
+            "start": "00:46:17",
+            "end": "00:46:27",
+            "speaker": "Michael Taft",
+            "text": "And so by cultivating these different views, we're actually helping to construct the top-level priors that will give us that certain kind of experience."
+        },
+        {
+            "start": "00:46:27",
+            "end": "00:47:47",
+            "speaker": "Shamil Chandaria",
+            "text": "Right, exactly. And I think it sort of makes sense of this question that's been around for a few hundred years around the perennial philosophy. Is there just one spirituality or are there many paths? And I would say, in a sense, there is a truth in the perennial philosophy in the sense that deconstruction down to the fabric of the generative model is a common phenomenology. But there's also a truth in those that say, look, the perennial philosophy can't be right. We've got all these different traditions and they look very different. And that's because after recognizing, after going into the reprogramming mode, which is kind of zeroing out your experience, you then upload slightly different programs. Now, there are correlations in some of these programs. In other words, because we have deconstructed the ordinary sense of self, you tend not to have a lot of self-centeredness. You tend to have more love and compassion. You tend to have more awe and reverence for existence. You tend to have some of these common features, but they can be put together in slightly different recipes."
+        },
+        {
+            "start": "00:47:47",
+            "end": "00:48:04",
+            "speaker": "Michael Taft",
+            "text": "It's so fascinating. And thank you for taking the time to explain all that. I'm just curious, what are you excited about for the near future of this predictive processing model in research or in what you see going on in the field?"
+        },
+        {
+            "start": "00:48:04",
+            "end": "00:49:06",
+            "speaker": "Shamil Chandaria",
+            "text": "Yeah, I think this is a very young field. And I think we are sort of starting to converge on some key ideas. I think one of the things that we still need to do is flesh out how this reconstructive part happens. And I've tried to explain it. And, you know, I'm working with a few researchers maybe to start getting more formal about how to describe this reconstruction path. And I think it offers us the beginnings of a kind of a general theory of spirituality. Now, the problem is the instructions you actually need for a path, because it's more like a meta, it's like a metapath. It's like describing how different paths have different priors. But perhaps when we develop our spiritual practice, we want to choose one path or another, or one set of priors or another, because to some extent, they may turn out to be not entirely compatible with each other."
+        },
+        {
+            "start": "00:49:06",
+            "end": "00:49:10",
+            "speaker": "Michael Taft",
+            "text": "Shamil, thank you so much for taking the time to come and explain all this to us today. I really appreciate it."
+        },
+        {
+            "start": "00:49:10",
+            "end": "00:49:18",
+            "speaker": "Shamil Chandaria",
+            "text": "Yeah, it's been a real pleasure. And I'm very excited to see how things develop here."
+        },
+        {
+            "start": "00:49:18",
+            "end": "00:49:20",
+            "speaker": "Michael Taft",
+            "text": "Me too. All right. Have a good one."
+        },
+        {
+            "start": "00:49:20",
+            "end": "00:49:22",
+            "speaker": "Shamil Chandaria",
+            "text": "All right. Thank you."
+        },
+        {
+            "start": "00:49:40",
+            "end": "00:49:44",
+            "speaker": "Michael Taft",
+            "text": "That's it for this episode of Deconstructing Yourself."
+        }
+    ]
+}

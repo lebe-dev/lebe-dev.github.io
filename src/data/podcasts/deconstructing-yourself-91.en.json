@@ -1,0 +1,337 @@
+{
+    "title": "Can You Learn Meditation from an AI? - with Shinzen Young",
+    "url": "https://deconstructingyourself.com/can-you-learn-meditation-from-an-ai-with-shinzen-young.html",
+    "guest": "Shinzen Young",
+    "transcript": [
+        {
+            "start": "00:00:00",
+            "end": "00:01:16",
+            "speaker": "Michael Taft",
+            "text": "Welcome to Deconstructing Yourself, the podcast for metamodern mutants interested in meditation, neuroscience, non-duality, awakening, Percy Jackson, psychedelics, spirituality, and much more. My name is Michael Taft, your host on the podcast, and in this episode I'm happy to be speaking yet again with Shinzen Young. Shinzen Young is an American mindfulness teacher and neuroscience research consultant. His systematic approach to categorizing, adapting, and teaching meditation, known as Unified Mindfulness, has resulted in collaborations with Harvard Medical School, Carnegie Mellon University, and the University of Vermont in the burgeoning field of contemplative neuroscience. And now, I give you the episode that I call, Can You Learn Meditation from an AI? With Shinzen Young."
+        },
+        {
+            "start": "00:01:22",
+            "end": "00:01:26",
+            "speaker": "Michael Taft",
+            "text": "Shinzen, welcome back to Deconstructing Yourself. It's been a little while."
+        },
+        {
+            "start": "00:01:26",
+            "end": "00:01:28",
+            "speaker": "Shinzen Young",
+            "text": "Hey, Michael. It's great to be back."
+        },
+        {
+            "start": "00:01:29",
+            "end": "00:01:49",
+            "speaker": "Michael Taft",
+            "text": "So as always, my first question to you is, what's going on? I just keep hearing all these people talking about the stuff you're doing, but now's my chance to just quickly get filled in from the horse's mouth."
+        },
+        {
+            "start": "00:01:49",
+            "end": "00:02:41",
+            "speaker": "Shinzen Young",
+            "text": "Well, if I were to speak poetically, I would say it looks like God saved the best for last. I'm now one click south of 80. So, you know, noticing the aging process, but that's okay because I feel like I'm a combination of 80, 18 and eight years old all at once. And the eight year old is like this kid that was let loose in a candy store. And the 18 year old is a young person who's looking forward to a career as an important creative scientist. And the 80 year old is who I am biologically. So I get to be an 18 and 80 almost all at once, which is very rich."
+        },
+        {
+            "start": "00:02:41",
+            "end": "00:02:44",
+            "speaker": "Michael Taft",
+            "text": "A lot richer than just being 80."
+        },
+        {
+            "start": "00:02:46",
+            "end": "00:04:07",
+            "speaker": "Shinzen Young",
+            "text": "The candy store is what's happening with math and science and meditation and AI. How those are dancing together in my head, forming a really optimistic view of the future. I know people, when we bring these things up, AI, biomodulation, etc., it's like, whoa, there's risk there. Certainly that is true. But I'm definitely a glass half full at this point about how the new AI, the new biomodulation, the new system view of science, and the new connectionist math that is designed to implement that view. I'm seeing how these can dance together, given what will likely happen in society over the next decade or so. And I see them forming an alliance, an affordance for humanity that will reinforce the better angels of our being."
+        },
+        {
+            "start": "00:04:08",
+            "end": "00:04:23",
+            "speaker": "Michael Taft",
+            "text": "Now, this is really interesting, of course, in many, many, many ways, in lots of different fields, maybe all fields of human endeavor. But, you know, I've known you for a little while, Shinzen, I think, something between 25 and 30 years at this point."
+        },
+        {
+            "start": "00:04:24",
+            "end": "00:04:25",
+            "speaker": "Shinzen Young",
+            "text": "I think it's more than that."
+        },
+        {
+            "start": "00:04:25",
+            "end": "00:04:32",
+            "speaker": "Michael Taft",
+            "text": "Is it? Okay. We met at the Science of Enlightenment, the Sounds True program, right? Or did we meet before that?"
+        },
+        {
+            "start": "00:04:32",
+            "end": "00:04:42",
+            "speaker": "Shinzen Young",
+            "text": "Before that, one of the programs before that. So I think it was about 1993, actually. You're right. Yeah, we're talking more like 30 years."
+        },
+        {
+            "start": "00:04:43",
+            "end": "00:04:44",
+            "speaker": "Michael Taft",
+            "text": "It's been a good 30 years."
+        },
+        {
+            "start": "00:04:44",
+            "end": "00:04:47",
+            "speaker": "Shinzen Young",
+            "text": "Very good 30 years. I agree."
+        },
+        {
+            "start": "00:04:47",
+            "end": "00:05:28",
+            "speaker": "Michael Taft",
+            "text": "Thanks for all your help during that time. But what I wanted to point at is even back then, you were very focused on science and meditation and doing research, scientific research on meditation. But I'm not sure if it was in 93, but just a few years later, at the very least, you were already talking about having computer-generated meditation instruction. And back then, and even for a long time, it was algorithmic and completely programmed. And if I'm not mistaken, you actually worked on such programming for quite a while in the background, correct?"
+        },
+        {
+            "start": "00:05:28",
+            "end": "00:06:46",
+            "speaker": "Shinzen Young",
+            "text": "We still are. There's the Bright Mind app and the Equa app, and a couple others that are used just for research. So the rule-based flowcharty AI is actually something I still do, or I help with those projects. But what we think, and by we I mean me and my team of computer scientists, we think that we'll be able to seamlessly weave together the old-fashioned rule-based and, of course, completely transparent and reliable way of doing AI, weave that together with the new conversational engineering, sometimes referred to as large language models. But I think there's a lot more to it than just the size of the models, although that's, of course, a feature. I just call it the new conversational AI. The world had that sprung on it, what was it, about 10 months ago, I think, when ChatGPT came out."
+        },
+        {
+            "start": "00:06:46",
+            "end": "00:06:50",
+            "speaker": "Michael Taft",
+            "text": "It hasn't been that long. It already seems like decades."
+        },
+        {
+            "start": "00:06:50",
+            "end": "00:12:03",
+            "speaker": "Shinzen Young",
+            "text": "Yeah. So, you know, we, because we're in the science area, we knew about this technology before the big reveal and the world's reaction to it that came, you know, fairly recently. So I've been looking into it. And when I say we, I've got a team of programmers, but we've also got labs and, you know, endeavors that you're aware of. So, it's been really on my mind for several years now, is there some way of weaving together what we sort of already know how to do, which is a rule-based expert system, with the flexibility and, frankly, the potential for creativity that the new conversational AI seems to have. And my GarageBand dream team is of the opinion that because ChatGPT can now essentially read and reason off of directed multigraphs, a directed multigraph is just dots connected with arrows. It's a visual thinking. I used a math term. It's just when you connect the dots, you draw some dots and you draw some arrows between them, and there could be multiple arrows between the dots. Well, that's called a directed multigraph because it's directed. The arrows go from A to B or B to A, and you can distinguish that, and you can have more than one arrow, and you can have arrows loop back to just one point and so forth. In any event, that kind of visual thinking, you can combine that with the flexibility that the new models seem to have in a way where you can — this is getting a little technical, but you build in what's called type safety, a type safety system that is in the way that the person actually talks to the bot. You ask the human to carefully organize the topic in a certain way, and that certain way of organizing the topic is both useful for the human, it gives them a carefully organized personal mental model of any particular concept from any particular perspective, you sort of set up the structure that way. And if you communicate with the bot using that structure, first of all, it helps the bot work better, but it also helps the human think better. So I'm working on a kind of protocol to talk to a bot whereby it's good for both sides of the conversation. It helps the bots be smarter and more aligned and helps the humans pretty much do the same thing. And this would be a communication protocol but also a mindfulness training system, that when you are interacting with a hybrid AI that uses both the directed multigraph kind of logic, the flowcharts, but also has the flexibility of the new AI to speak many languages and to be available for any duration at any moment, all those superhuman things. It's not a replacement for a teacher. Don't think of it as a replacement for a human teacher. Think of it as a much, much better version of an interacting book. And with that protocol set up, my team thinks that with the developments that have happened really just in the last few months with the new AI, it may be feasible to provide essentially free and easy access for most human beings on this planet to personal, expert, interactive mindfulness coach that speaks their language, even the social dialect that they're familiar with. So, wow, that's certainly a lot more than an app. And that's what we're working on."
+        },
+        {
+            "start": "00:12:04",
+            "end": "00:12:27",
+            "speaker": "Michael Taft",
+            "text": "Very cool. And of course, what a vision, right? That everyone can have a personalized coach and it's not an expensive proposition and so on. So you already answered my first question, which is given that you've been thinking and even working deeply on this automated coach problem for decades. Do you think this is possible? And clearly you do."
+        },
+        {
+            "start": "00:12:27",
+            "end": "00:12:47",
+            "speaker": "Shinzen Young",
+            "text": "You know, I can't believe I'm saying this in public because it's so crazy. You know, you asked me, how am I doing? And I said, God saved the best for last. Technology and frankly, society seems to have caught up with what I always had in mind."
+        },
+        {
+            "start": "00:12:47",
+            "end": "00:14:03",
+            "speaker": "Michael Taft",
+            "text": "Yes. Wow. That was not expected. I don't think very many people expected the world to do what it's doing right now as quickly as it's doing it from the positive end and the negative end. And maybe it's no coincidence that those two things are coming at the same time. I don't know. But given that you're obviously working furiously on this and a fan, let's talk about the other side of it, like potential ways that it's problematic or not a replacement for a human teacher. I don't know if you heard a recent interview on Steve's podcast, Guru Viking, with Leigh Brasington. Leigh's, as you know, a computer programmer for his whole career, was anyway. And they have a long talk about AI, and in probably the most interesting moment of that very interesting podcast, Leigh just brings up a chat transcript between him and ChatGPT, I believe, 4, where he asks it questions about meditation. And then he just critiques the answer. It boils down to it's superficially correct, but deeply wrong in a whole bunch of pernicious ways. And it wasn't just one or two. It was like many, many ways."
+        },
+        {
+            "start": "00:14:03",
+            "end": "00:14:55",
+            "speaker": "Shinzen Young",
+            "text": "You know, the deeply wrong, that's an interesting way to think about it. I really haven't analyzed what GPT-4 does for meditation, although people on my team have. I would agree, we all think it's superficial. I haven't turned the lens of in what way is it wrong. In other words, it sounds okay, but it's quite obvious to anyone who practices that it's superficial. If Leigh's analyzing what's wrong about it, that's interesting. You understand that's not the kind of AI I'm talking about, even remotely. We're not talking about going to ChatGPT, even version four, and trying to get that to help you with meditation."
+        },
+        {
+            "start": "00:14:55",
+            "end": "00:15:36",
+            "speaker": "Michael Taft",
+            "text": "Clearly, ChatGPT-4 is not trained on — even though you're talking about something even more different, it's not trained on hundreds of thousands of hours of meditation teachers. So even that would probably help quite a bit. But you're talking about something obviously structured differently from that. But it still brings up the interesting question of the ways that these AIs can creatively hallucinate, so to speak, whatever term we want to use, answers that are very wrong. And how would you imagine mitigating such a possibility if we're going to release one of these to help everyone meditate?"
+        },
+        {
+            "start": "00:15:37",
+            "end": "00:22:47",
+            "speaker": "Shinzen Young",
+            "text": "Slowly, carefully, you know, are some adverbs that come to mind because you're dealing with people's lives here, right? So, yeah. Well, let me just maybe give a different perspective on this. Let's put a positive and say, aren't we lucky to actually be living through a period of scientific and technological revolution? The last century had revolutions, I mean big revolutions, quantum theory and relativity, general relativity particularly with consequences, atomic energy, and so forth. So there were big revolutions. And in the 1800s, there were big revolutions, you know, the continuing industrial revolution, but also now it goes into steam and electricity. And those were like really big revolutions. And there was really major new science. I think we may be privileged to being eyewitnesses to history. Don't know for sure, but if I were to make a guess, we're calling it the information age. And yes, it's that. It's also the age of biology. Physics is sort of stalled. Hard physics, biology is just exploding, including biomodulation. So it's an age of information. It's an age of biology coming to ascendance as a science. But if I were to make a guess at what the revolution is, just a guess, because I'm in it, so I can't quite see it. My guess is this is a revolution around the connectivity of the world. Everything is getting connected. It always has been, of course, but now it's very evident, and long-term effects, and subtle thing happens over here and it has a big impact over there that you completely didn't expect. These are networks, network science, complex, adaptive, dynamical, massive dots and arrows, all connected, storing and transporting influence and information in biological and social, physical, all the systems. I think the revolution may be a new understanding of what connectivity is, and the consequences around influence and information that we're seeing, both the good ones and the bad ones, may be our consequence of humanity finally starting to deeply understand what a network actually is, what dots and arrows. Mathematically, there's new math coming out in category theory that gives a whole deeper view, a completely mind-boggling new view of what a network is. So my thing is, if we're in a major scientific and engineering revolution, technological revolution, then we have to expect the same things in society that those former revolutions produced, which was enormous cultural wars. John Donne, the English poet from the 17th century, he said the new philosophy calls everything into doubt. Fire itself is quite put out. The fire itself is quite put out is that they believed that there was a fire between the earth and the moon. But then Galileo said, it's not that way, folks. But fire itself is quite put out. What he was talking about is their world, the world that they thought that they knew and understood was collapsing around them because of science. So science is also very destructive. And we want to make sure that destructive power of science, which is needed to, you know, cleanse the swamp, so to speak, if I can use that phrase, it's still the destructive power and it has destroyed religions, it has destroyed for massive numbers of people, the meaning of their life. They had to re-find meaning because of science. So, this causes political and cultural polarization. So, first thing I think is, I'm privileged to actually be part of, a witness to something that might be, and I'm not claiming it is, but maybe this system-theoretic way of looking at science, this might be a real paradigm shift a la Thomas Kuhn kind of thing. And if so, well, of course, people are getting bent out of shape because power and meaning of life itself are the new philosophy calls all into doubt. So I think that it's not surprising that scientific issues and engineering issues suddenly become political and cultural and even religious issues. We shouldn't be surprised that it's the sign that we're privileged to witness a revolution. But then I have to think, what can I do as someone who's sort of creating this revolution to make sure that it's not destructive, that the transition is a smooth and gentle one for most human populations?"
+        },
+        {
+            "start": "00:22:47",
+            "end": "00:23:00",
+            "speaker": "Michael Taft",
+            "text": "Yes, this is really the question, particularly with regard to guiding meditation, guiding spiritual growth, guiding people in this, in a way, very sensitive, personal, deeply meaningful area."
+        },
+        {
+            "start": "00:23:01",
+            "end": "00:23:15",
+            "speaker": "Shinzen Young",
+            "text": "So, you know, I would say that there are proxy wars going on in society because of the new AI and actually because of the new biology also."
+        },
+        {
+            "start": "00:23:15",
+            "end": "00:23:16",
+            "speaker": "Michael Taft",
+            "text": "Yes."
+        },
+        {
+            "start": "00:23:16",
+            "end": "00:26:12",
+            "speaker": "Shinzen Young",
+            "text": "Stem cell research has been politicized all over the world. So there are issues that are properly science and engineering questions, but given the zeitgeist, the nature of our times, which I'm saying I'm embracing because it's like, wow, okay, maybe this is like a revolution and this is interesting. But I also have sympathy from this for the people whose life meaning was sort of destroyed by science. I mean, millions and millions of human beings believed a myth called religion that disguised itself as history and science. And now it's obvious that that particular version of that story, the one that was so comforting to people, is not going to hold up anymore. That gets people riled up. So I like to, in my own mind, separate the issue of the actual science and engineering questions about alignment, safety, all these things. I separate them from the proxy wars. And the fact is, you asked me, what is my strategy for making sure it's not going to cause problems? Well, first of all, we're not going to ChatGPT-4 and asking it to teach meditation. We're building a very sophisticated rule-based expert system that has underneath it some very sophisticated mathematics, and all of that puts type safety front and center. The thing is actually designed to be safe from that point of view, from a theoretical point of view. But the answer to your question from way back a few minutes ago. How do I know it's going to be safe? And how do you convince people that it is? Well, first of all, you design it to be safe. Secondly, you fucking test the hell out of it and make sure it is safe. And then you say to the world, see for yourself. You don't try to convince people. It is what it is. I won't let it out unless it is so extraordinary that it proves itself very quickly to people. That's the strategy."
+        },
+        {
+            "start": "00:26:12",
+            "end": "00:26:42",
+            "speaker": "Michael Taft",
+            "text": "Especially really testing it rigorously, looking deeply into whether its answers are superficial rather than deep looking or even hallucinated rather than actual and so on over and over and over again. And then again, seeing the feedback you get from test meditators and so on in a process of feedback is maybe the best we can do."
+        },
+        {
+            "start": "00:26:42",
+            "end": "00:27:58",
+            "speaker": "Shinzen Young",
+            "text": "That's as good as it's going to get because the same is true for our human teachers. Our human teachers don't hallucinate. Our human teachers don't make horrible mistakes, even when they're masters. Come on! What do we want out of this thing? How many majorly fucked up teachers have still helped people? And we're talking about really trying to make this thing not fucked up. So my comparison is human teachers. It's not going to sexually molest anyone, right? It's not going to try to pull power trips on people and so on. I don't know what Shamil had to say about AI having consciousness, but at this point, it is a machine, a statistical machine as far as I'm concerned. I see no ghost in this whatsoever. However, the underlying math may parallel how biological consciousness works. That's a completely different issue. That's not to say it is conscious. That's to say it follows certain organizational principles. This is what Karl Friston would say."
+        },
+        {
+            "start": "00:27:59",
+            "end": "00:28:19",
+            "speaker": "Michael Taft",
+            "text": "Yeah. And just for listeners, I will say that what Shinzen's referring to is a very recent talk by Shamil Chandaria at Oxford about whether not AI, but actually AGI in the distant future could even theoretically become conscious."
+        },
+        {
+            "start": "00:28:19",
+            "end": "00:28:21",
+            "speaker": "Shinzen Young",
+            "text": "Ha! He knows his stuff. Do you know him? Is he a colleague of yours?"
+        },
+        {
+            "start": "00:28:21",
+            "end": "00:28:22",
+            "speaker": "Michael Taft",
+            "text": "Yeah, Shamil's a friend."
+        },
+        {
+            "start": "00:28:22",
+            "end": "00:28:57",
+            "speaker": "Shinzen Young",
+            "text": "Yeah, me too. And he was absolutely — I felt at our last science conference that we had with neuroscientists that do mindfulness research, his presentation was the crown jewel for me. It was jaw-dropping. He showed how you could model both the liberation aspects and the enlightenment aspects of this path using predictive coding, active inference, and free energy principle."
+        },
+        {
+            "start": "00:28:57",
+            "end": "00:29:01",
+            "speaker": "Michael Taft",
+            "text": "Yes. Wow. It's amazing stuff he's developing."
+        },
+        {
+            "start": "00:29:01",
+            "end": "00:29:17",
+            "speaker": "Shinzen Young",
+            "text": "Well, you see, he is part of the fruits of Friston. On the mandala I sent you, Dhyotima mandala?"
+        },
+        {
+            "start": "00:29:17",
+            "end": "00:29:18",
+            "speaker": "Michael Taft",
+            "text": "Yes."
+        },
+        {
+            "start": "00:29:18",
+            "end": "00:32:21",
+            "speaker": "Shinzen Young",
+            "text": "I call his thing thermodynamic reasoning. And see, Karl — I'm calling him by his first name, I've never even met him, but I'm sure I am going to. He's not a meditator. And Shamil has been trying to explain to him that there's a there there to meditation. And Shamil and several others think that's actually the job for Shinzen Young, to go to London and hang out a bit and sort of make meditation real to Karl Friston so that he can see the relevance of his own work to what we do. But if you look at the mandala, I've got not only Shamil coming out of Friston, but also Claude Shannon and Thomas Bayes, because Shannon figured out how to quantify information, at least a certain aspect of information. And the Bayes, I mean, it wasn't really him, but they named it after him. You have Bayes networks that will allow for abductive reasoning. You can say, okay, such and such has happened. What are the likely causes? And then you update. That's the essence of the statistics that most scientists use. They use, in a sense, reverse causal reasoning. But then there's also forward causal reasoning, which is what the stock and flow of Jay Forrester is about. So if you put together those two, you actually have forward reasoning. If this happens, what are the probable results causally? So forward and backward causal reasoning, the math thereof, is covered by Thomas Bayes and Jay Forrester. Shannon gave us an idea of how to model the transfer of information and the role of noise, signal. You know all this, of course, you're an audio engineer, you know the math. So in any event, you put those two together, you've got the math of forward and backward causal reasoning. You combine that with good evidence from direct observation and trusted authorities that are in the field. And that's how we judge the credibility of proposition in science. You look at the evidence and you look at the reasoning. Anyway, that's why those things are connected the way they're connected, what I sent you."
+        },
+        {
+            "start": "00:32:21",
+            "end": "00:32:45",
+            "speaker": "Michael Taft",
+            "text": "Good. So I think your statement about comparing it to human teachers is actually genius and brings us back out of the negative anti-possibilities of AI instruction for meditation and into, okay, so give me the full positive vision of this. What can this do? And furthermore, how soon will I be able to do it?"
+        },
+        {
+            "start": "00:32:45",
+            "end": "00:33:20",
+            "speaker": "Shinzen Young",
+            "text": "Well, the full positive version exists in my mind this morning. And it may be different in one week, because it's an ongoing process. So part of me wants to brain dump and give it to you as I see it this morning. Another part says I'm going to have to walk things back in a couple of weeks because I'll see it differently. But let me give you the brain dump."
+        },
+        {
+            "start": "00:33:20",
+            "end": "00:33:22",
+            "speaker": "Michael Taft",
+            "text": "I await the brain dump."
+        },
+        {
+            "start": "00:33:22",
+            "end": "00:38:26",
+            "speaker": "Shinzen Young",
+            "text": "So when I look at the 2020s, where, you know, the early 21st century. As I mentioned, I'm guessing that, yes, it's the information age, it's the biology age, but this may be remembered as the age when human beings first understood how complex dynamic networks work, which is pretty important since we as humans both are that, we embed that within us, and we are embedded within that. And the that meaning complex, dynamic, adaptive, and massive networks. So in this network age, what are the affordances that we have to help us deal with what seems to be an unprecedented level of uncertainty about the future? So, in my mind, I see what the new AI could become. That's one thing. I will just call it the new AI. So, I'm seeing the good that it could become. It could provide us with bright bots, educational assistants that are also in a sense companions. They're there 24-7, they speak our own language, they know us as much as we want them to know us. And they are informed by the spirit of science, but they are also informed by the science of systematic focus training in the service of comprehensive well-being at scale. Systematic focus training in the service of comprehensive well-being at scale is the type of thing that meditation is. I'm not giving you the definition of meditation or mindfulness. I'm saying this is the type of thing it is. It is systematic, it trains focus skills, and it is in the service of comprehensive well-being at scale, which I would also say, comprehensive well-being at scale, that phrase should also, in my philosophy, personal philosophy, that should be the stated goal of science. Same goal. In any event, I ask myself, okay, we could have bright bots. Technologically, that could be done. Well, they don't replace human teachers, but they can do things that no human teacher can do in a lot of ways. So, wow, why not make use of that? Well, what else is new? There's the new biomodulation. Are you familiar with Michael Levin? That is the frontier biologist that probably is going to find a cure for cancer and just about everything else. Maybe that's an overstatement, but let me just say this. He can grow a limb on a vertebrate after it has been amputated. He's working at the level of bioinformation where he cuts off a frog's leg, puts a cuff on the wound. The cuff has a microchemical lab hooked to a computer. It feeds natural genetic information and artificial computed information into the wound, interacting with the biological information, millions, billions of years of evolution. And in 18 months, the frog regenerates the leg by a mechanism different from the way frogs normally grow legs from embryo. So he's now accessing a level of biological information no one ever knew was there and treating what the computers do and what the humans do and what frog muscle does, or in this case, a whole frog. He's treating these all as influence and information in a complex adaptive system. And it wouldn't surprise me if he could grow an arm back on a human. I'm not saying that he can, but I'm saying it wouldn't surprise me, which means he can remove a cancerous liver and grow a new one. You know, that kind of bioinformation, it's mind-boggling."
+        },
+        {
+            "start": "00:38:27",
+            "end": "00:38:32",
+            "speaker": "Michael Taft",
+            "text": "This is just unbelievably amazing. Now, is this what you're calling biomodulation?"
+        },
+        {
+            "start": "00:38:33",
+            "end": "00:48:16",
+            "speaker": "Shinzen Young",
+            "text": "Well, biomodulation is the engineering side of the new biology. And focused ultrasound, which is what we're doing, transcranial focused ultrasound is biomodulation. We're imparting an unusual stimulus into the brain. The brain in its past evolutionary history, no brain has been subject to specific patterns of acoustic massage at different frequencies, different relationships, and different locations. We can do that now. We can micro-massage down to almost the millimeter level with ultrasound. There's no modulation of the brain that has that kind of flexibility and precision. And we think that by creating a eustress, stress, because it's a new thing that this tissue is not used to processing, but it's the right stress. It's not a distress. It's like physical exercise. It's helpful stress. That helpful stress allows the human brain to acquire equanimity better. We think that's the way it may work, which is going to be huge for us because equanimity, a case could be made, is the one focus factor that we have the best chance of getting a biological theory, an evolutionary biology theory of, because equanimity is a relationship to pleasure-pain signals. And pleasure-pain signals definitely have biological Darwinian evolutionary history going back millions, in fact, billions of years. So pleasure-pain principle has been around for a very long time biologically. With that must also come a way of processing pleasure pain that has evolved with time. And we believe that that is what we call equanimity in English, and it's central to most forms of traditional meditation. Different words are used, of course. The Four Noble Truths, in a sense, equanimity is the fourth noble truth. Suffering has a necessary cause, grasping, let go of grasping. In other words, you have equanimity. Now the necessary cause for suffering has been eliminated and the primordial okayness presents itself. So because equanimity is so universal in human meditative path, both East and West, that makes it important. But I think it's biological. And that makes it amenable to hard-nosed science, to biology, to modern biology. So I think we may be able to get an evolutionary biological theory of equanimity eventually. We don't have anything remotely like that now. Our science is not there yet at all. But this is moving forward thinking. On top of that, it looks like we can modulate this non-invasively and in very controlled, nuanced ways. So now we have the possibility of the AI providing certain guidance features that are as good as a human, and in some cases, they are superhuman. I'm going to be biased. I'm going to be selfish because I'm a human. A bot at this point in history, I don't know about the future, but it's just a statistical machine right now. It's not human. You just train it to have equanimity. It already has it. But what it has that no human has is the ability to stay with someone hour after hour, day after day, week after week, month after month, year after year, until they transcend their chronic pain or whatever it is. It has that duration and it has timing. You press a button and it's Johnny on the spot. I'm not 24-7 for 10 million people, but a bot can be that. And it's an improved book because it interacts and it has these features. So you now look at the possibility that we could make equanimity the central mindfulness skill that we teach. We facilitate it with ultrasound and we use the expert system flowchart and the conversational flexibility of the new AI to democratize and optimize the guidance. Now everyone gets... See, in the old days, rich people had their own meditation teachers in the East, and then everyone else had whatever they have. The emperor of China at one time, they had what was called a guoshi. That means the emperor's private Chan or Zen teacher. So, okay, we can now make the services that only kings and emperors could have afforded. That's now everyone. That's 100 million Swahili speakers in Central and East Africa have access to that in their own language by pressing a button. So if the biomodulation through ultrasound, well, see, that's another piece of the picture. Interventional or therapeutic ultrasound is a new field. And I'm talking about the ultrasound from the perspective of its ability to accelerate the acquisition of equanimity. But ultrasound is already being investigated to wake up coma patients, to clean up Alzheimer's plaque, to open and close the blood-brain barrier at will for micro-medication dosing. Ultrasound is being used to turn off the fear center like a switch, sometimes for several weeks within people. Ultrasound is finding numerous therapeutic applications in clinical medicine as distinct from diagnostic ultrasound, which has been around forever. Everyone knows about that, but there's now a whole new field. I don't know what it's going to be called, interventional ultrasound or therapeutic ultrasound. But fortunately for meditators, it may be that any doctor in the world can incentivize an accelerator of equanimity training by simply saying to a patient, pair this device with this free website. And this medical grade ultrasonic map and zap piece of equipment that you may need a prescription for, it now becomes a full on for free mindfulness coach with biomodulation to create what's called a reinforcing feedback loop. Because we're putting some training wheels on the bicycle, you get some goodies pretty quick, even if you're messed up, you're in a recovery center or something like that. If it works out well, you get relatively quick reinforcement from the ultrasound, and the guidance follows a flow chart that's looking for the windows and walls. It's all loaded in there, and it keeps you on track, and it can be incentivized by the medical establishment of the world by simply sending a memo, basically. All the doctor or the health professional has to say is, on your device, pair it with what's on this free website. Your device is now a lifelong free mindfulness coach. That could be very, very good for the world."
+        },
+        {
+            "start": "00:48:17",
+            "end": "00:48:22",
+            "speaker": "Michael Taft",
+            "text": "It seems like the potential for benefit drastically outweighs any potential for harm."
+        },
+        {
+            "start": "00:48:22",
+            "end": "00:52:55",
+            "speaker": "Shinzen Young",
+            "text": "As far as I can see, you know, my mantra has become individuals and groups can and should establish and maintain free and equal access to science-aligned forms of systematic focus training in the service of comprehensive well-being at scale. A long time ago, someone said to me, say in one sentence everything you have to say. That's it. That's the one sentence at 80, almost 80, that I have concluded about life. Individuals and groups of individuals. Could be a person, could be an organization, whatever. That's what I mean by individuals and groups of individuals. Can and should. It's the two things you just said. Here's the list. Here's why we can do it and here's why we should do it. And the can is that alignment of all the things I mentioned, the AI, the new AI, the new biomodulation, but now the new system theoretic way of thinking about all of science and the new math, which is the functorial math of what's called category theory has now evolved a branch called applied category theory, where they're looking into exactly this situation. You take the most abstract frontier research math along the lines of algebraic structure and connectivity, and that's called category theory. And you look at it in a new way and you realize this math goes so far that actually ordinary people can understand it intuitively. It flips around. A very advanced area of mathematics is category theory. But it's starting to look like it's understandable to kids because you know what? The symbols are dots and arrows. You use visual reasoning for it. Anyway, I'm sorry, I got a little bit off, but a new way to look at science in terms of networks, all of science, and a new math that underlies the connectivity perspective. Combine that with the engineering breakthroughs in conversational AI and the engineering breakthroughs in biomodulation, specifically therapeutic or interventional ultrasound, this all sort of tells a story about a resource that can be created. It seems like we can do this now. Then the issue is should we, and the should goes to what you just said, which is you make your best guess at what the problems will be and you make your best guess as to how you can diagnose and prevent and treat, and then you line it up and you see. And my best guess as for what the problem is going to be is if you accelerate it, you're going to produce more of the classical side effects of meditation, which are dark night, difficult energetic phenomena, flatline, lots of problems. We list them and we have interventions to deal with them in traditional practice. Well, the thing that I'm envisaging is going to vastly amplify those side effects because the severe ones are not common. But if we start 10xing, 100xing, 1000xing the serious meditators of the world, well, obviously that's a good thing. But now we're similarly making it not more likely that there'll be problems, but the likelihood is the same. Because so many people are practicing, we will have more problems."
+        },
+        {
+            "start": "00:52:56",
+            "end": "00:53:00",
+            "speaker": "Michael Taft",
+            "text": "Yeah, the absolute number of people with problems will go way up."
+        },
+        {
+            "start": "00:53:00",
+            "end": "00:59:14",
+            "speaker": "Shinzen Young",
+            "text": "Yeah, you have to build in a solution to that. And it's medical. Medical treatments have side effects. It's just accepted. And the treatment is approved if the benefits vastly outweigh the side effects. So I'm not saying this isn't going to create problems for the world to integrate. It will. But we should do it because, to our best reasoning, the benefits are much greater than the bad effects. So to repeat the mantra again, the elevator pitch, individuals and groups can and should establish and maintain. The maintain is important just in case things get bad on the planet. Got to keep this going because this mitigates the bad. So establish and maintain free, no charge, and equal, whatever continent you're living on, whatever culture you're living in, whatever your most comfortable language may be, you get the same expert product, equal. And it's very hard to provide massive, equal increase in happiness in human beings. Usually, it doesn't work that way, but that's what we're aiming at here. Free and equal access to, I use the phrase in this formulation, science-aligned forms. Now, what I'm envisaging goes beyond being science aligned. Science aligned just means there's nothing in the conceptual framework of the system that seriously violates the spirit or achievements of science. So we'll call that science aligned. But what I'm trying to build, I would describe as science-enriched. It actually incorporates the spirit of science as techniques, as part of the training. But for the mantra that I just gave you, that is the broad vision, but the specific implementation that I'm thinking of working on is not science-aligned, it's science-enriched. That's much more ambitious. But for this broad vision, like here's what the world should do. So individuals and groups can and should establish and maintain free and equal access to a science aligned, if possible, science enriched forms of systematic focus training in the service of comprehensive well-being at scale. And the comprehensive means you've covered at least four things in your training. You've covered improvements in perception, you've covered improvements in behavior, you've covered the obvious forms of improvements, but you've also covered the deeper, less obvious forms. It is obvious if I'm sick, I will have an improvement if I cure the disease. That's obvious to anyone. What is not so obvious is if you're sick and we can't cure it, which sooner or later is going to happen, you can still be okay. You can escape into the power of now, and you can be okay. That's a deeper view, and there are deeper views about behavior also. The obvious behavior is, well, you get improvements in performance or school, those kinds of things. But then there are the deeper character training and even things like rationality training, that people normally don't think of when they think of behavior change, that are somewhat deeper views of behavior. So you want to cover what is obvious, and you want to cover what is not obvious and deep. And you want to cover both the perceptual improvements and the behavioral improvements. If your conceptual model addresses all four of those quadrants, we'll say that it is a comprehensive formulation. So individuals and groups can and should establish and maintain free and equal access to science-aligned forms of systematic focus training in the service of comprehensive well-being at scale. And at scale means as many people in the world who are ready to do this are doing this. I'm not saying everyone in the world needs to be a meditator, but everyone in the world does need to be a meditator at some point in their life, actually usually at several points. So from that perspective, this allows a resource that would be known to exist in the world that is like a subtle breath of the angels, an angelic drift subtly supporting the better tendencies of our species."
+        },
+        {
+            "start": "00:59:15",
+            "end": "00:59:23",
+            "speaker": "Michael Taft",
+            "text": "Well, this is amazing, Shinzen. Thank you for sharing the vision. It's both challenging and extremely hopeful vision for the future."
+        },
+        {
+            "start": "00:59:23",
+            "end": "00:59:51",
+            "speaker": "Shinzen Young",
+            "text": "It's not a prediction. There's no prediction here. Like everything's going to be great. No, it's merely a scientifically plausible narrative suggesting sober optimism. Sober optimism. We can define sober for you with respect to the prospect of human survival and flourishing in this century moving forward."
+        },
+        {
+            "start": "00:59:51",
+            "end": "01:00:14",
+            "speaker": "Michael Taft",
+            "text": "Yes. Now, I hope — you brought up the subject of this massively empowered meditation machine, also bringing up a lot of difficulties, maybe in absolute numbers, quite a large amount of difficulties for people, and maybe some solutions for that. So I'm hoping in a future conversation, we can really get into that juicy topic."
+        },
+        {
+            "start": "01:00:15",
+            "end": "01:00:17",
+            "speaker": "Shinzen Young",
+            "text": "That sounds like a cliffhanger."
+        },
+        {
+            "start": "01:00:19",
+            "end": "01:00:22",
+            "speaker": "Michael Taft",
+            "text": "Thank you so much. It's always such a pleasure."
+        },
+        {
+            "start": "01:00:23",
+            "end": "01:00:23",
+            "speaker": "Shinzen Young",
+            "text": "Talk to you later."
+        },
+        {
+            "start": "01:00:24",
+            "end": "01:00:25",
+            "speaker": "Michael Taft",
+            "text": "Talk to you soon. Bye-bye."
+        },
+        {
+            "start": "01:00:44",
+            "end": "01:00:47",
+            "speaker": "Michael Taft",
+            "text": "That's it for this episode of Deconstructing Yourself."
+        }
+    ]
+}
