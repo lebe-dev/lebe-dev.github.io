@@ -144,11 +144,32 @@ const shows = [...new Set(episodes.map((e) => e.podcast))];
   const list = document.querySelector<HTMLUListElement>('.podcast-list');
   const items = Array.from(document.querySelectorAll<HTMLLIElement>('.podcast-list li'));
 
+  // Sort direction persists across visits (unlike the show filter and
+  // search, which are per-navigation via ?show=/?q=).
+  const SORT_STORAGE_KEY = 'podcast-sort-dir';
+
+  const loadStoredSortDir = (): 'asc' | 'desc' | null => {
+    try {
+      const stored = localStorage.getItem(SORT_STORAGE_KEY);
+      return stored === 'asc' || stored === 'desc' ? stored : null;
+    } catch {
+      return null;
+    }
+  };
+
+  const saveSortDir = (dir: 'asc' | 'desc') => {
+    try {
+      localStorage.setItem(SORT_STORAGE_KEY, dir);
+    } catch {
+      // Safari private mode etc. — sort still works for this visit.
+    }
+  };
+
   if (items.length > 0) {
     items[0].parentElement?.classList.add('filterable');
 
     let selectedShow = '';
-    let sortDir: 'asc' | 'desc' = 'desc';
+    let sortDir: 'asc' | 'desc' = loadStoredSortDir() ?? 'desc';
 
     // :first-child/:last-child can't see past hidden items, so the spacing
     // of the first and last *visible* entry is marked explicitly.
@@ -240,12 +261,18 @@ const shows = [...new Set(episodes.map((e) => e.podcast))];
 
     if (sortBar) {
       sortBar.hidden = false;
+      for (const other of sortBar.querySelectorAll<HTMLButtonElement>('.filter')) {
+        const active = other.dataset.sortDir === sortDir;
+        other.classList.toggle('active', active);
+        other.setAttribute('aria-pressed', String(active));
+      }
       sortBar.addEventListener('click', (event) => {
         const target = event.target as HTMLElement;
         const button = target.closest<HTMLButtonElement>('.filter');
         if (!button) return;
 
         const dir = button.dataset.sortDir === 'asc' ? 'asc' : 'desc';
+        saveSortDir(dir);
         if (dir === sortDir) return;
         sortDir = dir;
         for (const other of sortBar.querySelectorAll<HTMLButtonElement>('.filter')) {
