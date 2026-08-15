@@ -1,0 +1,406 @@
+<!DOCTYPE html><html lang="fr" data-astro-cid-37fxchfa> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Comment je traduis des sous-titres avec un LLM — Eugene Lebedev</title><meta name="description" content="Comment je traduis les sous-titres de films avec des LLM grâce à mon outil submarine — étude de cas avec le film Silent Friend (2025)."><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96"><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="manifest" href="/manifest.webmanifest"><meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#0e0f10" media="(prefers-color-scheme: dark)"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Eugene Lebedev"><link rel="canonical" href="https://lebe-dev.github.io/fr/blog/comment-je-traduis-des-sous-titres-avec-un-llm/"><link rel="alternate" hreflang="fr" href="https://lebe-dev.github.io/fr/blog/comment-je-traduis-des-sous-titres-avec-un-llm/"><link rel="alternate" hreflang="en" href="https://lebe-dev.github.io/en/blog/comment-je-traduis-des-sous-titres-avec-un-llm/"><link rel="alternate" hreflang="ru" href="https://lebe-dev.github.io/ru/blog/comment-je-traduis-des-sous-titres-avec-un-llm/"><link rel="alternate" hreflang="es" href="https://lebe-dev.github.io/es/blog/comment-je-traduis-des-sous-titres-avec-un-llm/"><link rel="alternate" hreflang="zh" href="https://lebe-dev.github.io/zh/blog/comment-je-traduis-des-sous-titres-avec-un-llm/"><link rel="alternate" hreflang="ja" href="https://lebe-dev.github.io/ja/blog/comment-je-traduis-des-sous-titres-avec-un-llm/"><link rel="alternate" hreflang="de" href="https://lebe-dev.github.io/de/blog/comment-je-traduis-des-sous-titres-avec-un-llm/"><link rel="alternate" hreflang="x-default" href="https://lebe-dev.github.io/"><link rel="alternate" type="application/rss+xml" title="Flux RSS (fr)" href="/fr/rss.xml"><meta name="generator" content="Astro v6.3.5"><meta property="og:title" content="Comment je traduis des sous-titres avec un LLM — Eugene Lebedev"><meta property="og:description" content="Comment je traduis les sous-titres de films avec des LLM grâce à mon outil submarine — étude de cas avec le film Silent Friend (2025)."><meta property="og:type" content="website"><meta property="og:url" content="https://lebe-dev.github.io/fr/blog/comment-je-traduis-des-sous-titres-avec-un-llm/"><meta property="og:locale" content="fr_FR"><script>(() => {
+  const queue = [];
+  const CAP = 25;
+  const onError = (event) => {
+    if (queue.length < CAP) queue.push({
+      kind: 'error',
+      error: event.error,
+      message: event.message,
+      filename: event.filename,
+      lineno: event.lineno,
+      colno: event.colno,
+    });
+  };
+  const onRejection = (event) => {
+    if (queue.length < CAP) queue.push({ kind: 'rejection', reason: event.reason });
+  };
+
+  window.__sentryEarly = queue;
+  window.addEventListener('error', onError);
+  window.addEventListener('unhandledrejection', onRejection);
+  window.__sentryEarlyStop = () => {
+    window.removeEventListener('error', onError);
+    window.removeEventListener('unhandledrejection', onRejection);
+  };
+})();</script><script>
+      (() => {
+        try {
+          const t = localStorage.getItem('theme');
+          const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (t === 'dark' || (!t && prefersDark)) {
+            document.documentElement.classList.add('dark');
+          }
+        } catch {}
+      })();
+    </script><!-- Google Tag Manager --><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5DRJHT5J');</script><!-- End Google Tag Manager --><link rel="stylesheet" href="/_astro/BaseLayout.DDZFJa7L.css">
+<link rel="stylesheet" href="/_astro/_slug_.DoCn-Rwo.css">
+<style>.read-toggle.svelte-1cgg1iv{display:inline-flex;align-items:center;gap:.3rem;padding:.2rem .45rem;border:none;border-radius:4px;background:transparent;color:inherit;font-family:var(--sans);font-size:.7rem;line-height:1;letter-spacing:.03em;text-transform:uppercase;cursor:pointer;opacity:.55;transition:opacity .15s ease,color .15s ease}.read-toggle.svelte-1cgg1iv:hover{opacity:1}.read-toggle.svelte-1cgg1iv:focus-visible{outline:2px solid var(--link);outline-offset:2px}.read-toggle.is-read.svelte-1cgg1iv{opacity:1;color:#2e7d32}.dark .read-toggle.is-read.svelte-1cgg1iv{color:#66bb6a}.read-toggle.svelte-1cgg1iv svg:where(.svelte-1cgg1iv){flex-shrink:0}.progress-rail.svelte-1cgg1iv{position:fixed;top:0;left:0;right:0;height:2px;z-index:950;pointer-events:none}.progress-rail__fill.svelte-1cgg1iv{height:100%;background:var(--link);transform-origin:0 50%;will-change:transform}.resume.svelte-1cgg1iv{position:fixed;left:50%;bottom:1.75rem;z-index:950;display:inline-flex;align-items:stretch;transform:translate(-50%);border:1px solid var(--rule);border-radius:999px;background:var(--bg);box-shadow:0 2px 12px #00000026;animation:svelte-1cgg1iv-resume-in .2s ease;max-width:calc(100vw - 2rem)}.resume__action.svelte-1cgg1iv,.resume__close.svelte-1cgg1iv{border:none;background:none;color:var(--fg);font-family:var(--sans);font-size:.8rem;cursor:pointer;display:inline-flex;align-items:center;gap:.4rem}.resume__action.svelte-1cgg1iv{padding:.5rem .4rem .5rem .9rem;border-radius:999px 0 0 999px;min-width:0}.resume__action.svelte-1cgg1iv span:where(.svelte-1cgg1iv):not(.resume__percent){overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.resume__action.svelte-1cgg1iv:hover{color:var(--link)}.resume__percent.svelte-1cgg1iv{color:var(--text-muted);font-variant-numeric:tabular-nums}.resume__close.svelte-1cgg1iv{padding:.5rem .75rem;border-radius:0 999px 999px 0;color:var(--text-muted)}.resume__close.svelte-1cgg1iv:hover{color:var(--fg)}.resume__action.svelte-1cgg1iv:focus-visible,.resume__close.svelte-1cgg1iv:focus-visible{outline:2px solid var(--link);outline-offset:-2px}@keyframes svelte-1cgg1iv-resume-in{0%{opacity:0;transform:translate(-50%,.5rem)}to{opacity:1;transform:translate(-50%)}}@media(prefers-reduced-motion:reduce){.read-toggle.svelte-1cgg1iv,.resume.svelte-1cgg1iv{transition:none;animation:none}}@media(prefers-contrast:more){.read-toggle.svelte-1cgg1iv{opacity:1}}@media(max-width:600px){.resume.svelte-1cgg1iv{bottom:1rem;left:1rem;right:4.75rem;transform:none;max-width:none;animation:none}.resume__action.svelte-1cgg1iv{flex:1}}
+</style></head> <body data-astro-cid-37fxchfa> <!-- Google Tag Manager (noscript) --> <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5DRJHT5J" height="0" width="0" style="display:none;visibility:hidden" data-astro-cid-37fxchfa></iframe></noscript> <!-- End Google Tag Manager (noscript) --> <header class="site-header minimal" data-astro-cid-3ef6ksr2> <div class="header-row" data-astro-cid-3ef6ksr2> <a href="/fr/" class="back-link" data-astro-cid-3ef6ksr2> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-astro-cid-3ef6ksr2> <path d="m12 19-7-7 7-7" data-astro-cid-3ef6ksr2></path> <path d="M19 12H5" data-astro-cid-3ef6ksr2></path> </svg> <span data-astro-cid-3ef6ksr2>RETOUR</span> </a> <div class="actions" data-astro-cid-3ef6ksr2>  <style>astro-island,astro-slot,astro-static-slot{display:contents}</style><script>(()=>{var l=(n,t)=>{let i=async()=>{await(await n())()},e=typeof t.value=="object"?t.value:void 0,s={timeout:e==null?void 0:e.timeout};"requestIdleCallback"in window?window.requestIdleCallback(i,s):setTimeout(i,s.timeout||200)};(self.Astro||(self.Astro={})).idle=l;window.dispatchEvent(new Event("astro:idle"));})();</script><script>(()=>{var g=Object.defineProperty;var w=(c,s,d)=>s in c?g(c,s,{enumerable:!0,configurable:!0,writable:!0,value:d}):c[s]=d;var l=(c,s,d)=>w(c,typeof s!="symbol"?s+"":s,d);var E=new Set(["__proto__","constructor","prototype"]);{let c={0:t=>y(t),1:t=>d(t),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(d(t)),5:t=>new Set(d(t)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(t),9:t=>new Uint16Array(t),10:t=>new Uint32Array(t),11:t=>Number.POSITIVE_INFINITY*t},s=t=>{let[p,e]=t;return p in c?c[p](e):void 0},d=t=>t.map(s),y=t=>typeof t!="object"||t===null?t:Object.fromEntries(Object.entries(t).map(([p,e])=>[p,s(e)]));class f extends HTMLElement{constructor(){super(...arguments);l(this,"Component");l(this,"hydrator");l(this,"hydrate",async()=>{var b;if(!this.hydrator||!this.isConnected)return;let e=(b=this.parentElement)==null?void 0:b.closest("astro-island[ssr]");if(e){e.addEventListener("astro:hydrate",this.hydrate,{once:!0});return}let n=this.querySelectorAll("astro-slot"),r={},i=this.querySelectorAll("template[data-astro-template]");for(let o of i){let a=o.closest(this.tagName);a!=null&&a.isSameNode(this)&&(r[o.getAttribute("data-astro-template")||"default"]=o.innerHTML,o.remove())}for(let o of n){let a=o.closest(this.tagName);a!=null&&a.isSameNode(this)&&(r[o.getAttribute("name")||"default"]=o.innerHTML)}let u;try{u=this.hasAttribute("props")?y(JSON.parse(this.getAttribute("props"))):{}}catch(o){let a=this.getAttribute("component-url")||"<unknown>",v=this.getAttribute("component-export");throw v&&(a+=` (export ${v})`),console.error(`[hydrate] Error parsing props for component ${a}`,this.getAttribute("props"),o),o}let h;await this.hydrator(this)(this.Component,u,r,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),this.dispatchEvent(new CustomEvent("astro:hydrate"))});l(this,"unmount",()=>{this.isConnected||this.dispatchEvent(new CustomEvent("astro:unmount"))})}disconnectedCallback(){document.removeEventListener("astro:after-swap",this.unmount),document.addEventListener("astro:after-swap",this.unmount,{once:!0})}connectedCallback(){if(!this.hasAttribute("await-children")||document.readyState==="interactive"||document.readyState==="complete")this.childrenConnectedCallback();else{let e=()=>{document.removeEventListener("DOMContentLoaded",e),n.disconnect(),this.childrenConnectedCallback()},n=new MutationObserver(()=>{var r;((r=this.lastChild)==null?void 0:r.nodeType)===Node.COMMENT_NODE&&this.lastChild.nodeValue==="astro:end"&&(this.lastChild.remove(),e())});n.observe(this,{childList:!0}),document.addEventListener("DOMContentLoaded",e)}}async childrenConnectedCallback(){let e=this.getAttribute("before-hydration-url");e&&await import(e),this.start()}getRetryImportUrl(e){let n=new URL(e,document.baseURI),r=`astro-retry=${Date.now()}`,i=n.hash.replace(/^#/,"");return n.hash=i?`${i}&${r}`:r,n.toString()}async importWithRetry(e){try{return await import(e)}catch(n){return await new Promise(r=>setTimeout(r,1e3)),import(this.getRetryImportUrl(e))}}handleHydrationError(e){let n=this.getAttribute("component-url"),r=new CustomEvent("astro:hydration-error",{cancelable:!0,bubbles:!0,composed:!0,detail:{error:e,componentUrl:n}});this.dispatchEvent(r)&&console.error(`[astro-island] Error hydrating ${n}`,e)}async start(){let e=JSON.parse(this.getAttribute("opts")),n=this.getAttribute("client");if(Astro[n]===void 0){window.addEventListener(`astro:${n}`,()=>this.start(),{once:!0});return}try{await Astro[n](async()=>{let r=this.getAttribute("renderer-url");try{let[i,{default:u}]=await Promise.all([this.importWithRetry(this.getAttribute("component-url")),r?this.importWithRetry(r):Promise.resolve({default:()=>()=>{}})]),h=this.getAttribute("component-export")||"default";if(h.includes(".")){this.Component=i;for(let m of h.split(".")){if(E.has(m)||!this.Component||typeof this.Component!="object"&&typeof this.Component!="function"||!Object.hasOwn(this.Component,m))throw new Error(`Invalid component export path: ${h}`);this.Component=this.Component[m]}}else{if(E.has(h))throw new Error(`Invalid component export path: ${h}`);this.Component=i[h]}return this.hydrator=u,this.hydrate}catch(i){return this.handleHydrationError(i),()=>{}}},e,this)}catch(r){this.handleHydrationError(r)}}attributeChangedCallback(){this.hydrate()}}l(f,"observedAttributes",["props"]),customElements.get("astro-island")||customElements.define("astro-island",f)}})();</script><astro-island uid="pJqgh" component-url="/_astro/OfflineToggle.1znNFc7k.js" component-export="default" renderer-url="/_astro/client.svelte.DbEP35Vr.js" props="{&quot;lang&quot;:[0,&quot;fr&quot;],&quot;labels&quot;:[0,{&quot;badge&quot;:[0,&quot;Hors ligne&quot;],&quot;badgeTitle&quot;:[0,&quot;Pas de connexion — copie enregistrée du site affichée.&quot;],&quot;save&quot;:[0,&quot;Enregistrer le site pour la lecture hors ligne&quot;],&quot;saving&quot;:[0,&quot;Enregistrement du site pour la lecture hors ligne&quot;],&quot;saved&quot;:[0,&quot;Site enregistré pour la lecture hors ligne&quot;],&quot;cancel&quot;:[0,&quot;Annuler l&#39;enregistrement&quot;],&quot;remove&quot;:[0,&quot;Supprimer la copie hors ligne&quot;],&quot;failed&quot;:[0,&quot;Certaines pages n&#39;ont pas pu être enregistrées. Réessayez.&quot;],&quot;updateAvailable&quot;:[0,&quot;Une nouvelle version du site est disponible.&quot;],&quot;updateAction&quot;:[0,&quot;Actualiser&quot;],&quot;updateDismiss&quot;:[0,&quot;Plus tard&quot;]}],&quot;data-astro-cid-3ef6ksr2&quot;:[0,true]}" ssr client="idle" opts="{&quot;name&quot;:&quot;OfflineToggle&quot;,&quot;value&quot;:true}" await-children><!--[--><!--[-1--><!--]--> <!--[-1--><!--]--> <!--[-1--><!--]--><!--]--><!--astro:end--></astro-island> <script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).load=e;window.dispatchEvent(new Event("astro:load"));})();</script><astro-island uid="Z1GS7Tg" component-url="/_astro/ThemeToggle.DC4DNkVM.js" component-export="default" renderer-url="/_astro/client.svelte.DbEP35Vr.js" props="{&quot;labelLight&quot;:[0,&quot;Passer au thème clair&quot;],&quot;labelDark&quot;:[0,&quot;Passer au thème sombre&quot;],&quot;data-astro-cid-3ef6ksr2&quot;:[0,true]}" ssr client="load" opts="{&quot;name&quot;:&quot;ThemeToggle&quot;,&quot;value&quot;:true}" await-children><!--[--><!--[-1--><button data-slot="button" class="focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive dark:aria-invalid:border-destructive/50 rounded-md border border-transparent bg-clip-padding text-sm font-medium focus-visible:ring-3 active:not-aria-[haspopup]:translate-y-px aria-invalid:ring-3 [&amp;_svg:not([class*='size-'])]:size-4 group/button inline-flex shrink-0 items-center justify-center whitespace-nowrap transition-all outline-none select-none disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 hover:bg-muted hover:text-foreground dark:hover:bg-muted/50 aria-expanded:bg-muted aria-expanded:text-foreground size-9" type="button" aria-label="Passer au thème sombre"><!--[-1--><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide-icon lucide lucide-moon"><!--[--><!----><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"><!----></path><!----><!--]--><!----></svg><!--]--><!----></button><!--]--><!--]--><!--astro:end--></astro-island> </div> </div>  </header> <main class="reset-visited" data-astro-cid-37fxchfa>  <article data-astro-cid-gjtny2mx> <h1 data-astro-cid-gjtny2mx>Comment je traduis des sous-titres avec un LLM</h1> <p class="post-meta" data-astro-cid-gjtny2mx> <span class="post-date" data-astro-cid-gjtny2mx> 2026-06-14  </span>  <span class="post-sep" aria-hidden="true" data-astro-cid-gjtny2mx>·</span> <span class="post-stats" data-astro-cid-gjtny2mx> 6 733 caractères <span class="post-sep post-sep--inline" aria-hidden="true" data-astro-cid-gjtny2mx>·</span>
+~6 min de lecture </span>  <span class="post-actions" data-astro-cid-gjtny2mx> <astro-island uid="ZJWv01" component-url="/_astro/ReadingProgress.DdRF1m23.js" component-export="default" renderer-url="/_astro/client.svelte.DbEP35Vr.js" props="{&quot;progressId&quot;:[0,&quot;post:translate-subtitles-with-llm&quot;],&quot;readId&quot;:[0,&quot;post:translate-subtitles-with-llm&quot;],&quot;contentSelector&quot;:[0,&quot;article&quot;],&quot;labels&quot;:[0,{&quot;progress&quot;:[0,&quot;Progression de lecture&quot;],&quot;markRead&quot;:[0,&quot;Marquer comme lu&quot;],&quot;markUnread&quot;:[0,&quot;Marquer comme non lu&quot;],&quot;read&quot;:[0,&quot;Lu&quot;],&quot;resume&quot;:[0,&quot;Reprendre la lecture&quot;],&quot;resumeDismiss&quot;:[0,&quot;Masquer&quot;]}],&quot;data-astro-cid-gjtny2mx&quot;:[0,true]}" ssr client="idle" opts="{&quot;name&quot;:&quot;ReadingProgress&quot;,&quot;value&quot;:true}" await-children><!--[--><button type="button" class="read-toggle svelte-1cgg1iv" aria-pressed="false" title="Marquer comme lu" aria-label="Marquer comme lu"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="svelte-1cgg1iv"><path d="M20 6 9 17l-5-5"></path></svg> <span class="read-toggle__text">Lu</span></button> <!--[-1--><!--]--> <!--[-1--><!--]--><!--]--><!--astro:end--></astro-island> <span class="post-lang-inline" data-astro-cid-gjtny2mx> <astro-island uid="1SktdE" component-url="/_astro/PostLangSwitch.BgPWnL7I.js" component-export="default" renderer-url="/_astro/client.svelte.DbEP35Vr.js" props="{&quot;lang&quot;:[0,&quot;fr&quot;],&quot;label&quot;:[0,&quot;Choisir la langue&quot;],&quot;translations&quot;:[1,[[0,{&quot;code&quot;:[0,&quot;de&quot;],&quot;url&quot;:[0,&quot;/de/blog/wie-ich-untertitel-mit-llms-uebersetze/&quot;]}],[0,{&quot;code&quot;:[0,&quot;en&quot;],&quot;url&quot;:[0,&quot;/en/blog/how-i-translate-subtitles-with-llm/&quot;]}],[0,{&quot;code&quot;:[0,&quot;es&quot;],&quot;url&quot;:[0,&quot;/es/blog/como-traduzco-subtitulos-con-llm/&quot;]}],[0,{&quot;code&quot;:[0,&quot;fr&quot;],&quot;url&quot;:[0,&quot;/fr/blog/comment-je-traduis-des-sous-titres-avec-un-llm/&quot;]}],[0,{&quot;code&quot;:[0,&quot;ru&quot;],&quot;url&quot;:[0,&quot;/ru/blog/kak-ya-perevozhu-subtitry-s-llm/&quot;]}]]],&quot;data-astro-cid-gjtny2mx&quot;:[0,true]}" ssr client="load" opts="{&quot;name&quot;:&quot;PostLangSwitch&quot;,&quot;value&quot;:true}" await-children><!--[--><!--[--><!--[--><!--[--><!--[--><!--$s1-s1--><!--[--><!--[-1--><button data-slot="select-trigger" data-size="sm" class="border-input data-placeholder:text-muted-foreground dark:bg-input/30 dark:hover:bg-input/50 focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive dark:aria-invalid:border-destructive/50 gap-1.5 rounded-md border bg-transparent py-2 pr-2 pl-2.5 text-sm shadow-xs transition-[color,box-shadow] focus-visible:ring-3 aria-invalid:ring-3 data-[size=default]:h-9 data-[size=sm]:h-8 *:data-[slot=select-value]:gap-1.5 [&amp;_svg:not([class*='size-'])]:size-4 flex w-fit items-center justify-between whitespace-nowrap outline-none disabled:cursor-not-allowed disabled:opacity-50 *:data-[slot=select-value]:line-clamp-1 *:data-[slot=select-value]:flex *:data-[slot=select-value]:items-center [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0" aria-label="Choisir la langue" id="bits-s1-s1" aria-haspopup="listbox" aria-expanded="false" data-state="closed" data-select-trigger="" type="button"><!---->Français<!----> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide-icon lucide lucide-chevron-down text-muted-foreground size-4 pointer-events-none"><!--[--><!----><path d="m6 9 6 6 6-6"><!----></path><!----><!--]--><!----></svg><!----><!----></button><!--]--><!----><!--]--><!--]--><!--]--> <!--[--><!--[--><!--[-1--><!--]--><!--]--><!--]--><!----><!----><!----> <!--[-1--><!--[-1--><!--]--><!--]--><!--]--><!--]--><!--]--><!--astro:end--></astro-island> </span> <button type="button" id="copy-md" class="copy-md" title="Copier en Markdown" aria-label="Copier en Markdown" data-astro-cid-gjtny2mx> <svg class="copy-md__icon copy-md__icon--copy" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-astro-cid-gjtny2mx> <rect x="9" y="9" width="13" height="13" rx="2" ry="2" data-astro-cid-gjtny2mx></rect> <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" data-astro-cid-gjtny2mx></path> </svg> <svg class="copy-md__icon copy-md__icon--check" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-astro-cid-gjtny2mx> <path d="M20 6 9 17l-5-5" data-astro-cid-gjtny2mx></path> </svg> <span class="copy-md__text" data-astro-cid-gjtny2mx>COPIER</span> </button> </span> </p> <textarea id="post-markdown" hidden readonly data-astro-cid-gjtny2mx>![submarine, Text-based User Interface](/images/article-llm-intro.png)
+
+Dans cet article, je veux raconter comment je traduis des sous-titres avec de grands modèles de langage (LLM). Il se trouve que je regarde les films, les séries, les documentaires, les dessins animés, les animes et tout le reste uniquement avec la bande son originale.
+
+Tous les autres sujets annexes, du type « pourquoi ne pas simplement regarder sur les services de streaming ? », sortent du cadre de cet article.
+
+Les LLM sont apparus il y a quelques années, mais cela ne fait qu&#39;un an environ qu&#39;ils sont assez bons pour traduire. Malgré tout, même en 2026, il n&#39;existe pas de « solution miracle » à tous les problèmes de sous-titres. Et croyez-moi, il y en a beaucoup. Voici les principaux :
+
+1. Le film n&#39;a aucun sous-titre
+2. Il n&#39;existe des sous-titres que dans une langue que je ne maîtrise pas assez, voire pas du tout
+3. Les sous-titres sont incomplets (oui, ça arrive aussi, j&#39;y reviens plus bas)
+4. Les sous-titres sont en avance ou en retard. Cela arrive quand la version du film ne correspond pas (version cinéma, version du réalisateur, etc.)
+5. Les LLM traduisent très bien vers de nombreuses langues, mais ils cassent sur les sous-titres : ils détruisent les timings, sautent des répliques, etc.
+6. Le texte des sous-titres n&#39;a pas de contexte, et si le film est récent, le LLM peut ne pas s&#39;en sortir avec la traduction. Certains mots se traduisent très différemment selon l&#39;époque de l&#39;action
+
+C&#39;est pourquoi la seule idée qui me soit venue, c&#39;est qu&#39;il faut aider le LLM d&#39;une manière ou d&#39;une autre. Et voici en quoi nous pouvons l&#39;aider :
+
+1. Suivre l&#39;avancement de la traduction
+2. Vérifier l&#39;intégrité du résultat pendant la traduction et à la fin
+3. Pouvoir comparer la traduction avec l&#39;original
+4. Pouvoir réparer les sous-titres en cas de décalage entre les répliques ou de problème de fréquence d&#39;images
+5. Pouvoir assembler les sous-titres finaux à partir de plusieurs sources (oui, ça arrive aussi)
+6. Comprendre le contexte de l&#39;œuvre
+
+## L&#39;outil submarine
+
+En janvier de cette année, j&#39;ai écrit l&#39;outil [submarine](https://github.com/lebe-dev/submarine), qui a pris en charge la plus grande partie de ces problèmes. Dès la toute première version, l&#39;outil a été conçu pour la traduction de sous-titres avec des LLM, avec un penchant pour l&#39;approche agentique (Claude Code, Codex, opencode et d&#39;autres). Cela dit, j&#39;ai aussi ajouté une solution de repli pour les chatbots classiques — pour les situations où les limites de l&#39;agent sont épuisées, mais où il reste un accès libre à Google AI Studio et à cent autres chatbots.
+
+L&#39;outil aide le modèle à préserver l&#39;intégrité du processus et les timings, et lui permet aussi de comparer la traduction avec l&#39;original. En plus de cela, il fait toujours des sauvegardes.
+
+L&#39;outil prend également en charge une sortie JSON, pour que les agents se repèrent facilement dans ses possibilités. Merci à `Justin Poehnelt` pour son excellent article [You Need to Rewrite Your CLI for AI Agents](https://justin.poehnelt.com/posts/rewrite-your-cli-for-ai-agents/).
+
+En outre, l&#39;outil permet d&#39;évaluer la traduction via une TUI (Text-based User Interface) :
+
+![submarine, Text-based User Interface](/images/article-llm-submarine.png)
+
+Outre la navigation de base vers le haut et vers le bas, ce mode prend en charge différentes façons de se déplacer. Par exemple le saut aléatoire (raccourci `r`). C&#39;est pratique pour juger de ses propres yeux la qualité de la traduction (« faire confiance, mais vérifier »).
+
+Pour l&#39;installer, il suffit de donner à l&#39;agent le lien vers le projet sur github — https://github.com/lebe-dev/submarine.
+
+Ensuite, à titre d&#39;exemple, je raconte comment j&#39;ai préparé les sous-titres russes du film « Silent Friend » (2025).
+
+## Silent Friend (2025)
+
+En 2025 est sorti le drame [Silent Friend](https://en.wikipedia.org/wiki/Silent_Friend) de la réalisatrice [Ildikó Enyedi](https://en.wikipedia.org/wiki/Ildik%C3%B3_Enyedi). Le film est parlé en trois langues : anglais, allemand et chinois. De plus, l&#39;action se déroule à différentes époques : 1908, 1970 et 2020.
+
+Malheureusement, le film n&#39;a pas eu de large distribution, et du coup la situation était plutôt triste côté sous-titres. Sur [opensubtitles](https://www.opensubtitles.org/en/subtitles/13792243/silent-friend-en), j&#39;ai trouvé des sous-titres anglais, mais ils se sont révélés incomplets. Il y avait aussi une traduction russe faite avec un LLM, mais à en juger par les commentaires, elle était incomplète elle aussi.
+
+J&#39;ai donc téléchargé les sous-titres anglais et j&#39;ai commencé à les traduire.
+
+### Préparation de la traduction
+
+Avant de traduire les sous-titres d&#39;un film, il est important que le LLM dispose du contexte de la traduction.
+
+Par exemple, dans un contexte médiéval, le mot anglais « suffer » signifie laisser, permettre. Au sens moderne — supporter la douleur.
+
+Le mot « villain » signifie aujourd&#39;hui « un personnage méchant », mais dans le contexte médiéval il désignait « un vilain — un paysan attaché à la terre ».
+
+C&#39;est pourquoi, dans le premier prompt destiné à l&#39;agent généraliste ([exemple sur github](https://github.com/lebe-dev/submarine/blob/main/docs/AGENT-TRANSLATION-FLOW.md)), je lui ai transmis une description du film et de son intrigue tirée de [Wikipédia](https://en.wikipedia.org/wiki/Silent_Friend).
+
+En guise de confirmation, `Opus 4.8` (en mode `high`) a expliqué dans sa réponse finale qu&#39;il avait tenu compte des différences entre les époques :
+
+```
+⏺ Terminé. Le film Silent Friend (2025) est entièrement traduit.
+
+  Résumé
+
+  - Source : Silent.Friend.2025.1080p.WEB-DL.DDP5.1.H.264.en.srt (703 sous-titres)
+  - Résultat : Stille.Freundin.2025.1080p.WEB-DL.DDP5.1.H.264.ru.srt
+  - Progression : 100% (703/703), toutes les vérifications passées — correspondance parfaite, aucune réplique sautée, aucun décalage des timecodes.
+
+  Traduit par blocs de 100 lignes, chaque bloc vérifié avec verify. Quelques décisions dictées par le contexte à travers les trois lignes temporelles du film :
+
+  - 1908 (Grete) : les termes latins de Linné (Monandria, Species Plantarum) ont été conservés tels quels — ils font partie de la scène de l&#39;interrogatoire académique ; les formules d&#39;adresse telles que « Fräulein », « miss », « Mr./Mrs. Winterhalter » suivent l&#39;époque.
+  - 1972 (Hannes/Gundula) : registre familier, avec l&#39;argot des jeunes des années 1970 (équivalents de l&#39;époque soviétique pour « joint », « flics », « sit-in »).
+  - 2020 (Wong) : style neutre et poli, avec des termes comme « capteur » et « badge d&#39;accès ».
+  - Les citations de Goethe et de Rilke (Élégies de Duino) ainsi que le nom du plat Himmel und Erde ont été laissés dans l&#39;allemand d&#39;origine, avec une glose russe à côté, comme dans les sous-titres.
+  - Les balises d&#39;italique &lt;i&gt;, les sauts de ligne et les tirets de dialogue ont été préservés.
+
+  Les sauvegardes de chaque étape se trouvent dans backups/.
+```
+
+### Sous-titres incomplets
+
+![Une image du film « Silent Friend »](/images/article-llm-kovitus.png)
+
+Ensuite, j&#39;ai lancé le film et j&#39;ai sauté en avant et en arrière vers des scènes au hasard. À un de ces moments, j&#39;ai découvert que dans plusieurs scènes il n&#39;y avait pas de traduction. J&#39;ai regardé le fichier de sous-titres anglais d&#39;origine et, en effet, la traduction y manquait aussi. J&#39;ai téléchargé d&#39;autres sous-titres, d&#39;un autre traducteur, et là ces scènes étaient traduites.
+
+Du coup, dans la même session, j&#39;ai demandé à l&#39;agent de corriger cela — de fusionner les fichiers et de traduire au passage ce qui manquait. Opus a très bien traduit les fragments manquants et les a insérés à l&#39;aide de mon outil.
+
+### Décalage
+
+En regardant le film, confortablement installé sur le canapé, environ une demi-heure avant la fin, je suis tombé sur un décalage. Heureusement, dans VLC pour Android TV, il est très facile de déterminer le retard (-9 secondes). Je l&#39;ai corrigé rapidement pendant le visionnage, mais il fallait aussi réparer le fichier final de sous-titres que je comptais partager avec d&#39;autres personnes.
+
+L&#39;outil est livré avec un ensemble de commandes pour corriger les retards ou les avances ; des cas semblables sont décrits dans la [documentation](https://github.com/lebe-dev/submarine/blob/main/docs/usecases/README.md). L&#39;agent s&#39;en sort sans difficulté.
+
+![Une image du film « Silent Friend »](/images/article-llm-final-thoughts.png)
+
+## Conclusion
+
+Bien sûr, je n&#39;ai pas réussi à résoudre absolument tous les problèmes de traduction des sous-titres — par exemple, je ne sais pas comment résoudre le problème de la détermination du genre de la personne qui parle. La prochaine expérience que je veux mener, c&#39;est de transcrire la piste audio et d&#39;obtenir, sous une forme ou une autre, un marquage du genre de la personne qui parle. Mais cela non plus ne donnera pas une précision de 100 % :)
+
+- [Télécharger les sous-titres](/subtitles/Stille.Freundin.2025.WEB-DL.1080p.H.264.ru.full.srt)</textarea> <astro-island uid="1ewrGz" component-url="/_astro/AiUsageDisclaimer.DkgChyse.js" component-export="default" renderer-url="/_astro/client.svelte.DbEP35Vr.js" props="{&quot;label&quot;:[0,&quot;Avertissement&quot;],&quot;text&quot;:[0,&quot;Cet article a été écrit par une personne russophone et traduit en français avec un LLM.\nSi vous ne pouvez pas accepter ce fait et vous sentez en insécurité, choisissez votre camp :&quot;],&quot;showAcceptButton&quot;:[0,true],&quot;acceptButtonText&quot;:[0,&quot;J&#39;accepte&quot;],&quot;showLeaveButton&quot;:[0,true],&quot;leaveButtonText&quot;:[0,&quot;Je veux partir&quot;],&quot;data-astro-cid-gjtny2mx&quot;:[0,true]}" ssr client="load" opts="{&quot;name&quot;:&quot;AiUsageDisclaimer&quot;,&quot;value&quot;:true}" await-children><!--[--><!--[0--><div class="ai-usage-disclaimer svelte-1qzmlxi"><button type="button" class="ai-usage-disclaimer-summary svelte-1qzmlxi" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-info icon" aria-hidden="true"><!--[--><!----><circle cx="12" cy="12" r="10"><!----></circle><!----><!----><path d="M12 16v-4"><!----></path><!----><!----><path d="M12 8h.01"><!----></path><!----><!--]--><!----></svg><!----> <span>Avertissement</span> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-chevron-down icon chevron" aria-hidden="true"><!--[--><!----><path d="m6 9 6 6 6-6"><!----></path><!----><!--]--><!----></svg><!----></button> <!--[-1--><!--]--></div><!--]--><!--]--><!--astro:end--></astro-island> <nav class="toc" aria-label="Sommaire" data-astro-cid-xvrfupwn><p class="toc-title" data-astro-cid-xvrfupwn>Sommaire</p><ul class="toc-list" data-astro-cid-xvrfupwn><li class="toc-item toc-item--h2" data-astro-cid-xvrfupwn><a href="#loutil-submarine" data-astro-cid-xvrfupwn>L’outil submarine</a></li><li class="toc-item toc-item--h2" data-astro-cid-xvrfupwn><a href="#silent-friend-2025" data-astro-cid-xvrfupwn>Silent Friend (2025)</a></li><li class="toc-item toc-item--h3" data-astro-cid-xvrfupwn><a href="#préparation-de-la-traduction" data-astro-cid-xvrfupwn>Préparation de la traduction</a></li><li class="toc-item toc-item--h3" data-astro-cid-xvrfupwn><a href="#sous-titres-incomplets" data-astro-cid-xvrfupwn>Sous-titres incomplets</a></li><li class="toc-item toc-item--h3" data-astro-cid-xvrfupwn><a href="#décalage" data-astro-cid-xvrfupwn>Décalage</a></li><li class="toc-item toc-item--h2" data-astro-cid-xvrfupwn><a href="#conclusion" data-astro-cid-xvrfupwn>Conclusion</a></li></ul></nav>  <p><img src="/images/article-llm-intro.png" alt="submarine, Text-based User Interface"></p>
+<p>Dans cet article, je veux raconter comment je traduis des sous-titres avec de grands modèles de langage (LLM). Il se trouve que je regarde les films, les séries, les documentaires, les dessins animés, les animes et tout le reste uniquement avec la bande son originale.</p>
+<p>Tous les autres sujets annexes, du type « pourquoi ne pas simplement regarder sur les services de streaming ? », sortent du cadre de cet article.</p>
+<p>Les LLM sont apparus il y a quelques années, mais cela ne fait qu’un an environ qu’ils sont assez bons pour traduire. Malgré tout, même en 2026, il n’existe pas de « solution miracle » à tous les problèmes de sous-titres. Et croyez-moi, il y en a beaucoup. Voici les principaux :</p>
+<ol>
+<li>Le film n’a aucun sous-titre</li>
+<li>Il n’existe des sous-titres que dans une langue que je ne maîtrise pas assez, voire pas du tout</li>
+<li>Les sous-titres sont incomplets (oui, ça arrive aussi, j’y reviens plus bas)</li>
+<li>Les sous-titres sont en avance ou en retard. Cela arrive quand la version du film ne correspond pas (version cinéma, version du réalisateur, etc.)</li>
+<li>Les LLM traduisent très bien vers de nombreuses langues, mais ils cassent sur les sous-titres : ils détruisent les timings, sautent des répliques, etc.</li>
+<li>Le texte des sous-titres n’a pas de contexte, et si le film est récent, le LLM peut ne pas s’en sortir avec la traduction. Certains mots se traduisent très différemment selon l’époque de l’action</li>
+</ol>
+<p>C’est pourquoi la seule idée qui me soit venue, c’est qu’il faut aider le LLM d’une manière ou d’une autre. Et voici en quoi nous pouvons l’aider :</p>
+<ol>
+<li>Suivre l’avancement de la traduction</li>
+<li>Vérifier l’intégrité du résultat pendant la traduction et à la fin</li>
+<li>Pouvoir comparer la traduction avec l’original</li>
+<li>Pouvoir réparer les sous-titres en cas de décalage entre les répliques ou de problème de fréquence d’images</li>
+<li>Pouvoir assembler les sous-titres finaux à partir de plusieurs sources (oui, ça arrive aussi)</li>
+<li>Comprendre le contexte de l’œuvre</li>
+</ol>
+<h2 id="loutil-submarine">L’outil submarine</h2>
+<p>En janvier de cette année, j’ai écrit l’outil <a href="https://github.com/lebe-dev/submarine">submarine</a>, qui a pris en charge la plus grande partie de ces problèmes. Dès la toute première version, l’outil a été conçu pour la traduction de sous-titres avec des LLM, avec un penchant pour l’approche agentique (Claude Code, Codex, opencode et d’autres). Cela dit, j’ai aussi ajouté une solution de repli pour les chatbots classiques — pour les situations où les limites de l’agent sont épuisées, mais où il reste un accès libre à Google AI Studio et à cent autres chatbots.</p>
+<p>L’outil aide le modèle à préserver l’intégrité du processus et les timings, et lui permet aussi de comparer la traduction avec l’original. En plus de cela, il fait toujours des sauvegardes.</p>
+<p>L’outil prend également en charge une sortie JSON, pour que les agents se repèrent facilement dans ses possibilités. Merci à <code>Justin Poehnelt</code> pour son excellent article <a href="https://justin.poehnelt.com/posts/rewrite-your-cli-for-ai-agents/">You Need to Rewrite Your CLI for AI Agents</a>.</p>
+<p>En outre, l’outil permet d’évaluer la traduction via une TUI (Text-based User Interface) :</p>
+<p><img src="/images/article-llm-submarine.png" alt="submarine, Text-based User Interface"></p>
+<p>Outre la navigation de base vers le haut et vers le bas, ce mode prend en charge différentes façons de se déplacer. Par exemple le saut aléatoire (raccourci <code>r</code>). C’est pratique pour juger de ses propres yeux la qualité de la traduction (« faire confiance, mais vérifier »).</p>
+<p>Pour l’installer, il suffit de donner à l’agent le lien vers le projet sur github — <a href="https://github.com/lebe-dev/submarine">https://github.com/lebe-dev/submarine</a>.</p>
+<p>Ensuite, à titre d’exemple, je raconte comment j’ai préparé les sous-titres russes du film « Silent Friend » (2025).</p>
+<h2 id="silent-friend-2025">Silent Friend (2025)</h2>
+<p>En 2025 est sorti le drame <a href="https://en.wikipedia.org/wiki/Silent_Friend">Silent Friend</a> de la réalisatrice <a href="https://en.wikipedia.org/wiki/Ildik%C3%B3_Enyedi">Ildikó Enyedi</a>. Le film est parlé en trois langues : anglais, allemand et chinois. De plus, l’action se déroule à différentes époques : 1908, 1970 et 2020.</p>
+<p>Malheureusement, le film n’a pas eu de large distribution, et du coup la situation était plutôt triste côté sous-titres. Sur <a href="https://www.opensubtitles.org/en/subtitles/13792243/silent-friend-en">opensubtitles</a>, j’ai trouvé des sous-titres anglais, mais ils se sont révélés incomplets. Il y avait aussi une traduction russe faite avec un LLM, mais à en juger par les commentaires, elle était incomplète elle aussi.</p>
+<p>J’ai donc téléchargé les sous-titres anglais et j’ai commencé à les traduire.</p>
+<h3 id="préparation-de-la-traduction">Préparation de la traduction</h3>
+<p>Avant de traduire les sous-titres d’un film, il est important que le LLM dispose du contexte de la traduction.</p>
+<p>Par exemple, dans un contexte médiéval, le mot anglais « suffer » signifie laisser, permettre. Au sens moderne — supporter la douleur.</p>
+<p>Le mot « villain » signifie aujourd’hui « un personnage méchant », mais dans le contexte médiéval il désignait « un vilain — un paysan attaché à la terre ».</p>
+<p>C’est pourquoi, dans le premier prompt destiné à l’agent généraliste (<a href="https://github.com/lebe-dev/submarine/blob/main/docs/AGENT-TRANSLATION-FLOW.md">exemple sur github</a>), je lui ai transmis une description du film et de son intrigue tirée de <a href="https://en.wikipedia.org/wiki/Silent_Friend">Wikipédia</a>.</p>
+<p>En guise de confirmation, <code>Opus 4.8</code> (en mode <code>high</code>) a expliqué dans sa réponse finale qu’il avait tenu compte des différences entre les époques :</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>⏺ Terminé. Le film Silent Friend (2025) est entièrement traduit.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  Résumé</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  - Source : Silent.Friend.2025.1080p.WEB-DL.DDP5.1.H.264.en.srt (703 sous-titres)</span></span>
+<span class="line"><span>  - Résultat : Stille.Freundin.2025.1080p.WEB-DL.DDP5.1.H.264.ru.srt</span></span>
+<span class="line"><span>  - Progression : 100% (703/703), toutes les vérifications passées — correspondance parfaite, aucune réplique sautée, aucun décalage des timecodes.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  Traduit par blocs de 100 lignes, chaque bloc vérifié avec verify. Quelques décisions dictées par le contexte à travers les trois lignes temporelles du film :</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  - 1908 (Grete) : les termes latins de Linné (Monandria, Species Plantarum) ont été conservés tels quels — ils font partie de la scène de l'interrogatoire académique ; les formules d'adresse telles que « Fräulein », « miss », « Mr./Mrs. Winterhalter » suivent l'époque.</span></span>
+<span class="line"><span>  - 1972 (Hannes/Gundula) : registre familier, avec l'argot des jeunes des années 1970 (équivalents de l'époque soviétique pour « joint », « flics », « sit-in »).</span></span>
+<span class="line"><span>  - 2020 (Wong) : style neutre et poli, avec des termes comme « capteur » et « badge d'accès ».</span></span>
+<span class="line"><span>  - Les citations de Goethe et de Rilke (Élégies de Duino) ainsi que le nom du plat Himmel und Erde ont été laissés dans l'allemand d'origine, avec une glose russe à côté, comme dans les sous-titres.</span></span>
+<span class="line"><span>  - Les balises d'italique &#x3C;i>, les sauts de ligne et les tirets de dialogue ont été préservés.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  Les sauvegardes de chaque étape se trouvent dans backups/.</span></span></code></pre>
+<h3 id="sous-titres-incomplets">Sous-titres incomplets</h3>
+<p><img src="/images/article-llm-kovitus.png" alt="Une image du film « Silent Friend »"></p>
+<p>Ensuite, j’ai lancé le film et j’ai sauté en avant et en arrière vers des scènes au hasard. À un de ces moments, j’ai découvert que dans plusieurs scènes il n’y avait pas de traduction. J’ai regardé le fichier de sous-titres anglais d’origine et, en effet, la traduction y manquait aussi. J’ai téléchargé d’autres sous-titres, d’un autre traducteur, et là ces scènes étaient traduites.</p>
+<p>Du coup, dans la même session, j’ai demandé à l’agent de corriger cela — de fusionner les fichiers et de traduire au passage ce qui manquait. Opus a très bien traduit les fragments manquants et les a insérés à l’aide de mon outil.</p>
+<h3 id="décalage">Décalage</h3>
+<p>En regardant le film, confortablement installé sur le canapé, environ une demi-heure avant la fin, je suis tombé sur un décalage. Heureusement, dans VLC pour Android TV, il est très facile de déterminer le retard (-9 secondes). Je l’ai corrigé rapidement pendant le visionnage, mais il fallait aussi réparer le fichier final de sous-titres que je comptais partager avec d’autres personnes.</p>
+<p>L’outil est livré avec un ensemble de commandes pour corriger les retards ou les avances ; des cas semblables sont décrits dans la <a href="https://github.com/lebe-dev/submarine/blob/main/docs/usecases/README.md">documentation</a>. L’agent s’en sort sans difficulté.</p>
+<p><img src="/images/article-llm-final-thoughts.png" alt="Une image du film « Silent Friend »"></p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Bien sûr, je n’ai pas réussi à résoudre absolument tous les problèmes de traduction des sous-titres — par exemple, je ne sais pas comment résoudre le problème de la détermination du genre de la personne qui parle. La prochaine expérience que je veux mener, c’est de transcrire la piste audio et d’obtenir, sous une forme ou une autre, un marquage du genre de la personne qui parle. Mais cela non plus ne donnera pas une précision de 100 % :)</p>
+<ul>
+<li><a href="/subtitles/Stille.Freundin.2025.WEB-DL.1080p.H.264.ru.full.srt">Télécharger les sous-titres</a></li>
+</ul>  <hr data-astro-cid-gjtny2mx> <p data-astro-cid-gjtny2mx> <a href="/fr/" class="back-link" data-astro-cid-gjtny2mx> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-astro-cid-gjtny2mx> <path d="m12 19-7-7 7-7" data-astro-cid-gjtny2mx></path> <path d="M19 12H5" data-astro-cid-gjtny2mx></path> </svg> <span data-astro-cid-gjtny2mx>Accueil</span> </a> </p> </article> <div class="lightbox" id="lightbox" hidden data-astro-cid-gjtny2mx> <img src="" alt="" data-astro-cid-gjtny2mx> </div> <textarea id="heading-link-copy-src" hidden readonly data-astro-cid-gjtny2mx></textarea> <span id="heading-link-i18n" hidden data-title="Copier le lien vers cette section" data-copied="Copié !" data-astro-cid-gjtny2mx></span>  </main> <footer class="site-footer"> <nav class="links" aria-label="external"> <a href="https://github.com/lebe-dev" rel="me noopener" target="_blank">GitHub</a> <a href="/fr/rss.xml">RSS</a>  </nav> <p>Cette page respecte votre vie privée : elle n&#39;utilise pas de cookies ni de technologies similaires et ne collecte aucune information personnelle identifiable.</p> </footer> <button type="button" id="back-to-top" class="back-to-top" title="Haut de page" aria-label="Haut de page" data-astro-cid-37fxchfa> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-astro-cid-37fxchfa> <path d="m18 15-6-6-6 6" data-astro-cid-37fxchfa></path> </svg> </button> <script>
+      // Registered here rather than from the header island so offline support
+      // survives a hydration failure. /sw.js is generated by the `offline`
+      // integration (src/integrations/offline.ts) — in dev it is served by that
+      // integration's middleware, so dev and production behave the same.
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js').catch((error) => {
+            // Reaches Sentry through the early buffer when it is enabled, and
+            // is a no-op otherwise — this script must not depend on the island.
+            window.__sentryEarly?.push({ kind: 'offline', op: 'register', error });
+          });
+        });
+      }
+    </script> <script type="module" src="/_astro/BaseLayout.astro_astro_type_script_index_0_lang.ColZbenz.js"></script> <script>
+      (() => {
+        document.querySelectorAll('a[href^="http"]').forEach((link) => {
+          if (link.hostname === location.hostname) return;
+          link.target = '_blank';
+          const rel = new Set((link.getAttribute('rel') || '').split(/\s+/).filter(Boolean));
+          rel.add('noopener');
+          rel.add('noreferrer');
+          link.setAttribute('rel', [...rel].join(' '));
+        });
+      })();
+
+      (() => {
+        const btn = document.getElementById('back-to-top');
+        if (!btn) return;
+
+        const onScroll = () => {
+          btn.classList.toggle('is-visible', window.scrollY > 400);
+        };
+
+        onScroll();
+        window.addEventListener('scroll', onScroll, { passive: true });
+        btn.addEventListener('click', () => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      })();
+    </script> </body> </html>  <script>
+  (() => {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = lightbox?.querySelector('img');
+    if (!lightbox || !lightboxImg) return;
+
+    document.querySelectorAll('article img').forEach((img) => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightbox.hidden = false;
+      });
+    });
+
+    const close = () => {
+      lightbox.hidden = true;
+      lightboxImg.src = '';
+    };
+
+    lightbox.addEventListener('click', close);
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !lightbox.hidden) close();
+    });
+  })();
+
+  (() => {
+    const btn = document.getElementById('copy-md');
+    const source = document.getElementById('post-markdown');
+    if (!btn || !source) return;
+
+    let resetTimer;
+
+    const showCopied = () => {
+      btn.classList.add('is-copied');
+      clearTimeout(resetTimer);
+      resetTimer = setTimeout(() => {
+        btn.classList.remove('is-copied');
+      }, 2000);
+    };
+
+    btn.addEventListener('click', async () => {
+      const md = source.value;
+      try {
+        await navigator.clipboard.writeText(md);
+        showCopied();
+      } catch {
+        source.hidden = false;
+        source.select();
+        try {
+          document.execCommand('copy');
+          showCopied();
+        } finally {
+          source.hidden = true;
+        }
+      }
+    });
+  })();
+
+  (() => {
+    const i18n = document.getElementById('heading-link-i18n');
+    const fallback = document.getElementById('heading-link-copy-src');
+    if (!i18n || !fallback) return;
+
+    const title = i18n.dataset.title || 'Copy link to this section';
+    const copiedTitle = i18n.dataset.copied || 'Copied!';
+
+    const copyText = async (text) => {
+      try {
+        await navigator.clipboard.writeText(text);
+        return true;
+      } catch {
+        fallback.value = text;
+        fallback.hidden = false;
+        fallback.select();
+        try {
+          return document.execCommand('copy');
+        } finally {
+          fallback.hidden = true;
+        }
+      }
+    };
+
+    const headings = document.querySelectorAll('article h2[id], article h3[id], article h4[id]');
+    headings.forEach((heading) => {
+      const id = heading.id;
+      const anchor = document.createElement('a');
+      anchor.className = 'heading-anchor';
+      anchor.href = `#${id}`;
+      anchor.title = title;
+      anchor.setAttribute('aria-label', title);
+      anchor.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>';
+
+      let resetTimer;
+      anchor.addEventListener('click', async (e) => {
+        e.preventDefault();
+        const url = `${location.origin}${location.pathname}#${id}`;
+        history.replaceState(null, '', `#${id}`);
+        const ok = await copyText(url);
+        if (ok) {
+          anchor.classList.add('is-copied');
+          anchor.title = copiedTitle;
+          clearTimeout(resetTimer);
+          resetTimer = setTimeout(() => {
+            anchor.classList.remove('is-copied');
+            anchor.title = title;
+          }, 2000);
+        }
+      });
+
+      heading.appendChild(anchor);
+    });
+  })();
+
+  (() => {
+    document.querySelectorAll('[data-copy-prompt]').forEach((btn) => {
+      const block = btn.closest('.prompt-block');
+      const code = block?.querySelector('pre code');
+      if (!code) return;
+
+      const copyLabel = btn.dataset.labelCopy || btn.title;
+      const copiedLabel = btn.dataset.labelCopied || 'Copied!';
+      let resetTimer;
+
+      btn.addEventListener('click', async () => {
+        const text = code.textContent ?? '';
+        try {
+          await navigator.clipboard.writeText(text);
+        } catch {
+          const ta = document.createElement('textarea');
+          ta.value = text;
+          ta.style.position = 'fixed';
+          ta.style.opacity = '0';
+          document.body.appendChild(ta);
+          ta.select();
+          try {
+            document.execCommand('copy');
+          } finally {
+            document.body.removeChild(ta);
+          }
+        }
+        btn.classList.add('is-copied');
+        btn.title = copiedLabel;
+        btn.setAttribute('aria-label', copiedLabel);
+        clearTimeout(resetTimer);
+        resetTimer = setTimeout(() => {
+          btn.classList.remove('is-copied');
+          btn.title = copyLabel;
+          btn.setAttribute('aria-label', copyLabel);
+        }, 2000);
+      });
+    });
+  })();
+</script>
