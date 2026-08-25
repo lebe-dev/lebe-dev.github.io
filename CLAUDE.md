@@ -122,6 +122,38 @@ A post read in Russian therefore shows as read in every translation (`translatio
 
 **i18n:** the `reading.*` keys in `src/i18n/ui.ts`, present in all seven locales.
 
+## Moving browser data between devices (⋮ menu in the header)
+
+Everything the site remembers is client-side and per browser, so the only way to
+carry it to a second device is by hand: the "⋮" menu next to the theme toggle
+(`src/components/SettingsMenu.svelte`, `client:idle`) exports the whole state as
+**one line of text** to copy, and imports such a line back.
+
+**All the logic is in `src/lib/settingsTransfer.ts`** (pure except the two
+localStorage wrappers at the bottom, unit-tested in `settingsTransfer.test.ts`).
+
+- **What travels:** the six keys in `TRANSFERABLE_KEYS` — `reading-progress`,
+  `theme`, `lang`, `podcast-transcript-lang`, `podcast-sort-dir`,
+  `ai-usage-disclaimer-accepted`. **Add a new localStorage key to that list when
+  one appears**, otherwise it silently stays behind on the old device.
+- **The text is `lbs1.<base64 gzip json>`** (`lbs0.` where the browser has no
+  `CompressionStream`). gzip is what keeps a full reading store pasteable — a
+  few hundred entries compress to well under half their JSON size. A plain JSON
+  snapshot pasted by hand is accepted too, and whitespace or line breaks added
+  by whatever carried the text are stripped before decoding.
+- **Import merges, never replaces.** Reading entries are reconciled one by one:
+  the newer `at` decides the position and `read` is sticky (finishing something
+  on one device is not undone by a dump from a device where it was never
+  opened). Both devices can therefore keep exchanging dumps in either direction
+  without losing progress. Plain settings have no timestamps, so there the
+  incoming value simply wins — but a key **absent** from the dump is left alone
+  rather than cleared.
+- After a successful import the dialog offers a reload rather than reloading by
+  itself: the theme, the language and the reading marks are all read on load.
+- `Dialog.Content` (`src/lib/components/ui/dialog/dialog-content.svelte`) grew a
+  `closeLabel` prop so the close button is not the English "Close" in all seven
+  locales. UI strings are the `settings.*` keys in `src/i18n/ui.ts`.
+
 ## Offline support / PWA (site-wide)
 
 The whole site works offline through a root service worker at `/sw.js`, scoped to `/`. The calculator under `/cc/` keeps its **own** worker (`public/cc/sw.js`, scope `/cc/`) — the root worker bails out of every `/cc/` request, and the more specific registration wins for those pages anyway. Don't merge the two.

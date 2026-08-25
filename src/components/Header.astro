@@ -4,6 +4,7 @@ import type { Lang } from '../i18n/ui';
 import ThemeToggle from './ThemeToggle.svelte';
 import LanguageSwitch from './LanguageSwitch.svelte';
 import OfflineToggle from './OfflineToggle.svelte';
+import SettingsMenu from './SettingsMenu.svelte';
 
 type Props = { lang: Lang; showTitle?: boolean; minimal?: boolean; backHref?: string };
 const { lang, showTitle = true, minimal = false, backHref = `/${lang}/` } = Astro.props;
@@ -22,6 +23,23 @@ const offlineLabels = {
   updateAvailable: t('update.available'),
   updateAction: t('update.action'),
   updateDismiss: t('update.dismiss'),
+};
+
+const settingsLabels = {
+  menu: t('settings.menu'),
+  exportTitle: t('settings.export'),
+  importTitle: t('settings.import'),
+  exportBody: t('settings.exportBody'),
+  copy: t('settings.copy'),
+  copied: t('settings.copied'),
+  importBody: t('settings.importBody'),
+  importPlaceholder: t('settings.importPlaceholder'),
+  importAction: t('settings.importAction'),
+  importInvalid: t('settings.importInvalid'),
+  importDone: t('settings.importDone'),
+  importFailed: t('settings.importFailed'),
+  reload: t('settings.reload'),
+  close: t('settings.close'),
 };
 ---
 <header class:list={['site-header', { minimal }]}>
@@ -45,6 +63,7 @@ const offlineLabels = {
       {!minimal && <LanguageSwitch lang={lang} label={t('lang.switch')} client:load />}
       <OfflineToggle lang={lang} labels={offlineLabels} client:idle />
       <ThemeToggle labelLight={t('theme.light')} labelDark={t('theme.dark')} client:load />
+      <SettingsMenu labels={settingsLabels} client:idle />
     </div>
   </div>
   {!minimal && <p class="site-tagline">{t('site.tagline')}</p>}
