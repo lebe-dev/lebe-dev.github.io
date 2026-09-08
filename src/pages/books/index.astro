@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { formatVolume, listBooks } from '../../lib/books';
+import ReadingMarks from '../../components/ReadingMarks.astro';
+import { bookReadIds, formatVolume, listBooks } from '../../lib/books';
 import { formatDateRu, formatDateSpoken, toDateAttr } from '../../lib/subtitles';
 
 const entries = listBooks().map((book) => {
@@ -8,6 +9,8 @@ const entries = listBooks().map((book) => {
   return {
     ...book,
     volume: formatVolume(book),
+    // A book's mark is aggregated from its chapters — it has no id of its own.
+    chapterIds: bookReadIds(book),
     addedAttr: toDateAttr(added),
     addedText: formatDateRu(added),
     addedSpoken: formatDateSpoken(added),
@@ -29,6 +32,14 @@ const entries = listBooks().map((book) => {
         <article aria-labelledby={`book-${book.slug}`}>
           <h2 class="book-title" id={`book-${book.slug}`}>
             <a href={`/books/${book.slug}/`}>{book.title}</a>
+            {/* Filled in from localStorage by ReadingMarks.astro: how many
+                chapters of this book are marked read. */}
+            <span
+              class="reading-mark"
+              data-reading-mark
+              data-parts={book.chapterIds.join(',')}
+              hidden
+            ></span>
           </h2>
           <p class="book-original" lang={book.originalLang}>{book.originalTitle}</p>
           <p class="book-meta">
@@ -46,6 +57,8 @@ const entries = listBooks().map((book) => {
       </li>
     ))}
   </ul>
+
+  <ReadingMarks lang="ru" />
 </BaseLayout>
 
 <style>

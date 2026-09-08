@@ -1,8 +1,18 @@
 ---
 import type { GetStaticPaths } from 'astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import ChapterMarks from '../../components/ChapterMarks.astro';
 import { books } from '../../data/books';
-import { chapterCount, formatVolume, linkHost } from '../../lib/books';
+import {
+  bookReadIds,
+  chapterCount,
+  chapterLabel,
+  chapterTarget,
+  formatVolume,
+  linkHost,
+  partReadIds,
+  pluralRu,
+} from '../../lib/books';
 import { formatDateRu, formatDateSpoken, toDateAttr } from '../../lib/subtitles';
 
 export const getStaticPaths = (() =>
@@ -13,6 +23,15 @@ const added = new Date(book.dateAdded);
 // The translation itself is not published yet — only the table of contents is.
 // Chapter pages will appear under /books/<slug>/<chapter>/ later.
 const volume = formatVolume(book);
+
+// A chapter has no page to scroll through yet, so its reading state is the
+// hand-set "read" flag alone; ChapterMarks.astro drives the toggles below.
+// The book's own progress is derived from these ids, never stored on its own.
+const chapterIds = bookReadIds(book);
+const chapters = chapterCount(book);
+// The noun agrees with the total, which is a build-time constant — so only the
+// number itself has to be filled in by the client.
+const chaptersGenitive = pluralRu(chapters, ['главы', 'глав', 'глав']);
 ---
 <BaseLayout
   lang="ru"
@@ -84,10 +103,35 @@ const volume = formatVolume(book);
       <p class="visually-hidden">
         {volume}. Главы пока без ссылок: перевода ещё нет.
       </p>
+
+      {/* Filled in from localStorage by ChapterMarks.astro. */}
+      <p class="toc-progress" data-read-summary data-target-ids={chapterIds.join(',')} hidden>
+        <span class="toc-progress__rail" aria-hidden="true">
+          <span class="toc-progress__fill" data-read-bar></span>
+        </span>
+        <span class="toc-progress__text">
+          Прочитано <span data-read-count aria-live="polite">0</span>
+          из {chapters} {chaptersGenitive}
+        </span>
+      </p>
+
+      {/* Revealed by ChapterMarks.astro together with the toggles: without JS
+          there is nothing to explain. */}
+      <p class="toc-hint" data-read-hint hidden>
+        Отметки «прочитано» ставятся вручную и хранятся только в этом браузере. На другое
+        устройство они переносятся вместе с остальным состоянием сайта — через «⋮» в шапке.
+      </p>
+
       {book.toc.map((part) => (
         <section class="toc-part" aria-labelledby={`part-${part.number}`}>
           <h3 class="part-title" id={`part-${part.number}`}>
             <span class="part-number">Часть {part.number}.</span> {part.title}
+            <span
+              class="part-count"
+              data-read-summary
+              data-target-ids={partReadIds(book, part).join(',')}
+              hidden
+            ></span>
             <span class="part-original" lang={book.originalLang}>{part.originalTitle}</span>
           </h3>
           <ol class="chapters" role="list">
@@ -105,12 +149,35 @@ const volume = formatVolume(book);
                   </span>
                   <span class="chapter-original" lang={book.originalLang}>{chapter.originalTitle}</span>
                 </span>
+                <button
+                  type="button"
+                  class="chapter-read"
+                  data-read-toggle
+                  data-target-id={chapterTarget(book, chapter).readId}
+                  data-item-label={chapterLabel(chapter)}
+                  hidden
+                >
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M20 6 9 17l-5-5"></path>
+                  </svg>
+                </button>
               </li>
             ))}
           </ol>
         </section>
       ))}
     </section>
+    <ChapterMarks lang="ru" />
   </article>
 </BaseLayout>
 
@@ -128,6 +195,9 @@ const volume = formatVolume(book);
   .book-meta,
   .book-note,
   .part-original,
+  .part-count,
+  .toc-progress,
+  .toc-hint,
   .chapter-original,
   .chapter-number {
     font-family: var(--sans);
@@ -188,6 +258,81 @@ const volume = formatVolume(book);
     margin-top: 2.5rem;
   }
 
+  /* How much of the book is done — hidden until the script has a number. */
+  .toc-progress {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin: -0.75rem 0 0.75rem;
+    color: var(--text-muted);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .toc-progress[hidden] {
+    display: none;
+  }
+
+  .toc-progress__rail {
+    flex: 1;
+    max-width: 12rem;
+    height: 3px;
+    border-radius: 999px;
+    background: var(--rule);
+    overflow: hidden;
+  }
+
+  .toc-progress__fill {
+    display: block;
+    height: 100%;
+    background: var(--link);
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    transition: transform 0.2s ease;
+  }
+
+  .toc-progress.is-done .toc-progress__fill {
+    background: #2e7d32;
+  }
+
+  :global(.dark) .toc-progress.is-done .toc-progress__fill {
+    background: #66bb6a;
+  }
+
+  .toc-progress__text {
+    white-space: nowrap;
+  }
+
+  .toc-hint {
+    margin: 0 0 2rem;
+    max-width: 42rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  .toc-hint[hidden] {
+    display: none;
+  }
+
+  /* "4/16" next to a part's title. */
+  .part-count {
+    margin-left: 0.5rem;
+    color: var(--text-muted);
+    font-weight: 400;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .part-count[hidden] {
+    display: none;
+  }
+
+  .part-count.is-done {
+    color: #2e7d32;
+  }
+
+  :global(.dark) .part-count.is-done {
+    color: #66bb6a;
+  }
+
   .toc h2 {
     margin: 0 0 1.5rem;
     font-size: 1.1rem;
@@ -227,9 +372,65 @@ const volume = formatVolume(book);
 
   .chapters li {
     display: grid;
-    grid-template-columns: 2.25rem 1fr;
+    /* The toggle sits in its own column so it stays on the first line of a
+       chapter whose title wraps. */
+    grid-template-columns: 2.25rem 1fr 1.75rem;
     align-items: baseline;
     padding: 0.4rem 0;
+  }
+
+  /* A finished chapter steps back, like a read entry in a listing. */
+  .chapters li.reading-read .chapter-titles {
+    opacity: 0.55;
+  }
+
+  .chapters li:hover .chapter-titles,
+  .chapters li:focus-within .chapter-titles {
+    opacity: 1;
+  }
+
+  /* Ships hidden: ChapterMarks.astro reveals it, so there is no dead button
+     on a page without JS. */
+  .chapter-read {
+    justify-self: end;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 0;
+    border: 1px solid var(--rule);
+    border-radius: 5px;
+    background: transparent;
+    color: var(--text-muted);
+    cursor: pointer;
+    opacity: 0.45;
+    transition: opacity 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+  }
+
+  .chapter-read[hidden] {
+    display: none;
+  }
+
+  .chapter-read:hover {
+    opacity: 1;
+    color: var(--fg);
+  }
+
+  .chapter-read:focus-visible {
+    outline: 2px solid var(--link);
+    outline-offset: 2px;
+    opacity: 1;
+  }
+
+  .chapter-read.is-read {
+    opacity: 1;
+    color: #2e7d32;
+    border-color: currentColor;
+  }
+
+  :global(.dark) .chapter-read.is-read {
+    color: #66bb6a;
   }
 
   .chapter-number {
@@ -249,15 +450,30 @@ const volume = formatVolume(book);
     font-style: italic;
   }
 
+  @media (prefers-reduced-motion: reduce) {
+    .toc-progress__fill,
+    .chapter-read {
+      transition: none;
+    }
+  }
+
   @media (prefers-contrast: more) {
     .book-original,
     .book-meta,
     .book-note,
     .part-number,
     .part-original,
+    .part-count,
+    .toc-progress,
+    .toc-hint,
     .chapter-number,
     .chapter-original {
       color: var(--fg);
+    }
+
+    .chapters li.reading-read .chapter-titles,
+    .chapter-read {
+      opacity: 1;
     }
   }
 
@@ -267,7 +483,7 @@ const volume = formatVolume(book);
     }
 
     .chapters li {
-      grid-template-columns: 1.75rem 1fr;
+      grid-template-columns: 1.75rem 1fr 1.75rem;
     }
   }
 </style>

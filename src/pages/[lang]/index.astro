@@ -7,7 +7,7 @@ import PostsList from '../../components/PostsList.astro';
 import HomeEntries from '../../components/HomeEntries.astro';
 import ReadingMarks from '../../components/ReadingMarks.astro';
 import { episodeDate, listEpisodes } from '../../lib/podcasts';
-import { bookLabel, listBooks } from '../../lib/books';
+import { bookLabel, bookReadIds, listBooks } from '../../lib/books';
 import { subtitles } from '../../data/subtitles';
 import type { HomeEntry } from '../../lib/homeEntries';
 import { useTranslations } from '../../i18n/utils';
@@ -63,6 +63,9 @@ const bookEntries: HomeEntry[] = listBooks()
   .map((book) => ({
     href: `/books/${book.slug}/`,
     title: bookLabel(book),
+    // Aggregated from the chapters, so the mark reads "12/73" rather than a
+    // scroll percentage — a book has no reading position of its own.
+    parts: bookReadIds(book),
   }));
 
 // The subtitles page has no page per entry, so an entry links to its heading there.

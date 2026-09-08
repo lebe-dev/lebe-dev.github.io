@@ -3,7 +3,12 @@ import {
   MAX_ENTRIES,
   READ_THRESHOLD,
   STORE_VERSION,
+  bookChapterTarget,
+  completion,
   emptyStore,
+  looseBoolean,
+  looseNumber,
+  parseStoreCompat,
   formatPercent,
   getProgress,
   isRead,
@@ -36,6 +41,74 @@ describe('targets', () => {
     expect(ru.progressId).not.toBe(en.progressId);
     expect(ru.readId).toBe(en.readId);
   });
+
+  it('keys a book chapter by the book and the chapter, position and read alike', () => {
+    expect(bookChapterTarget('mctb2', '7')).toEqual({
+      progressId: 'book:mctb2:7',
+      readId: 'book:mctb2:7',
+    });
+  });
+
+  it('keeps a chapter apart from the same number in another book', () => {
+    expect(bookChapterTarget('mctb2', '7').readId).not.toBe(
+      bookChapterTarget('other', '7').readId,
+    );
+  });
+});
+
+describe('completion', () => {
+  const chapters = ['book:b:1', 'book:b:2', 'book:b:3', 'book:b:4'];
+  const readAll = (ids: string[]) =>
+    ids.reduce(
+      (store, id) => setRead(store, { progressId: id, readId: id }, true, NOW),
+      emptyStore(),
+    );
+
+  it('counts nothing in an untouched store', () => {
+    expect(completion(emptyStore(), chapters)).toEqual({
+      total: 4,
+      read: 0,
+      ratio: 0,
+      done: false,
+    });
+  });
+
+  it('counts the parts that are read', () => {
+    expect(completion(readAll(chapters.slice(0, 3)), chapters)).toEqual({
+      total: 4,
+      read: 3,
+      ratio: 0.75,
+      done: false,
+    });
+  });
+
+  it('is done only when every part is read', () => {
+    expect(completion(readAll(chapters), chapters).done).toBe(true);
+  });
+
+  it('does not count a part that was merely started', () => {
+    const store = setProgress(
+      emptyStore(),
+      { progressId: chapters[0], readId: chapters[0] },
+      0.5,
+      NOW,
+    );
+    expect(completion(store, chapters).read).toBe(0);
+  });
+
+  it('ignores parts of other content in the same store', () => {
+    const store = setRead(readAll(chapters.slice(0, 1)), post, true, NOW);
+    expect(completion(store, chapters).read).toBe(1);
+  });
+
+  it('is not done when there is nothing to read', () => {
+    expect(completion(emptyStore(), [])).toEqual({
+      total: 0,
+      read: 0,
+      ratio: 0,
+      done: false,
+    });
+  });
 });
 
 describe('parseStore', () => {
@@ -64,6 +137,155 @@ describe('parseStore', () => {
       },
     });
     expect(parseStore(raw).items).toEqual({ good: { p: 1, read: false, at: NOW } });
+  });
+});
+
+describe('looseNumber', () => {
+  it('takes a number, or something that plainly stands for one', () => {
+    expect(looseNumber(0)).toBe(0);
+    expect(looseNumber(-3.5)).toBe(-3.5);
+    expect(looseNumber('0.5')).toBe(0.5);
+    expect(looseNumber('  700  ')).toBe(700);
+    expect(looseNumber('-1e3')).toBe(-1000);
+  });
+
+  it('rejects everything else', () => {
+    expect(looseNumber(Number.NaN)).toBeNull();
+    expect(looseNumber(Number.POSITIVE_INFINITY)).toBeNull();
+    expect(looseNumber('')).toBeNull();
+    expect(looseNumber('   ')).toBeNull();
+    expect(looseNumber('later')).toBeNull();
+    expect(looseNumber(true)).toBeNull();
+    expect(looseNumber(null)).toBeNull();
+    expect(looseNumber(undefined)).toBeNull();
+    expect(looseNumber({})).toBeNull();
+  });
+});
+
+describe('looseBoolean', () => {
+  it('takes a boolean, or the 0/1 and "true"/"false" an older format used', () => {
+    expect(looseBoolean(true)).toBe(true);
+    expect(looseBoolean(false)).toBe(false);
+    expect(looseBoolean(1)).toBe(true);
+    expect(looseBoolean(0)).toBe(false);
+    expect(looseBoolean('TRUE')).toBe(true);
+    expect(looseBoolean(' 1 ')).toBe(true);
+    expect(looseBoolean('yes')).toBe(true);
+    expect(looseBoolean('false')).toBe(false);
+    expect(looseBoolean('0')).toBe(false);
+    expect(looseBoolean('no')).toBe(false);
+    // An empty string is what a cleared flag looks like, not an unknown value.
+    expect(looseBoolean('')).toBe(false);
+  });
+
+  it('rejects everything else', () => {
+    expect(looseBoolean('maybe')).toBeNull();
+    expect(looseBoolean(Number.NaN)).toBeNull();
+    expect(looseBoolean(null)).toBeNull();
+    expect(looseBoolean(undefined)).toBeNull();
+    expect(looseBoolean({})).toBeNull();
+  });
+});
+
+describe('parseStoreCompat', () => {
+  it('reads back what serializeStore wrote', () => {
+    const store = setProgress(emptyStore(), post, 0.4, NOW);
+    expect(parseStoreCompat(serializeStore(store))).toEqual(store);
+  });
+
+  it('accepts a store of any version, unlike the strict parse', () => {
+    const foreign = JSON.stringify({
+      v: STORE_VERSION + 7,
+      items: { 'post:a': { p: 0.5, read: false, at: NOW } },
+    });
+
+    expect(parseStore(foreign)).toEqual(emptyStore());
+    expect(parseStoreCompat(foreign).items['post:a']).toEqual({ p: 0.5, read: false, at: NOW });
+  });
+
+  it('accepts a store with no version at all', () => {
+    const raw = JSON.stringify({ items: { 'post:a': { p: 0.5, read: false, at: NOW } } });
+    expect(parseStoreCompat(raw).items['post:a'].p).toBe(0.5);
+  });
+
+  it('accepts a bare map of entries, without the wrapper', () => {
+    const raw = JSON.stringify({ 'post:a': { p: 0.5, read: false, at: NOW } });
+    expect(parseStoreCompat(raw).items['post:a'].p).toBe(0.5);
+  });
+
+  it('always reports the current store version', () => {
+    const raw = JSON.stringify({ v: 99, items: {} });
+    expect(parseStoreCompat(raw).v).toBe(STORE_VERSION);
+  });
+
+  it('fills in the fields an older format may not have had', () => {
+    const raw = JSON.stringify({
+      items: {
+        onlyPosition: { p: 0.25 },
+        onlyRead: { read: true },
+        onlyUnread: { read: false },
+        noTimestamp: { p: 0.6, read: false },
+      },
+    });
+
+    expect(parseStoreCompat(raw).items).toEqual({
+      onlyPosition: { p: 0.25, read: false, at: 0 },
+      // Read but no position: finished, so the position is the end.
+      onlyRead: { p: 1, read: true, at: 0 },
+      onlyUnread: { p: 0, read: false, at: 0 },
+      noTimestamp: { p: 0.6, read: false, at: 0 },
+    });
+  });
+
+  it('coerces and clamps the values it does find', () => {
+    const raw = JSON.stringify({
+      items: {
+        strings: { p: '0.5', read: 'true', at: '700' },
+        numbers: { p: 1.7, read: 1, at: -5 },
+        low: { p: -2, read: 0, at: NOW },
+      },
+    });
+
+    expect(parseStoreCompat(raw).items).toEqual({
+      strings: { p: 0.5, read: true, at: 700 },
+      numbers: { p: 1, read: true, at: 0 },
+      low: { p: 0, read: false, at: NOW },
+    });
+  });
+
+  it('drops entries there is nothing to salvage from', () => {
+    const raw = JSON.stringify({
+      items: {
+        good: { p: 0.5, read: false, at: NOW },
+        // A timestamp says nothing about whether anything was read.
+        timestampOnly: { at: NOW },
+        empty: {},
+        unreadableFields: { p: 'soon', read: 'maybe' },
+        notAnObject: 7,
+        aString: 'nope',
+        nullish: null,
+        anArray: [1, 2],
+      },
+    });
+
+    expect(Object.keys(parseStoreCompat(raw).items)).toEqual(['good']);
+  });
+
+  it('ignores the wrapper own fields when reading a bare map', () => {
+    // `{ v, items }` where `items` is not an object: `v` is not an entry.
+    const raw = JSON.stringify({ v: 1, items: 'broken', 'post:a': { p: 0.3 } });
+    expect(Object.keys(parseStoreCompat(raw).items)).toEqual(['post:a']);
+  });
+
+  it('falls back to empty on anything that is not a store', () => {
+    expect(parseStoreCompat(null)).toEqual(emptyStore());
+    expect(parseStoreCompat(undefined)).toEqual(emptyStore());
+    expect(parseStoreCompat('')).toEqual(emptyStore());
+    expect(parseStoreCompat('{not json')).toEqual(emptyStore());
+    expect(parseStoreCompat('"a string"')).toEqual(emptyStore());
+    expect(parseStoreCompat('42')).toEqual(emptyStore());
+    expect(parseStoreCompat('[{"p":1}]')).toEqual(emptyStore());
+    expect(parseStoreCompat(JSON.stringify({ v: STORE_VERSION }))).toEqual(emptyStore());
   });
 });
 

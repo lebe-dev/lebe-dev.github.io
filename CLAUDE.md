@@ -100,8 +100,13 @@ exists at one URL and is linked from the Russian homepage only.
 
 - Pages: `src/pages/books/index.astro` (list of books) and `[slug].astro` (one book: title, author, link to the author's site, table of contents)
 - Data: `src/data/books.ts` — array of `Book`, edited by hand. The **table of contents lives here**, in `toc: BookPart[]`, each part carrying `number` ("I"), `title`, `originalTitle` and its `chapters` (`number?`, `title`, `originalTitle`). A chapter without a `number` is one of the closing pieces ("Final Wishes").
-- Helpers: `src/lib/books.ts` (unit-tested in `books.test.ts`) — `findBook`, `listBooks` (newest `dateAdded` first), `allChapters`, `chapterCount`, `pluralRu`, `formatVolume` ("6 частей · 73 главы"), `linkHost`. Date formatting is reused from `src/lib/subtitles.ts`.
+- Helpers: `src/lib/books.ts` (unit-tested in `books.test.ts`) — `findBook`, `listBooks` (newest `dateAdded` first), `allChapters`, `chapterCount`, `pluralRu`, `formatVolume` ("6 частей · 73 главы"), `linkHost`, plus the reading-state helpers `chapterKey`, `chapterTarget`, `partReadIds`, `bookReadIds`, `chapterLabel`. Date formatting is reused from `src/lib/subtitles.ts`.
 - First book: `mctb2` — *Mastering the Core Teachings of the Buddha*, 2nd ed., Daniel M. Ingram, translated from the free online edition at mctb.org.
+
+**Chapters can be marked read**, one by one, from the table of contents — see
+"Reading progress" below for the mechanism and the ids. The book itself then
+shows "12/73" in the listing and on the homepage, and a check once every chapter
+is done, exactly like a finished post or podcast episode.
 
 **The chapter text is not translated yet.** The book page deliberately renders
 the contents as **plain text, not links** — there are no chapter routes at all,
@@ -114,7 +119,8 @@ becomes a link only for the chapters that actually have a file.
 Both pages are covered by the root service worker without any change: their URLs
 end in `/`, so `classifyAsset()` treats them as pages and `langFromPath()`
 returns null, which puts them in every locale's offline save (like `/subtitles/`).
-`just build` checks that `dist/books/` and `dist/books/mctb2/` exist.
+`just build` checks that `dist/books/` and `dist/books/mctb2/` exist and that the
+book page still ships its chapter read toggles.
 
 Linked from the Russian homepage in a "Переводы книг" section (see "Homepage
 section previews").
@@ -134,9 +140,10 @@ every locale, books and subtitles for `ru` only.
   first, subtitles are sorted in the page. Podcasts are therefore ordered and
   dated the same way as their listing page — the five newest *episodes*, not the
   five newest translations.
-- Podcast entries carry `readId`/`progressIds`, so they get the same reading
-  marks as the listing (`<ReadingMarks>` is already on the page). Books and
-  subtitles have no reading state.
+- Podcast entries carry `readId`/`progressIds` and book entries carry `parts`
+  (their chapters' read ids), so both get the same reading marks as their
+  listings (`<ReadingMarks>` is already on the page). Subtitles have no reading
+  state — there is nothing on the site to read.
 - **Books are the one dateless section:** `showDates={false}` drops the date
   column and each entry is named `Книга «…» (Автор)` (`bookLabel()` in
   `src/lib/books.ts`) — the date a book was added says little while its
@@ -148,22 +155,43 @@ every locale, books and subtitles for `ru` only.
 - The link to the full listing moves below the preview, styled `.section-more`
   (in `src/styles/global.css`).
 
-## Reading progress & "read" marks (blog posts + podcast transcripts)
+## Reading progress & "read" marks (site-wide: posts, podcasts, book chapters)
+
+**Every readable thing the site publishes takes part in one reading-progress
+engine.** A blog post, a podcast transcript and a chapter of a book translation
+all live in the same `localStorage` key, are marked read the same way, show the
+same marks in every listing, survive offline (it is `localStorage` — the network
+plays no part) and travel together in the export/import dump. When a new kind of
+content appears, give it a `Target` in `src/lib/readingProgress.ts` rather than
+inventing a second mechanism.
 
 The site remembers how far the reader got in a post or a transcript, and lets them mark it read by hand. Everything is client-side: one `localStorage` key, no account, no sync, nothing sent anywhere.
 
 **All the logic is in `src/lib/readingProgress.ts`** (pure, unit-tested in `readingProgress.test.ts`) — parsing/serializing the store, the position math, pruning. Only `loadStore()`/`saveStore()` at the bottom touch `localStorage`, and both swallow every error (Safari private mode throws on *access*, a full quota throws on write, and neither may break reading).
 
-**Storage:** `localStorage['reading-progress']` = `{ v: 1, items: { [id]: { p, read, at } } }`, `p` a 0…1 position, `at` epoch ms. Anything unparseable, malformed or of a foreign `v` reads as empty, so a format change needs only a `STORE_VERSION` bump. Capped at `MAX_ENTRIES` (500), least recently touched dropped first.
+**Storage:** `localStorage['reading-progress']` = `{ v: 1, items: { [id]: { p, read, at } } }`, `p` a 0…1 position, `at` epoch ms. Anything unparseable, malformed or of a foreign `v` reads as empty, so a format change needs only a `STORE_VERSION` bump. Capped at `MAX_ENTRIES` (500), least recently touched dropped first — note that **one book can take 73 of those**, so raise the cap before the section grows to several books rather than letting it quietly evict a reader's posts.
 
 **Identity is language-independent, and that is the point.** A `Target` carries two ids:
 
-| content | `progressId` | `readId` |
-|---|---|---|
-| blog post | `post:<translationKey>` | same |
-| podcast episode | `podcast:<slug>:<transcriptLang>` | `podcast:<slug>` |
+| content | `progressId` | `readId` | factory |
+|---|---|---|---|
+| blog post | `post:<translationKey>` | same | `postTarget` |
+| podcast episode | `podcast:<slug>:<transcriptLang>` | `podcast:<slug>` | `podcastTarget` |
+| book chapter | `book:<slug>:<chapterKey>` | same | `bookChapterTarget` |
+| a book as a whole | — derived from its chapters — | | `completion` |
 
 A post read in Russian therefore shows as read in every translation (`translationKey`, falling back to the slug — every post currently has one). For a podcast the *position* is per transcript language — the two languages are two different texts to scroll through — while "read" belongs to the episode as a whole, so finishing the English transcript marks the Russian one read too. This split was a deliberate choice; don't collapse it.
+
+**A container has no entry of its own.** `completion(store, readIds)` derives
+`{ total, read, ratio, done }` for a book (or one of its parts) from its
+chapters, and that is deliberate: a stored total could not survive the
+export/import merge, where one device has read chapters 1–5 and another 6–10 and
+the answer has to be both. Never write an aggregate entry to the store.
+
+**A chapter's key must stay put** — it is in the reader's `localStorage`.
+`chapterKey()` in `src/lib/books.ts` uses the number printed in the book, or a
+slug of the `originalTitle` for the closing pieces, which have none. Not the
+position in the list: inserting a chapter would shift every key after it.
 
 **On the page — `src/components/ReadingProgress.svelte`**, one island that renders three things: the inline read toggle (it is placed where the toggle belongs, the other two are `position: fixed`), the 2px progress rail at the top of the viewport, and the "continue reading · 45%" pill.
 
@@ -174,9 +202,45 @@ A post read in Russian therefore shows as read in every translation (`translatio
 - Writes are debounced (400 ms) and flushed on `pagehide`/`visibilitychange`.
 - In `Transcript.svelte` the island is nested inside the component (not placed in `[slug].astro`) because `progressId` follows the in-page language toggle. Switching language flushes the old language's position before adopting the new one — that `$effect` is the whole reason the component takes ids rather than a slug.
 
-**In listings — `src/components/ReadingMarks.astro`.** The marks cannot be rendered at build time, so the markup ships an empty `<span class="reading-mark" data-reading-mark …>` slot per entry and one script per page fills the ones that have something to say (a check + "read", or "45%"), and puts `reading-read` on the slot's parent so the title dims. A slot declares `data-read-id` and optionally `data-progress-ids` (comma-separated; a podcast lists one per transcript language and the *furthest* is shown). Include `<ReadingMarks lang={lang} />` once on any page carrying slots — currently the homepage, `/[lang]/blog/` and `/[lang]/podcasts/`. It re-renders on the `storage` event, so a second tab stays in sync. `.reading-mark` / `.reading-read` styles live in `src/styles/global.css`.
+**In listings — `src/components/ReadingMarks.astro`.** The marks cannot be rendered at build time, so the markup ships an empty `<span class="reading-mark" data-reading-mark …>` slot per entry and one script per page fills the ones that have something to say (a check + "read", "45%", or "12/73"), and puts `reading-read` on the slot's parent so the title dims. A slot comes in one of two shapes:
+
+- **a single text** — `data-read-id`, optionally `data-progress-ids`
+  (comma-separated; a podcast lists one per transcript language and the
+  *furthest* is shown).
+- **a text made of parts** — `data-parts`, the read ids of the parts. The mark
+  counts them ("12/73") and turns into a check once every part is read. Books
+  use this; `data-read-id` is then not needed at all.
+
+Include `<ReadingMarks lang={lang} />` once on any page carrying slots — currently the homepage, `/[lang]/blog/`, `/[lang]/podcasts/` and `/books/`. It re-renders on the `storage` event, so a second tab stays in sync. `.reading-mark` / `.reading-read` styles live in `src/styles/global.css`.
+
+**Book chapters — `src/components/ChapterMarks.astro`.** A chapter has no page
+to scroll through yet, so the only way to mark one read is by hand: this is the
+per-chapter equivalent of the read toggle on a post. Like `ReadingMarks` it is a
+plain page script, not an island, and the page ships its controls `hidden` so a
+reader without JS never sees a dead button. Its markup contract:
+
+- `[data-read-toggle]` — a `<button>` whose `data-target-id` is the chapter's
+  read key and `data-item-label` names it for a screen reader.
+- `[data-read-summary]` — a counter over `data-target-ids`. A
+  `[data-read-count]` child receives the number alone (the rest of the sentence
+  is static markup, which is how "из 73 глав" gets its Russian noun agreement at
+  build time — `pluralRu` agrees with the *total*, a constant); without one the
+  element gets "12/73". A `[data-read-bar]` child is scaled to the share read.
+- `[data-read-hint]` — prose that only makes sense next to a working toggle,
+  revealed together with them.
+
+`/books/<slug>/` uses all three: a progress bar plus "Прочитано 12 из 73 глав"
+above the table of contents, a "4/16" next to each part's title, and a toggle at
+the end of every chapter row (a finished row dims via `reading-read`, the same
+class the listings use).
+
+**When chapter pages arrive** nothing here changes: `bookChapterTarget` already
+carries a `progressId`, so a `/books/<slug>/<chapter>/` route can drop in
+`<ReadingProgress>` with that target and get the scroll position, the rail and
+the resume pill for free, while the ToC toggles keep working.
 
 **i18n:** the `reading.*` keys in `src/i18n/ui.ts`, present in all seven locales.
+`reading.partsRead` carries `{read}`/`{total}` placeholders.
 
 ## Moving browser data between devices (⋮ menu in the header)
 
@@ -191,12 +255,43 @@ localStorage wrappers at the bottom, unit-tested in `settingsTransfer.test.ts`).
 - **What travels:** the six keys in `TRANSFERABLE_KEYS` — `reading-progress`,
   `theme`, `lang`, `podcast-transcript-lang`, `podcast-sort-dir`,
   `ai-usage-disclaimer-accepted`. **Add a new localStorage key to that list when
-  one appears**, otherwise it silently stays behind on the old device.
+  one appears**, and a validator for it in `SETTING_VALIDATORS` — a test fails
+  until you do. Otherwise it silently stays behind on the old device.
 - **The text is `lbs1.<base64 gzip json>`** (`lbs0.` where the browser has no
   `CompressionStream`). gzip is what keeps a full reading store pasteable — a
-  few hundred entries compress to well under half their JSON size. A plain JSON
-  snapshot pasted by hand is accepted too, and whitespace or line breaks added
-  by whatever carried the text are stripped before decoding.
+  few hundred entries compress to well under half their JSON size.
+- **Reading a dump is deliberately forgiving; writing one is strict.** The two
+  devices are almost never on the same deploy — one is a tab open since last
+  month — so a dump routinely lacks keys this version knows or carries keys it
+  does not, and **neither is an error**. Refusing an import over a version
+  number or one unknown field would stand between a reader and their own
+  history. What is accepted:
+  - **any `v`**, including a newer one and a missing one. It is reported in
+    `Snapshot.v` and never gates anything; every field is validated on its own.
+  - **a reading store of any `STORE_VERSION`**, and entries missing `p`, `read`
+    or `at`, or carrying them as `"0.5"` / `1` / `"true"`. That is
+    `parseStoreCompat()` in `readingProgress.ts` — the lenient counterpart of
+    `parseStore()`, used **only** on this path (the local store is still read
+    strictly, where a version mismatch really does mean "not our format").
+    An entry with no `at` becomes `at: 0`, which is exactly right for the
+    merge: it can add a position the local side lacks but never overwrite one,
+    while its "read" flag still counts. An entry with only `read: true` reads
+    as finished (`p: 1`); one with nothing but a timestamp is dropped rather
+    than invented.
+  - **four shapes**: the `{ v, at, data }` envelope, a bare map of localStorage
+    keys (a devtools copy), a bare reading store (`{ v, items }`), and values
+    that are numbers, booleans or inlined objects instead of strings.
+  - **base64 however it travelled**: line-wrapped, url-safe (`-_`), unpadded,
+    in quotes, with a BOM or zero-width characters glued on, under the wrong
+    `lbs<n>.` prefix (the body is retried the other way round), or sitting
+    inside the message it was pasted from — the whole text is tried first, so a
+    wrapped payload still works, then each line on its own.
+- **A value this version cannot use is skipped, not written.** `theme: "system"`
+  would pin the reader to the light theme (the boot script only understands
+  `dark`), a locale the site no longer publishes would break the switcher. Such
+  keys come back in `MergeResult.settingsSkipped`, keys from a newer deploy in
+  `unknownKeys` (kept in `Snapshot.extras`, never stored and never re-exported).
+  Values are normalized on the way in, so `" RU "` imports as `ru`.
 - **Import merges, never replaces.** Reading entries are reconciled one by one:
   the newer `at` decides the position and `read` is sticky (finishing something
   on one device is not undone by a dump from a device where it was never
@@ -204,6 +299,14 @@ localStorage wrappers at the bottom, unit-tested in `settingsTransfer.test.ts`).
   without losing progress. Plain settings have no timestamps, so there the
   incoming value simply wins — but a key **absent** from the dump is left alone
   rather than cleared.
+- Because it merges per entry, **book chapters read on two devices come out as
+  the union of both** — one of the reasons a book's progress is derived from its
+  chapters rather than stored as a total. A whole 73-chapter book fits in a
+  dump of under 500 characters; gzip eats the repeated ids.
+- **Keys are written one at a time, the reading store last** (`writeSnapshot`
+  returns `{ written, failed }`). A full quota then costs at most the store
+  instead of throwing away an import that was otherwise fine; the dialog only
+  reports a failure when nothing landed at all.
 - After a successful import the dialog offers a reload rather than reloading by
   itself: the theme, the language and the reading marks are all read on load.
 - `Dialog.Content` (`src/lib/components/ui/dialog/dialog-content.svelte`) grew a
@@ -420,9 +523,20 @@ satoshis = btcAmount × 100,000,000
 **Automated (Vitest):**
 - `public/cc/js/calc.test.js` — `calcSpread`/`calcBtcAmount`/`calcSats`, the CLAUDE.md worked example (1000 GEL, office 272000, market 259498 → spread 4.82%), `isRateStale`, `getFriendlyErrorMessage`, `isPositiveNumber`
 - `src/i18n/utils.test.ts`, `src/i18n/aiUsageDisclaimer.test.ts` — pure i18n/content helpers
+- `src/lib/readingProgress.test.ts` — the reading engine: the per-content targets (post / podcast / book chapter), the store's strict and lenient parsing (`parseStore` / `parseStoreCompat`, plus the `looseNumber`/`looseBoolean` coercions), pruning, the position math, and `completion()` over a container's parts
+- `src/lib/books.test.ts` — the table of contents and the chapter identity: `chapterKey` (stable, unique across a real book), `chapterTarget`, `partReadIds`/`bookReadIds`
+- `src/lib/settingsTransfer.test.ts` — the export/import dump: the four accepted shapes, dumps from an older and a newer version of the site, salvaged reading stores and entries, per-key value validation, the merge (including book chapters read on two devices merging into the union of both), the base64 and prefix tolerance, and the per-key write with a refusing storage
 - `src/sw/shared.test.js` — the worker's pure helpers: URL normalization, locale detection, asset classification, the per-locale save plan, the stale-URL diff between two builds, size formatting, and the worker's hand-rolled Sentry bits (DSN parsing, V8/SpiderMonkey stack parsing, exception payload, envelope body)
 - `src/integrations/offline.test.ts` — that the assembled `sw.js` still compiles as a classic script and carries its manifest, that non-inlineable module syntax fails the build, that `buildManifest` sorts `dist/` into the right caches and only marks genuinely changed files stale, and that the Sentry config is injected when there is one and `null` when there is not
 - Run via `just test` or `npm run test`
+
+**Manual checklist for the reading engine** (DOM-only, so not unit-tested):
+- A post and a podcast transcript still mark themselves read at 95% and offer the resume pill
+- On `/books/<slug>/`: a chapter toggle flips, the counter above the ToC and the part's "4/16" follow it, the row dims, and the state survives a reload
+- The book shows "12/73" on `/books/`, on the Russian homepage, and a check once all chapters are done
+- Export from the ⋮ menu, import into another browser: the chapters come across (and merge rather than replace)
+- Paste a deliberately awkward dump — an old one with fewer keys, one wrapped in quotes, one sent inside a chat message — and check it still imports
+- With the site saved for offline reading and the server stopped, `/books/<slug>/` still opens and its toggles still work
 
 **Manual checklist (DOM/PWA-only behaviour not covered by unit tests):**
 - Warning icon appears at spread > 2%, absent at spread ≤ 2%

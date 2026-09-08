@@ -1,6 +1,20 @@
 import { describe, expect, it } from 'vitest';
 import { books } from '../data/books';
-import { allChapters, bookLabel, chapterCount, findBook, formatVolume, linkHost, listBooks, pluralRu } from './books';
+import {
+  allChapters,
+  bookLabel,
+  bookReadIds,
+  chapterCount,
+  chapterKey,
+  chapterLabel,
+  chapterTarget,
+  findBook,
+  formatVolume,
+  linkHost,
+  listBooks,
+  partReadIds,
+  pluralRu,
+} from './books';
 
 describe('findBook', () => {
   it('finds a book by its slug', () => {
@@ -70,5 +84,69 @@ describe('bookLabel', () => {
 describe('linkHost', () => {
   it('drops the www.', () => {
     expect(linkHost('https://www.mctb.org/mctb2/')).toBe('mctb.org');
+  });
+});
+
+describe('chapterKey', () => {
+  const book = findBook('mctb2')!;
+
+  it('uses the number printed in the book', () => {
+    expect(chapterKey({ number: 7, title: 'Семь', originalTitle: 'The Seven' })).toBe('7');
+  });
+
+  it('falls back to a slug of the original title for the closing pieces', () => {
+    expect(chapterKey({ title: 'Напутствие', originalTitle: 'Final Wishes' })).toBe('final-wishes');
+  });
+
+  it('slugifies punctuation away', () => {
+    expect(chapterKey({ title: 'Что дальше', originalTitle: 'Beyond ("What Next?")' })).toBe(
+      'beyond-what-next',
+    );
+  });
+
+  it('is unique across every chapter of a real book', () => {
+    const keys = allChapters(book).map(chapterKey);
+    expect(new Set(keys).size).toBe(keys.length);
+  });
+});
+
+describe('chapterTarget', () => {
+  const book = findBook('mctb2')!;
+
+  it('namespaces a chapter under its book', () => {
+    expect(chapterTarget(book, { number: 1, title: 'Введение', originalTitle: 'Intro' })).toEqual({
+      progressId: 'book:mctb2:1',
+      readId: 'book:mctb2:1',
+    });
+  });
+});
+
+describe('bookReadIds / partReadIds', () => {
+  const book = findBook('mctb2')!;
+
+  it('lists one id per chapter, in reading order', () => {
+    const ids = bookReadIds(book);
+    expect(ids).toHaveLength(chapterCount(book));
+    expect(ids[0]).toBe('book:mctb2:1');
+    expect(ids.at(-1)).toBe('book:mctb2:last-words-of-wisdom');
+  });
+
+  it('splits into the parts without losing or duplicating a chapter', () => {
+    const fromParts = book.toc.flatMap((part) => partReadIds(book, part));
+    expect(fromParts).toEqual(bookReadIds(book));
+  });
+});
+
+describe('chapterLabel', () => {
+  it('names a numbered chapter by its number', () => {
+    expect(chapterLabel({ number: 5, title: 'Три характеристики', originalTitle: 'The Three' })).toBe(
+      'Глава 5. Три характеристики',
+    );
+  });
+
+  it('quotes a closing piece, which has no number', () => {
+    expect(chapterLabel({ title: 'Напутствие', originalTitle: 'Final Wishes' })).toBe(
+      '«Напутствие»',
+    );
   });
 });

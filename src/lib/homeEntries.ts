@@ -13,4 +13,10 @@ export interface HomeEntry {
   /** Set to give the entry a reading mark (the page must include ReadingMarks). */
   readId?: string;
   progressIds?: string[];
+  /**
+   * Read ids of the entry's parts (a book's chapters) — the mark then counts
+   * them ("12/73") instead of showing a scroll position. Used instead of
+   * `readId`, not alongside it.
+   */
+  parts?: string[];
 }

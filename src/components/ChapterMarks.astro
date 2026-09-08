@@ -1,0 +1,130 @@
+---
+/**
+ * The read toggles in a book's table of contents, and the counters above them.
+ *
+ * A book chapter has no page of its own yet, so the only way to mark one read
+ * is by hand — this is the equivalent of the read toggle on a post or a podcast
+ * episode, one per chapter. The state goes into the same `reading-progress`
+ * store as everything else (`bookChapterTarget()`), so it rides along in the
+ * export/import dump and survives offline like the rest of it.
+ *
+ * As with ReadingMarks.astro, none of this can be rendered at build time: the
+ * page ships the buttons and the counters `hidden` and this script reveals the
+ * ones it can drive, so a reader without JS never sees a dead control.
+ *
+ * The markup contract:
+ *   [data-read-toggle]    a <button>; `data-target-id` is the chapter's read
+ *                         key, `data-item-label` names it for a screen reader.
+ *   [data-read-summary]   a counter over `data-target-ids` (comma-separated).
+ *                         A `[data-read-count]` child receives the number
+ *                         alone (the rest of the sentence is static markup);
+ *                         without one the element gets "12/73". A
+ *                         `[data-read-bar]` child is scaled to the share read.
+ *   [data-read-hint]      prose that only makes sense next to a working
+ *                         toggle; revealed together with them.
+ */
+import { useTranslations } from '../i18n/utils';
+import type { Lang } from '../i18n/ui';
+
+type Props = { lang: Lang };
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+<span
+  id="chapter-marks-i18n"
+  hidden
+  data-mark-read={t('reading.markRead')}
+  data-mark-unread={t('reading.markUnread')}
+  data-parts={t('reading.partsRead')}
+></span>
+
+<script>
+  import {
+    STORAGE_KEY,
+    completion,
+    loadStore,
+    saveStore,
+    setRead,
+  } from '../lib/readingProgress';
+
+  const i18n = document.getElementById('chapter-marks-i18n');
+  const toggles = Array.from(document.querySelectorAll<HTMLButtonElement>('[data-read-toggle]'));
+  const summaries = Array.from(document.querySelectorAll<HTMLElement>('[data-read-summary]'));
+  const hints = Array.from(document.querySelectorAll<HTMLElement>('[data-read-hint]'));
+
+  if (i18n && toggles.length > 0) {
+    const markReadLabel = i18n.dataset.markRead || 'Mark as read';
+    const markUnreadLabel = i18n.dataset.markUnread || 'Mark as unread';
+    const partsLabel = i18n.dataset.parts || '{read} of {total} read';
+
+    const renderToggles = (store: ReturnType<typeof loadStore>) => {
+      for (const button of toggles) {
+        const id = button.dataset.targetId;
+        if (!id) continue;
+
+        const read = store.items[id]?.read ?? false;
+        const action = read ? markUnreadLabel : markReadLabel;
+        const item = button.dataset.itemLabel;
+
+        button.setAttribute('aria-pressed', String(read));
+        button.setAttribute('aria-label', item ? `${action}: ${item}` : action);
+        button.title = action;
+        button.classList.toggle('is-read', read);
+        // The chapter's own row dims once it is done, like a read entry in a listing.
+        button.closest('li')?.classList.toggle('reading-read', read);
+        button.hidden = false;
+      }
+    };
+
+    const renderSummaries = (store: ReturnType<typeof loadStore>) => {
+      for (const summary of summaries) {
+        const ids = (summary.dataset.targetIds || '').split(',').filter(Boolean);
+        if (ids.length === 0) continue;
+
+        const { read, total, ratio, done } = completion(store, ids);
+        const counted = partsLabel
+          .replace('{read}', String(read))
+          .replace('{total}', String(total));
+
+        const count = summary.querySelector<HTMLElement>('[data-read-count]');
+        if (count) {
+          count.textContent = String(read);
+        } else {
+          summary.textContent = `${read}/${total}`;
+          summary.setAttribute('aria-label', counted);
+        }
+
+        const bar = summary.querySelector<HTMLElement>('[data-read-bar]');
+        if (bar) bar.style.transform = `scaleX(${ratio})`;
+
+        summary.title = counted;
+        summary.classList.toggle('is-done', done);
+        summary.hidden = false;
+      }
+    };
+
+    const render = () => {
+      const store = loadStore();
+      renderToggles(store);
+      renderSummaries(store);
+    };
+
+    for (const button of toggles) {
+      button.addEventListener('click', () => {
+        const id = button.dataset.targetId;
+        if (!id) return;
+        const store = loadStore();
+        const read = store.items[id]?.read ?? false;
+        saveStore(setRead(store, { progressId: id, readId: id }, !read, Date.now()));
+        render();
+      });
+    }
+
+    render();
+    for (const hint of hints) hint.hidden = false;
+    // Another tab, or an import from another device, changed the same book.
+    window.addEventListener('storage', (event) => {
+      if (event.key === null || event.key === STORAGE_KEY) render();
+    });
+  }
+</script>

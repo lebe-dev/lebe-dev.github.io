@@ -87,7 +87,11 @@
     }
 
     const merged = mergeSnapshots(readLocalSnapshot(), incoming);
-    if (!writeSnapshot(merged.data)) {
+    // Keys are written one by one, so a full quota can cost the reading store
+    // and still leave the settings in. Only a write that landed nothing at all
+    // is a failed import.
+    const write = writeSnapshot(merged.data);
+    if (write.written.length === 0 && write.failed.length > 0) {
       importError = labels.importFailed;
       return;
     }

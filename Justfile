@@ -42,6 +42,7 @@ build: glossary lint
     @for l in en ru es zh ja fr de; do test -f dist/$l/podcasts/index.html || (echo "❌ Missing dist/$l/podcasts/" && exit 1); done
     @test -f dist/books/index.html || (echo "❌ Missing dist/books/ (book translations)" && exit 1)
     @test -f dist/books/mctb2/index.html || (echo "❌ Missing dist/books/mctb2/" && exit 1)
+    @grep -q 'data-read-toggle' dist/books/mctb2/index.html || (echo "❌ Book chapters carry no read toggles" && exit 1)
     @grep -rl 'class="term ' dist/ru/podcasts/ >/dev/null 2>&1 || (echo "❌ No glossary terms highlighted in any transcript — run 'just glossary'" && exit 1)
     @test -f dist/sw.js || (echo "❌ Missing dist/sw.js (offline service worker)" && exit 1)
     @grep -q 'const MANIFEST = {' dist/sw.js || (echo "❌ dist/sw.js carries no precache manifest" && exit 1)

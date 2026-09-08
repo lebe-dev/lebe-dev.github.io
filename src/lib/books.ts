@@ -1,4 +1,5 @@
-import { books, type Book, type BookChapter } from '../data/books';
+import { books, type Book, type BookChapter, type BookPart } from '../data/books';
+import { bookChapterTarget, type Target } from './readingProgress';
 
 /** The book behind a slug, or undefined for an unknown one. */
 export const findBook = (slug: string): Book | undefined =>
@@ -13,6 +14,43 @@ export const allChapters = (book: Book): BookChapter[] => book.toc.flatMap((part
 
 /** How many chapters the table of contents lists, the closing pieces included. */
 export const chapterCount = (book: Book): number => allChapters(book).length;
+
+/** Anything but letters and digits becomes a hyphen; used for chapter keys. */
+const slugify = (title: string): string =>
+  title
+    .toLowerCase()
+    .replace(/[^\p{L}\p{N}]+/gu, '-')
+    .replace(/^-+|-+$/g, '');
+
+/**
+ * Stable id of a chapter inside its book — the number printed in the book, or a
+ * slug of the original title for the closing pieces, which have none.
+ *
+ * It goes into the reader's localStorage, so it has to stay put: the original
+ * titles are those of a published edition and the numbers do not move, while
+ * the position of a chapter in the list would shift the moment one is inserted.
+ */
+export const chapterKey = (chapter: BookChapter): string =>
+  chapter.number !== undefined ? String(chapter.number) : slugify(chapter.originalTitle);
+
+/** Where a chapter's reading state lives. */
+export const chapterTarget = (book: Book, chapter: BookChapter): Target =>
+  bookChapterTarget(book.slug, chapterKey(chapter));
+
+/** Read ids of one part's chapters, in reading order. */
+export const partReadIds = (book: Book, part: BookPart): string[] =>
+  part.chapters.map((chapter) => chapterTarget(book, chapter).readId);
+
+/**
+ * Read ids of the whole book. A listing aggregates a book's mark from these
+ * rather than from an id of its own — see `completion()` in readingProgress.
+ */
+export const bookReadIds = (book: Book): string[] =>
+  allChapters(book).map((chapter) => chapterTarget(book, chapter).readId);
+
+/** How a chapter is named on its own, for a button label or a screen reader. */
+export const chapterLabel = (chapter: BookChapter): string =>
+  chapter.number !== undefined ? `Глава ${chapter.number}. ${chapter.title}` : `«${chapter.title}»`;
 
 /** Russian noun agreement: "1 глава", "2 главы", "5 глав". */
 export const pluralRu = (n: number, forms: [string, string, string]): string => {
