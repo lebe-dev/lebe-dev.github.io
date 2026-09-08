@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { podcasts } from '../data/podcasts';
 import {
   availableLangs,
+  episodeDate,
   formatTimecode,
   getTermHits,
   getTranscript,
@@ -112,6 +113,25 @@ describe('transcript files', () => {
   it('ignores unknown slugs and languages', () => {
     expect(getTranscript('nope', 'en')).toBeUndefined();
     expect(availableLangs('nope')).toEqual([]);
+  });
+});
+
+describe('episodeDate', () => {
+  const episode = { slug: 'x', podcast: 'Show', dateAdded: '2026-08-09' };
+
+  it('dates an episode by its own release', () => {
+    expect(episodeDate({ ...episode, publishedAt: '2018-05-18' })).toEqual({
+      date: '2018-05-18',
+      kind: 'published',
+    });
+  });
+
+  it('falls back to the date added, and says so', () => {
+    expect(episodeDate(episode)).toEqual({ date: '2026-08-09', kind: 'added' });
+  });
+
+  it('knows the release date of every episode we publish', () => {
+    expect(podcasts.filter((e) => !e.publishedAt)).toEqual([]);
   });
 });
 

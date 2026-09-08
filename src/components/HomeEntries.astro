@@ -1,0 +1,38 @@
+---
+/**
+ * The five newest entries of a homepage section (podcasts, books, subtitles),
+ * in the same date/title grid the posts list uses — so a section is a preview
+ * of its listing rather than a bare link to it.
+ *
+ * `readId`/`progressIds` are optional: an entry that has them gets a reading
+ * mark filled in by ReadingMarks.astro, which the page must include once.
+ *
+ * `showDates={false}` drops the date column — the books section names its
+ * entries ("Книга «…»") and has no per-entry date to show.
+ */
+import { formatDate } from '../i18n/utils';
+import type { HomeEntry } from '../lib/homeEntries';
+
+type Props = { entries: HomeEntry[]; showDates?: boolean };
+const { entries, showDates = true } = Astro.props;
+---
+<ul class:list={['posts-list', !showDates && 'posts-list--plain']}>
+  {entries.map((entry) => (
+    <>
+      {showDates && <li class="date">{entry.date ? formatDate(entry.date) : ''}</li>}
+      <li class="title">
+        <a href={entry.href} lang={entry.titleLang}>{entry.title}</a>
+        {entry.readId && (
+          /* Filled in from localStorage by ReadingMarks.astro. */
+          <span
+            class="reading-mark"
+            data-reading-mark
+            data-read-id={entry.readId}
+            data-progress-ids={entry.progressIds?.join(',')}
+            hidden
+          ></span>
+        )}
+      </li>
+    </>
+  ))}
+</ul>

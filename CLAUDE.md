@@ -46,7 +46,7 @@ Single, Russian-only, non-localized page (unlike blog/[lang] routes) listing sub
 - Subtitle files themselves live in `public/subtitles/` (raw `.srt`/`.vtt`, downloaded via a link on the page)
 - Formatting helpers: `src/lib/subtitles.ts` (unit-tested in `subtitles.test.ts`) — duration/date in both a visible short form and a spelled-out form for screen readers, plus `titleLang`/`buildAltTitles`
 - `SubtitleEntry` fields: `title` (the Russian title when there is one), `originalTitle?` (native-language title, transliterated if the script isn't Latin), `englishTitle?`, `year?`, `originalLang` (ISO code, mapped to Russian names via `langNames`/`langNamesFrom` in the page), `dateAdded` (ISO 8601, date the entry was added to the site — entries are sorted newest-added-first), `fileName`, `format`, `duration?` (HH:MM:SS, copied by hand from the source video file), `wikipediaUrl?` (film's Wikipedia page, if any), `sourceUrl?` (where the original-language subtitles were sourced from), `translatedWith?`, `notes?`
-- Linked from the Russian homepage (`src/pages/[lang]/index.astro`) in a "Субтитры" section shown only when `lang === 'ru'`, placed right after the "Записи" (posts) section
+- Linked from the Russian homepage (`src/pages/[lang]/index.astro`) in a "Субтитры" section shown only when `lang === 'ru'` (see "Homepage section previews")
 
 **Layout of one entry:** a lucide `captions` icon hanging left of the title (`text-indent` trick, so wrapped lines align with the text), title + year, download button pinned to the first line by a two-column grid; below it the alternative titles on one line, then a single meta row (`язык → русский`, duration, date). Everything except the title is one small size (0.85rem) in `var(--sans)`.
 
@@ -61,8 +61,9 @@ Localized section (unlike `/subtitles`): it exists in every site locale, and the
 - Pages: `src/pages/[lang]/podcasts/index.astro` (listing) and `[slug].astro` (one episode)
 - Metadata: `src/data/podcasts.ts` — array of `PodcastEpisode`, edited by hand per episode: `slug`, `podcast`, `podcastUrl?`, `episode?`, `publishedAt?`, `dateAdded`, `sourceUrl?`, `translatedWith?`
 - Transcripts: `src/data/podcasts/<slug>.<lang>.json`, shape `{ title, guest?, url?, transcript: [{ start, end, speaker, text }] }` with `HH:MM:SS` timecodes. **Title, guest, link to the original and duration all come from the JSON** and are deliberately not duplicated in `podcasts.ts` — `guest` is meant to become searchable later. `guest` is written in the transcript's own language, like `title` (`Ruben Laukkonen` / `Рубен Лаукконен`). `sourceUrl` in `podcasts.ts` exists only as an override for `url` (see `originalUrl`).
-- Listing order: newest `dateAdded` first, ties broken by `publishedAt` (newest release first). Several episodes usually land on the same day, so keep `publishedAt` filled in — without it a tie falls back to array order.
-- Loading/derivation: `src/lib/podcasts.ts` (unit-tested in `podcasts.test.ts`) — `import.meta.glob` over the JSON files, `availableLangs`, `preferredLang`, `transcriptDuration`, `originalUrl`, `listEpisodes` (returns `EpisodeSummary`: the episode plus `title`/`titleLang`/`guest`/`duration`/`langs` resolved for a given site locale)
+- Listing order: newest `publishedAt` first (the episode's own release date), ties broken by `dateAdded`, newest translation first. So keep `publishedAt` filled in — an episode without one sinks to the bottom of the listing.
+- **The date shown is the release date, not the date the translation was added.** The listing and the homepage preview show `publishedAt` through `episodeDate()`, which falls back to `dateAdded` (labelled `podcasts.added`, so a fallback never claims to be a release date); the episode page shows both, each with a visible label. Release dates for *Deconstructing Yourself* come from the episode's own page on deconstructingyourself.com — its WordPress REST API (`/wp-json/wp/v2/posts?per_page=100`) gives `date`/`date_gmt` per post, matched against the `url` in the transcript JSON. Note the two differ by a day for late-evening releases; the data uses the GMT date.
+- Loading/derivation: `src/lib/podcasts.ts` (unit-tested in `podcasts.test.ts`) — `import.meta.glob` over the JSON files, `availableLangs`, `preferredLang`, `transcriptDuration`, `originalUrl`, `episodeDate`, `listEpisodes` (returns `EpisodeSummary`: the episode plus `title`/`titleLang`/`guest`/`duration`/`langs` resolved for a given site locale)
 - UI strings: `podcasts.*` and `section.podcasts*` keys in `src/i18n/ui.ts`, present in all seven locales
 - Optional `glossary: [{ term, definition, aliases?, ignore? }]` in a transcript JSON renders as a definition list after the transcript **and** as inline tooltips inside the text (see below). It is **per language** and per episode — it lives inside `Transcript.svelte` so it switches together with the transcript, and the whole section is skipped for languages that don't have one. Only the heading (`podcasts.glossary`) comes from the site locale.
 - Pure timecode helpers live separately in `src/lib/podcastTimecode.ts` **on purpose**: the Svelte component imports them, and importing `podcasts.ts` there would drag every transcript JSON into the client bundle. `src/lib/podcastTerms.ts` exists for the same reason.
@@ -91,6 +92,61 @@ Localized section (unlike `/subtitles`): it exists in every site locale, and the
 - **English transcripts carry no glossary yet,** so nothing is highlighted there; the code needs no change when one is added.
 
 **Adding an episode:** drop `<slug>.en.json` / `<slug>.ru.json` into `src/data/podcasts/`, add an object to the `podcasts` array in `src/data/podcasts.ts`. Nothing else — routes, listing, filters, duration, guest and the link to the original all follow from the data, and `just dev`/`just build` generate the glossary sidecars. `just build` checks that `dist/<lang>/podcasts/` exists for every locale and that at least one Russian transcript still highlights terms.
+
+## Book translations (/books/)
+
+Russian-only, non-localized (like `/subtitles`, unlike podcasts): the section
+exists at one URL and is linked from the Russian homepage only.
+
+- Pages: `src/pages/books/index.astro` (list of books) and `[slug].astro` (one book: title, author, link to the author's site, table of contents)
+- Data: `src/data/books.ts` — array of `Book`, edited by hand. The **table of contents lives here**, in `toc: BookPart[]`, each part carrying `number` ("I"), `title`, `originalTitle` and its `chapters` (`number?`, `title`, `originalTitle`). A chapter without a `number` is one of the closing pieces ("Final Wishes").
+- Helpers: `src/lib/books.ts` (unit-tested in `books.test.ts`) — `findBook`, `listBooks` (newest `dateAdded` first), `allChapters`, `chapterCount`, `pluralRu`, `formatVolume` ("6 частей · 73 главы"), `linkHost`. Date formatting is reused from `src/lib/subtitles.ts`.
+- First book: `mctb2` — *Mastering the Core Teachings of the Buddha*, 2nd ed., Daniel M. Ingram, translated from the free online edition at mctb.org.
+
+**The chapter text is not translated yet.** The book page deliberately renders
+the contents as **plain text, not links** — there are no chapter routes at all,
+so nothing links to a page that does not exist. When the first chapter is
+translated, chapters go into an Astro content collection
+(`src/content/books/<slug>/*.md`, one file per chapter, frontmatter carrying the
+order and title), a `/books/<slug>/<chapter>/` route is added, and the ToC entry
+becomes a link only for the chapters that actually have a file.
+
+Both pages are covered by the root service worker without any change: their URLs
+end in `/`, so `classifyAsset()` treats them as pages and `langFromPath()`
+returns null, which puts them in every locale's offline save (like `/subtitles/`).
+`just build` checks that `dist/books/` and `dist/books/mctb2/` exist.
+
+Linked from the Russian homepage in a "Переводы книг" section (see "Homepage
+section previews").
+
+## Homepage section previews
+
+Every section of `src/pages/[lang]/index.astro` below "Записи" shows the **five
+newest entries** of its listing rather than only a link to it — podcasts in
+every locale, books and subtitles for `ru` only.
+
+- `src/components/HomeEntries.astro` renders them, reusing the `.posts-list`
+  date/title grid so all sections read the same. Its item type is
+  `HomeEntry` in `src/lib/homeEntries.ts` — a type cannot be imported from a
+  `.astro` file, hence the separate module.
+- `HOME_PREVIEW` in the page is the count. Ordering comes from the data:
+  `listEpisodes()` already sorts by release date and `listBooks()` newest-added
+  first, subtitles are sorted in the page. Podcasts are therefore ordered and
+  dated the same way as their listing page — the five newest *episodes*, not the
+  five newest translations.
+- Podcast entries carry `readId`/`progressIds`, so they get the same reading
+  marks as the listing (`<ReadingMarks>` is already on the page). Books and
+  subtitles have no reading state.
+- **Books are the one dateless section:** `showDates={false}` drops the date
+  column and each entry is named `Книга «…» (Автор)` (`bookLabel()` in
+  `src/lib/books.ts`) — the date a book was added says little while its
+  translation is still in progress. `HomeEntry.date` is optional for that
+  reason, and `.posts-list--plain` is the single-column variant of the grid.
+- A subtitle has no page of its own, so its entry links to its heading on the
+  listing: `/subtitles/#sub-title-<fileName>`. Keep that `id` in
+  `src/pages/subtitles.astro` if the markup there changes.
+- The link to the full listing moves below the preview, styled `.section-more`
+  (in `src/styles/global.css`).
 
 ## Reading progress & "read" marks (blog posts + podcast transcripts)
 

@@ -96,6 +96,19 @@ export const originalUrl = (
 ): string | undefined =>
   override ?? langs.map((lang) => getTranscript(slug, lang)?.url).find(Boolean);
 
+/**
+ * The single date a listing shows for an episode: when the episode itself was
+ * released, falling back to when the translation was added for the rare episode
+ * whose release date we don't know. The label follows `kind`, so a fallback
+ * never claims to be a release date.
+ */
+export const episodeDate = (
+  episode: PodcastEpisode,
+): { date: string; kind: 'published' | 'added' } =>
+  episode.publishedAt
+    ? { date: episode.publishedAt, kind: 'published' }
+    : { date: episode.dateAdded, kind: 'added' };
+
 /** Episode length, taken from the last segment's end timecode. */
 export const transcriptDuration = (transcript: Transcript): string | undefined =>
   transcript.transcript.at(-1)?.end;

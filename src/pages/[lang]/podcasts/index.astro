@@ -2,7 +2,7 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { useTranslations, formatDate } from '../../../i18n/utils';
 import { languages, type Lang } from '../../../i18n/ui';
-import { formatTimecode, listEpisodes } from '../../../lib/podcasts';
+import { episodeDate, formatTimecode, listEpisodes } from '../../../lib/podcasts';
 import { getBlogPosts } from '../../../lib/blog';
 import ReadingMarks from '../../../components/ReadingMarks.astro';
 
@@ -24,7 +24,9 @@ export async function getStaticPaths() {
 const lang = Astro.params.lang as Lang;
 const { methodUrl } = Astro.props;
 const t = useTranslations(lang);
-const episodes = listEpisodes(lang);
+// Each entry is dated by the episode's own release; episodeDate() falls back
+// to the date the translation was added when the release date is unknown.
+const episodes = listEpisodes(lang).map((e) => ({ ...e, shown: episodeDate(e) }));
 
 // One filter chip per show, in the order the shows first appear in the listing.
 const shows = [...new Set(episodes.map((e) => e.podcast))];
@@ -120,9 +122,11 @@ const shows = [...new Set(episodes.map((e) => e.podcast))];
                 <span class="visually-hidden">{t('podcasts.transcriptLang')}: </span>
                 {e.langs.map((l) => languages[l as Lang]).join(' · ')}
               </span>
-              <span class="ep-added">
-                <span class="visually-hidden">{t('podcasts.added')}: </span>
-                <time datetime={e.dateAdded}>{formatDate(new Date(e.dateAdded))}</time>
+              <span class="ep-date">
+                <span class="visually-hidden">
+                  {t(e.shown.kind === 'published' ? 'podcasts.published' : 'podcasts.added')}:{' '}
+                </span>
+                <time datetime={e.shown.date}>{formatDate(new Date(e.shown.date))}</time>
               </span>
             </p>
           </article>
@@ -489,7 +493,7 @@ const shows = [...new Set(episodes.map((e) => e.podcast))];
     border-radius: 2px;
   }
 
-  .ep-added {
+  .ep-date {
     margin-left: auto;
   }
 
@@ -500,7 +504,7 @@ const shows = [...new Set(episodes.map((e) => e.podcast))];
   }
 
   @media (max-width: 540px) {
-    .ep-added {
+    .ep-date {
       margin-left: 0;
     }
   }

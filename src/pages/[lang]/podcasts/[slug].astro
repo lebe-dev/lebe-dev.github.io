@@ -106,8 +106,14 @@ const onlyOneLang =
             {formatTimecode(duration)}
           </span>
         )}
+        {episode.publishedAt && (
+          <span>
+            {t('podcasts.published')}:{' '}
+            <time datetime={episode.publishedAt}>{formatDate(new Date(episode.publishedAt))}</time>
+          </span>
+        )}
         <span>
-          <span class="visually-hidden">{t('podcasts.added')}: </span>
+          {t('podcasts.added')}:{' '}
           <time datetime={episode.dateAdded}>{formatDate(new Date(episode.dateAdded))}</time>
         </span>
         {episode.translatedWith && (

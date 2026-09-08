@@ -1,0 +1,273 @@
+---
+import type { GetStaticPaths } from 'astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { books } from '../../data/books';
+import { chapterCount, formatVolume, linkHost } from '../../lib/books';
+import { formatDateRu, formatDateSpoken, toDateAttr } from '../../lib/subtitles';
+
+export const getStaticPaths = (() =>
+  books.map((book) => ({ params: { slug: book.slug }, props: { book } }))) satisfies GetStaticPaths;
+
+const { book } = Astro.props;
+const added = new Date(book.dateAdded);
+// The translation itself is not published yet — only the table of contents is.
+// Chapter pages will appear under /books/<slug>/<chapter>/ later.
+const volume = formatVolume(book);
+---
+<BaseLayout
+  lang="ru"
+  title={book.title}
+  description={`«${book.originalTitle}» ${book.author} — перевод на русский. Оглавление.`}
+  minimalHeader
+  backHref="/books/"
+>
+  <article class="book">
+    <header class="book-head">
+      <h1>{book.title}</h1>
+      <p class="book-original" lang={book.originalLang}>
+        {book.originalTitle}
+        {book.shortTitle && <span class="book-short"> ({book.shortTitle})</span>}
+      </p>
+      <p class="book-meta">
+        <span>
+          <span class="visually-hidden">Автор: </span>
+          {book.authorUrl ? (
+            <a
+              href={book.authorUrl}
+              title={`Сайт автора — ${linkHost(book.authorUrl)}, откроется в новой вкладке`}
+              target="_blank"
+              rel="noopener"
+            >
+              {book.author}
+              <span class="visually-hidden"> — сайт автора, откроется в новой вкладке</span>
+            </a>
+          ) : book.author}
+          {book.authorOriginal && book.authorOriginal !== book.author && (
+            <span class="book-author-original" lang={book.originalLang}> · {book.authorOriginal}</span>
+          )}
+        </span>
+        <span aria-hidden="true" title="Объём книги">{volume}</span>
+        <span class="visually-hidden">Объём: {volume}.</span>
+        <span class="book-added">
+          <span class="visually-hidden">Добавлено на сайт {formatDateSpoken(added)}.</span>
+          <time
+            datetime={toDateAttr(added)}
+            aria-hidden="true"
+            title={`Добавлено на сайт ${formatDateSpoken(added)}`}
+          >{formatDateRu(added)}</time>
+        </span>
+      </p>
+    </header>
+
+    <p class="book-note">
+      Перевод ещё не начат — пока здесь только оглавление. Главы будут появляться по одной.
+      {book.sourceUrl && (
+        <>
+          {' '}Оригинал автор выложил в открытый доступ:{' '}
+          <a
+            href={book.sourceUrl}
+            hreflang={book.originalLang}
+            title={`Оригинал книги — ${linkHost(book.sourceUrl)}, откроется в новой вкладке`}
+            target="_blank"
+            rel="noopener"
+          >
+            {linkHost(book.sourceUrl)}
+            <span class="visually-hidden"> — откроется в новой вкладке</span>
+          </a>.
+        </>
+      )}
+      {book.notes && <> {book.notes}</>}
+    </p>
+
+    <section class="toc" aria-labelledby="toc-heading">
+      <h2 id="toc-heading">Оглавление</h2>
+      <p class="visually-hidden">
+        {volume}. Главы пока без ссылок: перевода ещё нет.
+      </p>
+      {book.toc.map((part) => (
+        <section class="toc-part" aria-labelledby={`part-${part.number}`}>
+          <h3 class="part-title" id={`part-${part.number}`}>
+            <span class="part-number">Часть {part.number}.</span> {part.title}
+            <span class="part-original" lang={book.originalLang}>{part.originalTitle}</span>
+          </h3>
+          <ol class="chapters" role="list">
+            {part.chapters.map((chapter) => (
+              <li>
+                <span class="chapter-number" aria-hidden="true">
+                  {chapter.number !== undefined ? chapter.number : '·'}
+                </span>
+                <span class="chapter-titles">
+                  <span class="chapter-title">
+                    {chapter.number !== undefined && (
+                      <span class="visually-hidden">Глава {chapter.number}. </span>
+                    )}
+                    {chapter.title}
+                  </span>
+                  <span class="chapter-original" lang={book.originalLang}>{chapter.originalTitle}</span>
+                </span>
+              </li>
+            ))}
+          </ol>
+        </section>
+      ))}
+    </section>
+  </article>
+</BaseLayout>
+
+<style>
+  /* Minimal header, no tagline: the default padding leaves too much air above the h1. */
+  :global(main:has(.book)) {
+    padding-top: 1rem;
+  }
+
+  .book-head h1 {
+    margin-bottom: 0.35rem;
+  }
+
+  .book-original,
+  .book-meta,
+  .book-note,
+  .part-original,
+  .chapter-original,
+  .chapter-number {
+    font-family: var(--sans);
+    font-size: 0.85rem;
+  }
+
+  .book-original {
+    margin: 0;
+    color: var(--text-muted);
+    font-style: italic;
+  }
+
+  .book-short {
+    font-style: normal;
+  }
+
+  .book-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.2rem 1.25rem;
+    margin: 0.5rem 0 0;
+    color: var(--text-muted);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .book-meta a {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: var(--rule);
+    text-underline-offset: 2px;
+  }
+
+  .book-meta a:hover {
+    color: var(--link);
+    text-decoration-color: currentColor;
+  }
+
+  .book-meta a:focus-visible,
+  .book-note a:focus-visible {
+    outline: 2px solid var(--link);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  .book-added {
+    margin-left: auto;
+  }
+
+  .book-note {
+    margin: 1.5rem 0 0;
+    padding: 0.75rem 0.9rem;
+    border-left: 2px solid var(--rule);
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  .toc {
+    margin-top: 2.5rem;
+  }
+
+  .toc h2 {
+    margin: 0 0 1.5rem;
+    font-size: 1.1rem;
+  }
+
+  .toc-part + .toc-part {
+    margin-top: 2rem;
+  }
+
+  .part-title {
+    margin: 0 0 0.75rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--rule);
+    font-family: var(--sans);
+    font-size: 0.95rem;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  .part-number {
+    color: var(--text-muted);
+  }
+
+  .part-original {
+    display: block;
+    margin-top: 0.15rem;
+    color: var(--text-muted);
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  .chapters {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .chapters li {
+    display: grid;
+    grid-template-columns: 2.25rem 1fr;
+    align-items: baseline;
+    padding: 0.4rem 0;
+  }
+
+  .chapter-number {
+    color: var(--text-muted);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .chapter-title {
+    /* No link yet: the chapter isn't translated. */
+    color: var(--fg);
+  }
+
+  .chapter-original {
+    display: block;
+    margin-top: 0.1rem;
+    color: var(--text-muted);
+    font-style: italic;
+  }
+
+  @media (prefers-contrast: more) {
+    .book-original,
+    .book-meta,
+    .book-note,
+    .part-number,
+    .part-original,
+    .chapter-number,
+    .chapter-original {
+      color: var(--fg);
+    }
+  }
+
+  @media (max-width: 540px) {
+    .book-added {
+      margin-left: 0;
+    }
+
+    .chapters li {
+      grid-template-columns: 1.75rem 1fr;
+    }
+  }
+</style>

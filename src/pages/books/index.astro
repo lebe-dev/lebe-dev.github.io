@@ -1,0 +1,142 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { formatVolume, listBooks } from '../../lib/books';
+import { formatDateRu, formatDateSpoken, toDateAttr } from '../../lib/subtitles';
+
+const entries = listBooks().map((book) => {
+  const added = new Date(book.dateAdded);
+  return {
+    ...book,
+    volume: formatVolume(book),
+    addedAttr: toDateAttr(added),
+    addedText: formatDateRu(added),
+    addedSpoken: formatDateSpoken(added),
+  };
+});
+---
+<BaseLayout
+  lang="ru"
+  title="Переводы книг"
+  description="Книги, которые я перевожу на русский."
+  minimalHeader
+>
+  <h1>Переводы книг</h1>
+  <p class="muted lede">Книги, которые я перевожу на русский. Перевод идёт постепенно, главами.</p>
+
+  <ul class="book-list" role="list" aria-label="Список книг">
+    {entries.map((book) => (
+      <li>
+        <article aria-labelledby={`book-${book.slug}`}>
+          <h2 class="book-title" id={`book-${book.slug}`}>
+            <a href={`/books/${book.slug}/`}>{book.title}</a>
+          </h2>
+          <p class="book-original" lang={book.originalLang}>{book.originalTitle}</p>
+          <p class="book-meta">
+            <span>{book.author}</span>
+            <span aria-hidden="true" title="Объём книги">{book.volume}</span>
+            <span class="visually-hidden">Объём: {book.volume}.</span>
+            <span class="book-added">
+              <span class="visually-hidden">Добавлено {book.addedSpoken}.</span>
+              <time datetime={book.addedAttr} aria-hidden="true" title={`Добавлено на сайт ${book.addedSpoken}`}>
+                {book.addedText}
+              </time>
+            </span>
+          </p>
+        </article>
+      </li>
+    ))}
+  </ul>
+</BaseLayout>
+
+<style>
+  /* Minimal header, no tagline: the default padding leaves too much air above the h1. */
+  :global(main:has(.book-list)) {
+    padding-top: 1rem;
+  }
+
+  .lede,
+  .book-original,
+  .book-meta {
+    font-family: var(--sans);
+    font-size: 0.85rem;
+  }
+
+  .lede {
+    margin: 0 0 2rem;
+  }
+
+  .book-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .book-list li {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .book-list li:first-child {
+    padding-top: 0;
+  }
+
+  .book-list li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .book-title {
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: 1.05rem;
+    line-height: 1.35;
+    margin: 0;
+    letter-spacing: -0.005em;
+  }
+
+  .book-title a {
+    text-decoration: none;
+  }
+
+  .book-title a:hover {
+    text-decoration: underline;
+  }
+
+  .book-title a:focus-visible {
+    outline: 2px solid var(--link);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  .book-original {
+    margin: 0.25rem 0 0;
+    color: var(--text-muted);
+    font-style: italic;
+  }
+
+  .book-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.2rem 1.25rem;
+    margin: 0.5rem 0 0;
+    color: var(--text-muted);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .book-added {
+    margin-left: auto;
+  }
+
+  @media (prefers-contrast: more) {
+    .book-original,
+    .book-meta {
+      color: var(--fg);
+    }
+  }
+
+  @media (max-width: 540px) {
+    .book-added {
+      margin-left: 0;
+    }
+  }
+</style>
