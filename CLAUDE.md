@@ -81,6 +81,10 @@ Localized section (unlike `/subtitles`): it exists in every site locale, and the
 
 **Inline glossary tooltips.** A glossary term is underlined in the transcript and shows its definition in a shadcn-svelte (bits-ui) tooltip, so the reader never has to jump to the glossary at the bottom. Both are kept — the section at the bottom is still rendered.
 
+- **The same machinery serves book chapters.** `scripts/glossary_terms.py` reads
+  both `src/data/podcasts/*.json` (segments) and `src/content/books/*/*.md`
+  (blocks), and writes the same `.terms.json` sidecar beside each. Everything
+  below applies to both.
 - **Positions are precomputed, not searched at runtime.** The glossary lists terms in the nominative ("Випассана"), the transcript inflects them ("випассану"); matching those needs Russian morphology. `scripts/glossary_terms.py` (PEP 723 script, `pymorphy3`, run through `uv`) lemmatises both sides and writes the character spans to `src/data/podcasts/<slug>.<lang>.terms.json` — `{version, sourceHash, hits: [[segment, from, to, term], …]}`. These files are **generated; never edit them by hand.**
 - **Run it with `just glossary`.** It is a dependency of both `just dev` and `just build` (and therefore `just deploy`), so it cannot be forgotten. It is incremental: `sourceHash` covers the segment texts, the terms and the script's `VERSION`, so an unchanged episode is skipped in ~40 ms before `pymorphy3` is even imported. **Bump `VERSION` in the script whenever the matching algorithm changes** — that is what forces every sidecar to be rebuilt. `just glossary --force` rebuilds everything regardless.
 - **Which spellings are matched.** The `term` field packs several names into one string; the script splits it on top-level `/` and `,`, and keeps a parenthetical only when it is Latin script (`Дзен (Zen)` → both). Cyrillic parentheticals are dropped on purpose — they are as often a qualifier (`Сати (пали)`, `Идеализм (философия сознания)`) that would match unrelated sentences. Words are matched whole and lemma-to-lemma, and the longest match wins on overlap.
@@ -98,29 +102,72 @@ Localized section (unlike `/subtitles`): it exists in every site locale, and the
 Russian-only, non-localized (like `/subtitles`, unlike podcasts): the section
 exists at one URL and is linked from the Russian homepage only.
 
-- Pages: `src/pages/books/index.astro` (list of books) and `[slug].astro` (one book: title, author, link to the author's site, table of contents)
+- Pages: `src/pages/books/index.astro` (list of books) and `[slug].astro` (one book: cover, title, author, link to the author's site, the permission notice, table of contents)
 - Data: `src/data/books.ts` — array of `Book`, edited by hand. The **table of contents lives here**, in `toc: BookPart[]`, each part carrying `number` ("I"), `title`, `originalTitle` and its `chapters` (`number?`, `title`, `originalTitle`). A chapter without a `number` is one of the closing pieces ("Final Wishes").
 - Helpers: `src/lib/books.ts` (unit-tested in `books.test.ts`) — `findBook`, `listBooks` (newest `dateAdded` first), `allChapters`, `chapterCount`, `pluralRu`, `formatVolume` ("6 частей · 73 главы"), `linkHost`, plus the reading-state helpers `chapterKey`, `chapterTarget`, `partReadIds`, `bookReadIds`, `chapterLabel`. Date formatting is reused from `src/lib/subtitles.ts`.
+- Covers live in `public/images/books/` as WebP, ~335px wide, and are described by `Book.cover` (`src`/`width`/`height`/`alt`) so the `<img>` ships intrinsic dimensions and never shifts the layout.
 - First book: `mctb2` — *Mastering the Core Teachings of the Buddha*, 2nd ed., Daniel M. Ingram, translated from the free online edition at mctb.org.
+
+**A translation is published only with the author's permission, and the page
+says so.** Free to read online is not free to translate: a translation is a
+derivative work. `Book.permission` (`grantedBy`, `date`, `via`, `terms`) and
+`Book.copyright` drive the `.book-rights` block on `/books/<slug>/`, which
+states that the book is translated with the author's permission, when and how
+it was given, the conditions attached, and the original's copyright line
+verbatim. **A book without `permission` should not have its chapters
+published**, and the block is not decoration to be tidied away — for `mctb2` it
+is a condition Daniel Ingram set when he granted permission (see
+`.claude/rules/mctb2.md`, which records who granted it, when, and what he
+asked for).
 
 **Chapters can be marked read**, one by one, from the table of contents — see
 "Reading progress" below for the mechanism and the ids. The book itself then
 shows "12/73" in the listing and on the homepage, and a check once every chapter
 is done, exactly like a finished post or podcast episode.
 
-**The chapter text is not translated yet.** The book page deliberately renders
-the contents as **plain text, not links** — there are no chapter routes at all,
-so nothing links to a page that does not exist. When the first chapter is
-translated, chapters go into an Astro content collection
-(`src/content/books/<slug>/*.md`, one file per chapter, frontmatter carrying the
-order and title), a `/books/<slug>/<chapter>/` route is added, and the ToC entry
-becomes a link only for the chapters that actually have a file.
+**Chapters are translated one at a time, and only a translated one is a link.**
+
+- A chapter lives at `src/content/books/<book>/<chapterKey>.md` (collection
+  `books` in `src/content.config.ts`). **The file name is the whole link to the
+  table of contents**: it must equal `chapterKey()` — the number printed in the
+  book, or the slug of the original title for a piece that has none. A file
+  matching no ToC entry fails the build with a named error rather than building
+  an orphan page.
+- The frontmatter carries only what the ToC does not: `sourceUrl` (the chapter
+  on mctb.org — every chapter page links back to it, a condition of the
+  permission), `translatedAt`, `draft`, and the `glossary`. Title, number and
+  position stay in `src/data/books.ts`, which remains the single source of
+  truth for the contents.
+- Route: `src/pages/books/[slug]/[chapter].astro`. It renders the body, the
+  reading progress island (`chapterTarget` already gave it a `progressId`), the
+  link to the original, the permission line, and prev/next — which skip to a
+  neighbour only when that one is translated too.
+- `chapterHref()` in `src/pages/books/[slug].astro` turns a ToC entry into a
+  link exactly when its file exists; everything else stays plain text.
+
+**The chapter body is not Markdown as Astro renders it.** The glossary tooltips
+need character offsets into the text, and offsets do not survive a trip through
+HTML, so `src/lib/bookBlocks.ts` parses a small fixed subset — blank lines
+separate blocks, `## ` is a heading, `> ` a quote, `*text*` emphasis — and
+`ChapterBody.svelte` renders it the way `Transcript.svelte` renders a
+transcript. `scripts/glossary_terms.py` parses **the same subset with the same
+rules**; changing one side means changing the other (and bumping its `VERSION`).
+A term inside `*emphasis*` is deliberately never highlighted: the renderer
+slices the block at the hit offsets and only then looks for the asterisks, so a
+hit crossing one would strand an unclosed marker.
+
+**Front matter** (`Book.front`) holds the pieces before Part I — the preface and
+the like. They are read, keyed and marked read exactly like a numbered chapter
+(`allChapters()` puts them first), they simply belong to no part, so the book
+page lists them in a "Перед началом" group above the parts.
 
 Both pages are covered by the root service worker without any change: their URLs
 end in `/`, so `classifyAsset()` treats them as pages and `langFromPath()`
 returns null, which puts them in every locale's offline save (like `/subtitles/`).
-`just build` checks that `dist/books/` and `dist/books/mctb2/` exist and that the
-book page still ships its chapter read toggles.
+`just build` checks that `dist/books/` and `dist/books/mctb2/` exist, that the
+book page still ships its chapter read toggles, that the translated chapter page
+was built and linked from the contents, and that it still highlights glossary
+terms.
 
 Linked from the Russian homepage in a "Переводы книг" section (see "Homepage
 section previews").

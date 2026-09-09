@@ -17,6 +17,34 @@ export interface BookPart {
   chapters: BookChapter[];
 }
 
+/** Cover of the edition being translated, as the author publishes it. */
+export interface BookCover {
+  /** Path under /images/books/. */
+  src: string;
+  width: number;
+  height: number;
+  /** Russian alt text — what the cover shows, not "cover of the book". */
+  alt: string;
+}
+
+/**
+ * The author's permission to translate and publish.
+ *
+ * The site only publishes a translation once there is one: a book freely
+ * readable online is still not free to translate, so this field is what the
+ * book page states, and its absence is what keeps the chapters unpublished.
+ */
+export interface BookPermission {
+  /** Who granted it, in Russian. */
+  grantedBy: string;
+  /** ISO 8601, the day it was given. */
+  date: string;
+  /** Where it was given, e.g. "личное сообщение в LinkedIn". */
+  via: string;
+  /** Conditions attached to it, each already phrased for the reader. */
+  terms?: string[];
+}
+
 export interface Book {
   slug: string; // also the URL: /books/<slug>/
   title: string; // Russian title
@@ -27,9 +55,18 @@ export interface Book {
   authorUrl?: string; // author's own site
   sourceUrl?: string; // the edition being translated
   originalLang: string; // ISO code of the language translated from
+  cover?: BookCover; // cover of the original edition
+  copyright?: string; // copyright line of the original, verbatim
+  permission?: BookPermission; // the author's permission to translate
   dateAdded: string; // ISO 8601, when the book appeared on the site
   translatedWith?: string; // tools used for the translation
   notes?: string; // anything worth saying about this particular translation
+  /**
+   * The pieces before Part I — preface, dedication and the like. They are read
+   * like any other chapter (same key, same "read" toggle), they just belong to
+   * no part, so they are listed above the table of contents rather than in it.
+   */
+  front?: BookChapter[];
   toc: BookPart[];
 }
 
@@ -44,7 +81,27 @@ export const books: Book[] = [
     authorUrl: 'https://www.mctb.org/',
     sourceUrl: 'https://www.mctb.org/mctb2/',
     originalLang: 'en',
+    cover: {
+      src: '/images/books/mctb2-cover.webp',
+      width: 335,
+      height: 440,
+      alt: 'Обложка оригинального издания: сидящая фигура в позе медитации, из груди расходятся лучи и колесо дхармы; сверху заголовок «Core Teachings of the Buddha», снизу — «Revised & Expanded Edition»',
+    },
+    copyright: '© 2018 by Daniel M. Ingram',
+    permission: {
+      grantedBy: 'Дэниел М. Инграм',
+      date: '2026-09-09',
+      via: 'личное сообщение',
+      terms: [
+        'сохранить обложку и копирайт оригинала',
+        'указать, что перевод сделан с разрешения автора',
+        'давать ссылки на mctb.org',
+      ],
+    },
     dateAdded: '2026-09-08',
+    front: [
+      { title: 'Предисловие ко второму изданию', originalTitle: 'Preface to the Second Edition' },
+    ],
     notes: 'Перевод второго издания (MCTB2), которое автор выложил в открытый доступ.',
     toc: [
       {

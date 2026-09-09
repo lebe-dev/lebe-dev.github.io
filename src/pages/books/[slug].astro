@@ -1,11 +1,14 @@
 ---
 import type { GetStaticPaths } from 'astro';
+import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ChapterMarks from '../../components/ChapterMarks.astro';
-import { books } from '../../data/books';
+import { books, type BookChapter } from '../../data/books';
 import {
+  allChapters,
   bookReadIds,
   chapterCount,
+  chapterKey,
   chapterLabel,
   chapterTarget,
   formatVolume,
@@ -20,9 +23,17 @@ export const getStaticPaths = (() =>
 
 const { book } = Astro.props;
 const added = new Date(book.dateAdded);
-// The translation itself is not published yet — only the table of contents is.
-// Chapter pages will appear under /books/<slug>/<chapter>/ later.
 const volume = formatVolume(book);
+
+// A chapter is a link only once its Markdown exists; the rest of the contents
+// stays plain text, so nothing here points at a page that was never built.
+const entries = await getCollection('books', ({ data }) => !data.draft);
+const translated = new Set(entries.map((entry) => entry.id));
+const chapterHref = (chapter: BookChapter): string | undefined => {
+  const href = `${book.slug}/${chapterKey(chapter)}`;
+  return translated.has(href) ? `/books/${href}/` : undefined;
+};
+const done = allChapters(book).filter((chapter) => chapterHref(chapter)).length;
 
 // A chapter has no page to scroll through yet, so its reading state is the
 // hand-set "read" flag alone; ChapterMarks.astro drives the toggles below.
@@ -32,6 +43,12 @@ const chapters = chapterCount(book);
 // The noun agrees with the total, which is a build-time constant — so only the
 // number itself has to be filled in by the client.
 const chaptersGenitive = pluralRu(chapters, ['главы', 'глав', 'глав']);
+
+// The author's permission is a condition of publishing at all, so the page
+// states it rather than tucking it into a footer — and repeats the original's
+// copyright line verbatim, which is one of the things he asked for.
+const granted = book.permission ? new Date(book.permission.date) : null;
+const terms = book.permission?.terms?.join('; ');
 ---
 <BaseLayout
   lang="ru"
@@ -42,44 +59,58 @@ const chaptersGenitive = pluralRu(chapters, ['главы', 'глав', 'глав
 >
   <article class="book">
     <header class="book-head">
-      <h1>{book.title}</h1>
-      <p class="book-original" lang={book.originalLang}>
-        {book.originalTitle}
-        {book.shortTitle && <span class="book-short"> ({book.shortTitle})</span>}
-      </p>
-      <p class="book-meta">
-        <span>
-          <span class="visually-hidden">Автор: </span>
-          {book.authorUrl ? (
-            <a
-              href={book.authorUrl}
-              title={`Сайт автора — ${linkHost(book.authorUrl)}, откроется в новой вкладке`}
-              target="_blank"
-              rel="noopener"
-            >
-              {book.author}
-              <span class="visually-hidden"> — сайт автора, откроется в новой вкладке</span>
-            </a>
-          ) : book.author}
-          {book.authorOriginal && book.authorOriginal !== book.author && (
-            <span class="book-author-original" lang={book.originalLang}> · {book.authorOriginal}</span>
-          )}
-        </span>
-        <span aria-hidden="true" title="Объём книги">{volume}</span>
-        <span class="visually-hidden">Объём: {volume}.</span>
-        <span class="book-added">
-          <span class="visually-hidden">Добавлено на сайт {formatDateSpoken(added)}.</span>
-          <time
-            datetime={toDateAttr(added)}
-            aria-hidden="true"
-            title={`Добавлено на сайт ${formatDateSpoken(added)}`}
-          >{formatDateRu(added)}</time>
-        </span>
-      </p>
+      {book.cover && (
+        <img
+          class="book-cover"
+          src={book.cover.src}
+          width={book.cover.width}
+          height={book.cover.height}
+          alt={book.cover.alt}
+          decoding="async"
+        />
+      )}
+      <div class="book-headings">
+        <h1>{book.title}</h1>
+        <p class="book-original" lang={book.originalLang}>
+          {book.originalTitle}
+          {book.shortTitle && <span class="book-short"> ({book.shortTitle})</span>}
+        </p>
+        <p class="book-meta">
+          <span>
+            <span class="visually-hidden">Автор: </span>
+            {book.authorUrl ? (
+              <a
+                href={book.authorUrl}
+                title={`Сайт автора — ${linkHost(book.authorUrl)}, откроется в новой вкладке`}
+                target="_blank"
+                rel="noopener"
+              >
+                {book.author}
+                <span class="visually-hidden"> — сайт автора, откроется в новой вкладке</span>
+              </a>
+            ) : book.author}
+            {book.authorOriginal && book.authorOriginal !== book.author && (
+              <span class="book-author-original" lang={book.originalLang}> · {book.authorOriginal}</span>
+            )}
+          </span>
+          <span aria-hidden="true" title="Объём книги">{volume}</span>
+          <span class="visually-hidden">Объём: {volume}.</span>
+          <span class="book-added">
+            <span class="visually-hidden">Добавлено на сайт {formatDateSpoken(added)}.</span>
+            <time
+              datetime={toDateAttr(added)}
+              aria-hidden="true"
+              title={`Добавлено на сайт ${formatDateSpoken(added)}`}
+            >{formatDateRu(added)}</time>
+          </span>
+        </p>
+      </div>
     </header>
 
     <p class="book-note">
-      Перевод ещё не начат — пока здесь только оглавление. Главы будут появляться по одной.
+      {done === 0
+        ? 'Перевод ещё не начат — пока здесь только оглавление. Главы будут появляться по одной.'
+        : `Перевод идёт: готово ${done} ${pluralRu(done, ['глава', 'главы', 'глав'])} из ${chapters}. Переведённые главы в оглавлении кликабельны, остальные пока просто перечислены.`}
       {book.sourceUrl && (
         <>
           {' '}Оригинал автор выложил в открытый доступ:{' '}
@@ -98,10 +129,28 @@ const chaptersGenitive = pluralRu(chapters, ['главы', 'глав', 'глав
       {book.notes && <> {book.notes}</>}
     </p>
 
+    {book.permission && granted && (
+      <p class="book-rights">
+        <strong>Переведено с разрешения автора.</strong>{' '}
+        {book.permission.grantedBy} разрешил перевод на русский и публикацию на этом сайте
+        {' '}({book.permission.via},{' '}
+        <span class="visually-hidden">{formatDateSpoken(granted)}</span>
+        <time datetime={toDateAttr(granted)} aria-hidden="true">{formatDateRu(granted)}</time>){terms ? (
+          <>, попросив {terms}.</>
+        ) : '.'}
+        {book.copyright && (
+          <>
+            {' '}
+            <span class="book-copyright" lang={book.originalLang}>{book.copyright}</span>
+          </>
+        )}
+      </p>
+    )}
+
     <section class="toc" aria-labelledby="toc-heading">
       <h2 id="toc-heading">Оглавление</h2>
       <p class="visually-hidden">
-        {volume}. Главы пока без ссылок: перевода ещё нет.
+        {volume}. Ссылками отмечены переведённые главы; у остальных перевода пока нет.
       </p>
 
       {/* Filled in from localStorage by ChapterMarks.astro. */}
@@ -121,6 +170,58 @@ const chaptersGenitive = pluralRu(chapters, ['главы', 'глав', 'глав
         Отметки «прочитано» ставятся вручную и хранятся только в этом браузере. На другое
         устройство они переносятся вместе с остальным состоянием сайта — через «⋮» в шапке.
       </p>
+
+      {book.front && book.front.length > 0 && (
+        <section class="toc-part" aria-labelledby="part-front">
+          <h3 class="part-title" id="part-front">
+            Перед началом
+            <span
+              class="part-count"
+              data-read-summary
+              data-target-ids={book.front.map((c) => chapterTarget(book, c).readId).join(',')}
+              hidden
+            ></span>
+            <span class="part-original" lang={book.originalLang}>Front Matter</span>
+          </h3>
+          <ol class="chapters" role="list">
+            {book.front.map((chapter) => (
+              <li>
+                <span class="chapter-number" aria-hidden="true">·</span>
+                <span class="chapter-titles">
+                  <span class="chapter-title">
+                    {chapterHref(chapter)
+                      ? <a href={chapterHref(chapter)}>{chapter.title}</a>
+                      : chapter.title}
+                  </span>
+                  <span class="chapter-original" lang={book.originalLang}>{chapter.originalTitle}</span>
+                </span>
+                <button
+                  type="button"
+                  class="chapter-read"
+                  data-read-toggle
+                  data-target-id={chapterTarget(book, chapter).readId}
+                  data-item-label={chapterLabel(chapter)}
+                  hidden
+                >
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M20 6 9 17l-5-5"></path>
+                  </svg>
+                </button>
+              </li>
+            ))}
+          </ol>
+        </section>
+      )}
 
       {book.toc.map((part) => (
         <section class="toc-part" aria-labelledby={`part-${part.number}`}>
@@ -145,7 +246,9 @@ const chaptersGenitive = pluralRu(chapters, ['главы', 'глав', 'глав
                     {chapter.number !== undefined && (
                       <span class="visually-hidden">Глава {chapter.number}. </span>
                     )}
-                    {chapter.title}
+                    {chapterHref(chapter)
+                      ? <a href={chapterHref(chapter)}>{chapter.title}</a>
+                      : chapter.title}
                   </span>
                   <span class="chapter-original" lang={book.originalLang}>{chapter.originalTitle}</span>
                 </span>
@@ -187,6 +290,23 @@ const chaptersGenitive = pluralRu(chapters, ['главы', 'глав', 'глав
     padding-top: 1rem;
   }
 
+  /* Cover left, titles right — the cover keeps its own column so a long title
+     wraps beside it instead of under it. */
+  .book-head {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 1.25rem;
+    align-items: start;
+  }
+
+  .book-cover {
+    width: 8.5rem;
+    height: auto;
+    border-radius: 3px;
+    border: 1px solid var(--rule);
+    box-shadow: 0 1px 6px rgb(0 0 0 / 12%);
+  }
+
   .book-head h1 {
     margin-bottom: 0.35rem;
   }
@@ -194,6 +314,7 @@ const chaptersGenitive = pluralRu(chapters, ['главы', 'глав', 'глав
   .book-original,
   .book-meta,
   .book-note,
+  .book-rights,
   .part-original,
   .part-count,
   .toc-progress,
@@ -252,6 +373,24 @@ const chaptersGenitive = pluralRu(chapters, ['главы', 'глав', 'глав
     border-left: 2px solid var(--rule);
     color: var(--text-muted);
     line-height: 1.6;
+  }
+
+  /* The permission is what makes the translation publishable, so it reads as a
+     statement rather than as fine print. */
+  .book-rights {
+    margin: 0.75rem 0 0;
+    padding: 0.75rem 0.9rem;
+    border-left: 2px solid var(--link);
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  .book-rights strong {
+    color: var(--fg);
+  }
+
+  .book-copyright {
+    white-space: nowrap;
   }
 
   .toc {
@@ -439,8 +578,25 @@ const chaptersGenitive = pluralRu(chapters, ['главы', 'глав', 'глав
   }
 
   .chapter-title {
-    /* No link yet: the chapter isn't translated. */
+    /* Plain text until the chapter is translated — see chapterHref(). */
     color: var(--fg);
+  }
+
+  .chapter-title a {
+    color: var(--link);
+    text-decoration: underline;
+    text-decoration-color: color-mix(in srgb, var(--link) 35%, transparent);
+    text-underline-offset: 2px;
+  }
+
+  .chapter-title a:hover {
+    text-decoration-color: currentColor;
+  }
+
+  .chapter-title a:focus-visible {
+    outline: 2px solid var(--link);
+    outline-offset: 3px;
+    border-radius: 2px;
   }
 
   .chapter-original {
@@ -461,6 +617,7 @@ const chaptersGenitive = pluralRu(chapters, ['главы', 'глав', 'глав
     .book-original,
     .book-meta,
     .book-note,
+    .book-rights,
     .part-number,
     .part-original,
     .part-count,
@@ -478,6 +635,14 @@ const chaptersGenitive = pluralRu(chapters, ['главы', 'глав', 'глав
   }
 
   @media (max-width: 540px) {
+    .book-head {
+      gap: 0.9rem;
+    }
+
+    .book-cover {
+      width: 5.5rem;
+    }
+
     .book-added {
       margin-left: 0;
     }

@@ -9,8 +9,16 @@ export const findBook = (slug: string): Book | undefined =>
 export const listBooks = (): Book[] =>
   [...books].sort((a, b) => new Date(b.dateAdded).valueOf() - new Date(a.dateAdded).valueOf());
 
-/** Every chapter of the book in reading order, parts flattened away. */
-export const allChapters = (book: Book): BookChapter[] => book.toc.flatMap((part) => part.chapters);
+/**
+ * Every chapter of the book in reading order, parts flattened away.
+ *
+ * The front matter counts: a preface is read, marked read and carries a key
+ * exactly like a numbered chapter — it simply belongs to no part.
+ */
+export const allChapters = (book: Book): BookChapter[] => [
+  ...(book.front ?? []),
+  ...book.toc.flatMap((part) => part.chapters),
+];
 
 /** How many chapters the table of contents lists, the closing pieces included. */
 export const chapterCount = (book: Book): number => allChapters(book).length;
@@ -47,6 +55,21 @@ export const partReadIds = (book: Book, part: BookPart): string[] =>
  */
 export const bookReadIds = (book: Book): string[] =>
   allChapters(book).map((chapter) => chapterTarget(book, chapter).readId);
+
+/** The chapter with this key, or undefined when the book has no such chapter. */
+export const findChapter = (book: Book, key: string): BookChapter | undefined =>
+  allChapters(book).find((chapter) => chapterKey(chapter) === key);
+
+/** The chapter before and after this one in reading order — for the page's nav. */
+export const chapterNeighbours = (
+  book: Book,
+  key: string,
+): { prev?: BookChapter; next?: BookChapter } => {
+  const chapters = allChapters(book);
+  const at = chapters.findIndex((chapter) => chapterKey(chapter) === key);
+  if (at < 0) return {};
+  return { prev: chapters[at - 1], next: chapters[at + 1] };
+};
 
 /** How a chapter is named on its own, for a button label or a screen reader. */
 export const chapterLabel = (chapter: BookChapter): string =>

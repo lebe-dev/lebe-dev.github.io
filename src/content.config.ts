@@ -24,4 +24,38 @@ const blog = defineCollection({
   }),
 });
 
-export const collections = { blog };
+/**
+ * One translated chapter of a book, at src/content/books/<book>/<chapterKey>.md.
+ *
+ * The title, the number and the place in the table of contents are **not**
+ * here — they live in src/data/books.ts, which is the single source of truth
+ * for the contents. The file name is the chapter's `chapterKey()`, and that is
+ * the whole link between the two.
+ *
+ * The body is not Markdown as Astro renders it: see src/lib/bookBlocks.ts for
+ * the small subset it uses and why.
+ */
+const books = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/books' }),
+  schema: z.object({
+    // The chapter this one translates, on the author's own site. Every chapter
+    // page links back to it — a condition of the permission to translate.
+    sourceUrl: z.string().url(),
+    translatedAt: z.coerce.date().optional(),
+    draft: z.boolean().default(false),
+    // Terms explained in a tooltip inline and listed again after the chapter.
+    // `aliases`/`ignore` correct what scripts/glossary_terms.py derived.
+    glossary: z
+      .array(
+        z.object({
+          term: z.string(),
+          definition: z.string(),
+          aliases: z.array(z.string()).optional(),
+          ignore: z.array(z.string()).optional(),
+        }),
+      )
+      .default([]),
+  }),
+});
+
+export const collections = { blog, books };

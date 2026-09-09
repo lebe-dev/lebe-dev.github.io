@@ -7,8 +7,10 @@ import {
   chapterCount,
   chapterKey,
   chapterLabel,
+  chapterNeighbours,
   chapterTarget,
   findBook,
+  findChapter,
   formatVolume,
   linkHost,
   listBooks,
@@ -38,10 +40,16 @@ describe('listBooks', () => {
 describe('allChapters / chapterCount', () => {
   const book = findBook('mctb2')!;
 
-  it('flattens the parts in reading order', () => {
+  it('puts the front matter first, then flattens the parts in reading order', () => {
     const chapters = allChapters(book);
-    expect(chapters[0].originalTitle).toBe('Introduction to Part I');
+    expect(chapters[0].originalTitle).toBe('Preface to the Second Edition');
+    expect(chapters[1].originalTitle).toBe('Introduction to Part I');
     expect(chapters.at(-1)?.originalTitle).toBe('Last Words of Wisdom');
+  });
+
+  it('reads a book with no front matter as its parts alone', () => {
+    const { front, ...withoutFront } = book;
+    expect(allChapters(withoutFront)).toHaveLength(allChapters(book).length - front!.length);
   });
 
   it('counts every chapter, numbered or not', () => {
@@ -69,7 +77,7 @@ describe('pluralRu', () => {
 
 describe('formatVolume', () => {
   it('reports both counts', () => {
-    expect(formatVolume(findBook('mctb2')!)).toBe('6 частей · 73 главы');
+    expect(formatVolume(findBook('mctb2')!)).toBe('6 частей · 74 главы');
   });
 });
 
@@ -127,13 +135,15 @@ describe('bookReadIds / partReadIds', () => {
   it('lists one id per chapter, in reading order', () => {
     const ids = bookReadIds(book);
     expect(ids).toHaveLength(chapterCount(book));
-    expect(ids[0]).toBe('book:mctb2:1');
+    expect(ids[0]).toBe('book:mctb2:preface-to-the-second-edition');
+    expect(ids[1]).toBe('book:mctb2:1');
     expect(ids.at(-1)).toBe('book:mctb2:last-words-of-wisdom');
   });
 
-  it('splits into the parts without losing or duplicating a chapter', () => {
+  it('splits into the front matter and the parts without losing or duplicating a chapter', () => {
+    const fromFront = (book.front ?? []).map((c) => chapterTarget(book, c).readId);
     const fromParts = book.toc.flatMap((part) => partReadIds(book, part));
-    expect(fromParts).toEqual(bookReadIds(book));
+    expect([...fromFront, ...fromParts]).toEqual(bookReadIds(book));
   });
 });
 
@@ -148,5 +158,48 @@ describe('chapterLabel', () => {
     expect(chapterLabel({ title: 'Напутствие', originalTitle: 'Final Wishes' })).toBe(
       '«Напутствие»',
     );
+  });
+});
+
+describe('findChapter', () => {
+  const book = findBook('mctb2')!;
+
+  it('finds a numbered chapter by its key', () => {
+    expect(findChapter(book, '5')?.originalTitle).toBe('The Three Characteristics');
+  });
+
+  it('finds a front-matter piece by its slug', () => {
+    expect(findChapter(book, 'preface-to-the-second-edition')?.title).toBe(
+      'Предисловие ко второму изданию',
+    );
+  });
+
+  it('returns undefined for a key the book does not have', () => {
+    expect(findChapter(book, '999')).toBeUndefined();
+  });
+});
+
+describe('chapterNeighbours', () => {
+  const book = findBook('mctb2')!;
+
+  it('has no previous chapter before the front matter', () => {
+    const { prev, next } = chapterNeighbours(book, 'preface-to-the-second-edition');
+    expect(prev).toBeUndefined();
+    expect(next?.originalTitle).toBe('Introduction to Part I');
+  });
+
+  it('crosses a part boundary rather than stopping at it', () => {
+    // 16 closes Part I, 17 opens Part II.
+    expect(chapterNeighbours(book, '16').next?.originalTitle).toBe(
+      'Introduction to Parts Two through Five',
+    );
+  });
+
+  it('has no next chapter after the last one', () => {
+    expect(chapterNeighbours(book, 'last-words-of-wisdom').next).toBeUndefined();
+  });
+
+  it('returns nothing for an unknown key', () => {
+    expect(chapterNeighbours(book, 'nope')).toEqual({});
   });
 });

@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # /// script
 # requires-python = ">=3.10"
-# dependencies = ["pymorphy3"]
+# dependencies = ["pymorphy3", "pyyaml"]
 # ///
-"""Precompute where podcast glossary terms occur in their transcripts.
+"""Precompute where glossary terms occur in a transcript or a book chapter.
 
 The glossary lists terms in the nominative ("Випассана", "Пять препятствий"),
 while the transcript inflects them ("випассану", "пяти препятствий"). Matching
@@ -16,8 +16,13 @@ Run via `just glossary` (or `uv run scripts/glossary_terms.py`). The work is
 incremental — a transcript whose text and terms are unchanged is skipped before
 pymorphy is even imported, which keeps `just dev` instant.
 
-Output: src/data/podcasts/<slug>.<lang>.terms.json
-    {"version": N, "sourceHash": "...", "hits": [[segment, from, to, term], ...]}
+Two kinds of source, one algorithm:
+
+    src/data/podcasts/<slug>.<lang>.json   segments of a transcript
+    src/content/books/<book>/<key>.md      blocks of a translated chapter
+
+Output: the same name with .terms.json instead of the extension —
+    {"version": N, "sourceHash": "...", "hits": [[block, from, to, term], ...]}
 """
 
 from __future__ import annotations
@@ -27,6 +32,7 @@ import hashlib
 import json
 import re
 import sys
+from dataclasses import dataclass
 from pathlib import Path
 
 # Bump when the matching algorithm changes: it is part of the source hash, so
@@ -34,7 +40,8 @@ from pathlib import Path
 VERSION = 1
 
 ROOT = Path(__file__).resolve().parent.parent
-DATA_DIR = ROOT / "src" / "data" / "podcasts"
+PODCAST_DIR = ROOT / "src" / "data" / "podcasts"
+BOOK_DIR = ROOT / "src" / "content" / "books"
 
 CYRILLIC = re.compile(r"[Ѐ-ӿ]")
 LATIN = re.compile(r"[A-Za-z]")
@@ -139,7 +146,24 @@ def entry_aliases(entry: dict) -> list[str]:
     return out
 
 
-def source_hash(transcript: dict) -> str:
+@dataclass
+class Document:
+    """One text with a glossary: a transcript, or a translated book chapter."""
+
+    path: Path
+    label: str
+    texts: list[str]
+    glossary: list[dict]
+    # Per text, spans no hit may touch. Empty for a transcript; for a chapter,
+    # the *emphasis* runs — see load_chapter.
+    masks: list[list[tuple[int, int]]]
+
+    @property
+    def sidecar(self) -> Path:
+        return self.path.with_suffix(".terms.json")
+
+
+def source_hash(doc: Document) -> str:
     """Fingerprint of everything the hits depend on — text, terms, algorithm.
 
     Definitions are deliberately left out: they are rendered straight from the
@@ -147,19 +171,96 @@ def source_hash(transcript: dict) -> str:
     """
     payload = {
         "version": VERSION,
-        "texts": [segment["text"] for segment in transcript["transcript"]],
+        "texts": doc.texts,
         "terms": [
             {
                 "term": entry["term"],
                 "aliases": entry.get("aliases", []),
                 "ignore": entry.get("ignore", []),
             }
-            for entry in transcript.get("glossary", [])
+            for entry in doc.glossary
         ],
     }
     blob = json.dumps(payload, ensure_ascii=False, sort_keys=True).encode("utf-8")
     return "sha256:" + hashlib.sha256(blob).hexdigest()
 
+
+# ---------------------------------------------------------------- loading ---
+
+def load_transcript(path: Path) -> Document | None:
+    """A podcast transcript: one text per spoken segment, no masked spans."""
+    data = json.loads(path.read_text(encoding="utf-8"))
+    glossary = data.get("glossary") or []
+    texts = [segment["text"] for segment in data["transcript"]]
+    return Document(path, path.name, texts, glossary, [[] for _ in texts])
+
+
+# The chapter body uses a fixed subset of Markdown, parsed the same way here and
+# in src/lib/bookBlocks.ts. Change one side and you must change the other.
+FRONTMATTER_RE = re.compile(r"^---\r?\n(.*?)\r?\n---\r?\n", re.S)
+BLOCK_SPLIT_RE = re.compile(r"\r?\n[ \t]*\r?\n")
+EMPHASIS_RE = re.compile(r"\*([^*\n]+)\*")
+
+
+def chapter_blocks(body: str) -> list[str]:
+    """The chapter's blocks, markers stripped and wrapped lines joined."""
+    out: list[str] = []
+    for chunk in BLOCK_SPLIT_RE.split(body):
+        lines = [line.strip() for line in chunk.splitlines()]
+        lines = [line for line in lines if line]
+        if not lines:
+            continue
+        joined = " ".join(lines)
+        if lines[0].startswith("## "):
+            out.append(joined[3:].strip())
+        elif lines[0].startswith(">"):
+            out.append(" ".join(re.sub(r"^>\s?", "", line) for line in lines).strip())
+        else:
+            out.append(joined)
+    return out
+
+
+def load_chapter(path: Path) -> Document | None:
+    """A translated book chapter: one text per block, emphasis runs masked.
+
+    A term inside *emphasis* is left alone on purpose. The renderer slices the
+    block at the hit offsets and only then looks for the asterisks, so a hit
+    that crossed one would strand an unclosed marker mid-paragraph. Refusing
+    those hits is what lets both sides stay this simple.
+    """
+    import yaml
+
+    raw = path.read_text(encoding="utf-8")
+    match = FRONTMATTER_RE.match(raw)
+    if not match:
+        print(f"{path}: no frontmatter", file=sys.stderr)
+        return None
+
+    front = yaml.safe_load(match.group(1)) or {}
+    body = raw[match.end():]
+    texts = chapter_blocks(body)
+    masks = [[(m.start(), m.end()) for m in EMPHASIS_RE.finditer(text)] for text in texts]
+    label = f"{path.parent.name}/{path.name}"
+    return Document(path, label, texts, front.get("glossary") or [], masks)
+
+
+def documents() -> list[Document]:
+    """Every source with a glossary to compute, transcripts first."""
+    found: list[Document] = []
+    for path in sorted(PODCAST_DIR.glob("*.json")):
+        if path.name.endswith(".terms.json"):
+            continue
+        doc = load_transcript(path)
+        if doc:
+            found.append(doc)
+    for path in sorted(BOOK_DIR.glob("*/*.md")):
+        doc = load_chapter(path)
+        if doc:
+            found.append(doc)
+    return found
+
+
+# --------------------------------------------------------------- matching ---
 
 class Matcher:
     """Lemma-keyed word matching, backed by pymorphy3."""
@@ -193,24 +294,23 @@ class Matcher:
         return result
 
 
-def find_hits(transcript: dict, matcher: Matcher, path: Path) -> tuple[list[list[int]], list[int]]:
+def find_hits(doc: Document, matcher: Matcher) -> tuple[list[list[int]], list[int]]:
     """Character spans of every glossary term occurrence, plus a per-term count."""
-    glossary = transcript["glossary"]
     # A term is a sequence of words; each word is the set of keys it may take.
     patterns: list[tuple[int, list[frozenset[str]]]] = []
-    for index, entry in enumerate(glossary):
+    for index, entry in enumerate(doc.glossary):
         for alias in entry_aliases(entry):
             patterns.append((index, [matcher.keys(t) for t in TOKEN_RE.findall(alias)]))
 
-    counts = [0] * len(glossary)
+    counts = [0] * len(doc.glossary)
     hits: list[list[int]] = []
 
-    for seg_index, segment in enumerate(transcript["transcript"]):
-        text = segment["text"]
+    for seg_index, text in enumerate(doc.texts):
         if any(ord(ch) > 0xFFFF for ch in text):
             # Offsets are consumed as JS string indices, which are UTF-16 units.
-            raise SystemExit(f"{path.name}: segment {seg_index} contains astral characters")
+            raise SystemExit(f"{doc.label}: block {seg_index} contains astral characters")
 
+        masked = doc.masks[seg_index]
         tokens = [(m.start(), m.end(), matcher.keys(m.group())) for m in TOKEN_RE.finditer(text)]
 
         found: list[tuple[int, int, int]] = []
@@ -218,7 +318,10 @@ def find_hits(transcript: dict, matcher: Matcher, path: Path) -> tuple[list[list
             span = len(pattern)
             for i in range(len(tokens) - span + 1):
                 if all(pattern[j] & tokens[i + j][2] for j in range(span)):
-                    found.append((tokens[i][0], tokens[i + span - 1][1], term_index))
+                    start, end = tokens[i][0], tokens[i + span - 1][1]
+                    if any(start < stop and begin < end for begin, stop in masked):
+                        continue
+                    found.append((start, end, term_index))
 
         # Longest match wins where two terms overlap ("Випассана" inside a
         # longer phrase), and nothing is highlighted twice.
@@ -248,49 +351,38 @@ def render_sidecar(source: str, hits: list[list[int]]) -> str:
     )
 
 
-def sidecar_path(path: Path) -> Path:
-    return path.with_suffix(".terms.json")
-
-
-def is_transcript(path: Path) -> bool:
-    return not path.name.endswith(".terms.json")
-
-
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--force", action="store_true", help="regenerate even if unchanged")
     parser.add_argument("--quiet", action="store_true", help="only report problems")
     args = parser.parse_args()
 
-    transcripts = sorted(p for p in DATA_DIR.glob("*.json") if is_transcript(p))
-    if not transcripts:
-        print(f"No transcripts found in {DATA_DIR}", file=sys.stderr)
+    docs = documents()
+    if not docs:
+        print(f"No sources found in {PODCAST_DIR} or {BOOK_DIR}", file=sys.stderr)
         return 1
 
-    stale: list[tuple[Path, dict, str]] = []
+    stale: list[tuple[Document, str]] = []
     removed = 0
 
-    for path in transcripts:
-        transcript = json.loads(path.read_text(encoding="utf-8"))
-        sidecar = sidecar_path(path)
-
-        if not transcript.get("glossary"):
+    for doc in docs:
+        if not doc.glossary:
             # A glossary can be removed again; don't leave the hits behind.
-            if sidecar.exists():
-                sidecar.unlink()
+            if doc.sidecar.exists():
+                doc.sidecar.unlink()
                 removed += 1
             continue
 
-        wanted = source_hash(transcript)
-        if not args.force and sidecar.exists():
+        wanted = source_hash(doc)
+        if not args.force and doc.sidecar.exists():
             try:
-                current = json.loads(sidecar.read_text(encoding="utf-8")).get("sourceHash")
+                current = json.loads(doc.sidecar.read_text(encoding="utf-8")).get("sourceHash")
             except json.JSONDecodeError:
                 current = None
             if current == wanted:
                 continue
 
-        stale.append((path, transcript, wanted))
+        stale.append((doc, wanted))
 
     if not stale:
         if removed and not args.quiet:
@@ -302,18 +394,18 @@ def main() -> int:
     matcher = Matcher()  # imports pymorphy3 and loads its dictionaries
     missing = 0
 
-    for path, transcript, wanted in stale:
-        hits, counts = find_hits(transcript, matcher, path)
-        sidecar_path(path).write_text(render_sidecar(wanted, hits), encoding="utf-8")
+    for doc, wanted in stale:
+        hits, counts = find_hits(doc, matcher)
+        doc.sidecar.write_text(render_sidecar(wanted, hits), encoding="utf-8")
 
-        print(f"\n{path.name} — {len(hits)} hit(s)")
-        for entry, count in zip(transcript["glossary"], counts):
+        print(f"\n{doc.label} — {len(hits)} hit(s)")
+        for entry, count in zip(doc.glossary, counts):
             if count:
                 if not args.quiet:
                     print(f"  {count:4d}  {entry['term']}")
             else:
                 missing += 1
-                print(f"     ·  {entry['term']}  ⚠ not found in the transcript")
+                print(f"     ·  {entry['term']}  ⚠ not found in the text")
 
     if missing:
         print(
