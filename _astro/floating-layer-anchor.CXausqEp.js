@@ -1,0 +1,2 @@
+import"./attributes.Dq-88rd7.js";import{aN as l,V as n,a9 as m,aF as s,x as f,aJ as p}from"./branches.BddI4GMd.js";import{s as c}from"./snippet.CeNVI9ru.js";import{p as d}from"./props.C9XL8fY6.js";import{F as h,I as o}from"./popper-layer-force-mount.DHEnx-xF.js";function _(r,a){l(a,!0);let i=d(a,"tooltip",3,!1);h.create({id:o(()=>a.id),virtualEl:o(()=>a.virtualEl),ref:a.ref},i());var t=n(),e=m(t);c(e,()=>a.children??s),f(r,t),p()}export{_ as F};
+//# sourceMappingURL=floating-layer-anchor.CXausqEp.js.map
