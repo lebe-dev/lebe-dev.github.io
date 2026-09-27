@@ -152,6 +152,36 @@ export const ui = {
     'settings.importFailed': 'Could not save the data — the browser storage is full.',
     'settings.reload': 'Reload the page',
     'settings.close': 'Close',
+    'settings.tech': 'How this site works',
+    'tech.title': 'How this site works',
+    'tech.description':
+      "How this site works: the tech stack, where your data is stored, and how reading progress works — no server, no tracking.",
+    'tech.intro':
+      "This is a static site: there's no server, no database, and no account system behind it. Everything you see was built ahead of time and is served as plain files. This page is an honest answer to \"how does this work\" and \"where does my data go\".",
+    'tech.stack.title': 'Technology',
+    'tech.stack.body':
+      "The site is built with Astro: HTML pages are generated ahead of time, at build time. Interactive pieces — the theme and language switchers, reading progress, glossary tooltips — are separate Svelte components, loaded only where they're needed. Styling is Tailwind CSS plus a small set of UI components (shadcn-svelte), written in TypeScript. The finished site is just a set of files published on GitHub Pages.",
+    'tech.privacy.title': 'No tracking',
+    'tech.privacy.body':
+      "There's no analytics, no counters, and no cookies on this site — not from the author, not from any third party. The site has no way of knowing who visited it or what you're reading.",
+    'tech.storage.title': 'Where data is stored',
+    'tech.storage.body':
+      "Your theme, chosen language, and reading progress across posts and chapters are all saved in your browser's localStorage — tied to this device, and never sent anywhere, because there's nowhere to send it: the site has no server. The one possible exception: if error reporting (Sentry) is enabled and something breaks, an anonymous crash report — the error text, no personal data, no reading history — may be sent to that service.",
+    'tech.reading.title': 'Reading progress',
+    'tech.reading.body':
+      "Posts, podcast episodes, and book chapters all share one mechanism: a thin progress bar at the top of the page, an automatic \"read\" mark at around 95%, and a \"continue reading\" pill when you come back. A post counts as read regardless of which language you read it in, and a podcast episode counts as read once you've finished either one of its transcripts.",
+    'tech.transfer.title': 'Moving between devices',
+    'tech.transfer.body':
+      "Since nothing leaves the browser, carrying your progress to another device is a manual step: the \"⋮\" menu next to the theme switch can export everything as one line of text to copy, and import it back on the other device. Importing merges the data rather than overwriting it, so both devices keep their own progress.",
+    'tech.offline.title': 'Working offline',
+    'tech.offline.body':
+      'The site can be installed as an app and saved for offline reading — the cloud-icon button next to the theme switch. It saves the current interface language: posts, podcasts, and shared pages in that language.',
+    'tech.languages.title': 'Languages',
+    'tech.languages.body':
+      "The site is translated into seven languages, though the author's native language is Russian. Some material — subtitle translations and book translations — exists only in Russian and is linked from the Russian homepage.",
+    'tech.source.title': 'Source code',
+    'tech.source.body': "The entire site's code, including this page, is open source.",
+    'tech.source.link': 'Repository on GitHub',
   },
   ru: {
     'site.name': 'Eugene Lebedev',
@@ -282,6 +312,36 @@ export const ui = {
     'settings.importFailed': 'Не удалось сохранить данные — в браузере нет места.',
     'settings.reload': 'Обновить страницу',
     'settings.close': 'Закрыть',
+    'settings.tech': 'Как устроен сайт',
+    'tech.title': 'Как устроен сайт',
+    'tech.description':
+      'Как устроен этот сайт: технологии, где хранятся данные и как работает прогресс чтения — без сервера и слежки.',
+    'tech.intro':
+      'Это статический сайт: никакого сервера, базы данных или личного кабинета за ним нет. Всё, что вы видите, собрано заранее и отдаётся как обычные файлы. Эта страница — честный ответ на вопросы «как это устроено» и «куда уходят мои данные».',
+    'tech.stack.title': 'Технологии',
+    'tech.stack.body':
+      'Сайт собран на Astro: HTML-страницы генерируются заранее, при сборке. Интерактивные части — переключатель темы и языка, прогресс чтения, всплывающие подсказки терминов — отдельные компоненты на Svelte, которые подгружаются только там, где нужны. Оформление — Tailwind CSS и небольшой набор UI-компонентов (shadcn-svelte), код на TypeScript. Готовый сайт — просто набор файлов, опубликованных на GitHub Pages.',
+    'tech.privacy.title': 'Без слежки',
+    'tech.privacy.body':
+      'На сайте нет аналитики, счётчиков и cookies — ни от автора, ни от сторонних сервисов. Сайт не может узнать, кто на него зашёл и что именно вы читаете: у него просто нет для этого механизма.',
+    'tech.storage.title': 'Где хранятся данные',
+    'tech.storage.body':
+      'Тема оформления, выбранный язык и прогресс чтения постов и глав сохраняются в localStorage вашего браузера, привязаны к этому устройству и никуда не отправляются — отправлять попросту некуда, сервера у сайта нет. Единственное возможное исключение: если на сайте включена отправка отчётов об ошибках (Sentry) и что-то ломается, анонимный отчёт о сбое — текст ошибки, без личных данных и истории чтения — может уйти в этот сервис.',
+    'tech.reading.title': 'Прогресс чтения',
+    'tech.reading.body':
+      'У постов, эпизодов подкастов и глав книг общий механизм: тонкая полоска прогресса вверху страницы, автоматическая отметка «прочитано» примерно при 95% текста и подсказка «продолжить чтение» при возврате. Пост считается прочитанным независимо от языка, на котором вы его читали, а эпизод подкаста — как только дочитана хотя бы одна из его расшифровок.',
+    'tech.transfer.title': 'Перенос между устройствами',
+    'tech.transfer.body':
+      'Раз данные не покидают браузер, перенести прогресс на другое устройство можно только вручную: меню «⋮» рядом с переключателем темы выгружает всё в одну строку текста для копирования и загружает её обратно на другом устройстве. Импорт объединяет данные, а не затирает их, — оба устройства сохраняют свой прогресс.',
+    'tech.offline.title': 'Работа офлайн',
+    'tech.offline.body':
+      'Сайт можно установить как приложение и сохранить для чтения без интернета — кнопка с иконкой облака рядом с переключателем темы. Сохраняется текущий язык интерфейса: посты, подкасты и общие страницы на этом языке.',
+    'tech.languages.title': 'Языки',
+    'tech.languages.body':
+      'Сайт переведён на семь языков, хотя родной язык автора — русский. Часть материалов — переводы субтитров и книг — существует только на русском и доступна с русской версии главной страницы.',
+    'tech.source.title': 'Исходный код',
+    'tech.source.body': 'Весь код сайта, включая эту страницу, открыт.',
+    'tech.source.link': 'Репозиторий на GitHub',
   },
   es: {
     'site.name': 'Eugene Lebedev',
@@ -413,6 +473,36 @@ export const ui = {
       'No se pudieron guardar los datos: el almacenamiento del navegador está lleno.',
     'settings.reload': 'Recargar la página',
     'settings.close': 'Cerrar',
+    'settings.tech': 'Cómo funciona este sitio',
+    'tech.title': 'Cómo funciona este sitio',
+    'tech.description':
+      'Cómo funciona este sitio: la tecnología usada, dónde se guardan tus datos y cómo funciona el progreso de lectura — sin servidor y sin rastreo.',
+    'tech.intro':
+      'Este es un sitio estático: no hay servidor, base de datos ni cuentas de usuario detrás. Todo lo que ves se generó de antemano y se sirve como archivos simples. Esta página es una respuesta honesta a «¿cómo funciona esto?» y «¿a dónde van mis datos?».',
+    'tech.stack.title': 'Tecnología',
+    'tech.stack.body':
+      'El sitio está construido con Astro: las páginas HTML se generan de antemano, durante la compilación. Las partes interactivas —el selector de tema e idioma, el progreso de lectura, las notas emergentes del glosario— son componentes Svelte independientes que se cargan solo donde se necesitan. El diseño usa Tailwind CSS y un pequeño conjunto de componentes de interfaz (shadcn-svelte), escrito en TypeScript. El sitio terminado es solo un conjunto de archivos publicados en GitHub Pages.',
+    'tech.privacy.title': 'Sin rastreo',
+    'tech.privacy.body':
+      'Este sitio no tiene analítica, contadores ni cookies — ni del autor ni de terceros. El sitio no tiene forma de saber quién lo visitó ni qué estás leyendo.',
+    'tech.storage.title': 'Dónde se guardan los datos',
+    'tech.storage.body':
+      'El tema, el idioma elegido y el progreso de lectura de artículos y capítulos se guardan en el localStorage de tu navegador, ligados a este dispositivo, y nunca se envían a ningún sitio, porque no hay dónde enviarlos: el sitio no tiene servidor. La única posible excepción: si el reporte de errores (Sentry) está activado y algo falla, se puede enviar un informe anónimo del fallo —el texto del error, sin datos personales ni historial de lectura— a ese servicio.',
+    'tech.reading.title': 'Progreso de lectura',
+    'tech.reading.body':
+      'Los artículos, los episodios de podcast y los capítulos de libros comparten un mismo mecanismo: una fina barra de progreso en la parte superior de la página, una marca automática de «leído» alrededor del 95%, y un aviso de «continuar leyendo» al volver. Un artículo cuenta como leído sin importar en qué idioma lo leíste, y un episodio de podcast cuenta como leído en cuanto terminas cualquiera de sus transcripciones.',
+    'tech.transfer.title': 'Trasladar datos entre dispositivos',
+    'tech.transfer.body':
+      'Como nada sale del navegador, llevar tu progreso a otro dispositivo es un paso manual: el menú «⋮» junto al selector de tema puede exportar todo como una línea de texto para copiar, e importarla de vuelta en el otro dispositivo. Importar combina los datos en lugar de sobrescribirlos, así que ambos dispositivos conservan su propio progreso.',
+    'tech.offline.title': 'Funcionamiento sin conexión',
+    'tech.offline.body':
+      'El sitio se puede instalar como una app y guardar para leer sin conexión —el botón con el icono de nube junto al selector de tema. Guarda el idioma de interfaz actual: artículos, podcasts y páginas comunes en ese idioma.',
+    'tech.languages.title': 'Idiomas',
+    'tech.languages.body':
+      'El sitio está traducido a siete idiomas, aunque el idioma nativo del autor es el ruso. Parte del contenido —traducciones de subtítulos y de libros— existe solo en ruso y se enlaza desde la versión rusa de la página de inicio.',
+    'tech.source.title': 'Código fuente',
+    'tech.source.body': 'Todo el código del sitio, incluida esta página, es de código abierto.',
+    'tech.source.link': 'Repositorio en GitHub',
   },
   zh: {
     'site.name': 'Eugene Lebedev',
@@ -540,6 +630,36 @@ export const ui = {
     'settings.importFailed': '无法保存数据 — 浏览器存储空间已满。',
     'settings.reload': '重新加载页面',
     'settings.close': '关闭',
+    'settings.tech': '本站是如何运作的',
+    'tech.title': '本站是如何运作的',
+    'tech.description':
+      '本站是如何运作的：技术栈、数据保存在哪里，以及阅读进度如何工作——没有服务器，也没有追踪。',
+    'tech.intro':
+      '这是一个静态网站：背后没有服务器、数据库，也没有账户系统。你看到的一切都是提前生成好的，以普通文件的形式提供。这一页如实回答"这是怎么做的"和"我的数据去了哪里"这两个问题。',
+    'tech.stack.title': '技术',
+    'tech.stack.body':
+      '本站使用 Astro 构建：HTML 页面在构建时提前生成。交互部分——主题和语言切换、阅读进度、术语提示——是独立的 Svelte 组件，只在需要的地方加载。样式使用 Tailwind CSS 和一小套界面组件（shadcn-svelte），代码用 TypeScript 编写。构建完成的网站只是发布在 GitHub Pages 上的一组文件。',
+    'tech.privacy.title': '没有追踪',
+    'tech.privacy.body':
+      '本站没有统计分析、访问计数器，也没有 cookie——无论是作者自己的，还是第三方的。网站没有任何办法知道谁访问过它，或者你在读什么。',
+    'tech.storage.title': '数据保存在哪里',
+    'tech.storage.body':
+      '主题、选择的语言，以及文章和章节的阅读进度，都保存在你浏览器的 localStorage 中，只属于这台设备，从不会发送到任何地方——因为根本没有地方可发：本站没有服务器。唯一可能的例外：如果开启了错误报告（Sentry），当出现故障时，可能会向该服务发送一份匿名的崩溃报告（错误文本、技术信息），其中不含任何个人数据或阅读记录。',
+    'tech.reading.title': '阅读进度',
+    'tech.reading.body':
+      '文章、播客节目和书籍章节共用同一套机制：页面顶部一条细细的进度条，读到约 95% 时自动标记为"已读"，返回时会出现"继续阅读"的提示。无论你用哪种语言阅读，一篇文章都算作已读；播客节目只要读完任意一种语言的文字稿，就算作已读。',
+    'tech.transfer.title': '在设备之间转移',
+    'tech.transfer.body':
+      '由于数据不会离开浏览器，把进度带到另一台设备只能手动完成：主题切换旁边的"⋮"菜单可以把所有数据导出为一行文本以便复制，也可以在另一台设备上导入回来。导入是合并数据，而不是覆盖，所以两台设备都会保留各自的进度。',
+    'tech.offline.title': '离线使用',
+    'tech.offline.body':
+      '本站可以安装为应用，并保存到本地供离线阅读——就是主题切换旁边那个云朵图标按钮。它保存的是当前的界面语言：该语言下的文章、播客和公共页面。',
+    'tech.languages.title': '语言',
+    'tech.languages.body':
+      '本站被翻译成七种语言，不过作者的母语是俄语。部分内容——字幕翻译和书籍翻译——只有俄语版本，并且只从俄语首页链接过去。',
+    'tech.source.title': '源代码',
+    'tech.source.body': '本站的全部代码，包括这一页，都是开源的。',
+    'tech.source.link': 'GitHub 上的仓库',
   },
   ja: {
     'site.name': 'Eugene Lebedev',
@@ -667,6 +787,36 @@ export const ui = {
     'settings.importFailed': 'データを保存できませんでした — ブラウザの容量が一杯です。',
     'settings.reload': 'ページを再読み込み',
     'settings.close': '閉じる',
+    'settings.tech': 'このサイトの仕組み',
+    'tech.title': 'このサイトの仕組み',
+    'tech.description':
+      'このサイトの仕組み：使用している技術、データの保存場所、読書進捗の仕組みについて——サーバーもトラッキングもありません。',
+    'tech.intro':
+      'このサイトは静的サイトです。背後にサーバーもデータベースもアカウント機能もありません。表示されているものはすべて事前に生成され、ただのファイルとして配信されています。このページは「どういう仕組みなのか」「自分のデータはどこへ行くのか」という疑問に正直に答えるものです。',
+    'tech.stack.title': '技術スタック',
+    'tech.stack.body':
+      'サイトは Astro で構築されており、HTML ページはビルド時にあらかじめ生成されます。テーマ切り替え、言語切り替え、読書進捗、用語のツールチップといったインタラクティブな部分は、必要な場所だけで読み込まれる独立した Svelte コンポーネントです。デザインには Tailwind CSS と小さな UI コンポーネント集（shadcn-svelte）を使い、コードは TypeScript で書かれています。完成したサイトは GitHub Pages に公開されたただのファイル群です。',
+    'tech.privacy.title': 'トラッキングなし',
+    'tech.privacy.body':
+      'このサイトにはアクセス解析もカウンターも Cookie もありません——作者自身のものも、第三者のものもです。誰がアクセスしたか、何を読んでいるかをサイトが知る手段は一切ありません。',
+    'tech.storage.title': 'データの保存場所',
+    'tech.storage.body':
+      'テーマ、選択した言語、記事や章の読書進捗はすべてブラウザの localStorage に保存され、この端末だけに紐づいており、どこにも送信されません——送る先自体が存在しないからです。サイトにサーバーはありません。唯一の例外は、エラーレポート（Sentry）が有効になっている場合で、不具合が起きたときに匿名のクラッシュレポート（エラー内容などの技術情報のみで、個人情報や読書履歴は含まれません）がそのサービスに送られることがあります。',
+    'tech.reading.title': '読書進捗',
+    'tech.reading.body':
+      '記事、ポッドキャストのエピソード、書籍の章はすべて同じ仕組みを共有しています。ページ上部の細い進捗バー、約95%読むと自動でつく「既読」マーク、戻ってきたときに表示される「続きから読む」の案内です。記事はどの言語で読んでも既読として扱われ、ポッドキャストのエピソードはどちらか一方の文字起こしを読み終えれば既読になります。',
+    'tech.transfer.title': '端末間でのデータ移行',
+    'tech.transfer.body':
+      'データはブラウザの外に出ないため、別の端末へ進捗を持って行くには手動での操作が必要です。テーマ切り替えの隣にある「⋮」メニューから、すべてのデータを1行のテキストとしてコピー用に書き出し、別の端末で読み込むことができます。読み込みはデータを上書きするのではなく統合するので、両方の端末がそれぞれの進捗を保持します。',
+    'tech.offline.title': 'オフラインでの利用',
+    'tech.offline.body':
+      'このサイトはアプリとしてインストールでき、オフライン閲覧用に保存することもできます——テーマ切り替えの隣にある雲のアイコンのボタンです。保存されるのは現在のインターフェース言語（その言語の記事、ポッドキャスト、共通ページ）です。',
+    'tech.languages.title': '言語',
+    'tech.languages.body':
+      'このサイトは7つの言語に翻訳されていますが、作者の母語はロシア語です。字幕翻訳や書籍翻訳など一部のコンテンツはロシア語版のみ存在し、ロシア語のトップページからリンクされています。',
+    'tech.source.title': 'ソースコード',
+    'tech.source.body': 'このページを含め、サイトのコードはすべてオープンソースです。',
+    'tech.source.link': 'GitHub のリポジトリ',
   },
   fr: {
     'site.name': 'Eugene Lebedev',
@@ -798,6 +948,36 @@ export const ui = {
       'Impossible d’enregistrer les données — le stockage du navigateur est plein.',
     'settings.reload': 'Recharger la page',
     'settings.close': 'Fermer',
+    'settings.tech': 'Comment fonctionne ce site',
+    'tech.title': 'Comment fonctionne ce site',
+    'tech.description':
+      'Comment fonctionne ce site : la stack technique, où sont stockées vos données, et comment fonctionne le suivi de lecture — sans serveur ni pistage.',
+    'tech.intro':
+      "Ce site est statique : il n'y a ni serveur, ni base de données, ni compte utilisateur derrière lui. Tout ce que vous voyez a été généré à l'avance et est servi sous forme de simples fichiers. Cette page répond honnêtement aux questions « comment ça marche » et « où vont mes données ».",
+    'tech.stack.title': 'Technologies',
+    'tech.stack.body':
+      "Le site est construit avec Astro : les pages HTML sont générées à l'avance, lors de la compilation. Les parties interactives — le sélecteur de thème et de langue, le suivi de lecture, les info-bulles du glossaire — sont des composants Svelte séparés, chargés uniquement là où c'est nécessaire. La mise en forme utilise Tailwind CSS et un petit ensemble de composants d'interface (shadcn-svelte), le code est écrit en TypeScript. Le site fini n'est qu'un ensemble de fichiers publiés sur GitHub Pages.",
+    'tech.privacy.title': 'Aucun pistage',
+    'tech.privacy.body':
+      "Ce site n'a ni analyse d'audience, ni compteur, ni cookie — ni de l'auteur, ni d'un tiers. Le site n'a aucun moyen de savoir qui l'a visité ni ce que vous lisez.",
+    'tech.storage.title': 'Où sont stockées les données',
+    'tech.storage.body':
+      "Le thème, la langue choisie et la progression de lecture des articles et chapitres sont enregistrés dans le localStorage de votre navigateur, liés à cet appareil, et ne sont jamais envoyés ailleurs, car il n'y a nulle part où les envoyer : le site n'a pas de serveur. La seule exception possible : si le signalement d'erreurs (Sentry) est activé et qu'un problème survient, un rapport anonyme du plantage — le texte de l'erreur, sans donnée personnelle ni historique de lecture — peut être envoyé à ce service.",
+    'tech.reading.title': 'Suivi de lecture',
+    'tech.reading.body':
+      "Les articles, les épisodes de podcast et les chapitres de livres partagent un même mécanisme : une fine barre de progression en haut de la page, un marquage automatique « lu » vers 95 %, et une invite « reprendre la lecture » à votre retour. Un article compte comme lu quelle que soit la langue dans laquelle vous l'avez lu, et un épisode de podcast compte comme lu dès que vous avez terminé l'une de ses transcriptions.",
+    'tech.transfer.title': 'Transférer entre appareils',
+    'tech.transfer.body':
+      "Puisque rien ne quitte le navigateur, transférer votre progression vers un autre appareil se fait à la main : le menu « ⋮ » à côté du sélecteur de thème peut exporter toutes les données sous forme d'une ligne de texte à copier, puis les importer sur l'autre appareil. L'import fusionne les données au lieu de les écraser, donc chaque appareil conserve sa propre progression.",
+    'tech.offline.title': 'Fonctionnement hors ligne',
+    'tech.offline.body':
+      "Le site peut être installé comme une application et enregistré pour une lecture hors ligne — le bouton avec l'icône de nuage à côté du sélecteur de thème. Il enregistre la langue d'interface actuelle : articles, podcasts et pages communes dans cette langue.",
+    'tech.languages.title': 'Langues',
+    'tech.languages.body':
+      "Le site est traduit en sept langues, bien que la langue maternelle de l'auteur soit le russe. Une partie du contenu — traductions de sous-titres et de livres — n'existe qu'en russe et n'est accessible que depuis la page d'accueil russe.",
+    'tech.source.title': 'Code source',
+    'tech.source.body': 'Tout le code du site, y compris cette page, est open source.',
+    'tech.source.link': 'Dépôt sur GitHub',
   },
   de: {
     'site.name': 'Eugene Lebedev',
@@ -929,6 +1109,36 @@ export const ui = {
       'Die Daten konnten nicht gespeichert werden — der Browser-Speicher ist voll.',
     'settings.reload': 'Seite neu laden',
     'settings.close': 'Schließen',
+    'settings.tech': 'Wie diese Website funktioniert',
+    'tech.title': 'Wie diese Website funktioniert',
+    'tech.description':
+      'Wie diese Website funktioniert: der technische Stack, wo Ihre Daten gespeichert werden und wie der Lesefortschritt funktioniert — ohne Server und ohne Tracking.',
+    'tech.intro':
+      'Dies ist eine statische Website: Dahinter steckt weder ein Server noch eine Datenbank oder ein Benutzerkonto. Alles, was Sie sehen, wurde im Voraus erzeugt und wird als einfache Dateien ausgeliefert. Diese Seite beantwortet ehrlich die Fragen „Wie funktioniert das?" und „Wohin gehen meine Daten?".',
+    'tech.stack.title': 'Technologie',
+    'tech.stack.body':
+      'Die Website ist mit Astro gebaut: HTML-Seiten werden im Voraus, beim Build, erzeugt. Interaktive Teile — der Theme- und Sprachumschalter, der Lesefortschritt, die Begriffs-Tooltips — sind eigenständige Svelte-Komponenten, die nur dort geladen werden, wo sie gebraucht werden. Das Design nutzt Tailwind CSS und einen kleinen Satz an UI-Komponenten (shadcn-svelte), der Code ist in TypeScript geschrieben. Die fertige Website ist nur eine Sammlung von Dateien, die auf GitHub Pages veröffentlicht sind.',
+    'tech.privacy.title': 'Kein Tracking',
+    'tech.privacy.body':
+      'Diese Website hat keine Analysewerkzeuge, keine Zähler und keine Cookies — weder vom Autor noch von Dritten. Die Website hat keine Möglichkeit zu wissen, wer sie besucht hat oder was Sie gerade lesen.',
+    'tech.storage.title': 'Wo Daten gespeichert werden',
+    'tech.storage.body':
+      'Theme, gewählte Sprache und der Lesefortschritt bei Artikeln und Kapiteln werden im localStorage Ihres Browsers gespeichert, gebunden an dieses Gerät, und niemals irgendwohin gesendet — denn es gibt nichts, wohin man sie senden könnte: Die Website hat keinen Server. Die einzige mögliche Ausnahme: Wenn die Fehlerberichterstattung (Sentry) aktiviert ist und etwas nicht funktioniert, kann ein anonymer Absturzbericht — der Fehlertext, ohne persönliche Daten oder Leseverlauf — an diesen Dienst gesendet werden.',
+    'tech.reading.title': 'Lesefortschritt',
+    'tech.reading.body':
+      'Artikel, Podcast-Folgen und Buchkapitel teilen sich einen Mechanismus: einen dünnen Fortschrittsbalken oben auf der Seite, eine automatische „Gelesen"-Markierung bei etwa 95 % und einen „Weiterlesen"-Hinweis, wenn Sie zurückkehren. Ein Artikel gilt unabhängig von der gelesenen Sprache als gelesen, und eine Podcast-Folge gilt als gelesen, sobald eines ihrer Transkripte fertig gelesen wurde.',
+    'tech.transfer.title': 'Zwischen Geräten übertragen',
+    'tech.transfer.body':
+      'Da nichts den Browser verlässt, ist das Übertragen des Fortschritts auf ein anderes Gerät ein manueller Schritt: Das „⋮"-Menü neben dem Theme-Umschalter kann alle Daten als eine Textzeile zum Kopieren exportieren und auf dem anderen Gerät wieder importieren. Der Import führt die Daten zusammen, statt sie zu überschreiben — beide Geräte behalten so ihren eigenen Fortschritt.',
+    'tech.offline.title': 'Offline-Nutzung',
+    'tech.offline.body':
+      'Die Website lässt sich als App installieren und zum Offline-Lesen speichern — über die Schaltfläche mit dem Wolken-Symbol neben dem Theme-Umschalter. Gespeichert wird die aktuelle Oberflächensprache: Artikel, Podcasts und gemeinsame Seiten in dieser Sprache.',
+    'tech.languages.title': 'Sprachen',
+    'tech.languages.body':
+      'Die Website ist in sieben Sprachen übersetzt, auch wenn die Muttersprache des Autors Russisch ist. Ein Teil der Inhalte — Untertitel- und Buchübersetzungen — existiert nur auf Russisch und ist von der russischen Startseite aus verlinkt.',
+    'tech.source.title': 'Quellcode',
+    'tech.source.body': 'Der gesamte Code der Website, einschließlich dieser Seite, ist Open Source.',
+    'tech.source.link': 'Repository auf GitHub',
   },
 } as const satisfies Record<Lang, Record<string, string>>;
 

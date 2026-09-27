@@ -11,6 +11,7 @@
   import EllipsisVerticalIcon from '@lucide/svelte/icons/ellipsis-vertical';
   import UploadIcon from '@lucide/svelte/icons/upload';
   import DownloadIcon from '@lucide/svelte/icons/download';
+  import InfoIcon from '@lucide/svelte/icons/info';
   import {
     decodeSnapshot,
     encodeSnapshot,
@@ -21,6 +22,7 @@
 
   type Labels = {
     menu: string;
+    techTitle: string;
     exportTitle: string;
     importTitle: string;
     exportBody: string;
@@ -36,7 +38,7 @@
     close: string;
   };
 
-  let { labels }: { labels: Labels } = $props();
+  let { labels, techHref }: { labels: Labels; techHref: string } = $props();
 
   let exportOpen = $state(false);
   let importOpen = $state(false);
@@ -120,6 +122,11 @@
     <DropdownMenu.Item onSelect={openImport}>
       <UploadIcon />
       {labels.importTitle}
+    </DropdownMenu.Item>
+    <DropdownMenu.Separator />
+    <DropdownMenu.Item onSelect={() => { window.location.href = techHref; }}>
+      <InfoIcon />
+      {labels.techTitle}
     </DropdownMenu.Item>
   </DropdownMenu.Content>
 </DropdownMenu.Root>
